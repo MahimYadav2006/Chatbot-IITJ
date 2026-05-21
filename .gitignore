@@ -1,0 +1,40 @@
+# Python virtual environment
+venv/
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Local data files
+*.sqlite3
+*.db
+*.log
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE / editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Sensitive files (never commit)
+.env
+.secret
+.key
+
+# Model / vector artefacts (large binary files)
+graphrag/*.faiss
+graphrag/*.pkl
+graphrag/*.json
+
+# Cache directories
+.cache/

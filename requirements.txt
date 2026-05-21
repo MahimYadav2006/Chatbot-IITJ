@@ -1,0 +1,24 @@
+# Core
+networkx>=2.6
+numpy>=1.21
+scipy>=1.7
+
+# Embeddings
+sentence-transformers>=2.2.0
+
+# Vector search
+faiss-cpu>=1.7
+
+# Community detection
+python-louvain>=0.16
+
+# LLM API
+requests>=2.25
+
+# Web UI
+flask>=2.0
+
+# Existing dependencies
+beautifulsoup4
+Pillow
+playwright>=1.48.0

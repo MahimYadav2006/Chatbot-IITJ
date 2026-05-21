@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Jammu EE Department — AI Assistant</title>
+    <meta name="description" content="AI-powered chatbot for the Department of Electrical Engineering at IIT Jammu. Ask about faculty, research, programmes, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Background animated gradient -->
+    <div class="bg-gradient"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header" id="app-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="logo-container">
+                        <div class="logo-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <h1>EE Department Assistant</h1>
+                            <span class="subtitle">IIT Jammu • GraphRAG Powered</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="status-badge" id="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Online</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <main class="chat-container" id="chat-container">
+            <div class="chat-messages" id="chat-messages">
+                <!-- Welcome message -->
+                <div class="message bot-message welcome-message">
+                    <div class="message-avatar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            <p>👋 Welcome! I'm the <strong>AI Assistant</strong> for the <strong>Department of Electrical Engineering</strong> at <strong>IIT Jammu</strong>.</p>
+                            <p>I can help you with information about:</p>
+                            <ul>
+                                <li>👨‍🏫 <strong>Faculty</strong> — profiles, research interests, contact details</li>
+                                <li>🎓 <strong>PhD Students</strong> — supervisors, research topics</li>
+                                <li>🔬 <strong>Research Areas</strong> — VLSI, Power Systems, Communications, RF & Microwave, Signal Processing, Power Electronics</li>
+                                <li>💼 <strong>Projects & Patents</strong> — funded research, innovations</li>
+                                <li>🚀 <strong>Startups</strong> — department incubated ventures</li>
+                                <li>🏛️ <strong>Labs & Facilities</strong> — research infrastructure</li>
+                            </ul>
+                            <p>Try asking something like:</p>
+                        </div>
+                        <div class="suggestion-chips">
+                            <button class="chip" onclick="sendSuggestion(this)">Who is the Head of Department?</button>
+                            <button class="chip" onclick="sendSuggestion(this)">What are the main research areas?</button>
+                            <button class="chip" onclick="sendSuggestion(this)">Tell me about antenna research</button>
+                            <button class="chip" onclick="sendSuggestion(this)">Who supervises Ritujoy Biswas?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="chat-input-area" id="chat-input-area">
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea
+                        id="chat-input"
+                        placeholder="Ask me about the EE Department..."
+                        rows="1"
+                        maxlength="1000"
+                        autofocus
+                    ></textarea>
+                    <button class="send-button" id="send-button" onclick="sendMessage()" title="Send message">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-footer">
+                    <span class="footer-text">Powered by GraphRAG • Responses grounded in the department's knowledge graph</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
