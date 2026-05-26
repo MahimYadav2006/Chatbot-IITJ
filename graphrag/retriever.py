@@ -158,6 +158,20 @@ class HybridRetriever:
                 return match.group("name").strip(" ?.")
         return None
 
+    def _extract_supervisor_from_students_query(self, query: str) -> Optional[str]:
+        """Extract the supervisor's name from query seeking their students."""
+        q = re.sub(r"\s+", " ", query.strip())
+        patterns = (
+            r"^(?:who are the |list of )?phd (?:students|scholars) (?:under|working under|supervised by|guided by) (?P<name>.+?)\??$",
+            r"^phd (?:students|scholars) of (?P<name>.+?)\??$",
+            r"^(?:who are )?(?P<name>.+?)'?s phd (?:students|scholars)\??$",
+        )
+        for pattern in patterns:
+            match = re.match(pattern, q, flags=re.IGNORECASE)
+            if match:
+                return match.group("name").strip(" ?.")
+        return None
+
     def _find_entity_by_name(self, raw_name: str, allowed_labels: Optional[Tuple[str, ...]] = None) -> Optional[str]:
         """Resolve an entity name to a graph node id using exact then fuzzy matching."""
         if not raw_name:
@@ -342,7 +356,48 @@ class HybridRetriever:
                     else:
                         sups_str = ", ".join(formatted_sups[:-1]) + f", and {formatted_sups[-1]}"
                         
-                    return f"{s_name_title} is supervised by {sups_str}."
+                    research_area = student.get("research_area", "")
+                    ans = f"{s_name_title} is supervised by {sups_str}."
+                    if research_area:
+                        pronoun = "Her" if any(x in s_name.lower() for x in ("zareena", "meghna", "alisha", "safa")) else "His"
+                        ans += f" {pronoun} research area is {research_area}."
+                    return ans
+
+        # 2.5 PhD students under a specific supervisor query (dynamic, fallback)
+        supervisor_query_name = self._extract_supervisor_from_students_query(query)
+        if supervisor_query_name:
+            sup_id = self._find_entity_by_name(supervisor_query_name, allowed_labels=("Faculty", "ExternalPerson"))
+            if sup_id and self.graph.has_node(sup_id):
+                sup_node = self.graph.nodes[sup_id]
+                sup_display_name = sup_node.get("name", sup_id)
+                if not sup_display_name.startswith("Dr. "):
+                    sup_display_name = f"Dr. {sup_display_name}"
+                    
+                students = []
+                for source, _, edge_data in self.graph.in_edges(sup_id, data=True):
+                    if edge_data.get("type") != "SUPERVISED_BY":
+                        continue
+                    s_data = self.graph.nodes.get(source, {})
+                    if s_data.get("label") == "PhDStudent":
+                        students.append({
+                            "name": s_data.get("name", source),
+                            "research_area": s_data.get("research_area", "")
+                        })
+                
+                if students:
+                    students = sorted(students, key=lambda x: x["name"].lower())
+                    lines = [
+                        f"The following PhD scholars are working under the guidance of **{sup_display_name}**:",
+                        ""
+                    ]
+                    for idx, s in enumerate(students, start=1):
+                        details = [f"{idx}. **{s['name']}**"]
+                        if s["research_area"]:
+                            details.append(f"Research Area: {s['research_area']}")
+                        lines.append(" - ".join(details))
+                    return "\n".join(lines)
+                else:
+                    return f"I couldn't find any PhD scholars supervised by **{sup_display_name}** in the department records."
 
         # 3. PhD Student research area queries (dynamic, fallback)
         student_name_area = self._extract_research_area_query_name(query)
@@ -567,28 +622,66 @@ class HybridRetriever:
         return "\n".join(lines[:25])  # Increased cap for richer context
 
     def _name_match(self, query: str) -> List[str]:
-        """Find entities whose names appear in the query (fuzzy)."""
+        """Find entities whose names appear in the query using advanced token-based fuzzy matching."""
         from difflib import SequenceMatcher
-        query_lower = query.lower()
+        
+        # Normalize query: lowercase, remove punctuation, strip common title prefixes
+        q_clean = re.sub(r"[^\w\s]", " ", query.lower())
+        q_clean = re.sub(r"\b(?:dr|prof|mr|ms|mrs|shri|professor|assistant|associate)\b", " ", q_clean)
+        query_words = [w for w in q_clean.split() if w]
+        
         matched = []
+        stop_words = {
+            "who", "is", "the", "under", "what", "area", "of", "and", "in", "at", "to", 
+            "for", "with", "a", "an", "on", "about", "tell", "me", "how", "closely", 
+            "domains", "aligned", "supervises", "supervised", "supervisor", "advises", 
+            "advisor", "working", "work", "phd", "student", "students", "scholar", 
+            "scholars", "faculty", "professor", "professors", "count", "list", "members", "department",
+            "are", "give", "show", "get", "find", "he", "she", "his", "her", "they", "them", "their", "guidance"
+        }
         
         for name, node_id in self._entity_name_index.items():
-            # Exact substring match
-            if name in query_lower and len(name) > 3:
-                matched.append((node_id, 1.0))
-                continue
-            # Check each word combination from query against names
-            query_words = query_lower.split()
+            name_lower = name.lower()
+            name_tokens = name_lower.split()
+            
             for i in range(len(query_words)):
-                for j in range(i + 1, min(i + 5, len(query_words) + 1)):
-                    phrase = ' '.join(query_words[i:j])
-                    if len(phrase) < 4:
+                for j in range(i + 1, min(i + 4, len(query_words) + 1)):
+                    phrase = " ".join(query_words[i:j])
+                    if phrase in stop_words or len(phrase) < 3:
+                         continue
+                         
+                    # 1. Exact match with the full name
+                    if phrase == name_lower:
+                        matched.append((node_id, 1.0))
                         continue
-                    ratio = SequenceMatcher(None, phrase, name).ratio()
-                    if ratio > 0.80:
-                        matched.append((node_id, ratio))
-        
-        # Deduplicate, sort by score
+                        
+                    # 2. Substring match for full name
+                    if phrase in name_lower and len(phrase) >= 5:
+                        matched.append((node_id, 0.95))
+                        continue
+                        
+                    # 3. Fuzzy match with the full name
+                    full_ratio = SequenceMatcher(None, phrase, name_lower).ratio()
+                    if full_ratio > 0.80:
+                        matched.append((node_id, 0.90 * full_ratio))
+                        continue
+                        
+                    # 4. Token-by-token comparison (exact or fuzzy)
+                    for t in name_tokens:
+                        if t in stop_words or len(t) < 3:
+                            continue
+                        if phrase == t:
+                            matched.append((node_id, 0.95))
+                            break
+                        if (phrase in t or t in phrase) and len(phrase) >= 4 and len(t) >= 4:
+                            matched.append((node_id, 0.70))
+                            break
+                        token_ratio = SequenceMatcher(None, phrase, t).ratio()
+                        if token_ratio > 0.70:
+                            matched.append((node_id, 0.90 * token_ratio))
+                            break
+                            
+        # Deduplicate and sort by score
         seen = set()
         unique = []
         for node_id, score in sorted(matched, key=lambda x: -x[1]):
