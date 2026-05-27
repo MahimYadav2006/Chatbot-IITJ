@@ -14,10 +14,11 @@ from graphrag.kg_builder import (
 )
 from graphrag.retriever import HybridRetriever
 
-MARKDOWN_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "iitjammu_ee_markdown")
+MARKDOWN_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "scraped_data", "ee")
 CSE_MARKDOWN_DIR = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-    "iitjammu_computer_science_engineering_markdown",
+    "scraped_data",
+    "computer_science_engineering",
 )
 
 

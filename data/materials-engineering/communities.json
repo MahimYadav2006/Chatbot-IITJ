@@ -2,19 +2,19 @@
   "partition": {
     "materials-engineering:Ajay Gautam": 0,
     "materials-engineering:Avinash Raulo": 1,
-    "materials-engineering:Devi Lal": 2,
+    "materials-engineering:Devi Lal": 14,
     "materials-engineering:Durai Prabhakaran R T": 3,
     "materials-engineering:Kancharla Hari Krishna": 15,
     "materials-engineering:Nitesh Kumar": 5,
     "materials-engineering:Rajkumar V": 6,
     "materials-engineering:Rani Rohini": 7,
     "materials-engineering:Sarita": 4,
-    "materials-engineering:Shantanu Vijay Madge": 9,
+    "materials-engineering:Shantanu Vijay Madge": 8,
     "materials-engineering:Sri Tapaswi Nori": 10,
     "materials-engineering:Srinivasan N": 11,
-    "materials-engineering:Srishilan C": 8,
+    "materials-engineering:Srishilan C": 12,
     "materials-engineering:Suman Sarkar": 13,
-    "materials-engineering:Sunil Kumar Kashyap": 12,
+    "materials-engineering:Sunil Kumar Kashyap": 2,
     "materials-engineering:Supriyo Chakraborty": 15,
     "materials-engineering:1. Development of solid electrolytes": 0,
     "materials-engineering:2. Solid-state batteries": 0,
@@ -32,9 +32,9 @@
     "materials-engineering:Inorganic and Carbon Materials": 1,
     "materials-engineering:Conductive Composites": 1,
     "materials-engineering:Biomass) for Energy Application": 1,
-    "materials-engineering:Structure Properties correlating's of structural materials and Coatings": 2,
-    "materials-engineering:Processing of materials using thermal and cold spray": 2,
-    "materials-engineering:Finite element analysis": 2,
+    "materials-engineering:Structure Properties correlating's of structural materials and Coatings": 14,
+    "materials-engineering:Processing of materials using thermal and cold spray": 14,
+    "materials-engineering:Finite element analysis": 14,
     "materials-engineering:Corrosion characteristics of engineering materials and coatings": 15,
     "materials-engineering:Hot-dip galvanization": 15,
     "materials-engineering:Electrodeposition of anticorrosion coatings": 15,
@@ -63,19 +63,19 @@
     "materials-engineering:4. Rare-Earth-Free Magnetic Materials": 4,
     "materials-engineering:5. DFT": 4,
     "materials-engineering:APT and SANS-Based Materials Characterization": 4,
-    "materials-engineering:Mechanical Metallurgy": 9,
-    "materials-engineering:Materials Processing": 9,
-    "materials-engineering:Wear and Surface Engineering (Tribology)": 9,
-    "materials-engineering:Metal 3D Printing (Additive Manufacturing)": 9,
-    "materials-engineering:Cold Spray Deposition": 9,
-    "materials-engineering:Rapid Solidification": 9,
-    "materials-engineering:Amorphous Alloys": 9,
-    "materials-engineering:High Entropy Alloys": 9,
-    "materials-engineering:Electron Microscopy (SEM/EBSD/TEM) and X-ray DIffraction of Materials": 9,
+    "materials-engineering:Mechanical Metallurgy": 8,
+    "materials-engineering:Materials Processing": 8,
+    "materials-engineering:Wear and Surface Engineering (Tribology)": 8,
+    "materials-engineering:Metal 3D Printing (Additive Manufacturing)": 8,
+    "materials-engineering:Cold Spray Deposition": 8,
+    "materials-engineering:Rapid Solidification": 8,
+    "materials-engineering:Amorphous Alloys": 8,
+    "materials-engineering:High Entropy Alloys": 8,
+    "materials-engineering:Electron Microscopy (SEM/EBSD/TEM) and X-ray DIffraction of Materials": 8,
     "materials-engineering:Functional ceramics for energy applications": 11,
-    "materials-engineering:1. Computational modelling of Process Metallurgy": 8,
-    "materials-engineering:2. High temperature pyro-metallurgical processes": 8,
-    "materials-engineering:3. Metallurgical waste recycling": 8,
+    "materials-engineering:1. Computational modelling of Process Metallurgy": 12,
+    "materials-engineering:2. High temperature pyro-metallurgical processes": 12,
+    "materials-engineering:3. Metallurgical waste recycling": 12,
     "materials-engineering:1) Irradiation effects": 10,
     "materials-engineering:2) Metallic alloys such as the steels": 10,
     "materials-engineering:concentrated solid solution alloy": 10,
@@ -90,11 +90,11 @@
     "materials-engineering:High Heat Flux Alloys": 13,
     "materials-engineering:Transmission Electron Microscopy": 13,
     "materials-engineering:Phase Transformation and Thermodynamic Modeling": 13,
-    "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites": 12,
-    "materials-engineering:Sintering": 12,
-    "materials-engineering:Oxidation": 12,
-    "materials-engineering:Gel-Casting": 12,
-    "materials-engineering:Rheology": 12,
+    "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites": 2,
+    "materials-engineering:Sintering": 2,
+    "materials-engineering:Oxidation": 2,
+    "materials-engineering:Gel-Casting": 2,
+    "materials-engineering:Rheology": 2,
     "materials-engineering:AI/ML Application to Materials": 15,
     "materials-engineering:Light Metals and Alloys": 15,
     "materials-engineering:Materials for Extreme Environments": 15,
@@ -110,10 +110,11 @@
     "materials-engineering:2. Additive manufacturing of functionally graded structures": 6,
     "materials-engineering:3. Fabrication of multifunctional components using continuous carbon fibre 3D printing": 6,
     "materials-engineering:4. 3D bioprinting for biomedical and energy applications": 6,
-    "materials-engineering:Abhishek Panwar": 12,
-    "materials-engineering:High Entropy Ceramics": 12,
-    "materials-engineering:Ambuj Pathak": 9,
-    "materials-engineering:Multi-Componenet Alloys (HEAs, BMGs and Bio-Materials)": 9,
+    "IIT Jammu MATERIALS-ENGINEERING Department": 15,
+    "materials-engineering:Abhishek Panwar": 2,
+    "materials-engineering:High Entropy Ceramics": 2,
+    "materials-engineering:Ambuj Pathak": 8,
+    "materials-engineering:Multi-Componenet Alloys (HEAs, BMGs and Bio-Materials)": 8,
     "materials-engineering:Anant Kumar Gupta": 11,
     "materials-engineering:High temperature thermal barrier coatings, Entropy Stabilized Oxides, New material development for TBC": 11,
     "materials-engineering:Bushra Munir": 13,
@@ -121,10 +122,10 @@
     "materials-engineering:Durgesh Kumar": 5,
     "materials-engineering:Gorbel B": 5,
     "materials-engineering:Hydrogen storage": 5,
-    "materials-engineering:J Akhil Teja": 2,
-    "materials-engineering:Thermal Barrier Coatings": 2,
-    "materials-engineering:Midhat Ahsan": 2,
-    "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics": 2,
+    "materials-engineering:J Akhil Teja": 14,
+    "materials-engineering:Thermal Barrier Coatings": 14,
+    "materials-engineering:Midhat Ahsan": 14,
+    "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics": 14,
     "materials-engineering:Nidhi Shukla": 13,
     "materials-engineering:Phase Change Alloys (Memory and Heat Storage)": 13,
     "materials-engineering:Nishant Chandel": 7,
@@ -135,18 +136,17 @@
     "materials-engineering:Functional ceramic": 11,
     "materials-engineering:Saurabh Kumar Jha": 7,
     "materials-engineering:Extreme Climate Polymers": 7,
-    "materials-engineering:Snigdha Priyadarshini": 8,
-    "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy": 8,
+    "materials-engineering:Snigdha Priyadarshini": 12,
+    "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy": 12,
     "materials-engineering:Subhajeet Sen": 11,
     "materials-engineering:Functional Ceramic Materials": 11,
-    "materials-engineering:Vidhyadhar Mishra": 12,
-    "materials-engineering:Dual-Phase High Entropy Ceramics": 12,
-    "materials-engineering:Vikas Kumar": 14,
-    "materials-engineering:Srinivasan Nedunchezhian": 14,
-    "materials-engineering:Composites Testing": 14,
+    "materials-engineering:Vidhyadhar Mishra": 2,
+    "materials-engineering:Dual-Phase High Entropy Ceramics": 2,
+    "materials-engineering:Vikas Kumar": 9,
+    "materials-engineering:Srinivasan Nedunchezhian": 9,
+    "materials-engineering:Composites Testing": 9,
     "materials-engineering:Vivekanand Jakhar": 13,
-    "materials-engineering:Shape memory alloys": 13,
-    "IIT Jammu MATERIALS-ENGINEERING Department": 15
+    "materials-engineering:Shape memory alloys": 13
   },
   "reports": [
     {
@@ -220,8 +220,8 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Ajay Gautam\n  ResearchArea: 1. Development of solid electrolytes, 2. Solid-state batteries, 3. Structure\u2013transport correlations in energy storage materials, 4. Materials characterization (X-ray and neutron diffraction), 5. Battery materials processing, 6. Carbon-based materials for gas sensing, energy conversion, and storage applications\n  Relationships: RESEARCHES_IN: 8\n\nSummary: The Community 0 in IIT Jammu's Electrical Engineering Department is led by Dr. Ajay Gautam and focuses on energy storage materials research. The group explores various aspects of solid-state batteries, including the development of solid electrolytes, structure-transport correlations, and battery materials processing. They utilize techniques such as X-ray and neutron diffraction for materials characterization.",
-      "summary": "The Community 0 in IIT Jammu's Electrical Engineering Department is led by Dr. Ajay Gautam and focuses on energy storage materials research. The group explores various aspects of solid-state batteries, including the development of solid electrolytes, structure-transport correlations, and battery materials processing. They utilize techniques such as X-ray and neutron diffraction for materials characterization.",
+      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Ajay Gautam\n  ResearchArea: 1. Development of solid electrolytes, 2. Solid-state batteries, 3. Structure\u2013transport correlations in energy storage materials, 4. Materials characterization (X-ray and neutron diffraction), 5. Battery materials processing, 6. Carbon-based materials for gas sensing, energy conversion, and storage applications\n  Relationships: RESEARCHES_IN: 8\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Ajay Gautam. working in areas like materials-engineering:1. Development of solid electrolytes, materials-engineering:2. Solid-state batteries, materials-engineering:3. Structure\u2013transport correlations in energy storage materials.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Ajay Gautam. working in areas like materials-engineering:1. Development of solid electrolytes, materials-engineering:2. Solid-state batteries, materials-engineering:3. Structure\u2013transport correlations in energy storage materials.",
       "size": 9
     },
     {
@@ -295,89 +295,103 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Avinash Raulo\n  ResearchArea: Energy Storage (Li-S, Li-ion, Li-metal and other rechargeable batteries, Supercapacitors), Material (Soft materials and Polymers, Inorganic and Carbon Materials, Conductive Composites, Biomass) for Energy Application\n  Relationships: RESEARCHES_IN: 8\n\nSummary: The Community 1 in IIT Jammu's Electrical Engineering Department is led by faculty member Avinash Raulo. This group focuses on energy storage and material-related research for energy applications, specifically exploring rechargeable batteries (Li-S, Li-ion, Li-metal) and supercapacitors, as well as soft materials, polymers, inorganic and carbon materials, conductive composites, and biomass.",
-      "summary": "The Community 1 in IIT Jammu's Electrical Engineering Department is led by faculty member Avinash Raulo. This group focuses on energy storage and material-related research for energy applications, specifically exploring rechargeable batteries (Li-S, Li-ion, Li-metal) and supercapacitors, as well as soft materials, polymers, inorganic and carbon materials, conductive composites, and biomass.",
+      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Avinash Raulo\n  ResearchArea: Energy Storage (Li-S, Li-ion, Li-metal and other rechargeable batteries, Supercapacitors), Material (Soft materials and Polymers, Inorganic and Carbon Materials, Conductive Composites, Biomass) for Energy Application\n  Relationships: RESEARCHES_IN: 8\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Avinash Raulo. working in areas like materials-engineering:Energy Storage (Li-S, materials-engineering:Li-ion, materials-engineering:Li-metal and other rechargeable batteries.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Avinash Raulo. working in areas like materials-engineering:Energy Storage (Li-S, materials-engineering:Li-ion, materials-engineering:Li-metal and other rechargeable batteries.",
       "size": 9
     },
     {
       "id": "community_2",
       "community_id": 2,
       "members": [
-        "materials-engineering:Devi Lal",
-        "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
-        "materials-engineering:Processing of materials using thermal and cold spray",
-        "materials-engineering:Finite element analysis",
-        "materials-engineering:J Akhil Teja",
-        "materials-engineering:Thermal Barrier Coatings",
-        "materials-engineering:Midhat Ahsan",
-        "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics"
+        "materials-engineering:Sunil Kumar Kashyap",
+        "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
+        "materials-engineering:Sintering",
+        "materials-engineering:Oxidation",
+        "materials-engineering:Gel-Casting",
+        "materials-engineering:Rheology",
+        "materials-engineering:Abhishek Panwar",
+        "materials-engineering:High Entropy Ceramics",
+        "materials-engineering:Vidhyadhar Mishra",
+        "materials-engineering:Dual-Phase High Entropy Ceramics"
       ],
       "members_by_type": {
         "Faculty": [
-          "materials-engineering:Devi Lal"
+          "materials-engineering:Sunil Kumar Kashyap"
         ],
         "ResearchArea": [
-          "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
-          "materials-engineering:Processing of materials using thermal and cold spray",
-          "materials-engineering:Finite element analysis",
-          "materials-engineering:Thermal Barrier Coatings",
-          "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics"
+          "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
+          "materials-engineering:Sintering",
+          "materials-engineering:Oxidation",
+          "materials-engineering:Gel-Casting",
+          "materials-engineering:Rheology",
+          "materials-engineering:High Entropy Ceramics",
+          "materials-engineering:Dual-Phase High Entropy Ceramics"
         ],
         "PhDStudent": [
-          "materials-engineering:J Akhil Teja",
-          "materials-engineering:Midhat Ahsan"
+          "materials-engineering:Abhishek Panwar",
+          "materials-engineering:Vidhyadhar Mishra"
         ]
       },
       "internal_edges": [
         {
-          "source": "materials-engineering:Devi Lal",
-          "target": "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Devi Lal",
-          "target": "materials-engineering:Processing of materials using thermal and cold spray",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Sintering",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Devi Lal",
-          "target": "materials-engineering:Finite element analysis",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Oxidation",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Devi Lal",
-          "target": "materials-engineering:Thermal Barrier Coatings",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Gel-Casting",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Devi Lal",
-          "target": "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Rheology",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:J Akhil Teja",
-          "target": "materials-engineering:Devi Lal",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:High Entropy Ceramics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Dual-Phase High Entropy Ceramics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Abhishek Panwar",
+          "target": "materials-engineering:Sunil Kumar Kashyap",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "materials-engineering:J Akhil Teja",
-          "target": "materials-engineering:Thermal Barrier Coatings",
+          "source": "materials-engineering:Abhishek Panwar",
+          "target": "materials-engineering:High Entropy Ceramics",
           "type": "STUDIES"
         },
         {
-          "source": "materials-engineering:Midhat Ahsan",
-          "target": "materials-engineering:Devi Lal",
+          "source": "materials-engineering:Vidhyadhar Mishra",
+          "target": "materials-engineering:Sunil Kumar Kashyap",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "materials-engineering:Midhat Ahsan",
-          "target": "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics",
+          "source": "materials-engineering:Vidhyadhar Mishra",
+          "target": "materials-engineering:Dual-Phase High Entropy Ceramics",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Devi Lal\n  PhDStudent: J Akhil Teja, Midhat Ahsan\n  ResearchArea: Structure Properties correlating's of structural materials and Coatings, Processing of materials using thermal and cold spray, Finite element analysis, Thermal Barrier Coatings, Mechanical and Tribological Behavior of  Advanced Ceramics\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: The Community 2 in IIT Jammu's Electrical Engineering Department is led by faculty member Devi Lal. This group focuses on researching structural materials and coatings, including thermal barrier coatings and the mechanical behavior of advanced ceramics. They employ finite element analysis and processing techniques such as cold spray to study these properties. The community includes PhD students J Akhil Teja and Midhat Ahsan under Devi Lal's supervision.",
-      "summary": "The Community 2 in IIT Jammu's Electrical Engineering Department is led by faculty member Devi Lal. This group focuses on researching structural materials and coatings, including thermal barrier coatings and the mechanical behavior of advanced ceramics. They employ finite element analysis and processing techniques such as cold spray to study these properties. The community includes PhD students J Akhil Teja and Midhat Ahsan under Devi Lal's supervision.",
-      "size": 8
+      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Sunil Kumar Kashyap\n  PhDStudent: Abhishek Panwar, Vidhyadhar Mishra\n  ResearchArea: Ultra-High Temperature Ceramic (UHTC) Composites, Sintering, Oxidation, Gel-Casting, Rheology, High Entropy Ceramics, Dual-Phase High Entropy Ceramics\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Sunil Kumar Kashyap. 2 PhD student(s). working in areas like materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites, materials-engineering:Sintering, materials-engineering:Oxidation.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Sunil Kumar Kashyap. 2 PhD student(s). working in areas like materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites, materials-engineering:Sintering, materials-engineering:Oxidation.",
+      "size": 10
     },
     {
       "id": "community_3",
@@ -464,8 +478,8 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Durai Prabhakaran R T\n  ResearchArea: Fibre Reinforced Polymer Composites \u2013 Design and Manufacturing, Carbon/Carbon Composites, Biomaterials & Natural Fibre Composites, Mechanics of Composite Materials, Composites Recycling, Experimental Characterization of Composites (Static, Interface, Fatigue, Low velocity Impact), Renewable Energy\n  Relationships: RESEARCHES_IN: 10\n\nSummary: The Community 3 in IIT Jammu's Electrical Engineering Department is led by faculty member Durai Prabhakaran R T. This group focuses on research areas including fibre reinforced polymer composites, carbon/carbon composites, biomaterials, and renewable energy. They are connected through a total of 10 research projects, indicating a collaborative effort in these specific fields.",
-      "summary": "The Community 3 in IIT Jammu's Electrical Engineering Department is led by faculty member Durai Prabhakaran R T. This group focuses on research areas including fibre reinforced polymer composites, carbon/carbon composites, biomaterials, and renewable energy. They are connected through a total of 10 research projects, indicating a collaborative effort in these specific fields.",
+      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Durai Prabhakaran R T\n  ResearchArea: Fibre Reinforced Polymer Composites \u2013 Design and Manufacturing, Carbon/Carbon Composites, Biomaterials & Natural Fibre Composites, Mechanics of Composite Materials, Composites Recycling, Experimental Characterization of Composites (Static, Interface, Fatigue, Low velocity Impact), Renewable Energy\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Durai Prabhakaran R T. working in areas like materials-engineering:Fibre Reinforced Polymer Composites \u2013 Design and Manufacturing, materials-engineering:Carbon/Carbon Composites, materials-engineering:Biomaterials & Natural Fibre Composites.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Durai Prabhakaran R T. working in areas like materials-engineering:Fibre Reinforced Polymer Composites \u2013 Design and Manufacturing, materials-engineering:Carbon/Carbon Composites, materials-engineering:Biomaterials & Natural Fibre Composites.",
       "size": 11
     },
     {
@@ -525,8 +539,8 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Sarita\n  ResearchArea: 1. Microstructural Evolution under Extreme Conditions, 2. Phase Transformations in Materials, 3. Structure\u2013Property Correlation in Structural and Nuclear Materials, 4. Rare-Earth-Free Magnetic Materials, 5. DFT, APT and SANS-Based Materials Characterization\n  Relationships: RESEARCHES_IN: 6\n\nSummary: The Community 4 in IIT Jammu's Electrical Engineering Department is led by Faculty member Sarita. This community focuses on materials science research, specifically investigating microstructural evolution under extreme conditions, phase transformations, structure-property correlations, rare-earth-free magnetic materials, and characterization techniques such as DFT, APT, and SANS.",
-      "summary": "The Community 4 in IIT Jammu's Electrical Engineering Department is led by Faculty member Sarita. This community focuses on materials science research, specifically investigating microstructural evolution under extreme conditions, phase transformations, structure-property correlations, rare-earth-free magnetic materials, and characterization techniques such as DFT, APT, and SANS.",
+      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Sarita\n  ResearchArea: 1. Microstructural Evolution under Extreme Conditions, 2. Phase Transformations in Materials, 3. Structure\u2013Property Correlation in Structural and Nuclear Materials, 4. Rare-Earth-Free Magnetic Materials, 5. DFT, APT and SANS-Based Materials Characterization\n  Relationships: RESEARCHES_IN: 6\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Sarita. working in areas like materials-engineering:1. Microstructural Evolution under Extreme Conditions, materials-engineering:2. Phase Transformations in Materials, materials-engineering:3. Structure\u2013Property Correlation in Structural and Nuclear Materials.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Sarita. working in areas like materials-engineering:1. Microstructural Evolution under Extreme Conditions, materials-engineering:2. Phase Transformations in Materials, materials-engineering:3. Structure\u2013Property Correlation in Structural and Nuclear Materials.",
       "size": 7
     },
     {
@@ -619,8 +633,8 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Nitesh Kumar\n  PhDStudent: Durgesh Kumar, Gorbel B\n  ResearchArea: Research Areas, Biomaterials, Energy Materials, Materials Science and Engineering, Physical Metallurgy, Extractive Metallurgy, Hydrogen storage\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: The Community 5 in IIT Jammu's Electrical Engineering Department is led by Faculty member Nitesh Kumar. The group consists of PhD students Durgesh Kumar and Gorbel B, who work under Nitesh Kumar's supervision on research areas including Biomaterials, Energy Materials, Materials Science and Engineering, Physical Metallurgy, Extractive Metallurgy, and Hydrogen storage.",
-      "summary": "The Community 5 in IIT Jammu's Electrical Engineering Department is led by Faculty member Nitesh Kumar. The group consists of PhD students Durgesh Kumar and Gorbel B, who work under Nitesh Kumar's supervision on research areas including Biomaterials, Energy Materials, Materials Science and Engineering, Physical Metallurgy, Extractive Metallurgy, and Hydrogen storage.",
+      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Nitesh Kumar\n  PhDStudent: Durgesh Kumar, Gorbel B\n  ResearchArea: Research Areas, Biomaterials, Energy Materials, Materials Science and Engineering, Physical Metallurgy, Extractive Metallurgy, Hydrogen storage\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Nitesh Kumar. 2 PhD student(s). working in areas like materials-engineering:Research Areas, materials-engineering:Biomaterials, materials-engineering:Energy Materials.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Nitesh Kumar. 2 PhD student(s). working in areas like materials-engineering:Research Areas, materials-engineering:Biomaterials, materials-engineering:Energy Materials.",
       "size": 10
     },
     {
@@ -708,8 +722,8 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 6 in IIT Jammu EE Department:\n  Faculty: Rajkumar V\n  ResearchArea: Dr. Rajkumar Velu\u2019s research is centered on additive manufacturing (AM) and advanced materials engineering, with a particular emphasis on the development, processing, and application of polymeric, metallic, and composite materials for high-performance and functional components. His multidisciplinary research integrates experimental and computational approaches to explore the following key areas, 1. Selective laser sintering of reactive polymers, 2. Additive manufacturing of functionally graded structures, 3. Fabrication of multifunctional components using continuous carbon fibre 3D printing, 4. 3D bioprinting for biomedical and energy applications\n  Relationships: RESEARCHES_IN: 10\n\nSummary: The Community 6 in IIT Jammu's Electrical Engineering Department is led by Dr. Rajkumar Velu, whose research focuses on additive manufacturing (AM) and advanced materials engineering. Specifically, the group explores four key areas: selective laser sintering of reactive polymers, additive manufacturing of functionally graded structures, fabrication of multifunctional components using continuous carbon fibre 3D printing, and 3D bioprinting for biomedical and energy applications. Dr. Velu's multidisciplinary research integrates experimental and computational approaches.",
-      "summary": "The Community 6 in IIT Jammu's Electrical Engineering Department is led by Dr. Rajkumar Velu, whose research focuses on additive manufacturing (AM) and advanced materials engineering. Specifically, the group explores four key areas: selective laser sintering of reactive polymers, additive manufacturing of functionally graded structures, fabrication of multifunctional components using continuous carbon fibre 3D printing, and 3D bioprinting for biomedical and energy applications. Dr. Velu's multidisciplinary research integrates experimental and computational approaches.",
+      "text": "Community 6 in IIT Jammu EE Department:\n  Faculty: Rajkumar V\n  ResearchArea: Dr. Rajkumar Velu\u2019s research is centered on additive manufacturing (AM) and advanced materials engineering, with a particular emphasis on the development, processing, and application of polymeric, metallic, and composite materials for high-performance and functional components. His multidisciplinary research integrates experimental and computational approaches to explore the following key areas, 1. Selective laser sintering of reactive polymers, 2. Additive manufacturing of functionally graded structures, 3. Fabrication of multifunctional components using continuous carbon fibre 3D printing, 4. 3D bioprinting for biomedical and energy applications\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Rajkumar V. working in areas like materials-engineering:Dr. Rajkumar Velu\u2019s research is centered on additive manufacturing (AM) and advanced materials engineering, materials-engineering:with a particular emphasis on the development, materials-engineering:processing.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Rajkumar V. working in areas like materials-engineering:Dr. Rajkumar Velu\u2019s research is centered on additive manufacturing (AM) and advanced materials engineering, materials-engineering:with a particular emphasis on the development, materials-engineering:processing.",
       "size": 11
     },
     {
@@ -807,74 +821,13 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 7 in IIT Jammu EE Department:\n  Faculty: Rani Rohini\n  PhDStudent: Nishant Chandel, Priyam Srivastava, Saurabh Kumar Jha\n  ResearchArea: HYBRID CARBON FIBER COMPOSITES, NANOSTRUCTURED MATERIAL DESIGN FOR THERMAL MANAGEMENT, DEVELOPMNET OF SUSTAINABLE POLYMER BASED COATINGS, Polymer Nano-Composites, Carbon Fibre, Technical Textile, Thermal Management Materials, Extreme Climate Polymers\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: The Community 7 in IIT Jammu's Electrical Engineering Department is led by Faculty member Rani Rohini. The group consists of PhD students Nishant Chandel, Priyam Srivastava, and Saurabh Kumar Jha, who are supervised by Rani Rohini. Their research focuses on developing sustainable materials and technologies, including hybrid carbon fiber composites, nanostructured material design for thermal management, and polymer-based coatings.",
-      "summary": "The Community 7 in IIT Jammu's Electrical Engineering Department is led by Faculty member Rani Rohini. The group consists of PhD students Nishant Chandel, Priyam Srivastava, and Saurabh Kumar Jha, who are supervised by Rani Rohini. Their research focuses on developing sustainable materials and technologies, including hybrid carbon fiber composites, nanostructured material design for thermal management, and polymer-based coatings.",
+      "text": "Community 7 in IIT Jammu EE Department:\n  Faculty: Rani Rohini\n  PhDStudent: Nishant Chandel, Priyam Srivastava, Saurabh Kumar Jha\n  ResearchArea: HYBRID CARBON FIBER COMPOSITES, NANOSTRUCTURED MATERIAL DESIGN FOR THERMAL MANAGEMENT, DEVELOPMNET OF SUSTAINABLE POLYMER BASED COATINGS, Polymer Nano-Composites, Carbon Fibre, Technical Textile, Thermal Management Materials, Extreme Climate Polymers\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Rani Rohini. 3 PhD student(s). working in areas like materials-engineering:HYBRID CARBON FIBER COMPOSITES, materials-engineering:NANOSTRUCTURED MATERIAL DESIGN FOR THERMAL MANAGEMENT, materials-engineering:DEVELOPMNET OF SUSTAINABLE POLYMER BASED COATINGS.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Rani Rohini. 3 PhD student(s). working in areas like materials-engineering:HYBRID CARBON FIBER COMPOSITES, materials-engineering:NANOSTRUCTURED MATERIAL DESIGN FOR THERMAL MANAGEMENT, materials-engineering:DEVELOPMNET OF SUSTAINABLE POLYMER BASED COATINGS.",
       "size": 10
     },
     {
       "id": "community_8",
       "community_id": 8,
-      "members": [
-        "materials-engineering:Srishilan C",
-        "materials-engineering:1. Computational modelling of Process Metallurgy",
-        "materials-engineering:2. High temperature pyro-metallurgical processes",
-        "materials-engineering:3. Metallurgical waste recycling",
-        "materials-engineering:Snigdha Priyadarshini",
-        "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "materials-engineering:Srishilan C"
-        ],
-        "ResearchArea": [
-          "materials-engineering:1. Computational modelling of Process Metallurgy",
-          "materials-engineering:2. High temperature pyro-metallurgical processes",
-          "materials-engineering:3. Metallurgical waste recycling",
-          "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy"
-        ],
-        "PhDStudent": [
-          "materials-engineering:Snigdha Priyadarshini"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "materials-engineering:Srishilan C",
-          "target": "materials-engineering:1. Computational modelling of Process Metallurgy",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Srishilan C",
-          "target": "materials-engineering:2. High temperature pyro-metallurgical processes",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Srishilan C",
-          "target": "materials-engineering:3. Metallurgical waste recycling",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Srishilan C",
-          "target": "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Snigdha Priyadarshini",
-          "target": "materials-engineering:Srishilan C",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "materials-engineering:Snigdha Priyadarshini",
-          "target": "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 8 in IIT Jammu EE Department:\n  Faculty: Srishilan C\n  PhDStudent: Snigdha Priyadarshini\n  ResearchArea: 1. Computational modelling of Process Metallurgy, 2. High temperature pyro-metallurgical processes, 3. Metallurgical waste recycling, Process Metallurgy, E-waste Recycle, Pyro Metallurgy\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 8 in IIT Jammu's Electrical Engineering Department is led by Faculty member Srishilan C. They focus on research areas including computational modelling of Process Metallurgy, high temperature pyro-metallurgical processes, metallurgical waste recycling, and E-waste recycling. Snigdha Priyadarshini is a PhD student supervised by Srishilan C, indicating a close working relationship between them.",
-      "summary": "The Community 8 in IIT Jammu's Electrical Engineering Department is led by Faculty member Srishilan C. They focus on research areas including computational modelling of Process Metallurgy, high temperature pyro-metallurgical processes, metallurgical waste recycling, and E-waste recycling. Snigdha Priyadarshini is a PhD student supervised by Srishilan C, indicating a close working relationship between them.",
-      "size": 6
-    },
-    {
-      "id": "community_9",
-      "community_id": 9,
       "members": [
         "materials-engineering:Shantanu Vijay Madge",
         "materials-engineering:Mechanical Metallurgy",
@@ -971,9 +924,44 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 9 in IIT Jammu EE Department:\n  Faculty: Shantanu Vijay Madge\n  PhDStudent: Ambuj Pathak\n  ResearchArea: Mechanical Metallurgy, Materials Processing, Wear and Surface Engineering (Tribology), Metal 3D Printing (Additive Manufacturing), Cold Spray Deposition, Rapid Solidification, Amorphous Alloys, High Entropy Alloys, Electron Microscopy (SEM/EBSD/TEM) and X-ray DIffraction of Materials, Multi-Componenet Alloys (HEAs, BMGs and Bio-Materials)\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 9 in IIT Jammu's Electrical Engineering Department is led by Dr. Shantanu Vijay Madge, a faculty member with expertise in mechanical metallurgy and materials processing. The group includes PhD student Ambuj Pathak, who is likely supervised by Dr. Madge (SUPERVISED_BY: 1). Their research focuses on various areas of materials science, including metal 3D printing, wear and surface engineering, and electron microscopy, among others.",
-      "summary": "The Community 9 in IIT Jammu's Electrical Engineering Department is led by Dr. Shantanu Vijay Madge, a faculty member with expertise in mechanical metallurgy and materials processing. The group includes PhD student Ambuj Pathak, who is likely supervised by Dr. Madge (SUPERVISED_BY: 1). Their research focuses on various areas of materials science, including metal 3D printing, wear and surface engineering, and electron microscopy, among others.",
+      "text": "Community 8 in IIT Jammu EE Department:\n  Faculty: Shantanu Vijay Madge\n  PhDStudent: Ambuj Pathak\n  ResearchArea: Mechanical Metallurgy, Materials Processing, Wear and Surface Engineering (Tribology), Metal 3D Printing (Additive Manufacturing), Cold Spray Deposition, Rapid Solidification, Amorphous Alloys, High Entropy Alloys, Electron Microscopy (SEM/EBSD/TEM) and X-ray DIffraction of Materials, Multi-Componenet Alloys (HEAs, BMGs and Bio-Materials)\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Shantanu Vijay Madge. 1 PhD student(s). working in areas like materials-engineering:Mechanical Metallurgy, materials-engineering:Materials Processing, materials-engineering:Wear and Surface Engineering (Tribology).",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Shantanu Vijay Madge. 1 PhD student(s). working in areas like materials-engineering:Mechanical Metallurgy, materials-engineering:Materials Processing, materials-engineering:Wear and Surface Engineering (Tribology).",
       "size": 12
+    },
+    {
+      "id": "community_9",
+      "community_id": 9,
+      "members": [
+        "materials-engineering:Vikas Kumar",
+        "materials-engineering:Srinivasan Nedunchezhian",
+        "materials-engineering:Composites Testing"
+      ],
+      "members_by_type": {
+        "PhDStudent": [
+          "materials-engineering:Vikas Kumar"
+        ],
+        "ExternalPerson": [
+          "materials-engineering:Srinivasan Nedunchezhian"
+        ],
+        "ResearchArea": [
+          "materials-engineering:Composites Testing"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "materials-engineering:Vikas Kumar",
+          "target": "materials-engineering:Srinivasan Nedunchezhian",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "materials-engineering:Vikas Kumar",
+          "target": "materials-engineering:Composites Testing",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 9 in IIT Jammu EE Department:\n  ExternalPerson: Srinivasan Nedunchezhian\n  PhDStudent: Vikas Kumar\n  ResearchArea: Composites Testing\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: 1 PhD student(s). working in areas like materials-engineering:Composites Testing.",
+      "summary": "1 PhD student(s). working in areas like materials-engineering:Composites Testing.",
+      "size": 3
     },
     {
       "id": "community_10",
@@ -1039,8 +1027,8 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 10 in IIT Jammu EE Department:\n  Faculty: Sri Tapaswi Nori\n  ResearchArea: 1) Irradiation effects, 2) Metallic alloys such as the steels, concentrated solid solution alloy, and low-activation alloys, 3) Correlative microscopy - Scanning and transmission electron microscopy, 4) Synchrotron X-ray diffraction and spectroscopy, 5) Nanoindentation\n  Relationships: RESEARCHES_IN: 7\n\nSummary: The Community 10 in IIT Jammu's Electrical Engineering Department is led by Faculty member Sri Tapaswi Nori. The group focuses on researching irradiation effects and properties of various metallic alloys, utilizing techniques such as correlative microscopy, synchrotron X-ray diffraction and spectroscopy, and nanoindentation. They have a total of 7 research projects in this area.",
-      "summary": "The Community 10 in IIT Jammu's Electrical Engineering Department is led by Faculty member Sri Tapaswi Nori. The group focuses on researching irradiation effects and properties of various metallic alloys, utilizing techniques such as correlative microscopy, synchrotron X-ray diffraction and spectroscopy, and nanoindentation. They have a total of 7 research projects in this area.",
+      "text": "Community 10 in IIT Jammu EE Department:\n  Faculty: Sri Tapaswi Nori\n  ResearchArea: 1) Irradiation effects, 2) Metallic alloys such as the steels, concentrated solid solution alloy, and low-activation alloys, 3) Correlative microscopy - Scanning and transmission electron microscopy, 4) Synchrotron X-ray diffraction and spectroscopy, 5) Nanoindentation\n  Relationships: RESEARCHES_IN: 7\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Sri Tapaswi Nori. working in areas like materials-engineering:1) Irradiation effects, materials-engineering:2) Metallic alloys such as the steels, materials-engineering:concentrated solid solution alloy.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Sri Tapaswi Nori. working in areas like materials-engineering:1) Irradiation effects, materials-engineering:2) Metallic alloys such as the steels, materials-engineering:concentrated solid solution alloy.",
       "size": 8
     },
     {
@@ -1124,103 +1112,70 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 11 in IIT Jammu EE Department:\n  Faculty: Srinivasan N\n  PhDStudent: Anant Kumar Gupta, Rehana Batool, Subhajeet Sen\n  ResearchArea: Functional ceramics for energy applications, High temperature thermal barrier coatings, Entropy Stabilized Oxides, New material development for TBC, Functional ceramic, Functional Ceramic Materials\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: Community 11 in IIT Jammu's Electrical Engineering Department is led by faculty member Srinivasan N. The group consists of PhD students Anant Kumar Gupta, Rehana Batool, and Subhajeet Sen, who are supervised by Srinivasan N. This community focuses on research areas including functional ceramics for energy applications, high-temperature thermal barrier coatings, entropy-stabilized oxides, and new material development for TBCs.",
-      "summary": "Community 11 in IIT Jammu's Electrical Engineering Department is led by faculty member Srinivasan N. The group consists of PhD students Anant Kumar Gupta, Rehana Batool, and Subhajeet Sen, who are supervised by Srinivasan N. This community focuses on research areas including functional ceramics for energy applications, high-temperature thermal barrier coatings, entropy-stabilized oxides, and new material development for TBCs.",
+      "text": "Community 11 in IIT Jammu EE Department:\n  Faculty: Srinivasan N\n  PhDStudent: Anant Kumar Gupta, Rehana Batool, Subhajeet Sen\n  ResearchArea: Functional ceramics for energy applications, High temperature thermal barrier coatings, Entropy Stabilized Oxides, New material development for TBC, Functional ceramic, Functional Ceramic Materials\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Srinivasan N. 3 PhD student(s). working in areas like materials-engineering:Functional ceramics for energy applications, materials-engineering:High temperature thermal barrier coatings, Entropy Stabilized Oxides, New material development for TBC, materials-engineering:Functional ceramic.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Srinivasan N. 3 PhD student(s). working in areas like materials-engineering:Functional ceramics for energy applications, materials-engineering:High temperature thermal barrier coatings, Entropy Stabilized Oxides, New material development for TBC, materials-engineering:Functional ceramic.",
       "size": 8
     },
     {
       "id": "community_12",
       "community_id": 12,
       "members": [
-        "materials-engineering:Sunil Kumar Kashyap",
-        "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
-        "materials-engineering:Sintering",
-        "materials-engineering:Oxidation",
-        "materials-engineering:Gel-Casting",
-        "materials-engineering:Rheology",
-        "materials-engineering:Abhishek Panwar",
-        "materials-engineering:High Entropy Ceramics",
-        "materials-engineering:Vidhyadhar Mishra",
-        "materials-engineering:Dual-Phase High Entropy Ceramics"
+        "materials-engineering:Srishilan C",
+        "materials-engineering:1. Computational modelling of Process Metallurgy",
+        "materials-engineering:2. High temperature pyro-metallurgical processes",
+        "materials-engineering:3. Metallurgical waste recycling",
+        "materials-engineering:Snigdha Priyadarshini",
+        "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy"
       ],
       "members_by_type": {
         "Faculty": [
-          "materials-engineering:Sunil Kumar Kashyap"
+          "materials-engineering:Srishilan C"
         ],
         "ResearchArea": [
-          "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
-          "materials-engineering:Sintering",
-          "materials-engineering:Oxidation",
-          "materials-engineering:Gel-Casting",
-          "materials-engineering:Rheology",
-          "materials-engineering:High Entropy Ceramics",
-          "materials-engineering:Dual-Phase High Entropy Ceramics"
+          "materials-engineering:1. Computational modelling of Process Metallurgy",
+          "materials-engineering:2. High temperature pyro-metallurgical processes",
+          "materials-engineering:3. Metallurgical waste recycling",
+          "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy"
         ],
         "PhDStudent": [
-          "materials-engineering:Abhishek Panwar",
-          "materials-engineering:Vidhyadhar Mishra"
+          "materials-engineering:Snigdha Priyadarshini"
         ]
       },
       "internal_edges": [
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
+          "source": "materials-engineering:Srishilan C",
+          "target": "materials-engineering:1. Computational modelling of Process Metallurgy",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Sintering",
+          "source": "materials-engineering:Srishilan C",
+          "target": "materials-engineering:2. High temperature pyro-metallurgical processes",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Oxidation",
+          "source": "materials-engineering:Srishilan C",
+          "target": "materials-engineering:3. Metallurgical waste recycling",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Gel-Casting",
+          "source": "materials-engineering:Srishilan C",
+          "target": "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Rheology",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:High Entropy Ceramics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Dual-Phase High Entropy Ceramics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Abhishek Panwar",
-          "target": "materials-engineering:Sunil Kumar Kashyap",
+          "source": "materials-engineering:Snigdha Priyadarshini",
+          "target": "materials-engineering:Srishilan C",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "materials-engineering:Abhishek Panwar",
-          "target": "materials-engineering:High Entropy Ceramics",
-          "type": "STUDIES"
-        },
-        {
-          "source": "materials-engineering:Vidhyadhar Mishra",
-          "target": "materials-engineering:Sunil Kumar Kashyap",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "materials-engineering:Vidhyadhar Mishra",
-          "target": "materials-engineering:Dual-Phase High Entropy Ceramics",
+          "source": "materials-engineering:Snigdha Priyadarshini",
+          "target": "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 12 in IIT Jammu EE Department:\n  Faculty: Sunil Kumar Kashyap\n  PhDStudent: Abhishek Panwar, Vidhyadhar Mishra\n  ResearchArea: Ultra-High Temperature Ceramic (UHTC) Composites, Sintering, Oxidation, Gel-Casting, Rheology, High Entropy Ceramics, Dual-Phase High Entropy Ceramics\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: The Community 12 in IIT Jammu's Electrical Engineering Department is led by Dr. Sunil Kumar Kashyap, a faculty member with expertise in various research areas. This group consists of PhD students Abhishek Panwar and Vidhyadhar Mishra, who are supervised by Dr. Kashyap. The community focuses on developing Ultra-High Temperature Ceramic (UHTC) Composites, exploring sintering, oxidation, gel-casting, rheology, high entropy ceramics, and dual-phase high entropy ceramics through their research.",
-      "summary": "The Community 12 in IIT Jammu's Electrical Engineering Department is led by Dr. Sunil Kumar Kashyap, a faculty member with expertise in various research areas. This group consists of PhD students Abhishek Panwar and Vidhyadhar Mishra, who are supervised by Dr. Kashyap. The community focuses on developing Ultra-High Temperature Ceramic (UHTC) Composites, exploring sintering, oxidation, gel-casting, rheology, high entropy ceramics, and dual-phase high entropy ceramics through their research.",
-      "size": 10
+      "text": "Community 12 in IIT Jammu EE Department:\n  Faculty: Srishilan C\n  PhDStudent: Snigdha Priyadarshini\n  ResearchArea: 1. Computational modelling of Process Metallurgy, 2. High temperature pyro-metallurgical processes, 3. Metallurgical waste recycling, Process Metallurgy, E-waste Recycle, Pyro Metallurgy\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Srishilan C. 1 PhD student(s). working in areas like materials-engineering:1. Computational modelling of Process Metallurgy, materials-engineering:2. High temperature pyro-metallurgical processes, materials-engineering:3. Metallurgical waste recycling.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Srishilan C. 1 PhD student(s). working in areas like materials-engineering:1. Computational modelling of Process Metallurgy, materials-engineering:2. High temperature pyro-metallurgical processes, materials-engineering:3. Metallurgical waste recycling.",
+      "size": 6
     },
     {
       "id": "community_13",
@@ -1345,44 +1300,89 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 13 in IIT Jammu EE Department:\n  Faculty: Suman Sarkar\n  PhDStudent: Bushra Munir, Nidhi Shukla, Vivekanand Jakhar\n  ResearchArea: Heat Storage Alloys, Phase Change Memory System, Microwave and X Band Frequency Tuned Materials, Optically Induced Smart Materials, High Heat Flux Alloys, Transmission Electron Microscopy, Phase Transformation and Thermodynamic Modeling, Fe-Ni-Based Rare Earth Free Hard Magnetic Alloys Development, Phase Change Alloys (Memory and Heat Storage), Shape memory alloys\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: The Community 13 in IIT Jammu's Electrical Engineering Department is led by faculty member Suman Sarkar. The group consists of PhD students Bushra Munir, Nidhi Shukla, and Vivekanand Jakhar, who are supervised by Dr. Sarkar. Their research focuses on various areas, including heat storage alloys, phase change memory systems, and smart materials, with an emphasis on thermodynamic modeling and material development.",
-      "summary": "The Community 13 in IIT Jammu's Electrical Engineering Department is led by faculty member Suman Sarkar. The group consists of PhD students Bushra Munir, Nidhi Shukla, and Vivekanand Jakhar, who are supervised by Dr. Sarkar. Their research focuses on various areas, including heat storage alloys, phase change memory systems, and smart materials, with an emphasis on thermodynamic modeling and material development.",
+      "text": "Community 13 in IIT Jammu EE Department:\n  Faculty: Suman Sarkar\n  PhDStudent: Bushra Munir, Nidhi Shukla, Vivekanand Jakhar\n  ResearchArea: Heat Storage Alloys, Phase Change Memory System, Microwave and X Band Frequency Tuned Materials, Optically Induced Smart Materials, High Heat Flux Alloys, Transmission Electron Microscopy, Phase Transformation and Thermodynamic Modeling, Fe-Ni-Based Rare Earth Free Hard Magnetic Alloys Development, Phase Change Alloys (Memory and Heat Storage), Shape memory alloys\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Suman Sarkar. 3 PhD student(s). working in areas like materials-engineering:Heat Storage Alloys, materials-engineering:Phase Change Memory System, materials-engineering:Microwave and X Band Frequency Tuned Materials.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Suman Sarkar. 3 PhD student(s). working in areas like materials-engineering:Heat Storage Alloys, materials-engineering:Phase Change Memory System, materials-engineering:Microwave and X Band Frequency Tuned Materials.",
       "size": 14
     },
     {
       "id": "community_14",
       "community_id": 14,
       "members": [
-        "materials-engineering:Vikas Kumar",
-        "materials-engineering:Srinivasan Nedunchezhian",
-        "materials-engineering:Composites Testing"
+        "materials-engineering:Devi Lal",
+        "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
+        "materials-engineering:Processing of materials using thermal and cold spray",
+        "materials-engineering:Finite element analysis",
+        "materials-engineering:J Akhil Teja",
+        "materials-engineering:Thermal Barrier Coatings",
+        "materials-engineering:Midhat Ahsan",
+        "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics"
       ],
       "members_by_type": {
-        "PhDStudent": [
-          "materials-engineering:Vikas Kumar"
-        ],
-        "ExternalPerson": [
-          "materials-engineering:Srinivasan Nedunchezhian"
+        "Faculty": [
+          "materials-engineering:Devi Lal"
         ],
         "ResearchArea": [
-          "materials-engineering:Composites Testing"
+          "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
+          "materials-engineering:Processing of materials using thermal and cold spray",
+          "materials-engineering:Finite element analysis",
+          "materials-engineering:Thermal Barrier Coatings",
+          "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics"
+        ],
+        "PhDStudent": [
+          "materials-engineering:J Akhil Teja",
+          "materials-engineering:Midhat Ahsan"
         ]
       },
       "internal_edges": [
         {
-          "source": "materials-engineering:Vikas Kumar",
-          "target": "materials-engineering:Srinivasan Nedunchezhian",
+          "source": "materials-engineering:Devi Lal",
+          "target": "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Devi Lal",
+          "target": "materials-engineering:Processing of materials using thermal and cold spray",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Devi Lal",
+          "target": "materials-engineering:Finite element analysis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Devi Lal",
+          "target": "materials-engineering:Thermal Barrier Coatings",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Devi Lal",
+          "target": "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:J Akhil Teja",
+          "target": "materials-engineering:Devi Lal",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "materials-engineering:Vikas Kumar",
-          "target": "materials-engineering:Composites Testing",
+          "source": "materials-engineering:J Akhil Teja",
+          "target": "materials-engineering:Thermal Barrier Coatings",
+          "type": "STUDIES"
+        },
+        {
+          "source": "materials-engineering:Midhat Ahsan",
+          "target": "materials-engineering:Devi Lal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "materials-engineering:Midhat Ahsan",
+          "target": "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 14 in IIT Jammu EE Department:\n  ExternalPerson: Srinivasan Nedunchezhian\n  PhDStudent: Vikas Kumar\n  ResearchArea: Composites Testing\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 14 in IIT Jammu's Electrical Engineering Department is led by Dr. Srinivasan Nedunchezhian and consists of Vikas Kumar, a PhD student under his supervision. The group focuses on research related to Composites Testing. Dr. Nedunchezhian supervises Vikas Kumar's studies, indicating a mentorship relationship between the two.",
-      "summary": "The Community 14 in IIT Jammu's Electrical Engineering Department is led by Dr. Srinivasan Nedunchezhian and consists of Vikas Kumar, a PhD student under his supervision. The group focuses on research related to Composites Testing. Dr. Nedunchezhian supervises Vikas Kumar's studies, indicating a mentorship relationship between the two.",
-      "size": 3
+      "text": "Community 14 in IIT Jammu EE Department:\n  Faculty: Devi Lal\n  PhDStudent: J Akhil Teja, Midhat Ahsan\n  ResearchArea: Structure Properties correlating's of structural materials and Coatings, Processing of materials using thermal and cold spray, Finite element analysis, Thermal Barrier Coatings, Mechanical and Tribological Behavior of  Advanced Ceramics\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Devi Lal. 2 PhD student(s). working in areas like materials-engineering:Structure Properties correlating's of structural materials and Coatings, materials-engineering:Processing of materials using thermal and cold spray, materials-engineering:Finite element analysis.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Devi Lal. 2 PhD student(s). working in areas like materials-engineering:Structure Properties correlating's of structural materials and Coatings, materials-engineering:Processing of materials using thermal and cold spray, materials-engineering:Finite element analysis.",
+      "size": 8
     },
     {
       "id": "community_15",
@@ -1471,8 +1471,8 @@
           "type": "MEMBER_OF"
         }
       ],
-      "text": "Community 15 in IIT Jammu EE Department:\n  Department: Department of Materials Engineering\n  Faculty: Kancharla Hari Krishna, Supriyo Chakraborty\n  ResearchArea: Corrosion characteristics of engineering materials and coatings, Hot-dip galvanization, Electrodeposition of anticorrosion coatings, AI/ML Application to Materials, Light Metals and Alloys, Materials for Extreme Environments, Materials for Energy Applications, Recycling\n  Relationships: RESEARCHES_IN: 8, MEMBER_OF: 2\n\nSummary: The Community 15 in IIT Jammu's Electrical Engineering Department is comprised of faculty members Kancharla Hari Krishna and Supriyo Chakraborty. They focus their research on various aspects of materials engineering, including corrosion characteristics, hot-dip galvanization, electrodeposition, AI/ML applications, light metals, alloys for extreme environments, energy applications, and recycling. This community is connected through shared research interests and collaborations within the department.",
-      "summary": "The Community 15 in IIT Jammu's Electrical Engineering Department is comprised of faculty members Kancharla Hari Krishna and Supriyo Chakraborty. They focus their research on various aspects of materials engineering, including corrosion characteristics, hot-dip galvanization, electrodeposition, AI/ML applications, light metals, alloys for extreme environments, energy applications, and recycling. This community is connected through shared research interests and collaborations within the department.",
+      "text": "Community 15 in IIT Jammu EE Department:\n  Department: Department of Materials Engineering\n  Faculty: Kancharla Hari Krishna, Supriyo Chakraborty\n  ResearchArea: Corrosion characteristics of engineering materials and coatings, Hot-dip galvanization, Electrodeposition of anticorrosion coatings, AI/ML Application to Materials, Light Metals and Alloys, Materials for Extreme Environments, Materials for Energy Applications, Recycling\n  Relationships: RESEARCHES_IN: 8, MEMBER_OF: 2\n\nSummary: This group includes 2 faculty member(s): materials-engineering:Kancharla Hari Krishna, materials-engineering:Supriyo Chakraborty. working in areas like materials-engineering:Corrosion characteristics of engineering materials and coatings, materials-engineering:Hot-dip galvanization, materials-engineering:Electrodeposition of anticorrosion coatings.",
+      "summary": "This group includes 2 faculty member(s): materials-engineering:Kancharla Hari Krishna, materials-engineering:Supriyo Chakraborty. working in areas like materials-engineering:Corrosion characteristics of engineering materials and coatings, materials-engineering:Hot-dip galvanization, materials-engineering:Electrodeposition of anticorrosion coatings.",
       "size": 11
     }
   ]

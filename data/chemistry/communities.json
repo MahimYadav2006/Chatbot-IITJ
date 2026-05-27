@@ -1,160 +1,310 @@
 {
   "partition": {
-    "chemistry:Exploring supramolecular self-assembly for advanced material development": 6,
-    "chemistry:Nityananda Sahu": 1,
-    "chemistry:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis": 2,
-    "chemistry:Shivnath Mazumder": 5,
-    "chemistry:CH4461 - Integrating Chemistry": 4,
-    "chemistry:Spectroscopy": 0,
-    "chemistry:Shivali Hans": 8,
-    "chemistry:Explicit Hydration": 1,
-    "chemistry:Drug Discovery": 5,
-    "chemistry:Reaction Mechanism and Reactivity": 1,
-    "chemistry:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)": 2,
-    "chemistry:and development of structure-property relationships in new functional inorganic materials": 2,
-    "chemistry:Teaching\u00a0 Interests": 0,
-    "chemistry:Renewable Energy": 5,
-    "chemistry:C-H Functionalization": 7,
-    "chemistry:Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity": 8,
-    "chemistry:Upcycling Waste Materials for Thermal\u2013Photo\u2013Electrochemical CO\u2082 Reduction": 3,
-    "chemistry:Swati Rani": 8,
-    "chemistry:Hetero2D/2D Networks for Chemiresistive Gas Sensing": 3,
-    "chemistry:Porous Materials as SERS Substrates for Plasticizer Detection and PIERs Applications": 3,
-    "chemistry:Vibrational IR/Raman Spectroscopy": 1,
-    "chemistry:Namrata Kotwal": 0,
-    "chemistry:Large Molecules and Molecular Clusters": 1,
-    "chemistry:Haneesh Saini": 3,
-    "chemistry:Himani": 0,
-    "chemistry:Synergistic Catalysis": 0,
-    "chemistry:Yaseen Hussain": 0,
-    "chemistry:Group Webpage:****[https://shivnathmazumder.wixsite.com/computationalchem](https://shivnathmazumder.wixsite.com/computationalchem)": 5,
-    "chemistry:my resarch mainly interested at structure-design of variou sHybrid Two-Dimensional (2D) Porous Materials for advanced applications": 3,
-    "chemistry:Hybrid Porous Triboelectric Nanogenerators for Energy Harvesting": 3,
-    "chemistry:Tailoring Functional Graphene-Derived Geopolymer Nanocomposites: Interfacial Interactions and Mechanical Strength Enhancement": 3,
-    "chemistry:Manisha Sharma": 0,
-    "chemistry:Organometalic catalysis involving non-innocent ligands": 8,
-    "chemistry:include": 6,
-    "chemistry:Neetu Singh": 5,
-    "chemistry:Subhas Samanta": 8,
-    "chemistry:CH4442 - Chemistry Undergraduate Research Project": 4,
-    "chemistry:Photoredox Catalysis": 7,
-    "chemistry:Priya Sahni": 4,
-    "chemistry:Porous Hybrids for Atmospheric Water Harvesting": 3,
-    "chemistry:Electronic Structure Calculations": 1,
-    "chemistry:and Organoboranes": 7,
-    "chemistry:Sheetal Ranaut": 5,
-    "chemistry:Graphene-MOF hybrids for energy and environmental technologies": 3,
-    "chemistry:Anil Kumar Paidi": 2,
-    "chemistry:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique": 6,
-    "chemistry:Computational Chemistry": 5,
-    "chemistry:Alkyne & Allene Chemistry": 7,
-    "chemistry:Photochemical & Elecrochemical Organic Synthesis": 0,
-    "chemistry:Courses tutored and staff demonstrated at University of St Andrews": 4,
-    "chemistry:Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis": 8,
-    "chemistry:Electroweak Quantum Chemistry: Chirality and Parity Violation": 1,
-    "chemistry:Metal-Catalyzed Reactions": 5,
-    "chemistry:Shirsendu Ghosh": 6,
-    "chemistry:Artificial Intelligence in Chemistry": 5,
-    "chemistry:Deepak Sharma": 0,
-    "chemistry:Plastic Waste-Derived Porous Materials for Oil\u2013Water Separation and Heterogeneous Catalysis Applications": 3,
-    "chemistry:CH2501 - Inorganic Chemistry 2": 4,
-    "chemistry:Avinash Dhamija": 6,
-    "chemistry:Organocatalysis": 7,
-    "chemistry:Photoredoxcatalysis, Carbene Chemistry, Asymmetric synthesis": 0,
-    "chemistry:Development of Fragmentation methods": 1,
-    "chemistry:Solaim": 0,
-    "chemistry:Asymmetric synthesis": 0,
-    "chemistry:Homepage:\u00a0[https://www.pankajchauhanresearch.com](https://www.pankajchauhanresearch.com/)": 0,
-    "chemistry:Developing porous organic cages for functional applications": 6,
-    "chemistry:Bio-inspired transition metal catalysis": 8,
-    "IIT Jammu CHEMISTRY Department": 6,
-    "chemistry:CH3521 - Inorganic Chemistry Laboratory": 4,
-    "chemistry:CH1401 - Introductory Inorganic and Physical Chemistry": 4,
-    "chemistry:Carbene Transfer Reactions": 7,
-    "chemistry:Theoretical and Computational Chemistry": 1,
-    "chemistry:Guru Brahamam Ramani": 7,
-    "chemistry:2. **Energy Storage Materials -**\u00a0Synthesis": 2,
-    "chemistry:Computer-Aided Catalyst Discovery and Drug Design": 5,
-    "chemistry:Asymmetric Synthesis": 7,
-    "chemistry:Domino/Cascade Reactions": 0,
-    "chemistry:Transition metal complexes for biomimetic oxidation reaction": 8,
-    "chemistry:Quantum Tunnelling": 1,
-    "chemistry:Synergistic Photo-Organocatalysis": 0,
-    "chemistry:characterization": 2,
-    "chemistry:Mechanochemical Synthesis": 0,
-    "chemistry:Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting": 4,
-    "chemistry:Amlan Kumar Pal": 4,
-    "chemistry:Developing organic photovoltaic materials for sustainable energy conversion and next-generation optoelectronic devices": 6,
-    "chemistry:Organic Chemistry": 0,
-    "chemistry:Hypervalent Iodine Chemistry": 7,
-    "chemistry:CH3514 - Physical Organic Chemistry": 4,
-    "chemistry:Tailoring Two-Dimensional Materials for Neuromorphic Device Applications": 3,
-    "chemistry:Robindo Chatterjee": 8,
-    "chemistry:and Electrochemical study Alkali metal-ion battery systems": 2,
-    "chemistry:Controlling molecular assembly processes using flow chemistry/microfluidic platforms for efficient and scalable material synthesis": 6,
-    "chemistry:Asymmetric Organocatalysis": 0,
-    "chemistry:Allosteric Signaling in Proteins": 6,
-    "chemistry:Simran Sharma": 1,
-    "chemistry:Membrane Biophysics": 6,
-    "chemistry:Asymmetric synthesis and Electrocatalysis": 0,
-    "chemistry:Jayaramulu Kolleboyina": 3,
-    "chemistry:Synthesis of Hydrophobic Metal\u2013Organic Frameworks (MOFs) and their Hybrids for Water Purification Applications": 3,
-    "chemistry:Pankaj Chauhan": 0,
-    "chemistry:Immunological signaling pathways": 6,
-    "chemistry:Small molecule activation reaction": 8
+    "chemistry:Amlan Kumar Pal": 0,
+    "chemistry:Anil Kumar Paidi": 1,
+    "chemistry:Avinash Dhamija": 7,
+    "chemistry:Guru Brahamam Ramani": 3,
+    "chemistry:Jayaramulu Kolleboyina": 6,
+    "chemistry:Nityananda Sahu": 5,
+    "chemistry:Pankaj Chauhan": 2,
+    "chemistry:Shirsendu Ghosh": 7,
+    "chemistry:Shivnath Mazumder": 8,
+    "chemistry:Subhas Samanta": 4,
+    "IIT Jammu CHEMISTRY Department": 7,
+    "chemistry:Courses tutored and staff demonstrated at University of St Andrews": 0,
+    "chemistry:CH4442 - Chemistry Undergraduate Research Project": 0,
+    "chemistry:CH4461 - Integrating Chemistry": 0,
+    "chemistry:CH3521 - Inorganic Chemistry Laboratory": 0,
+    "chemistry:CH3514 - Physical Organic Chemistry": 0,
+    "chemistry:CH2501 - Inorganic Chemistry 2": 0,
+    "chemistry:CH1401 - Introductory Inorganic and Physical Chemistry": 0,
+    "chemistry:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis": 1,
+    "chemistry:characterization": 1,
+    "chemistry:and development of structure-property relationships in new functional inorganic materials": 1,
+    "chemistry:2. **Energy Storage Materials -**\u00a0Synthesis": 1,
+    "chemistry:and Electrochemical study Alkali metal-ion battery systems": 1,
+    "chemistry:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)": 1,
+    "chemistry:include": 7,
+    "chemistry:Exploring supramolecular self-assembly for advanced material development": 7,
+    "chemistry:Developing porous organic cages for functional applications": 7,
+    "chemistry:Developing organic photovoltaic materials for sustainable energy conversion and next-generation optoelectronic devices": 7,
+    "chemistry:Controlling molecular assembly processes using flow chemistry/microfluidic platforms for efficient and scalable material synthesis": 7,
+    "chemistry:Asymmetric Synthesis": 3,
+    "chemistry:Alkyne & Allene Chemistry": 3,
+    "chemistry:Carbene Transfer Reactions": 3,
+    "chemistry:Hypervalent Iodine Chemistry": 3,
+    "chemistry:Organocatalysis": 3,
+    "chemistry:Photoredox Catalysis": 3,
+    "chemistry:C-H Functionalization": 3,
+    "chemistry:and Organoboranes": 3,
+    "chemistry:my resarch mainly interested at structure-design of variou sHybrid Two-Dimensional (2D) Porous Materials for advanced applications": 6,
+    "chemistry:Hetero2D/2D Networks for Chemiresistive Gas Sensing": 6,
+    "chemistry:Porous Hybrids for Atmospheric Water Harvesting": 6,
+    "chemistry:Upcycling Waste Materials for Thermal\u2013Photo\u2013Electrochemical CO\u2082 Reduction": 6,
+    "chemistry:Tailoring Functional Graphene-Derived Geopolymer Nanocomposites: Interfacial Interactions and Mechanical Strength Enhancement": 6,
+    "chemistry:Tailoring Two-Dimensional Materials for Neuromorphic Device Applications": 6,
+    "chemistry:Hybrid Porous Triboelectric Nanogenerators for Energy Harvesting": 6,
+    "chemistry:Porous Materials as SERS Substrates for Plasticizer Detection and PIERs Applications": 6,
+    "chemistry:Plastic Waste-Derived Porous Materials for Oil\u2013Water Separation and Heterogeneous Catalysis Applications": 6,
+    "chemistry:Graphene-MOF hybrids for energy and environmental technologies": 6,
+    "chemistry:Electronic Structure Calculations": 5,
+    "chemistry:Development of Fragmentation methods": 5,
+    "chemistry:Large Molecules and Molecular Clusters": 5,
+    "chemistry:Vibrational IR/Raman Spectroscopy": 5,
+    "chemistry:Explicit Hydration": 5,
+    "chemistry:Electroweak Quantum Chemistry: Chirality and Parity Violation": 5,
+    "chemistry:Quantum Tunnelling": 5,
+    "chemistry:Reaction Mechanism and Reactivity": 5,
+    "chemistry:Asymmetric Organocatalysis": 2,
+    "chemistry:Photochemical & Elecrochemical Organic Synthesis": 2,
+    "chemistry:Synergistic Catalysis": 2,
+    "chemistry:Domino/Cascade Reactions": 2,
+    "chemistry:Mechanochemical Synthesis": 2,
+    "chemistry:Teaching\u00a0 Interests": 2,
+    "chemistry:Organic Chemistry": 2,
+    "chemistry:Spectroscopy": 2,
+    "chemistry:Homepage:\u00a0[https://www.pankajchauhanresearch.com](https://www.pankajchauhanresearch.com/)": 2,
+    "chemistry:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique": 7,
+    "chemistry:Membrane Biophysics": 7,
+    "chemistry:Immunological signaling pathways": 7,
+    "chemistry:Allosteric Signaling in Proteins": 7,
+    "chemistry:Renewable Energy": 8,
+    "chemistry:Artificial Intelligence in Chemistry": 8,
+    "chemistry:Drug Discovery": 8,
+    "chemistry:Metal-Catalyzed Reactions": 8,
+    "chemistry:Group Webpage:****[https://shivnathmazumder.wixsite.com/computationalchem](https://shivnathmazumder.wixsite.com/computationalchem)": 8,
+    "chemistry:Organometalic catalysis involving non-innocent ligands": 4,
+    "chemistry:Bio-inspired transition metal catalysis": 4,
+    "chemistry:Small molecule activation reaction": 4,
+    "chemistry:Deepak Sharma": 2,
+    "chemistry:Asymmetric synthesis and Electrocatalysis": 2,
+    "chemistry:Haneesh Saini": 6,
+    "chemistry:Synthesis of Hydrophobic Metal\u2013Organic Frameworks (MOFs) and their Hybrids for Water Purification Applications": 6,
+    "chemistry:Himani": 2,
+    "chemistry:Synergistic Photo-Organocatalysis": 2,
+    "chemistry:Manisha Sharma": 2,
+    "chemistry:Namrata Kotwal": 2,
+    "chemistry:Neetu Singh": 8,
+    "chemistry:Computational Chemistry": 8,
+    "chemistry:Priya Sahni": 0,
+    "chemistry:Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting": 0,
+    "chemistry:Robindo Chatterjee": 4,
+    "chemistry:Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity": 4,
+    "chemistry:Sheetal Ranaut": 8,
+    "chemistry:Computer-Aided Catalyst Discovery and Drug Design": 8,
+    "chemistry:Shivali Hans": 4,
+    "chemistry:Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis": 4,
+    "chemistry:Simran Sharma": 5,
+    "chemistry:Theoretical and Computational Chemistry": 5,
+    "chemistry:Solaim": 2,
+    "chemistry:Asymmetric synthesis": 2,
+    "chemistry:Swati Rani": 4,
+    "chemistry:Transition metal complexes for biomimetic oxidation reaction": 4,
+    "chemistry:Yaseen Hussain": 2,
+    "chemistry:Photoredoxcatalysis, Carbene Chemistry, Asymmetric synthesis": 2
   },
   "reports": [
     {
       "id": "community_0",
       "community_id": 0,
       "members": [
-        "chemistry:Spectroscopy",
-        "chemistry:Teaching\u00a0 Interests",
-        "chemistry:Namrata Kotwal",
-        "chemistry:Himani",
-        "chemistry:Synergistic Catalysis",
-        "chemistry:Yaseen Hussain",
-        "chemistry:Manisha Sharma",
-        "chemistry:Photochemical & Elecrochemical Organic Synthesis",
-        "chemistry:Deepak Sharma",
-        "chemistry:Photoredoxcatalysis, Carbene Chemistry, Asymmetric synthesis",
-        "chemistry:Solaim",
-        "chemistry:Asymmetric synthesis",
-        "chemistry:Homepage:\u00a0[https://www.pankajchauhanresearch.com](https://www.pankajchauhanresearch.com/)",
-        "chemistry:Domino/Cascade Reactions",
-        "chemistry:Synergistic Photo-Organocatalysis",
-        "chemistry:Mechanochemical Synthesis",
-        "chemistry:Organic Chemistry",
-        "chemistry:Asymmetric Organocatalysis",
-        "chemistry:Asymmetric synthesis and Electrocatalysis",
-        "chemistry:Pankaj Chauhan"
+        "chemistry:Amlan Kumar Pal",
+        "chemistry:Courses tutored and staff demonstrated at University of St Andrews",
+        "chemistry:CH4442 - Chemistry Undergraduate Research Project",
+        "chemistry:CH4461 - Integrating Chemistry",
+        "chemistry:CH3521 - Inorganic Chemistry Laboratory",
+        "chemistry:CH3514 - Physical Organic Chemistry",
+        "chemistry:CH2501 - Inorganic Chemistry 2",
+        "chemistry:CH1401 - Introductory Inorganic and Physical Chemistry",
+        "chemistry:Priya Sahni",
+        "chemistry:Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting"
       ],
       "members_by_type": {
+        "Faculty": [
+          "chemistry:Amlan Kumar Pal"
+        ],
         "ResearchArea": [
-          "chemistry:Spectroscopy",
-          "chemistry:Teaching\u00a0 Interests",
-          "chemistry:Synergistic Catalysis",
-          "chemistry:Photochemical & Elecrochemical Organic Synthesis",
-          "chemistry:Photoredoxcatalysis, Carbene Chemistry, Asymmetric synthesis",
-          "chemistry:Asymmetric synthesis",
-          "chemistry:Homepage:\u00a0[https://www.pankajchauhanresearch.com](https://www.pankajchauhanresearch.com/)",
-          "chemistry:Domino/Cascade Reactions",
-          "chemistry:Synergistic Photo-Organocatalysis",
-          "chemistry:Mechanochemical Synthesis",
-          "chemistry:Organic Chemistry",
-          "chemistry:Asymmetric Organocatalysis",
-          "chemistry:Asymmetric synthesis and Electrocatalysis"
+          "chemistry:Courses tutored and staff demonstrated at University of St Andrews",
+          "chemistry:CH4442 - Chemistry Undergraduate Research Project",
+          "chemistry:CH4461 - Integrating Chemistry",
+          "chemistry:CH3521 - Inorganic Chemistry Laboratory",
+          "chemistry:CH3514 - Physical Organic Chemistry",
+          "chemistry:CH2501 - Inorganic Chemistry 2",
+          "chemistry:CH1401 - Introductory Inorganic and Physical Chemistry",
+          "chemistry:Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting"
         ],
         "PhDStudent": [
-          "chemistry:Namrata Kotwal",
-          "chemistry:Himani",
-          "chemistry:Yaseen Hussain",
-          "chemistry:Manisha Sharma",
-          "chemistry:Deepak Sharma",
-          "chemistry:Solaim"
+          "chemistry:Priya Sahni"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemistry:Amlan Kumar Pal",
+          "target": "chemistry:Courses tutored and staff demonstrated at University of St Andrews",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Amlan Kumar Pal",
+          "target": "chemistry:CH4442 - Chemistry Undergraduate Research Project",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Amlan Kumar Pal",
+          "target": "chemistry:CH4461 - Integrating Chemistry",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Amlan Kumar Pal",
+          "target": "chemistry:CH3521 - Inorganic Chemistry Laboratory",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Amlan Kumar Pal",
+          "target": "chemistry:CH3514 - Physical Organic Chemistry",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Amlan Kumar Pal",
+          "target": "chemistry:CH2501 - Inorganic Chemistry 2",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Amlan Kumar Pal",
+          "target": "chemistry:CH1401 - Introductory Inorganic and Physical Chemistry",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Amlan Kumar Pal",
+          "target": "chemistry:Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Priya Sahni",
+          "target": "chemistry:Amlan Kumar Pal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemistry:Priya Sahni",
+          "target": "chemistry:Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Amlan Kumar Pal\n  PhDStudent: Priya Sahni\n  ResearchArea: Courses tutored and staff demonstrated at University of St Andrews, CH4442 - Chemistry Undergraduate Research Project, CH4461 - Integrating Chemistry, CH3521 - Inorganic Chemistry Laboratory, CH3514 - Physical Organic Chemistry, CH2501 - Inorganic Chemistry 2, CH1401 - Introductory Inorganic and Physical Chemistry, Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): chemistry:Amlan Kumar Pal. 1 PhD student(s). working in areas like chemistry:Courses tutored and staff demonstrated at University of St Andrews, chemistry:CH4442 - Chemistry Undergraduate Research Project, chemistry:CH4461 - Integrating Chemistry.",
+      "summary": "This group includes 1 faculty member(s): chemistry:Amlan Kumar Pal. 1 PhD student(s). working in areas like chemistry:Courses tutored and staff demonstrated at University of St Andrews, chemistry:CH4442 - Chemistry Undergraduate Research Project, chemistry:CH4461 - Integrating Chemistry.",
+      "size": 10
+    },
+    {
+      "id": "community_1",
+      "community_id": 1,
+      "members": [
+        "chemistry:Anil Kumar Paidi",
+        "chemistry:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis",
+        "chemistry:characterization",
+        "chemistry:and development of structure-property relationships in new functional inorganic materials",
+        "chemistry:2. **Energy Storage Materials -**\u00a0Synthesis",
+        "chemistry:and Electrochemical study Alkali metal-ion battery systems",
+        "chemistry:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "chemistry:Anil Kumar Paidi"
         ],
+        "ResearchArea": [
+          "chemistry:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis",
+          "chemistry:characterization",
+          "chemistry:and development of structure-property relationships in new functional inorganic materials",
+          "chemistry:2. **Energy Storage Materials -**\u00a0Synthesis",
+          "chemistry:and Electrochemical study Alkali metal-ion battery systems",
+          "chemistry:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemistry:Anil Kumar Paidi",
+          "target": "chemistry:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Anil Kumar Paidi",
+          "target": "chemistry:characterization",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Anil Kumar Paidi",
+          "target": "chemistry:and development of structure-property relationships in new functional inorganic materials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Anil Kumar Paidi",
+          "target": "chemistry:2. **Energy Storage Materials -**\u00a0Synthesis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Anil Kumar Paidi",
+          "target": "chemistry:and Electrochemical study Alkali metal-ion battery systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Anil Kumar Paidi",
+          "target": "chemistry:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Anil Kumar Paidi\n  ResearchArea: 1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis, characterization, and development of structure-property relationships in new functional inorganic materials, 2. **Energy Storage Materials -**\u00a0Synthesis, and Electrochemical study Alkali metal-ion battery systems, 3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)\n  Relationships: RESEARCHES_IN: 6\n\nSummary: This group includes 1 faculty member(s): chemistry:Anil Kumar Paidi. working in areas like chemistry:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis, chemistry:characterization, chemistry:and development of structure-property relationships in new functional inorganic materials.",
+      "summary": "This group includes 1 faculty member(s): chemistry:Anil Kumar Paidi. working in areas like chemistry:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis, chemistry:characterization, chemistry:and development of structure-property relationships in new functional inorganic materials.",
+      "size": 7
+    },
+    {
+      "id": "community_2",
+      "community_id": 2,
+      "members": [
+        "chemistry:Pankaj Chauhan",
+        "chemistry:Asymmetric Organocatalysis",
+        "chemistry:Photochemical & Elecrochemical Organic Synthesis",
+        "chemistry:Synergistic Catalysis",
+        "chemistry:Domino/Cascade Reactions",
+        "chemistry:Mechanochemical Synthesis",
+        "chemistry:Teaching\u00a0 Interests",
+        "chemistry:Organic Chemistry",
+        "chemistry:Spectroscopy",
+        "chemistry:Homepage:\u00a0[https://www.pankajchauhanresearch.com](https://www.pankajchauhanresearch.com/)",
+        "chemistry:Deepak Sharma",
+        "chemistry:Asymmetric synthesis and Electrocatalysis",
+        "chemistry:Himani",
+        "chemistry:Synergistic Photo-Organocatalysis",
+        "chemistry:Manisha Sharma",
+        "chemistry:Namrata Kotwal",
+        "chemistry:Solaim",
+        "chemistry:Asymmetric synthesis",
+        "chemistry:Yaseen Hussain",
+        "chemistry:Photoredoxcatalysis, Carbene Chemistry, Asymmetric synthesis"
+      ],
+      "members_by_type": {
         "Faculty": [
           "chemistry:Pankaj Chauhan"
+        ],
+        "ResearchArea": [
+          "chemistry:Asymmetric Organocatalysis",
+          "chemistry:Photochemical & Elecrochemical Organic Synthesis",
+          "chemistry:Synergistic Catalysis",
+          "chemistry:Domino/Cascade Reactions",
+          "chemistry:Mechanochemical Synthesis",
+          "chemistry:Teaching\u00a0 Interests",
+          "chemistry:Organic Chemistry",
+          "chemistry:Spectroscopy",
+          "chemistry:Homepage:\u00a0[https://www.pankajchauhanresearch.com](https://www.pankajchauhanresearch.com/)",
+          "chemistry:Asymmetric synthesis and Electrocatalysis",
+          "chemistry:Synergistic Photo-Organocatalysis",
+          "chemistry:Asymmetric synthesis",
+          "chemistry:Photoredoxcatalysis, Carbene Chemistry, Asymmetric synthesis"
+        ],
+        "PhDStudent": [
+          "chemistry:Deepak Sharma",
+          "chemistry:Himani",
+          "chemistry:Manisha Sharma",
+          "chemistry:Namrata Kotwal",
+          "chemistry:Solaim",
+          "chemistry:Yaseen Hussain"
         ]
       },
       "internal_edges": [
@@ -284,40 +434,214 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Pankaj Chauhan\n  PhDStudent: Namrata Kotwal, Himani, Yaseen Hussain, Manisha Sharma, Deepak Sharma, Solaim\n  ResearchArea: Spectroscopy, Teaching\u00a0 Interests, Synergistic Catalysis, Photochemical & Elecrochemical Organic Synthesis, Photoredoxcatalysis, Carbene Chemistry, Asymmetric synthesis, Asymmetric synthesis, Homepage:\u00a0[https://www.pankajchauhanresearch.com](https://www.pankajchauhanresearch.com/), Domino/Cascade Reactions, Synergistic Photo-Organocatalysis, Mechanochemical Synthesis, Organic Chemistry, Asymmetric Organocatalysis, Asymmetric synthesis and Electrocatalysis\n  Relationships: RESEARCHES_IN: 13, SUPERVISED_BY: 6, STUDIES: 6\n\nSummary: The Community 0 in IIT Jammu's Electrical Engineering Department is led by Professor Pankaj Chauhan, who has a research focus on spectroscopy, synergistic catalysis, and photochemical/electrochemical organic synthesis. The group consists of six PhD students, including Namrata Kotwal, Himani, Yaseen Hussain, Manisha Sharma, Deepak Sharma, and Solaim, who are supervised by Professor Chauhan. The research areas of this community include carbene chemistry, asymmetric synthesis, and electrocatalysis, among others, as evident from their research interests and publications.",
-      "summary": "The Community 0 in IIT Jammu's Electrical Engineering Department is led by Professor Pankaj Chauhan, who has a research focus on spectroscopy, synergistic catalysis, and photochemical/electrochemical organic synthesis. The group consists of six PhD students, including Namrata Kotwal, Himani, Yaseen Hussain, Manisha Sharma, Deepak Sharma, and Solaim, who are supervised by Professor Chauhan. The research areas of this community include carbene chemistry, asymmetric synthesis, and electrocatalysis, among others, as evident from their research interests and publications.",
+      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Pankaj Chauhan\n  PhDStudent: Deepak Sharma, Himani, Manisha Sharma, Namrata Kotwal, Solaim, Yaseen Hussain\n  ResearchArea: Asymmetric Organocatalysis, Photochemical & Elecrochemical Organic Synthesis, Synergistic Catalysis, Domino/Cascade Reactions, Mechanochemical Synthesis, Teaching\u00a0 Interests, Organic Chemistry, Spectroscopy, Homepage:\u00a0[https://www.pankajchauhanresearch.com](https://www.pankajchauhanresearch.com/), Asymmetric synthesis and Electrocatalysis, Synergistic Photo-Organocatalysis, Asymmetric synthesis, Photoredoxcatalysis, Carbene Chemistry, Asymmetric synthesis\n  Relationships: RESEARCHES_IN: 13, SUPERVISED_BY: 6, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): chemistry:Pankaj Chauhan. 6 PhD student(s). working in areas like chemistry:Asymmetric Organocatalysis, chemistry:Photochemical & Elecrochemical Organic Synthesis, chemistry:Synergistic Catalysis.",
+      "summary": "This group includes 1 faculty member(s): chemistry:Pankaj Chauhan. 6 PhD student(s). working in areas like chemistry:Asymmetric Organocatalysis, chemistry:Photochemical & Elecrochemical Organic Synthesis, chemistry:Synergistic Catalysis.",
       "size": 20
     },
     {
-      "id": "community_1",
-      "community_id": 1,
+      "id": "community_3",
+      "community_id": 3,
+      "members": [
+        "chemistry:Guru Brahamam Ramani",
+        "chemistry:Asymmetric Synthesis",
+        "chemistry:Alkyne & Allene Chemistry",
+        "chemistry:Carbene Transfer Reactions",
+        "chemistry:Hypervalent Iodine Chemistry",
+        "chemistry:Organocatalysis",
+        "chemistry:Photoredox Catalysis",
+        "chemistry:C-H Functionalization",
+        "chemistry:and Organoboranes"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "chemistry:Guru Brahamam Ramani"
+        ],
+        "ResearchArea": [
+          "chemistry:Asymmetric Synthesis",
+          "chemistry:Alkyne & Allene Chemistry",
+          "chemistry:Carbene Transfer Reactions",
+          "chemistry:Hypervalent Iodine Chemistry",
+          "chemistry:Organocatalysis",
+          "chemistry:Photoredox Catalysis",
+          "chemistry:C-H Functionalization",
+          "chemistry:and Organoboranes"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemistry:Guru Brahamam Ramani",
+          "target": "chemistry:Asymmetric Synthesis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Guru Brahamam Ramani",
+          "target": "chemistry:Alkyne & Allene Chemistry",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Guru Brahamam Ramani",
+          "target": "chemistry:Carbene Transfer Reactions",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Guru Brahamam Ramani",
+          "target": "chemistry:Hypervalent Iodine Chemistry",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Guru Brahamam Ramani",
+          "target": "chemistry:Organocatalysis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Guru Brahamam Ramani",
+          "target": "chemistry:Photoredox Catalysis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Guru Brahamam Ramani",
+          "target": "chemistry:C-H Functionalization",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Guru Brahamam Ramani",
+          "target": "chemistry:and Organoboranes",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Guru Brahamam Ramani\n  ResearchArea: Asymmetric Synthesis, Alkyne & Allene Chemistry, Carbene Transfer Reactions, Hypervalent Iodine Chemistry, Organocatalysis, Photoredox Catalysis, C-H Functionalization, and Organoboranes\n  Relationships: RESEARCHES_IN: 8\n\nSummary: This group includes 1 faculty member(s): chemistry:Guru Brahamam Ramani. working in areas like chemistry:Asymmetric Synthesis, chemistry:Alkyne & Allene Chemistry, chemistry:Carbene Transfer Reactions.",
+      "summary": "This group includes 1 faculty member(s): chemistry:Guru Brahamam Ramani. working in areas like chemistry:Asymmetric Synthesis, chemistry:Alkyne & Allene Chemistry, chemistry:Carbene Transfer Reactions.",
+      "size": 9
+    },
+    {
+      "id": "community_4",
+      "community_id": 4,
+      "members": [
+        "chemistry:Subhas Samanta",
+        "chemistry:Organometalic catalysis involving non-innocent ligands",
+        "chemistry:Bio-inspired transition metal catalysis",
+        "chemistry:Small molecule activation reaction",
+        "chemistry:Robindo Chatterjee",
+        "chemistry:Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity",
+        "chemistry:Shivali Hans",
+        "chemistry:Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis",
+        "chemistry:Swati Rani",
+        "chemistry:Transition metal complexes for biomimetic oxidation reaction"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "chemistry:Subhas Samanta"
+        ],
+        "ResearchArea": [
+          "chemistry:Organometalic catalysis involving non-innocent ligands",
+          "chemistry:Bio-inspired transition metal catalysis",
+          "chemistry:Small molecule activation reaction",
+          "chemistry:Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity",
+          "chemistry:Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis",
+          "chemistry:Transition metal complexes for biomimetic oxidation reaction"
+        ],
+        "PhDStudent": [
+          "chemistry:Robindo Chatterjee",
+          "chemistry:Shivali Hans",
+          "chemistry:Swati Rani"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemistry:Subhas Samanta",
+          "target": "chemistry:Organometalic catalysis involving non-innocent ligands",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Subhas Samanta",
+          "target": "chemistry:Bio-inspired transition metal catalysis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Subhas Samanta",
+          "target": "chemistry:Small molecule activation reaction",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Subhas Samanta",
+          "target": "chemistry:Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Subhas Samanta",
+          "target": "chemistry:Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Subhas Samanta",
+          "target": "chemistry:Transition metal complexes for biomimetic oxidation reaction",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemistry:Robindo Chatterjee",
+          "target": "chemistry:Subhas Samanta",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemistry:Robindo Chatterjee",
+          "target": "chemistry:Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity",
+          "type": "STUDIES"
+        },
+        {
+          "source": "chemistry:Shivali Hans",
+          "target": "chemistry:Subhas Samanta",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemistry:Shivali Hans",
+          "target": "chemistry:Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis",
+          "type": "STUDIES"
+        },
+        {
+          "source": "chemistry:Swati Rani",
+          "target": "chemistry:Subhas Samanta",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemistry:Swati Rani",
+          "target": "chemistry:Transition metal complexes for biomimetic oxidation reaction",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Subhas Samanta\n  PhDStudent: Robindo Chatterjee, Shivali Hans, Swati Rani\n  ResearchArea: Organometalic catalysis involving non-innocent ligands, Bio-inspired transition metal catalysis, Small molecule activation reaction, Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity, Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis, Transition metal complexes for biomimetic oxidation reaction\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): chemistry:Subhas Samanta. 3 PhD student(s). working in areas like chemistry:Organometalic catalysis involving non-innocent ligands, chemistry:Bio-inspired transition metal catalysis, chemistry:Small molecule activation reaction.",
+      "summary": "This group includes 1 faculty member(s): chemistry:Subhas Samanta. 3 PhD student(s). working in areas like chemistry:Organometalic catalysis involving non-innocent ligands, chemistry:Bio-inspired transition metal catalysis, chemistry:Small molecule activation reaction.",
+      "size": 10
+    },
+    {
+      "id": "community_5",
+      "community_id": 5,
       "members": [
         "chemistry:Nityananda Sahu",
-        "chemistry:Explicit Hydration",
-        "chemistry:Reaction Mechanism and Reactivity",
-        "chemistry:Vibrational IR/Raman Spectroscopy",
-        "chemistry:Large Molecules and Molecular Clusters",
         "chemistry:Electronic Structure Calculations",
-        "chemistry:Electroweak Quantum Chemistry: Chirality and Parity Violation",
         "chemistry:Development of Fragmentation methods",
-        "chemistry:Theoretical and Computational Chemistry",
+        "chemistry:Large Molecules and Molecular Clusters",
+        "chemistry:Vibrational IR/Raman Spectroscopy",
+        "chemistry:Explicit Hydration",
+        "chemistry:Electroweak Quantum Chemistry: Chirality and Parity Violation",
         "chemistry:Quantum Tunnelling",
-        "chemistry:Simran Sharma"
+        "chemistry:Reaction Mechanism and Reactivity",
+        "chemistry:Simran Sharma",
+        "chemistry:Theoretical and Computational Chemistry"
       ],
       "members_by_type": {
         "Faculty": [
           "chemistry:Nityananda Sahu"
         ],
         "ResearchArea": [
-          "chemistry:Explicit Hydration",
-          "chemistry:Reaction Mechanism and Reactivity",
-          "chemistry:Vibrational IR/Raman Spectroscopy",
-          "chemistry:Large Molecules and Molecular Clusters",
           "chemistry:Electronic Structure Calculations",
-          "chemistry:Electroweak Quantum Chemistry: Chirality and Parity Violation",
           "chemistry:Development of Fragmentation methods",
-          "chemistry:Theoretical and Computational Chemistry",
-          "chemistry:Quantum Tunnelling"
+          "chemistry:Large Molecules and Molecular Clusters",
+          "chemistry:Vibrational IR/Raman Spectroscopy",
+          "chemistry:Explicit Hydration",
+          "chemistry:Electroweak Quantum Chemistry: Chirality and Parity Violation",
+          "chemistry:Quantum Tunnelling",
+          "chemistry:Reaction Mechanism and Reactivity",
+          "chemistry:Theoretical and Computational Chemistry"
         ],
         "PhDStudent": [
           "chemistry:Simran Sharma"
@@ -380,108 +704,47 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Nityananda Sahu\n  PhDStudent: Simran Sharma\n  ResearchArea: Explicit Hydration, Reaction Mechanism and Reactivity, Vibrational IR/Raman Spectroscopy, Large Molecules and Molecular Clusters, Electronic Structure Calculations, Electroweak Quantum Chemistry: Chirality and Parity Violation, Development of Fragmentation methods, Theoretical and Computational Chemistry, Quantum Tunnelling\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 1 in IIT Jammu's Electrical Engineering Department is led by Dr. Nityananda Sahu, with Simran Sharma as a PhD student under his supervision. This group focuses on theoretical and computational chemistry research areas, including explicit hydration, reaction mechanisms, vibrational spectroscopy, and quantum tunnelling. Their work also involves the development of fragmentation methods and electroweak quantum chemistry, specifically in chirality and parity violation.",
-      "summary": "The Community 1 in IIT Jammu's Electrical Engineering Department is led by Dr. Nityananda Sahu, with Simran Sharma as a PhD student under his supervision. This group focuses on theoretical and computational chemistry research areas, including explicit hydration, reaction mechanisms, vibrational spectroscopy, and quantum tunnelling. Their work also involves the development of fragmentation methods and electroweak quantum chemistry, specifically in chirality and parity violation.",
+      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Nityananda Sahu\n  PhDStudent: Simran Sharma\n  ResearchArea: Electronic Structure Calculations, Development of Fragmentation methods, Large Molecules and Molecular Clusters, Vibrational IR/Raman Spectroscopy, Explicit Hydration, Electroweak Quantum Chemistry: Chirality and Parity Violation, Quantum Tunnelling, Reaction Mechanism and Reactivity, Theoretical and Computational Chemistry\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): chemistry:Nityananda Sahu. 1 PhD student(s). working in areas like chemistry:Electronic Structure Calculations, chemistry:Development of Fragmentation methods, chemistry:Large Molecules and Molecular Clusters.",
+      "summary": "This group includes 1 faculty member(s): chemistry:Nityananda Sahu. 1 PhD student(s). working in areas like chemistry:Electronic Structure Calculations, chemistry:Development of Fragmentation methods, chemistry:Large Molecules and Molecular Clusters.",
       "size": 11
     },
     {
-      "id": "community_2",
-      "community_id": 2,
+      "id": "community_6",
+      "community_id": 6,
       "members": [
-        "chemistry:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis",
-        "chemistry:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)",
-        "chemistry:and development of structure-property relationships in new functional inorganic materials",
-        "chemistry:Anil Kumar Paidi",
-        "chemistry:2. **Energy Storage Materials -**\u00a0Synthesis",
-        "chemistry:characterization",
-        "chemistry:and Electrochemical study Alkali metal-ion battery systems"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "chemistry:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis",
-          "chemistry:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)",
-          "chemistry:and development of structure-property relationships in new functional inorganic materials",
-          "chemistry:2. **Energy Storage Materials -**\u00a0Synthesis",
-          "chemistry:characterization",
-          "chemistry:and Electrochemical study Alkali metal-ion battery systems"
-        ],
-        "Faculty": [
-          "chemistry:Anil Kumar Paidi"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemistry:Anil Kumar Paidi",
-          "target": "chemistry:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Anil Kumar Paidi",
-          "target": "chemistry:characterization",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Anil Kumar Paidi",
-          "target": "chemistry:and development of structure-property relationships in new functional inorganic materials",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Anil Kumar Paidi",
-          "target": "chemistry:2. **Energy Storage Materials -**\u00a0Synthesis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Anil Kumar Paidi",
-          "target": "chemistry:and Electrochemical study Alkali metal-ion battery systems",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Anil Kumar Paidi",
-          "target": "chemistry:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)",
-          "type": "RESEARCHES_IN"
-        }
-      ],
-      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Anil Kumar Paidi\n  ResearchArea: 1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis, 3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ), and development of structure-property relationships in new functional inorganic materials, 2. **Energy Storage Materials -**\u00a0Synthesis, characterization, and Electrochemical study Alkali metal-ion battery systems\n  Relationships: RESEARCHES_IN: 6\n\nSummary: The Community 2 in IIT Jammu's Electrical Engineering Department is led by Faculty member Anil Kumar Paidi. The group focuses on three primary research areas: Solid State Chemistry, investigating novel oxides synthesis; Electrode Materials, employing state-of-the-art techniques to study electrode materials in real-time; and Energy Storage Materials, synthesizing, characterizing, and electrochemically studying alkali metal-ion battery systems. This community is connected through six relationships (RESEARCHES_IN), indicating a collaborative research environment within the department.",
-      "summary": "The Community 2 in IIT Jammu's Electrical Engineering Department is led by Faculty member Anil Kumar Paidi. The group focuses on three primary research areas: Solid State Chemistry, investigating novel oxides synthesis; Electrode Materials, employing state-of-the-art techniques to study electrode materials in real-time; and Energy Storage Materials, synthesizing, characterizing, and electrochemically studying alkali metal-ion battery systems. This community is connected through six relationships (RESEARCHES_IN), indicating a collaborative research environment within the department.",
-      "size": 7
-    },
-    {
-      "id": "community_3",
-      "community_id": 3,
-      "members": [
-        "chemistry:Upcycling Waste Materials for Thermal\u2013Photo\u2013Electrochemical CO\u2082 Reduction",
-        "chemistry:Hetero2D/2D Networks for Chemiresistive Gas Sensing",
-        "chemistry:Porous Materials as SERS Substrates for Plasticizer Detection and PIERs Applications",
-        "chemistry:Haneesh Saini",
-        "chemistry:my resarch mainly interested at structure-design of variou sHybrid Two-Dimensional (2D) Porous Materials for advanced applications",
-        "chemistry:Hybrid Porous Triboelectric Nanogenerators for Energy Harvesting",
-        "chemistry:Tailoring Functional Graphene-Derived Geopolymer Nanocomposites: Interfacial Interactions and Mechanical Strength Enhancement",
-        "chemistry:Porous Hybrids for Atmospheric Water Harvesting",
-        "chemistry:Graphene-MOF hybrids for energy and environmental technologies",
-        "chemistry:Plastic Waste-Derived Porous Materials for Oil\u2013Water Separation and Heterogeneous Catalysis Applications",
-        "chemistry:Tailoring Two-Dimensional Materials for Neuromorphic Device Applications",
         "chemistry:Jayaramulu Kolleboyina",
+        "chemistry:my resarch mainly interested at structure-design of variou sHybrid Two-Dimensional (2D) Porous Materials for advanced applications",
+        "chemistry:Hetero2D/2D Networks for Chemiresistive Gas Sensing",
+        "chemistry:Porous Hybrids for Atmospheric Water Harvesting",
+        "chemistry:Upcycling Waste Materials for Thermal\u2013Photo\u2013Electrochemical CO\u2082 Reduction",
+        "chemistry:Tailoring Functional Graphene-Derived Geopolymer Nanocomposites: Interfacial Interactions and Mechanical Strength Enhancement",
+        "chemistry:Tailoring Two-Dimensional Materials for Neuromorphic Device Applications",
+        "chemistry:Hybrid Porous Triboelectric Nanogenerators for Energy Harvesting",
+        "chemistry:Porous Materials as SERS Substrates for Plasticizer Detection and PIERs Applications",
+        "chemistry:Plastic Waste-Derived Porous Materials for Oil\u2013Water Separation and Heterogeneous Catalysis Applications",
+        "chemistry:Graphene-MOF hybrids for energy and environmental technologies",
+        "chemistry:Haneesh Saini",
         "chemistry:Synthesis of Hydrophobic Metal\u2013Organic Frameworks (MOFs) and their Hybrids for Water Purification Applications"
       ],
       "members_by_type": {
+        "Faculty": [
+          "chemistry:Jayaramulu Kolleboyina"
+        ],
         "ResearchArea": [
-          "chemistry:Upcycling Waste Materials for Thermal\u2013Photo\u2013Electrochemical CO\u2082 Reduction",
-          "chemistry:Hetero2D/2D Networks for Chemiresistive Gas Sensing",
-          "chemistry:Porous Materials as SERS Substrates for Plasticizer Detection and PIERs Applications",
           "chemistry:my resarch mainly interested at structure-design of variou sHybrid Two-Dimensional (2D) Porous Materials for advanced applications",
-          "chemistry:Hybrid Porous Triboelectric Nanogenerators for Energy Harvesting",
-          "chemistry:Tailoring Functional Graphene-Derived Geopolymer Nanocomposites: Interfacial Interactions and Mechanical Strength Enhancement",
+          "chemistry:Hetero2D/2D Networks for Chemiresistive Gas Sensing",
           "chemistry:Porous Hybrids for Atmospheric Water Harvesting",
-          "chemistry:Graphene-MOF hybrids for energy and environmental technologies",
-          "chemistry:Plastic Waste-Derived Porous Materials for Oil\u2013Water Separation and Heterogeneous Catalysis Applications",
+          "chemistry:Upcycling Waste Materials for Thermal\u2013Photo\u2013Electrochemical CO\u2082 Reduction",
+          "chemistry:Tailoring Functional Graphene-Derived Geopolymer Nanocomposites: Interfacial Interactions and Mechanical Strength Enhancement",
           "chemistry:Tailoring Two-Dimensional Materials for Neuromorphic Device Applications",
+          "chemistry:Hybrid Porous Triboelectric Nanogenerators for Energy Harvesting",
+          "chemistry:Porous Materials as SERS Substrates for Plasticizer Detection and PIERs Applications",
+          "chemistry:Plastic Waste-Derived Porous Materials for Oil\u2013Water Separation and Heterogeneous Catalysis Applications",
+          "chemistry:Graphene-MOF hybrids for energy and environmental technologies",
           "chemistry:Synthesis of Hydrophobic Metal\u2013Organic Frameworks (MOFs) and their Hybrids for Water Purification Applications"
         ],
         "PhDStudent": [
           "chemistry:Haneesh Saini"
-        ],
-        "Faculty": [
-          "chemistry:Jayaramulu Kolleboyina"
         ]
       },
       "internal_edges": [
@@ -551,112 +814,121 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Jayaramulu Kolleboyina\n  PhDStudent: Haneesh Saini\n  ResearchArea: Upcycling Waste Materials for Thermal\u2013Photo\u2013Electrochemical CO\u2082 Reduction, Hetero2D/2D Networks for Chemiresistive Gas Sensing, Porous Materials as SERS Substrates for Plasticizer Detection and PIERs Applications, my resarch mainly interested at structure-design of variou sHybrid Two-Dimensional (2D) Porous Materials for advanced applications, Hybrid Porous Triboelectric Nanogenerators for Energy Harvesting, Tailoring Functional Graphene-Derived Geopolymer Nanocomposites: Interfacial Interactions and Mechanical Strength Enhancement, Porous Hybrids for Atmospheric Water Harvesting, Graphene-MOF hybrids for energy and environmental technologies, Plastic Waste-Derived Porous Materials for Oil\u2013Water Separation and Heterogeneous Catalysis Applications, Tailoring Two-Dimensional Materials for Neuromorphic Device Applications, Synthesis of Hydrophobic Metal\u2013Organic Frameworks (MOFs) and their Hybrids for Water Purification Applications\n  Relationships: RESEARCHES_IN: 11, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This community in IIT Jammu's Electrical Engineering Department is led by Dr. Jayaramulu Kolleboyina and includes PhD student Haneesh Saini. The group's research focuses on developing advanced materials for various applications, including energy harvesting, water purification, and environmental technologies, with a specific interest in hybrid two-dimensional porous materials and their structures. They are connected to the department through research and academic supervision relationships.",
-      "summary": "This community in IIT Jammu's Electrical Engineering Department is led by Dr. Jayaramulu Kolleboyina and includes PhD student Haneesh Saini. The group's research focuses on developing advanced materials for various applications, including energy harvesting, water purification, and environmental technologies, with a specific interest in hybrid two-dimensional porous materials and their structures. They are connected to the department through research and academic supervision relationships.",
+      "text": "Community 6 in IIT Jammu EE Department:\n  Faculty: Jayaramulu Kolleboyina\n  PhDStudent: Haneesh Saini\n  ResearchArea: my resarch mainly interested at structure-design of variou sHybrid Two-Dimensional (2D) Porous Materials for advanced applications, Hetero2D/2D Networks for Chemiresistive Gas Sensing, Porous Hybrids for Atmospheric Water Harvesting, Upcycling Waste Materials for Thermal\u2013Photo\u2013Electrochemical CO\u2082 Reduction, Tailoring Functional Graphene-Derived Geopolymer Nanocomposites: Interfacial Interactions and Mechanical Strength Enhancement, Tailoring Two-Dimensional Materials for Neuromorphic Device Applications, Hybrid Porous Triboelectric Nanogenerators for Energy Harvesting, Porous Materials as SERS Substrates for Plasticizer Detection and PIERs Applications, Plastic Waste-Derived Porous Materials for Oil\u2013Water Separation and Heterogeneous Catalysis Applications, Graphene-MOF hybrids for energy and environmental technologies, Synthesis of Hydrophobic Metal\u2013Organic Frameworks (MOFs) and their Hybrids for Water Purification Applications\n  Relationships: RESEARCHES_IN: 11, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): chemistry:Jayaramulu Kolleboyina. 1 PhD student(s). working in areas like chemistry:my resarch mainly interested at structure-design of variou sHybrid Two-Dimensional (2D) Porous Materials for advanced applications, chemistry:Hetero2D/2D Networks for Chemiresistive Gas Sensing, chemistry:Porous Hybrids for Atmospheric Water Harvesting.",
+      "summary": "This group includes 1 faculty member(s): chemistry:Jayaramulu Kolleboyina. 1 PhD student(s). working in areas like chemistry:my resarch mainly interested at structure-design of variou sHybrid Two-Dimensional (2D) Porous Materials for advanced applications, chemistry:Hetero2D/2D Networks for Chemiresistive Gas Sensing, chemistry:Porous Hybrids for Atmospheric Water Harvesting.",
       "size": 13
     },
     {
-      "id": "community_4",
-      "community_id": 4,
+      "id": "community_7",
+      "community_id": 7,
       "members": [
-        "chemistry:CH4461 - Integrating Chemistry",
-        "chemistry:CH4442 - Chemistry Undergraduate Research Project",
-        "chemistry:Priya Sahni",
-        "chemistry:Courses tutored and staff demonstrated at University of St Andrews",
-        "chemistry:CH2501 - Inorganic Chemistry 2",
-        "chemistry:CH3521 - Inorganic Chemistry Laboratory",
-        "chemistry:CH1401 - Introductory Inorganic and Physical Chemistry",
-        "chemistry:Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting",
-        "chemistry:Amlan Kumar Pal",
-        "chemistry:CH3514 - Physical Organic Chemistry"
+        "chemistry:Avinash Dhamija",
+        "chemistry:Shirsendu Ghosh",
+        "IIT Jammu CHEMISTRY Department",
+        "chemistry:include",
+        "chemistry:Exploring supramolecular self-assembly for advanced material development",
+        "chemistry:Developing porous organic cages for functional applications",
+        "chemistry:Developing organic photovoltaic materials for sustainable energy conversion and next-generation optoelectronic devices",
+        "chemistry:Controlling molecular assembly processes using flow chemistry/microfluidic platforms for efficient and scalable material synthesis",
+        "chemistry:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
+        "chemistry:Membrane Biophysics",
+        "chemistry:Immunological signaling pathways",
+        "chemistry:Allosteric Signaling in Proteins"
       ],
       "members_by_type": {
-        "ResearchArea": [
-          "chemistry:CH4461 - Integrating Chemistry",
-          "chemistry:CH4442 - Chemistry Undergraduate Research Project",
-          "chemistry:Courses tutored and staff demonstrated at University of St Andrews",
-          "chemistry:CH2501 - Inorganic Chemistry 2",
-          "chemistry:CH3521 - Inorganic Chemistry Laboratory",
-          "chemistry:CH1401 - Introductory Inorganic and Physical Chemistry",
-          "chemistry:Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting",
-          "chemistry:CH3514 - Physical Organic Chemistry"
-        ],
-        "PhDStudent": [
-          "chemistry:Priya Sahni"
-        ],
         "Faculty": [
-          "chemistry:Amlan Kumar Pal"
+          "chemistry:Avinash Dhamija",
+          "chemistry:Shirsendu Ghosh"
+        ],
+        "Department": [
+          "IIT Jammu CHEMISTRY Department"
+        ],
+        "ResearchArea": [
+          "chemistry:include",
+          "chemistry:Exploring supramolecular self-assembly for advanced material development",
+          "chemistry:Developing porous organic cages for functional applications",
+          "chemistry:Developing organic photovoltaic materials for sustainable energy conversion and next-generation optoelectronic devices",
+          "chemistry:Controlling molecular assembly processes using flow chemistry/microfluidic platforms for efficient and scalable material synthesis",
+          "chemistry:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
+          "chemistry:Membrane Biophysics",
+          "chemistry:Immunological signaling pathways",
+          "chemistry:Allosteric Signaling in Proteins"
         ]
       },
       "internal_edges": [
         {
-          "source": "chemistry:Amlan Kumar Pal",
-          "target": "chemistry:Courses tutored and staff demonstrated at University of St Andrews",
+          "source": "chemistry:Avinash Dhamija",
+          "target": "chemistry:include",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemistry:Amlan Kumar Pal",
-          "target": "chemistry:CH4442 - Chemistry Undergraduate Research Project",
+          "source": "chemistry:Avinash Dhamija",
+          "target": "chemistry:Exploring supramolecular self-assembly for advanced material development",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemistry:Amlan Kumar Pal",
-          "target": "chemistry:CH4461 - Integrating Chemistry",
+          "source": "chemistry:Avinash Dhamija",
+          "target": "chemistry:Developing porous organic cages for functional applications",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemistry:Amlan Kumar Pal",
-          "target": "chemistry:CH3521 - Inorganic Chemistry Laboratory",
+          "source": "chemistry:Avinash Dhamija",
+          "target": "chemistry:Developing organic photovoltaic materials for sustainable energy conversion and next-generation optoelectronic devices",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemistry:Amlan Kumar Pal",
-          "target": "chemistry:CH3514 - Physical Organic Chemistry",
+          "source": "chemistry:Avinash Dhamija",
+          "target": "chemistry:Controlling molecular assembly processes using flow chemistry/microfluidic platforms for efficient and scalable material synthesis",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemistry:Amlan Kumar Pal",
-          "target": "chemistry:CH2501 - Inorganic Chemistry 2",
+          "source": "chemistry:Avinash Dhamija",
+          "target": "IIT Jammu CHEMISTRY Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "chemistry:Shirsendu Ghosh",
+          "target": "chemistry:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemistry:Amlan Kumar Pal",
-          "target": "chemistry:CH1401 - Introductory Inorganic and Physical Chemistry",
+          "source": "chemistry:Shirsendu Ghosh",
+          "target": "chemistry:Membrane Biophysics",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemistry:Amlan Kumar Pal",
-          "target": "chemistry:Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting",
+          "source": "chemistry:Shirsendu Ghosh",
+          "target": "chemistry:Immunological signaling pathways",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemistry:Priya Sahni",
-          "target": "chemistry:Amlan Kumar Pal",
-          "type": "SUPERVISED_BY"
+          "source": "chemistry:Shirsendu Ghosh",
+          "target": "chemistry:Allosteric Signaling in Proteins",
+          "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemistry:Priya Sahni",
-          "target": "chemistry:Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting",
-          "type": "STUDIES"
+          "source": "chemistry:Shirsendu Ghosh",
+          "target": "IIT Jammu CHEMISTRY Department",
+          "type": "MEMBER_OF"
         }
       ],
-      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Amlan Kumar Pal\n  PhDStudent: Priya Sahni\n  ResearchArea: CH4461 - Integrating Chemistry, CH4442 - Chemistry Undergraduate Research Project, Courses tutored and staff demonstrated at University of St Andrews, CH2501 - Inorganic Chemistry 2, CH3521 - Inorganic Chemistry Laboratory, CH1401 - Introductory Inorganic and Physical Chemistry, Photoactive Transition metal complexes for photo-redox catalysis and solid state lighting, CH3514 - Physical Organic Chemistry\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 4 in IIT Jammu's Electrical Engineering Department is led by faculty member Amlan Kumar Pal. The group includes PhD student Priya Sahni, who is supervised by Dr. Pal. Their research areas focus on chemistry-related topics, including photoactive transition metal complexes and inorganic/physical chemistry, with specific courses mentioned from the University of St Andrews.",
-      "summary": "The Community 4 in IIT Jammu's Electrical Engineering Department is led by faculty member Amlan Kumar Pal. The group includes PhD student Priya Sahni, who is supervised by Dr. Pal. Their research areas focus on chemistry-related topics, including photoactive transition metal complexes and inorganic/physical chemistry, with specific courses mentioned from the University of St Andrews.",
-      "size": 10
+      "text": "Community 7 in IIT Jammu EE Department:\n  Department: Department of Chemistry\n  Faculty: Avinash Dhamija, Shirsendu Ghosh\n  ResearchArea: include, Exploring supramolecular self-assembly for advanced material development, Developing porous organic cages for functional applications, Developing organic photovoltaic materials for sustainable energy conversion and next-generation optoelectronic devices, Controlling molecular assembly processes using flow chemistry/microfluidic platforms for efficient and scalable material synthesis, Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique, Membrane Biophysics, Immunological signaling pathways, Allosteric Signaling in Proteins\n  Relationships: RESEARCHES_IN: 9, MEMBER_OF: 2\n\nSummary: This group includes 2 faculty member(s): chemistry:Avinash Dhamija, chemistry:Shirsendu Ghosh. working in areas like chemistry:include, chemistry:Exploring supramolecular self-assembly for advanced material development, chemistry:Developing porous organic cages for functional applications.",
+      "summary": "This group includes 2 faculty member(s): chemistry:Avinash Dhamija, chemistry:Shirsendu Ghosh. working in areas like chemistry:include, chemistry:Exploring supramolecular self-assembly for advanced material development, chemistry:Developing porous organic cages for functional applications.",
+      "size": 12
     },
     {
-      "id": "community_5",
-      "community_id": 5,
+      "id": "community_8",
+      "community_id": 8,
       "members": [
         "chemistry:Shivnath Mazumder",
-        "chemistry:Drug Discovery",
         "chemistry:Renewable Energy",
+        "chemistry:Artificial Intelligence in Chemistry",
+        "chemistry:Drug Discovery",
+        "chemistry:Metal-Catalyzed Reactions",
         "chemistry:Group Webpage:****[https://shivnathmazumder.wixsite.com/computationalchem](https://shivnathmazumder.wixsite.com/computationalchem)",
         "chemistry:Neetu Singh",
-        "chemistry:Sheetal Ranaut",
         "chemistry:Computational Chemistry",
-        "chemistry:Metal-Catalyzed Reactions",
-        "chemistry:Artificial Intelligence in Chemistry",
+        "chemistry:Sheetal Ranaut",
         "chemistry:Computer-Aided Catalyst Discovery and Drug Design"
       ],
       "members_by_type": {
@@ -664,12 +936,12 @@
           "chemistry:Shivnath Mazumder"
         ],
         "ResearchArea": [
-          "chemistry:Drug Discovery",
           "chemistry:Renewable Energy",
+          "chemistry:Artificial Intelligence in Chemistry",
+          "chemistry:Drug Discovery",
+          "chemistry:Metal-Catalyzed Reactions",
           "chemistry:Group Webpage:****[https://shivnathmazumder.wixsite.com/computationalchem](https://shivnathmazumder.wixsite.com/computationalchem)",
           "chemistry:Computational Chemistry",
-          "chemistry:Metal-Catalyzed Reactions",
-          "chemistry:Artificial Intelligence in Chemistry",
           "chemistry:Computer-Aided Catalyst Discovery and Drug Design"
         ],
         "PhDStudent": [
@@ -734,280 +1006,8 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Shivnath Mazumder\n  PhDStudent: Neetu Singh, Sheetal Ranaut\n  ResearchArea: Drug Discovery, Renewable Energy, Group Webpage:****[https://shivnathmazumder.wixsite.com/computationalchem](https://shivnathmazumder.wixsite.com/computationalchem), Computational Chemistry, Metal-Catalyzed Reactions, Artificial Intelligence in Chemistry, Computer-Aided Catalyst Discovery and Drug Design\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: The Community 5 in IIT Jammu's Electrical Engineering Department is led by Professor Shivnath Mazumder, who focuses on computational chemistry and its applications. His group includes PhD students Neetu Singh and Sheetal Ranaut, who are likely working under his supervision. The research areas of this community encompass drug discovery, renewable energy, metal-catalyzed reactions, artificial intelligence in chemistry, and computer-aided catalyst discovery and drug design.",
-      "summary": "The Community 5 in IIT Jammu's Electrical Engineering Department is led by Professor Shivnath Mazumder, who focuses on computational chemistry and its applications. His group includes PhD students Neetu Singh and Sheetal Ranaut, who are likely working under his supervision. The research areas of this community encompass drug discovery, renewable energy, metal-catalyzed reactions, artificial intelligence in chemistry, and computer-aided catalyst discovery and drug design.",
-      "size": 10
-    },
-    {
-      "id": "community_6",
-      "community_id": 6,
-      "members": [
-        "chemistry:Exploring supramolecular self-assembly for advanced material development",
-        "chemistry:include",
-        "chemistry:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
-        "chemistry:Shirsendu Ghosh",
-        "chemistry:Avinash Dhamija",
-        "chemistry:Developing porous organic cages for functional applications",
-        "IIT Jammu CHEMISTRY Department",
-        "chemistry:Developing organic photovoltaic materials for sustainable energy conversion and next-generation optoelectronic devices",
-        "chemistry:Controlling molecular assembly processes using flow chemistry/microfluidic platforms for efficient and scalable material synthesis",
-        "chemistry:Allosteric Signaling in Proteins",
-        "chemistry:Membrane Biophysics",
-        "chemistry:Immunological signaling pathways"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "chemistry:Exploring supramolecular self-assembly for advanced material development",
-          "chemistry:include",
-          "chemistry:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
-          "chemistry:Developing porous organic cages for functional applications",
-          "chemistry:Developing organic photovoltaic materials for sustainable energy conversion and next-generation optoelectronic devices",
-          "chemistry:Controlling molecular assembly processes using flow chemistry/microfluidic platforms for efficient and scalable material synthesis",
-          "chemistry:Allosteric Signaling in Proteins",
-          "chemistry:Membrane Biophysics",
-          "chemistry:Immunological signaling pathways"
-        ],
-        "Faculty": [
-          "chemistry:Shirsendu Ghosh",
-          "chemistry:Avinash Dhamija"
-        ],
-        "Department": [
-          "IIT Jammu CHEMISTRY Department"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemistry:Avinash Dhamija",
-          "target": "chemistry:include",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Avinash Dhamija",
-          "target": "chemistry:Exploring supramolecular self-assembly for advanced material development",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Avinash Dhamija",
-          "target": "chemistry:Developing porous organic cages for functional applications",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Avinash Dhamija",
-          "target": "chemistry:Developing organic photovoltaic materials for sustainable energy conversion and next-generation optoelectronic devices",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Avinash Dhamija",
-          "target": "chemistry:Controlling molecular assembly processes using flow chemistry/microfluidic platforms for efficient and scalable material synthesis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Avinash Dhamija",
-          "target": "IIT Jammu CHEMISTRY Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "chemistry:Shirsendu Ghosh",
-          "target": "chemistry:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Shirsendu Ghosh",
-          "target": "chemistry:Membrane Biophysics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Shirsendu Ghosh",
-          "target": "chemistry:Immunological signaling pathways",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Shirsendu Ghosh",
-          "target": "chemistry:Allosteric Signaling in Proteins",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Shirsendu Ghosh",
-          "target": "IIT Jammu CHEMISTRY Department",
-          "type": "MEMBER_OF"
-        }
-      ],
-      "text": "Community 6 in IIT Jammu EE Department:\n  Department: Department of Chemistry\n  Faculty: Shirsendu Ghosh, Avinash Dhamija\n  ResearchArea: Exploring supramolecular self-assembly for advanced material development, include, Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique, Developing porous organic cages for functional applications, Developing organic photovoltaic materials for sustainable energy conversion and next-generation optoelectronic devices, Controlling molecular assembly processes using flow chemistry/microfluidic platforms for efficient and scalable material synthesis, Allosteric Signaling in Proteins, Membrane Biophysics, Immunological signaling pathways\n  Relationships: RESEARCHES_IN: 9, MEMBER_OF: 2\n\nSummary: The Community 6 in IIT Jammu's Electrical Engineering Department is led by faculty members Shirsendu Ghosh and Avinash Dhamija. This group focuses on interdisciplinary research areas including supramolecular self-assembly, advanced materials development, and single molecule spectroscopy. Their work spans various fields such as material science, biophysics, and optoelectronics, with a focus on developing sustainable energy conversion technologies and efficient material synthesis methods.",
-      "summary": "The Community 6 in IIT Jammu's Electrical Engineering Department is led by faculty members Shirsendu Ghosh and Avinash Dhamija. This group focuses on interdisciplinary research areas including supramolecular self-assembly, advanced materials development, and single molecule spectroscopy. Their work spans various fields such as material science, biophysics, and optoelectronics, with a focus on developing sustainable energy conversion technologies and efficient material synthesis methods.",
-      "size": 12
-    },
-    {
-      "id": "community_7",
-      "community_id": 7,
-      "members": [
-        "chemistry:C-H Functionalization",
-        "chemistry:Photoredox Catalysis",
-        "chemistry:and Organoboranes",
-        "chemistry:Alkyne & Allene Chemistry",
-        "chemistry:Organocatalysis",
-        "chemistry:Carbene Transfer Reactions",
-        "chemistry:Guru Brahamam Ramani",
-        "chemistry:Asymmetric Synthesis",
-        "chemistry:Hypervalent Iodine Chemistry"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "chemistry:C-H Functionalization",
-          "chemistry:Photoredox Catalysis",
-          "chemistry:and Organoboranes",
-          "chemistry:Alkyne & Allene Chemistry",
-          "chemistry:Organocatalysis",
-          "chemistry:Carbene Transfer Reactions",
-          "chemistry:Asymmetric Synthesis",
-          "chemistry:Hypervalent Iodine Chemistry"
-        ],
-        "Faculty": [
-          "chemistry:Guru Brahamam Ramani"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemistry:Guru Brahamam Ramani",
-          "target": "chemistry:Asymmetric Synthesis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Guru Brahamam Ramani",
-          "target": "chemistry:Alkyne & Allene Chemistry",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Guru Brahamam Ramani",
-          "target": "chemistry:Carbene Transfer Reactions",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Guru Brahamam Ramani",
-          "target": "chemistry:Hypervalent Iodine Chemistry",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Guru Brahamam Ramani",
-          "target": "chemistry:Organocatalysis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Guru Brahamam Ramani",
-          "target": "chemistry:Photoredox Catalysis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Guru Brahamam Ramani",
-          "target": "chemistry:C-H Functionalization",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Guru Brahamam Ramani",
-          "target": "chemistry:and Organoboranes",
-          "type": "RESEARCHES_IN"
-        }
-      ],
-      "text": "Community 7 in IIT Jammu EE Department:\n  Faculty: Guru Brahamam Ramani\n  ResearchArea: C-H Functionalization, Photoredox Catalysis, and Organoboranes, Alkyne & Allene Chemistry, Organocatalysis, Carbene Transfer Reactions, Asymmetric Synthesis, Hypervalent Iodine Chemistry\n  Relationships: RESEARCHES_IN: 8\n\nSummary: The Community 7 in IIT Jammu's Electrical Engineering Department is led by Faculty member Guru Brahamam Ramani. This group focuses on various research areas including C-H Functionalization, Photoredox Catalysis, Organoboranes, Alkyne & Allene Chemistry, and more. They are connected through their shared expertise in these fields, with a total of 8 related entities.",
-      "summary": "The Community 7 in IIT Jammu's Electrical Engineering Department is led by Faculty member Guru Brahamam Ramani. This group focuses on various research areas including C-H Functionalization, Photoredox Catalysis, Organoboranes, Alkyne & Allene Chemistry, and more. They are connected through their shared expertise in these fields, with a total of 8 related entities.",
-      "size": 9
-    },
-    {
-      "id": "community_8",
-      "community_id": 8,
-      "members": [
-        "chemistry:Shivali Hans",
-        "chemistry:Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity",
-        "chemistry:Swati Rani",
-        "chemistry:Organometalic catalysis involving non-innocent ligands",
-        "chemistry:Subhas Samanta",
-        "chemistry:Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis",
-        "chemistry:Bio-inspired transition metal catalysis",
-        "chemistry:Transition metal complexes for biomimetic oxidation reaction",
-        "chemistry:Robindo Chatterjee",
-        "chemistry:Small molecule activation reaction"
-      ],
-      "members_by_type": {
-        "PhDStudent": [
-          "chemistry:Shivali Hans",
-          "chemistry:Swati Rani",
-          "chemistry:Robindo Chatterjee"
-        ],
-        "ResearchArea": [
-          "chemistry:Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity",
-          "chemistry:Organometalic catalysis involving non-innocent ligands",
-          "chemistry:Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis",
-          "chemistry:Bio-inspired transition metal catalysis",
-          "chemistry:Transition metal complexes for biomimetic oxidation reaction",
-          "chemistry:Small molecule activation reaction"
-        ],
-        "Faculty": [
-          "chemistry:Subhas Samanta"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemistry:Subhas Samanta",
-          "target": "chemistry:Organometalic catalysis involving non-innocent ligands",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Subhas Samanta",
-          "target": "chemistry:Bio-inspired transition metal catalysis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Subhas Samanta",
-          "target": "chemistry:Small molecule activation reaction",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Subhas Samanta",
-          "target": "chemistry:Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Subhas Samanta",
-          "target": "chemistry:Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Subhas Samanta",
-          "target": "chemistry:Transition metal complexes for biomimetic oxidation reaction",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemistry:Robindo Chatterjee",
-          "target": "chemistry:Subhas Samanta",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemistry:Robindo Chatterjee",
-          "target": "chemistry:Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemistry:Shivali Hans",
-          "target": "chemistry:Subhas Samanta",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemistry:Shivali Hans",
-          "target": "chemistry:Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemistry:Swati Rani",
-          "target": "chemistry:Subhas Samanta",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemistry:Swati Rani",
-          "target": "chemistry:Transition metal complexes for biomimetic oxidation reaction",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 8 in IIT Jammu EE Department:\n  Faculty: Subhas Samanta\n  PhDStudent: Shivali Hans, Swati Rani, Robindo Chatterjee\n  ResearchArea: Transition Metal Complexes Containing Macrocyclic Ligands & their reactivity, Organometalic catalysis involving non-innocent ligands, Synthesis and Reactivity of Transition Metal Complexes Biomimetic Catalysis, Bio-inspired transition metal catalysis, Transition metal complexes for biomimetic oxidation reaction, Small molecule activation reaction\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: The Community 8 in IIT Jammu's Electrical Engineering Department is led by Dr. Subhas Samanta, a faculty member with expertise in transition metal complexes. The group consists of PhD students Shivali Hans, Swati Rani, and Robindo Chatterjee, who are supervised by Dr. Samanta. Their research focuses on various areas, including transition metal catalysis, biomimetic catalysis, and small molecule activation reactions, involving non-innocent ligands and macrocyclic complexes.",
-      "summary": "The Community 8 in IIT Jammu's Electrical Engineering Department is led by Dr. Subhas Samanta, a faculty member with expertise in transition metal complexes. The group consists of PhD students Shivali Hans, Swati Rani, and Robindo Chatterjee, who are supervised by Dr. Samanta. Their research focuses on various areas, including transition metal catalysis, biomimetic catalysis, and small molecule activation reactions, involving non-innocent ligands and macrocyclic complexes.",
+      "text": "Community 8 in IIT Jammu EE Department:\n  Faculty: Shivnath Mazumder\n  PhDStudent: Neetu Singh, Sheetal Ranaut\n  ResearchArea: Renewable Energy, Artificial Intelligence in Chemistry, Drug Discovery, Metal-Catalyzed Reactions, Group Webpage:****[https://shivnathmazumder.wixsite.com/computationalchem](https://shivnathmazumder.wixsite.com/computationalchem), Computational Chemistry, Computer-Aided Catalyst Discovery and Drug Design\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): chemistry:Shivnath Mazumder. 2 PhD student(s). working in areas like chemistry:Renewable Energy, chemistry:Artificial Intelligence in Chemistry, chemistry:Drug Discovery.",
+      "summary": "This group includes 1 faculty member(s): chemistry:Shivnath Mazumder. 2 PhD student(s). working in areas like chemistry:Renewable Energy, chemistry:Artificial Intelligence in Chemistry, chemistry:Drug Discovery.",
       "size": 10
     }
   ]

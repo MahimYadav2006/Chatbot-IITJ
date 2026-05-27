@@ -43,6 +43,11 @@ SECTION_ALIASES = {
     "areas of interest": "research_interests",
     "teaching interests": "teaching_interests",
     "teaching interest": "teaching_interests",
+    "teaching engagements": "teaching_interests",
+    "courses": "teaching_interests",
+    "courses offered": "teaching_interests",
+    "teaching": "teaching_interests",
+    "teaching experience": "teaching_interests",
     "research experience": "research_experience",
     "work experience": "research_experience",
     "experience": "research_experience",
@@ -55,6 +60,14 @@ SECTION_ALIASES = {
     "research topic": "research_area",
     "topic": "research_area",
     "publications": "publications",
+    "awards & honours": "awards",
+    "awards and honors": "awards",
+    "awards & honors": "awards",
+    "awards and honours": "awards",
+    "awards": "awards",
+    "honours": "awards",
+    "honors": "awards",
+    "awards & achievements": "awards",
     "other info": "other_info",
     "brief info": "brief_info",
     "profile": "brief_info",
@@ -643,6 +656,18 @@ def infer_document_kind(filename: str, content: str) -> str:
         return "faculty_roster"
     if "phd-list" in fn or ("research area" in text and "supervisor" in text and _detect_person_record_level(content) is not None):
         return "phd_roster"
+    if "mtech-list" in fn:
+        return "mtech_roster"
+    if "awards" in fn or "honors" in fn or "honours" in fn:
+        return "awards"
+    if ("publications" in fn or "publication" in fn) and "__" not in fn:
+        return "publications"
+    if "labs" in fn or "lab-facilities" in fn or "labs-and-facilities" in fn or "research-labs" in fn:
+        return "labs"
+    if "staff-list" in fn or "project-staff" in fn:
+        return "staff"
+    if "programme" in fn or "course" in fn or "program-list" in fn:
+        return "programmes"
     if "funded-projects" in fn or "research-projects" in fn:
         return "funded_projects"
     if "patent" in fn:
@@ -653,6 +678,8 @@ def infer_document_kind(filename: str, content: str) -> str:
         return "research_areas"
     if "placement-industry" in fn:
         return "placement_industry"
+    if "placements" in fn and "academia" not in fn:
+        return "placement_industry"
     if "placement-academia" in fn:
         return "placement_academia"
     if "hod" in fn or "message-from-deparment-hod" in fn or "message-from-head" in fn:
@@ -661,6 +688,8 @@ def infer_document_kind(filename: str, content: str) -> str:
         return "faculty_profile"
     if "/phd-list" in source_line:
         return "phd_roster"
+    if "/mtech-list" in source_line:
+        return "mtech_roster"
     return "generic"
 
 
@@ -907,9 +936,14 @@ class KnowledgeGraphBuilder:
             if research_interests:
                 break
 
+        publications = section_map.get("publications", "")
+        awards = section_map.get("awards", "")
+        teaching_interests = section_map.get("teaching_interests", "")
+
         self._add_node(faculty_name, "Faculty", name=faculty_name, email=email,
             designation=designation, education=education,
-            research_experience=research_experience, source_file=filename)
+            research_experience=research_experience, source_file=filename,
+            publications=publications, awards=awards, teaching_interests=teaching_interests)
         self._add_edge(faculty_name, doc_id, "PROFILE_DOCUMENT")
 
         for interest in research_interests[:10]:
@@ -918,7 +952,7 @@ class KnowledgeGraphBuilder:
                 self._add_node(interest_clean, "ResearchArea", name=interest_clean)
                 self._add_edge(faculty_name, interest_clean, "RESEARCHES_IN")
 
-    def _parse_phd_list(self, filename: str, content: str, doc_id: str):
+    def _parse_phd_list(self, filename: str, content: str, doc_id: str, label: str = "PhDStudent"):
         level = _detect_person_record_level(content) or _detect_repeated_heading_level(content) or 4
         student_blocks = _iter_heading_blocks(content, level=level)
 
@@ -946,7 +980,7 @@ class KnowledgeGraphBuilder:
                     if s.strip() and len(s.strip()) > 2
                 ]
 
-            self._add_node(student_name, "PhDStudent", name=student_name,
+            self._add_node(student_name, label, name=student_name,
                 research_area=research_area, email=email, source_file=filename)
             self._add_edge(student_name, doc_id, "SOURCE_DOCUMENT")
 
@@ -964,6 +998,42 @@ class KnowledgeGraphBuilder:
                 self._add_edge(student_name, research_area, "STUDIES")
 
     def _parse_funded_projects(self, filename: str, content: str, doc_id: str):
+        # Table parsing logic first
+        if "|" in content:
+            lines = content.splitlines()
+            parsed_any = False
+            for line in lines:
+                line = line.strip()
+                if not line.startswith("|") or "---" in line or "sl. no." in line.lower() or "pi" in line.lower():
+                    continue
+                parts = [p.strip() for p in line.split("|")[1:-1]]
+                if len(parts) >= 3:
+                    sl_no = parts[0]
+                    pi = parts[1]
+                    grant = parts[2]
+                    agency = parts[3] if len(parts) > 3 else ""
+                    
+                    title = f"Research Project by {pi} ({grant})"
+                    if agency:
+                        title += f" from {agency}"
+                    
+                    proj_id = f"project:{title[:60]}"
+                    self._add_node(proj_id, "Project", title=title, agency=agency, pi=pi, grant_size=grant, project_number=sl_no, source_file=filename)
+                    self._add_edge(proj_id, doc_id, "SOURCE_DOCUMENT")
+                    
+                    resolved_pi = self.resolver.resolve(pi)
+                    if self.resolver.is_canonical_faculty(resolved_pi):
+                        self._add_edge(resolved_pi, proj_id, "PRINCIPAL_INVESTIGATOR")
+                        self._add_edge(proj_id, resolved_pi, "PI_IS")
+                    
+                    if agency:
+                        agency_id = f"agency:{agency}"
+                        self._add_node(agency_id, "FundingAgency", name=agency)
+                        self._add_edge(proj_id, agency_id, "FUNDED_BY")
+                    parsed_any = True
+            if parsed_any:
+                return
+
         # First, join multi-line wrapped entries into single logical lines.
         # Each entry starts with "- [N]" or "[N]". Continuation lines that
         # don't start with "- [" or "#" or are blank are joined.
@@ -1110,20 +1180,83 @@ class KnowledgeGraphBuilder:
             self._add_edge(faculty_name, doc_id, "SOURCE_DOCUMENT")
 
     def _parse_hod(self, filename: str, content: str, doc_id: str):
-        hod_match = re.search(r'###\s*(?:Dr\.?|Prof\.?)\s*([\w\s]+?)\n+\s*Head of Department', content)
-        if not hod_match:
-            hod_match = re.search(r'(?:Dr\.?|Prof\.?)\s*([\w\s]+?)\n+\s*Head', content)
-        if not hod_match:
-            hod_match = re.search(r'##\s*(?:Dr\.?|Prof\.?)\s*([\w\s]+?)\n', content)
-        if hod_match:
-            hod_name = self.resolver.resolve(hod_match.group(1).strip())
-            self._add_node(hod_name, "Faculty", name=hod_name, is_hod=True,
+        import urllib.parse
+        hod_name = None
+        content_lower = content.lower()
+        
+        # Strategy A: Heading with HoD tag nearby
+        headings = re.findall(r'#{2,4}\s*(.*)', content)
+        for idx, heading in enumerate(headings):
+            cleaned_heading = _strip_markdown_emphasis(_strip_markdown_link(heading)).strip()
+            normalized_heading = normalize_name(cleaned_heading)
+            is_hod_cand = False
+            for offset in range(max(0, idx - 2), min(len(headings), idx + 3)):
+                if "hod" in headings[offset].lower() or "head" in headings[offset].lower():
+                    is_hod_cand = True
+                    break
+            
+            if is_hod_cand and normalized_heading and self.resolver.is_canonical_faculty(normalized_heading):
+                hod_name = normalized_heading
+                break
+
+        # Strategy A.5: Heading with Dr./Prof. prefix near "Head of Department" text
+        if not hod_name:
+            for idx, heading in enumerate(headings):
+                cleaned = _strip_markdown_emphasis(_strip_markdown_link(heading)).strip()
+                if not TITLE_PREFIXES.search(cleaned):
+                    continue
+                name_part = normalize_name(cleaned)
+                if len(name_part.split()) < 2:
+                    continue
+                # Check if "Head of Department" appears nearby in content
+                heading_pos = content.find(heading)
+                if heading_pos >= 0:
+                    vicinity = content[heading_pos:heading_pos + 300].lower()
+                    if 'head of department' in vicinity or 'head, department' in vicinity:
+                        hod_name = name_part
+                        break
+
+        # Strategy B: If no HOD found yet, search for image filenames
+        if not hod_name:
+            img_matches = re.findall(r'!\[.*?\]\((.*?)\)|<img.*?src=["\'](.*?)["\']', content)
+            for m in img_matches:
+                img_url = m[0] or m[1]
+                if img_url:
+                    img_fn = os.path.basename(urllib.parse.unquote(img_url))
+                    img_name = os.path.splitext(img_fn)[0]
+                    img_name_clean = img_name.replace("%20", " ").replace("_", " ").replace("-", " ").strip()
+                    img_name_normalized = normalize_name(img_name_clean)
+                    if self.resolver.is_canonical_faculty(img_name_normalized):
+                        hod_name = img_name_normalized
+                        break
+
+        # Strategy C: Fallback to any canonical faculty name mentioned in a short HOD message
+        if not hod_name:
+            for canon in self._canonical_faculty:
+                if canon.lower() in content_lower:
+                    if "hod" in content_lower or "head" in content_lower or "message" in content_lower:
+                        hod_name = canon
+                        break
+
+        # Strategy D: Original regex matching
+        if not hod_name:
+            hod_match = re.search(r'###\s*(?:Dr\.?|Prof\.?)\s*([\w\s]+?)\n+\s*Head of Department', content)
+            if not hod_match:
+                hod_match = re.search(r'(?:Dr\.?|Prof\.?)\s*([\w\s]+?)\n+\s*Head', content)
+            if not hod_match:
+                hod_match = re.search(r'##\s*(?:Dr\.?|Prof\.?)\s*([\w\s]+?)\n', content)
+            if hod_match:
+                hod_name = self.resolver.resolve(hod_match.group(1).strip())
+
+        if hod_name:
+            hod_resolved = self.resolver.resolve(hod_name)
+            self._add_node(hod_resolved, "Faculty", name=hod_resolved, is_hod=True,
                            designation="Head of Department (HoD)")
-            self._add_edge(hod_name, doc_id, "SOURCE_DOCUMENT")
+            self._add_edge(hod_resolved, doc_id, "SOURCE_DOCUMENT")
             dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
             self._add_node(dept_id, "Department",
                 name=self.dept_config["full_name"], institution="IIT Jammu")
-            self._add_edge(hod_name, dept_id, "HOD_OF")
+            self._add_edge(hod_resolved, dept_id, "HOD_OF")
 
             # Extract official HoD email and store on department node
             hod_email_match = re.search(r'hod\.[\w\.\-]+@iitjammu\.ac\.in', content, re.IGNORECASE)
@@ -1132,53 +1265,90 @@ class KnowledgeGraphBuilder:
 
     def _parse_placement_data(self, filename: str, content: str, doc_id: str):
         """Parse placement industry data into structured PlacementData nodes."""
-        # The table format:
-        # | UG | 37.5 | 14.46 | 41.5 | 5 | 87.88 | 20.22 | 53 | 8 |
-        # Columns: Program | %_23-24 | Mean_23-24 | Max_23-24 | Min_23-24 | %_22-23 | Mean_22-23 | Max_22-23 | Min_22-23
+        # Detect year headers from the table to label data correctly
+        year_headers = re.findall(r'(\d{4}[-–]\d{2,4})', content)
+        year_labels = year_headers[:2] if len(year_headers) >= 2 else ["2023-24", "2022-23"]
+
         for line in content.splitlines():
             cells = [c.strip() for c in line.split('|') if c.strip()]
-            if len(cells) < 8:
+            if len(cells) < 5:
                 continue
             program = cells[0].strip()
-            if program in ('UG', 'M.Tech (CSP)', 'M.Tech (VLSI)'):
-                try:
-                    # 2023-24 data: columns 1-4
-                    pct_2324 = cells[1].strip()
-                    mean_2324 = cells[2].strip()
-                    max_2324 = cells[3].strip()
-                    min_2324 = cells[4].strip()
-                    # 2022-23 data: columns 5-8
-                    pct_2223 = cells[5].strip()
-                    mean_2223 = cells[6].strip()
-                    max_2223 = cells[7].strip() if len(cells) > 7 else 'NA'
-                    min_2223 = cells[8].strip() if len(cells) > 8 else 'NA'
+            # Skip header/separator rows
+            if not program or program.startswith('---') or 'percentage' in program.lower() or 'salary' in program.lower():
+                continue
+            # Skip if program doesn't look like a real program label
+            if len(program) > 40 or program.lower() in ('', 'program', 'programme', 'course'):
+                continue
 
-                    # Create structured node for 2023-24
-                    node_id_2324 = f"placement:{program}:2023-24"
-                    self._add_node(node_id_2324, "PlacementData",
-                        name=f"{program} Placement 2023-24",
-                        program=program, year="2023-24",
-                        percentage=pct_2324,
-                        mean_salary=mean_2324,
-                        max_salary=max_2324,
-                        min_salary=min_2324,
+            try:
+                # Determine table layout: either 8+ cells (two years) or 4+ cells (one year)
+                if len(cells) >= 9:
+                    # Two-year layout: cells[1-4] = year1, cells[5-8] = year2
+                    pct_y1 = cells[1].strip()
+                    mean_y1 = cells[2].strip()
+                    max_y1 = cells[3].strip()
+                    min_y1 = cells[4].strip()
+                    pct_y2 = cells[5].strip()
+                    mean_y2 = cells[6].strip()
+                    max_y2 = cells[7].strip() if len(cells) > 7 else 'NA'
+                    min_y2 = cells[8].strip() if len(cells) > 8 else 'NA'
+
+                    # Validate that values look numeric
+                    try:
+                        float(pct_y1.replace('%', ''))
+                    except ValueError:
+                        continue
+
+                    node_id_y1 = f"placement:{program}:{year_labels[0]}"
+                    self._add_node(node_id_y1, "PlacementData",
+                        name=f"{program} Placement {year_labels[0]}",
+                        program=program, year=year_labels[0],
+                        percentage=pct_y1,
+                        mean_salary=mean_y1,
+                        max_salary=max_y1,
+                        min_salary=min_y1,
                         source_file=filename)
-                    self._add_edge(node_id_2324, doc_id, "SOURCE_DOCUMENT")
+                    self._add_edge(node_id_y1, doc_id, "SOURCE_DOCUMENT")
 
-                    # Create structured node for 2022-23
-                    if pct_2223 != 'NA':
-                        node_id_2223 = f"placement:{program}:2022-23"
-                        self._add_node(node_id_2223, "PlacementData",
-                            name=f"{program} Placement 2022-23",
-                            program=program, year="2022-23",
-                            percentage=pct_2223,
-                            mean_salary=mean_2223,
-                            max_salary=max_2223,
-                            min_salary=min_2223,
+                    if pct_y2 != 'NA':
+                        try:
+                            float(pct_y2.replace('%', ''))
+                        except ValueError:
+                            continue
+                        node_id_y2 = f"placement:{program}:{year_labels[1]}"
+                        self._add_node(node_id_y2, "PlacementData",
+                            name=f"{program} Placement {year_labels[1]}",
+                            program=program, year=year_labels[1],
+                            percentage=pct_y2,
+                            mean_salary=mean_y2,
+                            max_salary=max_y2,
+                            min_salary=min_y2,
                             source_file=filename)
-                        self._add_edge(node_id_2223, doc_id, "SOURCE_DOCUMENT")
-                except (IndexError, ValueError):
-                    continue
+                        self._add_edge(node_id_y2, doc_id, "SOURCE_DOCUMENT")
+
+                elif len(cells) >= 5:
+                    # Single-year layout
+                    pct = cells[1].strip()
+                    try:
+                        float(pct.replace('%', ''))
+                    except ValueError:
+                        continue
+                    mean_s = cells[2].strip()
+                    max_s = cells[3].strip()
+                    min_s = cells[4].strip()
+                    node_id = f"placement:{program}:{year_labels[0]}"
+                    self._add_node(node_id, "PlacementData",
+                        name=f"{program} Placement {year_labels[0]}",
+                        program=program, year=year_labels[0],
+                        percentage=pct,
+                        mean_salary=mean_s,
+                        max_salary=max_s,
+                        min_salary=min_s,
+                        source_file=filename)
+                    self._add_edge(node_id, doc_id, "SOURCE_DOCUMENT")
+            except (IndexError, ValueError):
+                continue
 
     def _parse_higher_studies(self, filename: str, content: str, doc_id: str):
         """Parse higher studies (placement-academia) data into structured nodes."""
@@ -1226,18 +1396,112 @@ class KnowledgeGraphBuilder:
                     continue
 
     def _parse_labs(self, content: str, doc_id: str):
-        lab_patterns = re.findall(r'####\s+(.*?Lab.*?)\n', content, re.IGNORECASE)
         seen = set()
-        for lab_name in lab_patterns:
-            lab_name = lab_name.strip()
-            # Remove markdown link syntax from lab names
-            lab_name = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', lab_name)
-            if lab_name in seen or len(lab_name) < 5:
+        blacklist = ('examiner', 'subject', 'course', 'equipment', 'workshop', 'session', 'class', 'credit', 'exam', 'syllabus', 'hour', 'hours', 'external', 'teacher', 'coordinator', 'officer', 'assistant')
+        
+        # Helper to validate a lab candidate
+        def is_valid_lab(cand: str) -> bool:
+            cand_lower = cand.lower()
+            if len(cand) <= 3 or len(cand) > 80:
+                return False
+            if not any(term in cand_lower for term in ('lab', 'laboratory')):
+                return False
+            if any(term in cand_lower for term in blacklist):
+                return False
+            return True
+
+        # 1. Heading matching (e.g. #### UG Bio Lab)
+        heading_patterns = re.findall(r'#{3,5}\s+([^\n]*?lab[^\n]*?)(?:\n|$)', content, re.IGNORECASE)
+        for cand in heading_patterns:
+            cand = _strip_markdown_emphasis(_strip_markdown_link(cand)).strip()
+            cand = re.sub(r'[:\-]+$', '', cand).strip()
+            if is_valid_lab(cand) and cand not in seen:
+                seen.add(cand)
+                lab_id = f"lab:{cand}"
+                self._add_node(lab_id, "Lab", name=cand)
+                self._add_edge(lab_id, doc_id, "SOURCE_DOCUMENT")
+                
+        # 2. Bullet list matching (e.g. - Genetic Engineering Lab)
+        list_patterns = re.findall(r'^\s*-\s+([^\n]*?lab[^\n]*?)(?:\n|$)', content, re.M | re.IGNORECASE)
+        for cand in list_patterns:
+            cand = _strip_markdown_emphasis(_strip_markdown_link(cand)).strip()
+            cand = re.sub(r'[:\-]+$', '', cand).strip()
+            if is_valid_lab(cand) and cand not in seen:
+                seen.add(cand)
+                lab_id = f"lab:{cand}"
+                self._add_node(lab_id, "Lab", name=cand)
+                self._add_edge(lab_id, doc_id, "SOURCE_DOCUMENT")
+
+    def _parse_awards(self, filename: str, content: str, doc_id: str):
+        for line in content.splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or line.startswith("- ["):
                 continue
-            seen.add(lab_name)
-            lab_id = f"lab:{lab_name}"
-            self._add_node(lab_id, "Lab", name=lab_name)
-            self._add_edge(lab_id, doc_id, "SOURCE_DOCUMENT")
+            if line.startswith("-"):
+                line = line[1:].strip()
+            if len(line) > 15:
+                matching_faculty = None
+                for canon in self._canonical_faculty:
+                    if canon.lower() in line.lower() or fuzzy_match(canon.lower(), line.lower()):
+                        matching_faculty = canon
+                        break
+                award_title = line
+                award_id = f"award:{award_title[:80]}"
+                self._add_node(award_id, "Award", title=award_title, source_file=filename)
+                self._add_edge(award_id, doc_id, "SOURCE_DOCUMENT")
+                if matching_faculty:
+                    self._add_edge(matching_faculty, award_id, "HAS_AWARD")
+                    self._add_edge(award_id, matching_faculty, "AWARDED_TO")
+
+    def _parse_publications_page(self, filename: str, content: str, doc_id: str):
+        for line in content.splitlines():
+            line = line.strip()
+            if line.startswith("- ") and len(line) > 10:
+                pub_title = line[2:].strip()
+                pub_id = f"publication:{pub_title[:80]}"
+                self._add_node(pub_id, "Publication", title=pub_title, source_file=filename)
+                self._add_edge(pub_id, doc_id, "SOURCE_DOCUMENT")
+                for canon in self._canonical_faculty:
+                    if canon.lower() in pub_title.lower():
+                        self._add_edge(canon, pub_id, "AUTHORED")
+                        self._add_edge(pub_id, canon, "WRITTEN_BY")
+
+    def _parse_staff(self, filename: str, content: str, doc_id: str):
+        blocks = _iter_heading_blocks(content, level=4)
+        for raw_heading, block in blocks:
+            name = _strip_markdown_emphasis(_strip_markdown_link(raw_heading)).strip()
+            if not name or len(name) < 2 or any(kw in name.lower() for kw in ["research", "people", "staff", "menu", "home"]):
+                continue
+            role = ""
+            lines = [l.strip() for l in block.splitlines() if l.strip()]
+            if lines:
+                role = lines[0]
+            staff_id = f"staff:{name}"
+            self._add_node(staff_id, "Staff", name=name, designation=role, source_file=filename)
+            self._add_edge(staff_id, doc_id, "SOURCE_DOCUMENT")
+            dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
+            self._add_edge(staff_id, dept_id, "STAFF_MEMBER_OF")
+
+    def _parse_programmes(self, filename: str, content: str, doc_id: str):
+        for line in content.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            for prog in ["B.Tech", "M.Tech", "PhD", "Ph.D.", "Postgraduate", "Undergraduate"]:
+                if prog.lower() in line.lower() and len(line) < 100:
+                    prog_name = prog if prog != "Ph.D." else "PhD"
+                    prog_id = f"program:{prog_name}"
+                    self._add_node(prog_id, "Program", name=prog_name, details=line, source_file=filename)
+                    self._add_edge(prog_id, doc_id, "SOURCE_DOCUMENT")
+            
+            course_match = re.search(r'([A-Z]{2,3}-\d{3,4}|[A-Z]{2,3}-\d-\d{2})(?:\(.*\))?\s*[:\-]?\s*(.*)', line)
+            if course_match:
+                code = course_match.group(1).strip()
+                title = course_match.group(2).strip()
+                title = _strip_markdown_emphasis(_strip_markdown_link(title)).strip()
+                course_id = f"course:{code}"
+                self._add_node(course_id, "Course", code=code, title=title or code, source_file=filename)
+                self._add_edge(course_id, doc_id, "SOURCE_DOCUMENT")
 
     def build(self) -> nx.DiGraph:
         if not os.path.exists(self.markdown_dir):
@@ -1279,10 +1543,25 @@ class KnowledgeGraphBuilder:
 
         for filename, (doc_id, content) in doc_map.items():
             doc_kind = doc_kinds.get(filename, "generic")
+            clean_fn = filename
+            prefix = f"{self.dept_code}_"
+            if clean_fn.startswith(prefix):
+                clean_fn = clean_fn[len(prefix):]
+
             if doc_kind == "faculty_profile":
                 self._parse_faculty_profile(filename, content, doc_id)
             elif doc_kind == "phd_roster":
                 self._parse_phd_list(filename, content, doc_id)
+            elif doc_kind == "mtech_roster":
+                self._parse_phd_list(filename, content, doc_id, label="MTechStudent")
+            elif doc_kind == "awards":
+                self._parse_awards(filename, content, doc_id)
+            elif doc_kind == "publications":
+                self._parse_publications_page(filename, content, doc_id)
+            elif doc_kind == "staff":
+                self._parse_staff(filename, content, doc_id)
+            elif doc_kind == "programmes":
+                self._parse_programmes(filename, content, doc_id)
             elif doc_kind == "funded_projects":
                 self._parse_funded_projects(filename, content, doc_id)
             elif doc_kind == "patents":
@@ -1300,9 +1579,13 @@ class KnowledgeGraphBuilder:
             elif doc_kind == "placement_academia":
                 self._parse_higher_studies(filename, content, doc_id)
             
-            # Labs (usually in index/home/dept main page)
-            if filename in (f"{self.dept_code}.md", f"{self.dept_code}_index.html.md", "index.md"):
-                self._parse_labs(content, doc_id)
+            # Check if department main page contains HOD message/details
+            if clean_fn in (f"{self.dept_code}.md", f"{self.dept_code}_index.html.md", "index.md"):
+                if "hod" in content.lower() or "head of" in content.lower() or "message" in content.lower():
+                    self._parse_hod(filename, content, doc_id)
+            
+            # Labs (usually in index/home/dept main page, or labs file, but we now run it on all pages to ensure no labs are missed)
+            self._parse_labs(content, doc_id)
 
         logger.info(f"Phase 2: Entity extraction complete.")
 

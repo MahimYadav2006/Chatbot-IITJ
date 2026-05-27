@@ -23,7 +23,7 @@ class TestCSEFacultyProfiles:
 
     def test_link_wrapped_sections_are_extracted(self, cse_graph):
         node = cse_graph.nodes["computer_science_engineering:Aroof Aimen"]
-        assert "IIT Ropar" in node["education"]
+        assert any(term in node["education"] for term in ("IIT Ropar", "Indian Institute of Technology Ropar"))
         assert "University of Wisconsin" in node["research_experience"]
 
     def test_department_records_available_faculty_schema(self, cse_graph):

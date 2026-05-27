@@ -1,394 +1,254 @@
 {
   "partition": {
-    "mathematics:Debasish Paul": 4,
-    "mathematics:Sakshi Singh": 0,
-    "mathematics:Rahul Dattatraya Kitture": 7,
-    "mathematics:Etale Fundamental Groups": 3,
-    "mathematics:Combinatorial Commutative Algebra": 0,
-    "mathematics:Analysis of Partial Differential Equations": 4,
-    "mathematics:Nitesh  Kumar": 4,
-    "mathematics:Algebraic Geometry. Specifically": 3,
-    "mathematics:Moni Kumari": 8,
-    "mathematics:Automorphic forms of various types: Maass forms": 8,
-    "mathematics:lies in": 4,
-    "mathematics:Sonakshee Arora": 7,
-    "mathematics:Sakshi Gupta": 7,
-    "mathematics:Mathematics": 8,
-    "mathematics:Nimu Basak": 0,
-    "mathematics:Orbifold bundles and Moduli Problems": 3,
-    "mathematics:PDE and Numerics": 4,
-    "mathematics:More specifically": 4,
-    "mathematics:Muskan Khaneja": 1,
-    "mathematics:Deepika Garg": 4,
-    "mathematics:Hyperbolic Conservation Laws and Numerics": 4,
-    "mathematics:Analytic number theory": 8,
-    "mathematics:Shalini": 2,
-    "mathematics:Finite Group Theory": 0,
-    "mathematics:Combinatorics": 0,
-    "mathematics:Finite Geometry": 1,
-    "mathematics:Numerical Analysis": 4,
-    "mathematics:Coding theory": 1,
-    "mathematics:Inverse problems related to PDEs": 4,
-    "mathematics:Ajay Kumar": 0,
-    "IIT Jammu MATHEMATICS Department": 0,
-    "mathematics:Topology": 0,
-    "mathematics:Stochastic Modelling, Applied Probability": 2,
-    "mathematics:Representation Theory": 7,
-    "mathematics:Tanmay Sarkar": 4,
-    "mathematics:Galois representations)": 5,
-    "mathematics:Algebraic Geometry": 3,
-    "mathematics:Applied Probability": 2,
-    "mathematics:Prabhat Kumar Mishra": 5,
-    "mathematics:Ramandeep Kaur": 6,
-    "mathematics:Algebraic Number Theory": 8,
-    "mathematics:Graph Theory": 0,
-    "mathematics:Inverse Boundary Value Problems": 4,
-    "mathematics:Character theory of finite groups": 7,
-    "mathematics:Finite fields and their applications": 6,
-    "mathematics:Prasant Singh": 1,
-    "mathematics:Rajiv Kumar": 0,
-    "mathematics:Jacobi forms": 8,
-    "mathematics:Partial Differential Equations": 4,
-    "mathematics:Anirban Kuila": 5,
-    "mathematics:Paramhans Kushwaha": 0,
-    "mathematics:Algebraic Geometric Codes": 1,
-    "mathematics:Bhaskar": 3,
-    "mathematics:Ramification Theory": 3,
-    "mathematics:Paromita Bordoloi": 0,
-    "mathematics:Arvind Kumar": 5,
-    "mathematics:Soumyadip Das": 3,
-    "mathematics:Finite Fields and Their Applications": 6,
-    "mathematics:Optimal control of evolution equations": 4,
-    "mathematics:Discontinuous Galerkin approach to evolution equations": 4,
-    "mathematics:Hiranya Kishore Dey": 0,
-    "mathematics:Hridesh Kumar": 6,
-    "mathematics:I am interested in": 4,
-    "mathematics:Sartaj Ul Hasan": 6,
-    "mathematics:Nonlinear dispersive equations such as KdV equation": 4,
-    "mathematics:Hilbert modular forms": 8,
-    "mathematics:Siegel modular forms": 5,
-    "mathematics:Nitin Kumar": 2,
-    "mathematics:Algebra": 0,
-    "mathematics:Finite Fields and their applications": 6,
-    "mathematics:Commutative Algebra": 0,
-    "mathematics:Number theory": 5,
-    "mathematics:ADEEN SALI": 8,
-    "mathematics:Automorphic representations": 8,
-    "mathematics:My current area of research is in **Group Theory** and **Representation Theory**": 7,
-    "mathematics:Karishma Barman": 0,
-    "mathematics:Number Theory (Modular forms": 5,
-    "mathematics:Covers of Curves": 3,
-    "mathematics:Rohit Yadav": 1,
-    "mathematics:Modular Forms and Galois Representations": 5
+    "mathematics:Finite Fields and their applications": 0,
+    "mathematics:Modular Forms and Galois Representations": 1,
+    "mathematics:Number Theory (Modular forms": 1,
+    "mathematics:Etale Fundamental Groups": 2,
+    "mathematics:lies in": 3,
+    "mathematics:Inverse Boundary Value Problems": 3,
+    "IIT Jammu MATHEMATICS Department": 6,
+    "mathematics:Graph Theory": 7,
+    "mathematics:Ajay Kumar": 7,
+    "mathematics:Finite Group Theory": 7,
+    "mathematics:Rohit Yadav": 5,
+    "mathematics:Algebraic Geometric Codes": 5,
+    "mathematics:Hiranya Kishore Dey": 7,
+    "mathematics:Prasant Singh": 5,
+    "mathematics:Rahul Dattatraya Kitture": 8,
+    "mathematics:Siegel modular forms": 1,
+    "mathematics:Inverse problems related to PDEs": 3,
+    "mathematics:Commutative Algebra": 7,
+    "mathematics:Jacobi forms": 4,
+    "mathematics:Algebraic Number Theory": 4,
+    "mathematics:Bhaskar": 2,
+    "mathematics:ADEEN SALI": 4,
+    "mathematics:Stochastic Modelling, Applied Probability": 6,
+    "mathematics:I am interested in": 3,
+    "mathematics:Orbifold bundles and Moduli Problems": 2,
+    "mathematics:Representation Theory": 8,
+    "mathematics:Analysis of Partial Differential Equations": 3,
+    "mathematics:Nitin Kumar": 6,
+    "mathematics:Finite fields and their applications": 0,
+    "mathematics:Galois representations)": 1,
+    "mathematics:Muskan Khaneja": 5,
+    "mathematics:Ramandeep Kaur": 0,
+    "mathematics:Automorphic forms of various types: Maass forms": 4,
+    "mathematics:Analytic number theory": 4,
+    "mathematics:Coding theory": 5,
+    "mathematics:Finite Geometry": 5,
+    "mathematics:My current area of research is in **Group Theory** and **Representation Theory**": 8,
+    "mathematics:Discontinuous Galerkin approach to evolution equations": 3,
+    "mathematics:Number theory": 1,
+    "mathematics:Karishma Barman": 7,
+    "mathematics:Algebraic Geometry": 2,
+    "mathematics:Applied Probability": 6,
+    "mathematics:PDE and Numerics": 3,
+    "mathematics:Paramhans Kushwaha": 7,
+    "mathematics:Paromita Bordoloi": 7,
+    "mathematics:Debasish Paul": 3,
+    "mathematics:Character theory of finite groups": 8,
+    "mathematics:Anirban Kuila": 1,
+    "mathematics:Tanmay Sarkar": 3,
+    "mathematics:Partial Differential Equations": 3,
+    "mathematics:Finite Fields and Their Applications": 0,
+    "mathematics:Topology": 7,
+    "mathematics:Optimal control of evolution equations": 3,
+    "mathematics:Sakshi Gupta": 8,
+    "mathematics:Sartaj Ul Hasan": 0,
+    "mathematics:Nimu Basak": 7,
+    "mathematics:Hilbert modular forms": 4,
+    "mathematics:Moni Kumari": 4,
+    "mathematics:Hridesh Kumar": 0,
+    "mathematics:Arvind Kumar": 1,
+    "mathematics:Ramification Theory": 2,
+    "mathematics:Soumyadip Das": 2,
+    "mathematics:Nonlinear dispersive equations such as KdV equation": 3,
+    "mathematics:Mathematics": 4,
+    "mathematics:Shalini": 6,
+    "mathematics:Sonakshee Arora": 8,
+    "mathematics:Algebra": 7,
+    "mathematics:Hyperbolic Conservation Laws and Numerics": 3,
+    "mathematics:Nitesh  Kumar": 3,
+    "mathematics:Sakshi Singh": 7,
+    "mathematics:Numerical Analysis": 3,
+    "mathematics:Combinatorics": 7,
+    "mathematics:Combinatorial Commutative Algebra": 7,
+    "mathematics:Covers of Curves": 2,
+    "mathematics:More specifically": 3,
+    "mathematics:Algebraic Geometry. Specifically": 2,
+    "mathematics:Deepika Garg": 3,
+    "mathematics:Rajiv Kumar": 7,
+    "mathematics:Prabhat Kumar Mishra": 1,
+    "mathematics:Automorphic representations": 4
   },
   "reports": [
     {
       "id": "community_0",
       "community_id": 0,
       "members": [
-        "mathematics:Sakshi Singh",
-        "mathematics:Combinatorial Commutative Algebra",
-        "mathematics:Nimu Basak",
-        "mathematics:Finite Group Theory",
-        "mathematics:Combinatorics",
-        "mathematics:Ajay Kumar",
-        "IIT Jammu MATHEMATICS Department",
-        "mathematics:Topology",
-        "mathematics:Graph Theory",
-        "mathematics:Rajiv Kumar",
-        "mathematics:Paramhans Kushwaha",
-        "mathematics:Paromita Bordoloi",
-        "mathematics:Hiranya Kishore Dey",
-        "mathematics:Algebra",
-        "mathematics:Commutative Algebra",
-        "mathematics:Karishma Barman"
+        "mathematics:Finite Fields and their applications",
+        "mathematics:Finite fields and their applications",
+        "mathematics:Ramandeep Kaur",
+        "mathematics:Finite Fields and Their Applications",
+        "mathematics:Sartaj Ul Hasan",
+        "mathematics:Hridesh Kumar"
       ],
       "members_by_type": {
-        "PhDStudent": [
-          "mathematics:Sakshi Singh",
-          "mathematics:Nimu Basak",
-          "mathematics:Paramhans Kushwaha",
-          "mathematics:Paromita Bordoloi",
-          "mathematics:Karishma Barman"
-        ],
         "ResearchArea": [
-          "mathematics:Combinatorial Commutative Algebra",
-          "mathematics:Finite Group Theory",
-          "mathematics:Combinatorics",
-          "mathematics:Topology",
-          "mathematics:Graph Theory",
-          "mathematics:Algebra",
-          "mathematics:Commutative Algebra"
+          "mathematics:Finite Fields and their applications",
+          "mathematics:Finite fields and their applications",
+          "mathematics:Finite Fields and Their Applications"
+        ],
+        "PhDStudent": [
+          "mathematics:Ramandeep Kaur",
+          "mathematics:Hridesh Kumar"
         ],
         "Faculty": [
-          "mathematics:Ajay Kumar",
-          "mathematics:Rajiv Kumar",
-          "mathematics:Hiranya Kishore Dey"
-        ],
-        "Department": [
-          "IIT Jammu MATHEMATICS Department"
+          "mathematics:Sartaj Ul Hasan"
         ]
       },
       "internal_edges": [
         {
-          "source": "mathematics:Ajay Kumar",
-          "target": "mathematics:Commutative Algebra",
+          "source": "mathematics:Sartaj Ul Hasan",
+          "target": "mathematics:Finite Fields and Their Applications",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mathematics:Ajay Kumar",
-          "target": "mathematics:Combinatorics",
+          "source": "mathematics:Sartaj Ul Hasan",
+          "target": "mathematics:Finite fields and their applications",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mathematics:Ajay Kumar",
-          "target": "mathematics:Algebra",
+          "source": "mathematics:Sartaj Ul Hasan",
+          "target": "mathematics:Finite Fields and their applications",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mathematics:Ajay Kumar",
-          "target": "mathematics:Graph Theory",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Ajay Kumar",
-          "target": "mathematics:Topology",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Ajay Kumar",
-          "target": "mathematics:Combinatorial Commutative Algebra",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Ajay Kumar",
-          "target": "IIT Jammu MATHEMATICS Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "mathematics:Hiranya Kishore Dey",
-          "target": "mathematics:Combinatorics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Hiranya Kishore Dey",
-          "target": "mathematics:Graph Theory",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Hiranya Kishore Dey",
-          "target": "mathematics:Finite Group Theory",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Hiranya Kishore Dey",
-          "target": "IIT Jammu MATHEMATICS Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "mathematics:Rajiv Kumar",
-          "target": "mathematics:Combinatorial Commutative Algebra",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Rajiv Kumar",
-          "target": "mathematics:Commutative Algebra",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Rajiv Kumar",
-          "target": "IIT Jammu MATHEMATICS Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "mathematics:Karishma Barman",
-          "target": "mathematics:Ajay Kumar",
+          "source": "mathematics:Hridesh Kumar",
+          "target": "mathematics:Sartaj Ul Hasan",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "mathematics:Karishma Barman",
-          "target": "mathematics:Combinatorial Commutative Algebra",
+          "source": "mathematics:Hridesh Kumar",
+          "target": "mathematics:Finite fields and their applications",
           "type": "STUDIES"
         },
         {
-          "source": "mathematics:Nimu Basak",
-          "target": "mathematics:Ajay Kumar",
+          "source": "mathematics:Ramandeep Kaur",
+          "target": "mathematics:Sartaj Ul Hasan",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "mathematics:Nimu Basak",
-          "target": "mathematics:Commutative Algebra",
-          "type": "STUDIES"
-        },
-        {
-          "source": "mathematics:Paramhans Kushwaha",
-          "target": "mathematics:Rajiv Kumar",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mathematics:Paramhans Kushwaha",
-          "target": "mathematics:Commutative Algebra",
-          "type": "STUDIES"
-        },
-        {
-          "source": "mathematics:Paromita Bordoloi",
-          "target": "mathematics:Rajiv Kumar",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mathematics:Paromita Bordoloi",
-          "target": "mathematics:Combinatorial Commutative Algebra",
-          "type": "STUDIES"
-        },
-        {
-          "source": "mathematics:Sakshi Singh",
-          "target": "mathematics:Rajiv Kumar",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mathematics:Sakshi Singh",
-          "target": "mathematics:Combinatorial Commutative Algebra",
+          "source": "mathematics:Ramandeep Kaur",
+          "target": "mathematics:Finite Fields and their applications",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 0 in IIT Jammu EE Department:\n  Department: Department of Mathematics\n  Faculty: Ajay Kumar, Rajiv Kumar, Hiranya Kishore Dey\n  PhDStudent: Sakshi Singh, Nimu Basak, Paramhans Kushwaha, Paromita Bordoloi, Karishma Barman\n  ResearchArea: Combinatorial Commutative Algebra, Finite Group Theory, Combinatorics, Topology, Graph Theory, Algebra, Commutative Algebra\n  Relationships: RESEARCHES_IN: 11, MEMBER_OF: 3, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: The Community 0 in IIT Jammu's Electrical Engineering Department appears to be a Mathematics-focused group. Key faculty members include Ajay Kumar, Rajiv Kumar, and Hiranya Kishore Dey, who supervise PhD students such as Sakshi Singh, Nimu Basak, Paramhans Kushwaha, Paromita Bordoloi, and Karishma Barman. This group's research areas are centered around Combinatorial Commutative Algebra, Finite Group Theory, and other mathematical disciplines like Combinatorics, Topology, Graph Theory, and Algebra.",
-      "summary": "The Community 0 in IIT Jammu's Electrical Engineering Department appears to be a Mathematics-focused group. Key faculty members include Ajay Kumar, Rajiv Kumar, and Hiranya Kishore Dey, who supervise PhD students such as Sakshi Singh, Nimu Basak, Paramhans Kushwaha, Paromita Bordoloi, and Karishma Barman. This group's research areas are centered around Combinatorial Commutative Algebra, Finite Group Theory, and other mathematical disciplines like Combinatorics, Topology, Graph Theory, and Algebra.",
-      "size": 16
+      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Sartaj Ul Hasan\n  PhDStudent: Ramandeep Kaur, Hridesh Kumar\n  ResearchArea: Finite Fields and their applications, Finite fields and their applications, Finite Fields and Their Applications\n  Relationships: RESEARCHES_IN: 3, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): mathematics:Sartaj Ul Hasan. 2 PhD student(s). working in areas like mathematics:Finite Fields and their applications, mathematics:Finite fields and their applications, mathematics:Finite Fields and Their Applications.",
+      "summary": "This group includes 1 faculty member(s): mathematics:Sartaj Ul Hasan. 2 PhD student(s). working in areas like mathematics:Finite Fields and their applications, mathematics:Finite fields and their applications, mathematics:Finite Fields and Their Applications.",
+      "size": 6
     },
     {
       "id": "community_1",
       "community_id": 1,
       "members": [
-        "mathematics:Muskan Khaneja",
-        "mathematics:Finite Geometry",
-        "mathematics:Coding theory",
-        "mathematics:Prasant Singh",
-        "mathematics:Algebraic Geometric Codes",
-        "mathematics:Rohit Yadav"
+        "mathematics:Modular Forms and Galois Representations",
+        "mathematics:Number Theory (Modular forms",
+        "mathematics:Siegel modular forms",
+        "mathematics:Galois representations)",
+        "mathematics:Number theory",
+        "mathematics:Anirban Kuila",
+        "mathematics:Arvind Kumar",
+        "mathematics:Prabhat Kumar Mishra"
       ],
       "members_by_type": {
-        "PhDStudent": [
-          "mathematics:Muskan Khaneja",
-          "mathematics:Rohit Yadav"
-        ],
         "ResearchArea": [
-          "mathematics:Finite Geometry",
-          "mathematics:Coding theory",
-          "mathematics:Algebraic Geometric Codes"
+          "mathematics:Modular Forms and Galois Representations",
+          "mathematics:Number Theory (Modular forms",
+          "mathematics:Siegel modular forms",
+          "mathematics:Galois representations)",
+          "mathematics:Number theory"
+        ],
+        "PhDStudent": [
+          "mathematics:Anirban Kuila",
+          "mathematics:Prabhat Kumar Mishra"
         ],
         "Faculty": [
-          "mathematics:Prasant Singh"
+          "mathematics:Arvind Kumar"
         ]
       },
       "internal_edges": [
         {
-          "source": "mathematics:Prasant Singh",
-          "target": "mathematics:Algebraic Geometric Codes",
+          "source": "mathematics:Arvind Kumar",
+          "target": "mathematics:Number Theory (Modular forms",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mathematics:Prasant Singh",
-          "target": "mathematics:Finite Geometry",
+          "source": "mathematics:Arvind Kumar",
+          "target": "mathematics:Siegel modular forms",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mathematics:Prasant Singh",
-          "target": "mathematics:Coding theory",
+          "source": "mathematics:Arvind Kumar",
+          "target": "mathematics:Galois representations)",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mathematics:Muskan Khaneja",
-          "target": "mathematics:Prasant Singh",
+          "source": "mathematics:Arvind Kumar",
+          "target": "mathematics:Modular Forms and Galois Representations",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Arvind Kumar",
+          "target": "mathematics:Number theory",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Anirban Kuila",
+          "target": "mathematics:Arvind Kumar",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "mathematics:Muskan Khaneja",
-          "target": "mathematics:Coding theory",
+          "source": "mathematics:Anirban Kuila",
+          "target": "mathematics:Modular Forms and Galois Representations",
           "type": "STUDIES"
         },
         {
-          "source": "mathematics:Rohit Yadav",
-          "target": "mathematics:Prasant Singh",
+          "source": "mathematics:Prabhat Kumar Mishra",
+          "target": "mathematics:Arvind Kumar",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "mathematics:Rohit Yadav",
-          "target": "mathematics:Algebraic Geometric Codes",
+          "source": "mathematics:Prabhat Kumar Mishra",
+          "target": "mathematics:Number theory",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Prasant Singh\n  PhDStudent: Muskan Khaneja, Rohit Yadav\n  ResearchArea: Finite Geometry, Coding theory, Algebraic Geometric Codes\n  Relationships: RESEARCHES_IN: 3, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: The Community 1 in IIT Jammu's Electrical Engineering Department is led by faculty member Prasant Singh. This group focuses on research in Finite Geometry, Coding theory, and Algebraic Geometric Codes, with PhD students Muskan Khaneja and Rohit Yadav being supervised by Prasant Singh.",
-      "summary": "The Community 1 in IIT Jammu's Electrical Engineering Department is led by faculty member Prasant Singh. This group focuses on research in Finite Geometry, Coding theory, and Algebraic Geometric Codes, with PhD students Muskan Khaneja and Rohit Yadav being supervised by Prasant Singh.",
-      "size": 6
+      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Arvind Kumar\n  PhDStudent: Anirban Kuila, Prabhat Kumar Mishra\n  ResearchArea: Modular Forms and Galois Representations, Number Theory (Modular forms, Siegel modular forms, Galois representations), Number theory\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): mathematics:Arvind Kumar. 2 PhD student(s). working in areas like mathematics:Modular Forms and Galois Representations, mathematics:Number Theory (Modular forms, mathematics:Siegel modular forms.",
+      "summary": "This group includes 1 faculty member(s): mathematics:Arvind Kumar. 2 PhD student(s). working in areas like mathematics:Modular Forms and Galois Representations, mathematics:Number Theory (Modular forms, mathematics:Siegel modular forms.",
+      "size": 8
     },
     {
       "id": "community_2",
       "community_id": 2,
       "members": [
-        "mathematics:Shalini",
-        "mathematics:Stochastic Modelling, Applied Probability",
-        "mathematics:Applied Probability",
-        "mathematics:Nitin Kumar"
-      ],
-      "members_by_type": {
-        "PhDStudent": [
-          "mathematics:Shalini"
-        ],
-        "ResearchArea": [
-          "mathematics:Stochastic Modelling, Applied Probability",
-          "mathematics:Applied Probability"
-        ],
-        "Faculty": [
-          "mathematics:Nitin Kumar"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "mathematics:Nitin Kumar",
-          "target": "mathematics:Applied Probability",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Nitin Kumar",
-          "target": "mathematics:Stochastic Modelling, Applied Probability",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Shalini",
-          "target": "mathematics:Nitin Kumar",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mathematics:Shalini",
-          "target": "mathematics:Stochastic Modelling, Applied Probability",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Nitin Kumar\n  PhDStudent: Shalini\n  ResearchArea: Stochastic Modelling, Applied Probability, Applied Probability\n  Relationships: RESEARCHES_IN: 2, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 2 in IIT Jammu's Electrical Engineering Department is led by Faculty member Nitin Kumar. The group focuses on Stochastic Modelling and Applied Probability, with PhD student Shalini being supervised by Nitin Kumar. This connection suggests a research-oriented relationship between the two individuals.",
-      "summary": "The Community 2 in IIT Jammu's Electrical Engineering Department is led by Faculty member Nitin Kumar. The group focuses on Stochastic Modelling and Applied Probability, with PhD student Shalini being supervised by Nitin Kumar. This connection suggests a research-oriented relationship between the two individuals.",
-      "size": 4
-    },
-    {
-      "id": "community_3",
-      "community_id": 3,
-      "members": [
         "mathematics:Etale Fundamental Groups",
-        "mathematics:Algebraic Geometry. Specifically",
+        "mathematics:Bhaskar",
         "mathematics:Orbifold bundles and Moduli Problems",
         "mathematics:Algebraic Geometry",
-        "mathematics:Bhaskar",
         "mathematics:Ramification Theory",
         "mathematics:Soumyadip Das",
-        "mathematics:Covers of Curves"
+        "mathematics:Covers of Curves",
+        "mathematics:Algebraic Geometry. Specifically"
       ],
       "members_by_type": {
         "ResearchArea": [
           "mathematics:Etale Fundamental Groups",
-          "mathematics:Algebraic Geometry. Specifically",
           "mathematics:Orbifold bundles and Moduli Problems",
           "mathematics:Algebraic Geometry",
           "mathematics:Ramification Theory",
-          "mathematics:Covers of Curves"
+          "mathematics:Covers of Curves",
+          "mathematics:Algebraic Geometry. Specifically"
         ],
         "PhDStudent": [
           "mathematics:Bhaskar"
@@ -439,52 +299,52 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Soumyadip Das\n  PhDStudent: Bhaskar\n  ResearchArea: Etale Fundamental Groups, Algebraic Geometry. Specifically, Orbifold bundles and Moduli Problems, Algebraic Geometry, Ramification Theory, Covers of Curves\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 3 in IIT Jammu's Electrical Engineering Department is led by faculty member Soumyadip Das. The group focuses on advanced topics in Algebraic Geometry, specifically exploring Etale Fundamental Groups, Orbifold bundles, Moduli Problems, Ramification Theory, and Covers of Curves. Bhaskar, a PhD student under Soumyadip Das' supervision, is also part of this community.",
-      "summary": "The Community 3 in IIT Jammu's Electrical Engineering Department is led by faculty member Soumyadip Das. The group focuses on advanced topics in Algebraic Geometry, specifically exploring Etale Fundamental Groups, Orbifold bundles, Moduli Problems, Ramification Theory, and Covers of Curves. Bhaskar, a PhD student under Soumyadip Das' supervision, is also part of this community.",
+      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Soumyadip Das\n  PhDStudent: Bhaskar\n  ResearchArea: Etale Fundamental Groups, Orbifold bundles and Moduli Problems, Algebraic Geometry, Ramification Theory, Covers of Curves, Algebraic Geometry. Specifically\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): mathematics:Soumyadip Das. 1 PhD student(s). working in areas like mathematics:Etale Fundamental Groups, mathematics:Orbifold bundles and Moduli Problems, mathematics:Algebraic Geometry.",
+      "summary": "This group includes 1 faculty member(s): mathematics:Soumyadip Das. 1 PhD student(s). working in areas like mathematics:Etale Fundamental Groups, mathematics:Orbifold bundles and Moduli Problems, mathematics:Algebraic Geometry.",
       "size": 8
     },
     {
-      "id": "community_4",
-      "community_id": 4,
+      "id": "community_3",
+      "community_id": 3,
       "members": [
-        "mathematics:Debasish Paul",
-        "mathematics:Analysis of Partial Differential Equations",
-        "mathematics:Nitesh  Kumar",
         "mathematics:lies in",
-        "mathematics:PDE and Numerics",
-        "mathematics:More specifically",
-        "mathematics:Deepika Garg",
-        "mathematics:Hyperbolic Conservation Laws and Numerics",
-        "mathematics:Numerical Analysis",
-        "mathematics:Inverse problems related to PDEs",
-        "mathematics:Tanmay Sarkar",
         "mathematics:Inverse Boundary Value Problems",
+        "mathematics:Inverse problems related to PDEs",
+        "mathematics:I am interested in",
+        "mathematics:Analysis of Partial Differential Equations",
+        "mathematics:Discontinuous Galerkin approach to evolution equations",
+        "mathematics:PDE and Numerics",
+        "mathematics:Debasish Paul",
+        "mathematics:Tanmay Sarkar",
         "mathematics:Partial Differential Equations",
         "mathematics:Optimal control of evolution equations",
-        "mathematics:Discontinuous Galerkin approach to evolution equations",
-        "mathematics:I am interested in",
-        "mathematics:Nonlinear dispersive equations such as KdV equation"
+        "mathematics:Nonlinear dispersive equations such as KdV equation",
+        "mathematics:Hyperbolic Conservation Laws and Numerics",
+        "mathematics:Nitesh  Kumar",
+        "mathematics:Numerical Analysis",
+        "mathematics:More specifically",
+        "mathematics:Deepika Garg"
       ],
       "members_by_type": {
+        "ResearchArea": [
+          "mathematics:lies in",
+          "mathematics:Inverse Boundary Value Problems",
+          "mathematics:Inverse problems related to PDEs",
+          "mathematics:I am interested in",
+          "mathematics:Analysis of Partial Differential Equations",
+          "mathematics:Discontinuous Galerkin approach to evolution equations",
+          "mathematics:PDE and Numerics",
+          "mathematics:Partial Differential Equations",
+          "mathematics:Optimal control of evolution equations",
+          "mathematics:Nonlinear dispersive equations such as KdV equation",
+          "mathematics:Hyperbolic Conservation Laws and Numerics",
+          "mathematics:Numerical Analysis",
+          "mathematics:More specifically"
+        ],
         "PhDStudent": [
           "mathematics:Debasish Paul",
           "mathematics:Nitesh  Kumar",
           "mathematics:Deepika Garg"
-        ],
-        "ResearchArea": [
-          "mathematics:Analysis of Partial Differential Equations",
-          "mathematics:lies in",
-          "mathematics:PDE and Numerics",
-          "mathematics:More specifically",
-          "mathematics:Hyperbolic Conservation Laws and Numerics",
-          "mathematics:Numerical Analysis",
-          "mathematics:Inverse problems related to PDEs",
-          "mathematics:Inverse Boundary Value Problems",
-          "mathematics:Partial Differential Equations",
-          "mathematics:Optimal control of evolution equations",
-          "mathematics:Discontinuous Galerkin approach to evolution equations",
-          "mathematics:I am interested in",
-          "mathematics:Nonlinear dispersive equations such as KdV equation"
         ],
         "Faculty": [
           "mathematics:Tanmay Sarkar"
@@ -587,251 +447,39 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Tanmay Sarkar\n  PhDStudent: Debasish Paul, Nitesh  Kumar, Deepika Garg\n  ResearchArea: Analysis of Partial Differential Equations, lies in, PDE and Numerics, More specifically, Hyperbolic Conservation Laws and Numerics, Numerical Analysis, Inverse problems related to PDEs, Inverse Boundary Value Problems, Partial Differential Equations, Optimal control of evolution equations, Discontinuous Galerkin approach to evolution equations, I am interested in, Nonlinear dispersive equations such as KdV equation\n  Relationships: RESEARCHES_IN: 13, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: The Community 4 in IIT Jammu's Electrical Engineering Department is led by Tanmay Sarkar, a faculty member. The group consists of PhD students Debasish Paul, Nitesh Kumar, and Deepika Garg, who are supervised by Sarkar. Their research focuses on analysis and numerical methods for partial differential equations (PDEs), including hyperbolic conservation laws, inverse problems, and optimal control of evolution equations, with a specific interest in nonlinear dispersive equations like the KdV equation.",
-      "summary": "The Community 4 in IIT Jammu's Electrical Engineering Department is led by Tanmay Sarkar, a faculty member. The group consists of PhD students Debasish Paul, Nitesh Kumar, and Deepika Garg, who are supervised by Sarkar. Their research focuses on analysis and numerical methods for partial differential equations (PDEs), including hyperbolic conservation laws, inverse problems, and optimal control of evolution equations, with a specific interest in nonlinear dispersive equations like the KdV equation.",
+      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Tanmay Sarkar\n  PhDStudent: Debasish Paul, Nitesh  Kumar, Deepika Garg\n  ResearchArea: lies in, Inverse Boundary Value Problems, Inverse problems related to PDEs, I am interested in, Analysis of Partial Differential Equations, Discontinuous Galerkin approach to evolution equations, PDE and Numerics, Partial Differential Equations, Optimal control of evolution equations, Nonlinear dispersive equations such as KdV equation, Hyperbolic Conservation Laws and Numerics, Numerical Analysis, More specifically\n  Relationships: RESEARCHES_IN: 13, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): mathematics:Tanmay Sarkar. 3 PhD student(s). working in areas like mathematics:lies in, mathematics:Inverse Boundary Value Problems, mathematics:Inverse problems related to PDEs.",
+      "summary": "This group includes 1 faculty member(s): mathematics:Tanmay Sarkar. 3 PhD student(s). working in areas like mathematics:lies in, mathematics:Inverse Boundary Value Problems, mathematics:Inverse problems related to PDEs.",
       "size": 17
     },
     {
-      "id": "community_5",
-      "community_id": 5,
+      "id": "community_4",
+      "community_id": 4,
       "members": [
-        "mathematics:Galois representations)",
-        "mathematics:Prabhat Kumar Mishra",
-        "mathematics:Anirban Kuila",
-        "mathematics:Arvind Kumar",
-        "mathematics:Siegel modular forms",
-        "mathematics:Number theory",
-        "mathematics:Number Theory (Modular forms",
-        "mathematics:Modular Forms and Galois Representations"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "mathematics:Galois representations)",
-          "mathematics:Siegel modular forms",
-          "mathematics:Number theory",
-          "mathematics:Number Theory (Modular forms",
-          "mathematics:Modular Forms and Galois Representations"
-        ],
-        "PhDStudent": [
-          "mathematics:Prabhat Kumar Mishra",
-          "mathematics:Anirban Kuila"
-        ],
-        "Faculty": [
-          "mathematics:Arvind Kumar"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "mathematics:Arvind Kumar",
-          "target": "mathematics:Number Theory (Modular forms",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Arvind Kumar",
-          "target": "mathematics:Siegel modular forms",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Arvind Kumar",
-          "target": "mathematics:Galois representations)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Arvind Kumar",
-          "target": "mathematics:Modular Forms and Galois Representations",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Arvind Kumar",
-          "target": "mathematics:Number theory",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Anirban Kuila",
-          "target": "mathematics:Arvind Kumar",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mathematics:Anirban Kuila",
-          "target": "mathematics:Modular Forms and Galois Representations",
-          "type": "STUDIES"
-        },
-        {
-          "source": "mathematics:Prabhat Kumar Mishra",
-          "target": "mathematics:Arvind Kumar",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mathematics:Prabhat Kumar Mishra",
-          "target": "mathematics:Number theory",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Arvind Kumar\n  PhDStudent: Prabhat Kumar Mishra, Anirban Kuila\n  ResearchArea: Galois representations), Siegel modular forms, Number theory, Number Theory (Modular forms, Modular Forms and Galois Representations\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: The Community 5 in IIT Jammu's Electrical Engineering Department is a research group focused on number theory, specifically modular forms and Galois representations. The key members of this group include faculty member Arvind Kumar and PhD students Prabhat Kumar Mishra and Anirban Kuila. This group is connected through research collaborations, with the PhD students supervised by Arvind Kumar and conducting research in areas related to his expertise.",
-      "summary": "The Community 5 in IIT Jammu's Electrical Engineering Department is a research group focused on number theory, specifically modular forms and Galois representations. The key members of this group include faculty member Arvind Kumar and PhD students Prabhat Kumar Mishra and Anirban Kuila. This group is connected through research collaborations, with the PhD students supervised by Arvind Kumar and conducting research in areas related to his expertise.",
-      "size": 8
-    },
-    {
-      "id": "community_6",
-      "community_id": 6,
-      "members": [
-        "mathematics:Ramandeep Kaur",
-        "mathematics:Finite fields and their applications",
-        "mathematics:Finite Fields and Their Applications",
-        "mathematics:Hridesh Kumar",
-        "mathematics:Sartaj Ul Hasan",
-        "mathematics:Finite Fields and their applications"
-      ],
-      "members_by_type": {
-        "PhDStudent": [
-          "mathematics:Ramandeep Kaur",
-          "mathematics:Hridesh Kumar"
-        ],
-        "ResearchArea": [
-          "mathematics:Finite fields and their applications",
-          "mathematics:Finite Fields and Their Applications",
-          "mathematics:Finite Fields and their applications"
-        ],
-        "Faculty": [
-          "mathematics:Sartaj Ul Hasan"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "mathematics:Sartaj Ul Hasan",
-          "target": "mathematics:Finite Fields and Their Applications",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Sartaj Ul Hasan",
-          "target": "mathematics:Finite fields and their applications",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Sartaj Ul Hasan",
-          "target": "mathematics:Finite Fields and their applications",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Hridesh Kumar",
-          "target": "mathematics:Sartaj Ul Hasan",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mathematics:Hridesh Kumar",
-          "target": "mathematics:Finite fields and their applications",
-          "type": "STUDIES"
-        },
-        {
-          "source": "mathematics:Ramandeep Kaur",
-          "target": "mathematics:Sartaj Ul Hasan",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mathematics:Ramandeep Kaur",
-          "target": "mathematics:Finite Fields and their applications",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 6 in IIT Jammu EE Department:\n  Faculty: Sartaj Ul Hasan\n  PhDStudent: Ramandeep Kaur, Hridesh Kumar\n  ResearchArea: Finite fields and their applications, Finite Fields and Their Applications, Finite Fields and their applications\n  Relationships: RESEARCHES_IN: 3, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: The Community 6 in IIT Jammu's Electrical Engineering Department is led by Dr. Sartaj Ul Hasan, a faculty member with expertise in Finite Fields and Their Applications. His PhD students, Ramandeep Kaur and Hridesh Kumar, are actively engaged in research under his supervision. The group's research focus aligns with the department's emphasis on finite fields and their applications.",
-      "summary": "The Community 6 in IIT Jammu's Electrical Engineering Department is led by Dr. Sartaj Ul Hasan, a faculty member with expertise in Finite Fields and Their Applications. His PhD students, Ramandeep Kaur and Hridesh Kumar, are actively engaged in research under his supervision. The group's research focus aligns with the department's emphasis on finite fields and their applications.",
-      "size": 6
-    },
-    {
-      "id": "community_7",
-      "community_id": 7,
-      "members": [
-        "mathematics:Rahul Dattatraya Kitture",
-        "mathematics:Sonakshee Arora",
-        "mathematics:Sakshi Gupta",
-        "mathematics:Representation Theory",
-        "mathematics:Character theory of finite groups",
-        "mathematics:My current area of research is in **Group Theory** and **Representation Theory**"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "mathematics:Rahul Dattatraya Kitture"
-        ],
-        "PhDStudent": [
-          "mathematics:Sonakshee Arora",
-          "mathematics:Sakshi Gupta"
-        ],
-        "ResearchArea": [
-          "mathematics:Representation Theory",
-          "mathematics:Character theory of finite groups",
-          "mathematics:My current area of research is in **Group Theory** and **Representation Theory**"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "mathematics:Rahul Dattatraya Kitture",
-          "target": "mathematics:My current area of research is in **Group Theory** and **Representation Theory**",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Rahul Dattatraya Kitture",
-          "target": "mathematics:Representation Theory",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Rahul Dattatraya Kitture",
-          "target": "mathematics:Character theory of finite groups",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mathematics:Sakshi Gupta",
-          "target": "mathematics:Rahul Dattatraya Kitture",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mathematics:Sakshi Gupta",
-          "target": "mathematics:Representation Theory",
-          "type": "STUDIES"
-        },
-        {
-          "source": "mathematics:Sonakshee Arora",
-          "target": "mathematics:Rahul Dattatraya Kitture",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mathematics:Sonakshee Arora",
-          "target": "mathematics:Character theory of finite groups",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 7 in IIT Jammu EE Department:\n  Faculty: Rahul Dattatraya Kitture\n  PhDStudent: Sonakshee Arora, Sakshi Gupta\n  ResearchArea: Representation Theory, Character theory of finite groups, My current area of research is in **Group Theory** and **Representation Theory**\n  Relationships: RESEARCHES_IN: 3, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: Here is a concise 3-sentence summary of Community 7 in IIT Jammu EE Department:\n\nCommunity 7 is led by faculty member Rahul Dattatraya Kitture, who supervises PhD students Sonakshee Arora and Sakshi Gupta. The group's research focuses on Group Theory and Representation Theory, with connections to Character theory of finite groups. This community has a strong research-oriented structure, with multiple relationships indicating collaboration and knowledge sharing among its members.",
-      "summary": "Here is a concise 3-sentence summary of Community 7 in IIT Jammu EE Department:\n\nCommunity 7 is led by faculty member Rahul Dattatraya Kitture, who supervises PhD students Sonakshee Arora and Sakshi Gupta. The group's research focuses on Group Theory and Representation Theory, with connections to Character theory of finite groups. This community has a strong research-oriented structure, with multiple relationships indicating collaboration and knowledge sharing among its members.",
-      "size": 6
-    },
-    {
-      "id": "community_8",
-      "community_id": 8,
-      "members": [
-        "mathematics:Moni Kumari",
-        "mathematics:Automorphic forms of various types: Maass forms",
-        "mathematics:Mathematics",
-        "mathematics:Analytic number theory",
-        "mathematics:Algebraic Number Theory",
         "mathematics:Jacobi forms",
-        "mathematics:Hilbert modular forms",
+        "mathematics:Algebraic Number Theory",
         "mathematics:ADEEN SALI",
+        "mathematics:Automorphic forms of various types: Maass forms",
+        "mathematics:Analytic number theory",
+        "mathematics:Hilbert modular forms",
+        "mathematics:Moni Kumari",
+        "mathematics:Mathematics",
         "mathematics:Automorphic representations"
       ],
       "members_by_type": {
-        "Faculty": [
-          "mathematics:Moni Kumari"
-        ],
         "ResearchArea": [
-          "mathematics:Automorphic forms of various types: Maass forms",
-          "mathematics:Mathematics",
-          "mathematics:Analytic number theory",
-          "mathematics:Algebraic Number Theory",
           "mathematics:Jacobi forms",
+          "mathematics:Algebraic Number Theory",
+          "mathematics:Automorphic forms of various types: Maass forms",
+          "mathematics:Analytic number theory",
           "mathematics:Hilbert modular forms",
+          "mathematics:Mathematics",
           "mathematics:Automorphic representations"
         ],
         "PhDStudent": [
           "mathematics:ADEEN SALI"
+        ],
+        "Faculty": [
+          "mathematics:Moni Kumari"
         ]
       },
       "internal_edges": [
@@ -881,9 +529,351 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 8 in IIT Jammu EE Department:\n  Faculty: Moni Kumari\n  PhDStudent: ADEEN SALI\n  ResearchArea: Automorphic forms of various types: Maass forms, Mathematics, Analytic number theory, Algebraic Number Theory, Jacobi forms, Hilbert modular forms, Automorphic representations\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 8 in IIT Jammu's Electrical Engineering Department is led by Faculty member Moni Kumari. This group focuses on Automorphic forms of various types, including Maass forms, Jacobi forms, Hilbert modular forms, and their connections to Analytic number theory and Algebraic Number Theory. PhD student ADEEN SALI is part of this community, indicating a research-oriented collaboration under the supervision of Moni Kumari.",
-      "summary": "The Community 8 in IIT Jammu's Electrical Engineering Department is led by Faculty member Moni Kumari. This group focuses on Automorphic forms of various types, including Maass forms, Jacobi forms, Hilbert modular forms, and their connections to Analytic number theory and Algebraic Number Theory. PhD student ADEEN SALI is part of this community, indicating a research-oriented collaboration under the supervision of Moni Kumari.",
+      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Moni Kumari\n  PhDStudent: ADEEN SALI\n  ResearchArea: Jacobi forms, Algebraic Number Theory, Automorphic forms of various types: Maass forms, Analytic number theory, Hilbert modular forms, Mathematics, Automorphic representations\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): mathematics:Moni Kumari. 1 PhD student(s). working in areas like mathematics:Jacobi forms, mathematics:Algebraic Number Theory, mathematics:Automorphic forms of various types: Maass forms.",
+      "summary": "This group includes 1 faculty member(s): mathematics:Moni Kumari. 1 PhD student(s). working in areas like mathematics:Jacobi forms, mathematics:Algebraic Number Theory, mathematics:Automorphic forms of various types: Maass forms.",
       "size": 9
+    },
+    {
+      "id": "community_5",
+      "community_id": 5,
+      "members": [
+        "mathematics:Rohit Yadav",
+        "mathematics:Algebraic Geometric Codes",
+        "mathematics:Prasant Singh",
+        "mathematics:Muskan Khaneja",
+        "mathematics:Coding theory",
+        "mathematics:Finite Geometry"
+      ],
+      "members_by_type": {
+        "PhDStudent": [
+          "mathematics:Rohit Yadav",
+          "mathematics:Muskan Khaneja"
+        ],
+        "ResearchArea": [
+          "mathematics:Algebraic Geometric Codes",
+          "mathematics:Coding theory",
+          "mathematics:Finite Geometry"
+        ],
+        "Faculty": [
+          "mathematics:Prasant Singh"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "mathematics:Prasant Singh",
+          "target": "mathematics:Algebraic Geometric Codes",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Prasant Singh",
+          "target": "mathematics:Finite Geometry",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Prasant Singh",
+          "target": "mathematics:Coding theory",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Muskan Khaneja",
+          "target": "mathematics:Prasant Singh",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mathematics:Muskan Khaneja",
+          "target": "mathematics:Coding theory",
+          "type": "STUDIES"
+        },
+        {
+          "source": "mathematics:Rohit Yadav",
+          "target": "mathematics:Prasant Singh",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mathematics:Rohit Yadav",
+          "target": "mathematics:Algebraic Geometric Codes",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Prasant Singh\n  PhDStudent: Rohit Yadav, Muskan Khaneja\n  ResearchArea: Algebraic Geometric Codes, Coding theory, Finite Geometry\n  Relationships: RESEARCHES_IN: 3, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): mathematics:Prasant Singh. 2 PhD student(s). working in areas like mathematics:Algebraic Geometric Codes, mathematics:Coding theory, mathematics:Finite Geometry.",
+      "summary": "This group includes 1 faculty member(s): mathematics:Prasant Singh. 2 PhD student(s). working in areas like mathematics:Algebraic Geometric Codes, mathematics:Coding theory, mathematics:Finite Geometry.",
+      "size": 6
+    },
+    {
+      "id": "community_6",
+      "community_id": 6,
+      "members": [
+        "IIT Jammu MATHEMATICS Department",
+        "mathematics:Stochastic Modelling, Applied Probability",
+        "mathematics:Nitin Kumar",
+        "mathematics:Applied Probability",
+        "mathematics:Shalini"
+      ],
+      "members_by_type": {
+        "Department": [
+          "IIT Jammu MATHEMATICS Department"
+        ],
+        "ResearchArea": [
+          "mathematics:Stochastic Modelling, Applied Probability",
+          "mathematics:Applied Probability"
+        ],
+        "Faculty": [
+          "mathematics:Nitin Kumar"
+        ],
+        "PhDStudent": [
+          "mathematics:Shalini"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "mathematics:Nitin Kumar",
+          "target": "mathematics:Applied Probability",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Nitin Kumar",
+          "target": "mathematics:Stochastic Modelling, Applied Probability",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Nitin Kumar",
+          "target": "IIT Jammu MATHEMATICS Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "mathematics:Shalini",
+          "target": "mathematics:Nitin Kumar",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mathematics:Shalini",
+          "target": "mathematics:Stochastic Modelling, Applied Probability",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 6 in IIT Jammu EE Department:\n  Department: Department of Mathematics\n  Faculty: Nitin Kumar\n  PhDStudent: Shalini\n  ResearchArea: Stochastic Modelling, Applied Probability, Applied Probability\n  Relationships: RESEARCHES_IN: 2, MEMBER_OF: 1, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): mathematics:Nitin Kumar. 1 PhD student(s). working in areas like mathematics:Stochastic Modelling, Applied Probability, mathematics:Applied Probability.",
+      "summary": "This group includes 1 faculty member(s): mathematics:Nitin Kumar. 1 PhD student(s). working in areas like mathematics:Stochastic Modelling, Applied Probability, mathematics:Applied Probability.",
+      "size": 5
+    },
+    {
+      "id": "community_7",
+      "community_id": 7,
+      "members": [
+        "mathematics:Graph Theory",
+        "mathematics:Ajay Kumar",
+        "mathematics:Finite Group Theory",
+        "mathematics:Hiranya Kishore Dey",
+        "mathematics:Commutative Algebra",
+        "mathematics:Karishma Barman",
+        "mathematics:Paramhans Kushwaha",
+        "mathematics:Paromita Bordoloi",
+        "mathematics:Topology",
+        "mathematics:Nimu Basak",
+        "mathematics:Algebra",
+        "mathematics:Sakshi Singh",
+        "mathematics:Combinatorics",
+        "mathematics:Combinatorial Commutative Algebra",
+        "mathematics:Rajiv Kumar"
+      ],
+      "members_by_type": {
+        "ResearchArea": [
+          "mathematics:Graph Theory",
+          "mathematics:Finite Group Theory",
+          "mathematics:Commutative Algebra",
+          "mathematics:Topology",
+          "mathematics:Algebra",
+          "mathematics:Combinatorics",
+          "mathematics:Combinatorial Commutative Algebra"
+        ],
+        "Faculty": [
+          "mathematics:Ajay Kumar",
+          "mathematics:Hiranya Kishore Dey",
+          "mathematics:Rajiv Kumar"
+        ],
+        "PhDStudent": [
+          "mathematics:Karishma Barman",
+          "mathematics:Paramhans Kushwaha",
+          "mathematics:Paromita Bordoloi",
+          "mathematics:Nimu Basak",
+          "mathematics:Sakshi Singh"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "mathematics:Ajay Kumar",
+          "target": "mathematics:Commutative Algebra",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Ajay Kumar",
+          "target": "mathematics:Combinatorics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Ajay Kumar",
+          "target": "mathematics:Algebra",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Ajay Kumar",
+          "target": "mathematics:Graph Theory",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Ajay Kumar",
+          "target": "mathematics:Topology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Ajay Kumar",
+          "target": "mathematics:Combinatorial Commutative Algebra",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Hiranya Kishore Dey",
+          "target": "mathematics:Combinatorics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Hiranya Kishore Dey",
+          "target": "mathematics:Graph Theory",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Hiranya Kishore Dey",
+          "target": "mathematics:Finite Group Theory",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Rajiv Kumar",
+          "target": "mathematics:Combinatorial Commutative Algebra",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Rajiv Kumar",
+          "target": "mathematics:Commutative Algebra",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Karishma Barman",
+          "target": "mathematics:Ajay Kumar",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mathematics:Karishma Barman",
+          "target": "mathematics:Combinatorial Commutative Algebra",
+          "type": "STUDIES"
+        },
+        {
+          "source": "mathematics:Nimu Basak",
+          "target": "mathematics:Ajay Kumar",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mathematics:Nimu Basak",
+          "target": "mathematics:Commutative Algebra",
+          "type": "STUDIES"
+        },
+        {
+          "source": "mathematics:Paramhans Kushwaha",
+          "target": "mathematics:Rajiv Kumar",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mathematics:Paramhans Kushwaha",
+          "target": "mathematics:Commutative Algebra",
+          "type": "STUDIES"
+        },
+        {
+          "source": "mathematics:Paromita Bordoloi",
+          "target": "mathematics:Rajiv Kumar",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mathematics:Paromita Bordoloi",
+          "target": "mathematics:Combinatorial Commutative Algebra",
+          "type": "STUDIES"
+        },
+        {
+          "source": "mathematics:Sakshi Singh",
+          "target": "mathematics:Rajiv Kumar",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mathematics:Sakshi Singh",
+          "target": "mathematics:Combinatorial Commutative Algebra",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 7 in IIT Jammu EE Department:\n  Faculty: Ajay Kumar, Hiranya Kishore Dey, Rajiv Kumar\n  PhDStudent: Karishma Barman, Paramhans Kushwaha, Paromita Bordoloi, Nimu Basak, Sakshi Singh\n  ResearchArea: Graph Theory, Finite Group Theory, Commutative Algebra, Topology, Algebra, Combinatorics, Combinatorial Commutative Algebra\n  Relationships: RESEARCHES_IN: 11, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 3 faculty member(s): mathematics:Ajay Kumar, mathematics:Hiranya Kishore Dey, mathematics:Rajiv Kumar. 5 PhD student(s). working in areas like mathematics:Graph Theory, mathematics:Finite Group Theory, mathematics:Commutative Algebra.",
+      "summary": "This group includes 3 faculty member(s): mathematics:Ajay Kumar, mathematics:Hiranya Kishore Dey, mathematics:Rajiv Kumar. 5 PhD student(s). working in areas like mathematics:Graph Theory, mathematics:Finite Group Theory, mathematics:Commutative Algebra.",
+      "size": 15
+    },
+    {
+      "id": "community_8",
+      "community_id": 8,
+      "members": [
+        "mathematics:Rahul Dattatraya Kitture",
+        "mathematics:Representation Theory",
+        "mathematics:My current area of research is in **Group Theory** and **Representation Theory**",
+        "mathematics:Character theory of finite groups",
+        "mathematics:Sakshi Gupta",
+        "mathematics:Sonakshee Arora"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "mathematics:Rahul Dattatraya Kitture"
+        ],
+        "ResearchArea": [
+          "mathematics:Representation Theory",
+          "mathematics:My current area of research is in **Group Theory** and **Representation Theory**",
+          "mathematics:Character theory of finite groups"
+        ],
+        "PhDStudent": [
+          "mathematics:Sakshi Gupta",
+          "mathematics:Sonakshee Arora"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "mathematics:Rahul Dattatraya Kitture",
+          "target": "mathematics:My current area of research is in **Group Theory** and **Representation Theory**",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Rahul Dattatraya Kitture",
+          "target": "mathematics:Representation Theory",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Rahul Dattatraya Kitture",
+          "target": "mathematics:Character theory of finite groups",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mathematics:Sakshi Gupta",
+          "target": "mathematics:Rahul Dattatraya Kitture",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mathematics:Sakshi Gupta",
+          "target": "mathematics:Representation Theory",
+          "type": "STUDIES"
+        },
+        {
+          "source": "mathematics:Sonakshee Arora",
+          "target": "mathematics:Rahul Dattatraya Kitture",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mathematics:Sonakshee Arora",
+          "target": "mathematics:Character theory of finite groups",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 8 in IIT Jammu EE Department:\n  Faculty: Rahul Dattatraya Kitture\n  PhDStudent: Sakshi Gupta, Sonakshee Arora\n  ResearchArea: Representation Theory, My current area of research is in **Group Theory** and **Representation Theory**, Character theory of finite groups\n  Relationships: RESEARCHES_IN: 3, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): mathematics:Rahul Dattatraya Kitture. 2 PhD student(s). working in areas like mathematics:Representation Theory, mathematics:My current area of research is in **Group Theory** and **Representation Theory**, mathematics:Character theory of finite groups.",
+      "summary": "This group includes 1 faculty member(s): mathematics:Rahul Dattatraya Kitture. 2 PhD student(s). working in areas like mathematics:Representation Theory, mathematics:My current area of research is in **Group Theory** and **Representation Theory**, mathematics:Character theory of finite groups.",
+      "size": 6
     }
   ]
 }
