@@ -60,23 +60,23 @@ class EmbeddingEngine:
         return self.encode([text], batch_size=1, show_progress=False)[0]
 
     def build_index(self, chunks: List[Dict], entity_descriptions: List[Dict],
-                    community_summaries: List[Dict] = None):
+                    community_summaries: List[Dict] = None, dept_code: str = "ee"):
         import faiss
         all_items, all_texts = [], []
 
         for chunk in chunks:
-            all_items.append({"id": chunk["id"], "type": "chunk",
+            all_items.append({"id": chunk["id"], "type": "chunk", "department": dept_code,
                 "text": chunk["text"][:1000], "metadata": chunk.get("metadata", {})})
             all_texts.append(chunk["text"][:1000])
 
         for entity in entity_descriptions:
-            all_items.append({"id": entity["id"], "type": "entity",
+            all_items.append({"id": entity["id"], "type": "entity", "department": dept_code,
                 "text": entity["text"], "metadata": entity.get("metadata", {})})
             all_texts.append(entity["text"])
 
         if community_summaries:
             for comm in community_summaries:
-                all_items.append({"id": comm["id"], "type": "community",
+                all_items.append({"id": comm["id"], "type": "community", "department": dept_code,
                     "text": comm["text"], "metadata": comm.get("metadata", {})})
                 all_texts.append(comm["text"])
 
@@ -90,12 +90,12 @@ class EmbeddingEngine:
         logger.info(f"FAISS index built: {self.index.ntotal} vectors, dim={dim}")
 
     def search(self, query: str, top_k: int = 10,
-               type_filter: Optional[str] = None) -> List[Tuple[Dict, float]]:
+               type_filter: Optional[str] = None, department_filter: Optional[str] = None) -> List[Tuple[Dict, float]]:
         if self.index is None:
             raise RuntimeError("Index not built.")
         query_vec = self.encode_single(query).reshape(1, -1)
-        # When filtering by type, search ALL vectors since target type may be sparse
-        search_k = self.index.ntotal if type_filter else top_k
+        # When filtering by type or department, search ALL vectors
+        search_k = self.index.ntotal if (type_filter or department_filter) else top_k
         scores, indices = self.index.search(query_vec, search_k)
         results = []
         for score, idx in zip(scores[0], indices[0]):
@@ -103,6 +103,8 @@ class EmbeddingEngine:
                 continue
             item = self.metadata[idx]
             if type_filter and item["type"] != type_filter:
+                continue
+            if department_filter and item.get("department") != department_filter:
                 continue
             results.append((item, float(score)))
             if len(results) >= top_k:
@@ -129,6 +131,22 @@ def create_entity_descriptions(graph) -> List[Dict]:
     """Create rich text descriptions for each entity for embedding search."""
     descriptions = []
 
+    # Get department configuration if available
+    dept_code = "ee"
+    for _, data in graph.nodes(data=True):
+        if data.get("department"):
+            dept_code = data["department"]
+            break
+
+    from departments import get_department
+    try:
+        dept_config = get_department(dept_code)
+        dept_name = dept_config["name"]
+        dept_full_name = dept_config["full_name"]
+    except Exception:
+        dept_name = "Electrical Engineering"
+        dept_full_name = "Department of Electrical Engineering"
+
     for node_id, data in graph.nodes(data=True):
         label = data.get("label", "")
         if label in ("TextChunk", "Document"):
@@ -139,10 +157,10 @@ def create_entity_descriptions(graph) -> List[Dict]:
         if label == "Faculty":
             name = data.get("name", node_id)
             if data.get("is_hod"):
-                parts.append(f"{name} is the Head of Department (HoD) of the Department of Electrical Engineering at IIT Jammu.")
+                parts.append(f"{name} is the Head of Department (HoD) of the {dept_full_name} at IIT Jammu.")
                 parts.append("As HoD, they lead the department's academic and research activities.")
             else:
-                parts.append(f"{name} is a faculty member in the Department of Electrical Engineering at IIT Jammu.")
+                parts.append(f"{name} is a faculty member in the {dept_full_name} at IIT Jammu.")
             if data.get("designation"):
                 parts.append(f"Designation: {data['designation']}.")
             if data.get("email"):
@@ -170,9 +188,11 @@ def create_entity_descriptions(graph) -> List[Dict]:
 
         elif label == "PhDStudent":
             name = data.get("name", node_id)
-            parts.append(f"{name} is a PhD student in the EE Department at IIT Jammu.")
+            parts.append(f"{name} is a PhD student in the {dept_name} Department at IIT Jammu.")
             if data.get("research_area"):
                 parts.append(f"Research topic: {data['research_area']}.")
+            if data.get("email"):
+                parts.append(f"Email: {data['email']}.")
             
             out_edges = list(graph.out_edges(node_id, data=True))
             supervisors = [graph.nodes[t].get('name', t) for _, t, d in out_edges if d.get('type') == 'SUPERVISED_BY']
@@ -182,13 +202,13 @@ def create_entity_descriptions(graph) -> List[Dict]:
         elif label == "ResearchArea":
             name = data.get("name", node_id)
             category = data.get("category", "")
-            parts.append(f"{name} is a research area in the EE Department at IIT Jammu.")
+            parts.append(f"{name} is a research area in the {dept_name} Department at IIT Jammu.")
             if category:
                 parts.append(f"Falls under the {category} category.")
 
         elif label == "ResearchCategory":
             name = data.get("name", node_id)
-            parts.append(f"{name} is a major research category in the EE Department at IIT Jammu.")
+            parts.append(f"{name} is a major research category in the {dept_name} Department at IIT Jammu.")
             in_edges = list(graph.in_edges(node_id, data=True))
             sub_areas = [graph.nodes[s].get('name', s) for s, _, d in in_edges if d.get('type') == 'BELONGS_TO_CATEGORY']
             if sub_areas:
@@ -210,15 +230,15 @@ def create_entity_descriptions(graph) -> List[Dict]:
                 parts.append(data["description"])
 
         elif label == "Lab":
-            parts.append(f"{data.get('name', node_id)} is a laboratory in the EE Department at IIT Jammu.")
+            parts.append(f"{data.get('name', node_id)} is a laboratory in the {dept_name} Department at IIT Jammu.")
 
         elif label == "Department":
-            parts.append("Department of Electrical Engineering at IIT Jammu.")
-            parts.append("The department offers BTech, MTech, and PhD programmes in Electrical Engineering.")
+            parts.append(f"{dept_full_name} at IIT Jammu.")
+            parts.append(f"The department offers BTech, MTech, and PhD programmes in {dept_name}.")
             parts.append("Head of Department, HoD, faculty, research areas, labs, students.")
 
         elif label == "Programme":
-            parts.append(f"{data.get('name', node_id)} is an academic programme at IIT Jammu EE Department.")
+            parts.append(f"{data.get('name', node_id)} is an academic programme at IIT Jammu {dept_name} Department.")
 
         elif label == "FundingAgency":
             parts.append(f"{data.get('name', node_id)} is a funding agency.")
@@ -228,7 +248,7 @@ def create_entity_descriptions(graph) -> List[Dict]:
 
         elif label == "ExternalPerson":
             name = data.get("name", node_id)
-            parts.append(f"{name} is an external collaborator/supervisor associated with the EE Department at IIT Jammu.")
+            parts.append(f"{name} is an external collaborator/supervisor associated with the {dept_name} Department at IIT Jammu.")
             in_edges = list(graph.in_edges(node_id, data=True))
             students = [s for s, _, d in in_edges if d.get('type') == 'SUPERVISED_BY']
             if students:

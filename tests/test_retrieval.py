@@ -75,3 +75,75 @@ class TestDirectSupervisorAnswers:
         assert "Ritujoy Biswas" in answer
         assert "Karan Nathwani" in answer
         assert "Speech Intelligibility Improvement" in answer
+
+
+@pytest.fixture(scope="module")
+def cse_retriever():
+    """Load the CSE retriever from the checked-in department data."""
+    cse_dir = os.path.join(DATA_DIR, "computer_science_engineering")
+    if not os.path.exists(os.path.join(cse_dir, "graph.pkl")):
+        pytest.skip("CSE data directory not populated — run ingest.py --dept cse first")
+    from graphrag.retriever import load_retriever
+    return load_retriever(dept_code="computer_science_engineering")
+
+
+class TestCSEFacultyAnalytics:
+    def test_cse_faculty_roster_count_is_authoritative(self, cse_retriever):
+        """CSE faculty count/list should come from the graph roster, not chunk counting."""
+        answer = cse_retriever.get_direct_answer("Give me the faculty count and list in the CSE department")
+        assert answer is not None
+        assert "**15 faculty members**" in answer
+        for name in (
+            "Aroof Aimen",
+            "Harkeerat Kaur",
+            "Sidharth Maheshwari",
+            "Vinit Jakhetiya",
+            "Yamuna Prasad",
+        ):
+            assert name in answer
+
+    def test_gender_ratio_query_is_rejected_when_attribute_is_missing(self, cse_retriever):
+        """Gender analytics must not be guessed from names or partial retrieval."""
+        answer = cse_retriever.get_direct_answer(
+            "What is the ratio of male to female in CSE department faculties? Calculate it."
+        )
+        assert answer is not None
+        assert "can't calculate" in answer.lower()
+        assert "gender is not stored" in answer.lower()
+        assert "**15 members**" in answer
+        assert "To avoid guessing" in answer
+
+    def test_main_point_of_contact_is_answered_directly(self, cse_retriever):
+        """Generic contact questions should resolve to the HoD instead of drifting into unrelated facts."""
+        answer = cse_retriever.get_direct_answer("Who is the main point of contact?")
+        assert answer is not None
+        assert "Yamuna Prasad" in answer
+        assert "Head of Department" in answer
+        assert "yamuna.prasad@iitjammu.ac.in" in answer
+
+    def test_missing_startup_data_returns_unavailable_fallback(self, cse_retriever):
+        """If the department graph has no startup evidence, the retriever should not hallucinate one."""
+        bundle = cse_retriever.retrieve_bundle(
+            "Startups by faculty of CSE Dept at IIT Jammu",
+            local_top_k=5,
+            vector_top_k=5,
+            global_top_k=3,
+            max_context_words=1200,
+        )
+        assert bundle["answerability"]["answerable"] is False
+        assert "startup" in bundle["answerability"]["reason"].lower()
+        assert bundle["fallback_response"] is not None
+        assert "don't have that specific information" in bundle["fallback_response"].lower()
+
+    def test_provenance_reports_combined_graph_and_vector_usage(self, cse_retriever):
+        """Hybrid retrieval should report whether graph, vector, or both contributed."""
+        bundle = cse_retriever.retrieve_bundle(
+            "Tell me about Samaresh Bera",
+            local_top_k=5,
+            vector_top_k=5,
+            global_top_k=3,
+            max_context_words=1200,
+        )
+        provenance = bundle["provenance"]
+        assert provenance["source_mode"] in {"graph", "both"}
+        assert provenance["graph"]["items"] >= 1

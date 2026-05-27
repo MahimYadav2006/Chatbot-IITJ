@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 """
-GraphRAG Ingestion Pipeline for IIT Jammu EE Department.
+GraphRAG Ingestion Pipeline for IIT Jammu Departments.
 
-Runs the full pipeline:
+Runs the full pipeline for a specific department or all departments:
     1. Parse markdown files → extract entities & relationships
     2. Build NetworkX knowledge graph
     3. Run Louvain community detection
     4. Generate embeddings (chunks + entities + community summaries)
     5. Generate community summaries via LLM
-    6. Persist everything to data/ directory
+    6. Persist everything to data/{dept_code}/ directory
 
 Usage:
-    python ingest.py                  # Full pipeline
-    python ingest.py --skip-summaries # Skip LLM summarization
+    python ingest.py --dept ee         # Ingest Electrical Engineering
+    python ingest.py --dept cse        # Ingest Computer Science
+    python ingest.py --all             # Ingest all 11+ departments
+    python ingest.py --skip-summaries  # Ingest default department skipping LLM community summaries
 """
 
 import os
@@ -29,31 +31,28 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 
-
-def main():
-    parser = argparse.ArgumentParser(description="GraphRAG Ingestion Pipeline")
-    parser.add_argument("--skip-summaries", action="store_true",
-                        help="Skip LLM-based community summarization")
-    parser.add_argument("--data-dir", default=DATA_DIR,
-                        help="Output directory for persisted data")
-    args = parser.parse_args()
-
-    os.makedirs(args.data_dir, exist_ok=True)
-
-    total_start = time.time()
-
+def ingest_department(dept_code: str, skip_summaries: bool = False):
+    from departments import get_markdown_dir, get_data_dir, get_department, resolve_department_code
+    
+    canonical_code = resolve_department_code(dept_code)
+    dept_config = get_department(canonical_code)
+    markdown_dir = get_markdown_dir(canonical_code)
+    data_dir = get_data_dir(canonical_code)
+    
+    os.makedirs(data_dir, exist_ok=True)
+    start_time = time.time()
+    
     # ── Step 1: Build Knowledge Graph ─────────────────────────────────────
     logger.info("=" * 60)
-    logger.info("STEP 1: Building Knowledge Graph")
+    logger.info(f"STEP 1: Building Knowledge Graph for {dept_config['full_name']}")
     logger.info("=" * 60)
 
     from graphrag.kg_builder import KnowledgeGraphBuilder
 
-    builder = KnowledgeGraphBuilder()
+    builder = KnowledgeGraphBuilder(dept_code=canonical_code)
     graph = builder.build()
-    builder.save(args.data_dir)
+    builder.save(data_dir)
 
     n_nodes = graph.number_of_nodes()
     n_edges = graph.number_of_edges()
@@ -63,7 +62,7 @@ def main():
     # ── Step 2: Community Detection ───────────────────────────────────────
     logger.info("")
     logger.info("=" * 60)
-    logger.info("STEP 2: Community Detection (Louvain)")
+    logger.info(f"STEP 2: Community Detection (Louvain) for {canonical_code.upper()}")
     logger.info("=" * 60)
 
     from graphrag.community import (
@@ -78,10 +77,10 @@ def main():
     # ── Step 3: Community Summarization ───────────────────────────────────
     logger.info("")
     logger.info("=" * 60)
-    logger.info("STEP 3: Community Summarization")
+    logger.info(f"STEP 3: Community Summarization for {canonical_code.upper()}")
     logger.info("=" * 60)
 
-    if args.skip_summaries:
+    if skip_summaries:
         logger.info("Skipping LLM summarization (--skip-summaries flag)")
         reports = summarize_communities(reports, llm_fn=None)
     else:
@@ -90,13 +89,13 @@ def main():
         logger.info(f"Using Ollama LLM ({llm.model}) for summarization...")
         reports = summarize_communities(reports, llm_fn=llm)
 
-    save_communities(reports, partition, args.data_dir)
+    save_communities(reports, partition, data_dir)
     logger.info(f"✅ Community reports saved ({len(reports)} communities)")
 
     # ── Step 4: Generate Embeddings ───────────────────────────────────────
     logger.info("")
     logger.info("=" * 60)
-    logger.info("STEP 4: Generating Embeddings & Building FAISS Index")
+    logger.info(f"STEP 4: Generating Embeddings & FAISS Index for {canonical_code.upper()}")
     logger.info("=" * 60)
 
     from graphrag.embeddings import EmbeddingEngine, create_entity_descriptions
@@ -105,7 +104,7 @@ def main():
 
     # Prepare chunks for embedding
     import json
-    chunks_path = os.path.join(args.data_dir, "chunks.json")
+    chunks_path = os.path.join(data_dir, "chunks.json")
     with open(chunks_path, "r") as f:
         chunks = json.load(f)
 
@@ -126,16 +125,16 @@ def main():
         })
 
     # Build FAISS index
-    engine.build_index(chunks, entity_descriptions, community_items)
-    engine.save(args.data_dir)
+    engine.build_index(chunks, entity_descriptions, community_items, dept_code=canonical_code)
+    engine.save(data_dir)
 
     logger.info(f"✅ FAISS index built: {engine.index.ntotal} vectors")
 
     # ── Summary ───────────────────────────────────────────────────────────
-    elapsed = time.time() - total_start
+    elapsed = time.time() - start_time
     logger.info("")
     logger.info("=" * 60)
-    logger.info("🎉 INGESTION COMPLETE!")
+    logger.info(f"🎉 INGESTION COMPLETE FOR {canonical_code.upper()}!")
     logger.info("=" * 60)
     logger.info(f"  Knowledge Graph: {n_nodes} nodes, {n_edges} edges")
     logger.info(f"  Text Chunks:     {n_chunks}")
@@ -143,9 +142,38 @@ def main():
     logger.info(f"  FAISS Vectors:   {engine.index.ntotal}")
     logger.info(f"  Entity Descs:    {len(entity_descriptions)}")
     logger.info(f"  Time Elapsed:    {elapsed:.1f}s")
-    logger.info(f"  Output Dir:      {args.data_dir}")
-    logger.info("")
-    logger.info("You can now start the chatbot with: python app.py")
+    logger.info(f"  Output Dir:      {data_dir}")
+    logger.info("=" * 60)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="IIT Jammu Multi-Department GraphRAG Ingestion Pipeline")
+    parser.add_argument("--dept", default="ee",
+                        help="Department code to ingest (e.g. ee, cse, computer_science_engineering, bsbe)")
+    parser.add_argument("--all", action="store_true",
+                        help="Ingest all registered academic departments")
+    parser.add_argument("--skip-summaries", action="store_true",
+                        help="Skip LLM-based community summarization (faster, cheaper)")
+    args = parser.parse_args()
+
+    from departments import DEPARTMENTS, resolve_department_code
+
+    if args.all:
+        logger.info(f"Ingesting ALL {len(DEPARTMENTS)} academic departments...")
+        for dept in DEPARTMENTS:
+            logger.info(f"\n\n>>> Starting Ingestion for academic department: {dept.upper()} <<<")
+            try:
+                ingest_department(dept, skip_summaries=args.skip_summaries)
+            except Exception as e:
+                logger.error(f"❌ Failed to ingest academic department {dept.upper()}: {e}")
+    else:
+        dept = args.dept.lower()
+        try:
+            canonical_dept = resolve_department_code(dept)
+        except KeyError:
+            logger.error(f"❌ Unknown department code: {dept}. Must be one of: {list(DEPARTMENTS.keys())}")
+            sys.exit(1)
+        ingest_department(canonical_dept, skip_summaries=args.skip_summaries)
 
 
 if __name__ == "__main__":

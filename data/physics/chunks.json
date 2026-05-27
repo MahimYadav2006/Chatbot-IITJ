@@ -1,0 +1,617 @@
+[
+  {
+    "id": "chunk_physics_adjunct-faculty-women-scientist.html.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\n#### Prof. Pramod Kumar Rastogi\n\nAdjunct Faculty\n\n#### Prof. Ajai Kumar\n\nAdjunct Faculty\n\n#### Dr Deepa Verma\n\nWomen Scientist\n\n#### Dr Nupur Saxena\n\nWomen Scientist",
+    "metadata": {
+      "doc": "physics_adjunct-faculty-women-scientist.html.md",
+      "url": "https://iitjammu.ac.in/physics/adjunct-faculty-women-scientist.html",
+      "title": "Adjunct-Faculty-Women-Scientist",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_assets_images_physics_B_Tech_Courses_offered_by_Physics_Department.pdf.md_0",
+    "text": "B. Tech. Courses offered by Physics Department\nCourse 1: Quantum Mechanics & Waves and Oscillations\nBlackbody radiation and the concept of photons, Quantum mechanical operators, Schroedinger\nequation, Wave function, Statistical interpretation, Superposition Principle, Continuity equation\nfor probability density, Stationary states, Bound states, Free-particle solution, 1-D infinite\npotential well, Expectation values and uncertainty relations, 1-D finite potential well, Quantum\nmechanical tunneling, Kronig-Penny model and emergence of bands.\nGeneral introduction to periodic motion, Simple harmonic motion (SHM), Equation of motion for\nSHM, Superposition of 2-vibrations, beats, Lissajous figures, Superposition of N-vibrations,\nUndamped and damped free vibrations, Forced vibrations, resonance, Practical examples of\nresonance, Coupled oscillations, Normal modes for 2-coupled oscillators, Normal modes for\nN-coupled oscillators, Fourier transforms and normal mode analysis, Wave equation,\nSuperposition of waves, Phase and group velocity, Dispersion\nCourse 2: Quantum Mechanics & Electromagnetic Theory\nPoisson\u2019s and Laplace\u2019s equations, Multipole expansion and dipole, Electric and magnetic fields\nin a medium, Concept of the vector potential and magnetic moment, Maxwell\u2019s equations,\nBoundary conditions, EM wave equation, Plane wave solutions, Poynting vector and intensity of\nthe EM wave, Fields of moving charges, Lorentz oscillator model, Complex refractive index,\nDispersion, Wave packet, Phase and Group velocities, Fresnel equation: Reflection and\nrefraction of EM waves at a dielectric interface, EM waves in a conducting medium and plasma,\nConcept of Fourier transformation and its application\nBlackbody radiation and the concept of the photon, Quantum mechanical operators,\nSchrodinger equation, Wave function, Statistical interpretation, Superposition Principle, the\nContinuity equation for probability density, Stationary states, Bound states, Free-particle\nsolution, 1-D infinite potential well, Expectation values and uncertainty relations, 1-D finite\npotential well, Quantum mechanical tunneling, Kronig-Penny model and emergence of bands.",
+    "metadata": {
+      "doc": "physics_assets_images_physics_B_Tech_Courses_offered_by_Physics_Department.pdf.md",
+      "url": "https://iitjammu.ac.in/physics/assets/images/physics/B Tech Courses offered by Physics Department.pdf",
+      "title": "Assets Images B Tech Courses Offered By Physics Department.Pdf",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md_0",
+    "text": "M.Sc. Physics Curriculum Semester 1 Course: History of Science Course contents: Presentation on historical and scientific overview of a discovery/invention on a topic of student\u2019s choice. Course: Electromagnetic Theory Course contents: Electrostatics and Magnetostatics: Laplace and Poisson equation; Boundary value problems; method of images; the concept of Green\u2019s function and its use in boundary value problems; Ampere\u2019s and Biot-Savart law; the concept of a vector potential Electric Field in Matter: Dielectrics; conductors; dielectric constant; polarization; Gauss\u2019s law in dielectrics; bound charge; susceptibility; permittivity. Magnetic Fields in Matter: diamagnets, paramagnets, and ferromagnets; the effect of magnetic field on atomic orbits; magnetization; magnetic field inside matter; magnetic susceptibility and permeability Conservation laws in electrodynamics: Poynting\u2019s theorem; Newton\u2019s third law in Electrodynamics; conservation of momentum Electromagnetic Waves: The wave equation for the electric and magnetic field; energy and momentum of electromagnetic waves; electromagnetic waves in matter; waveguides Potential and Fields: Scalar and vector potential; Gauge transformation; The field of moving point charge Course: Mathematical Physics Course contents: Differential equations: Partial differential equation; first-order differential equation; separation of variables; series solution; Green\u2019s function approach examples - heat flow, diffusion, etc. Matrix analysis: Matrices; determinants; orthogonal matrices; Hermitian matrices; unitary matrices; diagonalization of matrices; Cayley-Hamilton theorem; normal matrices; matrix functions Fourier and Laplace transform, Fourier series; Fourier and Laplace transform, convolution Tensor analysis: Elementary idea about tensors; covariant and contravariant tensor; Levi-Civita and Christoffel symbols Special functions: Bessel function of the first kind; modified Bessel function; orthogonality; Neumann function; Legendre functions (generating functions); Hermite function; Chebyshev polynomial Course: Classical Mechanics Course contents: Basics: Constraints, Principle of virtual work, D'Alembert's Principle, and generalized coordinates with examples Lagrangian and Hamiltonian formulation of mechanics: Lagrange\u2019s equation of motion with examples; Hamilton\u2019s equation of motion with examples, generalized coordinates, calculus of variation; holonomic and non-holonomic constraints; phase space; conservation theorems and symmetry properties; stability analysis; Noether\u2019s theorem Introduction to Hamiltonian mechanics: Canonical transformation; Poisson brackets; Hamilton-Jacobi theorem; action-angle variable Oscillations: Linearization; Small oscillations; behaviour of characteristic frequencies; parametric resonance Special theory of relativity: Lorentz transformation; relativistic kinematics; mass- energy equivalence Fundamentals of Non-linear dynamics: Phase space; Limit cycles; Hysteresis, Non- linear oscillators Course: Quantum Mechanics-I Course Contents: The formalism of quantum mechanics: Origin of quantum theory and related experiments; wave function in momentum and coordinate space; Schr\u00f6dinger equation and its interpretation; the uncertainty principle; linear vector space; eigenvalue and eigenvectors; operators; Hermitian operators; observables; commutator; particle-wave duality; symmetries in",
+    "metadata": {
+      "doc": "physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md",
+      "url": "https://iitjammu.ac.in/physics/assets/images/physics/MSc Physics Course Content.pdf",
+      "title": "Assets Images Msc Physics Course Content.Pdf",
+      "chunk_idx": 0,
+      "chunk_strategy": "word_window",
+      "chunk_meta": {
+        "strategy": "word_window"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md_1",
+    "text": "Oscillations: Linearization; Small oscillations; behaviour of characteristic frequencies; parametric resonance Special theory of relativity: Lorentz transformation; relativistic kinematics; mass- energy equivalence Fundamentals of Non-linear dynamics: Phase space; Limit cycles; Hysteresis, Non- linear oscillators Course: Quantum Mechanics-I Course Contents: The formalism of quantum mechanics: Origin of quantum theory and related experiments; wave function in momentum and coordinate space; Schr\u00f6dinger equation and its interpretation; the uncertainty principle; linear vector space; eigenvalue and eigenvectors; operators; Hermitian operators; observables; commutator; particle-wave duality; symmetries in quantum mechanics; bra-ket notations; time-evolution operator and Heisenberg picture, Pauli\u2019s exclusion principle; identical particle and spin-statistics connection. Time-independent Schrodinger equation: Free particle; infinite square well; harmonic oscillator; raising and lowering operators; finite square well; tunneling through a potential barrier; the delta function potential. Quantum mechanics in three dimensions: Schr\u00f6dinger equation in spherical coordinates; the hydrogen atom problem; angular momentum; addition of angular momenta and spin; scattering in central potential. Perturbation theory: Time-independent perturbation theory and its application; time-dependent perturbation theory and Fermi\u2019s golden rule, WKB, and variational approximations. Course: Introduction to Computer programming and data analysis Course contents: Introduction to programming language: Bash and C-Shell, Python and Matlab with hands-on training Git repositories and version control Statistical Analysis of Data: Random variable; principles of probability and probability distributions; Basic concepts of hypothesis testing; standard error of the mean; confidence interval; curve fitting; exact test of goodness-of-fit; power analysis; Chi-square test of goodness-of-fit; G-test of goodness-of-fit; Chi-square test of independence; G-test of independent; student\u2019s t-test for one sample; student\u2019s t-test for two sample; paired t-test; Wilcoxon signed-rank test; correlation and linear regression; Spearman\u2019s rank correlation; multiple regression; Kalman filter; hands-on python training for these statistical tests Advanced data analysis tools: Time-series analysis; frequentist, and Bayesian analysis; hidden Markov models Semester 2 Course: Thermodynamics and Equilibrium Statistical Mechanics Course contents: Thermodynamics: Laws of thermodynamics and their consequences; Carnot\u2019s engine through PV and TS diagrams; Carnot\u2019s engine for finite-time cycle; entropy; entropy and information; thermodynamic potentials; intrinsic and extrinsic thermodynamic variables; Legendre transformations thermodynamic concepts and theories of phase transition and critical points Introduction to statistical methods: Random walk and its properties; Binomial and Gaussian distribution Statistical ensembles: The fundamental postulate of equilibrium statistical mechanics; microstates; macrostates; microcanonical; canonical and grand canonical ensemble and their connection their applications; equilibrium fluctuations in canonical and grand canonical ensemble; mixing of ideal gases; Gibbs paradox; Maxwell\u2019s demon; ergodic hypothesis and Liouville\u2019s theorem Interacting system: Ising model;",
+    "metadata": {
+      "doc": "physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md",
+      "url": "https://iitjammu.ac.in/physics/assets/images/physics/MSc Physics Course Content.pdf",
+      "title": "Assets Images Msc Physics Course Content.Pdf",
+      "chunk_idx": 1,
+      "chunk_strategy": "word_window",
+      "chunk_meta": {
+        "strategy": "word_window"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md_2",
+    "text": "information; thermodynamic potentials; intrinsic and extrinsic thermodynamic variables; Legendre transformations thermodynamic concepts and theories of phase transition and critical points Introduction to statistical methods: Random walk and its properties; Binomial and Gaussian distribution Statistical ensembles: The fundamental postulate of equilibrium statistical mechanics; microstates; macrostates; microcanonical; canonical and grand canonical ensemble and their connection their applications; equilibrium fluctuations in canonical and grand canonical ensemble; mixing of ideal gases; Gibbs paradox; Maxwell\u2019s demon; ergodic hypothesis and Liouville\u2019s theorem Interacting system: Ising model; X-Y model, and mean field theory Quantum Statistics: Difference between classical and quantum statistics; ideal quantum gas; Bose-Einstein statistics; Bose-Einstein condensation; Fermi-Dirac statistics; photons and phonons; degenerate Fermi gas. Introduction to non-ideal gases and viral expansion Course: Condensed Matter Physics Course contents: Basic concepts: Free electron model: Drude and Sommerfield\u2019s model of conductivity; heat capacity: Einstein and Debye model. Lattices and their properties: Crystal lattices, Reciprocal lattice, Equivalence of Bragg and Laue formulations, Ewald construction, Bonding and packing in crystals. Crystals and their properties: Crystalline, non-crystalline solid and liquid; Bravais lattice; reciprocal lattice; tight binding model; van der Waals solids; dynamics of an electron in periodic potential; Bloch\u2019s theorem; nearly free electron model; Kronig- Penny model; lattice vibrations; effective mass. Superconductivity: Basic phenomenology; Meissner effect; London\u2019s equation; BCS model; Type 1 and Type 2 superconductors; flux quantization in superconductors; Josephson effect; concepts of high temperature superconductivity. Magnetism: Exchange interactions; diamagnetism; paramagnetism, Hund\u2019s rule; Pauli para-magnetism; ferromagnetism and anti-ferromagnetism; domains; Curie- Weiss theory. Course: Quantum Mechanics-II Course contents: Dirac Notation: Kets, Bras, and Operators, Base Kets and Matrix Representations, Measurements, Observables, and the Uncertainty Relations, Change of Basis, Position, Momentum, and Translation, Wave Functions in Position and Momentum Space, Time-Evolution and the Schrodinger Equation, Symmetries and Conservation Laws Angular Momentum: Rotations and Angular-Momentum Commutation Relations, Eigenvalues and Eigenstates of Angular Momentum, Orbital Angular Momentum, Matrix Representation of Angular Momentum, Geometrical Representation of Angular Momentum, Spin Angular Momentum, Rotations and Addition of Angular Momenta, Properties of the Rotation Operator, Representation of the Rotation Operator, Rotation Matrices and the Spherical Harmonics, Addition of Two Angular Momenta: General Formalism, Calculation of the Clebsch\u2013Gordan Coefficients, Coupling of Orbital and Spin Angular Momenta, Addition of More Than Two Angular Momenta Identical Particles: Many-Particle Systems, Interchange Symmetry, The Pauli Exclusion Principle, The Exclusion Principle and the Periodic Table Approximation Methods for Stationary States: Time-Independent Perturbation Theory: Nondegenerate Case, Time-Independent Perturbation Theory: The Degenerate Case, Hydrogen-Like Atoms: Fine",
+    "metadata": {
+      "doc": "physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md",
+      "url": "https://iitjammu.ac.in/physics/assets/images/physics/MSc Physics Course Content.pdf",
+      "title": "Assets Images Msc Physics Course Content.Pdf",
+      "chunk_idx": 2,
+      "chunk_strategy": "word_window",
+      "chunk_meta": {
+        "strategy": "word_window"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md_3",
+    "text": "Angular Momenta, Properties of the Rotation Operator, Representation of the Rotation Operator, Rotation Matrices and the Spherical Harmonics, Addition of Two Angular Momenta: General Formalism, Calculation of the Clebsch\u2013Gordan Coefficients, Coupling of Orbital and Spin Angular Momenta, Addition of More Than Two Angular Momenta Identical Particles: Many-Particle Systems, Interchange Symmetry, The Pauli Exclusion Principle, The Exclusion Principle and the Periodic Table Approximation Methods for Stationary States: Time-Independent Perturbation Theory: Nondegenerate Case, Time-Independent Perturbation Theory: The Degenerate Case, Hydrogen-Like Atoms: Fine Structure and the Zeeman Effect, Variational Methods, The Wentzel\u2013Kramers\u2013Brillouin Method Time-Dependent Perturbation Theory: Time-Dependent Potentials: The Interaction Picture, Hamiltonians with Extreme Time Dependence, Time-Dependent Perturbation Theory, Applications to Interactions with the Classical Radiation Field Scattering Theory: Scattering as a Time-Dependent Perturbation, The Scattering Amplitude, The Born Approximation, Resonance Scattering Course: Numerical Methods and Computational Physics Course contents: Numerical Methods: Numerical integration and differentiation; Finite difference calculus; ordinary and partial differential equations; boundary value problems; roots of an equation; solution of the simultaneous linear algebraic equation and matrix eigenvalue problems Introduction to Simulation Methods: Methods of generating random numbers; random walk and its properties; Brownian diffusion; elementary treatment of Monte-Carlo methods and their applications in statistical mechanics (Ising and X-Y model) Introduction to parallel computing: Basic idea of parallel computing, its concepts and terminology; parallel computer memory architectures; parallel programming models; designing parallel programs with examples Course: Electronics Course contents: BJT and MOSFET Fundamentals and biasing: CE, CB, and CC biasing for BJT; Common source (CS) biasing for MOSFET; Comparison of CE and CS mode operation Basic BJT Amplifiers: Base-Biased Amplifier, Emitter-Biased Amplifier, Small-Signal Operation, AC Beta, Two Transistor Models, Multistage Amplifiers, CC Amplifier, Output Impedance Frequency Effects: Frequency Response of an Amplifier, Decibel Power Gain, Decibel Voltage Gain, Impedance Matching, Bode Plots, The Miller Effect, Frequency Analysis of BJT Stages Differential Amplifiers: The Differential Amplifier, DC and AC Analysis of a Diff Amp, Input Characteristics of an Op Amp, Common-Mode Gain, Integrated Circuits, The Current Mirror, The Loaded Diff Amp Operational Amplifiers: Introduction to Op Amps, The 741 Op Amp, The Inverting Amplifier, The Noninverting Amplifier, Two Op-Amp Applications Feedback and Linear Op-Amp: Four Types of Negative Feedback, VCVS Voltage Gain, Bandwidth Op-Amp Application: Inverting-Amplifier Circuits, Non-Inverting-Amplifier Circuits, Inverter/Non-Inverter Circuits, Differential Amplifiers, Summing Amplifier Circuits Digital Principles and Logic: The Basic Gates-NOT, OR, AND, Universal Logic Gates-NOR, NAND, AND-OR-Invert Gates, Positive and Negative Logic Combinational Logic Circuits and Number Systems:",
+    "metadata": {
+      "doc": "physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md",
+      "url": "https://iitjammu.ac.in/physics/assets/images/physics/MSc Physics Course Content.pdf",
+      "title": "Assets Images Msc Physics Course Content.Pdf",
+      "chunk_idx": 3,
+      "chunk_strategy": "word_window",
+      "chunk_meta": {
+        "strategy": "word_window"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md_4",
+    "text": "Gain, Integrated Circuits, The Current Mirror, The Loaded Diff Amp Operational Amplifiers: Introduction to Op Amps, The 741 Op Amp, The Inverting Amplifier, The Noninverting Amplifier, Two Op-Amp Applications Feedback and Linear Op-Amp: Four Types of Negative Feedback, VCVS Voltage Gain, Bandwidth Op-Amp Application: Inverting-Amplifier Circuits, Non-Inverting-Amplifier Circuits, Inverter/Non-Inverter Circuits, Differential Amplifiers, Summing Amplifier Circuits Digital Principles and Logic: The Basic Gates-NOT, OR, AND, Universal Logic Gates-NOR, NAND, AND-OR-Invert Gates, Positive and Negative Logic Combinational Logic Circuits and Number Systems: Boolean Laws and Theorems, Truth Table to Karnaugh Map, Binary Number System, Binary-to-decimal Conversion, Decimal-to-binary Conversion, Hexadecimal Numbers Arithmetic Circuits: Binary Addition, Binary Subtraction, Arithmetic Building Blocks, Arithmetic Logic Unit, Binary Multiplication and Division Clocks and Timing Circuits: Schmitt Trigger, 555 Timer Flip-Flops: RS FLIP-FLOPs, Gated FLIP-FLOPs, Edge-triggered FLIP-FLOPs, JK Master-slave FLIP-FLOPs Registers: Shift Register, Applications of Shift Registers Course: General Physics lab Course contents: 1. Error analysis 2. Michelson interferometer 3. Hall effect 4. Millikan's oil drop method 5. Principle of EMI using a rigid pendulum 6. Input, output & transfer characteristics of PNP/NPN 7. Particle size of given powder using diffraction method 8. Series and parallel LCR circuit 9. The numerical Aperture of a given single/multimode fiber 10. Dielectric constant measurement 11. Study of magnetic hysteresis 12.Young\u2019s modulus of the given material Semester 3 Course: Spectroscopy and Analysis Course contents: Theory of atoms: Hydrogen atom the quantization of energy, Alkali atom, Energy level diagram, Effective quantum number and quantum defect, Lamb shift, Two electron atom, LS and JJ coupling, X-ray spectra: energy levels, Emission and absorption spectra Interaction of atoms with electric and magnetic field: Magnetic effects, Processional motion, Spin-orbit interaction, fine structure, Influence of external magnetic field: Zeeman and Paschen-back effects in one and two electron atom, g-factor Line width and broadening: General factors influencing spectral line widths (collisional, Doppler Heisenberg), transition probability, population of states, Beer-Lambert law Molecular Physics: Molecular symmetry, irreducible representation Rotational Spectra of diatomic molecule, intensity of spectral lines, Effect of isotope substitutions, non-rigid rotator, Vibrational spectra of diatomic molecules, harmonic and anharmonic Vibrator-rotational spectra, Pure rotational Raman spectra, linear and symmetric top molecules, vibrational Raman spectra, rotational fine structure, selection rule, overtone spectra. Electronic properties of molecules: Electronic spectra of diatomic molecules: Born- Oppenheimer approximation, Franck-Condon principle, Dissociation energy and dissociation products, rotational fine structures, pre-dissociation of molecules. Lasers: spontaneous and stimulated emission; Einstein A and B coefficient; optical pumping population inversion;",
+    "metadata": {
+      "doc": "physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md",
+      "url": "https://iitjammu.ac.in/physics/assets/images/physics/MSc Physics Course Content.pdf",
+      "title": "Assets Images Msc Physics Course Content.Pdf",
+      "chunk_idx": 4,
+      "chunk_strategy": "word_window",
+      "chunk_meta": {
+        "strategy": "word_window"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md_5",
+    "text": "diatomic molecule, intensity of spectral lines, Effect of isotope substitutions, non-rigid rotator, Vibrational spectra of diatomic molecules, harmonic and anharmonic Vibrator-rotational spectra, Pure rotational Raman spectra, linear and symmetric top molecules, vibrational Raman spectra, rotational fine structure, selection rule, overtone spectra. Electronic properties of molecules: Electronic spectra of diatomic molecules: Born- Oppenheimer approximation, Franck-Condon principle, Dissociation energy and dissociation products, rotational fine structures, pre-dissociation of molecules. Lasers: spontaneous and stimulated emission; Einstein A and B coefficient; optical pumping population inversion; rate equation; modes of resonators and coherence length. Course: Nuclear and Particle Physics Course contents: Charge, mass, constituents, binding energy and separation energy, level scheme, excited states, spin, parity and isospin, nuclear size and form factors, static electromagnetic moments. Two-nucleon system: a) Deuteron: ground and excited states; electric quadrupole and magnetic dipole moments; non-central force and tensor interaction. Scattering states: n-p and p-p scattering at low energies; effective range and scattering length; singlet and triplet states; ortho- and para-hydrogen, charge independence of nuclear forces. c) Nucleon-nucleon scattering at higher energies d) Polarization in nucleon-nucleon scattering \u2013 l.s forces e) Exchange forces and saturation f) General properties of nucleon-nucleon forces Yukawa potential. Complex\u2013nuclear structure: a) need for nuclear models b) Fermi Gas model c) Static Liquid Drop model d) Shell Model e) Collective Model f) Unified Model. Nuclear Reactions: a) types of reactions and conservation principles b) Compound Nuclear Reactions \u2013 Resonances and the Breit Wigner formula c) Direct Reactions, Optical Model, Nuclear Fission \u2013 Bohr \u2013 Wheeler theory, Electromagnetic Transitions \u2013 Multipole transitions and selection rules. Relativistic kinematics: Mandelstamm variables; collision and decay kinematics; reaction thresholds; phase space, cross-section and decay formulae, Types of interactions and their relative strengths, Discovery of positron, muon, pion, neutrino and other particles, Symmetry, conservation laws and Quantum numbers, Classification of elementary particles, Determination of quantum numbers of different particles, Hadrons \u2013 classification by isospin and hypercharge. Quarks, color, Leptons, and gauge bosons, Weak Interactions: a) phenomenology, conservation laws, and selection rules b) Fermi theory of beta decay, V-A interaction b) nonconservation of parity c) Neutral Kaon decay \u2013 CP violation and regeneration e) Z and W+ and W- bosons. Course: Department Elective-I Course: Department Elective-II Course: Department Elective-III Course: Physics Lab II Semester 4 Course: Open Elective Course: Dissertation / Project",
+    "metadata": {
+      "doc": "physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md",
+      "url": "https://iitjammu.ac.in/physics/assets/images/physics/MSc Physics Course Content.pdf",
+      "title": "Assets Images Msc Physics Course Content.Pdf",
+      "chunk_idx": 5,
+      "chunk_strategy": "word_window",
+      "chunk_meta": {
+        "strategy": "word_window"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md_6",
+    "text": "a) phenomenology, conservation laws, and selection rules b) Fermi theory of beta decay, V-A interaction b) nonconservation of parity c) Neutral Kaon decay \u2013 CP violation and regeneration e) Z and W+ and W- bosons. Course: Department Elective-I Course: Department Elective-II Course: Department Elective-III Course: Physics Lab II Semester 4 Course: Open Elective Course: Dissertation / Project",
+    "metadata": {
+      "doc": "physics_assets_images_physics_MSc_Physics_Course_Content.pdf.md",
+      "url": "https://iitjammu.ac.in/physics/assets/images/physics/MSc Physics Course Content.pdf",
+      "title": "Assets Images Msc Physics Course Content.Pdf",
+      "chunk_idx": 6,
+      "chunk_strategy": "word_window",
+      "chunk_meta": {
+        "strategy": "word_window"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_contact.html.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\nAddress\nDepartment of Physics\n\nNorth Block, IIT Jammu\n\nJagti, PO Nagrota, NH-44\n\nJammu - 181 221 J&K, India\n\nEmail Address\nhod.physics@iitjammu.ac.in\n\nPhone Number\nWill Update soon..",
+    "metadata": {
+      "doc": "physics_contact.html.md",
+      "url": "https://iitjammu.ac.in/physics/contact.html",
+      "title": "Contact",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_courses-offered.html.md_0",
+    "text": "# Page Title: Physics\n\n### UG Courses\n\n1. Electromagnetic theory and Quantum mechanics\n2. Wave Oscillations and Quantum mechanics\n3. Physics Laboratory\n4. Preparatory Physics I & II (Theory)\n5. Preparatory Physics I & II (Lab.)\n\nB. Tech. Courses offered by Physics Department (Detailed PDF)\n\n### PG Courses\n\n1. Introduction to Computer Programming and Data Analysis\n2. Numerical methods and computational physics\n3. Electromagnetic Theory\n4. Mathematical Physics\n5. Classical Mechanics\n6. Quantum Mechanics I\n7. Thermodynamics and Equilibrium Statistical Mechanics\n8. Condensed Matter Physics\n9. Spectroscopy and Analysis\n10. Physics Laboratory-I (General)\n11. Seminar 1 (Research)\n12. Electronics\n13. Nuclear and Particle Physics\n14. Quantum Mechanics II\n15. History of Science\n16. Physics Laboratory-II (General)\n\nM.Sc. Physics Course Content (Detailed PDF)\n\n### Ph.D Courses\n\n1. Characterization of Materials\n2. Numerical and Computational Methods for Research\n3. Energy Materials and Devices\n4. Physics of Semiconductor Devices\n5. Nanostructured Materials\n6. Non-equilibrium Statistical Mechanics with Interdisciplinary Applications\n7. Advanced Plasma Physics\n8. Basics of Soft Matter Physics",
+    "metadata": {
+      "doc": "physics_courses-offered.html.md",
+      "url": "https://iitjammu.ac.in/physics/courses-offered.html",
+      "title": "Courses-Offered",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_department-vision.html.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\n### Department Vision\n\nIn line with the institute's broad vision, the department vision and mission focuses on\n\n- Directional research towards product realization - ideas, devices, processes\n- Envisioning a research based-teaching environment\n- Research for impact: Becoming the trendsetter\n- Popularizing Physics - outreach, local challenges",
+    "metadata": {
+      "doc": "physics_department-vision.html.md",
+      "url": "https://iitjammu.ac.in/physics/department-vision.html",
+      "title": "Department-Vision",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty-list.html.md_0",
+    "text": "# Page Title: Physics\n\n#### Abhishek Kumar\n\nAssistant Professor\nResearch Experience\n\n**Postdoctoral experiences:**\n\n**Florida State University and National High Magnetic Field Lab (Quantum Initiative Postdoctoral Fellow) (Sept 2024 - Mar 2025)**,&nb\n\n#### Ajeet Kumar Sharma\n\nAssociate Professor\nResearch Experience\n\n- Post-doctoral researcher at Department of Systems Biology, Harvard Medical School (September 2018- April 2019)\n- Post-doctoral researcher at Department of Chemistry, P\n\n#### Archana Rajput\n\nAssistant Professor\n\n#### Arpita Paul\n\nAssistant Professor\nResearch Experience\n\n- September, 2017 - December, 2020: Postdoctoral research associate, Department of Chemical Engineering and Materials Science, University of Minnesota, USA\n- February, 2021 - July, 202\n\n#### Ashok Bera\n\nAssociate Professor\nResearch Experience\n\n2017-Present\u00a0\u00a0\u00a0\u00a0\u00a0 Indian Institute of Technology Jammu\n\n2016-2017 \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 DST Inspire Faculty, National Institute of T\n\n#### Bacham Eswar Reddy\n\nProfessor\nResearch Experience\n\n- Post Doctoral Fellow, 1997-99, Valparaiso University, Indiana, USA - Study of evolved stars\n- Research Fellow, 1999-2023, University of Texas, Austin, USA - Chemical Tagging of Stars\n\n#### Biswanath Chakraborty\n\nAssistant Professor\nResearch Experience\n\n- Post-doctoral researcher, August 2016- December 2019,:\u00a0 Department of Physics, City College of New York, City University of New York\n\n#### Parveen Kumar\n\nAssistant Professor\nResearch Experience\n\nSeptember, 2018 - August, 2023: Postdoctoral fellow, Department of Condensed Matter Physics, Weizmann Institute of Science, Israel.\n\n#### Rahul R Salunkhe\n\nAssociate Professor\nResearch Experience\n\n**Associate Professor**, *2023-Present*, Indian Institute of Technology Jammu. Indian Institute of Technology Jammu.\n\n**Assistant Professor**, *2017-2023<*\n\n**\n\n#### S. R. K. Chaitanya Indukuri\n\nAssistant Professor\nResearch Experience\n\nPost-Doc, Hebrew University of Jerusalem, Israel. 2022\n\n#### Sanat Kumar Tiwari\n\nAssociate Professor\nResearch Experience\n\n- Postdoctoral fellow at Institute for Plasma Research (1.5 years)\n- Postdoctoral researcher at University of Iowa, Iowa city, USA, (3 yea\n\n#### Venkata Sathish Akella\n\nAssistant Professor\nResearch Experience\n\n- Research Associate, Hindustan Unilever Research Center (2004-2007), Bangalore\n- Graduate Research Assistant, Brandeis University (2007-2",
+    "metadata": {
+      "doc": "physics_faculty-list.html.md",
+      "url": "https://iitjammu.ac.in/physics/faculty-list.html",
+      "title": "Faculty-List",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__abhishekkumar.md_0",
+    "text": "# Page Title: Physics\n\n- Abhishek Kumar\n- Assistant Professor\n- abhishek.kumar@iitjammu.ac.in\n\n#### Abhishek Kumar\n\nI am a condensed matter theorist interested in exploring dynamical and transport properties of systems away or close to quantum critical point of certain types. I joined IIT Jammu as an Assistant Professor\u00a0in March, 2025. I look forward to doing exciting science in collaboration with enthusiastic students and postdocs.\n\n**Recent news from the group:**\n\n* Our\u00a0new work on resonant Edelstein and inverse Edelstein effects, charge-to-spin conversion, and spin pumping from chiral spin modes\u00a0has been\u00a0published in **Physical\u00a0Review\u00a0B (Perspective)** [DOI: https://doi.org/10.1103/5p54-96d7] as a contribution to a special issue dedicated to the\u00a0memory of late Emmanuel Rashba.\n\n* Our\u00a0recent\u00a0work on a tight-binding and density-functional investigation\u00a0of the Raman tensor in 2D massive Dirac fermion systems has been\u00a0published in **Physical\u00a0Review\u00a0B** [https://link.aps.org/doi/10.1103/m1p1-w3w4].\n\n##### Research Interest\n\nQuantum polar phase transition\n\nTransport in correlated electron systems\n\nFermi-liquid with spin-orbit coupling\n\nTheory of Raman, electron spin resonance (ESR) and electric-dipole spin resonance (EDSR) spectroscopies\n\nStrongly correlated systems: cuprates high temperature superconductors, flat-band systems\n\n##### Education Qualification\n\nPhD (Aug 2013 - Aug 2020): University of Florida, Gainesville, USA\n\nIntegrated BS-MS (Aug 2008 - Jun 2013): IISER Kolkata, India\n\n##### Professional Background\n\nAssistant Professor,\u00a0IIT Jammu (Mar\u00a02025 - present)\n\n##### Academic Interests\n\n**Research interests**\u00a0- Theoretical condensed matter physics\n\n**Teaching interests**\u00a0- Solid State Physics, Statistical Mechanics, Electromagnetic theory and\u00a0Quantum Mechanics\n\n##### Teaching Engagements\n\n**Autumn (2025-26) - Semester 25-01:**\u00a0PH104 (TO) Waves and Oscillations\n\nPH101 (PO) UG Physics laboratory\n\n**Spring (2025-26) - Semester 25-02:** PH103 (TO) Electrodynamics\n\nPH621 (TO) Advanced Mathematical Physics (Multi-faculty course)\n\n##### Research Experience\n\n**Postdoctoral experiences:**\n\n**Florida State University and National High Magnetic Field Lab (Quantum Initiative Postdoctoral Fellow) (Sept 2024 - Mar 2025)**,\u00a0*Area of work -\u00a0Dynamical and Transport properties of electronic systems*\n\n**Universit\u00e9 de Sherbrooke (Aug 2022 - Sept 2024)**,\u00a0*Area of work\u00a0- charge nematicity in cuprates*\n\n**Rutgers, The State University of New Jersey, USA (Sept 2020 - July 2022)**,\u00a0*Area of work\u00a0- Polar metals*",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__abhishekkumar.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~abhishekkumar",
+      "title": "Faculty.Html Faculty  Abhishekkumar",
+      "chunk_idx": 0,
+      "chunk_strategy": "repeated_heading_records",
+      "chunk_meta": {
+        "strategy": "repeated_heading_records",
+        "record_heading_level": 5,
+        "record_count": 8
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__abhishekkumar.md_1",
+    "text": "##### Publications\n\n**Selected publications:**\n\n1)\u00a0**Abhishek Kumar**, D. S\u00e9n\u00e9chal, and A.-M. S. Tremblay, \u201cCluster dynamical mean-field study of intra-unit-cell charge nematicity in hole-doped cuprates,\u201d Proceedings of the National Academy of Sciences, vol. 122, no. 10, e2419534122 (2025).\n\n2)\u00a0**Abhishek Kumar**, V. I. Yudson, and D. L. Maslov, \u201cQuasiparticle and nonquasiparticle transport in doped quantum paraelectrics,\u201d Phys. Rev. Lett., vol. 126, p. 076601 (2021).\n\n3) A. S. Mishchenko, L. Pollet, N. V. Prokof\u2019ev,\u00a0**Abhishek Kumar**, D. L. Maslov, and N. Nagaosa, \u201cPolaron mobility in the \u201cbeyond quasiparticles\u201d regime,\u201d Phys. Rev. Lett., vol. 123, p. 076601 (2019).\n\n4)\u00a0**Abhishek Kumar**, P. Chandra, and P. A. Volkov, \u201cPhonon-induced collective modes in spin-orbit coupled polar metals,\u201d (Editor\u2019s suggestion) Phys. Rev. B, vol. 108, p. 075162 (2023).\n\n5)\u00a0**Abhishek Kumar**, P. Chandra, and P. A. Volkov, \u201cSpin-phonon resonances in nearly polar metals with spin-orbit coupling,\u201d Phys. Rev. B, vol. 105, p. 125142 (2022).\n\n6)\u00a0**Abhishek Kumar**\u00a0and D. L. Maslov, \u201cEffective lattice model for the collective modes in a fermi liquid with spin-orbit coupling,\u201d (Editor\u2019s suggestion) Phys. Rev. B, vol. 95, p. 165140 (2017).\n\n##### Awards & honours\n\n1)\u00a0**Quantum Initiative Postdoctoral Fellowship\u00a0(2024)**, Florida State University and National High Magnetic Field Laboratory, Tallahassee, Florida, USA\n\n2)\u00a0**Dissertation Fellowship\u00a0(2020)**, College of Liberal Arts &\u00a0Sciences, University of Florida, Gainesville, USA\n\n3) **Travel award (2020, 2019, 2017) for attending conferences**,\u00a0College of Liberal Arts &\u00a0Sciences, University of Florida, Gainesville, USA\n\n4)\u00a0**Summer Research Fellowship (2019)**, Institute for Fundamental Theory (IFT), University of Florida, Gainesville, USA\n\n5) **Annual travel award (2016) for attending conference**, Center for Condensed Matter Sciences (CCMS), University of Florida, Gainesville, USA\n\n6)\u00a0**Summer Research Fellowship (2015)**, Center for Condensed Matter Sciences (CCMS), University of Florida, Gainesville, USA\n\n7)\u00a0**Inspire Fellowship (2008-13)**, MHRD, Government of India\n\n8)\u00a0**Summer Research Fellowship (2012)**, Indian Academy of Sciences (IAS), India\n\n9)\u00a0**Summer Internship (2011)**, Reliance Industries Limited, Vadodara Manufacturing Division, Gujarat, India",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__abhishekkumar.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~abhishekkumar",
+      "title": "Faculty.Html Faculty  Abhishekkumar",
+      "chunk_idx": 1,
+      "chunk_strategy": "repeated_heading_records",
+      "chunk_meta": {
+        "strategy": "repeated_heading_records",
+        "record_heading_level": 5,
+        "record_count": 8
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__ajeetsharma.md_0",
+    "text": "# Page Title: Physics\n\n- Ajeet Kumar Sharma\n- Associate Professor\n- ajeet.sharma@iitjammu.ac.in\n\n#### Ajeet Kumar Sharma\n\n##### Education Qualification\n\n- PhD in Physics, 2014, Indian Institute of Technology, Kanpur\n- M.Sc. in Physics, 2008, Jawaharlal Nehru University, New Delhi\n\n##### Academic Interests\n\nBiophysics, Systems Biology and Physical Bioinformatics\n\nTeaching Interests:\n\nThermodynamics and Statistical Physics, Non-equilibrium statistical mechanics and Biophysics\n\n##### Research Experience\n\n- Post-doctoral researcher at Department of Systems Biology, Harvard Medical School (September 2018- April 2019)\n- Post-doctoral researcher at Department of Chemistry, Pennsylvania State University (May 2014-August 2018)",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__ajeetsharma.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~ajeetsharma",
+      "title": "Faculty.Html Faculty  Ajeetsharma",
+      "chunk_idx": 0,
+      "chunk_strategy": "heading_sections",
+      "chunk_meta": {
+        "strategy": "heading_sections",
+        "section_count": 7
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__ajeetsharma.md_2",
+    "text": "1. Ajeet K. Sharma, Pietro Sormanni, Nabeel Ahmed, Prajwal Ciryam Ulrike Friedrich, Guenter Kramer and Edward P. O\u2019Brien, A chemical kinetic basis for measuring translation initiation and elongation rates from ribosome profiling data (in press). 2. Avi J. Samelson, Eric Bolin, Shawn M. Costello, Ajeet K. Sharma, Edward P. O\u2019Brien and Susan Marqusee, The ribosome tunes nascent chain folding away from aggregation-prone folding intermediates, Science Advances 4 eaas9098 (2018). 3. Ajeet K. Sharma, Nabeel Ahmed and Edward P. O\u2019Brien, Determinants of translation speed are randomly distributed across transcripts resulting in a universal scaling of protein synthesis times, Phys. Rev. E 97, 022409 (2018). 4. Ajeet K. Sharma and Edward P. O\u2019Brien, Non-equilibrium coupling of protein structure and function to translation-elongation kinetics, Current Opinion in Structural Biology 49, 94 (2018). 5. Ajeet K. Sharma and Edward P. O\u2019Brien, Increasing protein production rates can decrease the rate at which functional protein is produced and their steady-state levels, The Journal of Physical Chemistry B 121, 6775 (2017) 6. Ajeet K. Sharma, Bernd Bukau and Edward P. O\u2019Brien, Physical origins of codon positions that strongly influence cotranslational folding: A framework for controlling nascent-protein folding, J. Am. Chem. Soc. 138, 1180 (2016). 7. Daniel A. Nissley, Ajeet K. Sharma, Nabeel Ahmed, Ulrike A. Friedrich, Gunter Kramer, Bernd Bukau and Edward P. O\u2019Brien, Accurate prediction of cellular co-translational folding indicates proteins can switch from post- to co-translational folding, Nature Communications 7, 10341 (2016). 8. Colin D. Kinz-Thompson\u2217, Ajeet K. Sharma\u2217, Joachim Frank, Ruben L. Gonzalez Jr. and Debashish Chowdhury, Quantitative connection between ensemble thermodynamics and single- molecule kinetics: A case study using cryogenic electron microscopy and single-molecule flu- orescence resonance energy transfer investigations of the ribosome, The Journal of Physical Chemistry B 119, 10888 (2015).equal contribution 9. Ajeet K. Sharma\u2217, Blerta Shtylla\u2217 and Debashish Chowdhury, Distribution of lifetimes of kinetochore-microtubule attachments:interplay of energy landscape, molecular motors and mi- crotubule (de-) polymerization, Phys. Biol. 11, 036004 (2014). equal contribution 10. Ajeet K. Sharma and Debashish Chowdhury, First-passage problems in DNA replication: effects of template tension on stepping and exonuclease activities of a DNA polymerase motor, J. Phys.: Condens. Matter 25, 374105 (2013). 11. Ajeet K. Sharma and Debashish Chowdhury, Template-directed biopolymerization: tape- copying turing machine, Biophysical Reviews and Letters 7, 135 (2012) 12. Ajeet K. Sharma and Debashish Chowdhury, Error correction during DNA replication, Phys. Rev. E 86, 011913 (2012). 13. Ajeet K. Sharma and Debashish Chowdhury,",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__ajeetsharma.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~ajeetsharma",
+      "title": "Faculty.Html Faculty  Ajeetsharma",
+      "chunk_idx": 2,
+      "chunk_strategy": "heading_sections",
+      "chunk_meta": {
+        "strategy": "heading_sections",
+        "section_count": 7
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__ajeetsharma.md_3",
+    "text": "equal contribution 10. Ajeet K. Sharma and Debashish Chowdhury, First-passage problems in DNA replication: effects of template tension on stepping and exonuclease activities of a DNA polymerase motor, J. Phys.: Condens. Matter 25, 374105 (2013). 11. Ajeet K. Sharma and Debashish Chowdhury, Template-directed biopolymerization: tape- copying turing machine, Biophysical Reviews and Letters 7, 135 (2012) 12. Ajeet K. Sharma and Debashish Chowdhury, Error correction during DNA replication, Phys. Rev. E 86, 011913 (2012). 13. Ajeet K. Sharma and Debashish Chowdhury, Stochastic theory of protein synthesis and polysome: ribosome profiling on a single mRNA transcript, J. Theor. Biol. 289, 36-46 (2011) 14. Ajeet K. Sharma and Debashish Chowdhury, Distribution of dwell times of a ribosome: effects of infidelity, kinetic proofreading and ribosome crowding, Physical Biology 8, 026005 (2011). 15. Ajeet K. Sharma and Debashish Chowdhury, Quality control by a mobile molecular workshop: quality versus quantity Phys. Rev. E 82, 031912 (2010) (Selected for the October 1, 2010, issue of the Virtual Journal of Biological Physics Research)",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__ajeetsharma.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~ajeetsharma",
+      "title": "Faculty.Html Faculty  Ajeetsharma",
+      "chunk_idx": 3,
+      "chunk_strategy": "heading_sections",
+      "chunk_meta": {
+        "strategy": "heading_sections",
+        "section_count": 7
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__ajeetsharma.md_4",
+    "text": "##### CV\n\nDownload CV\n\n1. https://scholar.google.co.in/citations?user=EiyNQG8AAAAJ&hl=en\n2. https://www.researchgate.net/profile/Ajeet_Sharma2",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__ajeetsharma.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~ajeetsharma",
+      "title": "Faculty.Html Faculty  Ajeetsharma",
+      "chunk_idx": 4,
+      "chunk_strategy": "heading_sections",
+      "chunk_meta": {
+        "strategy": "heading_sections",
+        "section_count": 7
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__archanarajput.md_0",
+    "text": "# Page Title: Physics\n\n- Archana Rajput\n- Assistant Professor\n- archana.rajput@iitjammu.ac.in\n\n#### Archana Rajput\n\n##### Education Qualification\n\n- B.Tech (2005-2009), KNIT\u00a0Sultanpur Uptu Lucknow, 2009\n- M.Tech (2010-2012), Delhi University South Campus, 2012\n- Phd (2012-2018), IIT\u00a0Kanpur, 2018\n\n##### Academic Interests\n\n**Research Areas**\n\nCloaking/Invisbility, Frequency Selective Surfaces, Transformation Optics, Antennas, Metamaterials\n\n**Teaching Interests**\n\nElectromagnetics, Network Analysis And Synthesis, Basic Electronics, Microwave Engineering, Antenna Theory And Design\n\n##### Publications\n\n1. M.M.Zargar, A. Rajput, K.Saurav, and S. K. Koul, \u201cFrequency Selective Rasorber Based on High-Q Minkowski Fractal Shaped Resonator for Realizing a Low Radar Cross-Section Radiating System\u201d accepted in IEEE Transactions on Electromagnetic Compatibility, , JUN, 2022\n\n2. M.M.Zargar, A. Rajput, K.Saurav, and S. K. Koul, \u201cSingle-Layered Flexible Dual Transmissive Rasorbers With Dual/Triple Absorption Bands for Conformal Applications,\" in IEEE Access, vol. 9, pp. 150426-150442, NOV, 2021\n\n3. M.M.Zargar, A. Rajput, K. Saurav, and S. K. Koul, \u201cA polarisation-insensitive dual-band transmissive rasorber designed on a single layer substrate\u201d IET Microwaves, Antennas and Propagation, Vol. 14, Iss. 11, pp. 1296-1303, SEP, 2020.\n\n4. A. Rajput and K. V. Srivastava, \"Approximated Complementary Cloak with Diagonally Homogeneous Material Parameters using Shifted Parabolic Coordinate System,\" in IEEE Transactions on Antennas and Propagation, vol. 65, no.3, pp. 1458-1463, DEC, 2017.\n\n5. A. Rajput and K. V. Srivastava, \"Dual-band Cloak using Microstrip Patch with Embedded U-Shaped Slot,\" in IEEE Antennas and Wireless Propagation Letters, vol. 16, pp. 2848-2851, SEP, 2017.\n\n6. A. Rajput and K. V. Srivastava, \"Parabolic Transformation Function Based External Cloak with Finite and Realizable Material Parameters,\" in IET Microwaves, Antennas and Propagation, vol. 11, Iss. 7, pp. 1051-1056, APR, 2017.",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__archanarajput.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~archanarajput",
+      "title": "Faculty.Html Faculty  Archanarajput",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__arpitapaul.md_0",
+    "text": "# Page Title: Physics\n\n- Arpita Paul\n- Assistant Professor\n- arpita.paul@iitjammu.ac.in\n\n#### Arpita Paul\n\n##### Research Interest\n\nMy research work focuses on first-principles quantum theory of advanced functional materials. It not only aims at achieving microscopic insights into exotic states of fundamentally interesting materials (frustrated magnets, multiferroics, superconductors, Hund\u2019s metals and topological superconductors), but also designing materials of technological importance (multiferroics, superconductors and transparent conductors).\n\n##### Education Qualification\n\n- Ph.D in Physics, 2017, Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bangalore, India\n- M.Sc in Physics, 2012, Indian Institute of Technology Guwahati, Assam, India\n\n##### Academic Interests\n\n**Research Areas**\n\nFirst-principles quantum theoretical modelling of advanced functional materials\n\n##### Research Experience\n\n- September, 2017 - December, 2020: Postdoctoral research associate, Department of Chemical Engineering and Materials Science, University of Minnesota, USA\n- February, 2021 - July, 2022: Research associate, Theoretical Sciences Unit,Jawaharlal Nehru Centre for Advanced Scientific Research, Bangalore, India\n- August, 2022 - July, 2023: DST-INSPIRE faculty fellow, Department of Materials Engineering, Indian Institute of Science, Bangalore, India\n\n##### Publications\n\nSome selected publications:\n\n1.\u00a0Ab-initio statistical mechanics of N\u00e9el transition, magnetic domains and topological defects in hexagonal YMnO3,\u00a0Arpita Paul\u00a0and Umesh V. Waghmare, Phys. Rev. B 107, 174403 (2023)\n\n2. \u00a0Pressure-induced superconductivity in higher order topological insulator candidate\u00a0BiSe, Pallavi Malavi,\u00a0Arpita Paul, Achintya Bera, D V S Muthu, P S Anil Kumar, Umesh Waghmare, A. K. Sood, and S. Karmakar, Phys. Rev. B 107, 024506 (2023)\n\n3. \u00a0Cation Order Control of Correlations in double perovskite Sr2VNbO6,\u00a0Arpita Paul\u00a0and Turan Birol, Phys. Rev. Research 2, 033156 (2020)\n\n4. Spin\u2013lattice coupling and the emergence of the trimerized phase in the\u00a0S\u00a0= 1 Kagome antiferromagnet Na2Ti3Cl8,\u00a0Arpita Paul, Chia-Min Chung, Turan Birol, and Hitesh J. Changlani, Phys. Rev. Lett. 124, 167203 (2020)\n\n##### Book/Book Chapter\n\n1. \u201cPhosphorene\u201d,\u00a0Arpita Paul\u00a0and Umesh V. Waghmare, in \u201c2-D Inorganic Materials beyond Graphene\", CNR Rao and Umesh V. Waghmare, World Scientific Publishing, 2017\n\n##### Awards & honours\n\nDST-INSPIRE faculty fellowship (2022-2027)\n\nGoogle scholar:\u00a0https://scholar.google.com/citations?hl=en&user=cW7yS8AAAAAJ&view_op=list_works&authuser=2&gmla=AOV7GLOhG083b64CNYyU3_O1sc0cKdog5cW69V0PZ7c3QVjuk2j2BmztXdtx8WReTsw_O0flPhmFY_jjsHA8cEwB",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__arpitapaul.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~arpitapaul",
+      "title": "Faculty.Html Faculty  Arpitapaul",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__ashokbera.md_0",
+    "text": "# Page Title: Physics\n\n- Ashok Bera\n- Associate Professor\n- ashok.bera@iitjammu.ac.in\n\n#### Ashok Bera\n\n##### Research Interest\n\nSolar cells, Photo-detectors, Photo-thermal water steaming, Resistive Switching Memory.\n\n**Research group Info.**\n\n##### Education Qualification\n\n2012 \u00a0\u00a0\u00a0\u00a0 Ph. D. in Physics Indian Association for the Cultivation of Science, India\n\n2006 \u00a0\u00a0\u00a0\u00a0 M. Sc. in Physics, Vidyasagar University\n\n2004 \u00a0\u00a0\u00a0\u00a0 B. Sc.\u00a0 Midnapore College, Vidyasagar University\n\n##### Research Experience\n\n2017-Present\u00a0\u00a0\u00a0\u00a0\u00a0 Indian Institute of Technology Jammu\n\n2016-2017 \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 DST Inspire Faculty, National Institute of Technology, Rourkela\n\n2015-2016 \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 Research Associate, Solid State Physics, Indian Association for the Cultivation of Science\n\n2013-2015 \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 Postdoctoral Fellow, King Abdullah University of Science and Technology\n\n2011-2013\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 Postdoctoral Fellow, Nanyang Technological University\n\n##### Research Supervised\n\nPh.D.\n\nCompleted: 1. Dr. Tawseef A. Wani\n\nCurrent Students: 1. Parul Garg, 2. Priya Kaith, 3. Lokesh Rathod, 4. Vishal Nagar\n\n##### Publications\n\n**Google Scholar**\n\n##### Awards & honours\n\n- Inspire Faculty Awards, 2016 (DST, India)\n- Newton International Postdoctoral fellowship, 2016 (Royal Society, UK)\n- Carl Tryggers foundation Postdoctoral Fellowship, 2016 (Sweden)\n\n**ORCID**\n\n**Researchgate**",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__ashokbera.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~ashokbera",
+      "title": "Faculty.Html Faculty  Ashokbera",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__bachameswarreddy.md_0",
+    "text": "# Page Title: Physics\n\n- Bacham Eswar Reddy\n- Professor\n- bacham.reddy@iitjammu.ac.in\n\n#### Bacham Eswar Reddy\n\n##### Research Interest\n\nObservational Astronomy: Understanding nucleosynthesis aspects in stars, evolution of stars and the Galaxy using the stars spectra.\n\n##### Education Qualification\n\n- M.Sc. Venketeswara University, Tirupati, 1990\n- Ph.D Indian Institute of Astrophysics/Bangalore University, Bengaluru, 1996\n\n##### Academic Interests\n\nTeaching basic astronomy and stellar evolution\n\n##### Research Experience\n\n- Post Doctoral Fellow, 1997-99, Valparaiso University, Indiana, USA - Study of evolved stars\n- Research Fellow, 1999-2023, University of Texas, Austin, USA - Chemical Tagging of Stars\n- Faculty, 2003-2024, Indian Institute of Astrophysics, Bengaluru\n\n##### Publications\n\n1. Discovery of ubiquitous lithium production in low-mass stars Kumar, Y.B., Reddy, B.E., Campbell, S.W., Maben, S., Zhao, G., Ting, Y.S. 2020, Nature Astronomy, 4, 1059\n2. Origin of Lithium Enrichment in K Giants Kumar, Y.B., Reddy, B.E & Lambert, D.L. 2011, ApJL, 730, 12\n3. Elemental abundance survey of the Galactic thick disc Reddy et al. 2006, MNRAS, 367, 1329\n4. The chemical compositions of Galactic disc F and G dwarfs Reddy et al. 2003, MNRAS, 340, 304\n5. A search for 6Li in stars with planets Reddy, Bacham et al. 2002, MNRAS, 335, 1005\n\n##### Administrative Responsibilities\n\n1. 2007 - 2012 - National Coordinator for India's Participation in Giant Segmented Mirror Telescope (GSMT)\n\n2. 2012 - 2024\u00a0- Programme Director of India TMT Coordination Centre (set-up to manage India's Participation in the Thirty Meter Telescope Project pursued by USA, Japan, India, Canada, and China)\n\n3. 2015- 2024 - Designated Board of Governors in the TMT Board of Governors\n\n4. 2021-2024 - Dean, Academics, Indian Institute of Astrophysics, Bengaluru\n\n##### Awards & honours\n\n1. Fellow of the Indian Academy of Sciences (FASc) - Bengaluru",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__bachameswarreddy.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~bachameswarreddy",
+      "title": "Faculty.Html Faculty  Bachameswarreddy",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__biswanathchakraborty.md_0",
+    "text": "# Page Title: Physics\n\n- Biswanath Chakraborty\n- Assistant Professor\n- biswanath.chakraborty@iitjammu.ac.in\n\n#### Biswanath Chakraborty\n\n##### Education Qualification\n\nPersonal web page https://sites.google.com/view/biswanathchakraborty/home\n\n- PhD in Physics, 2013, Indian Institute of Science, Bangalore\n- M.Sc. in Physics, 2004, University of Pune, Pune\n\n##### Academic Interests\n\n**Research Interests**\n\nDevice Physics, Optics and Photonics, Spectroscopy\n\n**Teaching Interests**\n\nElectrodynamics, Quantum mechanics, Solid state physics\n\n##### Research Experience\n\n- Post-doctoral researcher, August 2016- December 2019,:\u00a0 Department of Physics, City College of New York, City University of New York\n- Post-doctoral researcher, October 2014- July 2016,:\u00a0 Department of Physics, Indian Institute of Science, Bangalore",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__biswanathchakraborty.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~biswanathchakraborty",
+      "title": "Faculty.Html Faculty  Biswanathchakraborty",
+      "chunk_idx": 0,
+      "chunk_strategy": "heading_sections",
+      "chunk_meta": {
+        "strategy": "heading_sections",
+        "section_count": 6
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__biswanathchakraborty.md_1",
+    "text": "##### Publications\n\n1. \u201cA room temperature polariton LED based on monolayer WS2\u201d\n\nJie Gu*, Biswanath Chakraborty*,\u00a0 Mandeep Khatoniar and Vinod M. Menon,\n\nNature Nanotechnology, 14, 1024 (2019)\n\n*equal contribution\n\n2. \u201cControl of Strong Light-Matter Interaction in Monolayer WS2 through Electric Field Gating\u201d\n\nBiswanath Chakraborty, Jie Gu, Zheng Sun, Mandeep Khatoniar, Rezlind Bushati, Alexandra L. Boehmke, Rian Koots, and Vinod M. Menon,\u00a0 Nano Letters, 18,\u00a0 6455 (2018)\n\n3. \u201cInteracting Polariton Fluids in a Monolayer of Tungsten Disulfide\u201d\n\nFabio Barachati, Antonio Fieramosca, Soroush Hafezian, Jie Gu, Biswanath Chakraborty, Dario Ballarini, Ludvik Martinu, Vinod Menon, Daniele Sanvitto and Stephane Kena-Cohen,\n\nNature Nanotechnology, 13, 906 (2018)\n\n4. \u201cOptical Control of Room Temperature Valley Polaritons\u201d\n\nZheng Sun, JieGu, Areg Ghazaryan, Zav Shotan, Christopher R. Considine, Michael Dollar, Biswanath Chakraborty, XiaozeLiu, PouyanGhaemi, Stephane Kena-Cohen and Vinod M. Menon, Nature Photonics, 11, 491 (2017)\n\n5. \u201c Enhancing Photoresponsivity Using MoTe2-graphene Vertical Heterostructures\u201d\n\nManabendra Kuiri*, Biswanath Chakraborty*, Arup Kumar Paul, Subhadip Das, A.K. Sood, and Anindya Das,\u00a0 Applied Physics Letters,\u00a0 108, 063506 (2016).\n\n*equal contribution\n\n6. \u201cElectron-Hole Asymmetry in the Electron-phonon Coupling in Top-gated Phosphorene Transistor\u201d\n\nBiswanath Chakraborty*, Satyendra Nath Gupta*, Anjali Singh, Manabendra Kuiri, Chandan Kumar, D. V. S. Muthu, Anindya Das, U. V. Waghmare, and A. K. Sood,\u00a0 2D-Materials, 3,\u00a0 015008 (2016).\n\n*equal contribution\n\n7. \u201cProbing 2D Black Phosphorus by Quantum Capacitance Measurements\u201d\n\nManabendra Kuiri, Chandan Kumar, Biswanath Chakraborty, Satyendra N Gupta, Mit H.Naik, Manish Jain, A.K. Sood and Anindya Das, Nanotechnology, 26,\u00a0 485704 (2015)\n\n8. \u201cLayer-dependent resonant Raman scattering of a few layer MoS2\u201d,\n\nBiswanath Chakraborty, H. S. S. R. Matte, A. K. Sood and C. N. R. Rao ,\n\nJournal of Raman Spectroscopy, 42, 92-96 (2013\n\n9. \u201cSymmetry dependent phonon renormalization in monolayer MoS2 transistor\u201d,\n\nBiswanath Chakraborty, Achintya Bera, D.V.S.Muthu, Somnath Bhowmick, U.V.Waghmare and A. K. Sood, Physical Review B: Rapid Communications, 85, 161403 (2012)\n\n10. \u201cMolecular charge-transfer interaction with single-layer graphene\u201d,\n\nDattatray J. Late, Anupama Ghosh, Biswanath Chakraborty, A. K. Sood,\n\nUmesh V.Waghmare and C.N.R. Rao,\n\nJournal of Experimental Nanoscience, 6, 641 (2011)\n\n11. \u201cProbing Single and Bilayer Graphene Field Effect Transistors By Raman Spectroscopy\u201d,\n\nAnindya Das, Biswanath Chakraborty and A. K. Sood,\n\nModern Physics Letters B, 25, 511 (2011)\n\n12. \u201cProbing top-gated field effect transistor of reduced graphene oxide monolayer made by dielectrophoresis\u201d,\n\nK. S. Vasu, Biswanath Chakraborty, S. Sampath and A. K. Sood,\n\nSolid State Communications, 150, 1295 (2010)",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__biswanathchakraborty.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~biswanathchakraborty",
+      "title": "Faculty.Html Faculty  Biswanathchakraborty",
+      "chunk_idx": 1,
+      "chunk_strategy": "heading_sections",
+      "chunk_meta": {
+        "strategy": "heading_sections",
+        "section_count": 6
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__biswanathchakraborty.md_2",
+    "text": "13. \u201cThe formation of p-n junction in polymer electrolyte-top gated bilayer graphene transistor\u201d,\n\nBiswanath Chakraborty, Aninyda Das and A. K. Sood, Nanotechnology, 20, 365203 (2009)\n\n14. \u201cPhonon renormalization in doped bilayer graphene\u201d,\n\nA. Das, Biswanath Chakraborty, S. Piscanec, S. Pisana, A.K.Sood and A.C.Ferrari,\n\nPhysical Review B, 79, 155417 (2009)\n\n15. \u201cRaman spectroscopy of graphene on different substrates and influence of defects\u201d,\n\nAnindya Das, Biswanath Chakraborty and A. K. Sood, Bull. Mater. Sci. 31, 579 (2008)\n\n16. \u201cMonitoring dopants by Raman scattering in an electrochemically top-gated graphene transistor\u201d,\n\nA. Das, S. Pisana, Biswanath Chakraborty, S. Piscanec, S.K.Saha, U.V.Waghmare, K. S. Novoselov, H.R.Krishnamurthy, A.K.Geim, A.C.Ferrari and A.K.Sood,\n\nNature Nanotechnology, 3, 210 (2008)\n\nConference Proceedings\n\n1. \u201cMixing Of Mode Symmetries In Top Gated Bilayer And Multilayer Graphene Field Effect Devices\u201d,\n\nBiswanath Chakraborty, Aninyda Das and A. K. Sood,\n\nSolid State Physics, Proceedings of the 55th DAE Solid State Physics Symposium 2010, AIP Conf. Proc. 1349, 11 (2011)\n\nContribution to Book chapter\n\n1. \u201cProbing Single and bilayer graphene field effect transistors by Raman spectroscopy\u201d\n\nAnindya Das, Biswanath Chakraborty and A.K. Sood,\n\nBook title: \u201cGraphene and its fascinating attributes\u201d ,\n\nWorld Scientific (2011)\n\n2. \u201cUnderstanding Graphene by Raman Spectroscopy\u201d\n\nA. K. Sood and Biswanath Chakraborty\n\nBook title: \u201cGraphene: Synthesis, Properties, and Phenomena\u201d,\n\nWiley\u2010VCH Verlag GmbH (2013)\n\nhttps://scholar.google.com/citations?user=XGitk-cAAAAJ&hl=en\n\nhttps://www.researchgate.net/profile/Biswanath_Chakraborty5",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__biswanathchakraborty.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~biswanathchakraborty",
+      "title": "Faculty.Html Faculty  Biswanathchakraborty",
+      "chunk_idx": 2,
+      "chunk_strategy": "heading_sections",
+      "chunk_meta": {
+        "strategy": "heading_sections",
+        "section_count": 6
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__parveenkumar.md_0",
+    "text": "# Page Title: Physics\n\n- Parveen Kumar\n- Assistant Professor\n- parveen.kumar@iitjammu.ac.in\n\n#### Parveen Kumar\n\n##### Education Qualification\n\n- M.Sc., Kurukshetra University, Kurukshetra, 2011\n- Ph.D., Indian Institute of Science, Bangalore, 2018\n\n##### Academic Interests\n\n**Research Areas**\n\nQuantum Physics\n\n**Research Interests**\n\n- Open Quantum Systems,\n- Quantum Measurements,\n- non-Hermitian Physics,\n- Quantum Error Correction\n\n##### Research Experience\n\nSeptember, 2018 - August, 2023: Postdoctoral fellow, Department of Condensed Matter Physics, Weizmann Institute of Science, Israel.\n\n##### Publications\n\n(11) Edward Medina Guerra, Parveen Kumar, Igor Gornyi, Yuval Gefen, Quantum state engineering in the presence of noise, arXiv:2303.16329\n\n(10) Parveen Kumar, Kyrylo Snizhko, Yuval Gefen, Bernd Rosenow, Optimized steering: Quantum state engineering and exceptional points, Phys. Rev. A 105, L010203 (2022) [Letter]\n\n(9) Parveen Kumar, Kyrylo Snizhko, Yuval Gefen, Near-unit efficiency of chiral state conversion via hybrid-Liouvillian dynamics, Phys. Rev. A 104, L050405 (2021) [Letter]\n\n(8) Kyrylo Snizhko, Parveen Kumar, Nihal Rao, Yuval Gefen, Weak-Measurement-Induced Asymmetric Dephasing: Manifestation of Intrinsic Measurement Chirality, Phys. Rev. Lett. 127, 170401 (2021)\n\n(7) Kyrylo Snizhko, Nihal Rao, Parveen Kumar, Yuval Gefen, Weak-measurement-induced phases and dephasing: Broken symmetry of the geometric phase, Phys. Rev. Research 3, 043045 (2021)\n\n(6) Parveen Kumar, Kyrylo Snizhko, and Yuval Gefen, Engineering two-qubit mixed states with weak measurements, Phys. Rev. Research 2, 042014(R) (2020) [Rapid Communication]\n\n(5) Kyrylo Snizhko, Parveen Kumar, and Alessandro Romito, Quantum Zeno effect appears in stages, Phys. Rev. Research 2, 033512 (2020)\n\n(4) Parveen Kumar, Alessandro Romito, Kyrylo Snizhko, Quantum Zeno effect with partial measurement and noisy dynamics, Phys. Rev. Research 2, 043420 (2020)\n\n(3) Parveen Kumar and Kyrylo Snizhko, Comment on \u201cHow to observe and quantify quantum-discord states via correlations\u201d, Phys. Rev. A 102, 016401 (2020)\n\n(2) Parveen Kumar and Apoorva Patel, Quantum Error Correction using Weak Measurements, Quantum Information Processing 18(2), 58 (2019)\n\n(1) Apoorva Patel and Parveen Kumar, Weak Measurements, Quantum State Collapse, and the Born Rule, Phys. Rev. A 96, 022108 (2017)",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__parveenkumar.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~parveenkumar",
+      "title": "Faculty.Html Faculty  Parveenkumar",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__rahulrsalunkhe.md_0",
+    "text": "# Page Title: Physics\n\n- Rahul R Salunkhe\n- Associate Professor\n- rahul.salunkhe@iitjammu.ac.in\n\n#### Rahul R Salunkhe\n\n##### Education Qualification\n\n**Ph. D.** in Physics (Thin film Physics) 2009.\n\n**M. Sc.** in Physics (Solid state physics) 2005.\n\n##### Academic Interests\n\nResearch Interests:\n\nSolid State Physics, Material Science, Nanotechnology, Ultracapacitor, Nanoporous Materials, Solid-state batteries, etc.\n\n##### Research Experience\n\n**Associate Professor**, *2023-Present*, Indian Institute of Technology Jammu. Indian Institute of Technology Jammu.\n\n**Assistant Professor**, *2017-2023*, Indian Institute of Technology Jammu. Indian Institute of Technology Jammu.\n\n**Postdoctoral Research Associate**, *2013-2017*. National Institute for Material Science (NIMs), Japan.\n\n**Postdoctoral Research Associate**, *2012-2013*. National Tsing Hua University, Taiwan.\n\n**Postdoctoral Research Associate**, *2009-2012*. Hanyang University, South Korea.\n\n##### Publications\n\n1.\u00a0P. K. Pathak, N. Kumar, H. Ahn, Rahul R. Salunkhe Spinel zinc manganate-based high-capacity and high-stability non-aqueous zinc-ion batteries*Journal of Materials Chemistry A*\u00a0**2023**, *11*, 29555\n\n2.\u00a0N. Kumar, P. K. Pathak, Rahul R. Salunkhe Metal\u2013Organic framework derived inverse opal type 3D graphitic carbon for highly stable lithium-ion batteries\u00a0*Nanoscale***2023**, *15*, 13740-13749.\n\n3.\u00a0V. P. Joshi, N. Kumar, P. K. Pathak, M. S. Tamboli, N. T. N. Truong, C. D. Kim, R. S. Kalubarme and R. R. Salunkhe\u00a0*ACS Applied Materials and Interfaces*\u00a0**2023**, *20*, 24366.\n\n4.\u00a0N. Kumar, N. Bansal, Y. Yamauchi, R. R. Salunkhe. \u201cTwo-dimensional layered heterostructures of nanoporous carbons using reduced graphene oxide and metal organic frameworks,\u201d\u00a0Chemistry of Materials\u00a034, 4946,\u00a02022\n\nGoogle scholar :\u00a0https://scholar.google.co.in/citations?hl=en&user=5HJGGogAAAAJ&view_op=l...\n\nResearchgate :\u00a0https://www.researchgate.net/profile/Rahul_Salunkhe\n\nSkype : rahul.raghunath.salunkhe\n\nWebsite :\u00a0https://materialsciencegro1.wixsite.com/rahulsalunkhe\n\nLink to personal group webpage:\n\nhttps://materialsciencegro1.wixsite.com/rahulsalunkhe",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__rahulrsalunkhe.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~rahulrsalunkhe",
+      "title": "Faculty.Html Faculty  Rahulrsalunkhe",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__sanatktiwari.md_0",
+    "text": "# Page Title: Physics\n\n- Sanat Kumar Tiwari\n- Associate Professor\n- sanat.tiwari@iitjammu.ac.in\n\n#### Sanat Kumar Tiwari\n\n##### Education Qualification\n\n- BSc: Ewing Christian College (Allahabad University) 2005\n- MSc: Banaras Hindu University. 2007\n- PH.D. Institute for Plasma Research (Homi Bhabha National Institute). 2014\n\n##### Academic Interests\n\nResearch Interests:\n\n- Thermodynamics and transport in strongly coupled plasmas.\n- Magnetized ultracold plasmas.\n- Dynamical behavior of flowing plasmas.\n- Synchronization of dust acoustic waves in dusty plasmas.\n\nTeaching Interests:\n\nPhysics laboratory course (PHP 100)\n\nDec 2017 (Sem-II)\n\nNumerical methods and computation (MAL 107)\n\nJul 2018 (Sem-I)\n\nNumerical methods and computation for Research (PYL 800)\n\nJul 2018 (Sem-I)\n\nElectromagnetic waves and Quantum mechanics (PHL 100)\n\nDec 2018 (Sem-II)\n\nAdvance plasma physics (PYL 658)\n\nDec 2018 (Sem-II)\n\n##### Research Experience\n\n- Postdoctoral fellow at Institute for Plasma Research (1.5 years)\n- Postdoctoral researcher at University of Iowa, Iowa city, USA, (3 years)\n- Teaching different undergraduate and graduate courses at IIT Jammu since Nov 2017\n\n##### Publications\n\n**For the latest research updates and publications, please visit:**\n\nSanat's Google scholar page\n\nSanat's ResearchGate page\n\nSanat's IRINS page\n\n**Positions available:**\n\nStudents interested in the theoretical and experimental plasma physics are welcome to inquire about the availability of the Ph.D. and Postdoctoral positions in the group.\n\nLink to personal group webpage:\n\nhttps://sanattiwari.wordpress.com/",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__sanatktiwari.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~sanatktiwari",
+      "title": "Faculty.Html Faculty  Sanatktiwari",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__sathishakella.md_0",
+    "text": "# Page Title: Physics\n\n- Venkata Sathish Akella\n- Assistant Professor\n- sathish.akella@iitjammu.ac.in\n\n#### Venkata Sathish Akella\n\n##### Education Qualification\n\n- B.Sc. (Mathematics, Physics and Chemistry) 1999-2002, Andhra University\n- M.Sc. (Physics) 2002-2004, IIT Madras\n- Ph.D. (Physics) 2007-2013, Brandeis University, USA\n\n##### Academic Interests\n\nClassical Physics, Statistical Physics, Quantum Physics, Electromagnetic Theory, Computational Physics\n\nInterfacial Phenomena, Active Matter (Experimental and Computational)\n\n##### Research Experience\n\n- Research Associate, Hindustan Unilever Research Center (2004-2007), Bangalore\n- Graduate Research Assistant, Brandeis University (2007-2013), USA\n- Post-doctoral Researcher, Okinawa Institute of Science and Technology (2013-2017), Japan\n- Post-doctoral Researcher, IIT Madras (2017-2019), India",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__sathishakella.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~sathishakella",
+      "title": "Faculty.Html Faculty  Sathishakella",
+      "chunk_idx": 0,
+      "chunk_strategy": "heading_sections",
+      "chunk_meta": {
+        "strategy": "heading_sections",
+        "section_count": 6
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__sathishakella.md_1",
+    "text": "##### Publications\n\n1. Phase separation in binary fluid mixtures with symmetric and asymmetric Schmidt numbers: A DPD study; Harinadha Gidituri, V. S. Akella, Srikanth Vedantam, and Mahesh V. Panchagnula; J. Chem. Phys., 150, 234903 (2019).\n2. Dynamics of a Camphoric Acid Boat at the Air-Water Interface; V. S. Akella, Dhiraj K. Singh, Shreyas Mandre and M. M. Bandi; Physics Letters A, 382, 1176-1180, (2018).\n3. Rotational Synchronization of Camphor Ribbons; Jyoti Sharma, Ishant Tiwari, V. S. Akella, Veronique Pimienta, Dibyendu Das, and P. Parmananda; Phys. Rev. E, 99, 012204, (2019).\n4. Force distributions in frictional granular media; V. S. Akella, M. M. Bandi, H. George E. Hentschel, Itamar Procaccia, Saikat Roy; Phys. Rev. E, 98, 012905, (2018).\n5. Hydrodynamic signatures of stationary Marangoni-driven surfactant transport; M. M. Bandi, V. S. Akella, D. K. Singh, R. S. Singh, and S. Mandre; Phys. Rev. Lett., 119, 264501 (2017).\n6. Emulsion-Based Technique to Measure Protein Crystal Nucleation Rates of Lysozyme; Sathish V. Akella, Aaron Mowitz, Michael Heymann and Seth Fraden; Crystal Growth and Design, 14, 4487-4509 (2014).\n7. Room-temperature serial crystallography using a kinetically optimized microfluidic device for protein crystallization and on-chip X-ray diffraction; Michael Heymann, Achini Opthalage, Jennifer L. Wierman, Sathish Akella, Doletha M. E. Szebenyi, Sol M. Gruner and Seth Fraden; IUCrJ, 1, 349-360 (2014).\n8. Controlling uniformity of photopolymerized microscopic hydrogels; Sukho Park, Dongshin Kim, Seong Young Ko, Jong-Oh Park, Sathish Akella, Bing Xu, Ye Zhang and Seth Fraden; Lab on a Chip, 14 (9), 1551-1563 (2014).\n9. Active Cross-Linkers that Lead to Active Gels; Ye Zhang, Ning Zhou, Sathish Akella, Yi Kuang, Dongshin Kim, Alyssa Schwartz, Marc Bezpalko, Bruce M. Foxman, Seth Fraden, Irving R. Epstein and Bing Xu; Angew. Chem. Int. Ed, 52, 11494-11498 (2013).\n10. Catastrophic Drop Breakup in Electric Field, Janhavi S. Raut; Sathish Akella, Amit Kumar Singh and Vijay M. Naik; Langmuir, 25 (9), 4829-4834 (2009).\n11. Influence of electric field on the hydrogen bond network of water; S. J. Suresh, A. V. Sathish, and A Choudhary; J. Chem. Phys.,124, 074506 (2006).",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__sathishakella.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~sathishakella",
+      "title": "Faculty.Html Faculty  Sathishakella",
+      "chunk_idx": 1,
+      "chunk_strategy": "heading_sections",
+      "chunk_meta": {
+        "strategy": "heading_sections",
+        "section_count": 6
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_faculty.html_faculty__srkchaitanyaindukuri.md_0",
+    "text": "# Page Title: Physics\n\n- S. R. K. Chaitanya Indukuri\n- Assistant Professor\n- chaitanya.indukuri@iitjammu.ac.in\n\n#### S. R. K. Chaitanya Indukuri\n\n##### Education Qualification\n\n- M.Sc, Banaras Hindu University 2009.\n- Ph. D, Indian Institute of Science, 2016.\n\n##### Academic Interests\n\n**Research Areas**\n\nNanophotonics, Nanoplasmonics, Hyperbolic metamaterials, Nonlinear Optics, and Condensed Matter Physics.\n\n**Research Interests**\n\nHyperbolic Metamaterial applications, Single plasmonic nanoparticle spectroscopy, Optical Topological Quantum materials, and nonlinear optics of nanomaterials.\n\n**Teaching Interests**\n\nQuantum mechanics, Waves and Oscillations, Electrodynamics, Solid state physics, Nanophotonics, and plasmonics.\n\n##### Research Experience\n\nPost-Doc, Hebrew University of Jerusalem, Israel. 2022\n\n##### Publications\n\n- MoSe2/WS2 heterojunction photodiode integrated with a silicon nitride waveguide for near-infrared light detection with high responsivity. R Gherabli, S.R.K.C. Indukuri*, R Zektzer, C Frydendahl, U Levy. Light: Science & Applications 12 (1), 60 (2022) (* Equal contributions).\n- Enhanced Chiral Sensing at the Few-Molecule Level Using Negative Index Metamaterial Plasmonic Nanocuvettes. S.R.K. Chaitanya Indukuri*, Christian Frydendahl, Nityanand Sharma, Noa Mazurski, Yossi Paltiel, and Uriel Levy. (*Corresponding Author). ACS Nano (2022), 16, 10, 17289\u201317297.\n- Ultrasmall Mode Volume Hyperbolic Nanocavities for Enhanced Light\u2013Matter Interaction at the Nanoscale, S. R. K. Chaitanya Indukuri, Jonathan Bar-David, Noa Mazurski, and Uriel Levy. (*Corresponding Author). ACS Nano (2019), 13, 10, 11770\u201311780\n- 3D printing of micrometer\u2010sized transparent ceramics with on\u2010demand optical\u2010gain properties. Ido Cooperstein, SRK Chaitanya Indukuri, Alisa Bouketov, Uriel Levy, Shlomo Magdassi. Adv. Mater. (2020), 32, 2001675.\n- Soft Lithography for Manufacturing Scalable Perovskite Metasurfaces with Enhanced Emission and Absorption Amit Kessel, Christian Frydendahl, S.R.K.Chaitanya Indukuri, Noa Mazurski, Pankaj Arora, Uriel Levy. Adv. Optical Mater. (2020), 8, 2001627.\n- Graphene photo memtransistor based on CMOS flash memory technology with neuromorphic applications. C Frydendahl, SRKC Indukuri, M Grajower, N Mazurski, J Shappir, U Levy ACS Photonics (2021) 8 (9), 2659-2665.\n- WS2 Monolayers Coupled to Hyperbolic Metamaterial Nanoantennas: Broad Implications for Light\u2013Matter-Interaction Applications. S. R. K. Chaitanya Indukuri, C Frydendahl, Jonathan Bar-David, Noa Mazurski, and Uriel Levy. (*Corresponding Author). ACS Appl. Nano Mater. (2020), 3, 10, 10226\u201310233.\n- Enhanced Readout and Sensitivity of Diamond N-V Centers Coupled to Hyperbolic Metamaterial Photonic Cavities. Jonathan Bar-David, Sigal A. Wolf, S. R. K. Chaitanya Indukuri, Rotem Malkinson, Noa Mazurski, Uriel Levy, and Nir Bar-Gill. Phys. Rev. Applied 19, 064074 (2023).",
+    "metadata": {
+      "doc": "physics_faculty.html_faculty__srkchaitanyaindukuri.md",
+      "url": "https://iitjammu.ac.in/physics/faculty.html?faculty=~srkchaitanyaindukuri",
+      "title": "Faculty.Html Faculty  Srkchaitanyaindukuri",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_funded-projects.html.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\n| Project | Funding agency | Cost | Duration |\n| --- | --- | --- | --- |\n| Design of two-dimensional materials for energy applications | DST-FIST | 20500000.00 | Ongoing |\n| Tuning interlayer spacing of two-dimensional materials by Van der Waal integrations towards capacitive energy storage applications | SERB | 1900000.00 | Ongoing |\n| Enhancing Electrochemical charge storage through Ionic liquid assisted advanced functional materials | SERB | 600000.00 | Completed |\n| Achieving high voltage in hybrid perovskite solar cells | DST India | 3500000 | Completed |\n| Development of New Hybrid Molecules to Harvest Solar Light: Applications Towards Photovoltaics and Photocatalysis | IIT Jammu | 8800000 | Completed |\n| Overcoming the Shockley-Queisser Limit of Photocurrent in CH3NH3PbBr3 Based Organic-Inorganic Hybrid Perovskite Solar Cells | SERB-SRG | 1114000 | Completed |\n| Complex oxides for efficient solar water steaming: A greener way of water distillation | CSIR | 1600000 | Completed |\n| A Complete Low-Cost Solution for Solar-Driven Water Desalination | SERB-CRG | 6096288 | ongoing |\n| Characterization and control over voids, vortices and flows of dusty plasmas in DC glow discharge, 2023 | PRAISE Grant, IIT Jammu | 2500000 | ongoing |\n| Molecular dynamics modeling of Electrostatic turbulence in dusty plasma, 2020 | Matching Grant, IIT Jammu | 1000000 | ongoing |\n| Molecular dynamics modeling of Electrostatic turbulence in dusty plasma, 2020 | Core Research Grant, DST | 3200000 | ongoing |\n| Active particle suspensions in Viscoelastic fluids, 2023 | SERB-CRG | 31465264 | ongoing |\n| Non- Equilibrium kinetics of Chaperone action | SERB-CRG | 3300000 | ongoing |\n| Evolutionary optimization of cellular resources and a codon optimization method inspired by natural selection | DBT | 2900000 | ongoing |",
+    "metadata": {
+      "doc": "physics_funded-projects.html.md",
+      "url": "https://iitjammu.ac.in/physics/funded-projects.html",
+      "title": "Funded-Projects",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_hod.html.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\n### Dr. Venkata Sathish Akella\n\nHead of Department\n\n- hod.physics@iitjammu.ac.in\n\n## Dr. Venkata Sathish Akella\n\n#### Message\n\nWelcome to the webpage of the Department of Physics at the\nIndian Institute of Technology, Jammu. We pride ourselves as an academic-oriented\nresearch institution where teaching and research are integral components of our mission.\nWe eagerly seek enthusiastic young minds to engage in undergraduate and postgraduate\ncourses, as well as pursue Ph.D. studies. Our students are the cornerstone of our\nstrength.\n\nWithin our department, we house a team of highly experienced\nand dedicated faculty members who excel both as educators and researchers in their\nrespective domains. Supported by a proficient group of staff members, we ensure\nefficient operations on both technical and administrative fronts. Our driving force lies\nin fostering contemporary and fundamental growth across all aspects of our endeavors.\n\nEquipped with state-of-the-art instrumental and\ncomputational facilities, our department, alongside the Institute, is well-prepared to\nundertake research across various fields of Physics. We eagerly anticipate your active\ninvolvement in advancing the development of our department.\n\nIn closing, I extend a warm welcome to all of you, and we\nare continuously on the lookout for bright minds to collaborate with us.",
+    "metadata": {
+      "doc": "physics_hod.html.md",
+      "url": "https://iitjammu.ac.in/physics/hod.html",
+      "title": "Hod",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_patent.html.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\n1. U. M. Patil, S. S. Kumbhar, S. B. Bhosale, V. V. Patil, C. D. Lokhande, Rahul R. Salunkhe\u201cCobalt vanadium oxide, preparation method for the same, and super capacitor comprising the same\u201d Indian patent number 529322, 2024.\n2. Rahul R. Salunkhe, N. Bansal, N. Kumar, P. K. Pathak \u201cA 2D MOLYBDENUM DOPED VANADIUM DIOXIDE BASED ELECTRODE MATERIAL FOR ELECTROCHEMICAL SUPERCAPACITORS\u201d Indian patent application number 202311051412, 2023\n3. N. Kobayashi, Y. Yamauchi, Rahul R. Salunkhe, J. Tang \u201cCore-shell composites and methods for their manufacture, electrode materials, catalysts, electrodes, a secondary battery, electric double-layer capacitor\u201d US patent No. 10510493, 2019\n4. Rahul R. Salunkhe, K. Jang, H. Yu, and H. Ahn \u201cElectrode for electrochemical device and its producing method\u201d, Korea 0037094, 2010\n5. AK Sharma, EP O'brien \u201cmRNA sequences to control co-translational folding of proteins\u201d US Patent 10724040, 2020",
+    "metadata": {
+      "doc": "physics_patent.html.md",
+      "url": "https://iitjammu.ac.in/physics/patent.html",
+      "title": "Patent",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_pg-programme.html.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\n## Master in Science\n\nThe main objective of the M.Sc. (Physics) program is to prepare a talent pool of manpower by inducting them right after their bachelor degree and provide them quality education with sound fundamentals to contribute effectively in these rapidly changing times, and in addition train the students to conduct research in a specific stream of interdisciplinary physics. At the end of the second semester, a student will opt for a stream and allocation will be made as per the availability of the seats and the Department policy. All the admitted candidates irrespective of their streams will undergo a common curriculum for the first two semesters that will cover the core physics courses which form the basis for the courses in the interdisciplinary areas.",
+    "metadata": {
+      "doc": "physics_pg-programme.html.md",
+      "url": "https://iitjammu.ac.in/physics/pg-programme.html",
+      "title": "Pg-Programme",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_phd-list.html.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\n#### Ab Rauoof Wani\n\n**Supervisor**\nDr. Sanat K. Tiwari\n\nResearch Area\nComputational plasma physics\n\n#### Anwar Hussain\n\n**Supervisor**\nDr. Rahul R Salunkhe\n\nResearch Area\nSodium ion battery and capacitors\n\n#### Dushali Sharma\n\n**Supervisor**\nDr. Biswanath Chakraborty\n\nResearch Area\nSpectroscopy and optics\n\n#### Farida Batool\n\n**Supervisor**\nDr. Sanat K. Tiwari\n\nResearch Area\nComputational Plasma Physics\n\n#### Inayat Ullah Irshad\n\n**Supervisor**\nDr. Ajeet Sharma\n\nResearch Area\nBiophysics\n\n#### Kavya Prakash Agrim\n\n**Supervisor**\nDr. Rahul R Salunkhe\n\nResearch Area\nSolid-state battery\n\n#### Lokesh Kumar Rathore\n\n**Supervisor**\nDr. Ashok Bera\n\nResearch Area\nInterfacial Solar Steam Generation\n\n#### Mahima\n\n**Supervisor**\nDr. Ajeet Sharma\n\nResearch Area\nComputational Biophysics\n\n#### Neetu Bansal\n\n**Supervisor**\nDr. Rahul R Salunkhe\n\nResearch Area\nMetal ion capacitors\n\n#### Parul Garg\n\n**Supervisor**\nDr. Ashok Bera\n\nResearch Area\nOpto-electronic device applications\n\n#### Pragya Joshi\n\n**Supervisor**\nDr. Biswanath Chakraborty\n\nResearch Area\nSingle Photon Emitters in Hexagonal Boron Nitride\n\n#### Prakash Kumar Pathak\n\n**Supervisor**\nDr. Rahul R Salunkhe\n\nResearch Area\nSodium Ion Batteries\n\n#### Priya Kaith\n\n**Supervisor**\nDr. Ashok Bera\n\nResearch Area\nResistive Switching Memory Devices\n\n#### Rupal Chauhan\n\n**Supervisor**\nDr. Ajeet Sharma\n\nResearch Area\nNon-equilibrium kinetics of biological systems\n\n#### Sachin Sharma\n\n**Supervisor**\nDr. Sanat K. Tiwari\n\nResearch Area\nExperimental Plasma Physics\n\n#### Sakal Singla\n\n**Supervisor**\nDr. Biswanath Chakraborty\n\nResearch Area\nSpectroscopy and Device Physics of 2D Materials\n\n#### Simran Kapoor\n\n**Supervisor**\nDr. Sathish Akella\n\nResearch Area\nActive particle suspensions in viscoelastic fluids\n\n#### Vishal Nagar\n\n**Supervisor**\nDr. Ashok Bera\n\nResearch Area\nGas Sensing Devices\n\n#### Vishal Suri\n\n**Supervisor**\nDr. Biswanath Chakraborty\n\nResearch Area\nSpectroscopy of Devices",
+    "metadata": {
+      "doc": "physics_phd-list.html.md",
+      "url": "https://iitjammu.ac.in/physics/phd-list.html",
+      "title": "Phd-List",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_physics.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\nLaboratories\n\n## Undergraduate and Postgraduate Labs\n\n#### Material Research Laboratory (MRL)\n\n#### Material Research Laboratory (MRL)\n\nThe MRL is a multidisciplinary research lab\n\n#### Solar Research Lab (SRL)\n\n#### Solar Research Lab (SRL)\n\nOur group is dedicated to leveraging solar energy for sustainable solutions in freshwater production and energy conversion applications.\n\n#### Shivalik Plasma Laboratory\n\n#### Shivalik Plasma Laboratory\n\nNearly 99.99% of the observable universe consists of plasma. Yes, you read that correctly.\n\n#### Optoelectronics and Device Physics Laboratory\n\n#### Optoelectronics and Device Physics Laboratory\n\nOur research is majorly directed towards looking into the fundamental aspects of light -matter interaction and developing  optoelectronic devices.",
+    "metadata": {
+      "doc": "physics_physics.md",
+      "url": "https://iitjammu.ac.in/physics",
+      "title": "Physics",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_programme.html.md_0",
+    "text": "# Page Title: Physics\n\n>\n\n# Programmes\n\n- Programmes\n\n### UG Programme\n\nApply Now\n\n### PG Programme\n\nApply Now\n\n### Ph.D Programme\n\nApply Now",
+    "metadata": {
+      "doc": "physics_programme.html.md",
+      "url": "https://iitjammu.ac.in/physics/programme.html",
+      "title": "Programme",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_research-areas.html.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\n## Soft matter physics\n\n- Active matter\n- Computational & Experimenta\n\n## Energy storage\n\n- Post Li Ion battery\n- Metal ion capacitor\n- Na/Li super ionic conductor\n- Solid state battery\n\n## First-Principles Modelling of materials\n\n- Strongly Correlated materials\n- Topological electronic materials\n- Structural and magnetic Transitions\n- Optical Properties\n\n## Plasma Physics\n\n- Strongly Coupled plasma\n- Dusty Plasma\n- Plasma Agriculture\n\n## Solar Energy Harvesting\n\n- Photo Physical Properties and Photo sensing\n- Solution Processed Solar Cells\n- Interface Solar steam Generation\n\n## Nano photonics and Quantum Materials\n\n- Plasmonics, Hyperbolic meta-Materials\n- Optical topological Quantum materials\n- Non-Linear Optics of Quantum Materials\n- Condensed matter Physics\n\n## Quantum Physics\n\n- Quantum measurement\n- Quantum Error corrections\n- Quantum Control\n- Non-Hermitian Phyisics\n\n## Biophysics\n\n- Non-eq. statistical Mechanics\n- Computational Biology\n\n## Optics\n\n- Optics\n- Spectroscopy\n- Device",
+    "metadata": {
+      "doc": "physics_research-areas.html.md",
+      "url": "https://iitjammu.ac.in/physics/research-areas.html",
+      "title": "Research-Areas",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_staff-list.html.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\n#### Sumit Raj Ghosh\n\nLaboratory Officer\n\n#### Arjun Singh\n\nLaboratory Officer\n\n#### Kader Ali\n\nLaboratory Helper",
+    "metadata": {
+      "doc": "physics_staff-list.html.md",
+      "url": "https://iitjammu.ac.in/physics/staff-list.html",
+      "title": "Staff-List",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_teaching-labs.html.md_0",
+    "text": "# Page Title: Physics\n\n### UG Physics Lab\n\nThe UG Physics lab is equipped with application oriented experiments related to electricity and magnetism, semiconductors, mechanics, optics, modern physics etc.\n\nContact person :\n\n**Mr Sumit Raj Ghosh and Mr Arjun Singh Telephone : 01912741192**\n\n### PG Physics lab\n\nThe PG Physics lab is equipped with both fundamental and applied experiments related to electricity and magnetism, semiconductors, condensed matter physics, mechanics, optics, modern physics etc.\n\nContact person :\n\n**Mr Sumit Raj Ghosh and Mr Arjun Singh Telephone : 01912741192**",
+    "metadata": {
+      "doc": "physics_teaching-labs.html.md",
+      "url": "https://iitjammu.ac.in/physics/teaching-labs.html",
+      "title": "Teaching-Labs",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_physics_tel_xxxxxxxxx.md_0",
+    "text": "# Page Title: Physics | IIT Jammu\n\nLaboratories\n\n## Undergraduate and Postgraduate Labs\n\n#### Material Research Laboratory (MRL)\n\n#### Material Research Laboratory (MRL)\n\nThe MRL is a multidisciplinary research lab\n\n#### Solar Research Lab (SRL)\n\n#### Solar Research Lab (SRL)\n\nOur group is dedicated to leveraging solar energy for sustainable solutions in freshwater production and energy conversion applications.\n\n#### Shivalik Plasma Laboratory\n\n#### Shivalik Plasma Laboratory\n\nNearly 99.99% of the observable universe consists of plasma. Yes, you read that correctly.\n\n#### Optoelectronics and Device Physics Laboratory\n\n#### Optoelectronics and Device Physics Laboratory\n\nOur research is majorly directed towards looking into the fundamental aspects of light -matter interaction and developing  optoelectronic devices.",
+    "metadata": {
+      "doc": "physics_tel_xxxxxxxxx.md",
+      "url": "https://iitjammu.ac.in/physics/tel+xxxxxxxxx",
+      "title": "Tel Xxxxxxxxx",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  }
+]

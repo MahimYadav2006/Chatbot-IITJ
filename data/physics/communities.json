@@ -1,0 +1,1524 @@
+{
+  "partition": {
+    "physics:Abhishek Kumar": 0,
+    "physics:Ajeet Kumar Sharma": 13,
+    "physics:Archana Rajput": 2,
+    "physics:Arpita Paul": 7,
+    "physics:Ashok Bera": 4,
+    "physics:Bacham Eswar Reddy": 7,
+    "physics:Biswanath Chakraborty": 16,
+    "physics:Parveen Kumar": 7,
+    "physics:Rahul R Salunkhe": 15,
+    "physics:S. R. K. Chaitanya Indukuri": 9,
+    "physics:Sanat Kumar Tiwari": 17,
+    "physics:Venkata Sathish Akella": 11,
+    "physics:Quantum polar phase transition": 0,
+    "physics:Transport in correlated electron systems": 0,
+    "physics:Fermi-liquid with spin-orbit coupling": 0,
+    "physics:Theory of Raman": 0,
+    "physics:electron spin resonance (ESR) and electric-dipole spin resonance (EDSR) spectroscopies": 0,
+    "physics:Strongly correlated systems: cuprates high temperature superconductors": 0,
+    "physics:flat-band systems": 0,
+    "physics:Biophysics": 13,
+    "physics:Systems Biology and Physical Bioinformatics": 13,
+    "physics:Thermodynamics and Statistical Physics": 13,
+    "physics:Non-equilibrium statistical mechanics and Biophysics": 13,
+    "physics:Research Areas": 2,
+    "physics:Cloaking/Invisbility": 2,
+    "physics:Frequency Selective Surfaces": 2,
+    "physics:Transformation Optics": 2,
+    "physics:Antennas": 2,
+    "physics:Metamaterials": 2,
+    "physics:Electromagnetics": 2,
+    "physics:Network Analysis And Synthesis": 2,
+    "physics:Basic Electronics": 2,
+    "physics:Microwave Engineering": 2,
+    "physics:My research work focuses on first-principles quantum theory of advanced functional materials. It not only aims at achieving microscopic insights into exotic states of fundamentally interesting materials (frustrated magnets": 7,
+    "physics:multiferroics": 7,
+    "physics:superconductors": 7,
+    "physics:Hund\u2019s metals and topological superconductors)": 7,
+    "physics:but also designing materials of technological importance (multiferroics": 7,
+    "physics:superconductors and transparent conductors)": 7,
+    "physics:Solar cells": 4,
+    "physics:Photo-detectors": 4,
+    "physics:Photo-thermal water steaming": 4,
+    "physics:Resistive Switching Memory": 4,
+    "physics:[Research group Info.](https://ashokiacs.wixsite.com/iitjmu-mdseh/blank-2)": 4,
+    "physics:Device Physics": 16,
+    "physics:Optics and Photonics": 16,
+    "physics:Spectroscopy": 16,
+    "physics:Open Quantum Systems": 7,
+    "physics:Quantum Measurements": 7,
+    "physics:non-Hermitian Physics": 7,
+    "physics:Quantum Error Correction": 7,
+    "physics:Solid State Physics": 15,
+    "physics:Material Science": 15,
+    "physics:Nanotechnology": 15,
+    "physics:Ultracapacitor": 15,
+    "physics:Nanoporous Materials": 15,
+    "physics:Solid-state batteries": 15,
+    "physics:Thermodynamics and transport in strongly coupled plasmas": 17,
+    "physics:Magnetized ultracold plasmas": 17,
+    "physics:Dynamical behavior of flowing plasmas": 17,
+    "physics:Synchronization of dust acoustic waves in dusty plasmas": 17,
+    "physics:Classical Physics": 11,
+    "physics:Statistical Physics": 11,
+    "physics:Quantum Physics": 11,
+    "physics:Electromagnetic Theory": 11,
+    "physics:Computational Physics": 11,
+    "physics:Interfacial Phenomena": 11,
+    "physics:Active Matter (Experimental and Computational)": 11,
+    "physics:Hyperbolic Metamaterial applications": 9,
+    "physics:Single plasmonic nanoparticle spectroscopy": 9,
+    "physics:Optical Topological Quantum materials": 9,
+    "physics:and nonlinear optics of nanomaterials": 9,
+    "IIT Jammu PHYSICS Department": 7,
+    "physics:Ab Rauoof Wani": 17,
+    "physics:Computational plasma physics": 17,
+    "physics:Anwar Hussain": 15,
+    "physics:Sodium ion battery and capacitors": 15,
+    "physics:Dushali Sharma": 16,
+    "physics:Spectroscopy and optics": 16,
+    "physics:Farida Batool": 17,
+    "physics:Computational Plasma Physics": 17,
+    "physics:Inayat Ullah Irshad": 13,
+    "physics:Kavya Prakash Agrim": 15,
+    "physics:Solid-state battery": 15,
+    "physics:Lokesh Kumar Rathore": 4,
+    "physics:Interfacial Solar Steam Generation": 4,
+    "physics:Mahima": 13,
+    "physics:Computational Biophysics": 13,
+    "physics:Neetu Bansal": 15,
+    "physics:Metal ion capacitors": 15,
+    "physics:Parul Garg": 4,
+    "physics:Opto-electronic device applications": 4,
+    "physics:Pragya Joshi": 16,
+    "physics:Single Photon Emitters in Hexagonal Boron Nitride": 16,
+    "physics:Prakash Kumar Pathak": 15,
+    "physics:Sodium Ion Batteries": 15,
+    "physics:Priya Kaith": 4,
+    "physics:Resistive Switching Memory Devices": 4,
+    "physics:Rupal Chauhan": 13,
+    "physics:Non-equilibrium kinetics of biological systems": 13,
+    "physics:Sachin Sharma": 17,
+    "physics:Experimental Plasma Physics": 17,
+    "physics:Sakal Singla": 16,
+    "physics:Spectroscopy and Device Physics of 2D Materials": 16,
+    "physics:Simran Kapoor": 14,
+    "physics:Sathish Akella": 14,
+    "physics:Active particle suspensions in viscoelastic fluids": 14,
+    "physics:Vishal Nagar": 4,
+    "physics:Gas Sensing Devices": 4,
+    "physics:Vishal Suri": 16,
+    "physics:Spectroscopy of Devices": 16,
+    "physics:category:Soft matter physics": 18,
+    "physics:Active matter": 18,
+    "physics:Computational & Experimenta": 18,
+    "physics:category:Energy storage": 1,
+    "physics:Post Li Ion battery": 1,
+    "physics:Metal ion capacitor": 1,
+    "physics:Na/Li super ionic conductor": 1,
+    "physics:Solid state battery": 1,
+    "physics:category:First-Principles Modelling of materials": 3,
+    "physics:Strongly Correlated materials": 3,
+    "physics:Topological electronic materials": 3,
+    "physics:Structural and magnetic Transitions": 3,
+    "physics:Optical Properties": 3,
+    "physics:category:Plasma Physics": 5,
+    "physics:Strongly Coupled plasma": 5,
+    "physics:Dusty Plasma": 5,
+    "physics:Plasma Agriculture": 5,
+    "physics:category:Solar Energy Harvesting": 6,
+    "physics:Photo Physical Properties and Photo sensing": 6,
+    "physics:Solution Processed Solar Cells": 6,
+    "physics:Interface Solar steam Generation": 6,
+    "physics:category:Nano photonics and Quantum Materials": 8,
+    "physics:Plasmonics, Hyperbolic meta-Materials": 8,
+    "physics:Optical topological Quantum materials": 8,
+    "physics:Non-Linear Optics of Quantum Materials": 8,
+    "physics:Condensed matter Physics": 8,
+    "physics:category:Quantum Physics": 10,
+    "physics:Quantum measurement": 10,
+    "physics:Quantum Error corrections": 10,
+    "physics:Quantum Control": 10,
+    "physics:Non-Hermitian Phyisics": 10,
+    "physics:category:Biophysics": 12,
+    "physics:Non-eq. statistical Mechanics": 12,
+    "physics:Computational Biology": 12,
+    "physics:category:Optics": 16,
+    "physics:Optics": 16,
+    "physics:Device": 16
+  },
+  "reports": [
+    {
+      "id": "community_0",
+      "community_id": 0,
+      "members": [
+        "physics:Abhishek Kumar",
+        "physics:Quantum polar phase transition",
+        "physics:Transport in correlated electron systems",
+        "physics:Fermi-liquid with spin-orbit coupling",
+        "physics:Theory of Raman",
+        "physics:electron spin resonance (ESR) and electric-dipole spin resonance (EDSR) spectroscopies",
+        "physics:Strongly correlated systems: cuprates high temperature superconductors",
+        "physics:flat-band systems"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "physics:Abhishek Kumar"
+        ],
+        "ResearchArea": [
+          "physics:Quantum polar phase transition",
+          "physics:Transport in correlated electron systems",
+          "physics:Fermi-liquid with spin-orbit coupling",
+          "physics:Theory of Raman",
+          "physics:electron spin resonance (ESR) and electric-dipole spin resonance (EDSR) spectroscopies",
+          "physics:Strongly correlated systems: cuprates high temperature superconductors",
+          "physics:flat-band systems"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Abhishek Kumar",
+          "target": "physics:Quantum polar phase transition",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Abhishek Kumar",
+          "target": "physics:Transport in correlated electron systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Abhishek Kumar",
+          "target": "physics:Fermi-liquid with spin-orbit coupling",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Abhishek Kumar",
+          "target": "physics:Theory of Raman",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Abhishek Kumar",
+          "target": "physics:electron spin resonance (ESR) and electric-dipole spin resonance (EDSR) spectroscopies",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Abhishek Kumar",
+          "target": "physics:Strongly correlated systems: cuprates high temperature superconductors",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Abhishek Kumar",
+          "target": "physics:flat-band systems",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Abhishek Kumar\n  ResearchArea: Quantum polar phase transition, Transport in correlated electron systems, Fermi-liquid with spin-orbit coupling, Theory of Raman, electron spin resonance (ESR) and electric-dipole spin resonance (EDSR) spectroscopies, Strongly correlated systems: cuprates high temperature superconductors, flat-band systems\n  Relationships: RESEARCHES_IN: 7\n\nSummary: The Community 0 in IIT Jammu's Electrical Engineering Department is led by Faculty member Abhishek Kumar. The group focuses on theoretical research in condensed matter physics, specifically exploring quantum polar phase transitions, transport properties of correlated electron systems, and spectroscopies such as Raman and ESR/EDSR. Their work also involves studying strongly correlated systems like cuprates and flat-band materials.",
+      "summary": "The Community 0 in IIT Jammu's Electrical Engineering Department is led by Faculty member Abhishek Kumar. The group focuses on theoretical research in condensed matter physics, specifically exploring quantum polar phase transitions, transport properties of correlated electron systems, and spectroscopies such as Raman and ESR/EDSR. Their work also involves studying strongly correlated systems like cuprates and flat-band materials.",
+      "size": 8
+    },
+    {
+      "id": "community_1",
+      "community_id": 1,
+      "members": [
+        "physics:category:Energy storage",
+        "physics:Post Li Ion battery",
+        "physics:Metal ion capacitor",
+        "physics:Na/Li super ionic conductor",
+        "physics:Solid state battery"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "physics:category:Energy storage"
+        ],
+        "ResearchArea": [
+          "physics:Post Li Ion battery",
+          "physics:Metal ion capacitor",
+          "physics:Na/Li super ionic conductor",
+          "physics:Solid state battery"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Post Li Ion battery",
+          "target": "physics:category:Energy storage",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Metal ion capacitor",
+          "target": "physics:category:Energy storage",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Na/Li super ionic conductor",
+          "target": "physics:category:Energy storage",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Solid state battery",
+          "target": "physics:category:Energy storage",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 1 in IIT Jammu EE Department:\n  ResearchArea: Post Li Ion battery, Metal ion capacitor, Na/Li super ionic conductor, Solid state battery\n  ResearchCategory: Energy storage\n  Relationships: BELONGS_TO_CATEGORY: 4\n\nSummary: The Community 1 in IIT Jammu's Electrical Engineering Department focuses on energy storage research. They concentrate their efforts on developing advanced battery technologies, including post-Li-ion batteries, metal ion capacitors, Na/Li super ionic conductors, and solid-state batteries. The group is categorized under the \"Energy Storage\" category, indicating a specific area of expertise within the department.",
+      "summary": "The Community 1 in IIT Jammu's Electrical Engineering Department focuses on energy storage research. They concentrate their efforts on developing advanced battery technologies, including post-Li-ion batteries, metal ion capacitors, Na/Li super ionic conductors, and solid-state batteries. The group is categorized under the \"Energy Storage\" category, indicating a specific area of expertise within the department.",
+      "size": 5
+    },
+    {
+      "id": "community_2",
+      "community_id": 2,
+      "members": [
+        "physics:Archana Rajput",
+        "physics:Research Areas",
+        "physics:Cloaking/Invisbility",
+        "physics:Frequency Selective Surfaces",
+        "physics:Transformation Optics",
+        "physics:Antennas",
+        "physics:Metamaterials",
+        "physics:Electromagnetics",
+        "physics:Network Analysis And Synthesis",
+        "physics:Basic Electronics",
+        "physics:Microwave Engineering"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "physics:Archana Rajput"
+        ],
+        "ResearchArea": [
+          "physics:Research Areas",
+          "physics:Cloaking/Invisbility",
+          "physics:Frequency Selective Surfaces",
+          "physics:Transformation Optics",
+          "physics:Antennas",
+          "physics:Metamaterials",
+          "physics:Electromagnetics",
+          "physics:Network Analysis And Synthesis",
+          "physics:Basic Electronics",
+          "physics:Microwave Engineering"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Archana Rajput",
+          "target": "physics:Research Areas",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Archana Rajput",
+          "target": "physics:Cloaking/Invisbility",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Archana Rajput",
+          "target": "physics:Frequency Selective Surfaces",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Archana Rajput",
+          "target": "physics:Transformation Optics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Archana Rajput",
+          "target": "physics:Antennas",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Archana Rajput",
+          "target": "physics:Metamaterials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Archana Rajput",
+          "target": "physics:Electromagnetics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Archana Rajput",
+          "target": "physics:Network Analysis And Synthesis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Archana Rajput",
+          "target": "physics:Basic Electronics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Archana Rajput",
+          "target": "physics:Microwave Engineering",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Archana Rajput\n  ResearchArea: Research Areas, Cloaking/Invisbility, Frequency Selective Surfaces, Transformation Optics, Antennas, Metamaterials, Electromagnetics, Network Analysis And Synthesis, Basic Electronics, Microwave Engineering\n  Relationships: RESEARCHES_IN: 10\n\nSummary: The Community 2 in IIT Jammu's Electrical Engineering Department is led by Faculty member Archana Rajput. This group focuses on advanced electromagnetic research, exploring topics such as Cloaking/Invisibility, Frequency Selective Surfaces, Transformation Optics, and Metamaterials. Their work also involves Antennas and Microwave Engineering, with a strong foundation in Network Analysis And Synthesis and Basic Electronics.",
+      "summary": "The Community 2 in IIT Jammu's Electrical Engineering Department is led by Faculty member Archana Rajput. This group focuses on advanced electromagnetic research, exploring topics such as Cloaking/Invisibility, Frequency Selective Surfaces, Transformation Optics, and Metamaterials. Their work also involves Antennas and Microwave Engineering, with a strong foundation in Network Analysis And Synthesis and Basic Electronics.",
+      "size": 11
+    },
+    {
+      "id": "community_3",
+      "community_id": 3,
+      "members": [
+        "physics:category:First-Principles Modelling of materials",
+        "physics:Strongly Correlated materials",
+        "physics:Topological electronic materials",
+        "physics:Structural and magnetic Transitions",
+        "physics:Optical Properties"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "physics:category:First-Principles Modelling of materials"
+        ],
+        "ResearchArea": [
+          "physics:Strongly Correlated materials",
+          "physics:Topological electronic materials",
+          "physics:Structural and magnetic Transitions",
+          "physics:Optical Properties"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Strongly Correlated materials",
+          "target": "physics:category:First-Principles Modelling of materials",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Topological electronic materials",
+          "target": "physics:category:First-Principles Modelling of materials",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Structural and magnetic Transitions",
+          "target": "physics:category:First-Principles Modelling of materials",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Optical Properties",
+          "target": "physics:category:First-Principles Modelling of materials",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 3 in IIT Jammu EE Department:\n  ResearchArea: Strongly Correlated materials, Topological electronic materials, Structural and magnetic Transitions, Optical Properties\n  ResearchCategory: First-Principles Modelling of materials\n  Relationships: BELONGS_TO_CATEGORY: 4\n\nSummary: The Community 3 in IIT Jammu's Electrical Engineering Department focuses on first-principles modeling of materials. Specifically, their research areas include strongly correlated materials, topological electronic materials, structural and magnetic transitions, and optical properties. This community is categorized under \"First-Principles Modelling of materials\" and is connected to Category 4 through the relationship BELONGS_TO_CATEGORY.",
+      "summary": "The Community 3 in IIT Jammu's Electrical Engineering Department focuses on first-principles modeling of materials. Specifically, their research areas include strongly correlated materials, topological electronic materials, structural and magnetic transitions, and optical properties. This community is categorized under \"First-Principles Modelling of materials\" and is connected to Category 4 through the relationship BELONGS_TO_CATEGORY.",
+      "size": 5
+    },
+    {
+      "id": "community_4",
+      "community_id": 4,
+      "members": [
+        "physics:Ashok Bera",
+        "physics:Solar cells",
+        "physics:Photo-detectors",
+        "physics:Photo-thermal water steaming",
+        "physics:Resistive Switching Memory",
+        "physics:[Research group Info.](https://ashokiacs.wixsite.com/iitjmu-mdseh/blank-2)",
+        "physics:Lokesh Kumar Rathore",
+        "physics:Interfacial Solar Steam Generation",
+        "physics:Parul Garg",
+        "physics:Opto-electronic device applications",
+        "physics:Priya Kaith",
+        "physics:Resistive Switching Memory Devices",
+        "physics:Vishal Nagar",
+        "physics:Gas Sensing Devices"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "physics:Ashok Bera"
+        ],
+        "ResearchArea": [
+          "physics:Solar cells",
+          "physics:Photo-detectors",
+          "physics:Photo-thermal water steaming",
+          "physics:Resistive Switching Memory",
+          "physics:[Research group Info.](https://ashokiacs.wixsite.com/iitjmu-mdseh/blank-2)",
+          "physics:Interfacial Solar Steam Generation",
+          "physics:Opto-electronic device applications",
+          "physics:Resistive Switching Memory Devices",
+          "physics:Gas Sensing Devices"
+        ],
+        "PhDStudent": [
+          "physics:Lokesh Kumar Rathore",
+          "physics:Parul Garg",
+          "physics:Priya Kaith",
+          "physics:Vishal Nagar"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Ashok Bera",
+          "target": "physics:Solar cells",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ashok Bera",
+          "target": "physics:Photo-detectors",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ashok Bera",
+          "target": "physics:Photo-thermal water steaming",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ashok Bera",
+          "target": "physics:Resistive Switching Memory",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ashok Bera",
+          "target": "physics:[Research group Info.](https://ashokiacs.wixsite.com/iitjmu-mdseh/blank-2)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ashok Bera",
+          "target": "physics:Interfacial Solar Steam Generation",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ashok Bera",
+          "target": "physics:Opto-electronic device applications",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ashok Bera",
+          "target": "physics:Resistive Switching Memory Devices",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ashok Bera",
+          "target": "physics:Gas Sensing Devices",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Lokesh Kumar Rathore",
+          "target": "physics:Ashok Bera",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Lokesh Kumar Rathore",
+          "target": "physics:Interfacial Solar Steam Generation",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Parul Garg",
+          "target": "physics:Ashok Bera",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Parul Garg",
+          "target": "physics:Opto-electronic device applications",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Priya Kaith",
+          "target": "physics:Ashok Bera",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Priya Kaith",
+          "target": "physics:Resistive Switching Memory Devices",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Vishal Nagar",
+          "target": "physics:Ashok Bera",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Vishal Nagar",
+          "target": "physics:Gas Sensing Devices",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Ashok Bera\n  PhDStudent: Lokesh Kumar Rathore, Parul Garg, Priya Kaith, Vishal Nagar\n  ResearchArea: Solar cells, Photo-detectors, Photo-thermal water steaming, Resistive Switching Memory, [Research group Info.](https://ashokiacs.wixsite.com/iitjmu-mdseh/blank-2), Interfacial Solar Steam Generation, Opto-electronic device applications, Resistive Switching Memory Devices, Gas Sensing Devices\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: The community in IIT Jammu's Electrical Engineering Department is led by Dr. Ashok Bera, with a focus on interdisciplinary research in opto-electronic devices and energy harvesting. The group consists of four PhD students: Lokesh Kumar Rathore, Parul Garg, Priya Kaith, and Vishal Nagar, who are supervised by Dr. Bera. Their research areas include solar cells, photo-detectors, resistive switching memory, and interfacial solar steam generation, among others.",
+      "summary": "The community in IIT Jammu's Electrical Engineering Department is led by Dr. Ashok Bera, with a focus on interdisciplinary research in opto-electronic devices and energy harvesting. The group consists of four PhD students: Lokesh Kumar Rathore, Parul Garg, Priya Kaith, and Vishal Nagar, who are supervised by Dr. Bera. Their research areas include solar cells, photo-detectors, resistive switching memory, and interfacial solar steam generation, among others.",
+      "size": 14
+    },
+    {
+      "id": "community_5",
+      "community_id": 5,
+      "members": [
+        "physics:category:Plasma Physics",
+        "physics:Strongly Coupled plasma",
+        "physics:Dusty Plasma",
+        "physics:Plasma Agriculture"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "physics:category:Plasma Physics"
+        ],
+        "ResearchArea": [
+          "physics:Strongly Coupled plasma",
+          "physics:Dusty Plasma",
+          "physics:Plasma Agriculture"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Strongly Coupled plasma",
+          "target": "physics:category:Plasma Physics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Dusty Plasma",
+          "target": "physics:category:Plasma Physics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Plasma Agriculture",
+          "target": "physics:category:Plasma Physics",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 5 in IIT Jammu EE Department:\n  ResearchArea: Strongly Coupled plasma, Dusty Plasma, Plasma Agriculture\n  ResearchCategory: Plasma Physics\n  Relationships: BELONGS_TO_CATEGORY: 3\n\nSummary: The Community 5 in IIT Jammu's Electrical Engineering Department focuses on Plasma Physics, specifically exploring Strongly Coupled plasma, Dusty Plasma, and Plasma Agriculture. This group is categorized under Research Category 3, indicating a specific area of specialization within the department. Unfortunately, the provided information does not mention key people associated with this community.",
+      "summary": "The Community 5 in IIT Jammu's Electrical Engineering Department focuses on Plasma Physics, specifically exploring Strongly Coupled plasma, Dusty Plasma, and Plasma Agriculture. This group is categorized under Research Category 3, indicating a specific area of specialization within the department. Unfortunately, the provided information does not mention key people associated with this community.",
+      "size": 4
+    },
+    {
+      "id": "community_6",
+      "community_id": 6,
+      "members": [
+        "physics:category:Solar Energy Harvesting",
+        "physics:Photo Physical Properties and Photo sensing",
+        "physics:Solution Processed Solar Cells",
+        "physics:Interface Solar steam Generation"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "physics:category:Solar Energy Harvesting"
+        ],
+        "ResearchArea": [
+          "physics:Photo Physical Properties and Photo sensing",
+          "physics:Solution Processed Solar Cells",
+          "physics:Interface Solar steam Generation"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Photo Physical Properties and Photo sensing",
+          "target": "physics:category:Solar Energy Harvesting",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Solution Processed Solar Cells",
+          "target": "physics:category:Solar Energy Harvesting",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Interface Solar steam Generation",
+          "target": "physics:category:Solar Energy Harvesting",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 6 in IIT Jammu EE Department:\n  ResearchArea: Photo Physical Properties and Photo sensing, Solution Processed Solar Cells, Interface Solar steam Generation\n  ResearchCategory: Solar Energy Harvesting\n  Relationships: BELONGS_TO_CATEGORY: 3\n\nSummary: The Community 6 in IIT Jammu's Electrical Engineering Department focuses on Solar Energy Harvesting. Specifically, this group conducts research in Photo Physical Properties and Photo sensing, Solution Processed Solar Cells, and Interface Solar steam Generation. This community is categorized under the broader category of \"Solar Energy Harvesting\" and has a relationship with Category 3, although specific details about Category 3 are not provided.",
+      "summary": "The Community 6 in IIT Jammu's Electrical Engineering Department focuses on Solar Energy Harvesting. Specifically, this group conducts research in Photo Physical Properties and Photo sensing, Solution Processed Solar Cells, and Interface Solar steam Generation. This community is categorized under the broader category of \"Solar Energy Harvesting\" and has a relationship with Category 3, although specific details about Category 3 are not provided.",
+      "size": 4
+    },
+    {
+      "id": "community_7",
+      "community_id": 7,
+      "members": [
+        "physics:Arpita Paul",
+        "physics:Bacham Eswar Reddy",
+        "physics:Parveen Kumar",
+        "physics:My research work focuses on first-principles quantum theory of advanced functional materials. It not only aims at achieving microscopic insights into exotic states of fundamentally interesting materials (frustrated magnets",
+        "physics:multiferroics",
+        "physics:superconductors",
+        "physics:Hund\u2019s metals and topological superconductors)",
+        "physics:but also designing materials of technological importance (multiferroics",
+        "physics:superconductors and transparent conductors)",
+        "physics:Open Quantum Systems",
+        "physics:Quantum Measurements",
+        "physics:non-Hermitian Physics",
+        "physics:Quantum Error Correction",
+        "IIT Jammu PHYSICS Department"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "physics:Arpita Paul",
+          "physics:Bacham Eswar Reddy",
+          "physics:Parveen Kumar"
+        ],
+        "ResearchArea": [
+          "physics:My research work focuses on first-principles quantum theory of advanced functional materials. It not only aims at achieving microscopic insights into exotic states of fundamentally interesting materials (frustrated magnets",
+          "physics:multiferroics",
+          "physics:superconductors",
+          "physics:Hund\u2019s metals and topological superconductors)",
+          "physics:but also designing materials of technological importance (multiferroics",
+          "physics:superconductors and transparent conductors)",
+          "physics:Open Quantum Systems",
+          "physics:Quantum Measurements",
+          "physics:non-Hermitian Physics",
+          "physics:Quantum Error Correction"
+        ],
+        "Department": [
+          "IIT Jammu PHYSICS Department"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Arpita Paul",
+          "target": "physics:My research work focuses on first-principles quantum theory of advanced functional materials. It not only aims at achieving microscopic insights into exotic states of fundamentally interesting materials (frustrated magnets",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Arpita Paul",
+          "target": "physics:multiferroics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Arpita Paul",
+          "target": "physics:superconductors",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Arpita Paul",
+          "target": "physics:Hund\u2019s metals and topological superconductors)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Arpita Paul",
+          "target": "physics:but also designing materials of technological importance (multiferroics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Arpita Paul",
+          "target": "physics:superconductors and transparent conductors)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Arpita Paul",
+          "target": "IIT Jammu PHYSICS Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "physics:Bacham Eswar Reddy",
+          "target": "IIT Jammu PHYSICS Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "physics:Parveen Kumar",
+          "target": "physics:Open Quantum Systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Parveen Kumar",
+          "target": "physics:Quantum Measurements",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Parveen Kumar",
+          "target": "physics:non-Hermitian Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Parveen Kumar",
+          "target": "physics:Quantum Error Correction",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Parveen Kumar",
+          "target": "IIT Jammu PHYSICS Department",
+          "type": "MEMBER_OF"
+        }
+      ],
+      "text": "Community 7 in IIT Jammu EE Department:\n  Department: Department of Physics\n  Faculty: Arpita Paul, Bacham Eswar Reddy, Parveen Kumar\n  ResearchArea: My research work focuses on first-principles quantum theory of advanced functional materials. It not only aims at achieving microscopic insights into exotic states of fundamentally interesting materials (frustrated magnets, multiferroics, superconductors, Hund\u2019s metals and topological superconductors), but also designing materials of technological importance (multiferroics, superconductors and transparent conductors), Open Quantum Systems, Quantum Measurements, non-Hermitian Physics, Quantum Error Correction\n  Relationships: RESEARCHES_IN: 10, MEMBER_OF: 3\n\nSummary: The Community 7 in IIT Jammu's Electrical Engineering Department is a research cluster focused on advanced functional materials. Led by faculty members Arpita Paul, Bacham Eswar Reddy, and Parveen Kumar, this group explores topics such as quantum theory, open quantum systems, non-Hermitian physics, and quantum error correction. Their research aims to design materials with technological importance, including multiferroics, superconductors, and transparent conductors.",
+      "summary": "The Community 7 in IIT Jammu's Electrical Engineering Department is a research cluster focused on advanced functional materials. Led by faculty members Arpita Paul, Bacham Eswar Reddy, and Parveen Kumar, this group explores topics such as quantum theory, open quantum systems, non-Hermitian physics, and quantum error correction. Their research aims to design materials with technological importance, including multiferroics, superconductors, and transparent conductors.",
+      "size": 14
+    },
+    {
+      "id": "community_8",
+      "community_id": 8,
+      "members": [
+        "physics:category:Nano photonics and Quantum Materials",
+        "physics:Plasmonics, Hyperbolic meta-Materials",
+        "physics:Optical topological Quantum materials",
+        "physics:Non-Linear Optics of Quantum Materials",
+        "physics:Condensed matter Physics"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "physics:category:Nano photonics and Quantum Materials"
+        ],
+        "ResearchArea": [
+          "physics:Plasmonics, Hyperbolic meta-Materials",
+          "physics:Optical topological Quantum materials",
+          "physics:Non-Linear Optics of Quantum Materials",
+          "physics:Condensed matter Physics"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Plasmonics, Hyperbolic meta-Materials",
+          "target": "physics:category:Nano photonics and Quantum Materials",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Optical topological Quantum materials",
+          "target": "physics:category:Nano photonics and Quantum Materials",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Non-Linear Optics of Quantum Materials",
+          "target": "physics:category:Nano photonics and Quantum Materials",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Condensed matter Physics",
+          "target": "physics:category:Nano photonics and Quantum Materials",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 8 in IIT Jammu EE Department:\n  ResearchArea: Plasmonics, Hyperbolic meta-Materials, Optical topological Quantum materials, Non-Linear Optics of Quantum Materials, Condensed matter Physics\n  ResearchCategory: Nano photonics and Quantum Materials\n  Relationships: BELONGS_TO_CATEGORY: 4\n\nSummary: The Community 8 in IIT Jammu's Electrical Engineering Department is focused on advanced nanophotonics and quantum materials research. This group primarily works on plasmonics, hyperbolic meta-materials, optical topological quantum materials, non-linear optics of quantum materials, and condensed matter physics. They are categorized under the Nano photonics and Quantum Materials category.",
+      "summary": "The Community 8 in IIT Jammu's Electrical Engineering Department is focused on advanced nanophotonics and quantum materials research. This group primarily works on plasmonics, hyperbolic meta-materials, optical topological quantum materials, non-linear optics of quantum materials, and condensed matter physics. They are categorized under the Nano photonics and Quantum Materials category.",
+      "size": 5
+    },
+    {
+      "id": "community_9",
+      "community_id": 9,
+      "members": [
+        "physics:S. R. K. Chaitanya Indukuri",
+        "physics:Hyperbolic Metamaterial applications",
+        "physics:Single plasmonic nanoparticle spectroscopy",
+        "physics:Optical Topological Quantum materials",
+        "physics:and nonlinear optics of nanomaterials"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "physics:S. R. K. Chaitanya Indukuri"
+        ],
+        "ResearchArea": [
+          "physics:Hyperbolic Metamaterial applications",
+          "physics:Single plasmonic nanoparticle spectroscopy",
+          "physics:Optical Topological Quantum materials",
+          "physics:and nonlinear optics of nanomaterials"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:S. R. K. Chaitanya Indukuri",
+          "target": "physics:Hyperbolic Metamaterial applications",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:S. R. K. Chaitanya Indukuri",
+          "target": "physics:Single plasmonic nanoparticle spectroscopy",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:S. R. K. Chaitanya Indukuri",
+          "target": "physics:Optical Topological Quantum materials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:S. R. K. Chaitanya Indukuri",
+          "target": "physics:and nonlinear optics of nanomaterials",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 9 in IIT Jammu EE Department:\n  Faculty: S. R. K. Chaitanya Indukuri\n  ResearchArea: Hyperbolic Metamaterial applications, Single plasmonic nanoparticle spectroscopy, Optical Topological Quantum materials, and nonlinear optics of nanomaterials\n  Relationships: RESEARCHES_IN: 4\n\nSummary: The Community 9 in IIT Jammu's Electrical Engineering Department is led by Faculty member S. R. K. Chaitanya Indukuri. This group focuses on cutting-edge research areas including Hyperbolic Metamaterial applications, Single plasmonic nanoparticle spectroscopy, Optical Topological Quantum materials, and nonlinear optics of nanomaterials. The faculty member's expertise in these areas is reflected by the four research projects they are involved with (indicated by RESEARCHES_IN: 4).",
+      "summary": "The Community 9 in IIT Jammu's Electrical Engineering Department is led by Faculty member S. R. K. Chaitanya Indukuri. This group focuses on cutting-edge research areas including Hyperbolic Metamaterial applications, Single plasmonic nanoparticle spectroscopy, Optical Topological Quantum materials, and nonlinear optics of nanomaterials. The faculty member's expertise in these areas is reflected by the four research projects they are involved with (indicated by RESEARCHES_IN: 4).",
+      "size": 5
+    },
+    {
+      "id": "community_10",
+      "community_id": 10,
+      "members": [
+        "physics:category:Quantum Physics",
+        "physics:Quantum measurement",
+        "physics:Quantum Error corrections",
+        "physics:Quantum Control",
+        "physics:Non-Hermitian Phyisics"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "physics:category:Quantum Physics"
+        ],
+        "ResearchArea": [
+          "physics:Quantum measurement",
+          "physics:Quantum Error corrections",
+          "physics:Quantum Control",
+          "physics:Non-Hermitian Phyisics"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Quantum measurement",
+          "target": "physics:category:Quantum Physics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Quantum Error corrections",
+          "target": "physics:category:Quantum Physics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Quantum Control",
+          "target": "physics:category:Quantum Physics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Non-Hermitian Phyisics",
+          "target": "physics:category:Quantum Physics",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 10 in IIT Jammu EE Department:\n  ResearchArea: Quantum measurement, Quantum Error corrections, Quantum Control, Non-Hermitian Phyisics\n  ResearchCategory: Quantum Physics\n  Relationships: BELONGS_TO_CATEGORY: 4\n\nSummary: The Community 10 in IIT Jammu's Electrical Engineering Department is focused on Quantum Physics, specifically exploring research areas such as quantum measurement, error corrections, control, and non-Hermitian physics. This group falls under the broader category of Quantum Physics, indicating a concentrated effort within this domain.",
+      "summary": "The Community 10 in IIT Jammu's Electrical Engineering Department is focused on Quantum Physics, specifically exploring research areas such as quantum measurement, error corrections, control, and non-Hermitian physics. This group falls under the broader category of Quantum Physics, indicating a concentrated effort within this domain.",
+      "size": 5
+    },
+    {
+      "id": "community_11",
+      "community_id": 11,
+      "members": [
+        "physics:Venkata Sathish Akella",
+        "physics:Classical Physics",
+        "physics:Statistical Physics",
+        "physics:Quantum Physics",
+        "physics:Electromagnetic Theory",
+        "physics:Computational Physics",
+        "physics:Interfacial Phenomena",
+        "physics:Active Matter (Experimental and Computational)"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "physics:Venkata Sathish Akella"
+        ],
+        "ResearchArea": [
+          "physics:Classical Physics",
+          "physics:Statistical Physics",
+          "physics:Quantum Physics",
+          "physics:Electromagnetic Theory",
+          "physics:Computational Physics",
+          "physics:Interfacial Phenomena",
+          "physics:Active Matter (Experimental and Computational)"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Venkata Sathish Akella",
+          "target": "physics:Classical Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Venkata Sathish Akella",
+          "target": "physics:Statistical Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Venkata Sathish Akella",
+          "target": "physics:Quantum Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Venkata Sathish Akella",
+          "target": "physics:Electromagnetic Theory",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Venkata Sathish Akella",
+          "target": "physics:Computational Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Venkata Sathish Akella",
+          "target": "physics:Interfacial Phenomena",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Venkata Sathish Akella",
+          "target": "physics:Active Matter (Experimental and Computational)",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 11 in IIT Jammu EE Department:\n  Faculty: Venkata Sathish Akella\n  ResearchArea: Classical Physics, Statistical Physics, Quantum Physics, Electromagnetic Theory, Computational Physics, Interfacial Phenomena, Active Matter (Experimental and Computational)\n  Relationships: RESEARCHES_IN: 7\n\nSummary: The Community 11 in IIT Jammu's Electrical Engineering Department is led by Dr. Venkata Sathish Akella, focusing on a diverse range of research areas including Classical Physics, Statistical Physics, Quantum Physics, Electromagnetic Theory, Computational Physics, Interfacial Phenomena, and Active Matter. The group's work spans both experimental and computational aspects of these topics. With 7 relationships listed under \"RESEARCHES_IN\", it appears that the community is actively engaged in various research projects within their designated areas of expertise.",
+      "summary": "The Community 11 in IIT Jammu's Electrical Engineering Department is led by Dr. Venkata Sathish Akella, focusing on a diverse range of research areas including Classical Physics, Statistical Physics, Quantum Physics, Electromagnetic Theory, Computational Physics, Interfacial Phenomena, and Active Matter. The group's work spans both experimental and computational aspects of these topics. With 7 relationships listed under \"RESEARCHES_IN\", it appears that the community is actively engaged in various research projects within their designated areas of expertise.",
+      "size": 8
+    },
+    {
+      "id": "community_12",
+      "community_id": 12,
+      "members": [
+        "physics:category:Biophysics",
+        "physics:Non-eq. statistical Mechanics",
+        "physics:Computational Biology"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "physics:category:Biophysics"
+        ],
+        "ResearchArea": [
+          "physics:Non-eq. statistical Mechanics",
+          "physics:Computational Biology"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Non-eq. statistical Mechanics",
+          "target": "physics:category:Biophysics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Computational Biology",
+          "target": "physics:category:Biophysics",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 12 in IIT Jammu EE Department:\n  ResearchArea: Non-eq. statistical Mechanics, Computational Biology\n  ResearchCategory: Biophysics\n  Relationships: BELONGS_TO_CATEGORY: 2\n\nSummary: The Community 12 in IIT Jammu's Electrical Engineering Department is focused on Biophysics, specifically exploring Non-equilibrium statistical Mechanics and Computational Biology. This group belongs to the Research Category of Biophysics, indicating a strong interdisciplinary connection between electrical engineering and biological systems research. Unfortunately, there is no information provided about key people associated with this community.",
+      "summary": "The Community 12 in IIT Jammu's Electrical Engineering Department is focused on Biophysics, specifically exploring Non-equilibrium statistical Mechanics and Computational Biology. This group belongs to the Research Category of Biophysics, indicating a strong interdisciplinary connection between electrical engineering and biological systems research. Unfortunately, there is no information provided about key people associated with this community.",
+      "size": 3
+    },
+    {
+      "id": "community_13",
+      "community_id": 13,
+      "members": [
+        "physics:Ajeet Kumar Sharma",
+        "physics:Biophysics",
+        "physics:Systems Biology and Physical Bioinformatics",
+        "physics:Thermodynamics and Statistical Physics",
+        "physics:Non-equilibrium statistical mechanics and Biophysics",
+        "physics:Inayat Ullah Irshad",
+        "physics:Mahima",
+        "physics:Computational Biophysics",
+        "physics:Rupal Chauhan",
+        "physics:Non-equilibrium kinetics of biological systems"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "physics:Ajeet Kumar Sharma"
+        ],
+        "ResearchArea": [
+          "physics:Biophysics",
+          "physics:Systems Biology and Physical Bioinformatics",
+          "physics:Thermodynamics and Statistical Physics",
+          "physics:Non-equilibrium statistical mechanics and Biophysics",
+          "physics:Computational Biophysics",
+          "physics:Non-equilibrium kinetics of biological systems"
+        ],
+        "PhDStudent": [
+          "physics:Inayat Ullah Irshad",
+          "physics:Mahima",
+          "physics:Rupal Chauhan"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Ajeet Kumar Sharma",
+          "target": "physics:Biophysics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ajeet Kumar Sharma",
+          "target": "physics:Systems Biology and Physical Bioinformatics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ajeet Kumar Sharma",
+          "target": "physics:Thermodynamics and Statistical Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ajeet Kumar Sharma",
+          "target": "physics:Non-equilibrium statistical mechanics and Biophysics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ajeet Kumar Sharma",
+          "target": "physics:Computational Biophysics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ajeet Kumar Sharma",
+          "target": "physics:Non-equilibrium kinetics of biological systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Inayat Ullah Irshad",
+          "target": "physics:Ajeet Kumar Sharma",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Inayat Ullah Irshad",
+          "target": "physics:Biophysics",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Mahima",
+          "target": "physics:Ajeet Kumar Sharma",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Mahima",
+          "target": "physics:Computational Biophysics",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Rupal Chauhan",
+          "target": "physics:Ajeet Kumar Sharma",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Rupal Chauhan",
+          "target": "physics:Non-equilibrium kinetics of biological systems",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 13 in IIT Jammu EE Department:\n  Faculty: Ajeet Kumar Sharma\n  PhDStudent: Inayat Ullah Irshad, Mahima, Rupal Chauhan\n  ResearchArea: Biophysics, Systems Biology and Physical Bioinformatics, Thermodynamics and Statistical Physics, Non-equilibrium statistical mechanics and Biophysics, Computational Biophysics, Non-equilibrium kinetics of biological systems\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: The Community 13 in IIT Jammu's Electrical Engineering Department is led by faculty member Ajeet Kumar Sharma. This group focuses on interdisciplinary research at the intersection of physics and biology, with key areas including biophysics, systems biology, physical bioinformatics, and non-equilibrium statistical mechanics. The community consists of three PhD students: Inayat Ullah Irshad, Mahima, and Rupal Chauhan, who are supervised by Ajeet Kumar Sharma.",
+      "summary": "The Community 13 in IIT Jammu's Electrical Engineering Department is led by faculty member Ajeet Kumar Sharma. This group focuses on interdisciplinary research at the intersection of physics and biology, with key areas including biophysics, systems biology, physical bioinformatics, and non-equilibrium statistical mechanics. The community consists of three PhD students: Inayat Ullah Irshad, Mahima, and Rupal Chauhan, who are supervised by Ajeet Kumar Sharma.",
+      "size": 10
+    },
+    {
+      "id": "community_14",
+      "community_id": 14,
+      "members": [
+        "physics:Simran Kapoor",
+        "physics:Sathish Akella",
+        "physics:Active particle suspensions in viscoelastic fluids"
+      ],
+      "members_by_type": {
+        "PhDStudent": [
+          "physics:Simran Kapoor"
+        ],
+        "ExternalPerson": [
+          "physics:Sathish Akella"
+        ],
+        "ResearchArea": [
+          "physics:Active particle suspensions in viscoelastic fluids"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Simran Kapoor",
+          "target": "physics:Sathish Akella",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Simran Kapoor",
+          "target": "physics:Active particle suspensions in viscoelastic fluids",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 14 in IIT Jammu EE Department:\n  ExternalPerson: Sathish Akella\n  PhDStudent: Simran Kapoor\n  ResearchArea: Active particle suspensions in viscoelastic fluids\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 14 in IIT Jammu's Electrical Engineering Department is led by External Person Sathish Akella. The group includes PhD student Simran Kapoor, who is supervised by Sathish Akella. Their research focus is on Active particle suspensions in viscoelastic fluids.",
+      "summary": "The Community 14 in IIT Jammu's Electrical Engineering Department is led by External Person Sathish Akella. The group includes PhD student Simran Kapoor, who is supervised by Sathish Akella. Their research focus is on Active particle suspensions in viscoelastic fluids.",
+      "size": 3
+    },
+    {
+      "id": "community_15",
+      "community_id": 15,
+      "members": [
+        "physics:Rahul R Salunkhe",
+        "physics:Solid State Physics",
+        "physics:Material Science",
+        "physics:Nanotechnology",
+        "physics:Ultracapacitor",
+        "physics:Nanoporous Materials",
+        "physics:Solid-state batteries",
+        "physics:Anwar Hussain",
+        "physics:Sodium ion battery and capacitors",
+        "physics:Kavya Prakash Agrim",
+        "physics:Solid-state battery",
+        "physics:Neetu Bansal",
+        "physics:Metal ion capacitors",
+        "physics:Prakash Kumar Pathak",
+        "physics:Sodium Ion Batteries"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "physics:Rahul R Salunkhe"
+        ],
+        "ResearchArea": [
+          "physics:Solid State Physics",
+          "physics:Material Science",
+          "physics:Nanotechnology",
+          "physics:Ultracapacitor",
+          "physics:Nanoporous Materials",
+          "physics:Solid-state batteries",
+          "physics:Sodium ion battery and capacitors",
+          "physics:Solid-state battery",
+          "physics:Metal ion capacitors",
+          "physics:Sodium Ion Batteries"
+        ],
+        "PhDStudent": [
+          "physics:Anwar Hussain",
+          "physics:Kavya Prakash Agrim",
+          "physics:Neetu Bansal",
+          "physics:Prakash Kumar Pathak"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Rahul R Salunkhe",
+          "target": "physics:Solid State Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Rahul R Salunkhe",
+          "target": "physics:Material Science",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Rahul R Salunkhe",
+          "target": "physics:Nanotechnology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Rahul R Salunkhe",
+          "target": "physics:Ultracapacitor",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Rahul R Salunkhe",
+          "target": "physics:Nanoporous Materials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Rahul R Salunkhe",
+          "target": "physics:Solid-state batteries",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Rahul R Salunkhe",
+          "target": "physics:Sodium ion battery and capacitors",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Rahul R Salunkhe",
+          "target": "physics:Solid-state battery",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Rahul R Salunkhe",
+          "target": "physics:Metal ion capacitors",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Rahul R Salunkhe",
+          "target": "physics:Sodium Ion Batteries",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Anwar Hussain",
+          "target": "physics:Rahul R Salunkhe",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Anwar Hussain",
+          "target": "physics:Sodium ion battery and capacitors",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Kavya Prakash Agrim",
+          "target": "physics:Rahul R Salunkhe",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Kavya Prakash Agrim",
+          "target": "physics:Solid-state battery",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Neetu Bansal",
+          "target": "physics:Rahul R Salunkhe",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Neetu Bansal",
+          "target": "physics:Metal ion capacitors",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Prakash Kumar Pathak",
+          "target": "physics:Rahul R Salunkhe",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Prakash Kumar Pathak",
+          "target": "physics:Sodium Ion Batteries",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 15 in IIT Jammu EE Department:\n  Faculty: Rahul R Salunkhe\n  PhDStudent: Anwar Hussain, Kavya Prakash Agrim, Neetu Bansal, Prakash Kumar Pathak\n  ResearchArea: Solid State Physics, Material Science, Nanotechnology, Ultracapacitor, Nanoporous Materials, Solid-state batteries, Sodium ion battery and capacitors, Solid-state battery, Metal ion capacitors, Sodium Ion Batteries\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: The Community 15 in IIT Jammu's Electrical Engineering Department is led by Dr. Rahul R Salunkhe and consists of four PhD students: Anwar Hussain, Kavya Prakash Agrim, Neetu Bansal, and Prakash Kumar Pathak. The group focuses on research areas including solid-state physics, material science, nanotechnology, and energy storage systems such as ultracapacitors, sodium ion batteries, and solid-state batteries. Dr. Salunkhe supervises the PhD students' work in these areas, indicating a collaborative research environment.",
+      "summary": "The Community 15 in IIT Jammu's Electrical Engineering Department is led by Dr. Rahul R Salunkhe and consists of four PhD students: Anwar Hussain, Kavya Prakash Agrim, Neetu Bansal, and Prakash Kumar Pathak. The group focuses on research areas including solid-state physics, material science, nanotechnology, and energy storage systems such as ultracapacitors, sodium ion batteries, and solid-state batteries. Dr. Salunkhe supervises the PhD students' work in these areas, indicating a collaborative research environment.",
+      "size": 15
+    },
+    {
+      "id": "community_16",
+      "community_id": 16,
+      "members": [
+        "physics:Biswanath Chakraborty",
+        "physics:Device Physics",
+        "physics:Optics and Photonics",
+        "physics:Spectroscopy",
+        "physics:Dushali Sharma",
+        "physics:Spectroscopy and optics",
+        "physics:Pragya Joshi",
+        "physics:Single Photon Emitters in Hexagonal Boron Nitride",
+        "physics:Sakal Singla",
+        "physics:Spectroscopy and Device Physics of 2D Materials",
+        "physics:Vishal Suri",
+        "physics:Spectroscopy of Devices",
+        "physics:category:Optics",
+        "physics:Optics",
+        "physics:Device"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "physics:Biswanath Chakraborty"
+        ],
+        "ResearchArea": [
+          "physics:Device Physics",
+          "physics:Optics and Photonics",
+          "physics:Spectroscopy",
+          "physics:Spectroscopy and optics",
+          "physics:Single Photon Emitters in Hexagonal Boron Nitride",
+          "physics:Spectroscopy and Device Physics of 2D Materials",
+          "physics:Spectroscopy of Devices",
+          "physics:Optics",
+          "physics:Device"
+        ],
+        "PhDStudent": [
+          "physics:Dushali Sharma",
+          "physics:Pragya Joshi",
+          "physics:Sakal Singla",
+          "physics:Vishal Suri"
+        ],
+        "ResearchCategory": [
+          "physics:category:Optics"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Biswanath Chakraborty",
+          "target": "physics:Device Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Biswanath Chakraborty",
+          "target": "physics:Optics and Photonics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Biswanath Chakraborty",
+          "target": "physics:Spectroscopy",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Biswanath Chakraborty",
+          "target": "physics:Spectroscopy and optics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Biswanath Chakraborty",
+          "target": "physics:Single Photon Emitters in Hexagonal Boron Nitride",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Biswanath Chakraborty",
+          "target": "physics:Spectroscopy and Device Physics of 2D Materials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Biswanath Chakraborty",
+          "target": "physics:Spectroscopy of Devices",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Spectroscopy",
+          "target": "physics:category:Optics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Dushali Sharma",
+          "target": "physics:Biswanath Chakraborty",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Dushali Sharma",
+          "target": "physics:Spectroscopy and optics",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Pragya Joshi",
+          "target": "physics:Biswanath Chakraborty",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Pragya Joshi",
+          "target": "physics:Single Photon Emitters in Hexagonal Boron Nitride",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Sakal Singla",
+          "target": "physics:Biswanath Chakraborty",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Sakal Singla",
+          "target": "physics:Spectroscopy and Device Physics of 2D Materials",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Vishal Suri",
+          "target": "physics:Biswanath Chakraborty",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Vishal Suri",
+          "target": "physics:Spectroscopy of Devices",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Optics",
+          "target": "physics:category:Optics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Device",
+          "target": "physics:category:Optics",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 16 in IIT Jammu EE Department:\n  Faculty: Biswanath Chakraborty\n  PhDStudent: Dushali Sharma, Pragya Joshi, Sakal Singla, Vishal Suri\n  ResearchArea: Device Physics, Optics and Photonics, Spectroscopy, Spectroscopy and optics, Single Photon Emitters in Hexagonal Boron Nitride, Spectroscopy and Device Physics of 2D Materials, Spectroscopy of Devices, Optics, Device\n  ResearchCategory: Optics\n  Relationships: RESEARCHES_IN: 7, BELONGS_TO_CATEGORY: 3, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: Community 16 in IIT Jammu's Electrical Engineering Department is led by Professor Biswanath Chakraborty. The group consists of PhD students Dushali Sharma, Pragya Joshi, Sakal Singla, and Vishal Suri, who are working under the supervision of Professor Chakraborty on research areas related to Device Physics, Optics and Photonics, and Spectroscopy, particularly focusing on Single Photon Emitters in Hexagonal Boron Nitride. The group's research primarily falls within the category of Optics.",
+      "summary": "Community 16 in IIT Jammu's Electrical Engineering Department is led by Professor Biswanath Chakraborty. The group consists of PhD students Dushali Sharma, Pragya Joshi, Sakal Singla, and Vishal Suri, who are working under the supervision of Professor Chakraborty on research areas related to Device Physics, Optics and Photonics, and Spectroscopy, particularly focusing on Single Photon Emitters in Hexagonal Boron Nitride. The group's research primarily falls within the category of Optics.",
+      "size": 15
+    },
+    {
+      "id": "community_17",
+      "community_id": 17,
+      "members": [
+        "physics:Sanat Kumar Tiwari",
+        "physics:Thermodynamics and transport in strongly coupled plasmas",
+        "physics:Magnetized ultracold plasmas",
+        "physics:Dynamical behavior of flowing plasmas",
+        "physics:Synchronization of dust acoustic waves in dusty plasmas",
+        "physics:Ab Rauoof Wani",
+        "physics:Computational plasma physics",
+        "physics:Farida Batool",
+        "physics:Computational Plasma Physics",
+        "physics:Sachin Sharma",
+        "physics:Experimental Plasma Physics"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "physics:Sanat Kumar Tiwari"
+        ],
+        "ResearchArea": [
+          "physics:Thermodynamics and transport in strongly coupled plasmas",
+          "physics:Magnetized ultracold plasmas",
+          "physics:Dynamical behavior of flowing plasmas",
+          "physics:Synchronization of dust acoustic waves in dusty plasmas",
+          "physics:Computational plasma physics",
+          "physics:Computational Plasma Physics",
+          "physics:Experimental Plasma Physics"
+        ],
+        "PhDStudent": [
+          "physics:Ab Rauoof Wani",
+          "physics:Farida Batool",
+          "physics:Sachin Sharma"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Sanat Kumar Tiwari",
+          "target": "physics:Thermodynamics and transport in strongly coupled plasmas",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Sanat Kumar Tiwari",
+          "target": "physics:Magnetized ultracold plasmas",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Sanat Kumar Tiwari",
+          "target": "physics:Dynamical behavior of flowing plasmas",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Sanat Kumar Tiwari",
+          "target": "physics:Synchronization of dust acoustic waves in dusty plasmas",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Sanat Kumar Tiwari",
+          "target": "physics:Computational plasma physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Sanat Kumar Tiwari",
+          "target": "physics:Computational Plasma Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Sanat Kumar Tiwari",
+          "target": "physics:Experimental Plasma Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "physics:Ab Rauoof Wani",
+          "target": "physics:Sanat Kumar Tiwari",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Ab Rauoof Wani",
+          "target": "physics:Computational plasma physics",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Farida Batool",
+          "target": "physics:Sanat Kumar Tiwari",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Farida Batool",
+          "target": "physics:Computational Plasma Physics",
+          "type": "STUDIES"
+        },
+        {
+          "source": "physics:Sachin Sharma",
+          "target": "physics:Sanat Kumar Tiwari",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "physics:Sachin Sharma",
+          "target": "physics:Experimental Plasma Physics",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 17 in IIT Jammu EE Department:\n  Faculty: Sanat Kumar Tiwari\n  PhDStudent: Ab Rauoof Wani, Farida Batool, Sachin Sharma\n  ResearchArea: Thermodynamics and transport in strongly coupled plasmas, Magnetized ultracold plasmas, Dynamical behavior of flowing plasmas, Synchronization of dust acoustic waves in dusty plasmas, Computational plasma physics, Computational Plasma Physics, Experimental Plasma Physics\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: The Community 17 in IIT Jammu's Electrical Engineering Department is led by Dr. Sanat Kumar Tiwari, a faculty member with expertise in plasma physics. His PhD students, Ab Rauoof Wani, Farida Batool, and Sachin Sharma, are working under his supervision on various research areas related to plasmas, including thermodynamics, magnetized ultracold plasmas, and computational plasma physics. This group is focused on experimental and computational studies of complex plasma phenomena, with a strong emphasis on understanding the behavior of plasmas in different conditions.",
+      "summary": "The Community 17 in IIT Jammu's Electrical Engineering Department is led by Dr. Sanat Kumar Tiwari, a faculty member with expertise in plasma physics. His PhD students, Ab Rauoof Wani, Farida Batool, and Sachin Sharma, are working under his supervision on various research areas related to plasmas, including thermodynamics, magnetized ultracold plasmas, and computational plasma physics. This group is focused on experimental and computational studies of complex plasma phenomena, with a strong emphasis on understanding the behavior of plasmas in different conditions.",
+      "size": 11
+    },
+    {
+      "id": "community_18",
+      "community_id": 18,
+      "members": [
+        "physics:category:Soft matter physics",
+        "physics:Active matter",
+        "physics:Computational & Experimenta"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "physics:category:Soft matter physics"
+        ],
+        "ResearchArea": [
+          "physics:Active matter",
+          "physics:Computational & Experimenta"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "physics:Active matter",
+          "target": "physics:category:Soft matter physics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "physics:Computational & Experimenta",
+          "target": "physics:category:Soft matter physics",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 18 in IIT Jammu EE Department:\n  ResearchArea: Active matter, Computational & Experimenta\n  ResearchCategory: Soft matter physics\n  Relationships: BELONGS_TO_CATEGORY: 2\n\nSummary: The Community 18 in IIT Jammu's Electrical Engineering Department focuses on Soft matter physics, specifically exploring Active matter and Computational & Experimental approaches. This group is categorized under Research Category 2, indicating a connection to the broader research themes within the department. Unfortunately, no specific key people are mentioned in this snippet, but their work likely involves interdisciplinary collaboration between soft matter physicists and computational experts.",
+      "summary": "The Community 18 in IIT Jammu's Electrical Engineering Department focuses on Soft matter physics, specifically exploring Active matter and Computational & Experimental approaches. This group is categorized under Research Category 2, indicating a connection to the broader research themes within the department. Unfortunately, no specific key people are mentioned in this snippet, but their work likely involves interdisciplinary collaboration between soft matter physicists and computational experts.",
+      "size": 3
+    }
+  ]
+}

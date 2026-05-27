@@ -11,21 +11,64 @@ import pickle
 import logging
 from collections import defaultdict
 from difflib import SequenceMatcher
+from typing import Dict, List, Optional, Tuple
 
 import networkx as nx
 
+from departments import get_markdown_dir, get_data_dir, get_department
+
 logger = logging.getLogger(__name__)
 
-MARKDOWN_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "iitjammu_ee_markdown")
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+DEFAULT_DEPT = "ee"
 
 CHUNK_SIZE = 400
 CHUNK_OVERLAP = 80
+MIN_REPEATED_RECORDS = 4
+
+EMAIL_RE = re.compile(r'[\w\.\-]+@[\w\.\-]+\.\w+', re.IGNORECASE)
 
 TITLE_PREFIXES = re.compile(
     r'\b(?:Dr\.?|Prof\.?|Mr\.?|Ms\.?|Mrs\.?|Shri\.?|Professor|Assistant\s+Professor|Associate\s+Professor)\b',
     re.IGNORECASE
 )
+
+SECTION_ALIASES = {
+    "education qualification": "education",
+    "education": "education",
+    "qualification": "education",
+    "academic interests": "academic_interests",
+    "academic interest": "academic_interests",
+    "research interest": "research_interests",
+    "research interests": "research_interests",
+    "areas of interest": "research_interests",
+    "teaching interests": "teaching_interests",
+    "teaching interest": "teaching_interests",
+    "research experience": "research_experience",
+    "work experience": "research_experience",
+    "experience": "research_experience",
+    "supervisor": "supervisor",
+    "supervisors": "supervisor",
+    "guide": "supervisor",
+    "guides": "supervisor",
+    "research area": "research_area",
+    "research areas": "research_area",
+    "research topic": "research_area",
+    "topic": "research_area",
+    "publications": "publications",
+    "other info": "other_info",
+    "brief info": "brief_info",
+    "profile": "brief_info",
+    "about": "brief_info",
+    "contact": "contact",
+    "email": "contact",
+}
+
+NON_RECORD_HEADINGS = {
+    "faculty", "phd students", "phd student", "research", "people", "publications",
+    "education", "education qualification", "academic interests", "research interest",
+    "research interests", "research experience", "other info", "supervisor",
+    "research area", "brief info", "contact", "placements", "programmes", "message",
+}
 
 # Boilerplate patterns to strip from chunks
 BOILERPLATE_PATTERNS = [
@@ -97,6 +140,57 @@ def normalize_name(name: str) -> str:
     name = name.strip('., ')
     name = ' '.join(w.capitalize() for w in name.split())
     return name
+
+
+def _strip_markdown_emphasis(text: str) -> str:
+    text = re.sub(r'^\*+|\*+$', '', text or "")
+    return text.strip()
+
+
+def _deobfuscate_email_text(text: str) -> str:
+    normalized = text or ""
+    normalized = re.sub(r'\[\s*AT\s*\]', '@', normalized, flags=re.IGNORECASE)
+    normalized = re.sub(r'\[\s*DOT\s*\]', '.', normalized, flags=re.IGNORECASE)
+    normalized = re.sub(r'\(\s*AT\s*\)', '@', normalized, flags=re.IGNORECASE)
+    normalized = re.sub(r'\(\s*DOT\s*\)', '.', normalized, flags=re.IGNORECASE)
+    normalized = re.sub(r'\s+at\s+', '@', normalized, flags=re.IGNORECASE)
+    normalized = re.sub(r'\s+dot\s+', '.', normalized, flags=re.IGNORECASE)
+    normalized = re.sub(r'\s*@\s*', '@', normalized)
+    normalized = re.sub(r'\s*\.\s*', '.', normalized)
+    return normalized
+
+
+def _extract_emails(text: str) -> list:
+    """Extract normalized emails from raw or obfuscated source text."""
+    normalized = _deobfuscate_email_text(text)
+    matches = [match.group(0).lower() for match in EMAIL_RE.finditer(normalized)]
+    return list(dict.fromkeys(matches))
+
+
+def _extract_first_email(text: str) -> str:
+    emails = _extract_emails(text)
+    return emails[0] if emails else ""
+
+
+def _canonical_section_key(text: str) -> str:
+    cleaned = _strip_markdown_emphasis(_strip_markdown_link(text or ""))
+    cleaned = re.sub(r'[:\-]+$', '', cleaned).strip().lower()
+    return SECTION_ALIASES.get(cleaned, cleaned)
+
+
+def _is_probable_person_name(text: str) -> bool:
+    cleaned = normalize_name(_strip_markdown_link(text or ""))
+    lowered = cleaned.lower()
+    if not cleaned or _extract_first_email(cleaned):
+        return False
+    if lowered in NON_RECORD_HEADINGS:
+        return False
+    if any(term in lowered for term in ("publication", "conference", "journal", "research", "education", "profile", "brief info")):
+        return False
+    parts = cleaned.split()
+    if len(parts) < 2 or len(parts) > 6:
+        return False
+    return all(any(ch.isalpha() for ch in part) for part in parts)
 
 
 def _initials_match(short: str, full: str) -> bool:
@@ -173,35 +267,122 @@ def _chunk_words(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_O
     return chunks
 
 
-def _chunk_repeated_records(text: str, chunk_size: int = CHUNK_SIZE) -> list:
+def _is_probable_record_heading(heading: str) -> bool:
+    cleaned = _canonical_section_key(heading)
+    if not cleaned or cleaned in NON_RECORD_HEADINGS:
+        return False
+    if len(cleaned) > 100:
+        return False
+    if cleaned.startswith("source url"):
+        return False
+    words = cleaned.split()
+    if len(words) > 10:
+        return False
+    return True
+
+
+def _detect_repeated_heading_level(text: str, min_records: int = MIN_REPEATED_RECORDS) -> Optional[int]:
+    """Auto-detect repeated heading level used for roster-style records."""
+    best_level = None
+    best_score = 0.0
+
+    for level in range(3, 7):
+        blocks = _iter_heading_blocks(text, level=level)
+        if len(blocks) < min_records:
+            continue
+
+        record_like = [heading for heading, _ in blocks if _is_probable_record_heading(heading)]
+        if len(record_like) < min_records:
+            continue
+
+        ratio = len(record_like) / max(len(blocks), 1)
+        score = len(record_like) * ratio
+        if score > best_score:
+            best_score = score
+            best_level = level
+
+    return best_level
+
+
+def _detect_person_record_level(text: str, min_records: int = MIN_REPEATED_RECORDS) -> Optional[int]:
     """
-    Chunk roster-style markdown by repeated `####` records instead of raw word windows.
+    Detect the heading level used for person roster records.
 
-    This preserves complete student/faculty entries for retrieval and avoids
-    partial-count failures on list pages.
+    This is stricter than generic repeated-heading detection: candidate record
+    bodies must look like faculty/student entries, not subsection labels.
     """
-    if text.count("\n#### ") < 4:
-        return []
+    best_level = None
+    best_score = 0.0
+    body_cues = (
+        "assistant professor", "associate professor", "professor",
+        "supervisor", "research area", "research interest", "@iitjammu",
+        "google scholar", "education qualification",
+    )
 
-    parts = re.split(r'(?=^####\s+)', text, flags=re.MULTILINE)
-    if not parts:
-        return []
+    for level in range(3, 7):
+        blocks = _iter_heading_blocks(text, level=level)
+        if len(blocks) < min_records:
+            continue
 
+        valid = []
+        for heading, body in blocks:
+            cleaned = _canonical_section_key(heading)
+            if cleaned in NON_RECORD_HEADINGS:
+                continue
+            if _extract_first_email(heading):
+                continue
+            if TITLE_PREFIXES.search(heading):
+                continue
+            if len(cleaned.split()) > 8:
+                continue
+            body_text = body.lower()
+            if any(cue in body_text for cue in body_cues):
+                valid.append((heading, body))
+
+        if len(valid) < min_records:
+            continue
+
+        ratio = len(valid) / max(len(blocks), 1)
+        avg_body_words = sum(len(body.split()) for _, body in valid) / max(len(valid), 1)
+        score = len(valid) * ratio * max(avg_body_words, 1)
+        if score > best_score:
+            best_score = score
+            best_level = level
+
+    return best_level
+
+
+def _split_prefix_and_records(text: str, level: int) -> Tuple[str, List[str]]:
+    marker = "#" * level
+    parts = re.split(rf'(?=^{re.escape(marker)}(?!#)\s+)', text, flags=re.MULTILINE)
     prefix = ""
     records = []
     for part in parts:
         part = part.strip()
         if not part:
             continue
-        if part.startswith("#### "):
+        if re.match(rf'^{re.escape(marker)}(?!#)\s+', part):
             records.append(part)
         elif not prefix:
             prefix = part
         else:
             prefix = f"{prefix}\n\n{part}"
+    return prefix, records
 
-    if len(records) < 4:
-        return []
+
+def _chunk_repeated_records(text: str, chunk_size: int = CHUNK_SIZE) -> Tuple[List[str], Dict]:
+    """
+    Chunk roster-style markdown by repeated heading records instead of raw word windows.
+
+    Works across departments by auto-detecting the repeated record heading level.
+    """
+    level = _detect_repeated_heading_level(text)
+    if level is None:
+        return [], {}
+
+    prefix, records = _split_prefix_and_records(text, level)
+    if len(records) < MIN_REPEATED_RECORDS:
+        return [], {}
 
     chunks = []
     current_parts = [prefix] if prefix else []
@@ -228,64 +409,291 @@ def _chunk_repeated_records(text: str, chunk_size: int = CHUNK_SIZE) -> list:
     if current_parts:
         chunks.append("\n\n".join(current_parts).strip())
 
-    return [chunk for chunk in chunks if chunk]
+    return [chunk for chunk in chunks if chunk], {
+        "strategy": "repeated_heading_records",
+        "record_heading_level": level,
+        "record_count": len(records),
+    }
+
+
+def _split_structural_blocks(text: str) -> list:
+    """Split markdown into structural blocks while keeping headings and tables intact."""
+    blocks = []
+    current = []
+    lines = text.splitlines()
+
+    def flush():
+        if current:
+            block = "\n".join(current).strip()
+            if block:
+                blocks.append(block)
+            current.clear()
+
+    idx = 0
+    while idx < len(lines):
+        line = lines[idx]
+        stripped = line.strip()
+        if not stripped:
+            flush()
+            idx += 1
+            continue
+
+        if stripped.startswith("|"):
+            flush()
+            table_lines = []
+            while idx < len(lines) and lines[idx].strip().startswith("|"):
+                table_lines.append(lines[idx].strip())
+                idx += 1
+            blocks.append("\n".join(table_lines).strip())
+            continue
+
+        current.append(line)
+        idx += 1
+
+    flush()
+    return blocks
+
+
+def _chunk_structural_blocks(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> Tuple[List[str], Dict]:
+    blocks = _split_structural_blocks(text)
+    if len(blocks) <= 1:
+        return [], {}
+
+    chunks = []
+    current_blocks = []
+    current_words = 0
+
+    for block in blocks:
+        block_words = len(block.split())
+        if block_words > chunk_size:
+            if current_blocks:
+                chunks.append("\n\n".join(current_blocks).strip())
+                current_blocks = []
+                current_words = 0
+            chunks.extend(_chunk_words(block, chunk_size, overlap))
+            continue
+
+        if current_blocks and current_words + block_words > chunk_size:
+            chunks.append("\n\n".join(current_blocks).strip())
+            current_blocks = [block]
+            current_words = block_words
+        else:
+            current_blocks.append(block)
+            current_words += block_words
+
+    if current_blocks:
+        chunks.append("\n\n".join(current_blocks).strip())
+
+    return [chunk for chunk in chunks if chunk], {
+        "strategy": "structural_blocks",
+        "block_count": len(blocks),
+    }
+
+
+def smart_chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list:
+    """Chunk markdown using the most structure-preserving strategy available."""
+    words = text.split()
+    if len(words) <= chunk_size:
+        return [{"text": text, "meta": {"strategy": "single_chunk"}}]
+
+    record_chunks, record_meta = _chunk_repeated_records(text, chunk_size=chunk_size)
+    if record_chunks:
+        return [{"text": chunk, "meta": record_meta} for chunk in record_chunks]
+
+    sections = [s.strip() for s in re.split(r'(?=^#{2,6}\s+)', text, flags=re.MULTILINE) if s.strip()]
+    if len(sections) > 1:
+        chunks = []
+        current_sections = []
+        current_words = 0
+
+        for section in sections:
+            section_words = len(section.split())
+            if section_words > chunk_size:
+                if current_sections:
+                    chunks.append("\n\n".join(current_sections).strip())
+                    current_sections = []
+                    current_words = 0
+                blocks, block_meta = _chunk_structural_blocks(section, chunk_size, overlap)
+                if blocks:
+                    chunks.extend(blocks)
+                else:
+                    chunks.extend(_chunk_words(section, chunk_size, overlap))
+                continue
+
+            if current_sections and current_words + section_words > chunk_size:
+                chunks.append("\n\n".join(current_sections).strip())
+                current_sections = [section]
+                current_words = section_words
+            else:
+                current_sections.append(section)
+                current_words += section_words
+
+        if current_sections:
+            chunks.append("\n\n".join(current_sections).strip())
+
+        return [{"text": chunk, "meta": {"strategy": "heading_sections", "section_count": len(sections)}} for chunk in chunks if chunk]
+
+    block_chunks, block_meta = _chunk_structural_blocks(text, chunk_size, overlap)
+    if block_chunks:
+        return [{"text": chunk, "meta": block_meta} for chunk in block_chunks]
+
+    return [{"text": chunk, "meta": {"strategy": "word_window"}} for chunk in _chunk_words(text, chunk_size, overlap)]
 
 
 def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list:
-    """Chunk markdown without splitting structured heading sections when possible."""
-    words = text.split()
-    if len(words) <= chunk_size:
-        return [text]
+    """Compatibility wrapper returning only chunk text."""
+    return [item["text"] for item in smart_chunk_text(text, chunk_size=chunk_size, overlap=overlap)]
 
-    record_chunks = _chunk_repeated_records(text, chunk_size=chunk_size)
-    if record_chunks:
-        return record_chunks
 
-    sections = [s.strip() for s in re.split(r'(?=^#{2,6}\s+)', text, flags=re.MULTILINE) if s.strip()]
-    if len(sections) <= 1:
-        return _chunk_words(text, chunk_size, overlap)
+def _strip_markdown_link(text: str) -> str:
+    """Return the visible text from a markdown link, or the raw text if not linked."""
+    text = (text or "").strip()
+    match = re.match(r'^\[([^\]]+)\]\([^)]+\)$', text)
+    if match:
+        return match.group(1).strip()
+    return text
 
-    chunks = []
-    current_sections = []
-    current_words = 0
 
-    for section in sections:
-        section_words = len(section.split())
-        if section_words > chunk_size:
-            if current_sections:
-                chunks.append("\n\n".join(current_sections))
-                current_sections = []
-                current_words = 0
-            chunks.extend(_chunk_words(section, chunk_size, overlap))
+def _clean_section_heading(text: str) -> str:
+    """Normalize markdown section headings extracted from faculty profile pages."""
+    cleaned = _strip_markdown_link(text or "")
+    cleaned = re.sub(r'^\*+|\*+$', '', cleaned).strip()
+    return cleaned
+
+
+def _iter_heading_blocks(content: str, level: int) -> list:
+    """
+    Split markdown into exact heading-level blocks.
+
+    `####` matches only level-4 headings, not `#####` or `######`.
+    """
+    marker = "#" * level
+    pattern = re.compile(rf'(?m)^{re.escape(marker)}(?!#)\s+(.+?)\s*$')
+    matches = list(pattern.finditer(content))
+    blocks = []
+    for idx, match in enumerate(matches):
+        start = match.end()
+        end = matches[idx + 1].start() if idx + 1 < len(matches) else len(content)
+        heading = match.group(1).strip()
+        body = content[start:end].strip()
+        blocks.append((heading, body))
+    return blocks
+
+
+def _extract_section_map_from_body(block: str) -> dict:
+    """Extract logical sections from a person-profile or roster record body."""
+    sections = defaultdict(list)
+    current_key = "_body"
+
+    for raw_line in block.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        if re.match(r'^-?\s*!\[.*?\]\(.*?\)\s*$', line):
             continue
 
-        if current_sections and current_words + section_words > chunk_size:
-            chunks.append("\n\n".join(current_sections))
-            current_sections = [section]
-            current_words = section_words
-        else:
-            current_sections.append(section)
-            current_words += section_words
+        heading_match = re.match(r'^#{4,6}\s+(.+)$', line)
+        if heading_match:
+            heading_text = heading_match.group(1)
+            if _extract_first_email(heading_text):
+                sections["contact"].append(_extract_first_email(heading_text))
+                continue
+            possible_key = _canonical_section_key(heading_text)
+            if possible_key in SECTION_ALIASES.values():
+                current_key = possible_key
+                continue
+            line = heading_text
 
-    if current_sections:
-        chunks.append("\n\n".join(current_sections))
+        possible_label = _canonical_section_key(line)
+        if possible_label in SECTION_ALIASES.values() and len(line.split()) <= 4:
+            current_key = possible_label
+            continue
 
-    return chunks
+        sections[current_key].append(line)
+
+    return {
+        key: "\n".join(values).strip()
+        for key, values in sections.items()
+        if values
+    }
 
 
-def _extract_canonical_faculty(markdown_dir: str) -> set:
-    """Extract the 24 canonical faculty names from ee_faculty-list.html.md."""
-    flist_path = os.path.join(markdown_dir, "ee_faculty-list.html.md")
-    if not os.path.exists(flist_path):
-        logger.warning("ee_faculty-list.html.md not found; cannot build canonical faculty set.")
+def _extract_named_sections(content: str, levels: tuple = (4,)) -> dict:
+    """Collect heading blocks into a canonical section map."""
+    sections = {}
+    for level in levels:
+        for heading, body in _iter_heading_blocks(content, level=level):
+            key = _canonical_section_key(heading)
+            if body and key not in sections:
+                sections[key] = body.strip()
+    return sections
+
+
+def infer_document_kind(filename: str, content: str) -> str:
+    """Infer document type using both filename and content structure."""
+    fn = (filename or "").lower()
+    text = (content or "").lower()
+    source_line = next((line.lower() for line in content.splitlines()[:3] if "source url" in line.lower()), "")
+
+    if fn.endswith(".pdf.md"):
+        return "generic"
+    if "__" in fn and ("assistant professor" in text or "associate professor" in text or "research interests" in text):
+        return "faculty_profile"
+    if "faculty-list" in fn and "__" not in fn:
+        return "faculty_roster"
+    if "phd-list" in fn or ("research area" in text and "supervisor" in text and _detect_person_record_level(content) is not None):
+        return "phd_roster"
+    if "funded-projects" in fn or "research-projects" in fn:
+        return "funded_projects"
+    if "patent" in fn:
+        return "patents"
+    if "startup" in fn:
+        return "startups"
+    if "research-areas" in fn or "research-and-facilities" in fn:
+        return "research_areas"
+    if "placement-industry" in fn:
+        return "placement_industry"
+    if "placement-academia" in fn:
+        return "placement_academia"
+    if "hod" in fn or "message-from-deparment-hod" in fn or "message-from-head" in fn:
+        return "hod_message"
+    if "/faculty-list/~" in source_line or "/faculty/" in source_line:
+        return "faculty_profile"
+    if "/phd-list" in source_line:
+        return "phd_roster"
+    return "generic"
+
+
+def _extract_canonical_faculty(markdown_dir: str, dept_code: str = "ee") -> set:
+    """Extract canonical faculty names from faculty-list file."""
+    flist_file = None
+    if os.path.exists(markdown_dir):
+        candidates = sorted(
+            f for f in os.listdir(markdown_dir)
+            if "faculty-list" in f.lower() and f.endswith(".md")
+        )
+        for f in candidates:
+            if "__" not in f:
+                flist_file = f
+                break
+        if not flist_file and candidates:
+            flist_file = candidates[0]
+    
+    if not flist_file:
+        logger.warning(f"No faculty-list file found in {markdown_dir}; cannot build canonical faculty set.")
         return set()
+        
+    flist_path = os.path.join(markdown_dir, flist_file)
     with open(flist_path, "r", encoding="utf-8") as f:
         content = f.read()
-    names = re.findall(r'####\s*\[([^\]]+)\]', content)
+
+    level = _detect_person_record_level(content) or _detect_repeated_heading_level(content) or 4
     canonical = set()
-    for n in names:
-        canonical.add(normalize_name(n.strip()))
-    logger.info(f"Canonical faculty registry: {len(canonical)} names")
+    for raw_heading, _ in _iter_heading_blocks(content, level=level):
+        name = normalize_name(_strip_markdown_link(raw_heading))
+        if len(name.split()) >= 2:
+            canonical.add(name)
+    logger.info(f"Canonical faculty registry for {dept_code}: {len(canonical)} names")
     return canonical
 
 
@@ -351,20 +759,37 @@ class EntityResolver:
 
 
 class KnowledgeGraphBuilder:
-    def __init__(self, markdown_dir: str = MARKDOWN_DIR):
-        self.markdown_dir = markdown_dir
-        self._canonical_faculty = _extract_canonical_faculty(markdown_dir)
+    def __init__(self, dept_code: str = DEFAULT_DEPT, markdown_dir: str = None):
+        # Handle cases where a directory path is passed as the first positional argument (e.g. in test suites)
+        if dept_code.startswith("/") or os.path.isdir(dept_code):
+            markdown_dir = dept_code
+            dept_code = DEFAULT_DEPT
+            
+        self.dept_code = dept_code
+        self.dept_config = get_department(dept_code)
+        self.markdown_dir = markdown_dir or get_markdown_dir(dept_code)
+        self._canonical_faculty = _extract_canonical_faculty(self.markdown_dir, dept_code)
         self.graph = nx.DiGraph()
         self.resolver = EntityResolver(self._canonical_faculty)
         self.chunks = []
 
     def _add_node(self, node_id: str, label: str, **properties):
+        dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
+        if self.dept_code != "ee" and node_id != dept_id and not node_id.startswith(f"{self.dept_code}:"):
+            node_id = f"{self.dept_code}:{node_id}"
+        properties["department"] = self.dept_code
         if self.graph.has_node(node_id):
             self.graph.nodes[node_id].update(properties)
         else:
             self.graph.add_node(node_id, label=label, **properties)
+        return node_id
 
     def _add_edge(self, source: str, target: str, rel_type: str, **properties):
+        dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
+        if self.dept_code != "ee" and source != dept_id and not source.startswith(f"{self.dept_code}:"):
+            source = f"{self.dept_code}:{source}"
+        if self.dept_code != "ee" and target != dept_id and not target.startswith(f"{self.dept_code}:"):
+            target = f"{self.dept_code}:{target}"
         if not self.graph.has_node(source) or not self.graph.has_node(target):
             return
         if self.graph.has_edge(source, target):
@@ -373,32 +798,38 @@ class KnowledgeGraphBuilder:
         self.graph.add_edge(source, target, type=rel_type, **properties)
 
     def _create_document_node(self, filename: str, content: str) -> str:
-        source_url = "https://iitjammu.ac.in/ee"
+        source_url = self.dept_config["base_url"]
         url_match = re.search(r'# Source URL:\s*([^\n]+)', content)
         if url_match:
             source_url = url_match.group(1).strip()
 
         clean_title = (filename.replace(".html.md", "").replace(".md", "")
-            .replace("ee_", "").replace("_", " ").title())
+            .replace(f"{self.dept_code}_", "").replace("_", " ").title())
 
-        doc_id = f"doc:{filename}"
-        self._add_node(doc_id, "Document", title=clean_title,
+        doc_id = self._add_node(f"doc:{filename}", "Document", title=clean_title,
             filename=filename, source_url=source_url)
 
         # Clean content before chunking — remove boilerplate
         clean_content = clean_content_for_chunks(content)
-        text_chunks = chunk_text(clean_content)
+        chunk_items = smart_chunk_text(clean_content)
+        if chunk_items:
+            self.graph.nodes[doc_id]["chunk_strategy"] = chunk_items[0]["meta"].get("strategy", "unknown")
         
-        for idx, chunk_text_str in enumerate(text_chunks):
+        for idx, chunk_item in enumerate(chunk_items):
+            chunk_text_str = chunk_item["text"]
+            chunk_meta = chunk_item.get("meta", {})
             if len(chunk_text_str.strip()) < 30:
                 continue
             chunk_id = f"chunk_{filename}_{idx}"
             self._add_node(chunk_id, "TextChunk", text=chunk_text_str,
-                doc_filename=filename, chunk_index=idx, source_url=source_url)
+                doc_filename=filename, chunk_index=idx, source_url=source_url,
+                chunk_strategy=chunk_meta.get("strategy", "unknown"))
             self._add_edge(doc_id, chunk_id, "HAS_CHUNK")
             self.chunks.append((chunk_id, chunk_text_str, {
                 "doc": filename, "url": source_url,
-                "title": clean_title, "chunk_idx": idx
+                "title": clean_title, "chunk_idx": idx,
+                "chunk_strategy": chunk_meta.get("strategy", "unknown"),
+                "chunk_meta": chunk_meta,
             }))
         return doc_id
 
@@ -406,55 +837,75 @@ class KnowledgeGraphBuilder:
         lines = [l.strip() for l in content.splitlines()]
         faculty_key = filename.split("__")[-1].replace(".md", "")
         faculty_name = normalize_name(faculty_key)
+        heading_found = False
+        section_map = _extract_named_sections(content, levels=(4, 5))
 
-        for line in lines:
-            if (line.startswith("- ") and len(line) > 2 and "@" not in line
-                    and "Professor" not in line and "Home" not in line
-                    and "Faculty" not in line and "http" not in line
-                    and len(line) < 60):
-                candidate = line[2:].strip()
-                if candidate and not candidate.startswith("[") and not candidate.startswith("#"):
-                    faculty_name = normalize_name(candidate)
-                    break
+        for line in lines[:40]:
+            heading_match = re.match(r'^#{3,4}(?!#)\s+\**([^*\n][^\n]*?)\**\s*$', line)
+            if not heading_match:
+                continue
+            candidate = heading_match.group(1).strip()
+            if _is_probable_person_name(candidate):
+                faculty_name = normalize_name(_strip_markdown_link(candidate))
+                heading_found = True
+                break
+
+        if not heading_found:
+            for line in lines:
+                if (line.startswith("- ") and len(line) > 2 and "@" not in line
+                        and "Professor" not in line and "Home" not in line
+                        and "Faculty" not in line and "http" not in line
+                        and len(line) < 60):
+                    candidate = line[2:].strip()
+                    if candidate and not candidate.startswith("[") and not candidate.startswith("#"):
+                        faculty_name = normalize_name(candidate)
+                        break
 
         faculty_name = self.resolver.resolve(faculty_name)
 
-        email = ""
-        for line in lines:
-            if "@" in line and "." in line:
-                m = re.search(r'[\w\.\-]+@[\w\.\-]+\.\w+', line)
-                if m:
-                    email = m.group(0)
-                    break
+        email = _extract_first_email(content)
 
         designation = "Faculty Member"
-        for line in lines:
+        for line in lines[:20]:
             if any(kw in line for kw in ["Professor", "Lecturer"]):
-                desg = line.replace("-", "").strip()
+                desg = re.sub(r'Research Experience.*$', '', line.replace("-", "").strip(), flags=re.IGNORECASE)
                 if len(desg) < 80:
                     designation = desg
                     break
 
-        edu_match = re.search(r'##### Education Qualification\n+(.*?)(?=\n+#####|$)', content, re.DOTALL)
-        education = edu_match.group(1).strip()[:500] if edu_match else ""
+        education = section_map.get("education", "")[:500]
 
-        # Extract research experience (postdocs, international positions)
-        research_experience = ""
-        exp_match = re.search(
-            r'(?:Research Experience|Research\s*experience|Post[- ]?[Dd]octoral|Work Experience)'
-            r'\s*\n+(.*?)(?=\n+#####|\n+Teaching|\n+Research Interests|$)',
-            content, re.DOTALL | re.IGNORECASE
-        )
-        if exp_match:
-            research_experience = exp_match.group(1).strip()[:600]
+        research_experience = section_map.get("research_experience", "")[:600]
+        if not research_experience:
+            research_experience = section_map.get("brief_info", "")[:600]
 
-        interests_match = re.search(
-            r'Research Interests:\s*\n*(.*?)(?=\n+Teaching Interests:|\n+#####|$)', content, re.DOTALL)
+        interest_sources = [
+            section_map.get("research_interests", ""),
+            section_map.get("academic_interests", ""),
+            section_map.get("brief_info", ""),
+        ]
         research_interests = []
-        if interests_match:
-            interests_str = interests_match.group(1).strip()
-            research_interests = [i.strip() for i in re.split(r'[,;\n]', interests_str)
-                                  if i.strip() and len(i.strip()) > 3]
+        for source_text in interest_sources:
+            if not source_text:
+                continue
+            candidate_text = source_text
+            ri_match = re.search(
+                r'Research Interests?\s*:?\s*(.*?)(?:\*\*Teaching Interests:?\*\*|Teaching Interests:?|$)',
+                source_text,
+                re.DOTALL | re.IGNORECASE,
+            )
+            if ri_match:
+                candidate_text = ri_match.group(1).strip()
+
+            parts = [
+                re.sub(r'^\*+|\*+$', '', item).strip(" -:.")
+                for item in re.split(r'[,;\n]', candidate_text)
+            ]
+            for part in parts:
+                if len(part) > 3 and part.lower() not in {"research interests", "teaching interests"}:
+                    research_interests.append(part)
+            if research_interests:
+                break
 
         self._add_node(faculty_name, "Faculty", name=faculty_name, email=email,
             designation=designation, education=education,
@@ -468,28 +919,35 @@ class KnowledgeGraphBuilder:
                 self._add_edge(faculty_name, interest_clean, "RESEARCHES_IN")
 
     def _parse_phd_list(self, filename: str, content: str, doc_id: str):
-        student_blocks = re.findall(
-            r'#### ([^\n]+)\n+(.*?)(?=#### |Source URL:|$)', content, re.DOTALL)
+        level = _detect_person_record_level(content) or _detect_repeated_heading_level(content) or 4
+        student_blocks = _iter_heading_blocks(content, level=level)
 
-        for name, block in student_blocks:
-            student_name = name.strip()
+        for raw_heading, block in student_blocks:
+            student_name = _strip_markdown_link(raw_heading).strip()
             if not student_name or len(student_name) < 2:
                 continue
 
-            sup_match = re.search(r'\*\*Supervisor\*\*\n+([^\n]+)', block, re.IGNORECASE)
+            section_map = _extract_section_map_from_body(block)
             supervisors = []
-            if sup_match:
-                sup_text = sup_match.group(1).strip()
-                sup_text = TITLE_PREFIXES.sub('', sup_text)
-                raw_sups = re.split(r'\s*(?:,\s*|\s+[Aa]nd\s+|\s+\&\s+)\s*', sup_text)
-                supervisors = [self.resolver.resolve(s) for s in raw_sups
-                              if s.strip() and len(s.strip()) > 2]
+            research_area = _strip_markdown_emphasis(_strip_markdown_link(section_map.get("research_area", "")))
+            email = _extract_first_email("\n".join(section_map.values()) or block)
 
-            area_match = re.search(r'Research Area\n+([^\n]+)', block, re.IGNORECASE)
-            research_area = area_match.group(1).strip() if area_match else ""
+            sup_text = section_map.get("supervisor", "")
+            sup_text = _strip_markdown_link(sup_text)
+            sup_text = re.sub(r'\(co-?supervisor\)', '', sup_text, flags=re.IGNORECASE).strip()
+            sup_text = re.sub(r'\s+', ' ', sup_text)
+            sup_text = _strip_markdown_emphasis(sup_text).strip()
+            sup_text = TITLE_PREFIXES.sub('', sup_text)
+            if sup_text:
+                raw_sups = re.split(r'\s*(?:,\s*|\s+[Aa]nd\s+|\s+\&\s+)\s*', sup_text)
+                supervisors = [
+                    self.resolver.resolve(s)
+                    for s in raw_sups
+                    if s.strip() and len(s.strip()) > 2
+                ]
 
             self._add_node(student_name, "PhDStudent", name=student_name,
-                research_area=research_area, source_file=filename)
+                research_area=research_area, email=email, source_file=filename)
             self._add_edge(student_name, doc_id, "SOURCE_DOCUMENT")
 
             for sup in supervisors:
@@ -627,21 +1085,28 @@ class KnowledgeGraphBuilder:
                     self._add_edge(sub_area, cat_id, "BELONGS_TO_CATEGORY")
 
     def _parse_faculty_list(self, filename: str, content: str, doc_id: str):
-        faculty_entries = re.findall(
-            r'####\s*\[([^\]]+)\]\(([^\)]+)\)\s*\n+\s*(.*?)(?=####|\Z)', content, re.DOTALL)
-        for idx, (name, profile_url, snippet) in enumerate(faculty_entries, start=1):
+        level = _detect_person_record_level(content) or _detect_repeated_heading_level(content) or 4
+        faculty_entries = _iter_heading_blocks(content, level=level)
+        for idx, (raw_heading, snippet) in enumerate(faculty_entries, start=1):
+            raw_heading = raw_heading.strip()
+            link_match = re.match(r'^\[([^\]]+)\]\(([^)]+)\)$', raw_heading)
+            if link_match:
+                name, profile_url = link_match.groups()
+            else:
+                name = _strip_markdown_link(raw_heading)
+                url_match = re.search(r'https?://[^\s)]+', snippet)
+                profile_url = url_match.group(0) if url_match else ""
+
             faculty_name = self.resolver.resolve(name.strip())
             designation = ""
-            for kw in ["Professor", "Lecturer"]:
-                if kw in snippet:
-                    desg_match = re.search(rf'({kw}[^\n]*)', snippet)
-                    if desg_match:
-                        designation = desg_match.group(1).strip()[:60]
-                        break
-            self._add_node(faculty_name, "Faculty", name=faculty_name,
+            for line in [l.strip() for l in snippet.splitlines()[:12]]:
+                if any(kw in line for kw in ["Professor", "Lecturer"]):
+                    designation = re.sub(r'Research Experience.*$', '', line, flags=re.IGNORECASE).strip()[:60]
+                    break
+            prefixed_faculty = self._add_node(faculty_name, "Faculty", name=faculty_name,
                 profile_url=profile_url, faculty_order=idx)
             if designation:
-                self.graph.nodes[faculty_name]['designation'] = designation
+                self.graph.nodes[prefixed_faculty]['designation'] = designation
             self._add_edge(faculty_name, doc_id, "SOURCE_DOCUMENT")
 
     def _parse_hod(self, filename: str, content: str, doc_id: str):
@@ -653,17 +1118,17 @@ class KnowledgeGraphBuilder:
         if hod_match:
             hod_name = self.resolver.resolve(hod_match.group(1).strip())
             self._add_node(hod_name, "Faculty", name=hod_name, is_hod=True,
-                          designation="Head of Department (HoD), Associate Professor")
+                           designation="Head of Department (HoD)")
             self._add_edge(hod_name, doc_id, "SOURCE_DOCUMENT")
-            dept_id = "IIT Jammu EE Department"
+            dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
             self._add_node(dept_id, "Department",
-                name="Department of Electrical Engineering", institution="IIT Jammu")
+                name=self.dept_config["full_name"], institution="IIT Jammu")
             self._add_edge(hod_name, dept_id, "HOD_OF")
 
             # Extract official HoD email and store on department node
-            hod_email_match = re.search(r'hod\.ee@iitjammu\.ac\.in', content)
+            hod_email_match = re.search(r'hod\.[\w\.\-]+@iitjammu\.ac\.in', content, re.IGNORECASE)
             if hod_email_match:
-                self.graph.nodes[dept_id]['hod_official_email'] = 'hod.ee@iitjammu.ac.in'
+                self.graph.nodes[dept_id]['hod_official_email'] = hod_email_match.group(0).lower()
 
     def _parse_placement_data(self, filename: str, content: str, doc_id: str):
         """Parse placement industry data into structured PlacementData nodes."""
@@ -778,56 +1243,72 @@ class KnowledgeGraphBuilder:
         if not os.path.exists(self.markdown_dir):
             raise FileNotFoundError(f"Markdown directory not found: {self.markdown_dir}")
 
+        # Skip the combined file for any department
         filenames = [f for f in os.listdir(self.markdown_dir)
-                     if f.endswith(".md") and f != "00_combined_ee_site.md"
+                     if f.endswith(".md") and not f.startswith("00_combined")
                      and not f.endswith(".json")]
 
         logger.info(f"Processing {len(filenames)} markdown files...")
 
         doc_map = {}
+        doc_kinds = {}
         for filename in sorted(filenames):
             filepath = os.path.join(self.markdown_dir, filename)
             with open(filepath, "r", encoding="utf-8") as f:
                 content = f.read()
             doc_id = self._create_document_node(filename, content)
             doc_map[filename] = (doc_id, content)
+            kind = infer_document_kind(filename, content)
+            doc_kinds[filename] = kind
+            self.graph.nodes[doc_id]["doc_kind"] = kind
 
         logger.info(f"Phase 1: Created {len(doc_map)} document nodes with text chunks.")
 
+        # Find faculty list by pattern instead of exact name
+        faculty_list_file = None
+        for fn in doc_map:
+            if doc_kinds.get(fn) == "faculty_roster":
+                faculty_list_file = fn
+                break
+
         # Parse faculty list FIRST to register canonical names
-        if "ee_faculty-list.html.md" in doc_map:
-            doc_id, content = doc_map["ee_faculty-list.html.md"]
-            self._parse_faculty_list("ee_faculty-list.html.md", content, doc_id)
-            logger.info("Phase 1.5: Parsed faculty list (canonical registry populated).")
+        if faculty_list_file:
+            doc_id, content = doc_map[faculty_list_file]
+            self._parse_faculty_list(faculty_list_file, content, doc_id)
+            logger.info(f"Phase 1.5: Parsed faculty list ({faculty_list_file}) (canonical registry populated).")
 
         for filename, (doc_id, content) in doc_map.items():
-            if "faculty.html_faculty__" in filename:
+            doc_kind = doc_kinds.get(filename, "generic")
+            if doc_kind == "faculty_profile":
                 self._parse_faculty_profile(filename, content, doc_id)
-            elif filename == "ee_phd-list.html.md":
+            elif doc_kind == "phd_roster":
                 self._parse_phd_list(filename, content, doc_id)
-            elif filename == "ee_funded-projects.html.md":
+            elif doc_kind == "funded_projects":
                 self._parse_funded_projects(filename, content, doc_id)
-            elif filename == "ee_patent.html.md":
+            elif doc_kind == "patents":
                 self._parse_patents(filename, content, doc_id)
-            elif filename == "ee_startups.html.md":
+            elif doc_kind == "startups":
                 self._parse_startups(filename, content, doc_id)
-            elif filename == "ee_research-areas.html.md":
+            elif doc_kind == "research_areas":
                 self._parse_research_areas(filename, content, doc_id)
-            elif filename == "ee_faculty-list.html.md":
+            elif faculty_list_file and filename == faculty_list_file:
                 pass  # Already parsed above
-            elif filename == "ee_hod.html.md":
+            elif doc_kind == "hod_message":
                 self._parse_hod(filename, content, doc_id)
-            elif filename == "ee_placement-industry.html.md":
+            elif doc_kind == "placement_industry":
                 self._parse_placement_data(filename, content, doc_id)
-            elif filename == "ee_placement-academia.html.md":
+            elif doc_kind == "placement_academia":
                 self._parse_higher_studies(filename, content, doc_id)
-            if filename in ("ee.md", "ee_index.html.md"):
+            
+            # Labs (usually in index/home/dept main page)
+            if filename in (f"{self.dept_code}.md", f"{self.dept_code}_index.html.md", "index.md"):
                 self._parse_labs(content, doc_id)
 
         logger.info(f"Phase 2: Entity extraction complete.")
 
         # Cross-link faculty to research areas from PhD supervisions
         faculty_nodes = [n for n, d in self.graph.nodes(data=True) if d.get('label') == 'Faculty']
+        phd_nodes = [n for n, d in self.graph.nodes(data=True) if d.get('label') == 'PhDStudent']
         for faculty in faculty_nodes:
             students = [e[0] for e in self.graph.in_edges(faculty)
                        if self.graph.edges[e[0], faculty].get('type') == 'SUPERVISED_BY']
@@ -837,16 +1318,35 @@ class KnowledgeGraphBuilder:
                         if not self.graph.has_edge(faculty, target):
                             self._add_edge(faculty, target, "RESEARCHES_IN")
 
-        dept_id = "IIT Jammu EE Department"
+        dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
         if not self.graph.has_node(dept_id):
             self._add_node(dept_id, "Department",
-                name="Department of Electrical Engineering",
-                institution="IIT Jammu", website="https://iitjammu.ac.in/ee")
+                name=self.dept_config["full_name"],
+                institution="IIT Jammu", website=self.dept_config["base_url"])
 
         # Store official faculty count on department node
         self.graph.nodes[dept_id]['faculty_count'] = len(faculty_nodes)
-        self.graph.nodes[dept_id]['phd_student_count'] = sum(
-            1 for _, data in self.graph.nodes(data=True) if data.get('label') == 'PhDStudent'
+        self.graph.nodes[dept_id]['phd_student_count'] = len(phd_nodes)
+        faculty_structured_fields = set()
+        for faculty in faculty_nodes:
+            for key, value in self.graph.nodes[faculty].items():
+                if key in {"label", "department", "name"}:
+                    continue
+                if value in (None, "", [], {}):
+                    continue
+                faculty_structured_fields.add(key)
+        self.graph.nodes[dept_id]['faculty_structured_fields'] = sorted(faculty_structured_fields)
+        phd_structured_fields = set()
+        for scholar in phd_nodes:
+            for key, value in self.graph.nodes[scholar].items():
+                if key in {"label", "department", "name"}:
+                    continue
+                if value in (None, "", [], {}):
+                    continue
+                phd_structured_fields.add(key)
+        self.graph.nodes[dept_id]['phd_structured_fields'] = sorted(phd_structured_fields)
+        self.graph.nodes[dept_id]['document_kind_counts'] = dict(
+            sorted({kind: list(doc_kinds.values()).count(kind) for kind in set(doc_kinds.values())}.items())
         )
 
         # Only link actual Faculty (not ExternalPerson) to department
@@ -861,7 +1361,9 @@ class KnowledgeGraphBuilder:
         logger.info(f"Node types: {dict(label_counts)}")
         return self.graph
 
-    def save(self, output_dir: str = DATA_DIR):
+    def save(self, output_dir: str = None):
+        if output_dir is None:
+            output_dir = get_data_dir(self.dept_code)
         os.makedirs(output_dir, exist_ok=True)
         with open(os.path.join(output_dir, "graph.pkl"), "wb") as f:
             pickle.dump(self.graph, f)
@@ -873,7 +1375,7 @@ class KnowledgeGraphBuilder:
         logger.info(f"Graph saved to {output_dir}")
 
     @staticmethod
-    def load(data_dir: str = DATA_DIR):
+    def load(data_dir: str):
         with open(os.path.join(data_dir, "graph.pkl"), "rb") as f:
             graph = pickle.load(f)
         with open(os.path.join(data_dir, "chunks.json"), "r", encoding="utf-8") as f:
@@ -883,7 +1385,7 @@ class KnowledgeGraphBuilder:
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
-    builder = KnowledgeGraphBuilder()
+    builder = KnowledgeGraphBuilder(dept_code="ee")
     G = builder.build()
     builder.save()
     print(f"\n✅ Knowledge Graph built: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")

@@ -2,7 +2,13 @@
 
 import re
 
-from graphrag.kg_builder import chunk_text
+from graphrag.kg_builder import (
+    _extract_first_email,
+    _extract_section_map_from_body,
+    chunk_text,
+    infer_document_kind,
+    smart_chunk_text,
+)
 
 
 class TestChunkCleanliness:
@@ -66,3 +72,68 @@ class TestStructuredRosterChunking:
         assert len(chunks) > 1
         for chunk in chunks[1:]:
             assert chunk.startswith("#### "), f"Chunk does not start at a record boundary: {chunk[:80]}"
+
+    def test_repeated_roster_entries_work_for_other_heading_levels(self):
+        """Generic roster detection should also work when records use `###` headings."""
+        roster = ["# Faculty Roster"]
+        for idx in range(1, 12):
+            roster.append(
+                f"### Faculty Member {idx}\n\n"
+                f"Assistant Professor\n\n"
+                f"Research Interest\nTopic {idx}\n"
+            )
+        chunks = smart_chunk_text("\n\n".join(roster), chunk_size=80, overlap=10)
+        assert len(chunks) > 1
+        assert all(item["meta"]["strategy"] == "repeated_heading_records" for item in chunks)
+        for chunk in chunks[1:]:
+            assert chunk["text"].startswith("### "), f"Chunk does not start at detected record boundary: {chunk['text'][:80]}"
+
+    def test_table_blocks_are_preserved_when_chunking(self):
+        """Adjacent markdown table rows should remain together in structural chunking."""
+        text = """
+# Placement Data
+
+## 2024
+
+| Program | Percentage | Mean |
+| --- | --- | --- |
+| UG | 90 | 20 |
+| PG | 80 | 15 |
+
+Additional commentary about placements and outcomes that makes the section long enough
+to require structure-aware chunking rather than a single flat word window repeated
+across unrelated lines and rows.
+"""
+        chunks = smart_chunk_text(text, chunk_size=30, overlap=5)
+        assert len(chunks) > 1
+        assert any("| Program | Percentage | Mean |" in item["text"] for item in chunks)
+
+
+class TestGenericExtractionHelpers:
+    def test_obfuscated_email_helper_normalizes_common_patterns(self):
+        text = "alex [DOT] joseph [AT] iitjammu [DOT] ac [DOT] in"
+        assert _extract_first_email(text) == "alex.joseph@iitjammu.ac.in"
+
+    def test_block_section_extractor_handles_inline_labels(self):
+        block = """
+##### **Supervisor**
+###### Dr. Suman Banerjee
+##### **Research Area**
+###### Differential Privacy
+##### alex.joseph@iitjammu.ac.in
+"""
+        sections = _extract_section_map_from_body(block)
+        assert "Suman Banerjee" in sections["supervisor"]
+        assert "Differential Privacy" in sections["research_area"]
+
+    def test_document_kind_inference_uses_content_and_filename(self):
+        phd_doc = """
+# Source URL: https://iitjammu.ac.in/computer_science_engineering/phd-list
+
+#### Alex Joseph
+##### **Supervisor**
+###### Dr. Suman Banerjee
+##### **Research Area**
+###### Differential Privacy
+"""
+        assert infer_document_kind("computer_science_engineering_phd-list.md", phd_doc) == "phd_roster"

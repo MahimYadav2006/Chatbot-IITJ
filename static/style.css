@@ -158,6 +158,69 @@ body {
 .header-right {
     display: flex;
     align-items: center;
+    gap: 12px;
+}
+
+.dept-selector-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dept-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 6px 32px 6px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    outline: none;
+}
+
+.dept-select:hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dept-select:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.dept-selector-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a8b3c4'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0.8;
+    transition: opacity var(--transition-fast);
+}
+
+.dept-selector-wrapper:hover::after {
+    opacity: 1;
+}
+
+.dept-select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.dept-select option:disabled {
+    color: var(--text-muted);
+    opacity: 0.6;
 }
 
 .status-badge {

@@ -2,11 +2,23 @@
 
 import sys
 import os
+import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from graphrag.kg_builder import normalize_name, _initials_match, EntityResolver, _extract_canonical_faculty
+from graphrag.kg_builder import (
+    normalize_name,
+    _initials_match,
+    EntityResolver,
+    KnowledgeGraphBuilder,
+    _extract_canonical_faculty,
+)
+from graphrag.retriever import HybridRetriever
 
 MARKDOWN_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "iitjammu_ee_markdown")
+CSE_MARKDOWN_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "iitjammu_computer_science_engineering_markdown",
+)
 
 
 class TestNormalizeName:
@@ -88,3 +100,41 @@ class TestCanonicalFacultyExtraction:
     def test_extracts_24_faculty(self):
         names = _extract_canonical_faculty(MARKDOWN_DIR)
         assert len(names) == 24, f"Expected 24 canonical faculty, got {len(names)}"
+
+    def test_extracts_cse_faculty_from_plain_headings(self):
+        names = _extract_canonical_faculty(CSE_MARKDOWN_DIR, "computer_science_engineering")
+        assert "Vinit Jakhetiya" in names
+        assert "Research Experience" not in names
+
+
+@pytest.fixture(scope="module")
+def cse_graph():
+    builder = KnowledgeGraphBuilder(dept_code="computer_science_engineering")
+    return builder.build()
+
+
+class TestCSEGraphParsing:
+    def test_vinit_is_faculty_not_student(self, cse_graph):
+        node_id = "computer_science_engineering:Vinit Jakhetiya"
+        assert cse_graph.has_node(node_id)
+        assert cse_graph.nodes[node_id]["label"] == "Faculty"
+        assert not cse_graph.has_node("computer_science_engineering:Dr. Vinit Jakhetiya")
+
+    def test_vinit_supervises_expected_students(self, cse_graph):
+        node_id = "computer_science_engineering:Vinit Jakhetiya"
+        supervised_students = {
+            cse_graph.nodes[source]["name"]
+            for source, _, edge_data in cse_graph.in_edges(node_id, data=True)
+            if edge_data.get("type") == "SUPERVISED_BY"
+        }
+        assert {"Ajeet Kumar Verma", "Ambreen Bashir", "Deebha Mumtaz"} <= supervised_students
+
+    def test_direct_answer_returns_students_under_vinit(self, cse_graph):
+        retriever = HybridRetriever(cse_graph, embedding_engine=None, community_reports=[],
+                                    dept_code="computer_science_engineering")
+        answer = retriever.get_direct_answer("PhD students under Dr. Vinit Jakhetiya")
+        assert answer is not None
+        assert "Ajeet Kumar Verma" in answer
+        assert "Ambreen Bashir" in answer
+        assert "Deebha Mumtaz" in answer
+        assert "is a PhD student" not in answer

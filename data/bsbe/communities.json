@@ -1,0 +1,1175 @@
+{
+  "partition": {
+    "bsbe:Ajeet Kumar Sharma": 8,
+    "bsbe:Gaurav Ashok Bhaduri": 1,
+    "bsbe:Jigmi Basumatary": 8,
+    "bsbe:Mithu Baidya": 3,
+    "bsbe:Nitesh Singh Malan": 4,
+    "bsbe:Santhilal Subhash": 5,
+    "bsbe:Shirsendu Ghosh": 6,
+    "bsbe:Shirsha Bose": 10,
+    "bsbe:Uday Kiran Roopavath": 2,
+    "bsbe:Vinay Sharma": 9,
+    "bsbe:Vivek B Raina": 0,
+    "bsbe:Biophysics": 8,
+    "bsbe:Systems Biology and Physical Bioinformatics": 8,
+    "bsbe:Thermodynamics and Statistical Physics": 8,
+    "bsbe:Non-equilibrium statistical mechanics and Biophysics": 8,
+    "bsbe:Carbon capture storage and utilization (CCSU)": 1,
+    "bsbe:Process Intensification": 1,
+    "bsbe:Environmental Engineering": 1,
+    "bsbe:Biochemical and Bioprocess Engineering": 1,
+    "bsbe:Waste to wealth": 1,
+    "bsbe:Nanomaterial synthesis and characterization": 1,
+    "bsbe:Photochemistry and Photocatalysis": 1,
+    "bsbe:Plasmonics": 1,
+    "bsbe:X-ray photoelectron spectroscopy": 1,
+    "bsbe:Heterogeneous catalysis (tri-phasic reactions)": 1,
+    "bsbe:include key technologies such as single-molecule localization microscopy (SMLM)": 8,
+    "bsbe:light-sheet microscopy": 8,
+    "bsbe:optical tweezers": 8,
+    "bsbe:and photoacoustic/ultrasound imaging. He adopts a multidisciplinary approach that integrates optical engineering with other science and engineering disciplines": 8,
+    "bsbe:along with rigorous qualitative and quantitative analysis. The overarching goal of his research is to develop and extend imaging techniques to address fundamental biological questions": 8,
+    "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets": 3,
+    "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics": 3,
+    "bsbe:To achieve this": 3,
+    "bsbe:the lab employs a range of research techniques": 3,
+    "bsbe:including biochemical": 3,
+    "bsbe:biophysical": 3,
+    "bsbe:chemogenetic": 3,
+    "bsbe:and pharmacological approaches. By utilizing multiple methods": 3,
+    "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways": 3,
+    "bsbe:The lab's research themes focus on two key areas. Firstly": 3,
+    "bsbe:Computational neuroscience": 4,
+    "bsbe:neurophysiology and neural oscillations": 4,
+    "bsbe:biomedical signal processing (EEG/MEG)": 4,
+    "bsbe:and neurological disorders and rehabilitation": 4,
+    "bsbe:Brain computer Interface": 4,
+    "bsbe:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues": 5,
+    "bsbe:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)": 5,
+    "bsbe:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models": 5,
+    "bsbe:we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health": 5,
+    "bsbe:Key Focus Areas": 5,
+    "bsbe:Reproductive Biology": 5,
+    "bsbe:Genomics & Single Cell Biology": 5,
+    "bsbe:Multi-omics": 5,
+    "bsbe:Bioinformatics": 5,
+    "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique": 6,
+    "bsbe:Membrane Biophysics": 6,
+    "bsbe:Immunological signaling pathways": 6,
+    "bsbe:Allosteric Signaling in Proteins": 6,
+    "bsbe:Experimental and Computational Biomechanics": 10,
+    "bsbe:fabricating novel biomaterials": 10,
+    "bsbe:analyzing the mechanics of biological materials and bioinspired materials": 10,
+    "bsbe:and understanding the interaction of medical devices with neighbouring tissues": 10,
+    "bsbe:Tissue engineering": 2,
+    "bsbe:Biofabrication": 2,
+    "bsbe:Biomaterials": 10,
+    "bsbe:Bioengineered organoids and Biodesign": 2,
+    "bsbe:Bio-active nanomaterials": 9,
+    "bsbe:Biosensors": 9,
+    "bsbe:Nanopore technology": 9,
+    "bsbe:Nano-Theranostics": 9,
+    "bsbe:Bioimaging probes": 9,
+    "bsbe:Healthcare devices": 9,
+    "bsbe:Nanomedicine": 9,
+    "bsbe:Anticancer nanotechnology": 9,
+    "bsbe:Antimicrobial Resistance and Gene Therapy": 9,
+    "bsbe:Courses": 9,
+    "bsbe:Single molecule DNA curtains": 0,
+    "bsbe:DNA Repair": 0,
+    "bsbe:Meiosis": 0,
+    "bsbe:Genomic stability": 0,
+    "bsbe:Reproductive disorders": 0,
+    "IIT Jammu BSBE Department": 8,
+    "bsbe:Abdul Rouf War": 3,
+    "bsbe:Molecular Pharmacology": 3,
+    "bsbe:Amir Ashraf": 10,
+    "bsbe:Blood Clot Mechanics": 10,
+    "bsbe:Ananya Anand": 6,
+    "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein": 6,
+    "bsbe:Isha Mukherjee": 5,
+    "bsbe:Genomic and epigenomic-based tissue regulation in development and disease": 5,
+    "bsbe:Kaifi Ali": 9,
+    "bsbe:Electroceuticals for wound management and monitoring": 9,
+    "bsbe:Khushboo Warjurkar": 9,
+    "bsbe:Nanomaterial for Biomedical  Application": 9,
+    "bsbe:Madhurjya Protim Borah": 3,
+    "bsbe:Drug Discovery": 3,
+    "bsbe:Neeraj": 3,
+    "bsbe:Structure based drug designing": 3,
+    "bsbe:Prangya": 10,
+    "bsbe:Rajan": 9,
+    "bsbe:Nanotheranostics": 9,
+    "bsbe:Sarfraz Ahmed": 3,
+    "bsbe:Receptor cell biology": 3,
+    "bsbe:Sathish": 10,
+    "bsbe:Mechanics of calcified collagen fibre": 10,
+    "bsbe:Sathya prakash K": 9,
+    "bsbe:Nanobiotechnology": 9,
+    "bsbe:Shalini Gupta": 5,
+    "bsbe:Multi-omics and big data intergration to investigate tissue heterogeneity and cell plasticity": 5,
+    "bsbe:Shivam Yadav": 2,
+    "bsbe:Tissue Engineering": 2,
+    "bsbe:Shubam Sharma": 7,
+    "bsbe:R Umashankar": 7,
+    "bsbe:Bioinspired Engineering": 7,
+    "bsbe:Uma Mahesh": 5,
+    "bsbe:Developing AI/ML models utilizing NGS-based genomic data": 5,
+    "bsbe:Vanshika": 6
+  },
+  "reports": [
+    {
+      "id": "community_0",
+      "community_id": 0,
+      "members": [
+        "bsbe:Vivek B Raina",
+        "bsbe:Single molecule DNA curtains",
+        "bsbe:DNA Repair",
+        "bsbe:Meiosis",
+        "bsbe:Genomic stability",
+        "bsbe:Reproductive disorders"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Vivek B Raina"
+        ],
+        "ResearchArea": [
+          "bsbe:Single molecule DNA curtains",
+          "bsbe:DNA Repair",
+          "bsbe:Meiosis",
+          "bsbe:Genomic stability",
+          "bsbe:Reproductive disorders"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Vivek B Raina",
+          "target": "bsbe:Single molecule DNA curtains",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vivek B Raina",
+          "target": "bsbe:DNA Repair",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vivek B Raina",
+          "target": "bsbe:Meiosis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vivek B Raina",
+          "target": "bsbe:Genomic stability",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vivek B Raina",
+          "target": "bsbe:Reproductive disorders",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Vivek B Raina\n  ResearchArea: Single molecule DNA curtains, DNA Repair, Meiosis, Genomic stability, Reproductive disorders\n  Relationships: RESEARCHES_IN: 5\n\nSummary: The Community 0 in IIT Jammu's Electrical Engineering Department is led by Dr. Vivek B Raina, focusing on interdisciplinary research at the intersection of electrical engineering and biology. The group investigates areas such as single molecule DNA curtains, DNA repair mechanisms, meiosis, genomic stability, and reproductive disorders. Their work involves a strong research component, indicated by 5 relationships under \"RESEARCHES_IN\".",
+      "summary": "The Community 0 in IIT Jammu's Electrical Engineering Department is led by Dr. Vivek B Raina, focusing on interdisciplinary research at the intersection of electrical engineering and biology. The group investigates areas such as single molecule DNA curtains, DNA repair mechanisms, meiosis, genomic stability, and reproductive disorders. Their work involves a strong research component, indicated by 5 relationships under \"RESEARCHES_IN\".",
+      "size": 6
+    },
+    {
+      "id": "community_1",
+      "community_id": 1,
+      "members": [
+        "bsbe:Gaurav Ashok Bhaduri",
+        "bsbe:Carbon capture storage and utilization (CCSU)",
+        "bsbe:Process Intensification",
+        "bsbe:Environmental Engineering",
+        "bsbe:Biochemical and Bioprocess Engineering",
+        "bsbe:Waste to wealth",
+        "bsbe:Nanomaterial synthesis and characterization",
+        "bsbe:Photochemistry and Photocatalysis",
+        "bsbe:Plasmonics",
+        "bsbe:X-ray photoelectron spectroscopy",
+        "bsbe:Heterogeneous catalysis (tri-phasic reactions)"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Gaurav Ashok Bhaduri"
+        ],
+        "ResearchArea": [
+          "bsbe:Carbon capture storage and utilization (CCSU)",
+          "bsbe:Process Intensification",
+          "bsbe:Environmental Engineering",
+          "bsbe:Biochemical and Bioprocess Engineering",
+          "bsbe:Waste to wealth",
+          "bsbe:Nanomaterial synthesis and characterization",
+          "bsbe:Photochemistry and Photocatalysis",
+          "bsbe:Plasmonics",
+          "bsbe:X-ray photoelectron spectroscopy",
+          "bsbe:Heterogeneous catalysis (tri-phasic reactions)"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Gaurav Ashok Bhaduri",
+          "target": "bsbe:Carbon capture storage and utilization (CCSU)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Gaurav Ashok Bhaduri",
+          "target": "bsbe:Process Intensification",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Gaurav Ashok Bhaduri",
+          "target": "bsbe:Environmental Engineering",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Gaurav Ashok Bhaduri",
+          "target": "bsbe:Biochemical and Bioprocess Engineering",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Gaurav Ashok Bhaduri",
+          "target": "bsbe:Waste to wealth",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Gaurav Ashok Bhaduri",
+          "target": "bsbe:Nanomaterial synthesis and characterization",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Gaurav Ashok Bhaduri",
+          "target": "bsbe:Photochemistry and Photocatalysis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Gaurav Ashok Bhaduri",
+          "target": "bsbe:Plasmonics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Gaurav Ashok Bhaduri",
+          "target": "bsbe:X-ray photoelectron spectroscopy",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Gaurav Ashok Bhaduri",
+          "target": "bsbe:Heterogeneous catalysis (tri-phasic reactions)",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Gaurav Ashok Bhaduri\n  ResearchArea: Carbon capture storage and utilization (CCSU), Process Intensification, Environmental Engineering, Biochemical and Bioprocess Engineering, Waste to wealth, Nanomaterial synthesis and characterization, Photochemistry and Photocatalysis, Plasmonics, X-ray photoelectron spectroscopy, Heterogeneous catalysis (tri-phasic reactions)\n  Relationships: RESEARCHES_IN: 10\n\nSummary: The Community 1 in IIT Jammu's Electrical Engineering Department is led by Dr. Gaurav Ashok Bhaduri, focusing on a diverse range of research areas including carbon capture storage and utilization, process intensification, and nanomaterial synthesis and characterization. Their work also encompasses environmental engineering, biochemical and bioprocess engineering, and waste-to-wealth conversion. This community is characterized by its interdisciplinary approach to addressing complex problems through the application of advanced technologies such as photocatalysis and plasmonics.",
+      "summary": "The Community 1 in IIT Jammu's Electrical Engineering Department is led by Dr. Gaurav Ashok Bhaduri, focusing on a diverse range of research areas including carbon capture storage and utilization, process intensification, and nanomaterial synthesis and characterization. Their work also encompasses environmental engineering, biochemical and bioprocess engineering, and waste-to-wealth conversion. This community is characterized by its interdisciplinary approach to addressing complex problems through the application of advanced technologies such as photocatalysis and plasmonics.",
+      "size": 11
+    },
+    {
+      "id": "community_2",
+      "community_id": 2,
+      "members": [
+        "bsbe:Uday Kiran Roopavath",
+        "bsbe:Tissue engineering",
+        "bsbe:Biofabrication",
+        "bsbe:Bioengineered organoids and Biodesign",
+        "bsbe:Shivam Yadav",
+        "bsbe:Tissue Engineering"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Uday Kiran Roopavath"
+        ],
+        "ResearchArea": [
+          "bsbe:Tissue engineering",
+          "bsbe:Biofabrication",
+          "bsbe:Bioengineered organoids and Biodesign",
+          "bsbe:Tissue Engineering"
+        ],
+        "PhDStudent": [
+          "bsbe:Shivam Yadav"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Uday Kiran Roopavath",
+          "target": "bsbe:Tissue engineering",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Uday Kiran Roopavath",
+          "target": "bsbe:Biofabrication",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Uday Kiran Roopavath",
+          "target": "bsbe:Bioengineered organoids and Biodesign",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Uday Kiran Roopavath",
+          "target": "bsbe:Tissue Engineering",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shivam Yadav",
+          "target": "bsbe:Uday Kiran Roopavath",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Shivam Yadav",
+          "target": "bsbe:Tissue Engineering",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Uday Kiran Roopavath\n  PhDStudent: Shivam Yadav\n  ResearchArea: Tissue engineering, Biofabrication, Bioengineered organoids and Biodesign, Tissue Engineering\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 2 in IIT Jammu's Electrical Engineering Department is led by faculty member Uday Kiran Roopavath. The group focuses on interdisciplinary research in tissue engineering, biofabrication, bioengineered organoids, and biodesign. Key to this effort is PhD student Shivam Yadav, who is supervised by Dr. Roopavath and studies under him.",
+      "summary": "The Community 2 in IIT Jammu's Electrical Engineering Department is led by faculty member Uday Kiran Roopavath. The group focuses on interdisciplinary research in tissue engineering, biofabrication, bioengineered organoids, and biodesign. Key to this effort is PhD student Shivam Yadav, who is supervised by Dr. Roopavath and studies under him.",
+      "size": 6
+    },
+    {
+      "id": "community_3",
+      "community_id": 3,
+      "members": [
+        "bsbe:Mithu Baidya",
+        "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets",
+        "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics",
+        "bsbe:To achieve this",
+        "bsbe:the lab employs a range of research techniques",
+        "bsbe:including biochemical",
+        "bsbe:biophysical",
+        "bsbe:chemogenetic",
+        "bsbe:and pharmacological approaches. By utilizing multiple methods",
+        "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways",
+        "bsbe:The lab's research themes focus on two key areas. Firstly",
+        "bsbe:Abdul Rouf War",
+        "bsbe:Molecular Pharmacology",
+        "bsbe:Madhurjya Protim Borah",
+        "bsbe:Drug Discovery",
+        "bsbe:Neeraj",
+        "bsbe:Structure based drug designing",
+        "bsbe:Sarfraz Ahmed",
+        "bsbe:Receptor cell biology"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Mithu Baidya"
+        ],
+        "ResearchArea": [
+          "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets",
+          "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics",
+          "bsbe:To achieve this",
+          "bsbe:the lab employs a range of research techniques",
+          "bsbe:including biochemical",
+          "bsbe:biophysical",
+          "bsbe:chemogenetic",
+          "bsbe:and pharmacological approaches. By utilizing multiple methods",
+          "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways",
+          "bsbe:The lab's research themes focus on two key areas. Firstly",
+          "bsbe:Molecular Pharmacology",
+          "bsbe:Drug Discovery",
+          "bsbe:Structure based drug designing",
+          "bsbe:Receptor cell biology"
+        ],
+        "PhDStudent": [
+          "bsbe:Abdul Rouf War",
+          "bsbe:Madhurjya Protim Borah",
+          "bsbe:Neeraj",
+          "bsbe:Sarfraz Ahmed"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:To achieve this",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:the lab employs a range of research techniques",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:including biochemical",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:biophysical",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:chemogenetic",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:and pharmacological approaches. By utilizing multiple methods",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:The lab's research themes focus on two key areas. Firstly",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:Molecular Pharmacology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:Drug Discovery",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:Structure based drug designing",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:Receptor cell biology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Abdul Rouf War",
+          "target": "bsbe:Mithu Baidya",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Abdul Rouf War",
+          "target": "bsbe:Molecular Pharmacology",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Madhurjya Protim Borah",
+          "target": "bsbe:Mithu Baidya",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Madhurjya Protim Borah",
+          "target": "bsbe:Drug Discovery",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Neeraj",
+          "target": "bsbe:Mithu Baidya",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Neeraj",
+          "target": "bsbe:Structure based drug designing",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Sarfraz Ahmed",
+          "target": "bsbe:Mithu Baidya",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Sarfraz Ahmed",
+          "target": "bsbe:Receptor cell biology",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Mithu Baidya\n  PhDStudent: Abdul Rouf War, Madhurjya Protim Borah, Neeraj, Sarfraz Ahmed\n  ResearchArea: The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets, the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics, To achieve this, the lab employs a range of research techniques, including biochemical, biophysical, chemogenetic, and pharmacological approaches. By utilizing multiple methods, we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways, The lab's research themes focus on two key areas. Firstly, Molecular Pharmacology, Drug Discovery, Structure based drug designing, Receptor cell biology\n  Relationships: RESEARCHES_IN: 14, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: The Community 3 in IIT Jammu's Electrical Engineering Department is led by Faculty member Mithu Baidya. The group consists of PhD students Abdul Rouf War, Madhurjya Protim Borah, Neeraj, and Sarfraz Ahmed. They focus on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes through biochemical, biophysical, chemogenetic, and pharmacological approaches.",
+      "summary": "The Community 3 in IIT Jammu's Electrical Engineering Department is led by Faculty member Mithu Baidya. The group consists of PhD students Abdul Rouf War, Madhurjya Protim Borah, Neeraj, and Sarfraz Ahmed. They focus on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes through biochemical, biophysical, chemogenetic, and pharmacological approaches.",
+      "size": 19
+    },
+    {
+      "id": "community_4",
+      "community_id": 4,
+      "members": [
+        "bsbe:Nitesh Singh Malan",
+        "bsbe:Computational neuroscience",
+        "bsbe:neurophysiology and neural oscillations",
+        "bsbe:biomedical signal processing (EEG/MEG)",
+        "bsbe:and neurological disorders and rehabilitation",
+        "bsbe:Brain computer Interface"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Nitesh Singh Malan"
+        ],
+        "ResearchArea": [
+          "bsbe:Computational neuroscience",
+          "bsbe:neurophysiology and neural oscillations",
+          "bsbe:biomedical signal processing (EEG/MEG)",
+          "bsbe:and neurological disorders and rehabilitation",
+          "bsbe:Brain computer Interface"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Nitesh Singh Malan",
+          "target": "bsbe:Computational neuroscience",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Nitesh Singh Malan",
+          "target": "bsbe:neurophysiology and neural oscillations",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Nitesh Singh Malan",
+          "target": "bsbe:biomedical signal processing (EEG/MEG)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Nitesh Singh Malan",
+          "target": "bsbe:and neurological disorders and rehabilitation",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Nitesh Singh Malan",
+          "target": "bsbe:Brain computer Interface",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Nitesh Singh Malan\n  ResearchArea: Computational neuroscience, neurophysiology and neural oscillations, biomedical signal processing (EEG/MEG), and neurological disorders and rehabilitation, Brain computer Interface\n  Relationships: RESEARCHES_IN: 5\n\nSummary: The Community 4 in IIT Jammu's Electrical Engineering Department is led by Faculty member Nitesh Singh Malan. This group focuses on interdisciplinary research in computational neuroscience, neurophysiology, neural oscillations, biomedical signal processing (EEG/MEG), and neurological disorders and rehabilitation, with a particular emphasis on Brain-Computer Interface applications. The faculty member has 5 related research projects or publications in these areas, indicating an active and specialized research community.",
+      "summary": "The Community 4 in IIT Jammu's Electrical Engineering Department is led by Faculty member Nitesh Singh Malan. This group focuses on interdisciplinary research in computational neuroscience, neurophysiology, neural oscillations, biomedical signal processing (EEG/MEG), and neurological disorders and rehabilitation, with a particular emphasis on Brain-Computer Interface applications. The faculty member has 5 related research projects or publications in these areas, indicating an active and specialized research community.",
+      "size": 6
+    },
+    {
+      "id": "community_5",
+      "community_id": 5,
+      "members": [
+        "bsbe:Santhilal Subhash",
+        "bsbe:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues",
+        "bsbe:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)",
+        "bsbe:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models",
+        "bsbe:we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health",
+        "bsbe:Key Focus Areas",
+        "bsbe:Reproductive Biology",
+        "bsbe:Genomics & Single Cell Biology",
+        "bsbe:Multi-omics",
+        "bsbe:Bioinformatics",
+        "bsbe:Isha Mukherjee",
+        "bsbe:Genomic and epigenomic-based tissue regulation in development and disease",
+        "bsbe:Shalini Gupta",
+        "bsbe:Multi-omics and big data intergration to investigate tissue heterogeneity and cell plasticity",
+        "bsbe:Uma Mahesh",
+        "bsbe:Developing AI/ML models utilizing NGS-based genomic data"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Santhilal Subhash"
+        ],
+        "ResearchArea": [
+          "bsbe:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues",
+          "bsbe:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)",
+          "bsbe:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models",
+          "bsbe:we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health",
+          "bsbe:Key Focus Areas",
+          "bsbe:Reproductive Biology",
+          "bsbe:Genomics & Single Cell Biology",
+          "bsbe:Multi-omics",
+          "bsbe:Bioinformatics",
+          "bsbe:Genomic and epigenomic-based tissue regulation in development and disease",
+          "bsbe:Multi-omics and big data intergration to investigate tissue heterogeneity and cell plasticity",
+          "bsbe:Developing AI/ML models utilizing NGS-based genomic data"
+        ],
+        "PhDStudent": [
+          "bsbe:Isha Mukherjee",
+          "bsbe:Shalini Gupta",
+          "bsbe:Uma Mahesh"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:Key Focus Areas",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:Reproductive Biology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:Genomics & Single Cell Biology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:Multi-omics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:Bioinformatics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:Genomic and epigenomic-based tissue regulation in development and disease",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:Multi-omics and big data intergration to investigate tissue heterogeneity and cell plasticity",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Santhilal Subhash",
+          "target": "bsbe:Developing AI/ML models utilizing NGS-based genomic data",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Isha Mukherjee",
+          "target": "bsbe:Santhilal Subhash",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Isha Mukherjee",
+          "target": "bsbe:Genomic and epigenomic-based tissue regulation in development and disease",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Shalini Gupta",
+          "target": "bsbe:Santhilal Subhash",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Shalini Gupta",
+          "target": "bsbe:Multi-omics and big data intergration to investigate tissue heterogeneity and cell plasticity",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Uma Mahesh",
+          "target": "bsbe:Santhilal Subhash",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Uma Mahesh",
+          "target": "bsbe:Developing AI/ML models utilizing NGS-based genomic data",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Santhilal Subhash\n  PhDStudent: Isha Mukherjee, Shalini Gupta, Uma Mahesh\n  ResearchArea: Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models, we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health, Key Focus Areas, Reproductive Biology, Genomics & Single Cell Biology, Multi-omics, Bioinformatics, Genomic and epigenomic-based tissue regulation in development and disease, Multi-omics and big data intergration to investigate tissue heterogeneity and cell plasticity, Developing AI/ML models utilizing NGS-based genomic data\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: The Community 5 in IIT Jammu's Electrical Engineering Department is led by Faculty member Santhilal Subhash. The group consists of PhD students Isha Mukherjee, Shalini Gupta, and Uma Mahesh who are supervised by Dr. Subhash. Their research focuses on understanding female reproductive tissues, particularly in the context of gynecological diseases and cancers, using advanced Next-Generation Sequencing (NGS) techniques and computational models to develop targeted therapies.",
+      "summary": "The Community 5 in IIT Jammu's Electrical Engineering Department is led by Faculty member Santhilal Subhash. The group consists of PhD students Isha Mukherjee, Shalini Gupta, and Uma Mahesh who are supervised by Dr. Subhash. Their research focuses on understanding female reproductive tissues, particularly in the context of gynecological diseases and cancers, using advanced Next-Generation Sequencing (NGS) techniques and computational models to develop targeted therapies.",
+      "size": 16
+    },
+    {
+      "id": "community_6",
+      "community_id": 6,
+      "members": [
+        "bsbe:Shirsendu Ghosh",
+        "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
+        "bsbe:Membrane Biophysics",
+        "bsbe:Immunological signaling pathways",
+        "bsbe:Allosteric Signaling in Proteins",
+        "bsbe:Ananya Anand",
+        "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+        "bsbe:Vanshika"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Shirsendu Ghosh"
+        ],
+        "ResearchArea": [
+          "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
+          "bsbe:Membrane Biophysics",
+          "bsbe:Immunological signaling pathways",
+          "bsbe:Allosteric Signaling in Proteins",
+          "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein"
+        ],
+        "PhDStudent": [
+          "bsbe:Ananya Anand",
+          "bsbe:Vanshika"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Shirsendu Ghosh",
+          "target": "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsendu Ghosh",
+          "target": "bsbe:Membrane Biophysics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsendu Ghosh",
+          "target": "bsbe:Immunological signaling pathways",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsendu Ghosh",
+          "target": "bsbe:Allosteric Signaling in Proteins",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsendu Ghosh",
+          "target": "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Ananya Anand",
+          "target": "bsbe:Shirsendu Ghosh",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Ananya Anand",
+          "target": "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Vanshika",
+          "target": "bsbe:Shirsendu Ghosh",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Vanshika",
+          "target": "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 6 in IIT Jammu EE Department:\n  Faculty: Shirsendu Ghosh\n  PhDStudent: Ananya Anand, Vanshika\n  ResearchArea: Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique, Membrane Biophysics, Immunological signaling pathways, Allosteric Signaling in Proteins, Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: The Community 6 in IIT Jammu's Electrical Engineering Department is led by faculty member Shirsendu Ghosh. This group focuses on developing advanced optical microscopy techniques, including super-resolution microscopy, as well as studying membrane biophysics and immunological signaling pathways. They also explore allosteric signaling in proteins. The community includes PhD students Ananya Anand and Vanshika, who are supervised by Shirsendu Ghosh.",
+      "summary": "The Community 6 in IIT Jammu's Electrical Engineering Department is led by faculty member Shirsendu Ghosh. This group focuses on developing advanced optical microscopy techniques, including super-resolution microscopy, as well as studying membrane biophysics and immunological signaling pathways. They also explore allosteric signaling in proteins. The community includes PhD students Ananya Anand and Vanshika, who are supervised by Shirsendu Ghosh.",
+      "size": 8
+    },
+    {
+      "id": "community_7",
+      "community_id": 7,
+      "members": [
+        "bsbe:Shubam Sharma",
+        "bsbe:R Umashankar",
+        "bsbe:Bioinspired Engineering"
+      ],
+      "members_by_type": {
+        "PhDStudent": [
+          "bsbe:Shubam Sharma"
+        ],
+        "ExternalPerson": [
+          "bsbe:R Umashankar"
+        ],
+        "ResearchArea": [
+          "bsbe:Bioinspired Engineering"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Shubam Sharma",
+          "target": "bsbe:R Umashankar",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Shubam Sharma",
+          "target": "bsbe:Bioinspired Engineering",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 7 in IIT Jammu EE Department:\n  ExternalPerson: R Umashankar\n  PhDStudent: Shubam Sharma\n  ResearchArea: Bioinspired Engineering\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: The Community 7 in IIT Jammu's Electrical Engineering Department is led by R Umashankar, a faculty member. Shubam Sharma, a PhD student, is supervised by Umashankar. The group focuses on Bioinspired Engineering research area.",
+      "summary": "The Community 7 in IIT Jammu's Electrical Engineering Department is led by R Umashankar, a faculty member. Shubam Sharma, a PhD student, is supervised by Umashankar. The group focuses on Bioinspired Engineering research area.",
+      "size": 3
+    },
+    {
+      "id": "community_8",
+      "community_id": 8,
+      "members": [
+        "bsbe:Ajeet Kumar Sharma",
+        "bsbe:Jigmi Basumatary",
+        "bsbe:Biophysics",
+        "bsbe:Systems Biology and Physical Bioinformatics",
+        "bsbe:Thermodynamics and Statistical Physics",
+        "bsbe:Non-equilibrium statistical mechanics and Biophysics",
+        "bsbe:include key technologies such as single-molecule localization microscopy (SMLM)",
+        "bsbe:light-sheet microscopy",
+        "bsbe:optical tweezers",
+        "bsbe:and photoacoustic/ultrasound imaging. He adopts a multidisciplinary approach that integrates optical engineering with other science and engineering disciplines",
+        "bsbe:along with rigorous qualitative and quantitative analysis. The overarching goal of his research is to develop and extend imaging techniques to address fundamental biological questions",
+        "IIT Jammu BSBE Department"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Ajeet Kumar Sharma",
+          "bsbe:Jigmi Basumatary"
+        ],
+        "ResearchArea": [
+          "bsbe:Biophysics",
+          "bsbe:Systems Biology and Physical Bioinformatics",
+          "bsbe:Thermodynamics and Statistical Physics",
+          "bsbe:Non-equilibrium statistical mechanics and Biophysics",
+          "bsbe:include key technologies such as single-molecule localization microscopy (SMLM)",
+          "bsbe:light-sheet microscopy",
+          "bsbe:optical tweezers",
+          "bsbe:and photoacoustic/ultrasound imaging. He adopts a multidisciplinary approach that integrates optical engineering with other science and engineering disciplines",
+          "bsbe:along with rigorous qualitative and quantitative analysis. The overarching goal of his research is to develop and extend imaging techniques to address fundamental biological questions"
+        ],
+        "Department": [
+          "IIT Jammu BSBE Department"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Ajeet Kumar Sharma",
+          "target": "bsbe:Biophysics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Ajeet Kumar Sharma",
+          "target": "bsbe:Systems Biology and Physical Bioinformatics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Ajeet Kumar Sharma",
+          "target": "bsbe:Thermodynamics and Statistical Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Ajeet Kumar Sharma",
+          "target": "bsbe:Non-equilibrium statistical mechanics and Biophysics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Ajeet Kumar Sharma",
+          "target": "IIT Jammu BSBE Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "bsbe:Jigmi Basumatary",
+          "target": "bsbe:include key technologies such as single-molecule localization microscopy (SMLM)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Jigmi Basumatary",
+          "target": "bsbe:light-sheet microscopy",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Jigmi Basumatary",
+          "target": "bsbe:optical tweezers",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Jigmi Basumatary",
+          "target": "bsbe:and photoacoustic/ultrasound imaging. He adopts a multidisciplinary approach that integrates optical engineering with other science and engineering disciplines",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Jigmi Basumatary",
+          "target": "bsbe:along with rigorous qualitative and quantitative analysis. The overarching goal of his research is to develop and extend imaging techniques to address fundamental biological questions",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Jigmi Basumatary",
+          "target": "IIT Jammu BSBE Department",
+          "type": "MEMBER_OF"
+        }
+      ],
+      "text": "Community 8 in IIT Jammu EE Department:\n  Department: Department of Biosciences and Bioengineering\n  Faculty: Ajeet Kumar Sharma, Jigmi Basumatary\n  ResearchArea: Biophysics, Systems Biology and Physical Bioinformatics, Thermodynamics and Statistical Physics, Non-equilibrium statistical mechanics and Biophysics, include key technologies such as single-molecule localization microscopy (SMLM), light-sheet microscopy, optical tweezers, and photoacoustic/ultrasound imaging. He adopts a multidisciplinary approach that integrates optical engineering with other science and engineering disciplines, along with rigorous qualitative and quantitative analysis. The overarching goal of his research is to develop and extend imaging techniques to address fundamental biological questions\n  Relationships: RESEARCHES_IN: 9, MEMBER_OF: 2\n\nSummary: Community 8 in IIT Jammu's Electrical Engineering Department is led by faculty members Ajeet Kumar Sharma and Jigmi Basumatary. They conduct interdisciplinary research in Biophysics, Systems Biology, and Physical Bioinformatics, focusing on developing imaging techniques using technologies such as single-molecule localization microscopy (SMLM) and optical tweezers. Their work integrates optical engineering with other science and engineering disciplines to address fundamental biological questions.",
+      "summary": "Community 8 in IIT Jammu's Electrical Engineering Department is led by faculty members Ajeet Kumar Sharma and Jigmi Basumatary. They conduct interdisciplinary research in Biophysics, Systems Biology, and Physical Bioinformatics, focusing on developing imaging techniques using technologies such as single-molecule localization microscopy (SMLM) and optical tweezers. Their work integrates optical engineering with other science and engineering disciplines to address fundamental biological questions.",
+      "size": 12
+    },
+    {
+      "id": "community_9",
+      "community_id": 9,
+      "members": [
+        "bsbe:Vinay Sharma",
+        "bsbe:Bio-active nanomaterials",
+        "bsbe:Biosensors",
+        "bsbe:Nanopore technology",
+        "bsbe:Nano-Theranostics",
+        "bsbe:Bioimaging probes",
+        "bsbe:Healthcare devices",
+        "bsbe:Nanomedicine",
+        "bsbe:Anticancer nanotechnology",
+        "bsbe:Antimicrobial Resistance and Gene Therapy",
+        "bsbe:Courses",
+        "bsbe:Kaifi Ali",
+        "bsbe:Electroceuticals for wound management and monitoring",
+        "bsbe:Khushboo Warjurkar",
+        "bsbe:Nanomaterial for Biomedical  Application",
+        "bsbe:Rajan",
+        "bsbe:Nanotheranostics",
+        "bsbe:Sathya prakash K",
+        "bsbe:Nanobiotechnology"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Vinay Sharma"
+        ],
+        "ResearchArea": [
+          "bsbe:Bio-active nanomaterials",
+          "bsbe:Biosensors",
+          "bsbe:Nanopore technology",
+          "bsbe:Nano-Theranostics",
+          "bsbe:Bioimaging probes",
+          "bsbe:Healthcare devices",
+          "bsbe:Nanomedicine",
+          "bsbe:Anticancer nanotechnology",
+          "bsbe:Antimicrobial Resistance and Gene Therapy",
+          "bsbe:Courses",
+          "bsbe:Electroceuticals for wound management and monitoring",
+          "bsbe:Nanomaterial for Biomedical  Application",
+          "bsbe:Nanotheranostics",
+          "bsbe:Nanobiotechnology"
+        ],
+        "PhDStudent": [
+          "bsbe:Kaifi Ali",
+          "bsbe:Khushboo Warjurkar",
+          "bsbe:Rajan",
+          "bsbe:Sathya prakash K"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Bio-active nanomaterials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Biosensors",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Nanopore technology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Nano-Theranostics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Bioimaging probes",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Healthcare devices",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Nanomedicine",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Anticancer nanotechnology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Antimicrobial Resistance and Gene Therapy",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Courses",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Electroceuticals for wound management and monitoring",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Nanomaterial for Biomedical  Application",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Nanotheranostics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vinay Sharma",
+          "target": "bsbe:Nanobiotechnology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Kaifi Ali",
+          "target": "bsbe:Vinay Sharma",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Kaifi Ali",
+          "target": "bsbe:Electroceuticals for wound management and monitoring",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Khushboo Warjurkar",
+          "target": "bsbe:Vinay Sharma",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Khushboo Warjurkar",
+          "target": "bsbe:Nanomaterial for Biomedical  Application",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Rajan",
+          "target": "bsbe:Vinay Sharma",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Rajan",
+          "target": "bsbe:Nanotheranostics",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Sathya prakash K",
+          "target": "bsbe:Vinay Sharma",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Sathya prakash K",
+          "target": "bsbe:Nanobiotechnology",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 9 in IIT Jammu EE Department:\n  Faculty: Vinay Sharma\n  PhDStudent: Kaifi Ali, Khushboo Warjurkar, Rajan, Sathya prakash K\n  ResearchArea: Bio-active nanomaterials, Biosensors, Nanopore technology, Nano-Theranostics, Bioimaging probes, Healthcare devices, Nanomedicine, Anticancer nanotechnology, Antimicrobial Resistance and Gene Therapy, Courses, Electroceuticals for wound management and monitoring, Nanomaterial for Biomedical  Application, Nanotheranostics, Nanobiotechnology\n  Relationships: RESEARCHES_IN: 14, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: Community 9 in IIT Jammu's Electrical Engineering Department is led by faculty member Vinay Sharma. The community consists of four PhD students: Kaifi Ali, Khushboo Warjurkar, Rajan, and Sathya prakash K, who are supervised by Dr. Sharma. Their research focuses on various aspects of nanotechnology, including bio-active materials, biosensors, nanopore technology, and their applications in healthcare devices and nanomedicine.",
+      "summary": "Community 9 in IIT Jammu's Electrical Engineering Department is led by faculty member Vinay Sharma. The community consists of four PhD students: Kaifi Ali, Khushboo Warjurkar, Rajan, and Sathya prakash K, who are supervised by Dr. Sharma. Their research focuses on various aspects of nanotechnology, including bio-active materials, biosensors, nanopore technology, and their applications in healthcare devices and nanomedicine.",
+      "size": 19
+    },
+    {
+      "id": "community_10",
+      "community_id": 10,
+      "members": [
+        "bsbe:Shirsha Bose",
+        "bsbe:Experimental and Computational Biomechanics",
+        "bsbe:fabricating novel biomaterials",
+        "bsbe:analyzing the mechanics of biological materials and bioinspired materials",
+        "bsbe:and understanding the interaction of medical devices with neighbouring tissues",
+        "bsbe:Biomaterials",
+        "bsbe:Amir Ashraf",
+        "bsbe:Blood Clot Mechanics",
+        "bsbe:Prangya",
+        "bsbe:Sathish",
+        "bsbe:Mechanics of calcified collagen fibre"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Shirsha Bose"
+        ],
+        "ResearchArea": [
+          "bsbe:Experimental and Computational Biomechanics",
+          "bsbe:fabricating novel biomaterials",
+          "bsbe:analyzing the mechanics of biological materials and bioinspired materials",
+          "bsbe:and understanding the interaction of medical devices with neighbouring tissues",
+          "bsbe:Biomaterials",
+          "bsbe:Blood Clot Mechanics",
+          "bsbe:Mechanics of calcified collagen fibre"
+        ],
+        "PhDStudent": [
+          "bsbe:Amir Ashraf",
+          "bsbe:Prangya",
+          "bsbe:Sathish"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Shirsha Bose",
+          "target": "bsbe:Experimental and Computational Biomechanics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsha Bose",
+          "target": "bsbe:fabricating novel biomaterials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsha Bose",
+          "target": "bsbe:analyzing the mechanics of biological materials and bioinspired materials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsha Bose",
+          "target": "bsbe:and understanding the interaction of medical devices with neighbouring tissues",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsha Bose",
+          "target": "bsbe:Blood Clot Mechanics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsha Bose",
+          "target": "bsbe:Biomaterials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsha Bose",
+          "target": "bsbe:Mechanics of calcified collagen fibre",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Amir Ashraf",
+          "target": "bsbe:Shirsha Bose",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Amir Ashraf",
+          "target": "bsbe:Blood Clot Mechanics",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Prangya",
+          "target": "bsbe:Shirsha Bose",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Prangya",
+          "target": "bsbe:Biomaterials",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Sathish",
+          "target": "bsbe:Shirsha Bose",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Sathish",
+          "target": "bsbe:Mechanics of calcified collagen fibre",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 10 in IIT Jammu EE Department:\n  Faculty: Shirsha Bose\n  PhDStudent: Amir Ashraf, Prangya, Sathish\n  ResearchArea: Experimental and Computational Biomechanics, fabricating novel biomaterials, analyzing the mechanics of biological materials and bioinspired materials, and understanding the interaction of medical devices with neighbouring tissues, Biomaterials, Blood Clot Mechanics, Mechanics of calcified collagen fibre\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: The Community 10 in IIT Jammu's Electrical Engineering Department is led by faculty member Shirsha Bose. The group consists of PhD students Amir Ashraf, Prangya, and Sathish, who work together on research areas including experimental and computational biomechanics, biomaterials, and blood clot mechanics. Their research focuses on understanding the mechanics of biological materials, fabricating novel biomaterials, and analyzing bioinspired materials, with a specific interest in calcified collagen fibers.",
+      "summary": "The Community 10 in IIT Jammu's Electrical Engineering Department is led by faculty member Shirsha Bose. The group consists of PhD students Amir Ashraf, Prangya, and Sathish, who work together on research areas including experimental and computational biomechanics, biomaterials, and blood clot mechanics. Their research focuses on understanding the mechanics of biological materials, fabricating novel biomaterials, and analyzing bioinspired materials, with a specific interest in calcified collagen fibers.",
+      "size": 11
+    }
+  ]
+}

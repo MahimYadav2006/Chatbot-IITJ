@@ -8,6 +8,8 @@ build/
 dist/
 *.egg-info/
 
+scraped_data
+
 # Local data files
 *.sqlite3
 *.db

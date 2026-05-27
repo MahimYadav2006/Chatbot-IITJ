@@ -12,6 +12,122 @@
 // ─── State ──────────────────────────────────────────────────────────────────
 
 let isLoading = false;
+let DEPARTMENTS_METADATA = {};
+
+const DEPT_WELCOME_DETAILS = {
+    ee: {
+        title: "Electrical Engineering",
+        desc: "VLSI, Power Systems, Communications, RF & Microwave, Signal Processing, Power Electronics",
+        chips: [
+            "Who is the Head of Department?",
+            "What are the main research areas?",
+            "Tell me about antenna research",
+            "Who supervises Ritujoy Biswas?"
+        ]
+    },
+    cse: {
+        title: "Computer Science & Engineering",
+        desc: "Algorithms, Machine Learning, Computer Vision, Security, Cloud Computing, IoT",
+        chips: [
+            "Who is the Head of Department?",
+            "What are the main research areas?",
+            "Tell me about machine learning projects",
+            "What are the placement statistics?"
+        ]
+    },
+    civil_engineering: {
+        title: "Civil Engineering",
+        desc: "Structural, Geotechnical, Transportation, Water Resources, Environmental",
+        chips: [
+            "Who is the Head of Department?",
+            "What civil labs are available?",
+            "Tell me about structural research",
+            "How many faculty are there?"
+        ]
+    },
+    chemical: {
+        title: "Chemical Engineering",
+        desc: "Reaction Engineering, Thermodynamics, Transport Phenomena, Process Design",
+        chips: [
+            "Who is the Head of Department?",
+            "What are the core research areas?",
+            "List the faculty members",
+            "What placement sectors recruit here?"
+        ]
+    },
+    bsbe: {
+        title: "Biosciences & Bioengineering",
+        desc: "Computational Biology, Biomaterials, Biophysics, Bioinformatics",
+        chips: [
+            "Who is the Head of Department?",
+            "What bio-labs are available?",
+            "What projects are funded?",
+            "Who is HOD of BSBE?"
+        ]
+    },
+    chemistry: {
+        title: "Chemistry",
+        desc: "Organic, Inorganic, Physical, Analytical Chemistry, Catalysis",
+        chips: [
+            "Who is the Head of Department?",
+            "What chemical research labs exist?",
+            "What programmes are offered?"
+        ]
+    },
+    hss: {
+        title: "Humanities & Social Sciences",
+        desc: "Economics, Literature, Sociology, Philosophy, Professional Communication",
+        chips: [
+            "Who is the HOD?",
+            "What courses are offered by HSS?",
+            "Who are the faculty members?"
+        ]
+    },
+    idp: {
+        title: "Interdisciplinary Programmes",
+        desc: "Materials, Energy, Environment, Smart Systems",
+        chips: [
+            "What interdisciplinary areas are active?",
+            "Who is the coordinator?"
+        ]
+    },
+    materials: {
+        title: "Materials Engineering",
+        desc: "Metallurgy, Polymers, Nanomaterials, Computational Materials Science",
+        chips: [
+            "Who is the Head of Department?",
+            "What research equipment is available?",
+            "List the materials engineering faculty"
+        ]
+    },
+    mechanical_engineering: {
+        title: "Mechanical Engineering",
+        desc: "Thermal, Design, Manufacturing, Robotics, Solid Mechanics",
+        chips: [
+            "Who is the Head of Department?",
+            "What robotics research is happening?",
+            "List the mechanical labs"
+        ]
+    },
+    mathematics: {
+        title: "Mathematics",
+        desc: "Applied Mathematics, Statistics, Algebra, Differential Equations",
+        chips: [
+            "Who is the HOD of Mathematics?",
+            "What math research fields are active?",
+            "Who are the mathematics professors?"
+        ]
+    },
+    physics: {
+        title: "Physics",
+        desc: "Condensed Matter Physics, High Energy Physics, Optics, Nanotechnology",
+        chips: [
+            "Who is the Head of Department?",
+            "What experimental physics labs exist?",
+            "Tell me about high energy physics research"
+        ]
+    }
+};
 
 // ─── DOM References ─────────────────────────────────────────────────────────
 
@@ -26,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     chatInput.addEventListener('keydown', handleKeyDown);
     chatInput.addEventListener('input', autoGrow);
     chatInput.focus();
+    initDepartments();
 });
 
 // ─── Event Handlers ─────────────────────────────────────────────────────────
@@ -42,30 +159,117 @@ function autoGrow() {
     chatInput.style.height = Math.min(chatInput.scrollHeight, 120) + 'px';
 }
 
+function initDepartments() {
+    const select = document.getElementById('dept-select');
+    if (!select) return;
+
+    fetch('/api/departments')
+        .then(res => res.json())
+        .then(depts => {
+            select.innerHTML = '';
+            depts.forEach(d => {
+                const opt = document.createElement('option');
+                opt.value = d.code;
+                opt.textContent = `${d.name} ${d.ingested ? '●' : '○'}`;
+                if (!d.ingested) {
+                    opt.disabled = true;
+                    opt.textContent += ' (Not Ingested)';
+                }
+                opt.selected = (d.code === 'ee');
+                select.appendChild(opt);
+            });
+            
+            depts.forEach(d => {
+                DEPARTMENTS_METADATA[d.code] = d;
+            });
+
+            select.addEventListener('change', handleDeptChange);
+            updateWelcomeMessage('ee');
+        })
+        .catch(err => console.error('Failed to load departments:', err));
+}
+
+function updateWelcomeMessage(deptCode) {
+    const info = DEPT_WELCOME_DETAILS[deptCode] || {
+        title: deptCode.toUpperCase(),
+        desc: "Academic programmes, faculty, students, and research",
+        chips: ["Who is the Head of Department?", "What are the main research areas?"]
+    };
+
+    const headerTitle = document.getElementById('header-title');
+    if (headerTitle) {
+        headerTitle.textContent = `${info.title} Assistant`;
+    }
+
+    const welcomeArea = document.querySelector('.welcome-message');
+    if (welcomeArea) {
+        welcomeArea.innerHTML = `
+            <div class="message-avatar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <div class="message-content">
+                <div class="message-text">
+                    <p>👋 Welcome! I'm the <strong>AI Assistant</strong> for the <strong>${info.title}</strong> at <strong>IIT Jammu</strong>.</p>
+                    <p>I can help you with information about:</p>
+                    <ul>
+                        <li>👨‍🏫 <strong>Faculty</strong> — profiles, research interests, HOD</li>
+                        <li>🎓 <strong>PhD Students</strong> — supervisors, research topics</li>
+                        <li>🔬 <strong>Research Domains</strong> — ${info.desc}</li>
+                        <li>💼 <strong>Projects & Placements</strong> — funded research, industrial records</li>
+                        <li>🏛️ <strong>Labs & Facilities</strong> — departmental infrastructure</li>
+                    </ul>
+                    <p>Try asking something like:</p>
+                </div>
+                <div class="suggestion-chips">
+                    ${info.chips.map(chip => `<button class="chip" onclick="sendSuggestion(this)">${chip}</button>`).join('')}
+                </div>
+            </div>
+        `;
+    }
+}
+
+function handleDeptChange() {
+    const select = document.getElementById('dept-select');
+    if (!select) return;
+    const deptCode = select.value;
+
+    const welcome = document.querySelector('.welcome-message');
+    chatMessages.innerHTML = '';
+    if (welcome) {
+        chatMessages.appendChild(welcome);
+    }
+
+    updateWelcomeMessage(deptCode);
+
+    const info = DEPT_WELCOME_DETAILS[deptCode] || { title: deptCode.toUpperCase() };
+    addMessage(`*Switched context to **${info.title}** AI Assistant. Ask me anything about ${info.title} at IIT Jammu!*`, 'bot');
+}
+
 // ─── Send Message ───────────────────────────────────────────────────────────
 
 function sendMessage() {
     const message = chatInput.value.trim();
     if (!message || isLoading) return;
 
-    // Add user message to chat
     addMessage(message, 'user');
 
-    // Clear input
     chatInput.value = '';
     chatInput.style.height = 'auto';
 
-    // Show typing indicator
     showTypingIndicator();
 
-    // Disable send button
     setLoading(true);
 
-    // Send to API
+    const department = document.getElementById('dept-select')?.value || 'ee';
+
     fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ message, department }),
     })
     .then(res => res.json())
     .then(data => {

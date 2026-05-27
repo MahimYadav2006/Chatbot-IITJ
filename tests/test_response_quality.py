@@ -5,7 +5,7 @@ import os
 from unittest.mock import Mock
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from graphrag.llm import OllamaLLM, GroqLLM, sanitize_response
+from graphrag.llm import OllamaLLM, GroqLLM, get_system_prompt, sanitize_response
 
 
 class TestSanitizeResponse:
@@ -117,3 +117,10 @@ class TestOllamaLLM:
         llm = OllamaLLM()
         result = llm.generate("hello")
         assert "error generating a response" in result.lower()
+
+
+class TestSystemPrompt:
+    def test_cse_prompt_does_not_invent_hod_alias_email(self):
+        prompt = get_system_prompt("computer_science_engineering")
+        assert "hod.computer_science_engineering@iitjammu.ac.in" not in prompt
+        assert "official department website" in prompt.lower()

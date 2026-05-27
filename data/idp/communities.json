@@ -1,0 +1,488 @@
+{
+  "partition": {
+    "idp:Anil Kumar Paidi": 0,
+    "idp:Ankita Yadav": 1,
+    "idp:Avinash Raulo": 2,
+    "idp:Rahul R Salunkhe": 3,
+    "idp:Santhilal Subhash": 4,
+    "idp:Sidharth Maheshwari": 5,
+    "idp:Uma Satya Ranjan": 1,
+    "idp:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis": 0,
+    "idp:characterization": 0,
+    "idp:and development of structure-property relationships in new functional inorganic materials": 0,
+    "idp:2. **Energy Storage Materials -**\u00a0Synthesis": 0,
+    "idp:and Electrochemical study Alkali metal-ion battery systems": 0,
+    "idp:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)": 0,
+    "idp:Digital Divide": 1,
+    "idp:AI and Data Protection": 1,
+    "idp:Judgement and Decision Making": 1,
+    "idp:Critical Thinking and Interpretation": 1,
+    "idp:Energy Storage (Li-S": 2,
+    "idp:Li-ion": 2,
+    "idp:Li-metal and other rechargeable batteries": 2,
+    "idp:Supercapacitors)": 2,
+    "idp:Material (Soft materials and Polymers": 2,
+    "idp:Inorganic and Carbon Materials": 2,
+    "idp:Conductive Composites": 2,
+    "idp:Biomass) for Energy Application": 2,
+    "idp:Solid State Physics": 3,
+    "idp:Material Science": 3,
+    "idp:Nanotechnology": 3,
+    "idp:Ultracapacitor": 3,
+    "idp:Nanoporous Materials": 3,
+    "idp:Solid-state batteries": 3,
+    "idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues": 4,
+    "idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)": 4,
+    "idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models": 4,
+    "idp:we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health": 4,
+    "idp:Key Focus Areas": 4,
+    "idp:Reproductive Biology": 4,
+    "idp:Genomics & Single Cell Biology": 4,
+    "idp:Multi-omics": 4,
+    "idp:Bioinformatics": 4,
+    "idp:Genome Analysis": 5,
+    "idp:Hardware-Software Co-Design": 5,
+    "idp:Battery Management Systems": 5,
+    "idp:Machine Learning (Tsetlin Machines)": 5,
+    "idp:Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design": 5,
+    "idp:specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions": 5,
+    "idp:we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines": 5,
+    "idp:Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS": 5,
+    "idp:several key areas can be targeted to achieve longer battery life": 5,
+    "idp:efficient charge capacity utilization": 5,
+    "IIT Jammu IDP Department": 1
+  },
+  "reports": [
+    {
+      "id": "community_0",
+      "community_id": 0,
+      "members": [
+        "idp:Anil Kumar Paidi",
+        "idp:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis",
+        "idp:characterization",
+        "idp:and development of structure-property relationships in new functional inorganic materials",
+        "idp:2. **Energy Storage Materials -**\u00a0Synthesis",
+        "idp:and Electrochemical study Alkali metal-ion battery systems",
+        "idp:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "idp:Anil Kumar Paidi"
+        ],
+        "ResearchArea": [
+          "idp:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis",
+          "idp:characterization",
+          "idp:and development of structure-property relationships in new functional inorganic materials",
+          "idp:2. **Energy Storage Materials -**\u00a0Synthesis",
+          "idp:and Electrochemical study Alkali metal-ion battery systems",
+          "idp:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "idp:Anil Kumar Paidi",
+          "target": "idp:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Anil Kumar Paidi",
+          "target": "idp:characterization",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Anil Kumar Paidi",
+          "target": "idp:and development of structure-property relationships in new functional inorganic materials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Anil Kumar Paidi",
+          "target": "idp:2. **Energy Storage Materials -**\u00a0Synthesis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Anil Kumar Paidi",
+          "target": "idp:and Electrochemical study Alkali metal-ion battery systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Anil Kumar Paidi",
+          "target": "idp:3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Anil Kumar Paidi\n  ResearchArea: 1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis, characterization, and development of structure-property relationships in new functional inorganic materials, 2. **Energy Storage Materials -**\u00a0Synthesis, and Electrochemical study Alkali metal-ion battery systems, 3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)\n  Relationships: RESEARCHES_IN: 6\n\nSummary: The Community 0 in IIT Jammu's Electrical Engineering Department is led by Faculty member Anil Kumar Paidi. This group focuses on three primary research areas: Solid State Chemistry, Energy Storage Materials, and Investigating Electrode Materials in Real-time. They are connected through their collaborative work, with Anil Kumar Paidi being the common thread among them, as indicated by 6 relationships (RESEARCHES_IN).",
+      "summary": "The Community 0 in IIT Jammu's Electrical Engineering Department is led by Faculty member Anil Kumar Paidi. This group focuses on three primary research areas: Solid State Chemistry, Energy Storage Materials, and Investigating Electrode Materials in Real-time. They are connected through their collaborative work, with Anil Kumar Paidi being the common thread among them, as indicated by 6 relationships (RESEARCHES_IN).",
+      "size": 7
+    },
+    {
+      "id": "community_1",
+      "community_id": 1,
+      "members": [
+        "idp:Ankita Yadav",
+        "idp:Uma Satya Ranjan",
+        "idp:Digital Divide",
+        "idp:AI and Data Protection",
+        "idp:Judgement and Decision Making",
+        "idp:Critical Thinking and Interpretation",
+        "IIT Jammu IDP Department"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "idp:Ankita Yadav",
+          "idp:Uma Satya Ranjan"
+        ],
+        "ResearchArea": [
+          "idp:Digital Divide",
+          "idp:AI and Data Protection",
+          "idp:Judgement and Decision Making",
+          "idp:Critical Thinking and Interpretation"
+        ],
+        "Department": [
+          "IIT Jammu IDP Department"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "idp:Ankita Yadav",
+          "target": "idp:Digital Divide",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Ankita Yadav",
+          "target": "idp:AI and Data Protection",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Ankita Yadav",
+          "target": "idp:Judgement and Decision Making",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Ankita Yadav",
+          "target": "idp:Critical Thinking and Interpretation",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Ankita Yadav",
+          "target": "IIT Jammu IDP Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "idp:Uma Satya Ranjan",
+          "target": "IIT Jammu IDP Department",
+          "type": "MEMBER_OF"
+        }
+      ],
+      "text": "Community 1 in IIT Jammu EE Department:\n  Department: Interdisciplinary Programmes\n  Faculty: Ankita Yadav, Uma Satya Ranjan\n  ResearchArea: Digital Divide, AI and Data Protection, Judgement and Decision Making, Critical Thinking and Interpretation\n  Relationships: RESEARCHES_IN: 4, MEMBER_OF: 2\n\nSummary: The Community 1 in IIT Jammu's Electrical Engineering Department is an interdisciplinary program led by faculty members Ankita Yadav and Uma Satya Ranjan. This group focuses on research areas including Digital Divide, AI and Data Protection, Judgement and Decision Making, and Critical Thinking and Interpretation. The community consists of two members and is associated with four research projects.",
+      "summary": "The Community 1 in IIT Jammu's Electrical Engineering Department is an interdisciplinary program led by faculty members Ankita Yadav and Uma Satya Ranjan. This group focuses on research areas including Digital Divide, AI and Data Protection, Judgement and Decision Making, and Critical Thinking and Interpretation. The community consists of two members and is associated with four research projects.",
+      "size": 7
+    },
+    {
+      "id": "community_2",
+      "community_id": 2,
+      "members": [
+        "idp:Avinash Raulo",
+        "idp:Energy Storage (Li-S",
+        "idp:Li-ion",
+        "idp:Li-metal and other rechargeable batteries",
+        "idp:Supercapacitors)",
+        "idp:Material (Soft materials and Polymers",
+        "idp:Inorganic and Carbon Materials",
+        "idp:Conductive Composites",
+        "idp:Biomass) for Energy Application"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "idp:Avinash Raulo"
+        ],
+        "ResearchArea": [
+          "idp:Energy Storage (Li-S",
+          "idp:Li-ion",
+          "idp:Li-metal and other rechargeable batteries",
+          "idp:Supercapacitors)",
+          "idp:Material (Soft materials and Polymers",
+          "idp:Inorganic and Carbon Materials",
+          "idp:Conductive Composites",
+          "idp:Biomass) for Energy Application"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "idp:Avinash Raulo",
+          "target": "idp:Energy Storage (Li-S",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Avinash Raulo",
+          "target": "idp:Li-ion",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Avinash Raulo",
+          "target": "idp:Li-metal and other rechargeable batteries",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Avinash Raulo",
+          "target": "idp:Supercapacitors)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Avinash Raulo",
+          "target": "idp:Material (Soft materials and Polymers",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Avinash Raulo",
+          "target": "idp:Inorganic and Carbon Materials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Avinash Raulo",
+          "target": "idp:Conductive Composites",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Avinash Raulo",
+          "target": "idp:Biomass) for Energy Application",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Avinash Raulo\n  ResearchArea: Energy Storage (Li-S, Li-ion, Li-metal and other rechargeable batteries, Supercapacitors), Material (Soft materials and Polymers, Inorganic and Carbon Materials, Conductive Composites, Biomass) for Energy Application\n  Relationships: RESEARCHES_IN: 8\n\nSummary: The Community 2 in IIT Jammu's Electrical Engineering Department is led by faculty member Avinash Raulo. This group focuses on energy storage and material research for energy applications, specifically exploring rechargeable batteries (Li-S, Li-ion, Li-metal) and supercapacitors, as well as soft materials, polymers, inorganic and carbon materials, and conductive composites derived from biomass.",
+      "summary": "The Community 2 in IIT Jammu's Electrical Engineering Department is led by faculty member Avinash Raulo. This group focuses on energy storage and material research for energy applications, specifically exploring rechargeable batteries (Li-S, Li-ion, Li-metal) and supercapacitors, as well as soft materials, polymers, inorganic and carbon materials, and conductive composites derived from biomass.",
+      "size": 9
+    },
+    {
+      "id": "community_3",
+      "community_id": 3,
+      "members": [
+        "idp:Rahul R Salunkhe",
+        "idp:Solid State Physics",
+        "idp:Material Science",
+        "idp:Nanotechnology",
+        "idp:Ultracapacitor",
+        "idp:Nanoporous Materials",
+        "idp:Solid-state batteries"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "idp:Rahul R Salunkhe"
+        ],
+        "ResearchArea": [
+          "idp:Solid State Physics",
+          "idp:Material Science",
+          "idp:Nanotechnology",
+          "idp:Ultracapacitor",
+          "idp:Nanoporous Materials",
+          "idp:Solid-state batteries"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "idp:Rahul R Salunkhe",
+          "target": "idp:Solid State Physics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Rahul R Salunkhe",
+          "target": "idp:Material Science",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Rahul R Salunkhe",
+          "target": "idp:Nanotechnology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Rahul R Salunkhe",
+          "target": "idp:Ultracapacitor",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Rahul R Salunkhe",
+          "target": "idp:Nanoporous Materials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Rahul R Salunkhe",
+          "target": "idp:Solid-state batteries",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Rahul R Salunkhe\n  ResearchArea: Solid State Physics, Material Science, Nanotechnology, Ultracapacitor, Nanoporous Materials, Solid-state batteries\n  Relationships: RESEARCHES_IN: 6\n\nSummary: The Community 3 in IIT Jammu's Electrical Engineering Department is led by Faculty Rahul R Salunkhe. This group focuses on interdisciplinary research in Solid State Physics, Material Science, Nanotechnology, Ultracapacitor development, Nanoporous Materials, and Solid-state batteries. They are connected through their collaborative work, as evidenced by the 6 relationships indicated by RESEARCHES_IN.",
+      "summary": "The Community 3 in IIT Jammu's Electrical Engineering Department is led by Faculty Rahul R Salunkhe. This group focuses on interdisciplinary research in Solid State Physics, Material Science, Nanotechnology, Ultracapacitor development, Nanoporous Materials, and Solid-state batteries. They are connected through their collaborative work, as evidenced by the 6 relationships indicated by RESEARCHES_IN.",
+      "size": 7
+    },
+    {
+      "id": "community_4",
+      "community_id": 4,
+      "members": [
+        "idp:Santhilal Subhash",
+        "idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues",
+        "idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)",
+        "idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models",
+        "idp:we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health",
+        "idp:Key Focus Areas",
+        "idp:Reproductive Biology",
+        "idp:Genomics & Single Cell Biology",
+        "idp:Multi-omics",
+        "idp:Bioinformatics"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "idp:Santhilal Subhash"
+        ],
+        "ResearchArea": [
+          "idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues",
+          "idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)",
+          "idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models",
+          "idp:we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health",
+          "idp:Key Focus Areas",
+          "idp:Reproductive Biology",
+          "idp:Genomics & Single Cell Biology",
+          "idp:Multi-omics",
+          "idp:Bioinformatics"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "idp:Santhilal Subhash",
+          "target": "idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Santhilal Subhash",
+          "target": "idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Santhilal Subhash",
+          "target": "idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Santhilal Subhash",
+          "target": "idp:we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Santhilal Subhash",
+          "target": "idp:Key Focus Areas",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Santhilal Subhash",
+          "target": "idp:Reproductive Biology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Santhilal Subhash",
+          "target": "idp:Genomics & Single Cell Biology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Santhilal Subhash",
+          "target": "idp:Multi-omics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Santhilal Subhash",
+          "target": "idp:Bioinformatics",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Santhilal Subhash\n  ResearchArea: Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models, we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health, Key Focus Areas, Reproductive Biology, Genomics & Single Cell Biology, Multi-omics, Bioinformatics\n  Relationships: RESEARCHES_IN: 9\n\nSummary: The Community 4 in IIT Jammu's Electrical Engineering Department is led by Faculty member Santhilal Subhash. This group focuses on understanding the complexities of female reproductive tissues through research on genomics, single-cell biology, multi-omics, and bioinformatics, with a goal of developing targeted therapies for gynecological diseases and cancers. They employ advanced Next-Generation Sequencing (NGS) techniques and computational models to achieve this objective.",
+      "summary": "The Community 4 in IIT Jammu's Electrical Engineering Department is led by Faculty member Santhilal Subhash. This group focuses on understanding the complexities of female reproductive tissues through research on genomics, single-cell biology, multi-omics, and bioinformatics, with a goal of developing targeted therapies for gynecological diseases and cancers. They employ advanced Next-Generation Sequencing (NGS) techniques and computational models to achieve this objective.",
+      "size": 10
+    },
+    {
+      "id": "community_5",
+      "community_id": 5,
+      "members": [
+        "idp:Sidharth Maheshwari",
+        "idp:Genome Analysis",
+        "idp:Hardware-Software Co-Design",
+        "idp:Battery Management Systems",
+        "idp:Machine Learning (Tsetlin Machines)",
+        "idp:Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design",
+        "idp:specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions",
+        "idp:we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines",
+        "idp:Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS",
+        "idp:several key areas can be targeted to achieve longer battery life",
+        "idp:efficient charge capacity utilization"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "idp:Sidharth Maheshwari"
+        ],
+        "ResearchArea": [
+          "idp:Genome Analysis",
+          "idp:Hardware-Software Co-Design",
+          "idp:Battery Management Systems",
+          "idp:Machine Learning (Tsetlin Machines)",
+          "idp:Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design",
+          "idp:specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions",
+          "idp:we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines",
+          "idp:Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS",
+          "idp:several key areas can be targeted to achieve longer battery life",
+          "idp:efficient charge capacity utilization"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "idp:Sidharth Maheshwari",
+          "target": "idp:Genome Analysis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Sidharth Maheshwari",
+          "target": "idp:Hardware-Software Co-Design",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Sidharth Maheshwari",
+          "target": "idp:Battery Management Systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Sidharth Maheshwari",
+          "target": "idp:Machine Learning (Tsetlin Machines)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Sidharth Maheshwari",
+          "target": "idp:Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Sidharth Maheshwari",
+          "target": "idp:specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Sidharth Maheshwari",
+          "target": "idp:we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Sidharth Maheshwari",
+          "target": "idp:Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Sidharth Maheshwari",
+          "target": "idp:several key areas can be targeted to achieve longer battery life",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Sidharth Maheshwari",
+          "target": "idp:efficient charge capacity utilization",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Sidharth Maheshwari\n  ResearchArea: Genome Analysis, Hardware-Software Co-Design, Battery Management Systems, Machine Learning (Tsetlin Machines), Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design, specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions, we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines, Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS, several key areas can be targeted to achieve longer battery life, efficient charge capacity utilization\n  Relationships: RESEARCHES_IN: 10\n\nSummary: The Community 5 in IIT Jammu's Electrical Engineering Department is led by Faculty member Sidharth Maheshwari. This group focuses on innovative research areas including Genome Analysis, Hardware-Software Co-Design, Battery Management Systems, and Machine Learning (specifically Tsetlin Machines). They aim to develop energy-efficient solutions for genome analysis and improve battery management in electric vehicles through the integration of machine learning via hardware/software co-design. The group has a significant body of research with 10 papers listed under Sidharth Maheshwari's name.",
+      "summary": "The Community 5 in IIT Jammu's Electrical Engineering Department is led by Faculty member Sidharth Maheshwari. This group focuses on innovative research areas including Genome Analysis, Hardware-Software Co-Design, Battery Management Systems, and Machine Learning (specifically Tsetlin Machines). They aim to develop energy-efficient solutions for genome analysis and improve battery management in electric vehicles through the integration of machine learning via hardware/software co-design. The group has a significant body of research with 10 papers listed under Sidharth Maheshwari's name.",
+      "size": 11
+    }
+  ]
+}

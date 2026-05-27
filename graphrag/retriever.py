@@ -8,8 +8,8 @@ import os
 import json
 import logging
 import re
-from collections import defaultdict
-from typing import List, Dict, Tuple, Optional
+from collections import Counter, defaultdict
+from typing import Any, List, Dict, Tuple, Optional
 
 import networkx as nx
 
@@ -19,23 +19,320 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
 
 class HybridRetriever:
-    def __init__(self, graph: nx.DiGraph, embedding_engine, community_reports: List[Dict]):
+    def __init__(self, graph: nx.DiGraph, embedding_engine, community_reports: List[Dict], dept_code: str = "ee"):
         self.graph = graph
         self.embeddings = embedding_engine
         self.community_reports = community_reports
+        self.dept_code = dept_code
+        from departments import get_department
+        self.dept_config = get_department(dept_code)
+        self.dept_node_id = f"IIT Jammu {dept_code.upper()} Department"
         self._build_indexes()
 
     def _build_indexes(self):
         """Pre-build lookup indexes for fast entity search."""
         self._entity_name_index = {}
         self._entity_label_index = defaultdict(list)
+        self._label_counts = Counter()
         for node_id, data in self.graph.nodes(data=True):
+            # Enforce department filtering
+            if data.get("department") and data.get("department") != self.dept_code:
+                continue
             label = data.get("label", "")
+            self._label_counts[label] += 1
             if label in ("TextChunk", "Document"):
                 continue
             name = data.get("name", node_id).lower()
             self._entity_name_index[name] = node_id
             self._entity_label_index[label].append(node_id)
+
+    def _normalize_token(self, token: str) -> str:
+        """Apply lightweight normalization for keyword coverage checks."""
+        cleaned = re.sub(r"[^a-z0-9]+", "", token.lower())
+        for suffix in ("ing", "ers", "ies", "es", "s"):
+            if cleaned.endswith(suffix) and len(cleaned) > len(suffix) + 2:
+                if suffix == "ies":
+                    return cleaned[:-3] + "y"
+                return cleaned[:-len(suffix)]
+        return cleaned
+
+    def _query_tokens(self, query: str) -> List[str]:
+        """Tokenize a query into normalized keywords."""
+        return [
+            self._normalize_token(token)
+            for token in re.findall(r"[A-Za-z0-9]+", query.lower())
+            if self._normalize_token(token)
+        ]
+
+    def _is_department_contact_query(self, query: str) -> bool:
+        """Detect generic department contact / point-of-contact questions."""
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+        triggers = (
+            "point of contact",
+            "main contact",
+            "official contact",
+            "department contact",
+            "contact person",
+            "whom should i contact",
+            "who should i contact",
+            "who do i contact",
+        )
+        if any(trigger in q for trigger in triggers):
+            return True
+        return "contact" in q and "department" in q and not self._extract_email_query_name(query)
+
+    def _get_hod_member(self) -> Optional[Dict[str, str]]:
+        """Return the department HoD if present in the faculty roster."""
+        roster = self.get_faculty_roster()
+        for member in roster:
+            if member.get("is_hod"):
+                return member
+
+        from departments import get_markdown_dir
+
+        markdown_dir = get_markdown_dir(self.dept_code)
+        for member in roster:
+            source_file = self.graph.nodes.get(
+                self._find_entity_by_name(member.get("name", ""), allowed_labels=("Faculty",)) or "",
+                {}
+            ).get("source_file", "")
+            if not source_file:
+                continue
+            source_path = os.path.join(markdown_dir, source_file)
+            if not os.path.exists(source_path):
+                continue
+            try:
+                with open(source_path, "r", encoding="utf-8") as handle:
+                    content = handle.read().lower()
+            except OSError:
+                continue
+            if "head of department" in content or "presently, head of department" in content:
+                return member
+        return None
+
+    def _build_department_contact_answer(self) -> Optional[str]:
+        """Build a deterministic answer for generic department contact requests."""
+        hod = self._get_hod_member()
+        if not hod:
+            return None
+
+        lines = [
+            (
+                f"The main official point of contact for the {self.dept_config['full_name']} "
+                f"at IIT Jammu is **{hod['name']}**, Head of Department."
+            )
+        ]
+        if hod.get("email"):
+            lines.append(f"Official email: {hod['email']}")
+        if hod.get("profile_url"):
+            lines.append(f"Profile: [IIT Jammu faculty page]({hod['profile_url']})")
+        return "\n".join(lines)
+
+    def _is_broad_reasoning_query(self, query: str) -> bool:
+        """Relax strict evidence gating for synthesis-heavy prompts."""
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+        return any(term in q for term in (
+            "summarize", "summarise", "overview", "analyze", "analyse", "insight",
+            "trend", "compare", "comparison", "how does", "how do", "why",
+            "based on", "synthesis", "relationship between"
+        ))
+
+    def _infer_query_concepts(self, query: str) -> List[str]:
+        """Identify concrete concepts that should be explicitly supported by evidence."""
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+        concept_aliases = {
+            "startup": ("startup", "startups", "incubated", "venture", "company", "companies"),
+            "patent": ("patent", "patents", "invented", "invention"),
+            "project": ("project", "projects", "funded project", "funding", "grant"),
+            "lab": ("lab", "labs", "laboratory", "laboratories"),
+            "placement": ("placement", "placements", "salary", "package", "higher studies", "higher study"),
+            "contact": ("contact", "point of contact", "official contact"),
+            "publication": ("publication", "publications", "paper", "papers", "journal", "conference"),
+        }
+        matched = []
+        for concept, aliases in concept_aliases.items():
+            if any(alias in q for alias in aliases):
+                matched.append(concept)
+        return matched
+
+    def _concept_supported_by_graph(self, concept: str) -> bool:
+        """Check whether the department graph contains the concept structurally."""
+        if concept == "contact":
+            return self._get_hod_member() is not None
+
+        label_map = {
+            "startup": ("Startup",),
+            "patent": ("Patent",),
+            "project": ("Project",),
+            "lab": ("Lab",),
+            "placement": ("PlacementData", "HigherStudiesData"),
+        }
+        labels = label_map.get(concept, ())
+        return any(self._label_counts.get(label, 0) > 0 for label in labels)
+
+    def _build_unavailable_response(self, query: str, reason: Optional[str] = None) -> str:
+        """Return a safe, department-scoped unavailable-information response."""
+        if self._is_department_contact_query(query):
+            contact_answer = self._build_department_contact_answer()
+            if contact_answer:
+                return contact_answer
+
+        base = (
+            f"I don't have that specific information for the {self.dept_config['full_name']} "
+            f"at IIT Jammu."
+        )
+        if reason:
+            base += f" {reason}"
+        return (
+            f"{base} You can check the IIT Jammu {self.dept_config['name']} website at "
+            f"{self.dept_config['base_url']} for more details."
+        )
+
+    def _build_provenance(
+        self,
+        direct: bool,
+        local_results: List[Dict[str, Any]],
+        vector_results: List[Dict[str, Any]],
+        global_results: List[Dict[str, Any]],
+        section_word_counts: Dict[str, int],
+    ) -> Dict[str, Any]:
+        """Summarize which retrieval channels contributed evidence."""
+        graph_used = bool(direct or local_results)
+        vector_used = bool(vector_results)
+        community_used = bool(global_results)
+
+        if direct:
+            source_mode = "graph"
+            route = "direct_graph"
+        elif graph_used and vector_used:
+            source_mode = "both"
+            route = "graph+vector"
+        elif graph_used:
+            source_mode = "graph"
+            route = "graph"
+        elif vector_used:
+            source_mode = "vector"
+            route = "vector"
+        elif community_used:
+            source_mode = "community"
+            route = "community"
+        else:
+            source_mode = "none"
+            route = "none"
+
+        def avg_score(results: List[Dict[str, Any]]) -> float:
+            if not results:
+                return 0.0
+            return round(sum(float(item.get("score", 0.0)) for item in results) / len(results), 3)
+
+        return {
+            "route": route,
+            "source_mode": source_mode,
+            "graph": {
+                "direct": direct,
+                "items": len(local_results) if not direct else 1,
+                "avg_score": avg_score(local_results),
+                "labels": dict(Counter(item.get("label", "Unknown") for item in local_results)),
+                "word_count": section_word_counts.get("graph", 0),
+            },
+            "vector": {
+                "items": len(vector_results),
+                "avg_score": avg_score(vector_results),
+                "sources": [item.get("source", "Unknown") for item in vector_results[:5]],
+                "word_count": section_word_counts.get("vector", 0),
+            },
+            "community": {
+                "items": len(global_results),
+                "avg_score": avg_score(global_results),
+                "word_count": section_word_counts.get("community", 0),
+            },
+        }
+
+    def _assess_answerability(
+        self,
+        query: str,
+        local_results: List[Dict[str, Any]],
+        vector_results: List[Dict[str, Any]],
+        global_results: List[Dict[str, Any]],
+        context: str,
+    ) -> Dict[str, Any]:
+        """Decide whether the retrieved evidence can safely support an answer."""
+        concepts = self._infer_query_concepts(query)
+        if self._is_broad_reasoning_query(query):
+            return {
+                "answerable": True,
+                "reason": "",
+                "matched_terms": [],
+                "missing_concepts": [],
+            }
+
+        missing_concepts = [concept for concept in concepts if not self._concept_supported_by_graph(concept)]
+        if missing_concepts:
+            concept_text = ", ".join(sorted(missing_concepts))
+            reason = (
+                f"The available department data does not contain grounded {concept_text} information "
+                "for this query."
+            )
+            return {
+                "answerable": False,
+                "reason": reason,
+                "matched_terms": [],
+                "missing_concepts": missing_concepts,
+            }
+
+        factoid_starters = (
+            "who", "what", "which", "where", "when", "name", "list", "give me", "show me",
+            "tell me", "startups", "startup", "contact", "email",
+        )
+        q_normalized = re.sub(r"\s+", " ", query.lower()).strip()
+        is_factoid = q_normalized.startswith(factoid_starters)
+        if not is_factoid:
+            return {
+                "answerable": True,
+                "reason": "",
+                "matched_terms": [],
+                "missing_concepts": [],
+            }
+
+        stop_tokens = {
+            "iit", "jammu", "department", "dept", "faculty", "member", "members", "student", "students",
+            "phd", "research", "official", "main", "information", "computer", "science", "engineering",
+            "electrical", "mechanical", "civil", "chemical", "bioscience", "bioengineering", "physics",
+            "chemistry", "mathematics", "humanities", "social", "sciences",
+        }
+        focus_terms = [
+            token
+            for token in self._query_tokens(query)
+            if len(token) >= 4 and token not in stop_tokens
+        ]
+        evidence_text = self._normalize_token(context)
+        matched_terms = [term for term in focus_terms if term and term in evidence_text]
+
+        if focus_terms and not matched_terms and not (local_results or vector_results or global_results):
+            return {
+                "answerable": False,
+                "reason": "The retriever did not find relevant evidence for this query.",
+                "matched_terms": [],
+                "missing_concepts": [],
+            }
+
+        if focus_terms and not matched_terms and concepts:
+            return {
+                "answerable": False,
+                "reason": (
+                    "The retriever found related department material, but it does not explicitly answer the "
+                    "specific concept requested here."
+                ),
+                "matched_terms": [],
+                "missing_concepts": [],
+            }
+
+        return {
+            "answerable": True,
+            "reason": "",
+            "matched_terms": matched_terms[:10],
+            "missing_concepts": [],
+        }
 
     def _is_faculty_roster_query(self, query: str) -> bool:
         """Detect department-level faculty count/list requests."""
@@ -73,6 +370,147 @@ class HybridRetriever:
             return False
 
         return True
+
+    def _get_faculty_structured_fields(self) -> List[str]:
+        """Return non-empty structured fields available on faculty nodes."""
+        dept_data = self.graph.nodes.get(self.dept_node_id, {})
+        fields = dept_data.get("faculty_structured_fields")
+        if isinstance(fields, list) and fields:
+            return fields
+
+        structured_fields = set()
+        for _, data in self.graph.nodes(data=True):
+            if data.get("label") != "Faculty":
+                continue
+            for key, value in data.items():
+                if key in {"label", "department", "name"}:
+                    continue
+                if value in (None, "", [], {}):
+                    continue
+                structured_fields.add(key)
+        return sorted(structured_fields)
+
+    def _extract_requested_faculty_attribute(self, query: str) -> Optional[str]:
+        """Map analytic faculty questions to a structured attribute."""
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+
+        def has_alias(alias: str) -> bool:
+            pattern = rf"(?<!\w){re.escape(alias)}(?!\w)"
+            return re.search(pattern, q) is not None
+
+        attribute_aliases = {
+            "gender": (
+                "gender", "male", "female", "men", "women", "man", "woman",
+                "boys", "girls", "ladies", "gents"
+            ),
+            "designation": (
+                "designation", "designations", "rank", "ranks",
+                "assistant professor", "associate professor", "professor", "director"
+            ),
+            "is_hod": (
+                "hod", "head of department", "department head"
+            ),
+        }
+
+        for attribute, aliases in attribute_aliases.items():
+            if any(has_alias(alias) for alias in aliases):
+                return attribute
+        return None
+
+    def _is_faculty_analytics_query(self, query: str) -> bool:
+        """Detect faculty analytics/breakdown queries that should be answered structurally."""
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+        has_faculty_anchor = any(term in q for term in (
+            "faculty", "faculties", "professor", "professors", self.dept_code.replace("_", " ")
+        ))
+        if not has_faculty_anchor:
+            return False
+
+        attribute = self._extract_requested_faculty_attribute(q)
+        if not attribute:
+            return False
+
+        analytic_terms = (
+            "ratio", "breakdown", "distribution", "split", "proportion",
+            "calculate", "compare", "comparison", "versus", "vs", "group by",
+            "grouped by", "how many", "count", "number of", "total"
+        )
+        return any(term in q for term in analytic_terms) or attribute == "gender"
+
+    def _normalize_designation(self, designation: str) -> str:
+        """Collapse free-form designations into stable analytic buckets."""
+        text = (designation or "").strip()
+        lowered = text.lower()
+        if "associate professor" in lowered:
+            return "Associate Professor"
+        if "assistant professor" in lowered:
+            return "Assistant Professor"
+        if "professor" in lowered and "director" in lowered:
+            return "Professor (Director)"
+        if "professor" in lowered:
+            return "Professor"
+        return text or "Unknown"
+
+    def _compute_faculty_breakdown(self, attribute: str) -> Dict[str, int]:
+        """Compute deterministic faculty breakdowns for supported structured attributes."""
+        roster = self.get_faculty_roster()
+        counts = Counter()
+
+        if attribute == "designation":
+            for member in roster:
+                counts[self._normalize_designation(member.get("designation", ""))] += 1
+            return dict(sorted(counts.items(), key=lambda item: (-item[1], item[0])))
+
+        if attribute == "is_hod":
+            for member in roster:
+                key = "Head of Department" if member.get("is_hod") else "Non-HoD Faculty"
+                counts[key] += 1
+            return dict(sorted(counts.items(), key=lambda item: (-item[1], item[0])))
+
+        return {}
+
+    def _faculty_listing_url(self) -> str:
+        """Return the canonical faculty listing page for the department."""
+        template = self.dept_config.get("template", "A")
+        suffix = "faculty-list" if template == "B" else "faculty.html"
+        return f"{self.dept_config['base_url']}/{suffix}"
+
+    def _build_faculty_analytics_answer(self, query: str) -> Optional[str]:
+        """Answer faculty analytics queries without falling through to fuzzy retrieval/LLM counting."""
+        if not self._is_faculty_analytics_query(query):
+            return None
+
+        attribute = self._extract_requested_faculty_attribute(query)
+        roster = self.get_faculty_roster()
+        total = len(roster)
+        available_fields = self._get_faculty_structured_fields()
+
+        if attribute == "gender":
+            fields_text = ", ".join(available_fields) if available_fields else "name"
+            return (
+                "I can't calculate a male-to-female ratio for the faculty from the IIT Jammu source data "
+                f"because gender is not stored in the ingested faculty records for {self.dept_config['full_name']}. "
+                f"The authoritative faculty roster currently has **{total} members**, but the structured faculty fields "
+                f"available are: {fields_text}. To avoid guessing a sensitive attribute from names, I won't infer gender."
+            )
+
+        breakdown = self._compute_faculty_breakdown(attribute or "")
+        if not breakdown:
+            return None
+
+        lines = [
+            f"Structured faculty breakdown for the {self.dept_config['full_name']} at IIT Jammu:",
+            "",
+        ]
+        for label, count in breakdown.items():
+            lines.append(f"- {label}: **{count}**")
+        lines.extend([
+            "",
+            f"Total faculty members: **{total}**",
+            "",
+            f"Source: [IIT Jammu {self.dept_config['name']} Faculty]({self._faculty_listing_url()})",
+        ])
+        return "\n".join(lines)
 
     def _query_has_count_intent(self, query: str) -> bool:
         q = re.sub(r"\s+", " ", query.lower()).strip()
@@ -158,13 +596,30 @@ class HybridRetriever:
                 return match.group("name").strip(" ?.")
         return None
 
+    def _extract_email_query_name(self, query: str) -> Optional[str]:
+        """Extract the entity name from email/contact style questions."""
+        q = re.sub(r"\s+", " ", query.strip())
+        patterns = (
+            r"^what is the email of (?P<name>.+?)\??$",
+            r"^what is (?P<name>.+?)'?s email\??$",
+            r"^email of (?P<name>.+?)\??$",
+            r"^contact of (?P<name>.+?)\??$",
+            r"^contact details of (?P<name>.+?)\??$",
+            r"^how can i contact (?P<name>.+?)\??$",
+        )
+        for pattern in patterns:
+            match = re.match(pattern, q, flags=re.IGNORECASE)
+            if match:
+                return match.group("name").strip(" ?.")
+        return None
+
     def _extract_supervisor_from_students_query(self, query: str) -> Optional[str]:
         """Extract the supervisor's name from query seeking their students."""
         q = re.sub(r"\s+", " ", query.strip())
         patterns = (
-            r"^(?:who are the |list of )?phd (?:students|scholars) (?:under|working under|supervised by|guided by) (?P<name>.+?)\??$",
-            r"^phd (?:students|scholars) of (?P<name>.+?)\??$",
-            r"^(?:who are )?(?P<name>.+?)'?s phd (?:students|scholars)\??$",
+            r"^(?:who are the |list of )?ph\.?d\.? (?:students|studetns|scholars) (?:under|working under|supervised by|guided by) (?P<name>.+?)\??$",
+            r"^ph\.?d\.? (?:students|studetns|scholars) of (?P<name>.+?)\??$",
+            r"^(?:who are )?(?P<name>.+?)'?s ph\.?d\.? (?:students|studetns|scholars)\??$",
         )
         for pattern in patterns:
             match = re.match(pattern, q, flags=re.IGNORECASE)
@@ -189,8 +644,8 @@ class HybridRetriever:
         return None
 
     def get_faculty_roster(self) -> List[Dict]:
-        """Return the authoritative EE faculty roster from graph nodes."""
-        dept_id = "IIT Jammu EE Department"
+        """Return the authoritative department faculty roster from graph nodes."""
+        dept_id = self.dept_node_id
         roster = []
         for node_id, data in self.graph.nodes(data=True):
             if data.get("label") != "Faculty":
@@ -198,7 +653,7 @@ class HybridRetriever:
             if not (
                 self.graph.has_edge(node_id, dept_id)
                 or data.get("profile_url")
-                or str(data.get("source_file", "")).startswith("ee_faculty")
+                or str(data.get("source_file", "")).startswith(f"{self.dept_code}_faculty")
             ):
                 continue
             order = data.get("faculty_order")
@@ -211,7 +666,8 @@ class HybridRetriever:
                 "order": order if isinstance(order, int) else 9999,
             })
 
-        return sorted(roster, key=lambda item: (item["order"], item["name"]))
+        # Stable sort: canonical hod first, then alphabetically
+        return sorted(roster, key=lambda x: (not x["is_hod"], x["order"], x["name"].lower()))
 
     def get_phd_roster(self) -> List[Dict]:
         """Return the authoritative PhD scholar roster from graph nodes and supervision edges."""
@@ -219,7 +675,7 @@ class HybridRetriever:
         for node_id, data in self.graph.nodes(data=True):
             if data.get("label") != "PhDStudent":
                 continue
-            if str(data.get("source_file", "")) != "ee_phd-list.html.md":
+            if "phd-list" not in str(data.get("source_file", "")).lower():
                 continue
 
             supervisors = []
@@ -233,6 +689,7 @@ class HybridRetriever:
                 "name": data.get("name", node_id),
                 "supervisors": list(dict.fromkeys(supervisors)),
                 "research_area": data.get("research_area", ""),
+                "email": data.get("email", ""),
             })
 
         return sorted(roster, key=lambda item: item["name"].lower())
@@ -240,14 +697,14 @@ class HybridRetriever:
     def _faculty_roster_context(self) -> str:
         """Build a complete roster context block for the LLM."""
         roster = self.get_faculty_roster()
-        dept_data = self.graph.nodes.get("IIT Jammu EE Department", {})
+        dept_data = self.graph.nodes.get(self.dept_node_id, {})
         count = dept_data.get("faculty_count") or len(roster)
 
         lines = [
             "## Authoritative Faculty Roster",
             (
                 "Use this complete roster for department-level faculty count "
-                f"and list questions. The Department of Electrical Engineering "
+                f"and list questions. The {self.dept_config['full_name']} "
                 f"at IIT Jammu has {count} faculty members."
             ),
             "",
@@ -267,7 +724,7 @@ class HybridRetriever:
     def _phd_roster_context(self) -> str:
         """Build a complete PhD roster context block for deterministic answering."""
         roster = self.get_phd_roster()
-        dept_data = self.graph.nodes.get("IIT Jammu EE Department", {})
+        dept_data = self.graph.nodes.get(self.dept_node_id, {})
         count = dept_data.get("phd_student_count") or len(roster)
 
         supervisor_counts = defaultdict(int)
@@ -279,7 +736,7 @@ class HybridRetriever:
             "## Authoritative PhD Scholar Roster",
             (
                 "Use this complete roster for department-level PhD scholar count "
-                f"and list questions. The Department of Electrical Engineering at IIT Jammu "
+                f"and list questions. The {self.dept_config['full_name']} at IIT Jammu "
                 f"has {count} PhD scholars listed on the official PhD page."
             ),
             "",
@@ -296,6 +753,8 @@ class HybridRetriever:
                 details.append(f"Supervisor(s): {', '.join(scholar['supervisors'])}")
             if scholar["research_area"]:
                 details.append(f"Research Area: {scholar['research_area']}")
+            if scholar["email"]:
+                details.append(f"Email: {scholar['email']}")
             lines.append(" - ".join(details))
 
         return "\n".join(lines)
@@ -305,23 +764,30 @@ class HybridRetriever:
         ql = query.lower()
         q_cleaned = re.sub(r"\s+", " ", query.strip().lower()).strip(" ?.")
 
-        # 1. Look up in qna_dataset if available (highest priority, ensures absolute correctness under evaluator noise)
-        try:
-            qna_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "evaluation", "qna_dataset.json")
-            if os.path.exists(qna_path):
-                with open(qna_path, "r", encoding="utf-8") as f:
-                    qna_data = json.load(f)
-                from difflib import SequenceMatcher
-                for item in qna_data:
-                    q_expected = re.sub(r"\s+", " ", item["question"].strip().lower()).strip(" ?.")
-                    # Exact or >95% fuzzy match
-                    if q_expected == q_cleaned or SequenceMatcher(None, q_expected, q_cleaned).ratio() > 0.95:
-                        logger.info(f"Direct QnA match found for question ID {item['id']}.")
-                        return item["expected_answer"]
-        except Exception as e:
-            logger.warning(f"Error checking qna_dataset in direct answers: {e}")
+        if self._is_department_contact_query(query):
+            contact_answer = self._build_department_contact_answer()
+            if contact_answer:
+                return contact_answer
 
-        # 2. PhD Student supervisor queries (dynamic, fallback)
+        faculty_analytics_answer = self._build_faculty_analytics_answer(query)
+        if faculty_analytics_answer:
+            return faculty_analytics_answer
+
+        entity_email_name = self._extract_email_query_name(query)
+        if entity_email_name:
+            entity_id = self._find_entity_by_name(
+                entity_email_name,
+                allowed_labels=("Faculty", "PhDStudent", "ExternalPerson"),
+            )
+            if entity_id and self.graph.has_node(entity_id):
+                entity = self.graph.nodes[entity_id]
+                email = entity.get("email", "")
+                entity_name = entity.get("name", entity_email_name)
+                if email:
+                    return f"{entity_name}'s official email is {email}."
+                return f"I couldn't find an official email address for {entity_name} in the department records."
+
+        # 1. PhD Student supervisor queries (dynamic, fallback)
         student_name = self._extract_supervisor_query_name(query)
         if student_name:
             student_id = self._find_entity_by_name(student_name, allowed_labels=("PhDStudent",))
@@ -359,8 +825,7 @@ class HybridRetriever:
                     research_area = student.get("research_area", "")
                     ans = f"{s_name_title} is supervised by {sups_str}."
                     if research_area:
-                        pronoun = "Her" if any(x in s_name.lower() for x in ("zareena", "meghna", "alisha", "safa")) else "His"
-                        ans += f" {pronoun} research area is {research_area}."
+                        ans += f" Research area: {research_area}."
                     return ans
 
         # 2.5 PhD students under a specific supervisor query (dynamic, fallback)
@@ -407,10 +872,8 @@ class HybridRetriever:
                 student = self.graph.nodes[student_id]
                 area = student.get("research_area", "")
                 if area:
-                    pronoun = "His"
-                    if "zareena" in student_name_area.lower():
-                        pronoun = "Her"
-                    return f"{pronoun} research area is {area}."
+                    student_display_name = student.get("name", student_name_area)
+                    return f"{student_display_name}'s research area is {area}."
 
         # 4. PhD Roster count and list queries
         if self._is_phd_roster_query(query):
@@ -418,7 +881,7 @@ class HybridRetriever:
             count = len(roster)
             lines = [
                 (
-                    "The Department of Electrical Engineering at IIT Jammu has "
+                    f"The {self.dept_config['full_name']} at IIT Jammu has "
                     f"**{count} PhD scholars** listed on its official PhD page."
                 )
             ]
@@ -431,11 +894,13 @@ class HybridRetriever:
                         details.append(f"Supervisor(s): {', '.join(scholar['supervisors'])}")
                     if scholar["research_area"]:
                         details.append(f"Research Area: {scholar['research_area']}")
+                    if scholar["email"]:
+                        details.append(f"Email: {scholar['email']}")
                     lines.append(" - ".join(details))
 
             lines.extend([
                 "",
-                "Source: [IIT Jammu EE PhD students](https://iitjammu.ac.in/ee/phd-list.html)",
+                f"Source: [IIT Jammu {self.dept_config['name']} PhD students]({self.dept_config['base_url']}/phd-list.html)",
             ])
             return "\n".join(lines)
 
@@ -444,12 +909,12 @@ class HybridRetriever:
             return None
 
         roster = self.get_faculty_roster()
-        dept_data = self.graph.nodes.get("IIT Jammu EE Department", {})
+        dept_data = self.graph.nodes.get(self.dept_node_id, {})
         count = dept_data.get("faculty_count") or len(roster)
 
         lines = [
             (
-                "The Department of Electrical Engineering at IIT Jammu has "
+                f"The {self.dept_config['full_name']} at IIT Jammu has "
                 f"**{count} faculty members**."
             ),
             "",
@@ -469,7 +934,7 @@ class HybridRetriever:
 
         lines.extend([
             "",
-            "Source: [IIT Jammu EE Faculty](https://iitjammu.ac.in/ee/faculty.html)",
+            f"Source: [IIT Jammu {self.dept_config['name']} Faculty]({self._faculty_listing_url()})",
         ])
         return "\n".join(lines)
 
@@ -500,6 +965,8 @@ class HybridRetriever:
         elif label == "PhDStudent":
             if data.get("research_area"):
                 parts.append(f"  - Research Area: {data['research_area']}")
+            if data.get("email"):
+                parts.append(f"  - Email: {data['email']}")
                 
         elif label == "Project":
             proj_num = data.get("project_number", "")
@@ -831,7 +1298,7 @@ class HybridRetriever:
         # Phase 2: Embedding-based entity search (fills remaining slots)
         remaining = top_k - len(results)
         if remaining > 0:
-            entity_matches = self.embeddings.search(query, top_k=remaining, type_filter="entity")
+            entity_matches = self.embeddings.search(query, top_k=remaining, type_filter="entity", department_filter=self.dept_code)
             for item, score in entity_matches:
                 node_id = item["id"]
                 if node_id in seen_ids or not self.graph.has_node(node_id):
@@ -850,7 +1317,7 @@ class HybridRetriever:
     def _vector_search(self, query: str, top_k: int = 5) -> List[Dict]:
         """Semantic chunk search."""
         results = []
-        chunk_matches = self.embeddings.search(query, top_k=top_k, type_filter="chunk")
+        chunk_matches = self.embeddings.search(query, top_k=top_k, type_filter="chunk", department_filter=self.dept_code)
         
         for item, score in chunk_matches:
             text = item["text"][:1200]
@@ -867,7 +1334,7 @@ class HybridRetriever:
     def _global_search(self, query: str, top_k: int = 3) -> List[Dict]:
         """Community summary search."""
         results = []
-        matches = self.embeddings.search(query, top_k=top_k, type_filter="community")
+        matches = self.embeddings.search(query, top_k=top_k, type_filter="community", department_filter=self.dept_code)
         
         for item, score in matches:
             comm_id = item["id"]
@@ -892,14 +1359,89 @@ class HybridRetriever:
     def retrieve(self, query: str, local_top_k: int = 6, vector_top_k: int = 4,
                  global_top_k: int = 2, max_context_words: int = 3000) -> str:
         """Run full hybrid retrieval and return clean formatted context."""
+        bundle = self.retrieve_bundle(
+            query,
+            local_top_k=local_top_k,
+            vector_top_k=vector_top_k,
+            global_top_k=global_top_k,
+            max_context_words=max_context_words,
+        )
+        return bundle["context"]
+
+    def retrieve_bundle(
+        self,
+        query: str,
+        local_top_k: int = 6,
+        vector_top_k: int = 4,
+        global_top_k: int = 2,
+        max_context_words: int = 3000,
+    ) -> Dict[str, Any]:
+        """Run full hybrid retrieval and return context plus provenance metadata."""
+        if self._is_department_contact_query(query):
+            contact_answer = self._build_department_contact_answer()
+            if contact_answer:
+                provenance = self._build_provenance(
+                    direct=True,
+                    local_results=[],
+                    vector_results=[],
+                    global_results=[],
+                    section_word_counts={"graph": len(contact_answer.split())},
+                )
+                return {
+                    "context": contact_answer,
+                    "provenance": provenance,
+                    "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
+                    "fallback_response": None,
+                }
+
+        faculty_analytics_answer = self._build_faculty_analytics_answer(query)
+        if faculty_analytics_answer:
+            logger.info("Retrieved deterministic faculty analytics answer/context.")
+            provenance = self._build_provenance(
+                direct=True,
+                local_results=[],
+                vector_results=[],
+                global_results=[],
+                section_word_counts={"graph": len(faculty_analytics_answer.split())},
+            )
+            return {
+                "context": faculty_analytics_answer,
+                "provenance": provenance,
+                "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
+                "fallback_response": None,
+            }
         if self._is_faculty_roster_query(query):
             context = self._faculty_roster_context()
             logger.info("Retrieved authoritative faculty roster context.")
-            return context
+            provenance = self._build_provenance(
+                direct=True,
+                local_results=[],
+                vector_results=[],
+                global_results=[],
+                section_word_counts={"graph": len(context.split())},
+            )
+            return {
+                "context": context,
+                "provenance": provenance,
+                "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
+                "fallback_response": None,
+            }
         if self._is_phd_roster_query(query):
             context = self._phd_roster_context()
             logger.info("Retrieved authoritative PhD roster context.")
-            return context
+            provenance = self._build_provenance(
+                direct=True,
+                local_results=[],
+                vector_results=[],
+                global_results=[],
+                section_word_counts={"graph": len(context.split())},
+            )
+            return {
+                "context": context,
+                "provenance": provenance,
+                "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
+                "fallback_response": None,
+            }
 
         if self._is_exact_count_query(query):
             global_top_k = 0
@@ -916,11 +1458,13 @@ class HybridRetriever:
 
         sections = []
         word_count = 0
+        section_word_counts = {"graph": 0, "vector": 0, "community": 0}
 
         # Section 0: Structured placement data (highest priority for salary/placement queries)
         if placement_context:
             sections.append(placement_context)
             word_count += len(placement_context.split())
+            section_word_counts["graph"] += len(placement_context.split())
 
         # Section 1: Matched Entities
         if local_results:
@@ -932,7 +1476,9 @@ class HybridRetriever:
                 if r['relationships']:
                     entry += f"\n{r['relationships']}"
                 entity_lines.append(entry)
-                word_count += len(entry.split())
+                entry_words = len(entry.split())
+                word_count += entry_words
+                section_word_counts["graph"] += entry_words
             sections.append("\n\n".join(entity_lines))
 
         # Section 2: Relevant Text
@@ -951,7 +1497,9 @@ class HybridRetriever:
                 if r['url']:
                     source_info += f" ({r['url']})"
                 chunk_lines.append(f"{source_info}\n{text}")
-                word_count += len(text.split()) + 5
+                chunk_words = len(text.split()) + 5
+                word_count += chunk_words
+                section_word_counts["vector"] += chunk_words
             sections.append("\n\n".join(chunk_lines))
 
         # Section 3: Department Overview
@@ -964,25 +1512,55 @@ class HybridRetriever:
                 if r["members"]:
                     entry += f"\nMembers:{r['members']}"
                 comm_lines.append(entry)
-                word_count += len(entry.split())
+                entry_words = len(entry.split())
+                word_count += entry_words
+                section_word_counts["community"] += entry_words
             sections.append("\n\n".join(comm_lines))
 
         context = "\n\n---\n\n".join(sections)
         if not context.strip():
             context = "No relevant information found in the knowledge graph for this query."
 
+        answerability = self._assess_answerability(
+            query=query,
+            local_results=local_results,
+            vector_results=vector_results,
+            global_results=global_results,
+            context=context,
+        )
+        fallback_response = None
+        if not answerability["answerable"]:
+            fallback_response = self._build_unavailable_response(query, answerability["reason"])
+
+        provenance = self._build_provenance(
+            direct=False,
+            local_results=local_results,
+            vector_results=vector_results,
+            global_results=global_results,
+            section_word_counts=section_word_counts,
+        )
+
         logger.info(f"Retrieved: ~{word_count} words, {len(local_results)} entities, "
                     f"{len(vector_results)} chunks, {len(global_results)} communities")
-        return context
+        return {
+            "context": context,
+            "provenance": provenance,
+            "answerability": answerability,
+            "fallback_response": fallback_response,
+        }
 
 
-def load_retriever(data_dir: str = DATA_DIR) -> HybridRetriever:
+def load_retriever(dept_code: str = "ee", data_dir: str = None) -> HybridRetriever:
     """Load all components and create a HybridRetriever."""
     from graphrag.kg_builder import KnowledgeGraphBuilder
     from graphrag.embeddings import EmbeddingEngine
     from graphrag.community import load_communities
+    from departments import get_data_dir
 
-    logger.info("Loading knowledge graph...")
+    if data_dir is None:
+        data_dir = get_data_dir(dept_code)
+
+    logger.info(f"Loading knowledge graph for department '{dept_code}'...")
     graph, chunks = KnowledgeGraphBuilder.load(data_dir)
     logger.info(f"Graph: {graph.number_of_nodes()} nodes, {graph.number_of_edges()} edges")
 
@@ -995,6 +1573,6 @@ def load_retriever(data_dir: str = DATA_DIR) -> HybridRetriever:
     partition, reports = load_communities(data_dir)
     logger.info(f"Communities: {len(set(partition.values()))}")
 
-    retriever = HybridRetriever(graph, engine, reports)
-    logger.info("Hybrid retriever ready!")
+    retriever = HybridRetriever(graph, engine, reports, dept_code=dept_code)
+    logger.info(f"Hybrid retriever for '{dept_code}' ready!")
     return retriever
