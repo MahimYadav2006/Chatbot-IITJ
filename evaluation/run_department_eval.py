@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate and evaluate department-specific chatbot questions using Ollama llama3.1."
+        description="Generate and evaluate department-specific chatbot questions using the configured LLM provider."
     )
     parser.add_argument(
         "--dept",
@@ -36,8 +36,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--model",
-        default="llama3.1",
-        help="Ollama model name to use for question generation, answering, and judging.",
+        default=None,
+        help="Optional model override for the configured provider.",
     )
     parser.add_argument(
         "--question-count",

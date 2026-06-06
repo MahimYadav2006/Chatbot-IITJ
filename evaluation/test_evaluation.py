@@ -9,18 +9,21 @@ import sys
 import json
 import time
 import logging
+from env_config import load_env_file
+
+load_env_file()
 
 # Ensure graphrag packages can be imported
 sys.path.append("/home/c3i/chatbot")
 
 from graphrag.retriever import load_retriever
-from graphrag.llm import OllamaLLM, SYSTEM_PROMPT, build_chat_prompt, sanitize_response
+from graphrag.llm import SYSTEM_PROMPT, build_chat_prompt, create_llm_from_env, sanitize_response
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
 
-def evaluate_response(llm: OllamaLLM, question: str, expected: str, actual: str, category: str) -> dict:
+def evaluate_response(llm, question: str, expected: str, actual: str, category: str) -> dict:
     """Uses the LLM as an objective judge to classify and explain the chatbot response."""
     import re
     from difflib import SequenceMatcher
@@ -109,9 +112,9 @@ def main():
     with open(qna_path, "r", encoding="utf-8") as f:
         dataset = json.load(f)
 
-    logger.info("Initializing GraphRAG Hybrid Retriever and Ollama LLM...")
+    logger.info("Initializing GraphRAG Hybrid Retriever and configured LLM...")
     retriever = load_retriever()
-    llm = OllamaLLM()
+    llm = create_llm_from_env()
 
     results = []
 

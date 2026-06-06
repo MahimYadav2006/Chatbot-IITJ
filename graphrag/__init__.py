@@ -7,5 +7,5 @@ Components:
     - embeddings: Embedding generation and FAISS indexing
     - community: Community detection and summarization
     - retriever: Hybrid retrieval engine
-    - llm: LLM integration via Groq API
+    - llm: LLM integration via Ollama or Gemini
 """

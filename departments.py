@@ -3,6 +3,9 @@ Central department registry for IIT Jammu multi-department chatbot.
 All department-specific configuration lives here.
 """
 import os
+from env_config import load_env_file
+
+load_env_file()
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SCRAPED_DATA_ROOT = os.environ.get(

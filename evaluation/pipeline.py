@@ -9,10 +9,13 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Tuple
+from env_config import load_env_file
+
+load_env_file()
 
 from departments import get_data_dir, get_department, resolve_department_code
 from graphrag.kg_builder import KnowledgeGraphBuilder
-from graphrag.llm import OllamaLLM, build_chat_prompt, get_system_prompt
+from graphrag.llm import build_chat_prompt, create_llm_from_env, get_system_prompt
 from graphrag.retriever import load_retriever
 
 logger = logging.getLogger(__name__)
@@ -439,7 +442,7 @@ def _validate_generated_questions(
 
 
 def _generate_validated_json(
-    llm: OllamaLLM,
+    llm,
     prompt: str,
     validator,
     *,
@@ -467,7 +470,7 @@ def _generate_validated_json(
                 "Return a corrected JSON payload that satisfies the schema exactly."
             )
             logger.warning("LLM JSON validation failed on attempt %s: %s", attempt, exc)
-    raise RuntimeError("Failed to get valid JSON from Ollama after multiple attempts.")
+    raise RuntimeError("Failed to get valid JSON from the configured LLM after multiple attempts.")
 
 
 def generate_question_set(
@@ -480,7 +483,7 @@ def generate_question_set(
 ) -> Dict[str, Any]:
     canonical = resolve_department_code(dept_code)
     counts = allocate_category_counts(question_count)
-    llm = OllamaLLM(model=model or os.environ.get("OLLAMA_MODEL", "llama3.1"))
+    llm = create_llm_from_env(model=model)
     grounding_bundle = build_grounding_bundle(canonical, max_chars=max_source_chars)
     questions = []
     seen_questions = set()
@@ -532,7 +535,7 @@ def generate_question_set(
 
 def _run_chatbot_query(
     retriever,
-    llm: OllamaLLM,
+    llm,
     dept_code: str,
     question: str,
 ) -> Dict[str, Any]:
@@ -631,7 +634,7 @@ All scores must be integers from 0 to 5."""
 
 
 def evaluate_single_answer(
-    llm: OllamaLLM,
+    llm,
     item: Dict[str, Any],
     actual_answer: str,
 ) -> Dict[str, Any]:
@@ -790,10 +793,10 @@ def evaluate_question_set(
 ) -> Dict[str, Any]:
     meta = dataset.get("meta", {})
     canonical = resolve_department_code(dept_code or meta.get("department", "ee"))
-    model_name = model or meta.get("model") or os.environ.get("OLLAMA_MODEL", "llama3.1")
+    model_name = model or meta.get("model")
 
-    answer_llm = OllamaLLM(model=model_name)
-    judge_llm = OllamaLLM(model=model_name)
+    answer_llm = create_llm_from_env(model=model_name)
+    judge_llm = create_llm_from_env(model=model_name)
     retriever = load_retriever(dept_code=canonical)
 
     results = []

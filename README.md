@@ -530,13 +530,39 @@ python ingest.py                  # Full pipeline
 python ingest.py --skip-summaries # Skip LLM (faster)
 ```
 
-### 3. Start Ollama
+### 3. Configure the Project from One `.env` File
+
+Copy the example config and edit it once:
+
+```bash
+cp .env.example .env
+```
+
+Default local setup uses Ollama:
 
 ```bash
 ollama serve
 # In another terminal:
 ollama pull llama3.1
 ```
+
+Set your `.env` like this for Ollama:
+
+```bash
+LLM_PROVIDER=ollama
+OLLAMA_API_URL=http://localhost:11434/api/chat
+OLLAMA_MODEL=llama3.1
+```
+
+Or switch the same `.env` file to Gemini:
+
+```bash
+LLM_PROVIDER=gemini
+GEMINI_API_KEY=your_key_here
+GEMINI_MODEL=gemini-2.5-flash-lite
+```
+
+This `.env` file is used by both `app.py` and `ingest.py`, so changing `LLM_PROVIDER` switches the project between Ollama and Gemini centrally.
 
 ### 4. Start ChatBot
 
@@ -575,7 +601,7 @@ Metrics: Exact match, partial match, BLEU score
 | `graphrag/community.py` | Community detection & summarization |
 | `graphrag/embeddings.py` | Vector embeddings & FAISS index |
 | `graphrag/retriever.py` | Hybrid retrieval engine |
-| `graphrag/llm.py` | LLM integration (Ollama) |
+| `graphrag/llm.py` | LLM integration (Ollama/Gemini) |
 | `data/graph.pkl` | Serialized knowledge graph |
 | `data/embeddings.faiss` | FAISS index |
 | `data/communities.json` | Community reports |

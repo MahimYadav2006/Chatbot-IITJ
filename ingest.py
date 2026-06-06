@@ -22,6 +22,9 @@ import sys
 import time
 import logging
 import argparse
+from env_config import load_env_file
+
+load_env_file()
 
 # Setup logging
 logging.basicConfig(
@@ -84,9 +87,12 @@ def ingest_department(dept_code: str, skip_summaries: bool = False):
         logger.info("Skipping LLM summarization (--skip-summaries flag)")
         reports = summarize_communities(reports, llm_fn=None)
     else:
-        from graphrag.llm import OllamaLLM
-        llm = OllamaLLM()
-        logger.info(f"Using Ollama LLM ({llm.model}) for summarization...")
+        from graphrag.llm import create_llm_from_env
+        llm = create_llm_from_env()
+        logger.info(
+            f"Using {getattr(llm, 'provider', 'unknown')} LLM "
+            f"({getattr(llm, 'model', 'unknown')}) for summarization..."
+        )
         reports = summarize_communities(reports, llm_fn=llm)
 
     save_communities(reports, partition, data_dir)

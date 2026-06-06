@@ -114,8 +114,22 @@ def build_community_reports(graph: nx.DiGraph, partition: Dict[str, int]) -> Lis
                     })
 
         # Build text representation for embedding
+        # Detect department name from graph nodes
+        dept_label = "IIT Jammu"
+        for m in members[:5]:
+            m_data = graph.nodes.get(m, {})
+            m_dept = m_data.get("department", "")
+            if m_dept:
+                try:
+                    from departments import get_department
+                    dept_config = get_department(m_dept)
+                    dept_label = f"IIT Jammu {dept_config['name']}"
+                except Exception:
+                    dept_label = f"IIT Jammu {m_dept.upper()}"
+                break
+
         text_parts = []
-        text_parts.append(f"Community {comm_id} in IIT Jammu EE Department:")
+        text_parts.append(f"Community {comm_id} in {dept_label} Department:")
 
         for label, nodes in sorted(members_by_type.items()):
             names = []
@@ -168,7 +182,7 @@ def summarize_communities(reports: List[Dict], llm_fn=None) -> List[Dict]:
         if llm_fn is not None:
             # Use LLM to generate a rich summary
             prompt = f"""You are an expert at summarizing academic department information.
-Below is a cluster of related entities from the IIT Jammu Electrical Engineering Department's knowledge graph.
+Below is a cluster of related entities from an IIT Jammu department's knowledge graph.
 
 {text}
 

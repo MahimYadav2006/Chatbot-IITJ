@@ -218,10 +218,12 @@ class HybridRetriever:
         )
         if reason:
             base += f" {reason}"
-        return (
-            f"{base} You can check the IIT Jammu {self.dept_config['name']} website at "
+        base += (
+            f" You can check the IIT Jammu {self.dept_config['name']} website at "
             f"{self.dept_config['base_url']} for more details."
         )
+        base += " If you're looking for information from a specific department, try mentioning the department name in your query."
+        return base
 
     def _build_provenance(
         self,
@@ -914,8 +916,15 @@ class HybridRetriever:
 
         return "\n".join(lines)
 
-    def get_direct_answer(self, query: str) -> Optional[str]:
-        """Return deterministic answers for questions that should not rely on LLM inference."""
+    def get_direct_answer(self, query: str, suppress_topic_match: bool = False) -> Optional[str]:
+        """Return deterministic answers for questions that should not rely on LLM inference.
+        
+        Args:
+            query: The user's question.
+            suppress_topic_match: If True, skip topic/expert contact matching.
+                Used during broadcast to prevent a single department from
+                short-circuiting cross-department topic queries.
+        """
         ql = query.lower()
         q_cleaned = re.sub(r"\s+", " ", query.strip().lower()).strip(" ?.")
 
@@ -925,23 +934,26 @@ class HybridRetriever:
                 return contact_answer
 
         # Check for topic contact / expert queries
+        # When suppress_topic_match is True (broadcast mode), skip this entire
+        # block so the query goes through full retrieval across ALL departments.
         is_topic_query = False
         topic = None
-        
-        contact_patterns = [
-            r"who\s+(?:should\s+i\s+|to\s+)?contact\s+(?:for|about|regarding)\s+(.+)",
-            r"who\s+(?:is\s+)?(?:working\s+on|works\s+on|researching|expert\s+in|specialist\s+in)\s+(.+)",
-            r"who\s+(?:to\s+)?(?:reach\s+out\s+to|write\s+to)\s+(?:for|about|regarding)\s+(.+)",
-        ]
-        
-        for pat in contact_patterns:
-            m = re.search(pat, q_cleaned, re.IGNORECASE)
-            if m:
-                is_topic_query = True
-                topic = m.group(1).strip()
-                topic = re.sub(r"\s*(?:related\s+tasks|tasks|work|research|lab|projects|area|field|topics|subject|course|class|\?|\.)+$", "", topic, flags=re.IGNORECASE).strip()
-                break
-                
+
+        if not suppress_topic_match:
+            contact_patterns = [
+                r"who\s+(?:should\s+i\s+|to\s+)?contact\s+(?:for|about|regarding)\s+(.+)",
+                r"who\s+(?:is\s+)?(?:working\s+on|works\s+on|researching|expert\s+in|specialist\s+in)\s+(.+)",
+                r"who\s+(?:to\s+)?(?:reach\s+out\s+to|write\s+to)\s+(?:for|about|regarding)\s+(.+)",
+            ]
+
+            for pat in contact_patterns:
+                m = re.search(pat, q_cleaned, re.IGNORECASE)
+                if m:
+                    is_topic_query = True
+                    topic = m.group(1).strip()
+                    topic = re.sub(r"\s*(?:related\s+tasks|tasks|work|research|lab|projects|area|field|topics|subject|course|class|\?|\.)+$", "", topic, flags=re.IGNORECASE).strip()
+                    break
+
         if is_topic_query and topic:
             matching_faculty = []
             topic_lower = topic.lower()
@@ -1553,7 +1565,7 @@ class HybridRetriever:
         # Phase 2: Embedding-based entity search (fills remaining slots)
         remaining = top_k - len(results)
         if remaining > 0:
-            entity_matches = self.embeddings.search(query, top_k=remaining, type_filter="entity", department_filter=self.dept_code)
+            entity_matches = self.embeddings.search(query, top_k=remaining, type_filter="entity", department_filter=self.dept_code, min_score=0.35)
             for item, score in entity_matches:
                 node_id = item["id"]
                 if node_id in seen_ids or not self.graph.has_node(node_id):
@@ -1570,9 +1582,9 @@ class HybridRetriever:
         return results[:top_k]
 
     def _vector_search(self, query: str, top_k: int = 5) -> List[Dict]:
-        """Semantic chunk search."""
+        """Semantic chunk search with minimum score threshold."""
         results = []
-        chunk_matches = self.embeddings.search(query, top_k=top_k, type_filter="chunk", department_filter=self.dept_code)
+        chunk_matches = self.embeddings.search(query, top_k=top_k, type_filter="chunk", department_filter=self.dept_code, min_score=0.35)
         
         for item, score in chunk_matches:
             text = item["text"][:1200]
@@ -1791,6 +1803,16 @@ class HybridRetriever:
         context = "\n\n---\n\n".join(sections)
         if not context.strip():
             context = "No relevant information found in the knowledge graph for this query."
+
+        # Minimum context gate: if context is too thin, force unanswerable
+        # to prevent the LLM from hallucinating on near-empty evidence
+        context_word_count = len(context.split())
+        if context_word_count < 20 and context.strip() != "No relevant information found in the knowledge graph for this query.":
+            logger.info(f"Context too thin ({context_word_count} words) — forcing unanswerable.")
+            context = "No relevant information found in the knowledge graph for this query."
+            local_results = []
+            vector_results = []
+            global_results = []
 
         answerability = self._assess_answerability(
             query=query,

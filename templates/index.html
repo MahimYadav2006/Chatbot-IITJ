@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IIT Jammu EE Department — AI Assistant</title>
-    <meta name="description" content="AI-powered chatbot for the Department of Electrical Engineering at IIT Jammu. Ask about faculty, research, programmes, and more.">
+    <title>IIT Jammu — AI Assistant</title>
+    <meta name="description" content="AI-powered chatbot for IIT Jammu. Ask about any department — faculty, research, programmes, students, and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -28,17 +28,12 @@
                             </svg>
                         </div>
                         <div class="logo-text">
-                            <h1 id="header-title">EE Department Assistant</h1>
-                            <span class="subtitle">IIT Jammu • GraphRAG Powered</span>
+                            <h1 id="header-title">IIT Jammu AI Assistant</h1>
+                            <span class="subtitle">All Departments • GraphRAG Powered</span>
                         </div>
                     </div>
                 </div>
                 <div class="header-right">
-                    <div class="dept-selector-wrapper">
-                        <select id="dept-select" class="dept-select">
-                            <option value="ee">Electrical Engineering</option>
-                        </select>
-                    </div>
                     <div class="status-badge" id="status-badge">
                         <span class="status-dot"></span>
                         <span class="status-text">Online</span>
@@ -61,23 +56,29 @@
                     </div>
                     <div class="message-content">
                         <div class="message-text">
-                            <p>👋 Welcome! I'm the <strong>AI Assistant</strong> for the <strong>Department of Electrical Engineering</strong> at <strong>IIT Jammu</strong>.</p>
-                            <p>I can help you with information about:</p>
-                            <ul>
-                                <li>👨‍🏫 <strong>Faculty</strong> — profiles, research interests, contact details</li>
-                                <li>🎓 <strong>PhD Students</strong> — supervisors, research topics</li>
-                                <li>🔬 <strong>Research Areas</strong> — VLSI, Power Systems, Communications, RF & Microwave, Signal Processing, Power Electronics</li>
-                                <li>💼 <strong>Projects & Patents</strong> — funded research, innovations</li>
-                                <li>🚀 <strong>Startups</strong> — department incubated ventures</li>
-                                <li>🏛️ <strong>Labs & Facilities</strong> — research infrastructure</li>
-                            </ul>
-                            <p>Try asking something like:</p>
+                            <p>👋 Welcome! I'm the <strong>AI Assistant</strong> for <strong>IIT Jammu</strong>.</p>
+                            <p>I can answer questions about <strong>all 12 departments</strong>:</p>
+                            <div class="dept-grid">
+                                <span class="dept-tag">⚡ Electrical Engineering</span>
+                                <span class="dept-tag">💻 Computer Science</span>
+                                <span class="dept-tag">⚙️ Mechanical Engineering</span>
+                                <span class="dept-tag">🏗️ Civil Engineering</span>
+                                <span class="dept-tag">🧪 Chemical Engineering</span>
+                                <span class="dept-tag">🧬 Biosciences & Bioengineering</span>
+                                <span class="dept-tag">🔬 Chemistry</span>
+                                <span class="dept-tag">📖 Humanities & Social Sciences</span>
+                                <span class="dept-tag">🔗 Interdisciplinary Programmes</span>
+                                <span class="dept-tag">🔩 Materials Engineering</span>
+                                <span class="dept-tag">📐 Mathematics</span>
+                                <span class="dept-tag">🌌 Physics</span>
+                            </div>
+                            <p>I cover faculty, students, research, labs, placements, patents, startups and more. Try asking:</p>
                         </div>
                         <div class="suggestion-chips">
-                            <button class="chip" onclick="sendSuggestion(this)">Who is the Head of Department?</button>
-                            <button class="chip" onclick="sendSuggestion(this)">What are the main research areas?</button>
-                            <button class="chip" onclick="sendSuggestion(this)">Tell me about antenna research</button>
-                            <button class="chip" onclick="sendSuggestion(this)">Who supervises Ritujoy Biswas?</button>
+                            <button class="chip" onclick="sendSuggestion(this)">Who is the CSE Head of Department?</button>
+                            <button class="chip" onclick="sendSuggestion(this)">What research areas does EE cover?</button>
+                            <button class="chip" onclick="sendSuggestion(this)">How many faculty are in Physics?</button>
+                            <button class="chip" onclick="sendSuggestion(this)">Compare labs in Chemistry and Materials</button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +91,7 @@
                 <div class="input-wrapper">
                     <textarea
                         id="chat-input"
-                        placeholder="Ask me about the EE Department..."
+                        placeholder="Ask about any IIT Jammu department..."
                         rows="1"
                         maxlength="1000"
                         autofocus
@@ -103,7 +104,7 @@
                     </button>
                 </div>
                 <div class="input-footer">
-                    <span class="footer-text">Powered by GraphRAG • Responses grounded in the department's knowledge graph</span>
+                    <span class="footer-text">Powered by GraphRAG • Responses grounded in department knowledge graphs</span>
                 </div>
             </div>
         </footer>

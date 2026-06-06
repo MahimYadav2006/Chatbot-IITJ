@@ -90,7 +90,8 @@ class EmbeddingEngine:
         logger.info(f"FAISS index built: {self.index.ntotal} vectors, dim={dim}")
 
     def search(self, query: str, top_k: int = 10,
-               type_filter: Optional[str] = None, department_filter: Optional[str] = None) -> List[Tuple[Dict, float]]:
+               type_filter: Optional[str] = None, department_filter: Optional[str] = None,
+               min_score: float = 0.0) -> List[Tuple[Dict, float]]:
         if self.index is None:
             raise RuntimeError("Index not built.")
         query_vec = self.encode_single(query).reshape(1, -1)
@@ -100,6 +101,8 @@ class EmbeddingEngine:
         results = []
         for score, idx in zip(scores[0], indices[0]):
             if idx < 0:
+                continue
+            if float(score) < min_score:
                 continue
             item = self.metadata[idx]
             if type_filter and item["type"] != type_filter:

@@ -5,7 +5,7 @@ import os
 from unittest.mock import Mock
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from graphrag.llm import OllamaLLM, GroqLLM, get_system_prompt, sanitize_response
+from graphrag.llm import GeminiLLM, OllamaLLM, GroqLLM, create_llm_from_env, get_system_prompt, sanitize_response
 
 
 class TestSanitizeResponse:
@@ -117,6 +117,28 @@ class TestOllamaLLM:
         llm = OllamaLLM()
         result = llm.generate("hello")
         assert "error generating a response" in result.lower()
+
+
+class TestLLMFactory:
+    def test_create_llm_from_env_uses_ollama(self, monkeypatch):
+        monkeypatch.setenv("LLM_PROVIDER", "ollama")
+        monkeypatch.setenv("OLLAMA_MODEL", "llama3.2")
+
+        llm = create_llm_from_env()
+
+        assert isinstance(llm, OllamaLLM)
+        assert llm.model == "llama3.2"
+
+    def test_create_llm_from_env_uses_gemini(self, monkeypatch):
+        monkeypatch.setenv("LLM_PROVIDER", "gemini")
+        monkeypatch.setenv("GEMINI_MODEL", "gemini-test")
+        monkeypatch.delenv("VERIFY_RESPONSES", raising=False)
+
+        llm = create_llm_from_env()
+
+        assert isinstance(llm, GeminiLLM)
+        assert llm.model == "gemini-test"
+        assert os.environ["VERIFY_RESPONSES"] == "false"
 
 
 class TestSystemPrompt:
