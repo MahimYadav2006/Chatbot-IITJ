@@ -64,6 +64,11 @@ class MultiDepartmentRetriever:
             bundle = retriever.retrieve_bundle(
                 query, local_top_k=4, vector_top_k=4, global_top_k=2, max_context_words=2500
             )
+            # Only keep the department context if it is actually relevant
+            if not self._is_bundle_relevant(query, bundle, is_topic=False):
+                logger.info(f"Multi-retrieval: excluding '{code}' as not relevant to query.")
+                continue
+
             if bundle.get("answerability", {}).get("answerable", False):
                 all_answerable = True
 
@@ -272,9 +277,33 @@ class MultiDepartmentRetriever:
             # For topic queries, include ALL departments that have relevant results
             # (score > 0 or items > 0) — no top-N cap
             top_depts = [code for code, score, items in dept_scores if score > 0.0 or items > 0]
+
+            # Additional relevance gate for topic queries: only keep departments
+            # whose context actually contains topic-relevant content. This prevents
+            # departments with no real matches from polluting the LLM context.
+            if top_depts:
+                filtered = []
+                for code in top_depts:
+                    bundle = dept_bundles.get(code, {})
+                    ctx = bundle.get("context", "").strip()
+                    # Skip departments with empty context or only generic "no info" responses
+                    if not ctx or ctx == "No relevant information found in the knowledge graph for this query.":
+                        continue
+                    # Skip departments that are not relevant
+                    if not self._is_bundle_relevant(query, bundle, is_topic):
+                        logger.info(f"Broadcast: skipping '{code}' (not relevant to query focus terms)")
+                        continue
+                    filtered.append(code)
+                if filtered:
+                    top_depts = filtered
         else:
-            # For non-topic queries, use top-N as before
-            top_depts = [code for code, score, items in dept_scores[:top_n] if score > 0.0 or items > 0]
+            # For non-topic queries, use top-N as before, but filter out completely irrelevant ones
+            top_depts = []
+            for code, score, items in dept_scores[:top_n]:
+                if score > 0.0 or items > 0:
+                    bundle = dept_bundles.get(code, {})
+                    if self._is_bundle_relevant(query, bundle, is_topic):
+                        top_depts.append(code)
 
         if not top_depts:
             top_depts = [dept_scores[0][0]]  # At least try the top one
@@ -328,3 +357,101 @@ class MultiDepartmentRetriever:
             "departments": top_depts,
             "dept_contexts": dept_contexts,
         }
+
+    def _normalize_token(self, token: str) -> str:
+        """Apply lightweight normalization for keyword coverage checks."""
+        import re
+        cleaned = re.sub(r"[^a-z0-9]+", "", token.lower())
+        for suffix in ("ing", "ers", "ies", "es", "s"):
+            if cleaned.endswith(suffix) and len(cleaned) > len(suffix) + 2:
+                if suffix == "ies":
+                    return cleaned[:-3] + "y"
+                return cleaned[:-len(suffix)]
+        return cleaned
+
+    def _extract_query_focus_terms(self, query: str) -> List[str]:
+        """Extract important focus keywords from query, ignoring all stopwords/generic terms."""
+        import re
+        # Clean query: lowercase, remove punctuation
+        q_clean = re.sub(r"[^\w\s]", " ", query.lower())
+        words = q_clean.split()
+        
+        stop_words = {
+            "iit", "jammu", "department", "dept", "faculty", "member", "members", "student", "students",
+            "phd", "research", "official", "main", "information", "computer", "science", "engineering",
+            "electrical", "mechanical", "civil", "chemical", "bioscience", "bioengineering", "physics",
+            "chemistry", "mathematics", "humanities", "social", "sciences", "ee", "cse", "me", "ce", "che",
+            "bsbe", "hss", "idp", "phy", "math", "maths", "chem", "materials",
+            "work", "works", "working", "professor", "professors", "teach", "teaches", "teaching",
+            "under", "who", "whose", "whom", "what", "where", "when", "why", "how", "list", "show", "find",
+            "get", "give", "tell", "discuss", "compare", "comparison", "versus", "vs", "and", "for", "are",
+            "the", "with", "from", "in", "on", "at", "of", "to", "is", "a", "an", "this", "that", "these",
+            "those", "they", "them", "their", "his", "her", "its", "it", "he", "she", "you", "your", "we",
+            "our", "us", "about", "any", "some", "such", "than", "then", "too", "very", "was", "were", "will",
+            "would", "should", "could", "can", "may", "might", "must", "shall", "does", "do", "did", "has",
+            "have", "had", "having", "been", "being", "be", "other", "another", "domain", "field", "topic",
+            "subject", "area", "areas", "related", "tasks", "task", "lab", "labs", "project", "projects",
+            "programme", "programmes", "program", "programs", "course", "courses", "class", "classes",
+            "specialist", "expert", "experts", "specialists", "people", "person", "someone", "anyone",
+            "everyone", "body", "write", "reach", "contact", "email", "phone", "address", "location",
+            "office", "website", "page", "profile", "device", "devices"
+        }
+        
+        focus = []
+        for w in words:
+            cleaned = w.strip()
+            if len(cleaned) <= 2:
+                continue
+            norm = self._normalize_token(cleaned)
+            if norm not in stop_words and cleaned not in stop_words:
+                focus.append(norm)
+                
+        return list(set(focus))
+
+    def _is_bundle_relevant(self, query: str, bundle: Dict[str, Any], is_topic: bool) -> bool:
+        """Determine if a department bundle has genuinely relevant information."""
+        prov = bundle.get("provenance", {})
+        
+        # 1. If it's a direct/provenance match (highest confidence)
+        if prov.get("route") in ("direct_graph", "direct_graph_multi") or prov.get("graph", {}).get("direct", False):
+            return True
+            
+        # 2. Extract query focus terms
+        focus_terms = self._extract_query_focus_terms(query)
+        
+        # If the query has no specific focus terms (e.g. extremely short or generic),
+        # we fall back to checking if there is any graph/vector match.
+        if not focus_terms:
+            graph_items = prov.get("graph", {}).get("items", 0)
+            graph_avg = prov.get("graph", {}).get("avg_score", 0.0)
+            vector_items = prov.get("vector", {}).get("items", 0)
+            vector_avg = prov.get("vector", {}).get("avg_score", 0.0)
+            return (graph_items > 0 and graph_avg > 0.8) or (vector_items > 0 and vector_avg >= 0.45)
+            
+        # 3. Check if any query focus terms are present in the context text
+        context = bundle.get("context", "")
+        
+        # Split context into words, normalize them, and check match
+        import re
+        context_words = set()
+        for word in re.findall(r"[A-Za-z0-9]+", context.lower()):
+            norm_word = self._normalize_token(word)
+            if norm_word:
+                context_words.add(norm_word)
+                
+        matched_terms = [term for term in focus_terms if term in context_words]
+        
+        # If we found at least one matching focus term in the context, it is relevant
+        if matched_terms:
+            return True
+            
+        # 4. Check vector search similarity score (avg_score >= 0.45)
+        # Even if matched_terms is empty, we keep it if vector search has high similarity
+        # because vector search handles synonyms/semantics.
+        vector_items = prov.get("vector", {}).get("items", 0)
+        vector_avg = prov.get("vector", {}).get("avg_score", 0.0)
+        if vector_items > 0 and vector_avg >= 0.45:
+            return True
+            
+        # Otherwise, not relevant (even if graph_avg was high due to loose name token match)
+        return False

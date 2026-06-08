@@ -12,10 +12,10 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__
 @pytest.fixture(scope="module")
 def retriever():
     """Load the full retriever (requires data/ to be populated)."""
-    if not os.path.exists(os.path.join(DATA_DIR, "graph.pkl")):
+    if not os.path.exists(os.path.join(DATA_DIR, "ee", "graph.pkl")):
         pytest.skip("Data directory not populated — run ingest.py first")
     from graphrag.retriever import load_retriever
-    return load_retriever(DATA_DIR)
+    return load_retriever("ee")
 
 
 class TestHodRetrieval:
@@ -147,3 +147,45 @@ class TestCSEFacultyAnalytics:
         provenance = bundle["provenance"]
         assert provenance["source_mode"] in {"graph", "both"}
         assert provenance["graph"]["items"] >= 1
+
+
+class TestLaboratoryRetrieval:
+    def test_ee_labs_retrieval(self, retriever):
+        """Ask about EE labs and verify the correct list is returned."""
+        answer = retriever.get_direct_answer("What labs are there in the EE department?")
+        assert answer is not None
+        assert "Low Voltage Lab1" in answer
+        assert "AADHRIT Lab" in answer
+        assert "Fluid Mechanics Lab" not in answer
+
+    def test_cse_labs_retrieval_negative(self, cse_retriever):
+        """Ask about CSE labs specifically and verify deterministic empty message."""
+        answer = cse_retriever.get_direct_answer("Are there labs in the CSE department?")
+        assert answer is not None
+        assert "no laboratories" in answer.lower()
+        assert "Computer Science and Engineering" in answer
+
+    def test_cse_labs_retrieval_broadcast_ignored(self, cse_retriever):
+        """Ask a general lab query to CSE retriever and verify it returns None to not pollute broadcast."""
+        answer = cse_retriever.get_direct_answer("List all department labs")
+        assert answer is None
+
+
+class TestFacultyDomainRetrieval:
+    def test_rf_domain_retrieval(self, retriever):
+        """Verify that searching for 'RF' returns Archana Rajput and Alok Kumar Saxena."""
+        context = retriever.retrieve("Which faculty members work on RF?")
+        assert "Archana Rajput" in context
+        assert "Alok Kumar Saxena" in context
+
+    def test_microwave_domain_retrieval(self, retriever):
+        """Verify that searching for 'Microwave' returns Archana Rajput and Alok Kumar Saxena."""
+        context = retriever.retrieve("Who does research in Microwave?")
+        assert "Archana Rajput" in context
+        assert "Alok Kumar Saxena" in context
+
+    def test_antenna_domain_retrieval(self, retriever):
+        """Verify that searching for 'Antenna Design' returns Archana Rajput and Alok Kumar Saxena."""
+        context = retriever.retrieve("Find professors working on Antenna Design")
+        assert "Archana Rajput" in context
+        assert "Alok Kumar Saxena" in context

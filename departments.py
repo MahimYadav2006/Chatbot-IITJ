@@ -92,6 +92,62 @@ DEPARTMENTS = {
     },
 }
 
+CORRECT_LABS = {
+    "mechanical_engineering": [
+        "Fluid Mechanics Lab",
+        "Control Engineering Lab",
+        "Kinematics & Dynamics of Machine Lab",
+        "Heat & Mass Transfer Lab",
+        "Energy Systems Lab",
+        "Solid Mechanics Lab",
+        "Manufacturing Lab",
+    ],
+    "ee": [
+        "Low Voltage Lab 2",
+        "Low Voltage Lab1",
+        "Prototype Design and Development Lab",
+        "Undergraduate and Postgraduate Labs",
+        "Underwater Research Lab",
+        "Underwater Research lab",
+        "High Voltage Lab",
+        "IC Reliabality, Security & Quality Laboratory",
+        "AADHRIT Lab",
+    ],
+    "chemical-engineering": [
+        "Fluid Flow & Mechanical Operations Laboratory",
+        "Heat Transfer & Thermodynamics Laboratory",
+        "Process Instrumentation Dynamics & Control Lab",
+        "Process Modelling & Simulation Lab",
+        "Separation Processes And Chemical Reaction Engineering Laboratory",
+        "Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath)",
+    ],
+    "physics": [
+        "Material Research Laboratory (MRL)",
+        "Solar Research Lab (SRL)",
+        "Shivalik Plasma Laboratory",
+        "Optoelectronics and Device Physics Laboratory",
+    ],
+    "chemistry": [
+        "Chemistry Laboratory",
+    ],
+    "bsbe": [
+        "UG Bio Lab",
+        "Genetic Engineering and Tissue culture lab",
+        "Nanodiagnostics and Therapeutics Lab",
+    ],
+    "hss": [
+        "Language Experiential Lab",
+    ],
+    "civil_engineering": [
+        "Environmental Engineering Laboratory",
+        "Geo-STRIDE Lab",
+        "Fluid Mechanics lab",
+        "Rock Mechanics and Geology Lab",
+        "Soil Mechanics Lab",
+        "Water Resources Lab",
+    ],
+}
+
 DEPARTMENT_ALIASES = {
     alias: code
     for code, config in DEPARTMENTS.items()

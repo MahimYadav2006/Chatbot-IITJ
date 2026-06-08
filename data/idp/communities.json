@@ -6,7 +6,7 @@
     "idp:Rahul R Salunkhe": 3,
     "idp:Santhilal Subhash": 4,
     "idp:Sidharth Maheshwari": 5,
-    "idp:Uma Satya Ranjan": 1,
+    "idp:Uma Satya Ranjan": 6,
     "idp:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis": 0,
     "idp:characterization": 0,
     "idp:and development of structure-property relationships in new functional inorganic materials": 0,
@@ -50,7 +50,10 @@
     "idp:Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS": 5,
     "idp:several key areas can be targeted to achieve longer battery life": 5,
     "idp:efficient charge capacity utilization": 5,
-    "IIT Jammu IDP Department": 1
+    "idp:Biomedical Data Analysis": 6,
+    "idp:Deep Learning": 6,
+    "idp:Reinforcement Learning": 6,
+    "IIT Jammu IDP Department": 6
   },
   "reports": [
     {
@@ -110,7 +113,7 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Anil Kumar Paidi\n  ResearchArea: 1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis, characterization, and development of structure-property relationships in new functional inorganic materials, 2. **Energy Storage Materials -**\u00a0Synthesis, and Electrochemical study Alkali metal-ion battery systems, 3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)\n  Relationships: RESEARCHES_IN: 6\n\nSummary: This group includes 1 faculty member(s): idp:Anil Kumar Paidi. working in areas like idp:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis, idp:characterization, idp:and development of structure-property relationships in new functional inorganic materials.",
+      "text": "Community 0 in IIT Jammu Interdisciplinary Programmes Department:\n  Faculty: Anil Kumar Paidi\n  ResearchArea: 1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis, characterization, and development of structure-property relationships in new functional inorganic materials, 2. **Energy Storage Materials -**\u00a0Synthesis, and Electrochemical study Alkali metal-ion battery systems, 3. **Investigating Electrode Materials in Real-time -**\u00a0Employing state of art techniques to study electrode materials in real-time (in-situ)\n  Relationships: RESEARCHES_IN: 6\n\nSummary: This group includes 1 faculty member(s): idp:Anil Kumar Paidi. working in areas like idp:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis, idp:characterization, idp:and development of structure-property relationships in new functional inorganic materials.",
       "summary": "This group includes 1 faculty member(s): idp:Anil Kumar Paidi. working in areas like idp:1. **Solid State Chemistry** - Investigation of Novel Oxides Synthesis, idp:characterization, idp:and development of structure-property relationships in new functional inorganic materials.",
       "size": 7
     },
@@ -119,26 +122,20 @@
       "community_id": 1,
       "members": [
         "idp:Ankita Yadav",
-        "idp:Uma Satya Ranjan",
         "idp:Digital Divide",
         "idp:AI and Data Protection",
         "idp:Judgement and Decision Making",
-        "idp:Critical Thinking and Interpretation",
-        "IIT Jammu IDP Department"
+        "idp:Critical Thinking and Interpretation"
       ],
       "members_by_type": {
         "Faculty": [
-          "idp:Ankita Yadav",
-          "idp:Uma Satya Ranjan"
+          "idp:Ankita Yadav"
         ],
         "ResearchArea": [
           "idp:Digital Divide",
           "idp:AI and Data Protection",
           "idp:Judgement and Decision Making",
           "idp:Critical Thinking and Interpretation"
-        ],
-        "Department": [
-          "IIT Jammu IDP Department"
         ]
       },
       "internal_edges": [
@@ -161,21 +158,11 @@
           "source": "idp:Ankita Yadav",
           "target": "idp:Critical Thinking and Interpretation",
           "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "idp:Ankita Yadav",
-          "target": "IIT Jammu IDP Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "idp:Uma Satya Ranjan",
-          "target": "IIT Jammu IDP Department",
-          "type": "MEMBER_OF"
         }
       ],
-      "text": "Community 1 in IIT Jammu EE Department:\n  Department: Interdisciplinary Programmes\n  Faculty: Ankita Yadav, Uma Satya Ranjan\n  ResearchArea: Digital Divide, AI and Data Protection, Judgement and Decision Making, Critical Thinking and Interpretation\n  Relationships: RESEARCHES_IN: 4, MEMBER_OF: 2\n\nSummary: This group includes 2 faculty member(s): idp:Ankita Yadav, idp:Uma Satya Ranjan. working in areas like idp:Digital Divide, idp:AI and Data Protection, idp:Judgement and Decision Making.",
-      "summary": "This group includes 2 faculty member(s): idp:Ankita Yadav, idp:Uma Satya Ranjan. working in areas like idp:Digital Divide, idp:AI and Data Protection, idp:Judgement and Decision Making.",
-      "size": 7
+      "text": "Community 1 in IIT Jammu Interdisciplinary Programmes Department:\n  Faculty: Ankita Yadav\n  ResearchArea: Digital Divide, AI and Data Protection, Judgement and Decision Making, Critical Thinking and Interpretation\n  Relationships: RESEARCHES_IN: 4\n\nSummary: This group includes 1 faculty member(s): idp:Ankita Yadav. working in areas like idp:Digital Divide, idp:AI and Data Protection, idp:Judgement and Decision Making.",
+      "summary": "This group includes 1 faculty member(s): idp:Ankita Yadav. working in areas like idp:Digital Divide, idp:AI and Data Protection, idp:Judgement and Decision Making.",
+      "size": 5
     },
     {
       "id": "community_2",
@@ -248,7 +235,7 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Avinash Raulo\n  ResearchArea: Energy Storage (Li-S, Li-ion, Li-metal and other rechargeable batteries, Supercapacitors), Material (Soft materials and Polymers, Inorganic and Carbon Materials, Conductive Composites, Biomass) for Energy Application\n  Relationships: RESEARCHES_IN: 8\n\nSummary: This group includes 1 faculty member(s): idp:Avinash Raulo. working in areas like idp:Energy Storage (Li-S, idp:Li-ion, idp:Li-metal and other rechargeable batteries.",
+      "text": "Community 2 in IIT Jammu Interdisciplinary Programmes Department:\n  Faculty: Avinash Raulo\n  ResearchArea: Energy Storage (Li-S, Li-ion, Li-metal and other rechargeable batteries, Supercapacitors), Material (Soft materials and Polymers, Inorganic and Carbon Materials, Conductive Composites, Biomass) for Energy Application\n  Relationships: RESEARCHES_IN: 8\n\nSummary: This group includes 1 faculty member(s): idp:Avinash Raulo. working in areas like idp:Energy Storage (Li-S, idp:Li-ion, idp:Li-metal and other rechargeable batteries.",
       "summary": "This group includes 1 faculty member(s): idp:Avinash Raulo. working in areas like idp:Energy Storage (Li-S, idp:Li-ion, idp:Li-metal and other rechargeable batteries.",
       "size": 9
     },
@@ -309,7 +296,7 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Rahul R Salunkhe\n  ResearchArea: Solid State Physics, Material Science, Nanotechnology, Ultracapacitor, Nanoporous Materials, Solid-state batteries\n  Relationships: RESEARCHES_IN: 6\n\nSummary: This group includes 1 faculty member(s): idp:Rahul R Salunkhe. working in areas like idp:Solid State Physics, idp:Material Science, idp:Nanotechnology.",
+      "text": "Community 3 in IIT Jammu Interdisciplinary Programmes Department:\n  Faculty: Rahul R Salunkhe\n  ResearchArea: Solid State Physics, Material Science, Nanotechnology, Ultracapacitor, Nanoporous Materials, Solid-state batteries\n  Relationships: RESEARCHES_IN: 6\n\nSummary: This group includes 1 faculty member(s): idp:Rahul R Salunkhe. working in areas like idp:Solid State Physics, idp:Material Science, idp:Nanotechnology.",
       "summary": "This group includes 1 faculty member(s): idp:Rahul R Salunkhe. working in areas like idp:Solid State Physics, idp:Material Science, idp:Nanotechnology.",
       "size": 7
     },
@@ -391,7 +378,7 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Santhilal Subhash\n  ResearchArea: Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models, we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health, Key Focus Areas, Reproductive Biology, Genomics & Single Cell Biology, Multi-omics, Bioinformatics\n  Relationships: RESEARCHES_IN: 9\n\nSummary: This group includes 1 faculty member(s): idp:Santhilal Subhash. working in areas like idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models.",
+      "text": "Community 4 in IIT Jammu Interdisciplinary Programmes Department:\n  Faculty: Santhilal Subhash\n  ResearchArea: Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models, we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health, Key Focus Areas, Reproductive Biology, Genomics & Single Cell Biology, Multi-omics, Bioinformatics\n  Relationships: RESEARCHES_IN: 9\n\nSummary: This group includes 1 faculty member(s): idp:Santhilal Subhash. working in areas like idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models.",
       "summary": "This group includes 1 faculty member(s): idp:Santhilal Subhash. working in areas like idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models.",
       "size": 10
     },
@@ -480,9 +467,58 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Sidharth Maheshwari\n  ResearchArea: Genome Analysis, Hardware-Software Co-Design, Battery Management Systems, Machine Learning (Tsetlin Machines), Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design, specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions, we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines, Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS, several key areas can be targeted to achieve longer battery life, efficient charge capacity utilization\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): idp:Sidharth Maheshwari. working in areas like idp:Genome Analysis, idp:Hardware-Software Co-Design, idp:Battery Management Systems.",
+      "text": "Community 5 in IIT Jammu Interdisciplinary Programmes Department:\n  Faculty: Sidharth Maheshwari\n  ResearchArea: Genome Analysis, Hardware-Software Co-Design, Battery Management Systems, Machine Learning (Tsetlin Machines), Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design, specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions, we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines, Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS, several key areas can be targeted to achieve longer battery life, efficient charge capacity utilization\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): idp:Sidharth Maheshwari. working in areas like idp:Genome Analysis, idp:Hardware-Software Co-Design, idp:Battery Management Systems.",
       "summary": "This group includes 1 faculty member(s): idp:Sidharth Maheshwari. working in areas like idp:Genome Analysis, idp:Hardware-Software Co-Design, idp:Battery Management Systems.",
       "size": 11
+    },
+    {
+      "id": "community_6",
+      "community_id": 6,
+      "members": [
+        "idp:Uma Satya Ranjan",
+        "idp:Biomedical Data Analysis",
+        "idp:Deep Learning",
+        "idp:Reinforcement Learning",
+        "IIT Jammu IDP Department"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "idp:Uma Satya Ranjan"
+        ],
+        "ResearchArea": [
+          "idp:Biomedical Data Analysis",
+          "idp:Deep Learning",
+          "idp:Reinforcement Learning"
+        ],
+        "Department": [
+          "IIT Jammu IDP Department"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "idp:Uma Satya Ranjan",
+          "target": "idp:Biomedical Data Analysis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Uma Satya Ranjan",
+          "target": "idp:Deep Learning",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Uma Satya Ranjan",
+          "target": "idp:Reinforcement Learning",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "idp:Uma Satya Ranjan",
+          "target": "IIT Jammu IDP Department",
+          "type": "MEMBER_OF"
+        }
+      ],
+      "text": "Community 6 in IIT Jammu Interdisciplinary Programmes Department:\n  Department: Interdisciplinary Programmes\n  Faculty: Uma Satya Ranjan\n  ResearchArea: Biomedical Data Analysis, Deep Learning, Reinforcement Learning\n  Relationships: RESEARCHES_IN: 3, MEMBER_OF: 1\n\nSummary: This group includes 1 faculty member(s): idp:Uma Satya Ranjan. working in areas like idp:Biomedical Data Analysis, idp:Deep Learning, idp:Reinforcement Learning.",
+      "summary": "This group includes 1 faculty member(s): idp:Uma Satya Ranjan. working in areas like idp:Biomedical Data Analysis, idp:Deep Learning, idp:Reinforcement Learning.",
+      "size": 5
     }
   ]
 }

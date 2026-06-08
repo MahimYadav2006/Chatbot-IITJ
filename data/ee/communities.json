@@ -5,29 +5,37 @@
     "Ambika Prasad Shah": 2,
     "Ankit Dubey": 3,
     "Ankur Bansal": 4,
-    "Anup Shukla": 5,
-    "Archana Rajput": 6,
-    "Arun Kumar Verma": 7,
+    "Anup Shukla": 6,
+    "Archana Rajput": 1,
+    "Arun Kumar Verma": 6,
     "Badri Narayan Subudhi": 24,
-    "Chandan Yadav": 9,
-    "Ibhanchand Rath": 10,
-    "Kankat Ghosh": 11,
-    "Karan Nathwani": 12,
-    "Kushmanda Saurav": 13,
-    "Nalin Kumar Sharma": 10,
-    "Padmini Singh": 14,
-    "Priyanka Mishra": 10,
-    "Priyatosh Jena": 10,
+    "Chandan Yadav": 8,
+    "Ibhanchand Rath": 9,
+    "Kankat Ghosh": 10,
+    "Karan Nathwani": 11,
+    "Kushmanda Saurav": 12,
+    "Nalin Kumar Sharma": 9,
+    "Padmini Singh": 13,
+    "Priyanka Mishra": 14,
+    "Priyatosh Jena": 9,
     "Ravikant Saini": 15,
     "Rohit Buddhiram Chaurasiya": 0,
-    "Satyadev Ahlawat": 17,
-    "Shikha Baghel": 10,
-    "Soma S Dhavala": 10,
+    "Satyadev Ahlawat": 16,
+    "Shikha Baghel": 9,
+    "Soma S Dhavala": 17,
     "Sudhakar Modem": 18,
+    "lab:Undergraduate and Postgraduate Labs": 9,
+    "lab:Underwater Research Lab": 9,
+    "lab:AADHRIT Lab": 9,
+    "lab:Low Voltage Lab1": 9,
+    "lab:Low Voltage Lab 2": 9,
+    "lab:High Voltage Lab": 9,
+    "lab:IC Reliabality, Security & Quality Laboratory": 9,
+    "lab:Prototype Design and Development Lab": 9,
     "Communication Theory and Systems": 0,
     "Cognitive Radios": 0,
     "Simultaneous Wireless Information and Power Transfer (SWIPT) Systems": 0,
-    "Physical Layer Security": 0,
+    "Physical Layer Security": 3,
     "Power Line Communications": 0,
     "Molecular Communications": 0,
     "1. Signal Theory": 0,
@@ -37,10 +45,14 @@
     "Finite-Difference Time-Domain (FDTD) Method": 1,
     "Computational Electromagnetics": 1,
     "RF & Microwave Engineering": 1,
+    "Microwave": 1,
+    "Antenna design": 1,
+    "RF": 1,
     "Reliability analysis of digital circuits": 2,
     "circuits and systems for biomedical applications": 2,
     "low-power high-performance circuit designs": 2,
     "In-memory computing": 2,
+    "SRAM": 2,
     "and Hardware security primitives": 2,
     "**Communications Theory": 3,
     "Diversity Combining": 3,
@@ -60,79 +72,79 @@
     "Power line communication (PLC) systems": 4,
     "5G Wireless Communications": 4,
     "Non-orthogonal multiple access (NOMA)": 4,
-    "includes Robust and efficient system operation and planning": 5,
-    "Renewable integration in power systems": 5,
-    "Power system security": 5,
-    "Power System Restructuring /Deregulation": 5,
-    "Distribution System and Micro/Smart Grid": 5,
-    "Research Areas": 6,
-    "Cloaking/Invisbility": 6,
-    "Frequency Selective Surfaces": 6,
-    "Transformation Optics": 6,
-    "Antennas": 6,
-    "Metamaterials": 6,
-    "Electromagnetics": 6,
-    "Network Analysis And Synthesis": 6,
-    "Basic Electronics": 6,
-    "Microwave Engineering": 6,
-    "Power electronics": 7,
-    "converters for renewable energy and EV chargers": 7,
-    "bi-directional power flow": 7,
-    "and electric transportation. Sustainable and intelligent Off-Grid solar PV system": 7,
-    "On-board EV chargers": 7,
-    "and\u00a0\u00a0Fast EV chargers": 7,
+    "includes Robust and efficient system operation and planning": 6,
+    "Renewable integration in power systems": 6,
+    "Power system security": 6,
+    "Power System Restructuring /Deregulation": 6,
+    "Distribution System and Micro/Smart Grid": 6,
+    "Cloaking/Invisbility": 1,
+    "Frequency Selective Surfaces": 1,
+    "Transformation Optics": 1,
+    "Antennas": 1,
+    "Metamaterials": 1,
+    "Power electronics": 6,
+    "converters for renewable energy and EV chargers": 6,
+    "bi-directional power flow": 6,
+    "and electric transportation. Sustainable and intelligent Off-Grid solar PV system": 6,
+    "On-board EV chargers": 6,
+    "and\u00a0\u00a0Fast EV chargers": 6,
     "Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home)": 24,
-    "1) Semoconductor Devices (based on Si": 9,
-    "2D materials) - Modeling": 9,
-    "Simulation\u00a0and Fabrication": 9,
-    "2) 3D Integration Technology": 9,
-    "3) Brain-Inspired Computing": 9,
-    "4) Crygenic Computing": 9,
-    "5) THz Electronics - Electrical Characterization": 9,
-    "Device Design": 9,
-    "Circuit\u00a0and System Design": 9,
-    "Grid connected hybrid multivelvel converter topology design": 10,
-    "Flexible AC Transmission Systems (FACTs)": 10,
-    "High Voltage Direct Current (HVDC)": 10,
-    "Grid integration of Battery Energy Storage Systems (BESS)": 10,
-    "Battery Management System (BMS)": 10,
-    "V2G and G2V EV charging applications": 10,
-    "Molecular Beam Epitaxy growth": 11,
-    "III-Nitride based Photodetector and LED": 11,
-    "Rare earth Oxides": 11,
-    "MOSCAP": 11,
-    "Spectroscopy": 11,
-    "Adaptive Signal Processing": 12,
-    "Speech Processing etc": 12,
-    "COURSES TAUGHT AT IIT JAMMU": 13,
-    "**ELL 212 Engineering Electromagnetics": 13,
-    "**ELP 212 Engineering Electromagnetics Lab": 13,
-    "**ELL 202 Circuit Theory": 13,
-    "**ELL 304 Analog Electronics": 13,
-    "**EFL005U1M Basic Electronics Engineering": 13,
-    "**EFP005U1M Basic Electronics Engineering Lab": 13,
-    "**EEL006P1M Antenna and Wave Propagation": 13,
-    "**EEL003P1M R.F. System": 13,
-    "**EEP003P1M R.F. System Lab": 13,
-    "1. Control Systems": 10,
-    "2. Robotics and Autonomous Systems": 10,
-    "3. Intelligent transportation Systems": 10,
-    "4. Reinforcement Learning": 10,
-    "Robotics Control": 14,
-    "Network Control": 14,
-    "Power Control": 14,
-    "Protection of microgrid integrating renewable energy sources (solar power": 10,
-    "wind power": 10,
-    "Neural active fault management control of power-electronic converter-based renewable energy sources": 10,
-    "Time-domain relaying": 10,
-    "Converter transformer protection": 10,
-    "Battery Charging System": 10,
-    "Bidirectional Converter": 10,
-    "Reconfigurable Power Converter": 10,
-    "and Soft-Switched Converter": 10,
+    "1) Semoconductor Devices (based on Si": 8,
+    "Ga2O3": 8,
+    "2D materials) - Modeling": 8,
+    "Simulation\u00a0and Fabrication": 8,
+    "2) 3D Integration Technology": 8,
+    "3) Brain-Inspired Computing": 8,
+    "4) Crygenic Computing": 8,
+    "5) THz Electronics - Electrical Characterization": 8,
+    "Device Design": 8,
+    "Circuit\u00a0and System Design": 8,
+    "Grid connected hybrid multivelvel converter topology design": 9,
+    "Flexible AC Transmission Systems (FACTs)": 9,
+    "High Voltage Direct Current (HVDC)": 9,
+    "Grid integration of Battery Energy Storage Systems (BESS)": 9,
+    "Battery Management System (BMS)": 9,
+    "V2G and G2V EV charging applications": 9,
+    "Molecular Beam Epitaxy growth": 10,
+    "III-Nitride based Photodetector and LED": 10,
+    "Rare earth Oxides": 10,
+    "HEMT": 10,
+    "MOSCAP": 10,
+    "Spectroscopy": 10,
+    "Adaptive Signal Processing": 11,
+    "Speech Processing etc": 11,
+    "COURSES TAUGHT AT IIT JAMMU": 12,
+    "**ELL 212 Engineering Electromagnetics": 12,
+    "**ELP 212 Engineering Electromagnetics Lab": 12,
+    "**ELL 202 Circuit Theory": 12,
+    "**ELL 304 Analog Electronics": 12,
+    "**EFL005U1M Basic Electronics Engineering": 12,
+    "**EFP005U1M Basic Electronics Engineering Lab": 12,
+    "**EEL006P1M Antenna and Wave Propagation": 12,
+    "**EEL003P1M R.F. System": 12,
+    "**EEP003P1M R.F. System Lab": 12,
+    "1. Control Systems": 9,
+    "2. Robotics and Autonomous Systems": 9,
+    "3. Intelligent transportation Systems": 9,
+    "4. Reinforcement Learning": 9,
+    "Robotics Control": 13,
+    "Network Control": 13,
+    "Power Control": 13,
+    "Protection of microgrid integrating renewable energy sources (solar power": 14,
+    "wind power": 14,
+    "etc)": 14,
+    "Neural active fault management control of power-electronic converter-based renewable energy sources": 14,
+    "Time-domain relaying": 14,
+    "Converter transformer protection": 14,
+    "Battery Charging System": 9,
+    "Bidirectional Converter": 9,
+    "Reconfigurable Power Converter": 9,
+    "and Soft-Switched Converter": 9,
     "Cooperative communication": 15,
     "Resource allocation": 15,
     "Physical layer security": 15,
+    "OFDMA": 15,
+    "NOMA": 15,
     "TeraHertz Communication": 15,
     "1. VLSI Design (Includes: Hardware-Friendly Algorithm Design": 0,
     "Digital VLSI Architecture Design": 0,
@@ -140,16 +152,26 @@
     "FPGA Prototyping) of Stand-Alone": 0,
     "Cooperative and Wideband Spectrum Sensors for Cognitive Radio Network": 0,
     "2. Low-Power and Hardware-Efficient Implementation of Post-Quantum Cryptography": 0,
-    "VLSI Testing and Design-for-Testability (DfT)": 17,
-    "Trusted System Design": 17,
-    "Hardware Security": 17,
-    "High Performance Processor Design": 17,
-    "Speech and Audio Processing": 10,
-    "Speaker Diarization": 10,
-    "Language Diarization": 10,
-    "Dialect/Language Identification": 10,
-    "Applications of signal processing": 10,
-    "Applications of Machine Learning and Deep Learning": 10,
+    "VLSI Testing and Design-for-Testability (DfT)": 16,
+    "Trusted System Design": 16,
+    "Hardware Security": 16,
+    "High Performance Processor Design": 16,
+    "Speech and Audio Processing": 9,
+    "Speaker Diarization": 9,
+    "Language Diarization": 9,
+    "Dialect/Language Identification": 9,
+    "Applications of signal processing": 9,
+    "Applications of Machine Learning and Deep Learning": 9,
+    "1. Frontier Models and Large Language Models (LLMs)": 17,
+    "2. Generative AI and Multimodal AI": 17,
+    "3. Reliable and Trustworthy AI": 17,
+    "4. AI Systems and ML Infrastructure": 17,
+    "5. Bayesian Statistics and Probabilistic Modeling": 17,
+    "6. Uncertainty Quantification in Machine Learning": 17,
+    "7. Approximate Bayesian Inference and MCMC": 17,
+    "8. Deep Learning and Representation Learning": 17,
+    "9. AI for Agriculture": 17,
+    "Healthcare": 17,
     "Two-way relaying": 18,
     "RF energy harvesting networks": 18,
     "Cognitive radio networks": 18,
@@ -171,11 +193,11 @@
     "project:Implantable Pacemaker Chip (iPACE-CHIP)": 23,
     "agency:Ministry of Electronics and Information Technology, Government of India": 23,
     "project:Electromagnetic Side-channel Attack Analysis on FPGA based S": 19,
-    "IIT Jammu EE Department": 10,
+    "IIT Jammu EE Department": 9,
     "patent:Triple-State Schmitt Trigger Design Employing Diode-Connecte": 2,
     "A. Kannaujiya": 2,
     "patent:A System and a Method for Underwater Image Enhancemen": 24,
-    "Meghna": 24,
+    "Meghna": 4,
     "A. Chauhan": 24,
     "D. Goel": 24,
     "V.jakhetiya": 24,
@@ -194,100 +216,100 @@
     "patent:Method and system for detection of stem and root borer infes": 24,
     "R. Maruthadurai": 24,
     "patent:A System and Method for Arc-Flash Detection using Local Chan": 24,
-    "ABHISHEK VERMA": 7,
-    "Power Converter Design": 7,
-    "Aadil Ahmad Khan": 13,
-    "Anirban Sarkar": 13,
-    "Reconfigurable Intelligent Surfaces": 13,
-    "Aamir Ahmad Bhat": 11,
-    "DEEP LEARNING LEVERAGED PARAMETER EXTRACTION OF OPTOELECTRONIC DEVICES": 11,
+    "ABHISHEK VERMA": 6,
+    "Power Converter Design": 6,
+    "Aadil Ahmad Khan": 12,
+    "Anirban Sarkar": 12,
+    "Reconfigurable Intelligent Surfaces": 12,
+    "Aamir Ahmad Bhat": 10,
+    "DEEP LEARNING LEVERAGED PARAMETER EXTRACTION OF OPTOELECTRONIC DEVICES": 10,
     "Abdul Basit Mir": 4,
     "Samaresh Bera": 4,
     "5G/6G Communication and Networks": 4,
-    "Aditi gupta": 17,
-    "AI and Machine Learning": 17,
-    "Akash Deo": 7,
-    "Power Converter Design, Magnetics Design, Electric Vehicle Charging": 7,
+    "Aditi gupta": 16,
+    "AI and Machine Learning": 16,
+    "Akash Deo": 6,
+    "Power Converter Design, Magnetics Design, Electric Vehicle Charging": 6,
     "Alisha Gupta": 24,
     "Suresh Roland Devasahayam": 24,
     "PPG based heart rate detection using superlet transform": 24,
     "Amina Girdher": 4,
     "Energy harvesting in free space optical communication": 4,
-    "Anjali Kumari": 6,
-    "Microwaves and Radio-frequencies": 6,
-    "Anjum Riaz": 17,
-    "Hardware security and secure system design": 17,
+    "Anjali Kumari": 1,
+    "Microwaves and Radio-frequencies": 1,
+    "Anjum Riaz": 16,
+    "Hardware security and secure system design": 16,
     "Ankit Pandey": 1,
     "Computational electromagnetics (fdtd methods)": 1,
     "Aryan Kannaujiya": 2,
     "Radiation Hardened VLSI circuits": 2,
     "Atul Banotra": 18,
     "Energy harvesting in IOT": 18,
-    "Balkrishna Choubey": 11,
-    "Deep UV Photodetectors": 11,
+    "Balkrishna Choubey": 10,
+    "Deep UV Photodetectors": 10,
     "Bharti Katiyar": 18,
     "Energy Harvesting, Intelligent Reflecting Surfaces": 18,
-    "Bhukya Naveen": 5,
-    "Intergation  of EV in the distribution system": 5,
-    "Burhan wafai": 3,
-    "Physical layer security in wireless communication": 3,
-    "Chandra Prakash Singh": 11,
-    "III-Nitride based optoelectronics device": 11,
-    "Gagandeep Kaur": 6,
-    "RF Energy Harvesting & Wireless Power Transfer": 6,
-    "Gaurav Kumar": 17,
-    "Virendra Singh": 17,
-    "VLSI Testing and Hardware Security": 17,
+    "Bhukya Naveen": 6,
+    "Intergation  of EV in the distribution system": 6,
+    "Burhan wafai": 18,
+    "Physical layer security in wireless communication": 18,
+    "Chandra Prakash Singh": 10,
+    "III-Nitride based optoelectronics device": 10,
+    "Gagandeep Kaur": 1,
+    "RF Energy Harvesting & Wireless Power Transfer": 1,
+    "Gaurav Kumar": 16,
+    "Virendra Singh": 16,
+    "VLSI Testing and Hardware Security": 16,
     "Gokul Singh Chauhan": 24,
     "Medical Image Analysis using Deep Learning": 24,
-    "Hemant Gupta": 7,
+    "Hemant Gupta": 6,
     "Himanshu Singh": 24,
     "Action Recognition and Localization using Deep Learning": 24,
-    "JASDEEP KOUR": 5,
-    "Grid Connected Renewable Energy Resources and their Control": 5,
-    "Javid Ahmad Ganie": 13,
-    "Design of High gain Linearly and Circularly Polarized antennas for microwave and millimeter wave communication": 13,
-    "Javid Ahmad Rather": 13,
-    "Microwave Antenna for Communication/Sensing Applications": 13,
-    "Khwrwmdao Basumatary": 5,
-    "RESILIENT FREQUENCY CONTROL IN MODERN POWER SYSTEM": 5,
-    "Mahima Gandotra": 5,
-    "Advancing Grid-Connected Renewable Energy Systems through AI Integration": 5,
-    "Underwater Surveillance, Graph Learning, Deep Learning": 24,
+    "JASDEEP KOUR": 6,
+    "Grid Connected Renewable Energy Resources and their Control": 6,
+    "Javid Ahmad Ganie": 12,
+    "Design of High gain Linearly and Circularly Polarized antennas for microwave and millimeter wave communication": 12,
+    "Javid Ahmad Rather": 12,
+    "Microwave Antenna for Communication/Sensing Applications": 12,
+    "Khwrwmdao Basumatary": 6,
+    "RESILIENT FREQUENCY CONTROL IN MODERN POWER SYSTEM": 6,
+    "Mahima Gandotra": 24,
+    "Advancing Grid-Connected Renewable Energy Systems through AI Integration": 24,
+    "Underwater Surveillance, Graph Learning, Deep Learning": 4,
     "Mehvish Nissar": 24,
     "Underwater Surveillance": 24,
     "Mohd Ilyas Khan": 0,
     "UAV Assisted wireless communication": 0,
-    "Murtiza Ali": 12,
-    "Underwater and Aerial Acoustics, Compressing Sensing, Array Signal Processing": 12,
+    "Murtiza Ali": 11,
+    "Underwater and Aerial Acoustics, Compressing Sensing, Array Signal Processing": 11,
     "Navin Govind Singhaniya": 0,
     "Digital VLSI Design and Implementation for Special Functions in Fractional Calculus": 0,
     "Ninad Bandhu Kamble": 0,
     "VLSI Design (Includes: Development of Hardware-Friendly Algorithm, FPGA Based Implementation and ASIC Chip Design and Implementation) of Sub-Nyquist Based Wide-band Spectrum Sensing for Cognitive Radio Network": 0,
-    "Pardeep Kumar": 17,
-    "VLSI testing and secure scan design": 17,
+    "Pardeep Kumar": 16,
+    "VLSI testing and secure scan design": 16,
     "Parwez Alam": 3,
     "Chinmoy Kundu": 3,
     "Integrated Sensing and Communication": 3,
-    "Pawan Kumar": 12,
-    "Algorithms for Fast Computation of Principal Components for Self Noise Cancellation in Underwater Acoustics": 12,
+    "Pawan Kumar": 11,
+    "Algorithms for Fast Computation of Principal Components for Self Noise Cancellation in Underwater Acoustics": 11,
     "Pradosh Kumar  hota": 15,
     "Priyanka Bogia": 18,
     "Autonomous Electric Vehicle": 18,
-    "RAKESH SHARMA": 4,
-    "Wireless Communication": 4,
-    "Rajesh Nallagatal": 14,
-    "ROBOTICS CONTROL": 14,
-    "Rantu Buragohain": 12,
-    "Vinayak Abrol": 12,
-    "EEG Signal Classification, Brain-Computer Interface, Machine Learning, Deep Learning": 12,
-    "Rishab Amla": 4,
-    "Ritujoy Biswas": 12,
-    "Speech Intelligibility Improvement through Optimized Voice Transformation in Transfer Learning Framework": 12,
-    "Riya Malia": 6,
-    "Polarization Converters": 6,
-    "SONAM GUPTA": 5,
-    "Microgrid, DFIG integrated Wind Energy Conversion System, BESS": 5,
+    "RAKESH SHARMA": 3,
+    "Wireless Communication": 3,
+    "Rajesh Nallagatal": 13,
+    "ROBOTICS CONTROL": 13,
+    "Rantu Buragohain": 11,
+    "Vinayak Abrol": 11,
+    "EEG Signal Classification, Brain-Computer Interface, Machine Learning, Deep Learning": 11,
+    "Rishab Amla": 3,
+    "Ritujoy Biswas": 11,
+    "Speech Intelligibility Improvement through Optimized Voice Transformation in Transfer Learning Framework": 11,
+    "Riya Malia": 1,
+    "Polarization Converters": 1,
+    "SONAM GUPTA": 6,
+    "Microgrid, DFIG integrated Wind Energy Conversion System, BESS": 6,
     "SUCHITRA TIWARI": 3,
     "Amit Kumar Singh": 3,
     "Metasurface Lens Antenna for 5G Applications": 3,
@@ -305,36 +327,36 @@
     "Machine Learning Approaches for Secrecy Enhancement in beyond 5G Wireless Networks": 4,
     "Shantanu Saxena": 18,
     "Iot based Autonomous Electric Vehicles and Charging Infrastructure": 18,
-    "Shashi Bhushan Kotwal": 3,
-    "Sheraza Bashir": 5,
-    "Next Generation Cyber Physical System( NGCPS)": 5,
+    "Shashi Bhushan Kotwal": 18,
+    "Sheraza Bashir": 6,
+    "Next Generation Cyber Physical System( NGCPS)": 6,
     "Shivam Bhardwaj": 2,
     "Mixed-signal Circuits for Biomedical Applications": 2,
     "Soleha Kousar": 0,
     "Physical layer security of wireless powered communications": 0,
-    "Swastik": 5,
-    "Enterprise asset management for power utilities": 5,
+    "Swastik": 6,
+    "Enterprise asset management for power utilities": 6,
     "Sweta Kumari": 0,
     "Wireless Communications": 0,
     "Syed Farah Naz": 2,
     "Reliability and security analysis of low power, high-performance digital circuits": 2,
-    "Tarun Bali": 12,
-    "Acoustic Scene Classification": 12,
-    "UMMER RASHID DAR": 6,
-    "Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects": 6,
+    "Tarun Bali": 11,
+    "Acoustic Scene Classification": 11,
+    "UMMER RASHID DAR": 12,
+    "Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects": 12,
     "Ubair Ali": 2,
     "Machine Learning Attack Resilient Hardware Security Primitives": 2,
-    "Vivek Bhadwaj": 7,
-    "Power Converters": 7,
+    "Vivek Bhadwaj": 6,
+    "Power Converters": 6,
     "Yasin Khan": 3,
     "Artificial Intelligence enabled Optimal Secure Design for  Reconfigurable Intelligent Surface aided Communication": 3,
-    "Zareena Amin": 12,
-    "DeepFake Detection": 12,
-    "category:Mircroelectronics & VLSI Design": 17,
-    "Compound Semiconductor based emitter and detector": 17,
-    "Low Power High Performance circuit designs": 17,
-    "Soft error tolerant circuits": 17,
-    "Reliability Modeling of Semiconductor Devices": 17,
+    "Zareena Amin": 11,
+    "DeepFake Detection": 11,
+    "category:Mircroelectronics & VLSI Design": 16,
+    "Compound Semiconductor based emitter and detector": 16,
+    "Low Power High Performance circuit designs": 16,
+    "Soft error tolerant circuits": 16,
+    "Reliability Modeling of Semiconductor Devices": 16,
     "category:Power System": 25,
     "Robust and Efficient System Operation and Planning": 25,
     "Renewable integration in power system": 25,
@@ -351,20 +373,21 @@
     "Microwave and Millimeter Wave Antennas for 5G, Metamaterials": 27,
     "Microsatellite Antenna Design and Computational EM": 27,
     "Drone Detection and Anti Drone Systems": 27,
-    "category:Signal and Image Processing": 8,
-    "Underwater Signal Processing": 8,
-    "Image and Video Processing": 8,
-    "Speech and Audio Signal Processing": 8,
-    "Machine Learning": 8,
-    "Medical Instrumentation": 8,
-    "category:Power Electronics": 16,
-    "Converters for Renewable Energy and Electric Vehicles": 16,
-    "WBG based High gain DC-DC Converters": 16,
-    "Design and Development of on board Chargers": 16,
-    "Smart Electric Transportation": 16,
-    "Grid Ties Solar Inverters": 16,
+    "category:Signal and Image Processing": 5,
+    "Underwater Signal Processing": 5,
+    "Image and Video Processing": 5,
+    "Speech and Audio Signal Processing": 5,
+    "Machine Learning": 5,
+    "Medical Instrumentation": 5,
+    "category:Power Electronics": 7,
+    "Converters for Renewable Energy and Electric Vehicles": 7,
+    "WBG based High gain DC-DC Converters": 7,
+    "Design and Development of on board Chargers": 7,
+    "Smart Electric Transportation": 7,
+    "Grid Ties Solar Inverters": 7,
     "Data Sailors": 3,
-    "Servotech Private Limited": 18
+    "Servotech Private Limited": 18,
+    "lab:Underwater Research lab": 9
   },
   "reports": [
     {
@@ -376,7 +399,6 @@
         "Communication Theory and Systems",
         "Cognitive Radios",
         "Simultaneous Wireless Information and Power Transfer (SWIPT) Systems",
-        "Physical Layer Security",
         "Power Line Communications",
         "Molecular Communications",
         "1. Signal Theory",
@@ -409,7 +431,6 @@
           "Communication Theory and Systems",
           "Cognitive Radios",
           "Simultaneous Wireless Information and Power Transfer (SWIPT) Systems",
-          "Physical Layer Security",
           "Power Line Communications",
           "Molecular Communications",
           "1. Signal Theory",
@@ -450,11 +471,6 @@
         {
           "source": "Ajay Singh",
           "target": "Simultaneous Wireless Information and Power Transfer (SWIPT) Systems",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Ajay Singh",
-          "target": "Physical Layer Security",
           "type": "RESEARCHES_IN"
         },
         {
@@ -603,33 +619,63 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Ajay Singh, Rohit Buddhiram Chaurasiya\n  PhDStudent: Mohd Ilyas Khan, Navin Govind Singhaniya, Ninad Bandhu Kamble, Soleha Kousar, Sweta Kumari\n  ResearchArea: Communication Theory and Systems, Cognitive Radios, Simultaneous Wireless Information and Power Transfer (SWIPT) Systems, Physical Layer Security, Power Line Communications, Molecular Communications, 1. Signal Theory, 2. Detection and Estimation Theory, 3. Information Theory and Coding, 4. Digital Communications, 1. VLSI Design (Includes: Hardware-Friendly Algorithm Design, Digital VLSI Architecture Design, ASIC Chip Design and its Testing, FPGA Prototyping) of Stand-Alone, Cooperative and Wideband Spectrum Sensors for Cognitive Radio Network\n  Relationships: RESEARCHES_IN: 22, SUPERVISED_BY: 6, STUDIES: 5\n\nSummary: This group includes 2 faculty member(s): Ajay Singh, Rohit Buddhiram Chaurasiya. 5 PhD student(s). working in areas like Communication Theory and Systems, Cognitive Radios, Simultaneous Wireless Information and Power Transfer (SWIPT) Systems.",
+      "text": "Community 0 in IIT Jammu Electrical Engineering Department:\n  Faculty: Ajay Singh, Rohit Buddhiram Chaurasiya\n  PhDStudent: Mohd Ilyas Khan, Navin Govind Singhaniya, Ninad Bandhu Kamble, Soleha Kousar, Sweta Kumari\n  ResearchArea: Communication Theory and Systems, Cognitive Radios, Simultaneous Wireless Information and Power Transfer (SWIPT) Systems, Power Line Communications, Molecular Communications, 1. Signal Theory, 2. Detection and Estimation Theory, 3. Information Theory and Coding, 4. Digital Communications, 1. VLSI Design (Includes: Hardware-Friendly Algorithm Design, Digital VLSI Architecture Design, ASIC Chip Design and its Testing, FPGA Prototyping) of Stand-Alone, Cooperative and Wideband Spectrum Sensors for Cognitive Radio Network, 2. Low-Power and Hardware-Efficient Implementation of Post-Quantum Cryptography\n  Relationships: RESEARCHES_IN: 21, SUPERVISED_BY: 6, STUDIES: 5\n\nSummary: This group includes 2 faculty member(s): Ajay Singh, Rohit Buddhiram Chaurasiya. 5 PhD student(s). working in areas like Communication Theory and Systems, Cognitive Radios, Simultaneous Wireless Information and Power Transfer (SWIPT) Systems.",
       "summary": "This group includes 2 faculty member(s): Ajay Singh, Rohit Buddhiram Chaurasiya. 5 PhD student(s). working in areas like Communication Theory and Systems, Cognitive Radios, Simultaneous Wireless Information and Power Transfer (SWIPT) Systems.",
-      "size": 28
+      "size": 27
     },
     {
       "id": "community_1",
       "community_id": 1,
       "members": [
         "Alok Kumar Saxena",
+        "Archana Rajput",
         "Finite-Difference Time-Domain (FDTD) Method",
         "Computational Electromagnetics",
         "RF & Microwave Engineering",
+        "Microwave",
+        "Antenna design",
+        "RF",
+        "Cloaking/Invisbility",
+        "Frequency Selective Surfaces",
+        "Transformation Optics",
+        "Antennas",
+        "Metamaterials",
+        "Anjali Kumari",
+        "Microwaves and Radio-frequencies",
         "Ankit Pandey",
-        "Computational electromagnetics (fdtd methods)"
+        "Computational electromagnetics (fdtd methods)",
+        "Gagandeep Kaur",
+        "RF Energy Harvesting & Wireless Power Transfer",
+        "Riya Malia",
+        "Polarization Converters"
       ],
       "members_by_type": {
         "Faculty": [
-          "Alok Kumar Saxena"
+          "Alok Kumar Saxena",
+          "Archana Rajput"
         ],
         "ResearchArea": [
           "Finite-Difference Time-Domain (FDTD) Method",
           "Computational Electromagnetics",
           "RF & Microwave Engineering",
-          "Computational electromagnetics (fdtd methods)"
+          "Microwave",
+          "Antenna design",
+          "RF",
+          "Cloaking/Invisbility",
+          "Frequency Selective Surfaces",
+          "Transformation Optics",
+          "Antennas",
+          "Metamaterials",
+          "Microwaves and Radio-frequencies",
+          "Computational electromagnetics (fdtd methods)",
+          "RF Energy Harvesting & Wireless Power Transfer",
+          "Polarization Converters"
         ],
         "PhDStudent": [
-          "Ankit Pandey"
+          "Anjali Kumari",
+          "Ankit Pandey",
+          "Gagandeep Kaur",
+          "Riya Malia"
         ]
       },
       "internal_edges": [
@@ -650,8 +696,88 @@
         },
         {
           "source": "Alok Kumar Saxena",
+          "target": "Microwave",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Alok Kumar Saxena",
+          "target": "Antenna design",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Alok Kumar Saxena",
+          "target": "RF",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Alok Kumar Saxena",
           "target": "Computational electromagnetics (fdtd methods)",
           "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "Microwave",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "Antenna design",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "Cloaking/Invisbility",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "Frequency Selective Surfaces",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "Transformation Optics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "Antennas",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "Metamaterials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "RF",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "Microwaves and Radio-frequencies",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "RF Energy Harvesting & Wireless Power Transfer",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Archana Rajput",
+          "target": "Polarization Converters",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Anjali Kumari",
+          "target": "Archana Rajput",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Anjali Kumari",
+          "target": "Microwaves and Radio-frequencies",
+          "type": "STUDIES"
         },
         {
           "source": "Ankit Pandey",
@@ -662,11 +788,31 @@
           "source": "Ankit Pandey",
           "target": "Computational electromagnetics (fdtd methods)",
           "type": "STUDIES"
+        },
+        {
+          "source": "Gagandeep Kaur",
+          "target": "Archana Rajput",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Gagandeep Kaur",
+          "target": "RF Energy Harvesting & Wireless Power Transfer",
+          "type": "STUDIES"
+        },
+        {
+          "source": "Riya Malia",
+          "target": "Archana Rajput",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Riya Malia",
+          "target": "Polarization Converters",
+          "type": "STUDIES"
         }
       ],
-      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Alok Kumar Saxena\n  PhDStudent: Ankit Pandey\n  ResearchArea: Finite-Difference Time-Domain (FDTD) Method, Computational Electromagnetics, RF & Microwave Engineering, Computational electromagnetics (fdtd methods)\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): Alok Kumar Saxena. 1 PhD student(s). working in areas like Finite-Difference Time-Domain (FDTD) Method, Computational Electromagnetics, RF & Microwave Engineering.",
-      "summary": "This group includes 1 faculty member(s): Alok Kumar Saxena. 1 PhD student(s). working in areas like Finite-Difference Time-Domain (FDTD) Method, Computational Electromagnetics, RF & Microwave Engineering.",
-      "size": 6
+      "text": "Community 1 in IIT Jammu Electrical Engineering Department:\n  Faculty: Alok Kumar Saxena, Archana Rajput\n  PhDStudent: Anjali Kumari, Ankit Pandey, Gagandeep Kaur, Riya Malia\n  ResearchArea: Finite-Difference Time-Domain (FDTD) Method, Computational Electromagnetics, RF & Microwave Engineering, Microwave, Antenna design, RF, Cloaking/Invisbility, Frequency Selective Surfaces, Transformation Optics, Antennas, Metamaterials, Microwaves and Radio-frequencies, Computational electromagnetics (fdtd methods), RF Energy Harvesting & Wireless Power Transfer, Polarization Converters\n  Relationships: RESEARCHES_IN: 18, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 2 faculty member(s): Alok Kumar Saxena, Archana Rajput. 4 PhD student(s). working in areas like Finite-Difference Time-Domain (FDTD) Method, Computational Electromagnetics, RF & Microwave Engineering.",
+      "summary": "This group includes 2 faculty member(s): Alok Kumar Saxena, Archana Rajput. 4 PhD student(s). working in areas like Finite-Difference Time-Domain (FDTD) Method, Computational Electromagnetics, RF & Microwave Engineering.",
+      "size": 21
     },
     {
       "id": "community_2",
@@ -677,6 +823,7 @@
         "circuits and systems for biomedical applications",
         "low-power high-performance circuit designs",
         "In-memory computing",
+        "SRAM",
         "and Hardware security primitives",
         "patent:Triple-State Schmitt Trigger Design Employing Diode-Connecte",
         "A. Kannaujiya",
@@ -702,6 +849,7 @@
           "circuits and systems for biomedical applications",
           "low-power high-performance circuit designs",
           "In-memory computing",
+          "SRAM",
           "and Hardware security primitives",
           "Radiation Hardened VLSI circuits",
           "Mixed- Signal Circuits for Biomedical Application",
@@ -744,6 +892,11 @@
         {
           "source": "Ambika Prasad Shah",
           "target": "In-memory computing",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Ambika Prasad Shah",
+          "target": "SRAM",
           "type": "RESEARCHES_IN"
         },
         {
@@ -852,15 +1005,16 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 2 in IIT Jammu EE Department:\n  ExternalPerson: A. Kannaujiya\n  Faculty: Ambika Prasad Shah\n  Patent: patent:Triple-State Schmitt Trigger Design Employing Diode-Connecte\n  PhDStudent: Aryan Kannaujiya, Sachin Sharma, Sandeep Kour, Shivam Bhardwaj, Syed Farah Naz, Ubair Ali\n  ResearchArea: Reliability analysis of digital circuits, circuits and systems for biomedical applications, low-power high-performance circuit designs, In-memory computing, and Hardware security primitives, Radiation Hardened VLSI circuits, Mixed- Signal Circuits for Biomedical Application, In-Memory Computing Architectures, Mixed-signal Circuits for Biomedical Applications, Reliability and security analysis of low power, high-performance digital circuits, Machine Learning Attack Resilient Hardware Security Primitives\n  Relationships: RESEARCHES_IN: 11, INVENTED: 2, SUPERVISED_BY: 6, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): Ambika Prasad Shah. 6 PhD student(s). working in areas like Reliability analysis of digital circuits, circuits and systems for biomedical applications, low-power high-performance circuit designs.",
+      "text": "Community 2 in IIT Jammu Electrical Engineering Department:\n  ExternalPerson: A. Kannaujiya\n  Faculty: Ambika Prasad Shah\n  Patent: patent:Triple-State Schmitt Trigger Design Employing Diode-Connecte\n  PhDStudent: Aryan Kannaujiya, Sachin Sharma, Sandeep Kour, Shivam Bhardwaj, Syed Farah Naz, Ubair Ali\n  ResearchArea: Reliability analysis of digital circuits, circuits and systems for biomedical applications, low-power high-performance circuit designs, In-memory computing, SRAM, and Hardware security primitives, Radiation Hardened VLSI circuits, Mixed- Signal Circuits for Biomedical Application, In-Memory Computing Architectures, Mixed-signal Circuits for Biomedical Applications, Reliability and security analysis of low power, high-performance digital circuits, Machine Learning Attack Resilient Hardware Security Primitives\n  Relationships: RESEARCHES_IN: 12, INVENTED: 2, SUPERVISED_BY: 6, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): Ambika Prasad Shah. 6 PhD student(s). working in areas like Reliability analysis of digital circuits, circuits and systems for biomedical applications, low-power high-performance circuit designs.",
       "summary": "This group includes 1 faculty member(s): Ambika Prasad Shah. 6 PhD student(s). working in areas like Reliability analysis of digital circuits, circuits and systems for biomedical applications, low-power high-performance circuit designs.",
-      "size": 20
+      "size": 21
     },
     {
       "id": "community_3",
       "community_id": 3,
       "members": [
         "Ankit Dubey",
+        "Physical Layer Security",
         "**Communications Theory",
         "Diversity Combining",
         "Multihop Transmission",
@@ -870,15 +1024,15 @@
         "Use of SDR for Defence Applications",
         "B.Tech. Projects",
         "Smart Energy Metering-I: Mr. Kuldeep (2016UCS)\u00a0and Mr. Ayush (2016UEE)",
-        "Burhan wafai",
-        "Physical layer security in wireless communication",
         "Parwez Alam",
         "Chinmoy Kundu",
         "Integrated Sensing and Communication",
+        "RAKESH SHARMA",
+        "Wireless Communication",
+        "Rishab Amla",
         "SUCHITRA TIWARI",
         "Amit Kumar Singh",
         "Metasurface Lens Antenna for 5G Applications",
-        "Shashi Bhushan Kotwal",
         "Yasin Khan",
         "Artificial Intelligence enabled Optimal Secure Design for  Reconfigurable Intelligent Surface aided Communication",
         "Data Sailors"
@@ -888,6 +1042,7 @@
           "Ankit Dubey"
         ],
         "ResearchArea": [
+          "Physical Layer Security",
           "**Communications Theory",
           "Diversity Combining",
           "Multihop Transmission",
@@ -897,16 +1052,16 @@
           "Use of SDR for Defence Applications",
           "B.Tech. Projects",
           "Smart Energy Metering-I: Mr. Kuldeep (2016UCS)\u00a0and Mr. Ayush (2016UEE)",
-          "Physical layer security in wireless communication",
           "Integrated Sensing and Communication",
+          "Wireless Communication",
           "Metasurface Lens Antenna for 5G Applications",
           "Artificial Intelligence enabled Optimal Secure Design for  Reconfigurable Intelligent Surface aided Communication"
         ],
         "PhDStudent": [
-          "Burhan wafai",
           "Parwez Alam",
+          "RAKESH SHARMA",
+          "Rishab Amla",
           "SUCHITRA TIWARI",
-          "Shashi Bhushan Kotwal",
           "Yasin Khan"
         ],
         "ExternalPerson": [
@@ -931,6 +1086,11 @@
         {
           "source": "Ankit Dubey",
           "target": "Multihop Transmission",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Ankit Dubey",
+          "target": "Physical Layer Security",
           "type": "RESEARCHES_IN"
         },
         {
@@ -970,12 +1130,12 @@
         },
         {
           "source": "Ankit Dubey",
-          "target": "Physical layer security in wireless communication",
+          "target": "Integrated Sensing and Communication",
           "type": "RESEARCHES_IN"
         },
         {
           "source": "Ankit Dubey",
-          "target": "Integrated Sensing and Communication",
+          "target": "Wireless Communication",
           "type": "RESEARCHES_IN"
         },
         {
@@ -987,16 +1147,6 @@
           "source": "Ankit Dubey",
           "target": "Artificial Intelligence enabled Optimal Secure Design for  Reconfigurable Intelligent Surface aided Communication",
           "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Burhan wafai",
-          "target": "Ankit Dubey",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Burhan wafai",
-          "target": "Physical layer security in wireless communication",
-          "type": "STUDIES"
         },
         {
           "source": "Parwez Alam",
@@ -1011,6 +1161,21 @@
         {
           "source": "Parwez Alam",
           "target": "Integrated Sensing and Communication",
+          "type": "STUDIES"
+        },
+        {
+          "source": "RAKESH SHARMA",
+          "target": "Ankit Dubey",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "RAKESH SHARMA",
+          "target": "Wireless Communication",
+          "type": "STUDIES"
+        },
+        {
+          "source": "Rishab Amla",
+          "target": "Wireless Communication",
           "type": "STUDIES"
         },
         {
@@ -1029,11 +1194,6 @@
           "type": "STUDIES"
         },
         {
-          "source": "Shashi Bhushan Kotwal",
-          "target": "Physical layer security in wireless communication",
-          "type": "STUDIES"
-        },
-        {
           "source": "Yasin Khan",
           "target": "Ankit Dubey",
           "type": "SUPERVISED_BY"
@@ -1044,9 +1204,9 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 3 in IIT Jammu EE Department:\n  ExternalPerson: Chinmoy Kundu, Amit Kumar Singh\n  Faculty: Ankit Dubey\n  PhDStudent: Burhan wafai, Parwez Alam, SUCHITRA TIWARI, Shashi Bhushan Kotwal, Yasin Khan\n  ResearchArea: **Communications Theory, Diversity Combining, Multihop Transmission, Machine-to-Machine Communication, **Application Based**, Smart Solutions and IoT, Use of SDR for Defence Applications, B.Tech. Projects, Smart Energy Metering-I: Mr. Kuldeep (2016UCS)\u00a0and Mr. Ayush (2016UEE), Physical layer security in wireless communication, Integrated Sensing and Communication, Metasurface Lens Antenna for 5G Applications, Artificial Intelligence enabled Optimal Secure Design for  Reconfigurable Intelligent Surface aided Communication\n  Startup: Data Sailors\n  Relationships: RESEARCHES_IN: 13, MENTORED_STARTUP: 1, SUPERVISED_BY: 6, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): Ankit Dubey. 5 PhD student(s). working in areas like **Communications Theory, Diversity Combining, Multihop Transmission.",
-      "summary": "This group includes 1 faculty member(s): Ankit Dubey. 5 PhD student(s). working in areas like **Communications Theory, Diversity Combining, Multihop Transmission.",
-      "size": 22
+      "text": "Community 3 in IIT Jammu Electrical Engineering Department:\n  ExternalPerson: Chinmoy Kundu, Amit Kumar Singh\n  Faculty: Ankit Dubey\n  PhDStudent: Parwez Alam, RAKESH SHARMA, Rishab Amla, SUCHITRA TIWARI, Yasin Khan\n  ResearchArea: Physical Layer Security, **Communications Theory, Diversity Combining, Multihop Transmission, Machine-to-Machine Communication, **Application Based**, Smart Solutions and IoT, Use of SDR for Defence Applications, B.Tech. Projects, Smart Energy Metering-I: Mr. Kuldeep (2016UCS)\u00a0and Mr. Ayush (2016UEE), Integrated Sensing and Communication, Wireless Communication, Metasurface Lens Antenna for 5G Applications, Artificial Intelligence enabled Optimal Secure Design for  Reconfigurable Intelligent Surface aided Communication\n  Startup: Data Sailors\n  Relationships: RESEARCHES_IN: 14, MENTORED_STARTUP: 1, SUPERVISED_BY: 6, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): Ankit Dubey. 5 PhD student(s). working in areas like Physical Layer Security, **Communications Theory, Diversity Combining.",
+      "summary": "This group includes 1 faculty member(s): Ankit Dubey. 5 PhD student(s). working in areas like Physical Layer Security, **Communications Theory, Diversity Combining.",
+      "size": 23
     },
     {
       "id": "community_4",
@@ -1062,14 +1222,13 @@
         "Power line communication (PLC) systems",
         "5G Wireless Communications",
         "Non-orthogonal multiple access (NOMA)",
+        "Meghna",
         "Abdul Basit Mir",
         "Samaresh Bera",
         "5G/6G Communication and Networks",
         "Amina Girdher",
         "Energy harvesting in free space optical communication",
-        "RAKESH SHARMA",
-        "Wireless Communication",
-        "Rishab Amla",
+        "Underwater Surveillance, Graph Learning, Deep Learning",
         "Shalini Tripathi",
         "Machine Learning Approaches for Secrecy Enhancement in beyond 5G Wireless Networks"
       ],
@@ -1089,18 +1248,17 @@
           "Non-orthogonal multiple access (NOMA)",
           "5G/6G Communication and Networks",
           "Energy harvesting in free space optical communication",
-          "Wireless Communication",
+          "Underwater Surveillance, Graph Learning, Deep Learning",
           "Machine Learning Approaches for Secrecy Enhancement in beyond 5G Wireless Networks"
+        ],
+        "ExternalPerson": [
+          "Meghna",
+          "Samaresh Bera"
         ],
         "PhDStudent": [
           "Abdul Basit Mir",
           "Amina Girdher",
-          "RAKESH SHARMA",
-          "Rishab Amla",
           "Shalini Tripathi"
-        ],
-        "ExternalPerson": [
-          "Samaresh Bera"
         ]
       },
       "internal_edges": [
@@ -1161,13 +1319,23 @@
         },
         {
           "source": "Ankur Bansal",
-          "target": "Wireless Communication",
+          "target": "Underwater Surveillance, Graph Learning, Deep Learning",
           "type": "RESEARCHES_IN"
         },
         {
           "source": "Ankur Bansal",
           "target": "Machine Learning Approaches for Secrecy Enhancement in beyond 5G Wireless Networks",
           "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Meghna",
+          "target": "Ankur Bansal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Meghna",
+          "target": "Underwater Surveillance, Graph Learning, Deep Learning",
+          "type": "STUDIES"
         },
         {
           "source": "Abdul Basit Mir",
@@ -1195,21 +1363,6 @@
           "type": "STUDIES"
         },
         {
-          "source": "RAKESH SHARMA",
-          "target": "Wireless Communication",
-          "type": "STUDIES"
-        },
-        {
-          "source": "Rishab Amla",
-          "target": "Ankur Bansal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Rishab Amla",
-          "target": "Wireless Communication",
-          "type": "STUDIES"
-        },
-        {
           "source": "Shalini Tripathi",
           "target": "Ankur Bansal",
           "type": "SUPERVISED_BY"
@@ -1220,38 +1373,105 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 4 in IIT Jammu EE Department:\n  ExternalPerson: Samaresh Bera\n  Faculty: Ankur Bansal\n  PhDStudent: Abdul Basit Mir, Amina Girdher, RAKESH SHARMA, Rishab Amla, Shalini Tripathi\n  ResearchArea: Cooperative communications, Multiple-input multiple-output (MIMO) systems, Distributed space-time block code (DSTBC) based communication systems, Multiuser communications, Free space optical (FSO) communication systems, Mixed RF and FSO systems, Power line communication (PLC) systems, 5G Wireless Communications, Non-orthogonal multiple access (NOMA), 5G/6G Communication and Networks, Energy harvesting in free space optical communication, Wireless Communication, Machine Learning Approaches for Secrecy Enhancement in beyond 5G Wireless Networks\n  Relationships: RESEARCHES_IN: 13, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): Ankur Bansal. 5 PhD student(s). working in areas like Cooperative communications, Multiple-input multiple-output (MIMO) systems, Distributed space-time block code (DSTBC) based communication systems.",
-      "summary": "This group includes 1 faculty member(s): Ankur Bansal. 5 PhD student(s). working in areas like Cooperative communications, Multiple-input multiple-output (MIMO) systems, Distributed space-time block code (DSTBC) based communication systems.",
-      "size": 20
+      "text": "Community 4 in IIT Jammu Electrical Engineering Department:\n  ExternalPerson: Meghna, Samaresh Bera\n  Faculty: Ankur Bansal\n  PhDStudent: Abdul Basit Mir, Amina Girdher, Shalini Tripathi\n  ResearchArea: Cooperative communications, Multiple-input multiple-output (MIMO) systems, Distributed space-time block code (DSTBC) based communication systems, Multiuser communications, Free space optical (FSO) communication systems, Mixed RF and FSO systems, Power line communication (PLC) systems, 5G Wireless Communications, Non-orthogonal multiple access (NOMA), 5G/6G Communication and Networks, Energy harvesting in free space optical communication, Underwater Surveillance, Graph Learning, Deep Learning, Machine Learning Approaches for Secrecy Enhancement in beyond 5G Wireless Networks\n  Relationships: RESEARCHES_IN: 13, SUPERVISED_BY: 5, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): Ankur Bansal. 3 PhD student(s). working in areas like Cooperative communications, Multiple-input multiple-output (MIMO) systems, Distributed space-time block code (DSTBC) based communication systems.",
+      "summary": "This group includes 1 faculty member(s): Ankur Bansal. 3 PhD student(s). working in areas like Cooperative communications, Multiple-input multiple-output (MIMO) systems, Distributed space-time block code (DSTBC) based communication systems.",
+      "size": 19
     },
     {
       "id": "community_5",
       "community_id": 5,
       "members": [
+        "category:Signal and Image Processing",
+        "Underwater Signal Processing",
+        "Image and Video Processing",
+        "Speech and Audio Signal Processing",
+        "Machine Learning",
+        "Medical Instrumentation"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "category:Signal and Image Processing"
+        ],
+        "ResearchArea": [
+          "Underwater Signal Processing",
+          "Image and Video Processing",
+          "Speech and Audio Signal Processing",
+          "Machine Learning",
+          "Medical Instrumentation"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "Underwater Signal Processing",
+          "target": "category:Signal and Image Processing",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "Image and Video Processing",
+          "target": "category:Signal and Image Processing",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "Speech and Audio Signal Processing",
+          "target": "category:Signal and Image Processing",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "Machine Learning",
+          "target": "category:Signal and Image Processing",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "Medical Instrumentation",
+          "target": "category:Signal and Image Processing",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 5 in IIT Jammu Electrical Engineering Department:\n  ResearchArea: Underwater Signal Processing, Image and Video Processing, Speech and Audio Signal Processing, Machine Learning, Medical Instrumentation\n  ResearchCategory: Signal and Image Processing\n  Relationships: BELONGS_TO_CATEGORY: 5\n\nSummary: working in areas like Underwater Signal Processing, Image and Video Processing, Speech and Audio Signal Processing.",
+      "summary": "working in areas like Underwater Signal Processing, Image and Video Processing, Speech and Audio Signal Processing.",
+      "size": 6
+    },
+    {
+      "id": "community_6",
+      "community_id": 6,
+      "members": [
         "Anup Shukla",
+        "Arun Kumar Verma",
         "includes Robust and efficient system operation and planning",
         "Renewable integration in power systems",
         "Power system security",
         "Power System Restructuring /Deregulation",
         "Distribution System and Micro/Smart Grid",
+        "Power electronics",
+        "converters for renewable energy and EV chargers",
+        "bi-directional power flow",
+        "and electric transportation. Sustainable and intelligent Off-Grid solar PV system",
+        "On-board EV chargers",
+        "and\u00a0\u00a0Fast EV chargers",
+        "ABHISHEK VERMA",
+        "Power Converter Design",
+        "Akash Deo",
+        "Power Converter Design, Magnetics Design, Electric Vehicle Charging",
         "Bhukya Naveen",
         "Intergation  of EV in the distribution system",
+        "Hemant Gupta",
         "JASDEEP KOUR",
         "Grid Connected Renewable Energy Resources and their Control",
         "Khwrwmdao Basumatary",
         "RESILIENT FREQUENCY CONTROL IN MODERN POWER SYSTEM",
-        "Mahima Gandotra",
-        "Advancing Grid-Connected Renewable Energy Systems through AI Integration",
         "SONAM GUPTA",
         "Microgrid, DFIG integrated Wind Energy Conversion System, BESS",
         "Sheraza Bashir",
         "Next Generation Cyber Physical System( NGCPS)",
         "Swastik",
-        "Enterprise asset management for power utilities"
+        "Enterprise asset management for power utilities",
+        "Vivek Bhadwaj",
+        "Power Converters"
       ],
       "members_by_type": {
         "Faculty": [
-          "Anup Shukla"
+          "Anup Shukla",
+          "Arun Kumar Verma"
         ],
         "ResearchArea": [
           "includes Robust and efficient system operation and planning",
@@ -1259,22 +1479,33 @@
           "Power system security",
           "Power System Restructuring /Deregulation",
           "Distribution System and Micro/Smart Grid",
+          "Power electronics",
+          "converters for renewable energy and EV chargers",
+          "bi-directional power flow",
+          "and electric transportation. Sustainable and intelligent Off-Grid solar PV system",
+          "On-board EV chargers",
+          "and\u00a0\u00a0Fast EV chargers",
+          "Power Converter Design",
+          "Power Converter Design, Magnetics Design, Electric Vehicle Charging",
           "Intergation  of EV in the distribution system",
           "Grid Connected Renewable Energy Resources and their Control",
           "RESILIENT FREQUENCY CONTROL IN MODERN POWER SYSTEM",
-          "Advancing Grid-Connected Renewable Energy Systems through AI Integration",
           "Microgrid, DFIG integrated Wind Energy Conversion System, BESS",
           "Next Generation Cyber Physical System( NGCPS)",
-          "Enterprise asset management for power utilities"
+          "Enterprise asset management for power utilities",
+          "Power Converters"
         ],
         "PhDStudent": [
+          "ABHISHEK VERMA",
+          "Akash Deo",
           "Bhukya Naveen",
+          "Hemant Gupta",
           "JASDEEP KOUR",
           "Khwrwmdao Basumatary",
-          "Mahima Gandotra",
           "SONAM GUPTA",
           "Sheraza Bashir",
-          "Swastik"
+          "Swastik",
+          "Vivek Bhadwaj"
         ]
       },
       "internal_edges": [
@@ -1305,6 +1536,11 @@
         },
         {
           "source": "Anup Shukla",
+          "target": "Power Converter Design",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Anup Shukla",
           "target": "Intergation  of EV in the distribution system",
           "type": "RESEARCHES_IN"
         },
@@ -1316,11 +1552,6 @@
         {
           "source": "Anup Shukla",
           "target": "RESILIENT FREQUENCY CONTROL IN MODERN POWER SYSTEM",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Anup Shukla",
-          "target": "Advancing Grid-Connected Renewable Energy Systems through AI Integration",
           "type": "RESEARCHES_IN"
         },
         {
@@ -1338,290 +1569,6 @@
           "target": "Enterprise asset management for power utilities",
           "type": "RESEARCHES_IN"
         },
-        {
-          "source": "Bhukya Naveen",
-          "target": "Anup Shukla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Bhukya Naveen",
-          "target": "Intergation  of EV in the distribution system",
-          "type": "STUDIES"
-        },
-        {
-          "source": "JASDEEP KOUR",
-          "target": "Anup Shukla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "JASDEEP KOUR",
-          "target": "Grid Connected Renewable Energy Resources and their Control",
-          "type": "STUDIES"
-        },
-        {
-          "source": "Khwrwmdao Basumatary",
-          "target": "Anup Shukla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Khwrwmdao Basumatary",
-          "target": "RESILIENT FREQUENCY CONTROL IN MODERN POWER SYSTEM",
-          "type": "STUDIES"
-        },
-        {
-          "source": "Mahima Gandotra",
-          "target": "Anup Shukla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Mahima Gandotra",
-          "target": "Advancing Grid-Connected Renewable Energy Systems through AI Integration",
-          "type": "STUDIES"
-        },
-        {
-          "source": "SONAM GUPTA",
-          "target": "Anup Shukla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "SONAM GUPTA",
-          "target": "Microgrid, DFIG integrated Wind Energy Conversion System, BESS",
-          "type": "STUDIES"
-        },
-        {
-          "source": "Sheraza Bashir",
-          "target": "Anup Shukla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Sheraza Bashir",
-          "target": "Next Generation Cyber Physical System( NGCPS)",
-          "type": "STUDIES"
-        },
-        {
-          "source": "Swastik",
-          "target": "Anup Shukla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Swastik",
-          "target": "Enterprise asset management for power utilities",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Anup Shukla\n  PhDStudent: Bhukya Naveen, JASDEEP KOUR, Khwrwmdao Basumatary, Mahima Gandotra, SONAM GUPTA, Sheraza Bashir, Swastik\n  ResearchArea: includes Robust and efficient system operation and planning, Renewable integration in power systems, Power system security, Power System Restructuring /Deregulation, Distribution System and Micro/Smart Grid, Intergation  of EV in the distribution system, Grid Connected Renewable Energy Resources and their Control, RESILIENT FREQUENCY CONTROL IN MODERN POWER SYSTEM, Advancing Grid-Connected Renewable Energy Systems through AI Integration, Microgrid, DFIG integrated Wind Energy Conversion System, BESS, Next Generation Cyber Physical System( NGCPS), Enterprise asset management for power utilities\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 7, STUDIES: 7\n\nSummary: This group includes 1 faculty member(s): Anup Shukla. 7 PhD student(s). working in areas like includes Robust and efficient system operation and planning, Renewable integration in power systems, Power system security.",
-      "summary": "This group includes 1 faculty member(s): Anup Shukla. 7 PhD student(s). working in areas like includes Robust and efficient system operation and planning, Renewable integration in power systems, Power system security.",
-      "size": 20
-    },
-    {
-      "id": "community_6",
-      "community_id": 6,
-      "members": [
-        "Archana Rajput",
-        "Research Areas",
-        "Cloaking/Invisbility",
-        "Frequency Selective Surfaces",
-        "Transformation Optics",
-        "Antennas",
-        "Metamaterials",
-        "Electromagnetics",
-        "Network Analysis And Synthesis",
-        "Basic Electronics",
-        "Microwave Engineering",
-        "Anjali Kumari",
-        "Microwaves and Radio-frequencies",
-        "Gagandeep Kaur",
-        "RF Energy Harvesting & Wireless Power Transfer",
-        "Riya Malia",
-        "Polarization Converters",
-        "UMMER RASHID DAR",
-        "Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "Archana Rajput"
-        ],
-        "ResearchArea": [
-          "Research Areas",
-          "Cloaking/Invisbility",
-          "Frequency Selective Surfaces",
-          "Transformation Optics",
-          "Antennas",
-          "Metamaterials",
-          "Electromagnetics",
-          "Network Analysis And Synthesis",
-          "Basic Electronics",
-          "Microwave Engineering",
-          "Microwaves and Radio-frequencies",
-          "RF Energy Harvesting & Wireless Power Transfer",
-          "Polarization Converters",
-          "Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects"
-        ],
-        "PhDStudent": [
-          "Anjali Kumari",
-          "Gagandeep Kaur",
-          "Riya Malia",
-          "UMMER RASHID DAR"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "Archana Rajput",
-          "target": "Research Areas",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Cloaking/Invisbility",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Frequency Selective Surfaces",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Transformation Optics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Antennas",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Metamaterials",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Electromagnetics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Network Analysis And Synthesis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Basic Electronics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Microwave Engineering",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Microwaves and Radio-frequencies",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "RF Energy Harvesting & Wireless Power Transfer",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Polarization Converters",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Archana Rajput",
-          "target": "Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Anjali Kumari",
-          "target": "Archana Rajput",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Anjali Kumari",
-          "target": "Microwaves and Radio-frequencies",
-          "type": "STUDIES"
-        },
-        {
-          "source": "Gagandeep Kaur",
-          "target": "Archana Rajput",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Gagandeep Kaur",
-          "target": "RF Energy Harvesting & Wireless Power Transfer",
-          "type": "STUDIES"
-        },
-        {
-          "source": "Riya Malia",
-          "target": "Archana Rajput",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Riya Malia",
-          "target": "Polarization Converters",
-          "type": "STUDIES"
-        },
-        {
-          "source": "UMMER RASHID DAR",
-          "target": "Archana Rajput",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "UMMER RASHID DAR",
-          "target": "Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 6 in IIT Jammu EE Department:\n  Faculty: Archana Rajput\n  PhDStudent: Anjali Kumari, Gagandeep Kaur, Riya Malia, UMMER RASHID DAR\n  ResearchArea: Research Areas, Cloaking/Invisbility, Frequency Selective Surfaces, Transformation Optics, Antennas, Metamaterials, Electromagnetics, Network Analysis And Synthesis, Basic Electronics, Microwave Engineering, Microwaves and Radio-frequencies, RF Energy Harvesting & Wireless Power Transfer, Polarization Converters, Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects\n  Relationships: RESEARCHES_IN: 14, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): Archana Rajput. 4 PhD student(s). working in areas like Research Areas, Cloaking/Invisbility, Frequency Selective Surfaces.",
-      "summary": "This group includes 1 faculty member(s): Archana Rajput. 4 PhD student(s). working in areas like Research Areas, Cloaking/Invisbility, Frequency Selective Surfaces.",
-      "size": 19
-    },
-    {
-      "id": "community_7",
-      "community_id": 7,
-      "members": [
-        "Arun Kumar Verma",
-        "Power electronics",
-        "converters for renewable energy and EV chargers",
-        "bi-directional power flow",
-        "and electric transportation. Sustainable and intelligent Off-Grid solar PV system",
-        "On-board EV chargers",
-        "and\u00a0\u00a0Fast EV chargers",
-        "ABHISHEK VERMA",
-        "Power Converter Design",
-        "Akash Deo",
-        "Power Converter Design, Magnetics Design, Electric Vehicle Charging",
-        "Hemant Gupta",
-        "Vivek Bhadwaj",
-        "Power Converters"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "Arun Kumar Verma"
-        ],
-        "ResearchArea": [
-          "Power electronics",
-          "converters for renewable energy and EV chargers",
-          "bi-directional power flow",
-          "and electric transportation. Sustainable and intelligent Off-Grid solar PV system",
-          "On-board EV chargers",
-          "and\u00a0\u00a0Fast EV chargers",
-          "Power Converter Design",
-          "Power Converter Design, Magnetics Design, Electric Vehicle Charging",
-          "Power Converters"
-        ],
-        "PhDStudent": [
-          "ABHISHEK VERMA",
-          "Akash Deo",
-          "Hemant Gupta",
-          "Vivek Bhadwaj"
-        ]
-      },
-      "internal_edges": [
         {
           "source": "Arun Kumar Verma",
           "target": "Power electronics",
@@ -1674,6 +1621,11 @@
         },
         {
           "source": "ABHISHEK VERMA",
+          "target": "Anup Shukla",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "ABHISHEK VERMA",
           "target": "Power Converter Design",
           "type": "STUDIES"
         },
@@ -1688,6 +1640,16 @@
           "type": "STUDIES"
         },
         {
+          "source": "Bhukya Naveen",
+          "target": "Anup Shukla",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Bhukya Naveen",
+          "target": "Intergation  of EV in the distribution system",
+          "type": "STUDIES"
+        },
+        {
           "source": "Hemant Gupta",
           "target": "Arun Kumar Verma",
           "type": "SUPERVISED_BY"
@@ -1695,6 +1657,56 @@
         {
           "source": "Hemant Gupta",
           "target": "Power Converter Design",
+          "type": "STUDIES"
+        },
+        {
+          "source": "JASDEEP KOUR",
+          "target": "Anup Shukla",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "JASDEEP KOUR",
+          "target": "Grid Connected Renewable Energy Resources and their Control",
+          "type": "STUDIES"
+        },
+        {
+          "source": "Khwrwmdao Basumatary",
+          "target": "Anup Shukla",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Khwrwmdao Basumatary",
+          "target": "RESILIENT FREQUENCY CONTROL IN MODERN POWER SYSTEM",
+          "type": "STUDIES"
+        },
+        {
+          "source": "SONAM GUPTA",
+          "target": "Anup Shukla",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "SONAM GUPTA",
+          "target": "Microgrid, DFIG integrated Wind Energy Conversion System, BESS",
+          "type": "STUDIES"
+        },
+        {
+          "source": "Sheraza Bashir",
+          "target": "Anup Shukla",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Sheraza Bashir",
+          "target": "Next Generation Cyber Physical System( NGCPS)",
+          "type": "STUDIES"
+        },
+        {
+          "source": "Swastik",
+          "target": "Anup Shukla",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Swastik",
+          "target": "Enterprise asset management for power utilities",
           "type": "STUDIES"
         },
         {
@@ -1708,70 +1720,71 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 7 in IIT Jammu EE Department:\n  Faculty: Arun Kumar Verma\n  PhDStudent: ABHISHEK VERMA, Akash Deo, Hemant Gupta, Vivek Bhadwaj\n  ResearchArea: Power electronics, converters for renewable energy and EV chargers, bi-directional power flow, and electric transportation. Sustainable and intelligent Off-Grid solar PV system, On-board EV chargers, and\u00a0\u00a0Fast EV chargers, Power Converter Design, Power Converter Design, Magnetics Design, Electric Vehicle Charging, Power Converters\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): Arun Kumar Verma. 4 PhD student(s). working in areas like Power electronics, converters for renewable energy and EV chargers, bi-directional power flow.",
-      "summary": "This group includes 1 faculty member(s): Arun Kumar Verma. 4 PhD student(s). working in areas like Power electronics, converters for renewable energy and EV chargers, bi-directional power flow.",
-      "size": 14
+      "text": "Community 6 in IIT Jammu Electrical Engineering Department:\n  Faculty: Anup Shukla, Arun Kumar Verma\n  PhDStudent: ABHISHEK VERMA, Akash Deo, Bhukya Naveen, Hemant Gupta, JASDEEP KOUR, Khwrwmdao Basumatary, SONAM GUPTA, Sheraza Bashir, Swastik, Vivek Bhadwaj\n  ResearchArea: includes Robust and efficient system operation and planning, Renewable integration in power systems, Power system security, Power System Restructuring /Deregulation, Distribution System and Micro/Smart Grid, Power electronics, converters for renewable energy and EV chargers, bi-directional power flow, and electric transportation. Sustainable and intelligent Off-Grid solar PV system, On-board EV chargers, and\u00a0\u00a0Fast EV chargers, Power Converter Design, Power Converter Design, Magnetics Design, Electric Vehicle Charging, Intergation  of EV in the distribution system, Grid Connected Renewable Energy Resources and their Control\n  Relationships: RESEARCHES_IN: 21, SUPERVISED_BY: 11, STUDIES: 10\n\nSummary: This group includes 2 faculty member(s): Anup Shukla, Arun Kumar Verma. 10 PhD student(s). working in areas like includes Robust and efficient system operation and planning, Renewable integration in power systems, Power system security.",
+      "summary": "This group includes 2 faculty member(s): Anup Shukla, Arun Kumar Verma. 10 PhD student(s). working in areas like includes Robust and efficient system operation and planning, Renewable integration in power systems, Power system security.",
+      "size": 32
+    },
+    {
+      "id": "community_7",
+      "community_id": 7,
+      "members": [
+        "category:Power Electronics",
+        "Converters for Renewable Energy and Electric Vehicles",
+        "WBG based High gain DC-DC Converters",
+        "Design and Development of on board Chargers",
+        "Smart Electric Transportation",
+        "Grid Ties Solar Inverters"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "category:Power Electronics"
+        ],
+        "ResearchArea": [
+          "Converters for Renewable Energy and Electric Vehicles",
+          "WBG based High gain DC-DC Converters",
+          "Design and Development of on board Chargers",
+          "Smart Electric Transportation",
+          "Grid Ties Solar Inverters"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "Converters for Renewable Energy and Electric Vehicles",
+          "target": "category:Power Electronics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "WBG based High gain DC-DC Converters",
+          "target": "category:Power Electronics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "Design and Development of on board Chargers",
+          "target": "category:Power Electronics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "Smart Electric Transportation",
+          "target": "category:Power Electronics",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "Grid Ties Solar Inverters",
+          "target": "category:Power Electronics",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 7 in IIT Jammu Electrical Engineering Department:\n  ResearchArea: Converters for Renewable Energy and Electric Vehicles, WBG based High gain DC-DC Converters, Design and Development of on board Chargers, Smart Electric Transportation, Grid Ties Solar Inverters\n  ResearchCategory: Power Electronics\n  Relationships: BELONGS_TO_CATEGORY: 5\n\nSummary: working in areas like Converters for Renewable Energy and Electric Vehicles, WBG based High gain DC-DC Converters, Design and Development of on board Chargers.",
+      "summary": "working in areas like Converters for Renewable Energy and Electric Vehicles, WBG based High gain DC-DC Converters, Design and Development of on board Chargers.",
+      "size": 6
     },
     {
       "id": "community_8",
       "community_id": 8,
       "members": [
-        "category:Signal and Image Processing",
-        "Underwater Signal Processing",
-        "Image and Video Processing",
-        "Speech and Audio Signal Processing",
-        "Machine Learning",
-        "Medical Instrumentation"
-      ],
-      "members_by_type": {
-        "ResearchCategory": [
-          "category:Signal and Image Processing"
-        ],
-        "ResearchArea": [
-          "Underwater Signal Processing",
-          "Image and Video Processing",
-          "Speech and Audio Signal Processing",
-          "Machine Learning",
-          "Medical Instrumentation"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "Underwater Signal Processing",
-          "target": "category:Signal and Image Processing",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "Image and Video Processing",
-          "target": "category:Signal and Image Processing",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "Speech and Audio Signal Processing",
-          "target": "category:Signal and Image Processing",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "Machine Learning",
-          "target": "category:Signal and Image Processing",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "Medical Instrumentation",
-          "target": "category:Signal and Image Processing",
-          "type": "BELONGS_TO_CATEGORY"
-        }
-      ],
-      "text": "Community 8 in IIT Jammu EE Department:\n  ResearchArea: Underwater Signal Processing, Image and Video Processing, Speech and Audio Signal Processing, Machine Learning, Medical Instrumentation\n  ResearchCategory: Signal and Image Processing\n  Relationships: BELONGS_TO_CATEGORY: 5\n\nSummary: working in areas like Underwater Signal Processing, Image and Video Processing, Speech and Audio Signal Processing.",
-      "summary": "working in areas like Underwater Signal Processing, Image and Video Processing, Speech and Audio Signal Processing.",
-      "size": 6
-    },
-    {
-      "id": "community_9",
-      "community_id": 9,
-      "members": [
         "Chandan Yadav",
         "1) Semoconductor Devices (based on Si",
+        "Ga2O3",
         "2D materials) - Modeling",
         "Simulation\u00a0and Fabrication",
         "2) 3D Integration Technology",
@@ -1787,6 +1800,7 @@
         ],
         "ResearchArea": [
           "1) Semoconductor Devices (based on Si",
+          "Ga2O3",
           "2D materials) - Modeling",
           "Simulation\u00a0and Fabrication",
           "2) 3D Integration Technology",
@@ -1801,6 +1815,11 @@
         {
           "source": "Chandan Yadav",
           "target": "1) Semoconductor Devices (based on Si",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Chandan Yadav",
+          "target": "Ga2O3",
           "type": "RESEARCHES_IN"
         },
         {
@@ -1844,20 +1863,26 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 9 in IIT Jammu EE Department:\n  Faculty: Chandan Yadav\n  ResearchArea: 1) Semoconductor Devices (based on Si, 2D materials) - Modeling, Simulation\u00a0and Fabrication, 2) 3D Integration Technology, 3) Brain-Inspired Computing, 4) Crygenic Computing, 5) THz Electronics - Electrical Characterization, Device Design, Circuit\u00a0and System Design\n  Relationships: RESEARCHES_IN: 9\n\nSummary: This group includes 1 faculty member(s): Chandan Yadav. working in areas like 1) Semoconductor Devices (based on Si, 2D materials) - Modeling, Simulation\u00a0and Fabrication.",
-      "summary": "This group includes 1 faculty member(s): Chandan Yadav. working in areas like 1) Semoconductor Devices (based on Si, 2D materials) - Modeling, Simulation\u00a0and Fabrication.",
-      "size": 10
+      "text": "Community 8 in IIT Jammu Electrical Engineering Department:\n  Faculty: Chandan Yadav\n  ResearchArea: 1) Semoconductor Devices (based on Si, Ga2O3, 2D materials) - Modeling, Simulation\u00a0and Fabrication, 2) 3D Integration Technology, 3) Brain-Inspired Computing, 4) Crygenic Computing, 5) THz Electronics - Electrical Characterization, Device Design, Circuit\u00a0and System Design\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): Chandan Yadav. working in areas like 1) Semoconductor Devices (based on Si, Ga2O3, 2D materials) - Modeling.",
+      "summary": "This group includes 1 faculty member(s): Chandan Yadav. working in areas like 1) Semoconductor Devices (based on Si, Ga2O3, 2D materials) - Modeling.",
+      "size": 11
     },
     {
-      "id": "community_10",
-      "community_id": 10,
+      "id": "community_9",
+      "community_id": 9,
       "members": [
         "Ibhanchand Rath",
         "Nalin Kumar Sharma",
-        "Priyanka Mishra",
         "Priyatosh Jena",
         "Shikha Baghel",
-        "Soma S Dhavala",
+        "lab:Undergraduate and Postgraduate Labs",
+        "lab:Underwater Research Lab",
+        "lab:AADHRIT Lab",
+        "lab:Low Voltage Lab1",
+        "lab:Low Voltage Lab 2",
+        "lab:High Voltage Lab",
+        "lab:IC Reliabality, Security & Quality Laboratory",
+        "lab:Prototype Design and Development Lab",
         "Grid connected hybrid multivelvel converter topology design",
         "Flexible AC Transmission Systems (FACTs)",
         "High Voltage Direct Current (HVDC)",
@@ -1868,11 +1893,6 @@
         "2. Robotics and Autonomous Systems",
         "3. Intelligent transportation Systems",
         "4. Reinforcement Learning",
-        "Protection of microgrid integrating renewable energy sources (solar power",
-        "wind power",
-        "Neural active fault management control of power-electronic converter-based renewable energy sources",
-        "Time-domain relaying",
-        "Converter transformer protection",
         "Battery Charging System",
         "Bidirectional Converter",
         "Reconfigurable Power Converter",
@@ -1883,16 +1903,26 @@
         "Dialect/Language Identification",
         "Applications of signal processing",
         "Applications of Machine Learning and Deep Learning",
-        "IIT Jammu EE Department"
+        "IIT Jammu EE Department",
+        "lab:Underwater Research lab"
       ],
       "members_by_type": {
         "Faculty": [
           "Ibhanchand Rath",
           "Nalin Kumar Sharma",
-          "Priyanka Mishra",
           "Priyatosh Jena",
-          "Shikha Baghel",
-          "Soma S Dhavala"
+          "Shikha Baghel"
+        ],
+        "Lab": [
+          "lab:Undergraduate and Postgraduate Labs",
+          "lab:Underwater Research Lab",
+          "lab:AADHRIT Lab",
+          "lab:Low Voltage Lab1",
+          "lab:Low Voltage Lab 2",
+          "lab:High Voltage Lab",
+          "lab:IC Reliabality, Security & Quality Laboratory",
+          "lab:Prototype Design and Development Lab",
+          "lab:Underwater Research lab"
         ],
         "ResearchArea": [
           "Grid connected hybrid multivelvel converter topology design",
@@ -1905,11 +1935,6 @@
           "2. Robotics and Autonomous Systems",
           "3. Intelligent transportation Systems",
           "4. Reinforcement Learning",
-          "Protection of microgrid integrating renewable energy sources (solar power",
-          "wind power",
-          "Neural active fault management control of power-electronic converter-based renewable energy sources",
-          "Time-domain relaying",
-          "Converter transformer protection",
           "Battery Charging System",
           "Bidirectional Converter",
           "Reconfigurable Power Converter",
@@ -1987,36 +2012,6 @@
           "type": "MEMBER_OF"
         },
         {
-          "source": "Priyanka Mishra",
-          "target": "Protection of microgrid integrating renewable energy sources (solar power",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Priyanka Mishra",
-          "target": "wind power",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Priyanka Mishra",
-          "target": "Neural active fault management control of power-electronic converter-based renewable energy sources",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Priyanka Mishra",
-          "target": "Time-domain relaying",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Priyanka Mishra",
-          "target": "Converter transformer protection",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Priyanka Mishra",
-          "target": "IIT Jammu EE Department",
-          "type": "MEMBER_OF"
-        },
-        {
           "source": "Priyatosh Jena",
           "target": "Battery Charging System",
           "type": "RESEARCHES_IN"
@@ -2077,23 +2072,64 @@
           "type": "MEMBER_OF"
         },
         {
-          "source": "Soma S Dhavala",
+          "source": "lab:Undergraduate and Postgraduate Labs",
           "target": "IIT Jammu EE Department",
-          "type": "MEMBER_OF"
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "lab:Underwater Research Lab",
+          "target": "IIT Jammu EE Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "lab:AADHRIT Lab",
+          "target": "IIT Jammu EE Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "lab:Low Voltage Lab1",
+          "target": "IIT Jammu EE Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "lab:Low Voltage Lab 2",
+          "target": "IIT Jammu EE Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "lab:High Voltage Lab",
+          "target": "IIT Jammu EE Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "lab:IC Reliabality, Security & Quality Laboratory",
+          "target": "IIT Jammu EE Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "lab:Prototype Design and Development Lab",
+          "target": "IIT Jammu EE Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "lab:Underwater Research lab",
+          "target": "IIT Jammu EE Department",
+          "type": "FACILITY_OF"
         }
       ],
-      "text": "Community 10 in IIT Jammu EE Department:\n  Department: Department of Electrical Engineering\n  Faculty: Ibhanchand Rath, Nalin Kumar Sharma, Priyanka Mishra, Priyatosh Jena, Shikha Baghel, Soma S Dhavala\n  ResearchArea: Grid connected hybrid multivelvel converter topology design, Flexible AC Transmission Systems (FACTs), High Voltage Direct Current (HVDC), Grid integration of Battery Energy Storage Systems (BESS), Battery Management System (BMS), V2G and G2V EV charging applications, 1. Control Systems, 2. Robotics and Autonomous Systems, 3. Intelligent transportation Systems, 4. Reinforcement Learning, Protection of microgrid integrating renewable energy sources (solar power, wind power, Neural active fault management control of power-electronic converter-based renewable energy sources, Time-domain relaying, Converter transformer protection\n  Relationships: RESEARCHES_IN: 25, MEMBER_OF: 6\n\nSummary: This group includes 6 faculty member(s): Ibhanchand Rath, Nalin Kumar Sharma, Priyanka Mishra, Priyatosh Jena, Shikha Baghel. working in areas like Grid connected hybrid multivelvel converter topology design, Flexible AC Transmission Systems (FACTs), High Voltage Direct Current (HVDC).",
-      "summary": "This group includes 6 faculty member(s): Ibhanchand Rath, Nalin Kumar Sharma, Priyanka Mishra, Priyatosh Jena, Shikha Baghel. working in areas like Grid connected hybrid multivelvel converter topology design, Flexible AC Transmission Systems (FACTs), High Voltage Direct Current (HVDC).",
-      "size": 32
+      "text": "Community 9 in IIT Jammu Electrical Engineering Department:\n  Department: Department of Electrical Engineering\n  Faculty: Ibhanchand Rath, Nalin Kumar Sharma, Priyatosh Jena, Shikha Baghel\n  Lab: Undergraduate and Postgraduate Labs, Underwater Research Lab, AADHRIT Lab, Low Voltage Lab1, Low Voltage Lab 2, High Voltage Lab, IC Reliabality, Security & Quality Laboratory, Prototype Design and Development Lab, Underwater Research lab\n  ResearchArea: Grid connected hybrid multivelvel converter topology design, Flexible AC Transmission Systems (FACTs), High Voltage Direct Current (HVDC), Grid integration of Battery Energy Storage Systems (BESS), Battery Management System (BMS), V2G and G2V EV charging applications, 1. Control Systems, 2. Robotics and Autonomous Systems, 3. Intelligent transportation Systems, 4. Reinforcement Learning, Battery Charging System, Bidirectional Converter, Reconfigurable Power Converter, and Soft-Switched Converter, Speech and Audio Processing\n  Relationships: RESEARCHES_IN: 20, MEMBER_OF: 4, FACILITY_OF: 9\n\nSummary: This group includes 4 faculty member(s): Ibhanchand Rath, Nalin Kumar Sharma, Priyatosh Jena, Shikha Baghel. working in areas like Grid connected hybrid multivelvel converter topology design, Flexible AC Transmission Systems (FACTs), High Voltage Direct Current (HVDC).",
+      "summary": "This group includes 4 faculty member(s): Ibhanchand Rath, Nalin Kumar Sharma, Priyatosh Jena, Shikha Baghel. working in areas like Grid connected hybrid multivelvel converter topology design, Flexible AC Transmission Systems (FACTs), High Voltage Direct Current (HVDC).",
+      "size": 34
     },
     {
-      "id": "community_11",
-      "community_id": 11,
+      "id": "community_10",
+      "community_id": 10,
       "members": [
         "Kankat Ghosh",
         "Molecular Beam Epitaxy growth",
         "III-Nitride based Photodetector and LED",
         "Rare earth Oxides",
+        "HEMT",
         "MOSCAP",
         "Spectroscopy",
         "Aamir Ahmad Bhat",
@@ -2111,6 +2147,7 @@
           "Molecular Beam Epitaxy growth",
           "III-Nitride based Photodetector and LED",
           "Rare earth Oxides",
+          "HEMT",
           "MOSCAP",
           "Spectroscopy",
           "DEEP LEARNING LEVERAGED PARAMETER EXTRACTION OF OPTOELECTRONIC DEVICES",
@@ -2137,6 +2174,11 @@
         {
           "source": "Kankat Ghosh",
           "target": "Rare earth Oxides",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Kankat Ghosh",
+          "target": "HEMT",
           "type": "RESEARCHES_IN"
         },
         {
@@ -2195,13 +2237,13 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 11 in IIT Jammu EE Department:\n  Faculty: Kankat Ghosh\n  PhDStudent: Aamir Ahmad Bhat, Balkrishna Choubey, Chandra Prakash Singh\n  ResearchArea: Molecular Beam Epitaxy growth, III-Nitride based Photodetector and LED, Rare earth Oxides, MOSCAP, Spectroscopy, DEEP LEARNING LEVERAGED PARAMETER EXTRACTION OF OPTOELECTRONIC DEVICES, Deep UV Photodetectors, III-Nitride based optoelectronics device\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): Kankat Ghosh. 3 PhD student(s). working in areas like Molecular Beam Epitaxy growth, III-Nitride based Photodetector and LED, Rare earth Oxides.",
+      "text": "Community 10 in IIT Jammu Electrical Engineering Department:\n  Faculty: Kankat Ghosh\n  PhDStudent: Aamir Ahmad Bhat, Balkrishna Choubey, Chandra Prakash Singh\n  ResearchArea: Molecular Beam Epitaxy growth, III-Nitride based Photodetector and LED, Rare earth Oxides, HEMT, MOSCAP, Spectroscopy, DEEP LEARNING LEVERAGED PARAMETER EXTRACTION OF OPTOELECTRONIC DEVICES, Deep UV Photodetectors, III-Nitride based optoelectronics device\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): Kankat Ghosh. 3 PhD student(s). working in areas like Molecular Beam Epitaxy growth, III-Nitride based Photodetector and LED, Rare earth Oxides.",
       "summary": "This group includes 1 faculty member(s): Kankat Ghosh. 3 PhD student(s). working in areas like Molecular Beam Epitaxy growth, III-Nitride based Photodetector and LED, Rare earth Oxides.",
-      "size": 12
+      "size": 13
     },
     {
-      "id": "community_12",
-      "community_id": 12,
+      "id": "community_11",
+      "community_id": 11,
       "members": [
         "Karan Nathwani",
         "Adaptive Signal Processing",
@@ -2353,13 +2395,13 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 12 in IIT Jammu EE Department:\n  ExternalPerson: Vinayak Abrol\n  Faculty: Karan Nathwani\n  PhDStudent: Murtiza Ali, Pawan Kumar, Rantu Buragohain, Ritujoy Biswas, Tarun Bali, Zareena Amin\n  ResearchArea: Adaptive Signal Processing, Speech Processing etc, Underwater and Aerial Acoustics, Compressing Sensing, Array Signal Processing, Algorithms for Fast Computation of Principal Components for Self Noise Cancellation in Underwater Acoustics, EEG Signal Classification, Brain-Computer Interface, Machine Learning, Deep Learning, Speech Intelligibility Improvement through Optimized Voice Transformation in Transfer Learning Framework, Acoustic Scene Classification, DeepFake Detection\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 7, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): Karan Nathwani. 6 PhD student(s). working in areas like Adaptive Signal Processing, Speech Processing etc, Underwater and Aerial Acoustics, Compressing Sensing, Array Signal Processing.",
+      "text": "Community 11 in IIT Jammu Electrical Engineering Department:\n  ExternalPerson: Vinayak Abrol\n  Faculty: Karan Nathwani\n  PhDStudent: Murtiza Ali, Pawan Kumar, Rantu Buragohain, Ritujoy Biswas, Tarun Bali, Zareena Amin\n  ResearchArea: Adaptive Signal Processing, Speech Processing etc, Underwater and Aerial Acoustics, Compressing Sensing, Array Signal Processing, Algorithms for Fast Computation of Principal Components for Self Noise Cancellation in Underwater Acoustics, EEG Signal Classification, Brain-Computer Interface, Machine Learning, Deep Learning, Speech Intelligibility Improvement through Optimized Voice Transformation in Transfer Learning Framework, Acoustic Scene Classification, DeepFake Detection\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 7, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): Karan Nathwani. 6 PhD student(s). working in areas like Adaptive Signal Processing, Speech Processing etc, Underwater and Aerial Acoustics, Compressing Sensing, Array Signal Processing.",
       "summary": "This group includes 1 faculty member(s): Karan Nathwani. 6 PhD student(s). working in areas like Adaptive Signal Processing, Speech Processing etc, Underwater and Aerial Acoustics, Compressing Sensing, Array Signal Processing.",
       "size": 16
     },
     {
-      "id": "community_13",
-      "community_id": 13,
+      "id": "community_12",
+      "community_id": 12,
       "members": [
         "Kushmanda Saurav",
         "COURSES TAUGHT AT IIT JAMMU",
@@ -2378,7 +2420,9 @@
         "Javid Ahmad Ganie",
         "Design of High gain Linearly and Circularly Polarized antennas for microwave and millimeter wave communication",
         "Javid Ahmad Rather",
-        "Microwave Antenna for Communication/Sensing Applications"
+        "Microwave Antenna for Communication/Sensing Applications",
+        "UMMER RASHID DAR",
+        "Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects"
       ],
       "members_by_type": {
         "Faculty": [
@@ -2397,12 +2441,14 @@
           "**EEP003P1M R.F. System Lab",
           "Reconfigurable Intelligent Surfaces",
           "Design of High gain Linearly and Circularly Polarized antennas for microwave and millimeter wave communication",
-          "Microwave Antenna for Communication/Sensing Applications"
+          "Microwave Antenna for Communication/Sensing Applications",
+          "Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects"
         ],
         "PhDStudent": [
           "Aadil Ahmad Khan",
           "Javid Ahmad Ganie",
-          "Javid Ahmad Rather"
+          "Javid Ahmad Rather",
+          "UMMER RASHID DAR"
         ],
         "ExternalPerson": [
           "Anirban Sarkar"
@@ -2475,6 +2521,11 @@
           "type": "RESEARCHES_IN"
         },
         {
+          "source": "Kushmanda Saurav",
+          "target": "Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects",
+          "type": "RESEARCHES_IN"
+        },
+        {
           "source": "Aadil Ahmad Khan",
           "target": "Kushmanda Saurav",
           "type": "SUPERVISED_BY"
@@ -2508,15 +2559,25 @@
           "source": "Javid Ahmad Rather",
           "target": "Microwave Antenna for Communication/Sensing Applications",
           "type": "STUDIES"
+        },
+        {
+          "source": "UMMER RASHID DAR",
+          "target": "Kushmanda Saurav",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "UMMER RASHID DAR",
+          "target": "Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects",
+          "type": "STUDIES"
         }
       ],
-      "text": "Community 13 in IIT Jammu EE Department:\n  ExternalPerson: Anirban Sarkar\n  Faculty: Kushmanda Saurav\n  PhDStudent: Aadil Ahmad Khan, Javid Ahmad Ganie, Javid Ahmad Rather\n  ResearchArea: COURSES TAUGHT AT IIT JAMMU, **ELL 212 Engineering Electromagnetics, **ELP 212 Engineering Electromagnetics Lab, **ELL 202 Circuit Theory, **ELL 304 Analog Electronics, **EFL005U1M Basic Electronics Engineering, **EFP005U1M Basic Electronics Engineering Lab, **EEL006P1M Antenna and Wave Propagation, **EEL003P1M R.F. System, **EEP003P1M R.F. System Lab, Reconfigurable Intelligent Surfaces, Design of High gain Linearly and Circularly Polarized antennas for microwave and millimeter wave communication, Microwave Antenna for Communication/Sensing Applications\n  Relationships: RESEARCHES_IN: 13, SUPERVISED_BY: 4, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): Kushmanda Saurav. 3 PhD student(s). working in areas like COURSES TAUGHT AT IIT JAMMU, **ELL 212 Engineering Electromagnetics, **ELP 212 Engineering Electromagnetics Lab.",
-      "summary": "This group includes 1 faculty member(s): Kushmanda Saurav. 3 PhD student(s). working in areas like COURSES TAUGHT AT IIT JAMMU, **ELL 212 Engineering Electromagnetics, **ELP 212 Engineering Electromagnetics Lab.",
-      "size": 18
+      "text": "Community 12 in IIT Jammu Electrical Engineering Department:\n  ExternalPerson: Anirban Sarkar\n  Faculty: Kushmanda Saurav\n  PhDStudent: Aadil Ahmad Khan, Javid Ahmad Ganie, Javid Ahmad Rather, UMMER RASHID DAR\n  ResearchArea: COURSES TAUGHT AT IIT JAMMU, **ELL 212 Engineering Electromagnetics, **ELP 212 Engineering Electromagnetics Lab, **ELL 202 Circuit Theory, **ELL 304 Analog Electronics, **EFL005U1M Basic Electronics Engineering, **EFP005U1M Basic Electronics Engineering Lab, **EEL006P1M Antenna and Wave Propagation, **EEL003P1M R.F. System, **EEP003P1M R.F. System Lab, Reconfigurable Intelligent Surfaces, Design of High gain Linearly and Circularly Polarized antennas for microwave and millimeter wave communication, Microwave Antenna for Communication/Sensing Applications, Studies on the Design of Microwave Structures for achieving Low Radar Cross Section (RCS) of the Dielectric and Conducting Objects\n  Relationships: RESEARCHES_IN: 14, SUPERVISED_BY: 5, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): Kushmanda Saurav. 4 PhD student(s). working in areas like COURSES TAUGHT AT IIT JAMMU, **ELL 212 Engineering Electromagnetics, **ELP 212 Engineering Electromagnetics Lab.",
+      "summary": "This group includes 1 faculty member(s): Kushmanda Saurav. 4 PhD student(s). working in areas like COURSES TAUGHT AT IIT JAMMU, **ELL 212 Engineering Electromagnetics, **ELP 212 Engineering Electromagnetics Lab.",
+      "size": 20
     },
     {
-      "id": "community_14",
-      "community_id": 14,
+      "id": "community_13",
+      "community_id": 13,
       "members": [
         "Padmini Singh",
         "Robotics Control",
@@ -2571,9 +2632,70 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 14 in IIT Jammu EE Department:\n  Faculty: Padmini Singh\n  PhDStudent: Rajesh Nallagatal\n  ResearchArea: Robotics Control, Network Control, Power Control, ROBOTICS CONTROL\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): Padmini Singh. 1 PhD student(s). working in areas like Robotics Control, Network Control, Power Control.",
+      "text": "Community 13 in IIT Jammu Electrical Engineering Department:\n  Faculty: Padmini Singh\n  PhDStudent: Rajesh Nallagatal\n  ResearchArea: Robotics Control, Network Control, Power Control, ROBOTICS CONTROL\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): Padmini Singh. 1 PhD student(s). working in areas like Robotics Control, Network Control, Power Control.",
       "summary": "This group includes 1 faculty member(s): Padmini Singh. 1 PhD student(s). working in areas like Robotics Control, Network Control, Power Control.",
       "size": 6
+    },
+    {
+      "id": "community_14",
+      "community_id": 14,
+      "members": [
+        "Priyanka Mishra",
+        "Protection of microgrid integrating renewable energy sources (solar power",
+        "wind power",
+        "etc)",
+        "Neural active fault management control of power-electronic converter-based renewable energy sources",
+        "Time-domain relaying",
+        "Converter transformer protection"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "Priyanka Mishra"
+        ],
+        "ResearchArea": [
+          "Protection of microgrid integrating renewable energy sources (solar power",
+          "wind power",
+          "etc)",
+          "Neural active fault management control of power-electronic converter-based renewable energy sources",
+          "Time-domain relaying",
+          "Converter transformer protection"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "Priyanka Mishra",
+          "target": "Protection of microgrid integrating renewable energy sources (solar power",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Priyanka Mishra",
+          "target": "wind power",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Priyanka Mishra",
+          "target": "etc)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Priyanka Mishra",
+          "target": "Neural active fault management control of power-electronic converter-based renewable energy sources",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Priyanka Mishra",
+          "target": "Time-domain relaying",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Priyanka Mishra",
+          "target": "Converter transformer protection",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 14 in IIT Jammu Electrical Engineering Department:\n  Faculty: Priyanka Mishra\n  ResearchArea: Protection of microgrid integrating renewable energy sources (solar power, wind power, etc), Neural active fault management control of power-electronic converter-based renewable energy sources, Time-domain relaying, Converter transformer protection\n  Relationships: RESEARCHES_IN: 6\n\nSummary: This group includes 1 faculty member(s): Priyanka Mishra. working in areas like Protection of microgrid integrating renewable energy sources (solar power, wind power, etc).",
+      "summary": "This group includes 1 faculty member(s): Priyanka Mishra. working in areas like Protection of microgrid integrating renewable energy sources (solar power, wind power, etc).",
+      "size": 7
     },
     {
       "id": "community_15",
@@ -2583,6 +2705,8 @@
         "Cooperative communication",
         "Resource allocation",
         "Physical layer security",
+        "OFDMA",
+        "NOMA",
         "TeraHertz Communication",
         "Wireless communication",
         "Pradosh Kumar  hota",
@@ -2597,6 +2721,8 @@
           "Cooperative communication",
           "Resource allocation",
           "Physical layer security",
+          "OFDMA",
+          "NOMA",
           "TeraHertz Communication",
           "Wireless communication",
           "Physical layer security in Noma"
@@ -2620,6 +2746,16 @@
         {
           "source": "Ravikant Saini",
           "target": "Physical layer security",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Ravikant Saini",
+          "target": "OFDMA",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Ravikant Saini",
+          "target": "NOMA",
           "type": "RESEARCHES_IN"
         },
         {
@@ -2658,67 +2794,13 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 15 in IIT Jammu EE Department:\n  Faculty: Ravikant Saini\n  PhDStudent: Pradosh Kumar  hota, Sapna Thakur\n  ResearchArea: Cooperative communication, Resource allocation, Physical layer security, TeraHertz Communication, Wireless communication, Physical layer security in Noma\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): Ravikant Saini. 2 PhD student(s). working in areas like Cooperative communication, Resource allocation, Physical layer security.",
+      "text": "Community 15 in IIT Jammu Electrical Engineering Department:\n  Faculty: Ravikant Saini\n  PhDStudent: Pradosh Kumar  hota, Sapna Thakur\n  ResearchArea: Cooperative communication, Resource allocation, Physical layer security, OFDMA, NOMA, TeraHertz Communication, Wireless communication, Physical layer security in Noma\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): Ravikant Saini. 2 PhD student(s). working in areas like Cooperative communication, Resource allocation, Physical layer security.",
       "summary": "This group includes 1 faculty member(s): Ravikant Saini. 2 PhD student(s). working in areas like Cooperative communication, Resource allocation, Physical layer security.",
-      "size": 9
+      "size": 11
     },
     {
       "id": "community_16",
       "community_id": 16,
-      "members": [
-        "category:Power Electronics",
-        "Converters for Renewable Energy and Electric Vehicles",
-        "WBG based High gain DC-DC Converters",
-        "Design and Development of on board Chargers",
-        "Smart Electric Transportation",
-        "Grid Ties Solar Inverters"
-      ],
-      "members_by_type": {
-        "ResearchCategory": [
-          "category:Power Electronics"
-        ],
-        "ResearchArea": [
-          "Converters for Renewable Energy and Electric Vehicles",
-          "WBG based High gain DC-DC Converters",
-          "Design and Development of on board Chargers",
-          "Smart Electric Transportation",
-          "Grid Ties Solar Inverters"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "Converters for Renewable Energy and Electric Vehicles",
-          "target": "category:Power Electronics",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "WBG based High gain DC-DC Converters",
-          "target": "category:Power Electronics",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "Design and Development of on board Chargers",
-          "target": "category:Power Electronics",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "Smart Electric Transportation",
-          "target": "category:Power Electronics",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "Grid Ties Solar Inverters",
-          "target": "category:Power Electronics",
-          "type": "BELONGS_TO_CATEGORY"
-        }
-      ],
-      "text": "Community 16 in IIT Jammu EE Department:\n  ResearchArea: Converters for Renewable Energy and Electric Vehicles, WBG based High gain DC-DC Converters, Design and Development of on board Chargers, Smart Electric Transportation, Grid Ties Solar Inverters\n  ResearchCategory: Power Electronics\n  Relationships: BELONGS_TO_CATEGORY: 5\n\nSummary: working in areas like Converters for Renewable Energy and Electric Vehicles, WBG based High gain DC-DC Converters, Design and Development of on board Chargers.",
-      "summary": "working in areas like Converters for Renewable Energy and Electric Vehicles, WBG based High gain DC-DC Converters, Design and Development of on board Chargers.",
-      "size": 6
-    },
-    {
-      "id": "community_17",
-      "community_id": 17,
       "members": [
         "Satyadev Ahlawat",
         "VLSI Testing and Design-for-Testability (DfT)",
@@ -2883,9 +2965,98 @@
           "type": "BELONGS_TO_CATEGORY"
         }
       ],
-      "text": "Community 17 in IIT Jammu EE Department:\n  ExternalPerson: Virendra Singh\n  Faculty: Satyadev Ahlawat\n  PhDStudent: Aditi gupta, Anjum Riaz, Gaurav Kumar, Pardeep Kumar\n  ResearchArea: VLSI Testing and Design-for-Testability (DfT), Trusted System Design, Hardware Security, High Performance Processor Design, AI and Machine Learning, Hardware security and secure system design, VLSI Testing and Hardware Security, VLSI testing and secure scan design, Compound Semiconductor based emitter and detector, Low Power High Performance circuit designs, Soft error tolerant circuits, Reliability Modeling of Semiconductor Devices\n  ResearchCategory: Mircroelectronics & VLSI Design\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 5, STUDIES: 4, BELONGS_TO_CATEGORY: 5\n\nSummary: This group includes 1 faculty member(s): Satyadev Ahlawat. 4 PhD student(s). working in areas like VLSI Testing and Design-for-Testability (DfT), Trusted System Design, Hardware Security.",
+      "text": "Community 16 in IIT Jammu Electrical Engineering Department:\n  ExternalPerson: Virendra Singh\n  Faculty: Satyadev Ahlawat\n  PhDStudent: Aditi gupta, Anjum Riaz, Gaurav Kumar, Pardeep Kumar\n  ResearchArea: VLSI Testing and Design-for-Testability (DfT), Trusted System Design, Hardware Security, High Performance Processor Design, AI and Machine Learning, Hardware security and secure system design, VLSI Testing and Hardware Security, VLSI testing and secure scan design, Compound Semiconductor based emitter and detector, Low Power High Performance circuit designs, Soft error tolerant circuits, Reliability Modeling of Semiconductor Devices\n  ResearchCategory: Mircroelectronics & VLSI Design\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 5, STUDIES: 4, BELONGS_TO_CATEGORY: 5\n\nSummary: This group includes 1 faculty member(s): Satyadev Ahlawat. 4 PhD student(s). working in areas like VLSI Testing and Design-for-Testability (DfT), Trusted System Design, Hardware Security.",
       "summary": "This group includes 1 faculty member(s): Satyadev Ahlawat. 4 PhD student(s). working in areas like VLSI Testing and Design-for-Testability (DfT), Trusted System Design, Hardware Security.",
       "size": 19
+    },
+    {
+      "id": "community_17",
+      "community_id": 17,
+      "members": [
+        "Soma S Dhavala",
+        "1. Frontier Models and Large Language Models (LLMs)",
+        "2. Generative AI and Multimodal AI",
+        "3. Reliable and Trustworthy AI",
+        "4. AI Systems and ML Infrastructure",
+        "5. Bayesian Statistics and Probabilistic Modeling",
+        "6. Uncertainty Quantification in Machine Learning",
+        "7. Approximate Bayesian Inference and MCMC",
+        "8. Deep Learning and Representation Learning",
+        "9. AI for Agriculture",
+        "Healthcare"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "Soma S Dhavala"
+        ],
+        "ResearchArea": [
+          "1. Frontier Models and Large Language Models (LLMs)",
+          "2. Generative AI and Multimodal AI",
+          "3. Reliable and Trustworthy AI",
+          "4. AI Systems and ML Infrastructure",
+          "5. Bayesian Statistics and Probabilistic Modeling",
+          "6. Uncertainty Quantification in Machine Learning",
+          "7. Approximate Bayesian Inference and MCMC",
+          "8. Deep Learning and Representation Learning",
+          "9. AI for Agriculture",
+          "Healthcare"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "Soma S Dhavala",
+          "target": "1. Frontier Models and Large Language Models (LLMs)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Soma S Dhavala",
+          "target": "2. Generative AI and Multimodal AI",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Soma S Dhavala",
+          "target": "3. Reliable and Trustworthy AI",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Soma S Dhavala",
+          "target": "4. AI Systems and ML Infrastructure",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Soma S Dhavala",
+          "target": "5. Bayesian Statistics and Probabilistic Modeling",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Soma S Dhavala",
+          "target": "6. Uncertainty Quantification in Machine Learning",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Soma S Dhavala",
+          "target": "7. Approximate Bayesian Inference and MCMC",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Soma S Dhavala",
+          "target": "8. Deep Learning and Representation Learning",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Soma S Dhavala",
+          "target": "9. AI for Agriculture",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "Soma S Dhavala",
+          "target": "Healthcare",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 17 in IIT Jammu Electrical Engineering Department:\n  Faculty: Soma S Dhavala\n  ResearchArea: 1. Frontier Models and Large Language Models (LLMs), 2. Generative AI and Multimodal AI, 3. Reliable and Trustworthy AI, 4. AI Systems and ML Infrastructure, 5. Bayesian Statistics and Probabilistic Modeling, 6. Uncertainty Quantification in Machine Learning, 7. Approximate Bayesian Inference and MCMC, 8. Deep Learning and Representation Learning, 9. AI for Agriculture, Healthcare\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): Soma S Dhavala. working in areas like 1. Frontier Models and Large Language Models (LLMs), 2. Generative AI and Multimodal AI, 3. Reliable and Trustworthy AI.",
+      "summary": "This group includes 1 faculty member(s): Soma S Dhavala. working in areas like 1. Frontier Models and Large Language Models (LLMs), 2. Generative AI and Multimodal AI, 3. Reliable and Trustworthy AI.",
+      "size": 11
     },
     {
       "id": "community_18",
@@ -2905,12 +3076,15 @@
         "Energy harvesting in IOT",
         "Bharti Katiyar",
         "Energy Harvesting, Intelligent Reflecting Surfaces",
+        "Burhan wafai",
+        "Physical layer security in wireless communication",
         "Priyanka Bogia",
         "Autonomous Electric Vehicle",
         "Shahid  Gulzar Padder",
         "ML and IoT for Building management system (BMS)",
         "Shantanu Saxena",
         "Iot based Autonomous Electric Vehicles and Charging Infrastructure",
+        "Shashi Bhushan Kotwal",
         "Servotech Private Limited"
       ],
       "members_by_type": {
@@ -2929,6 +3103,7 @@
           "Digital design",
           "Energy harvesting in IOT",
           "Energy Harvesting, Intelligent Reflecting Surfaces",
+          "Physical layer security in wireless communication",
           "Autonomous Electric Vehicle",
           "ML and IoT for Building management system (BMS)",
           "Iot based Autonomous Electric Vehicles and Charging Infrastructure"
@@ -2936,9 +3111,11 @@
         "PhDStudent": [
           "Atul Banotra",
           "Bharti Katiyar",
+          "Burhan wafai",
           "Priyanka Bogia",
           "Shahid  Gulzar Padder",
-          "Shantanu Saxena"
+          "Shantanu Saxena",
+          "Shashi Bhushan Kotwal"
         ],
         "Startup": [
           "Servotech Private Limited"
@@ -3021,6 +3198,11 @@
           "type": "RESEARCHES_IN"
         },
         {
+          "source": "Sudhakar Modem",
+          "target": "Physical layer security in wireless communication",
+          "type": "RESEARCHES_IN"
+        },
+        {
           "source": "Atul Banotra",
           "target": "Sudhakar Modem",
           "type": "SUPERVISED_BY"
@@ -3038,6 +3220,11 @@
         {
           "source": "Bharti Katiyar",
           "target": "Energy Harvesting, Intelligent Reflecting Surfaces",
+          "type": "STUDIES"
+        },
+        {
+          "source": "Burhan wafai",
+          "target": "Physical layer security in wireless communication",
           "type": "STUDIES"
         },
         {
@@ -3069,11 +3256,21 @@
           "source": "Shantanu Saxena",
           "target": "Iot based Autonomous Electric Vehicles and Charging Infrastructure",
           "type": "STUDIES"
+        },
+        {
+          "source": "Shashi Bhushan Kotwal",
+          "target": "Sudhakar Modem",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Shashi Bhushan Kotwal",
+          "target": "Physical layer security in wireless communication",
+          "type": "STUDIES"
         }
       ],
-      "text": "Community 18 in IIT Jammu EE Department:\n  Faculty: Sudhakar Modem\n  PhDStudent: Atul Banotra, Bharti Katiyar, Priyanka Bogia, Shahid  Gulzar Padder, Shantanu Saxena\n  ResearchArea: Two-way relaying, RF energy harvesting networks, Cognitive radio networks, image processing, Digital communication, Signal theory, Estimation and Detection, Information theory, Digital design, Energy harvesting in IOT, Energy Harvesting, Intelligent Reflecting Surfaces, Autonomous Electric Vehicle, ML and IoT for Building management system (BMS), Iot based Autonomous Electric Vehicles and Charging Infrastructure\n  Startup: Servotech Private Limited\n  Relationships: RESEARCHES_IN: 14, MENTORED_STARTUP: 1, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): Sudhakar Modem. 5 PhD student(s). working in areas like Two-way relaying, RF energy harvesting networks, Cognitive radio networks.",
-      "summary": "This group includes 1 faculty member(s): Sudhakar Modem. 5 PhD student(s). working in areas like Two-way relaying, RF energy harvesting networks, Cognitive radio networks.",
-      "size": 21
+      "text": "Community 18 in IIT Jammu Electrical Engineering Department:\n  Faculty: Sudhakar Modem\n  PhDStudent: Atul Banotra, Bharti Katiyar, Burhan wafai, Priyanka Bogia, Shahid  Gulzar Padder, Shantanu Saxena, Shashi Bhushan Kotwal\n  ResearchArea: Two-way relaying, RF energy harvesting networks, Cognitive radio networks, image processing, Digital communication, Signal theory, Estimation and Detection, Information theory, Digital design, Energy harvesting in IOT, Energy Harvesting, Intelligent Reflecting Surfaces, Physical layer security in wireless communication, Autonomous Electric Vehicle, ML and IoT for Building management system (BMS), Iot based Autonomous Electric Vehicles and Charging Infrastructure\n  Startup: Servotech Private Limited\n  Relationships: RESEARCHES_IN: 15, MENTORED_STARTUP: 1, SUPERVISED_BY: 6, STUDIES: 7\n\nSummary: This group includes 1 faculty member(s): Sudhakar Modem. 7 PhD student(s). working in areas like Two-way relaying, RF energy harvesting networks, Cognitive radio networks.",
+      "summary": "This group includes 1 faculty member(s): Sudhakar Modem. 7 PhD student(s). working in areas like Two-way relaying, RF energy harvesting networks, Cognitive radio networks.",
+      "size": 24
     },
     {
       "id": "community_19",
@@ -3104,7 +3301,7 @@
           "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 19 in IIT Jammu EE Department:\n  FundingAgency: Science and Engineering Research Board (SERB), Government of India\n  Project: project:Design and Investigation of Reliability Aware Security Circu, project:Electromagnetic Side-channel Attack Analysis on FPGA based S\n  Relationships: FUNDED_BY: 2\n\nSummary: A cluster of related entities.",
+      "text": "Community 19 in IIT Jammu Electrical Engineering Department:\n  FundingAgency: Science and Engineering Research Board (SERB), Government of India\n  Project: project:Design and Investigation of Reliability Aware Security Circu, project:Electromagnetic Side-channel Attack Analysis on FPGA based S\n  Relationships: FUNDED_BY: 2\n\nSummary: A cluster of related entities.",
       "summary": "A cluster of related entities.",
       "size": 3
     },
@@ -3130,7 +3327,7 @@
           "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 20 in IIT Jammu EE Department:\n  FundingAgency: Prime Minister\u2019s Research Fellows (PMRF) Scheme, Government of India\n  Project: project:Impact of Temporal Degradations on Radiation-Hardened Securi\n  Relationships: FUNDED_BY: 1\n\nSummary: A cluster of related entities.",
+      "text": "Community 20 in IIT Jammu Electrical Engineering Department:\n  FundingAgency: Prime Minister\u2019s Research Fellows (PMRF) Scheme, Government of India\n  Project: project:Impact of Temporal Degradations on Radiation-Hardened Securi\n  Relationships: FUNDED_BY: 1\n\nSummary: A cluster of related entities.",
       "summary": "A cluster of related entities.",
       "size": 2
     },
@@ -3156,7 +3353,7 @@
           "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 21 in IIT Jammu EE Department:\n  FundingAgency: Seed Grant IIT Jammu\n  Project: project:Memory Forensics, Secure and Reliable Memory Designs\n  Relationships: FUNDED_BY: 1\n\nSummary: A cluster of related entities.",
+      "text": "Community 21 in IIT Jammu Electrical Engineering Department:\n  FundingAgency: Seed Grant IIT Jammu\n  Project: project:Memory Forensics, Secure and Reliable Memory Designs\n  Relationships: FUNDED_BY: 1\n\nSummary: A cluster of related entities.",
       "summary": "A cluster of related entities.",
       "size": 2
     },
@@ -3182,7 +3379,7 @@
           "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 22 in IIT Jammu EE Department:\n  FundingAgency: FIST Scheme of Department of Science and Technology, Government of India\n  Project: project:Interdisciplinary Center for Secure Cyber-Physical Systems (\n  Relationships: FUNDED_BY: 1\n\nSummary: A cluster of related entities.",
+      "text": "Community 22 in IIT Jammu Electrical Engineering Department:\n  FundingAgency: FIST Scheme of Department of Science and Technology, Government of India\n  Project: project:Interdisciplinary Center for Secure Cyber-Physical Systems (\n  Relationships: FUNDED_BY: 1\n\nSummary: A cluster of related entities.",
       "summary": "A cluster of related entities.",
       "size": 2
     },
@@ -3208,7 +3405,7 @@
           "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 23 in IIT Jammu EE Department:\n  FundingAgency: Ministry of Electronics and Information Technology, Government of India\n  Project: project:Implantable Pacemaker Chip (iPACE-CHIP)\n  Relationships: FUNDED_BY: 1\n\nSummary: A cluster of related entities.",
+      "text": "Community 23 in IIT Jammu Electrical Engineering Department:\n  FundingAgency: Ministry of Electronics and Information Technology, Government of India\n  Project: project:Implantable Pacemaker Chip (iPACE-CHIP)\n  Relationships: FUNDED_BY: 1\n\nSummary: A cluster of related entities.",
       "summary": "A cluster of related entities.",
       "size": 2
     },
@@ -3219,7 +3416,6 @@
         "Badri Narayan Subudhi",
         "Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home)",
         "patent:A System and a Method for Underwater Image Enhancemen",
-        "Meghna",
         "A. Chauhan",
         "D. Goel",
         "V.jakhetiya",
@@ -3245,7 +3441,8 @@
         "Medical Image Analysis using Deep Learning",
         "Himanshu Singh",
         "Action Recognition and Localization using Deep Learning",
-        "Underwater Surveillance, Graph Learning, Deep Learning",
+        "Mahima Gandotra",
+        "Advancing Grid-Connected Renewable Energy Systems through AI Integration",
         "Mehvish Nissar",
         "Underwater Surveillance",
         "Sarif Saleem",
@@ -3260,7 +3457,7 @@
           "PPG based heart rate detection using superlet transform",
           "Medical Image Analysis using Deep Learning",
           "Action Recognition and Localization using Deep Learning",
-          "Underwater Surveillance, Graph Learning, Deep Learning",
+          "Advancing Grid-Connected Renewable Energy Systems through AI Integration",
           "Underwater Surveillance",
           "Deep-sea video surveillance"
         ],
@@ -3273,7 +3470,6 @@
           "patent:A System and Method for Arc-Flash Detection using Local Chan"
         ],
         "ExternalPerson": [
-          "Meghna",
           "A. Chauhan",
           "D. Goel",
           "V.jakhetiya",
@@ -3293,6 +3489,7 @@
           "Alisha Gupta",
           "Gokul Singh Chauhan",
           "Himanshu Singh",
+          "Mahima Gandotra",
           "Mehvish Nissar",
           "Sarif Saleem"
         ]
@@ -3350,7 +3547,7 @@
         },
         {
           "source": "Badri Narayan Subudhi",
-          "target": "Underwater Surveillance, Graph Learning, Deep Learning",
+          "target": "Advancing Grid-Connected Renewable Energy Systems through AI Integration",
           "type": "RESEARCHES_IN"
         },
         {
@@ -3362,26 +3559,6 @@
           "source": "Badri Narayan Subudhi",
           "target": "Deep-sea video surveillance",
           "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "Meghna",
-          "target": "patent:A System and a Method for Underwater Image Enhancemen",
-          "type": "INVENTED"
-        },
-        {
-          "source": "Meghna",
-          "target": "patent:Image Enhancement and Object Detection System for Degraded U",
-          "type": "INVENTED"
-        },
-        {
-          "source": "Meghna",
-          "target": "Badri Narayan Subudhi",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "Meghna",
-          "target": "Underwater Surveillance, Graph Learning, Deep Learning",
-          "type": "STUDIES"
         },
         {
           "source": "A. Chauhan",
@@ -3544,13 +3721,33 @@
           "type": "STUDIES"
         },
         {
+          "source": "Mahima Gandotra",
+          "target": "Badri Narayan Subudhi",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Mahima Gandotra",
+          "target": "Advancing Grid-Connected Renewable Energy Systems through AI Integration",
+          "type": "STUDIES"
+        },
+        {
           "source": "Mehvish Nissar",
+          "target": "Badri Narayan Subudhi",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "Mehvish Nissar",
+          "target": "Underwater Surveillance",
+          "type": "STUDIES"
+        },
+        {
+          "source": "Sarif Saleem",
           "target": "Badri Narayan Subudhi",
           "type": "SUPERVISED_BY"
         }
       ],
-      "text": "Community 24 in IIT Jammu EE Department:\n  ExternalPerson: Meghna, A. Chauhan, D. Goel, V.jakhetiya, V. V. R. Suresh, S. Chaudhur, M. Panda, T. Veerakumar, S. Esakkirajan, A. Ghos, H. Singh, S. Suman, Vinit Jakhetiya, R. Maruthadurai, Suresh Roland Devasahayam\n  Faculty: Badri Narayan Subudhi\n  Patent: patent:A System and a Method for Underwater Image Enhancemen, patent:Method for Thermal Video Surveillance based on Feature Pooli, patent:Image Enhancement and Object Detection System for Degraded U, patent:Action Detection System for Dark Videos using Spatio-Tempora, patent:Method and system for detection of stem and root borer infes, patent:A System and Method for Arc-Flash Detection using Local Chan\n  PhDStudent: Alisha Gupta, Gokul Singh Chauhan, Himanshu Singh, Mehvish Nissar, Sarif Saleem\n  ResearchArea: Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning, Action Recognition and Localization using Deep Learning, Underwater Surveillance, Graph Learning, Deep Learning, Underwater Surveillance, Deep-sea video surveillance\n  Relationships: RESEARCHES_IN: 7, INVENTED: 32, SUPERVISED_BY: 8, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): Badri Narayan Subudhi. 5 PhD student(s). working in areas like Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning.",
-      "summary": "This group includes 1 faculty member(s): Badri Narayan Subudhi. 5 PhD student(s). working in areas like Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning.",
+      "text": "Community 24 in IIT Jammu Electrical Engineering Department:\n  ExternalPerson: A. Chauhan, D. Goel, V.jakhetiya, V. V. R. Suresh, S. Chaudhur, M. Panda, T. Veerakumar, S. Esakkirajan, A. Ghos, H. Singh, S. Suman, Vinit Jakhetiya, R. Maruthadurai, Suresh Roland Devasahayam\n  Faculty: Badri Narayan Subudhi\n  Patent: patent:A System and a Method for Underwater Image Enhancemen, patent:Method for Thermal Video Surveillance based on Feature Pooli, patent:Image Enhancement and Object Detection System for Degraded U, patent:Action Detection System for Dark Videos using Spatio-Tempora, patent:Method and system for detection of stem and root borer infes, patent:A System and Method for Arc-Flash Detection using Local Chan\n  PhDStudent: Alisha Gupta, Gokul Singh Chauhan, Himanshu Singh, Mahima Gandotra, Mehvish Nissar, Sarif Saleem\n  ResearchArea: Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning, Action Recognition and Localization using Deep Learning, Advancing Grid-Connected Renewable Energy Systems through AI Integration, Underwater Surveillance, Deep-sea video surveillance\n  Relationships: RESEARCHES_IN: 7, INVENTED: 30, SUPERVISED_BY: 8, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): Badri Narayan Subudhi. 6 PhD student(s). working in areas like Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning.",
+      "summary": "This group includes 1 faculty member(s): Badri Narayan Subudhi. 6 PhD student(s). working in areas like Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning.",
       "size": 34
     },
     {
@@ -3589,7 +3786,7 @@
           "type": "BELONGS_TO_CATEGORY"
         }
       ],
-      "text": "Community 25 in IIT Jammu EE Department:\n  ResearchArea: Robust and Efficient System Operation and Planning, Renewable integration in power system, Operation and Control of Microgrid\n  ResearchCategory: Power System\n  Relationships: BELONGS_TO_CATEGORY: 3\n\nSummary: working in areas like Robust and Efficient System Operation and Planning, Renewable integration in power system, Operation and Control of Microgrid.",
+      "text": "Community 25 in IIT Jammu Electrical Engineering Department:\n  ResearchArea: Robust and Efficient System Operation and Planning, Renewable integration in power system, Operation and Control of Microgrid\n  ResearchCategory: Power System\n  Relationships: BELONGS_TO_CATEGORY: 3\n\nSummary: working in areas like Robust and Efficient System Operation and Planning, Renewable integration in power system, Operation and Control of Microgrid.",
       "summary": "working in areas like Robust and Efficient System Operation and Planning, Renewable integration in power system, Operation and Control of Microgrid.",
       "size": 4
     },
@@ -3643,7 +3840,7 @@
           "type": "BELONGS_TO_CATEGORY"
         }
       ],
-      "text": "Community 26 in IIT Jammu EE Department:\n  ResearchArea: Smart Metering, Powerline Communication and IoT, Cognitive Radio, Physical Layer Security, and FSO, NOMA, Molecular Communication, and THz Communication, UAV Based Communication and 5G Architecture, Wireless Powered Communication\n  ResearchCategory: Communication Systems\n  Relationships: BELONGS_TO_CATEGORY: 5\n\nSummary: working in areas like Smart Metering, Powerline Communication and IoT, Cognitive Radio, Physical Layer Security, and FSO, NOMA, Molecular Communication, and THz Communication.",
+      "text": "Community 26 in IIT Jammu Electrical Engineering Department:\n  ResearchArea: Smart Metering, Powerline Communication and IoT, Cognitive Radio, Physical Layer Security, and FSO, NOMA, Molecular Communication, and THz Communication, UAV Based Communication and 5G Architecture, Wireless Powered Communication\n  ResearchCategory: Communication Systems\n  Relationships: BELONGS_TO_CATEGORY: 5\n\nSummary: working in areas like Smart Metering, Powerline Communication and IoT, Cognitive Radio, Physical Layer Security, and FSO, NOMA, Molecular Communication, and THz Communication.",
       "summary": "working in areas like Smart Metering, Powerline Communication and IoT, Cognitive Radio, Physical Layer Security, and FSO, NOMA, Molecular Communication, and THz Communication.",
       "size": 6
     },
@@ -3697,7 +3894,7 @@
           "type": "BELONGS_TO_CATEGORY"
         }
       ],
-      "text": "Community 27 in IIT Jammu EE Department:\n  ResearchArea: Microwave and Millimeter Wave Polarization Converters, Microwave Absorbers and Cloaking, Microwave and Millimeter Wave Antennas for 5G, Metamaterials, Microsatellite Antenna Design and Computational EM, Drone Detection and Anti Drone Systems\n  ResearchCategory: RF and Microwave\n  Relationships: BELONGS_TO_CATEGORY: 5\n\nSummary: working in areas like Microwave and Millimeter Wave Polarization Converters, Microwave Absorbers and Cloaking, Microwave and Millimeter Wave Antennas for 5G, Metamaterials.",
+      "text": "Community 27 in IIT Jammu Electrical Engineering Department:\n  ResearchArea: Microwave and Millimeter Wave Polarization Converters, Microwave Absorbers and Cloaking, Microwave and Millimeter Wave Antennas for 5G, Metamaterials, Microsatellite Antenna Design and Computational EM, Drone Detection and Anti Drone Systems\n  ResearchCategory: RF and Microwave\n  Relationships: BELONGS_TO_CATEGORY: 5\n\nSummary: working in areas like Microwave and Millimeter Wave Polarization Converters, Microwave Absorbers and Cloaking, Microwave and Millimeter Wave Antennas for 5G, Metamaterials.",
       "summary": "working in areas like Microwave and Millimeter Wave Polarization Converters, Microwave Absorbers and Cloaking, Microwave and Millimeter Wave Antennas for 5G, Metamaterials.",
       "size": 6
     }

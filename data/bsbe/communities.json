@@ -3,14 +3,14 @@
     "bsbe:Ajeet Kumar Sharma": 0,
     "bsbe:Gaurav Ashok Bhaduri": 1,
     "bsbe:Jigmi Basumatary": 2,
-    "bsbe:Mithu Baidya": 3,
-    "bsbe:Nitesh Singh Malan": 4,
-    "bsbe:Santhilal Subhash": 5,
+    "bsbe:Mithu Baidya": 4,
+    "bsbe:Nitesh Singh Malan": 0,
+    "bsbe:Santhilal Subhash": 3,
     "bsbe:Shirsendu Ghosh": 6,
-    "bsbe:Shirsha Bose": 7,
-    "bsbe:Uday Kiran Roopavath": 8,
+    "bsbe:Shirsha Bose": 5,
+    "bsbe:Uday Kiran Roopavath": 7,
     "bsbe:Vinay Sharma": 9,
-    "bsbe:Vivek B Raina": 0,
+    "bsbe:Vivek B Raina": 10,
     "bsbe:Biophysics": 0,
     "bsbe:Systems Biology and Physical Bioinformatics": 0,
     "bsbe:Thermodynamics and Statistical Physics": 0,
@@ -30,42 +30,42 @@
     "bsbe:optical tweezers": 2,
     "bsbe:and photoacoustic/ultrasound imaging. He adopts a multidisciplinary approach that integrates optical engineering with other science and engineering disciplines": 2,
     "bsbe:along with rigorous qualitative and quantitative analysis. The overarching goal of his research is to develop and extend imaging techniques to address fundamental biological questions": 2,
-    "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets": 3,
-    "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics": 3,
-    "bsbe:To achieve this": 3,
-    "bsbe:the lab employs a range of research techniques": 3,
-    "bsbe:including biochemical": 3,
-    "bsbe:biophysical": 3,
-    "bsbe:chemogenetic": 3,
-    "bsbe:and pharmacological approaches. By utilizing multiple methods": 3,
-    "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways": 3,
-    "bsbe:The lab's research themes focus on two key areas. Firstly": 3,
-    "bsbe:Computational neuroscience": 4,
-    "bsbe:neurophysiology and neural oscillations": 4,
-    "bsbe:biomedical signal processing (EEG/MEG)": 4,
-    "bsbe:and neurological disorders and rehabilitation": 4,
-    "bsbe:Brain computer Interface": 4,
-    "bsbe:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues": 5,
-    "bsbe:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)": 5,
-    "bsbe:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models": 5,
-    "bsbe:we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health": 5,
-    "bsbe:Key Focus Areas": 5,
-    "bsbe:Reproductive Biology": 5,
-    "bsbe:Genomics & Single Cell Biology": 5,
-    "bsbe:Multi-omics": 5,
-    "bsbe:Bioinformatics": 5,
+    "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets": 4,
+    "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics": 4,
+    "bsbe:To achieve this": 4,
+    "bsbe:the lab employs a range of research techniques": 4,
+    "bsbe:including biochemical": 4,
+    "bsbe:biophysical": 4,
+    "bsbe:chemogenetic": 4,
+    "bsbe:and pharmacological approaches. By utilizing multiple methods": 4,
+    "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways": 4,
+    "bsbe:The lab's research themes focus on two key areas. Firstly": 4,
+    "bsbe:Computational neuroscience": 0,
+    "bsbe:neurophysiology and neural oscillations": 0,
+    "bsbe:biomedical signal processing (EEG/MEG)": 0,
+    "bsbe:and neurological disorders and rehabilitation": 0,
+    "bsbe:Brain computer Interface": 0,
+    "bsbe:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues": 3,
+    "bsbe:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)": 3,
+    "bsbe:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models": 3,
+    "bsbe:we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health": 3,
+    "bsbe:Key Focus Areas": 3,
+    "bsbe:Reproductive Biology": 3,
+    "bsbe:Genomics & Single Cell Biology": 3,
+    "bsbe:Multi-omics": 3,
+    "bsbe:Bioinformatics": 3,
     "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique": 6,
     "bsbe:Membrane Biophysics": 6,
     "bsbe:Immunological signaling pathways": 6,
     "bsbe:Allosteric Signaling in Proteins": 6,
-    "bsbe:Experimental and Computational Biomechanics": 7,
-    "bsbe:fabricating novel biomaterials": 7,
-    "bsbe:analyzing the mechanics of biological materials and bioinspired materials": 7,
-    "bsbe:and understanding the interaction of medical devices with neighbouring tissues": 7,
-    "bsbe:Tissue engineering": 8,
-    "bsbe:Biofabrication": 8,
-    "bsbe:Biomaterials": 7,
-    "bsbe:Bioengineered organoids and Biodesign": 8,
+    "bsbe:Experimental and Computational Biomechanics": 5,
+    "bsbe:fabricating novel biomaterials": 5,
+    "bsbe:analyzing the mechanics of biological materials and bioinspired materials": 5,
+    "bsbe:and understanding the interaction of medical devices with neighbouring tissues": 5,
+    "bsbe:Tissue engineering": 7,
+    "bsbe:Biofabrication": 7,
+    "bsbe:Biomaterials": 5,
+    "bsbe:Bioengineered organoids and Biodesign": 7,
     "bsbe:Bio-active nanomaterials": 9,
     "bsbe:Biosensors": 9,
     "bsbe:Nanopore technology": 9,
@@ -76,59 +76,62 @@
     "bsbe:Anticancer nanotechnology": 9,
     "bsbe:Antimicrobial Resistance and Gene Therapy": 9,
     "bsbe:Courses": 9,
-    "bsbe:Single molecule DNA curtains": 0,
-    "bsbe:DNA Repair": 0,
-    "bsbe:Meiosis": 0,
-    "bsbe:Genomic stability": 0,
-    "bsbe:Reproductive disorders": 0,
-    "bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu": 9,
-    "bsbe:agency:Startup Research Grant, DST-SERB": 9,
-    "bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm": 10,
-    "bsbe:agency:IIT Jammu Seed Grant": 10,
+    "bsbe:Single molecule DNA curtains": 10,
+    "bsbe:DNA Repair": 10,
+    "bsbe:Meiosis": 10,
+    "bsbe:Genomic stability": 10,
+    "bsbe:Reproductive disorders": 10,
+    "bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu": 4,
+    "bsbe:agency:Startup Research Grant, DST-SERB": 4,
+    "bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm": 9,
+    "bsbe:agency:IIT Jammu Seed Grant": 9,
     "bsbe:project:Research Project by Dr. Vinay Sharma (95.50 lacs (IIT Jammu ": 9,
     "bsbe:agency:National Technical Textile Mission": 9,
-    "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India": 3,
-    "bsbe:agency:India Alliance DBT-Wellcome Trust": 3,
-    "bsbe:project:Research Project by Dr. Mithu Baidya (30 Lacs) from IIT Jamm": 10,
-    "bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu": 9,
-    "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-": 3,
-    "bsbe:agency:ICMR-IRG Grant": 3,
+    "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India": 4,
+    "bsbe:agency:India Alliance DBT-Wellcome Trust": 4,
+    "bsbe:project:Research Project by Dr. Mithu Baidya (30 Lacs) from IIT Jamm": 9,
+    "bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu": 4,
+    "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-": 4,
+    "bsbe:agency:ICMR-IRG Grant": 4,
     "IIT Jammu BSBE Department": 0,
-    "bsbe:Abdul Rouf War": 3,
-    "bsbe:Molecular Pharmacology": 3,
-    "bsbe:Amir Ashraf": 7,
-    "bsbe:Blood Clot Mechanics": 7,
+    "bsbe:lab:Nanodiagnostics and Therapeutics Lab": 0,
+    "bsbe:Abdul Rouf War": 4,
+    "bsbe:Molecular Pharmacology": 4,
+    "bsbe:Amir Ashraf": 5,
+    "bsbe:Blood Clot Mechanics": 5,
     "bsbe:Ananya Anand": 6,
     "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein": 6,
-    "bsbe:Isha Mukherjee": 5,
-    "bsbe:Genomic and epigenomic-based tissue regulation in development and disease": 5,
+    "bsbe:Isha Mukherjee": 3,
+    "bsbe:Genomic and epigenomic-based tissue regulation in development and disease": 3,
     "bsbe:Kaifi Ali": 9,
     "bsbe:Electroceuticals for wound management and monitoring": 9,
     "bsbe:Khushboo Warjurkar": 9,
     "bsbe:Nanomaterial for Biomedical  Application": 9,
-    "bsbe:Madhurjya Protim Borah": 3,
-    "bsbe:Drug Discovery": 3,
-    "bsbe:Neeraj": 3,
-    "bsbe:Structure based drug designing": 3,
-    "bsbe:Prangya": 7,
+    "bsbe:Madhurjya Protim Borah": 4,
+    "bsbe:Drug Discovery": 4,
+    "bsbe:Neeraj": 4,
+    "bsbe:Structure based drug designing": 4,
+    "bsbe:Prangya": 5,
     "bsbe:Rajan": 9,
     "bsbe:Nanotheranostics": 9,
-    "bsbe:Sarfraz Ahmed": 3,
-    "bsbe:Receptor cell biology": 3,
-    "bsbe:Sathish": 7,
-    "bsbe:Mechanics of calcified collagen fibre": 7,
+    "bsbe:Sarfraz Ahmed": 4,
+    "bsbe:Receptor cell biology": 4,
+    "bsbe:Sathish": 5,
+    "bsbe:Mechanics of calcified collagen fibre": 5,
     "bsbe:Sathya prakash K": 9,
     "bsbe:Nanobiotechnology": 9,
-    "bsbe:Shalini Gupta": 5,
-    "bsbe:Multi-omics and big data intergration to investigate tissue heterogeneity and cell plasticity": 5,
-    "bsbe:Shivam Yadav": 8,
-    "bsbe:Tissue Engineering": 8,
-    "bsbe:Shubam Sharma": 11,
-    "bsbe:R Umashankar": 11,
-    "bsbe:Bioinspired Engineering": 11,
-    "bsbe:Uma Mahesh": 5,
-    "bsbe:Developing AI/ML models utilizing NGS-based genomic data": 5,
-    "bsbe:Vanshika": 6
+    "bsbe:Shalini Gupta": 3,
+    "bsbe:Multi-omics and big data intergration to investigate tissue heterogeneity and cell plasticity": 3,
+    "bsbe:Shivam Yadav": 7,
+    "bsbe:Tissue Engineering": 7,
+    "bsbe:Shubam Sharma": 8,
+    "bsbe:R Umashankar": 8,
+    "bsbe:Bioinspired Engineering": 8,
+    "bsbe:Uma Mahesh": 3,
+    "bsbe:Developing AI/ML models utilizing NGS-based genomic data": 3,
+    "bsbe:Vanshika": 6,
+    "bsbe:lab:UG Bio Lab": 0,
+    "bsbe:lab:Genetic Engineering and Tissue culture lab": 0
   },
   "reports": [
     {
@@ -136,36 +139,44 @@
       "community_id": 0,
       "members": [
         "bsbe:Ajeet Kumar Sharma",
-        "bsbe:Vivek B Raina",
+        "bsbe:Nitesh Singh Malan",
         "bsbe:Biophysics",
         "bsbe:Systems Biology and Physical Bioinformatics",
         "bsbe:Thermodynamics and Statistical Physics",
         "bsbe:Non-equilibrium statistical mechanics and Biophysics",
-        "bsbe:Single molecule DNA curtains",
-        "bsbe:DNA Repair",
-        "bsbe:Meiosis",
-        "bsbe:Genomic stability",
-        "bsbe:Reproductive disorders",
-        "IIT Jammu BSBE Department"
+        "bsbe:Computational neuroscience",
+        "bsbe:neurophysiology and neural oscillations",
+        "bsbe:biomedical signal processing (EEG/MEG)",
+        "bsbe:and neurological disorders and rehabilitation",
+        "bsbe:Brain computer Interface",
+        "IIT Jammu BSBE Department",
+        "bsbe:lab:Nanodiagnostics and Therapeutics Lab",
+        "bsbe:lab:UG Bio Lab",
+        "bsbe:lab:Genetic Engineering and Tissue culture lab"
       ],
       "members_by_type": {
         "Faculty": [
           "bsbe:Ajeet Kumar Sharma",
-          "bsbe:Vivek B Raina"
+          "bsbe:Nitesh Singh Malan"
         ],
         "ResearchArea": [
           "bsbe:Biophysics",
           "bsbe:Systems Biology and Physical Bioinformatics",
           "bsbe:Thermodynamics and Statistical Physics",
           "bsbe:Non-equilibrium statistical mechanics and Biophysics",
-          "bsbe:Single molecule DNA curtains",
-          "bsbe:DNA Repair",
-          "bsbe:Meiosis",
-          "bsbe:Genomic stability",
-          "bsbe:Reproductive disorders"
+          "bsbe:Computational neuroscience",
+          "bsbe:neurophysiology and neural oscillations",
+          "bsbe:biomedical signal processing (EEG/MEG)",
+          "bsbe:and neurological disorders and rehabilitation",
+          "bsbe:Brain computer Interface"
         ],
         "Department": [
           "IIT Jammu BSBE Department"
+        ],
+        "Lab": [
+          "bsbe:lab:Nanodiagnostics and Therapeutics Lab",
+          "bsbe:lab:UG Bio Lab",
+          "bsbe:lab:Genetic Engineering and Tissue culture lab"
         ]
       },
       "internal_edges": [
@@ -195,39 +206,54 @@
           "type": "MEMBER_OF"
         },
         {
-          "source": "bsbe:Vivek B Raina",
-          "target": "bsbe:Single molecule DNA curtains",
+          "source": "bsbe:Nitesh Singh Malan",
+          "target": "bsbe:Computational neuroscience",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Vivek B Raina",
-          "target": "bsbe:DNA Repair",
+          "source": "bsbe:Nitesh Singh Malan",
+          "target": "bsbe:neurophysiology and neural oscillations",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Vivek B Raina",
-          "target": "bsbe:Meiosis",
+          "source": "bsbe:Nitesh Singh Malan",
+          "target": "bsbe:biomedical signal processing (EEG/MEG)",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Vivek B Raina",
-          "target": "bsbe:Genomic stability",
+          "source": "bsbe:Nitesh Singh Malan",
+          "target": "bsbe:and neurological disorders and rehabilitation",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Vivek B Raina",
-          "target": "bsbe:Reproductive disorders",
+          "source": "bsbe:Nitesh Singh Malan",
+          "target": "bsbe:Brain computer Interface",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Vivek B Raina",
+          "source": "bsbe:Nitesh Singh Malan",
           "target": "IIT Jammu BSBE Department",
           "type": "MEMBER_OF"
+        },
+        {
+          "source": "bsbe:lab:Nanodiagnostics and Therapeutics Lab",
+          "target": "IIT Jammu BSBE Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "bsbe:lab:UG Bio Lab",
+          "target": "IIT Jammu BSBE Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "bsbe:lab:Genetic Engineering and Tissue culture lab",
+          "target": "IIT Jammu BSBE Department",
+          "type": "FACILITY_OF"
         }
       ],
-      "text": "Community 0 in IIT Jammu EE Department:\n  Department: Department of Biosciences and Bioengineering\n  Faculty: Ajeet Kumar Sharma, Vivek B Raina\n  ResearchArea: Biophysics, Systems Biology and Physical Bioinformatics, Thermodynamics and Statistical Physics, Non-equilibrium statistical mechanics and Biophysics, Single molecule DNA curtains, DNA Repair, Meiosis, Genomic stability, Reproductive disorders\n  Relationships: RESEARCHES_IN: 9, MEMBER_OF: 2\n\nSummary: This group includes 2 faculty member(s): bsbe:Ajeet Kumar Sharma, bsbe:Vivek B Raina. working in areas like bsbe:Biophysics, bsbe:Systems Biology and Physical Bioinformatics, bsbe:Thermodynamics and Statistical Physics.",
-      "summary": "This group includes 2 faculty member(s): bsbe:Ajeet Kumar Sharma, bsbe:Vivek B Raina. working in areas like bsbe:Biophysics, bsbe:Systems Biology and Physical Bioinformatics, bsbe:Thermodynamics and Statistical Physics.",
-      "size": 12
+      "text": "Community 0 in IIT Jammu Biosciences & Bioengineering Department:\n  Department: Department of Biosciences and Bioengineering\n  Faculty: Ajeet Kumar Sharma, Nitesh Singh Malan\n  Lab: Nanodiagnostics and Therapeutics Lab, UG Bio Lab, Genetic Engineering and Tissue culture lab\n  ResearchArea: Biophysics, Systems Biology and Physical Bioinformatics, Thermodynamics and Statistical Physics, Non-equilibrium statistical mechanics and Biophysics, Computational neuroscience, neurophysiology and neural oscillations, biomedical signal processing (EEG/MEG), and neurological disorders and rehabilitation, Brain computer Interface\n  Relationships: RESEARCHES_IN: 9, MEMBER_OF: 2, FACILITY_OF: 3\n\nSummary: This group includes 2 faculty member(s): bsbe:Ajeet Kumar Sharma, bsbe:Nitesh Singh Malan. working in areas like bsbe:Biophysics, bsbe:Systems Biology and Physical Bioinformatics, bsbe:Thermodynamics and Statistical Physics.",
+      "summary": "This group includes 2 faculty member(s): bsbe:Ajeet Kumar Sharma, bsbe:Nitesh Singh Malan. working in areas like bsbe:Biophysics, bsbe:Systems Biology and Physical Bioinformatics, bsbe:Thermodynamics and Statistical Physics.",
+      "size": 15
     },
     {
       "id": "community_1",
@@ -314,7 +340,7 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Gaurav Ashok Bhaduri\n  ResearchArea: Carbon capture storage and utilization (CCSU), Process Intensification, Environmental Engineering, Biochemical and Bioprocess Engineering, Waste to wealth, Nanomaterial synthesis and characterization, Photochemistry and Photocatalysis, Plasmonics, X-ray photoelectron spectroscopy, Heterogeneous catalysis (tri-phasic reactions)\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): bsbe:Gaurav Ashok Bhaduri. working in areas like bsbe:Carbon capture storage and utilization (CCSU), bsbe:Process Intensification, bsbe:Environmental Engineering.",
+      "text": "Community 1 in IIT Jammu Biosciences & Bioengineering Department:\n  Faculty: Gaurav Ashok Bhaduri\n  ResearchArea: Carbon capture storage and utilization (CCSU), Process Intensification, Environmental Engineering, Biochemical and Bioprocess Engineering, Waste to wealth, Nanomaterial synthesis and characterization, Photochemistry and Photocatalysis, Plasmonics, X-ray photoelectron spectroscopy, Heterogeneous catalysis (tri-phasic reactions)\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): bsbe:Gaurav Ashok Bhaduri. working in areas like bsbe:Carbon capture storage and utilization (CCSU), bsbe:Process Intensification, bsbe:Environmental Engineering.",
       "summary": "This group includes 1 faculty member(s): bsbe:Gaurav Ashok Bhaduri. working in areas like bsbe:Carbon capture storage and utilization (CCSU), bsbe:Process Intensification, bsbe:Environmental Engineering.",
       "size": 11
     },
@@ -368,276 +394,13 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Jigmi Basumatary\n  ResearchArea: include key technologies such as single-molecule localization microscopy (SMLM), light-sheet microscopy, optical tweezers, and photoacoustic/ultrasound imaging. He adopts a multidisciplinary approach that integrates optical engineering with other science and engineering disciplines, along with rigorous qualitative and quantitative analysis. The overarching goal of his research is to develop and extend imaging techniques to address fundamental biological questions\n  Relationships: RESEARCHES_IN: 5\n\nSummary: This group includes 1 faculty member(s): bsbe:Jigmi Basumatary. working in areas like bsbe:include key technologies such as single-molecule localization microscopy (SMLM), bsbe:light-sheet microscopy, bsbe:optical tweezers.",
+      "text": "Community 2 in IIT Jammu Biosciences & Bioengineering Department:\n  Faculty: Jigmi Basumatary\n  ResearchArea: include key technologies such as single-molecule localization microscopy (SMLM), light-sheet microscopy, optical tweezers, and photoacoustic/ultrasound imaging. He adopts a multidisciplinary approach that integrates optical engineering with other science and engineering disciplines, along with rigorous qualitative and quantitative analysis. The overarching goal of his research is to develop and extend imaging techniques to address fundamental biological questions\n  Relationships: RESEARCHES_IN: 5\n\nSummary: This group includes 1 faculty member(s): bsbe:Jigmi Basumatary. working in areas like bsbe:include key technologies such as single-molecule localization microscopy (SMLM), bsbe:light-sheet microscopy, bsbe:optical tweezers.",
       "summary": "This group includes 1 faculty member(s): bsbe:Jigmi Basumatary. working in areas like bsbe:include key technologies such as single-molecule localization microscopy (SMLM), bsbe:light-sheet microscopy, bsbe:optical tweezers.",
       "size": 6
     },
     {
       "id": "community_3",
       "community_id": 3,
-      "members": [
-        "bsbe:Mithu Baidya",
-        "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets",
-        "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics",
-        "bsbe:To achieve this",
-        "bsbe:the lab employs a range of research techniques",
-        "bsbe:including biochemical",
-        "bsbe:biophysical",
-        "bsbe:chemogenetic",
-        "bsbe:and pharmacological approaches. By utilizing multiple methods",
-        "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways",
-        "bsbe:The lab's research themes focus on two key areas. Firstly",
-        "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India",
-        "bsbe:agency:India Alliance DBT-Wellcome Trust",
-        "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-",
-        "bsbe:agency:ICMR-IRG Grant",
-        "bsbe:Abdul Rouf War",
-        "bsbe:Molecular Pharmacology",
-        "bsbe:Madhurjya Protim Borah",
-        "bsbe:Drug Discovery",
-        "bsbe:Neeraj",
-        "bsbe:Structure based drug designing",
-        "bsbe:Sarfraz Ahmed",
-        "bsbe:Receptor cell biology"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "bsbe:Mithu Baidya"
-        ],
-        "ResearchArea": [
-          "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets",
-          "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics",
-          "bsbe:To achieve this",
-          "bsbe:the lab employs a range of research techniques",
-          "bsbe:including biochemical",
-          "bsbe:biophysical",
-          "bsbe:chemogenetic",
-          "bsbe:and pharmacological approaches. By utilizing multiple methods",
-          "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways",
-          "bsbe:The lab's research themes focus on two key areas. Firstly",
-          "bsbe:Molecular Pharmacology",
-          "bsbe:Drug Discovery",
-          "bsbe:Structure based drug designing",
-          "bsbe:Receptor cell biology"
-        ],
-        "Project": [
-          "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India",
-          "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-"
-        ],
-        "FundingAgency": [
-          "bsbe:agency:India Alliance DBT-Wellcome Trust",
-          "bsbe:agency:ICMR-IRG Grant"
-        ],
-        "PhDStudent": [
-          "bsbe:Abdul Rouf War",
-          "bsbe:Madhurjya Protim Borah",
-          "bsbe:Neeraj",
-          "bsbe:Sarfraz Ahmed"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:To achieve this",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:the lab employs a range of research techniques",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:including biochemical",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:biophysical",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:chemogenetic",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:and pharmacological approaches. By utilizing multiple methods",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:The lab's research themes focus on two key areas. Firstly",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India",
-          "type": "PRINCIPAL_INVESTIGATOR"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-",
-          "type": "PRINCIPAL_INVESTIGATOR"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:Molecular Pharmacology",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:Drug Discovery",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:Structure based drug designing",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Mithu Baidya",
-          "target": "bsbe:Receptor cell biology",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India",
-          "target": "bsbe:Mithu Baidya",
-          "type": "PI_IS"
-        },
-        {
-          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India",
-          "target": "bsbe:agency:India Alliance DBT-Wellcome Trust",
-          "type": "FUNDED_BY"
-        },
-        {
-          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-",
-          "target": "bsbe:Mithu Baidya",
-          "type": "PI_IS"
-        },
-        {
-          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-",
-          "target": "bsbe:agency:ICMR-IRG Grant",
-          "type": "FUNDED_BY"
-        },
-        {
-          "source": "bsbe:Abdul Rouf War",
-          "target": "bsbe:Mithu Baidya",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "bsbe:Abdul Rouf War",
-          "target": "bsbe:Molecular Pharmacology",
-          "type": "STUDIES"
-        },
-        {
-          "source": "bsbe:Madhurjya Protim Borah",
-          "target": "bsbe:Mithu Baidya",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "bsbe:Madhurjya Protim Borah",
-          "target": "bsbe:Drug Discovery",
-          "type": "STUDIES"
-        },
-        {
-          "source": "bsbe:Neeraj",
-          "target": "bsbe:Mithu Baidya",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "bsbe:Neeraj",
-          "target": "bsbe:Structure based drug designing",
-          "type": "STUDIES"
-        },
-        {
-          "source": "bsbe:Sarfraz Ahmed",
-          "target": "bsbe:Mithu Baidya",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "bsbe:Sarfraz Ahmed",
-          "target": "bsbe:Receptor cell biology",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Mithu Baidya\n  FundingAgency: India Alliance DBT-Wellcome Trust, ICMR-IRG Grant\n  PhDStudent: Abdul Rouf War, Madhurjya Protim Borah, Neeraj, Sarfraz Ahmed\n  Project: bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India, bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-\n  ResearchArea: The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets, the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics, To achieve this, the lab employs a range of research techniques, including biochemical, biophysical, chemogenetic, and pharmacological approaches. By utilizing multiple methods, we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways, The lab's research themes focus on two key areas. Firstly, Molecular Pharmacology, Drug Discovery, Structure based drug designing, Receptor cell biology\n  Relationships: RESEARCHES_IN: 14, PRINCIPAL_INVESTIGATOR: 2, PI_IS: 2, FUNDED_BY: 2, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): bsbe:Mithu Baidya. 4 PhD student(s). working in areas like bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets, bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics, bsbe:To achieve this.",
-      "summary": "This group includes 1 faculty member(s): bsbe:Mithu Baidya. 4 PhD student(s). working in areas like bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets, bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics, bsbe:To achieve this.",
-      "size": 23
-    },
-    {
-      "id": "community_4",
-      "community_id": 4,
-      "members": [
-        "bsbe:Nitesh Singh Malan",
-        "bsbe:Computational neuroscience",
-        "bsbe:neurophysiology and neural oscillations",
-        "bsbe:biomedical signal processing (EEG/MEG)",
-        "bsbe:and neurological disorders and rehabilitation",
-        "bsbe:Brain computer Interface"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "bsbe:Nitesh Singh Malan"
-        ],
-        "ResearchArea": [
-          "bsbe:Computational neuroscience",
-          "bsbe:neurophysiology and neural oscillations",
-          "bsbe:biomedical signal processing (EEG/MEG)",
-          "bsbe:and neurological disorders and rehabilitation",
-          "bsbe:Brain computer Interface"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "bsbe:Nitesh Singh Malan",
-          "target": "bsbe:Computational neuroscience",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Nitesh Singh Malan",
-          "target": "bsbe:neurophysiology and neural oscillations",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Nitesh Singh Malan",
-          "target": "bsbe:biomedical signal processing (EEG/MEG)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Nitesh Singh Malan",
-          "target": "bsbe:and neurological disorders and rehabilitation",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "bsbe:Nitesh Singh Malan",
-          "target": "bsbe:Brain computer Interface",
-          "type": "RESEARCHES_IN"
-        }
-      ],
-      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Nitesh Singh Malan\n  ResearchArea: Computational neuroscience, neurophysiology and neural oscillations, biomedical signal processing (EEG/MEG), and neurological disorders and rehabilitation, Brain computer Interface\n  Relationships: RESEARCHES_IN: 5\n\nSummary: This group includes 1 faculty member(s): bsbe:Nitesh Singh Malan. working in areas like bsbe:Computational neuroscience, bsbe:neurophysiology and neural oscillations, bsbe:biomedical signal processing (EEG/MEG).",
-      "summary": "This group includes 1 faculty member(s): bsbe:Nitesh Singh Malan. working in areas like bsbe:Computational neuroscience, bsbe:neurophysiology and neural oscillations, bsbe:biomedical signal processing (EEG/MEG).",
-      "size": 6
-    },
-    {
-      "id": "community_5",
-      "community_id": 5,
       "members": [
         "bsbe:Santhilal Subhash",
         "bsbe:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues",
@@ -772,93 +535,248 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Santhilal Subhash\n  PhDStudent: Isha Mukherjee, Shalini Gupta, Uma Mahesh\n  ResearchArea: Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models, we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health, Key Focus Areas, Reproductive Biology, Genomics & Single Cell Biology, Multi-omics, Bioinformatics, Genomic and epigenomic-based tissue regulation in development and disease, Multi-omics and big data intergration to investigate tissue heterogeneity and cell plasticity, Developing AI/ML models utilizing NGS-based genomic data\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): bsbe:Santhilal Subhash. 3 PhD student(s). working in areas like bsbe:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, bsbe:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), bsbe:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models.",
+      "text": "Community 3 in IIT Jammu Biosciences & Bioengineering Department:\n  Faculty: Santhilal Subhash\n  PhDStudent: Isha Mukherjee, Shalini Gupta, Uma Mahesh\n  ResearchArea: Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models, we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health, Key Focus Areas, Reproductive Biology, Genomics & Single Cell Biology, Multi-omics, Bioinformatics, Genomic and epigenomic-based tissue regulation in development and disease, Multi-omics and big data intergration to investigate tissue heterogeneity and cell plasticity, Developing AI/ML models utilizing NGS-based genomic data\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): bsbe:Santhilal Subhash. 3 PhD student(s). working in areas like bsbe:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, bsbe:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), bsbe:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models.",
       "summary": "This group includes 1 faculty member(s): bsbe:Santhilal Subhash. 3 PhD student(s). working in areas like bsbe:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, bsbe:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), bsbe:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models.",
       "size": 16
     },
     {
-      "id": "community_6",
-      "community_id": 6,
+      "id": "community_4",
+      "community_id": 4,
       "members": [
-        "bsbe:Shirsendu Ghosh",
-        "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
-        "bsbe:Membrane Biophysics",
-        "bsbe:Immunological signaling pathways",
-        "bsbe:Allosteric Signaling in Proteins",
-        "bsbe:Ananya Anand",
-        "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
-        "bsbe:Vanshika"
+        "bsbe:Mithu Baidya",
+        "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets",
+        "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics",
+        "bsbe:To achieve this",
+        "bsbe:the lab employs a range of research techniques",
+        "bsbe:including biochemical",
+        "bsbe:biophysical",
+        "bsbe:chemogenetic",
+        "bsbe:and pharmacological approaches. By utilizing multiple methods",
+        "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways",
+        "bsbe:The lab's research themes focus on two key areas. Firstly",
+        "bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu",
+        "bsbe:agency:Startup Research Grant, DST-SERB",
+        "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India",
+        "bsbe:agency:India Alliance DBT-Wellcome Trust",
+        "bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu",
+        "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-",
+        "bsbe:agency:ICMR-IRG Grant",
+        "bsbe:Abdul Rouf War",
+        "bsbe:Molecular Pharmacology",
+        "bsbe:Madhurjya Protim Borah",
+        "bsbe:Drug Discovery",
+        "bsbe:Neeraj",
+        "bsbe:Structure based drug designing",
+        "bsbe:Sarfraz Ahmed",
+        "bsbe:Receptor cell biology"
       ],
       "members_by_type": {
         "Faculty": [
-          "bsbe:Shirsendu Ghosh"
+          "bsbe:Mithu Baidya"
         ],
         "ResearchArea": [
-          "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
-          "bsbe:Membrane Biophysics",
-          "bsbe:Immunological signaling pathways",
-          "bsbe:Allosteric Signaling in Proteins",
-          "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein"
+          "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets",
+          "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics",
+          "bsbe:To achieve this",
+          "bsbe:the lab employs a range of research techniques",
+          "bsbe:including biochemical",
+          "bsbe:biophysical",
+          "bsbe:chemogenetic",
+          "bsbe:and pharmacological approaches. By utilizing multiple methods",
+          "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways",
+          "bsbe:The lab's research themes focus on two key areas. Firstly",
+          "bsbe:Molecular Pharmacology",
+          "bsbe:Drug Discovery",
+          "bsbe:Structure based drug designing",
+          "bsbe:Receptor cell biology"
+        ],
+        "Project": [
+          "bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu",
+          "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India",
+          "bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu",
+          "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-"
+        ],
+        "FundingAgency": [
+          "bsbe:agency:Startup Research Grant, DST-SERB",
+          "bsbe:agency:India Alliance DBT-Wellcome Trust",
+          "bsbe:agency:ICMR-IRG Grant"
         ],
         "PhDStudent": [
-          "bsbe:Ananya Anand",
-          "bsbe:Vanshika"
+          "bsbe:Abdul Rouf War",
+          "bsbe:Madhurjya Protim Borah",
+          "bsbe:Neeraj",
+          "bsbe:Sarfraz Ahmed"
         ]
       },
       "internal_edges": [
         {
-          "source": "bsbe:Shirsendu Ghosh",
-          "target": "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Shirsendu Ghosh",
-          "target": "bsbe:Membrane Biophysics",
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Shirsendu Ghosh",
-          "target": "bsbe:Immunological signaling pathways",
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:To achieve this",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Shirsendu Ghosh",
-          "target": "bsbe:Allosteric Signaling in Proteins",
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:the lab employs a range of research techniques",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Shirsendu Ghosh",
-          "target": "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:including biochemical",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Ananya Anand",
-          "target": "bsbe:Shirsendu Ghosh",
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:biophysical",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:chemogenetic",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:and pharmacological approaches. By utilizing multiple methods",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:The lab's research themes focus on two key areas. Firstly",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:Molecular Pharmacology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:Drug Discovery",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:Structure based drug designing",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Mithu Baidya",
+          "target": "bsbe:Receptor cell biology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu",
+          "target": "bsbe:agency:Startup Research Grant, DST-SERB",
+          "type": "FUNDED_BY"
+        },
+        {
+          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India",
+          "target": "bsbe:Mithu Baidya",
+          "type": "PI_IS"
+        },
+        {
+          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India",
+          "target": "bsbe:agency:India Alliance DBT-Wellcome Trust",
+          "type": "FUNDED_BY"
+        },
+        {
+          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu",
+          "target": "bsbe:Mithu Baidya",
+          "type": "PI_IS"
+        },
+        {
+          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu",
+          "target": "bsbe:agency:Startup Research Grant, DST-SERB",
+          "type": "FUNDED_BY"
+        },
+        {
+          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-",
+          "target": "bsbe:Mithu Baidya",
+          "type": "PI_IS"
+        },
+        {
+          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-",
+          "target": "bsbe:agency:ICMR-IRG Grant",
+          "type": "FUNDED_BY"
+        },
+        {
+          "source": "bsbe:Abdul Rouf War",
+          "target": "bsbe:Mithu Baidya",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "bsbe:Ananya Anand",
-          "target": "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+          "source": "bsbe:Abdul Rouf War",
+          "target": "bsbe:Molecular Pharmacology",
           "type": "STUDIES"
         },
         {
-          "source": "bsbe:Vanshika",
-          "target": "bsbe:Shirsendu Ghosh",
+          "source": "bsbe:Madhurjya Protim Borah",
+          "target": "bsbe:Mithu Baidya",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "bsbe:Vanshika",
-          "target": "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+          "source": "bsbe:Madhurjya Protim Borah",
+          "target": "bsbe:Drug Discovery",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Neeraj",
+          "target": "bsbe:Mithu Baidya",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Neeraj",
+          "target": "bsbe:Structure based drug designing",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Sarfraz Ahmed",
+          "target": "bsbe:Mithu Baidya",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Sarfraz Ahmed",
+          "target": "bsbe:Receptor cell biology",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 6 in IIT Jammu EE Department:\n  Faculty: Shirsendu Ghosh\n  PhDStudent: Ananya Anand, Vanshika\n  ResearchArea: Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique, Membrane Biophysics, Immunological signaling pathways, Allosteric Signaling in Proteins, Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): bsbe:Shirsendu Ghosh. 2 PhD student(s). working in areas like bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique, bsbe:Membrane Biophysics, bsbe:Immunological signaling pathways.",
-      "summary": "This group includes 1 faculty member(s): bsbe:Shirsendu Ghosh. 2 PhD student(s). working in areas like bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique, bsbe:Membrane Biophysics, bsbe:Immunological signaling pathways.",
-      "size": 8
+      "text": "Community 4 in IIT Jammu Biosciences & Bioengineering Department:\n  Faculty: Mithu Baidya\n  FundingAgency: Startup Research Grant, DST-SERB, India Alliance DBT-Wellcome Trust, ICMR-IRG Grant\n  PhDStudent: Abdul Rouf War, Madhurjya Protim Borah, Neeraj, Sarfraz Ahmed\n  Project: bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu, bsbe:project:Research Project by Dr. Mithu Baidya (~ 134 Lacs) from India, bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu, bsbe:project:Research Project by Dr. Mithu Baidya (~ 141 Lacs) from ICMR-\n  ResearchArea: The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets, the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics, To achieve this, the lab employs a range of research techniques, including biochemical, biophysical, chemogenetic, and pharmacological approaches. By utilizing multiple methods, we strive to comprehensively understand GPCR function and its molecular interactions and signaling pathways, The lab's research themes focus on two key areas. Firstly, Molecular Pharmacology, Drug Discovery, Structure based drug designing, Receptor cell biology\n  Relationships: RESEARCHES_IN: 14, PRINCIPAL_INVESTIGATOR: 3, FUNDED_BY: 4, PI_IS: 3, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): bsbe:Mithu Baidya. 4 PhD student(s). working in areas like bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets, bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics, bsbe:To achieve this.",
+      "summary": "This group includes 1 faculty member(s): bsbe:Mithu Baidya. 4 PhD student(s). working in areas like bsbe:The Receptor Biology laboratory at IIT Jammu focuses on understanding the molecular mechanisms of G protein-coupled receptors (GPCRs) in physiological and pathophysiological processes. GPCRs play a vital role as mediators of cellular signaling and are the largest receptor superfamily encoded by the human genome. Recognizing their involvement in numerous biological functions and their significance as drug targets, bsbe:the lab aims to unravel the intricate workings of GPCRs at the molecular level to develop safer and more effective therapeutics, bsbe:To achieve this.",
+      "size": 26
     },
     {
-      "id": "community_7",
-      "community_id": 7,
+      "id": "community_5",
+      "community_id": 5,
       "members": [
         "bsbe:Shirsha Bose",
         "bsbe:Experimental and Computational Biomechanics",
@@ -958,13 +876,93 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 7 in IIT Jammu EE Department:\n  Faculty: Shirsha Bose\n  PhDStudent: Amir Ashraf, Prangya, Sathish\n  ResearchArea: Experimental and Computational Biomechanics, fabricating novel biomaterials, analyzing the mechanics of biological materials and bioinspired materials, and understanding the interaction of medical devices with neighbouring tissues, Biomaterials, Blood Clot Mechanics, Mechanics of calcified collagen fibre\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): bsbe:Shirsha Bose. 3 PhD student(s). working in areas like bsbe:Experimental and Computational Biomechanics, bsbe:fabricating novel biomaterials, bsbe:analyzing the mechanics of biological materials and bioinspired materials.",
+      "text": "Community 5 in IIT Jammu Biosciences & Bioengineering Department:\n  Faculty: Shirsha Bose\n  PhDStudent: Amir Ashraf, Prangya, Sathish\n  ResearchArea: Experimental and Computational Biomechanics, fabricating novel biomaterials, analyzing the mechanics of biological materials and bioinspired materials, and understanding the interaction of medical devices with neighbouring tissues, Biomaterials, Blood Clot Mechanics, Mechanics of calcified collagen fibre\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): bsbe:Shirsha Bose. 3 PhD student(s). working in areas like bsbe:Experimental and Computational Biomechanics, bsbe:fabricating novel biomaterials, bsbe:analyzing the mechanics of biological materials and bioinspired materials.",
       "summary": "This group includes 1 faculty member(s): bsbe:Shirsha Bose. 3 PhD student(s). working in areas like bsbe:Experimental and Computational Biomechanics, bsbe:fabricating novel biomaterials, bsbe:analyzing the mechanics of biological materials and bioinspired materials.",
       "size": 11
     },
     {
-      "id": "community_8",
-      "community_id": 8,
+      "id": "community_6",
+      "community_id": 6,
+      "members": [
+        "bsbe:Shirsendu Ghosh",
+        "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
+        "bsbe:Membrane Biophysics",
+        "bsbe:Immunological signaling pathways",
+        "bsbe:Allosteric Signaling in Proteins",
+        "bsbe:Ananya Anand",
+        "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+        "bsbe:Vanshika"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "bsbe:Shirsendu Ghosh"
+        ],
+        "ResearchArea": [
+          "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
+          "bsbe:Membrane Biophysics",
+          "bsbe:Immunological signaling pathways",
+          "bsbe:Allosteric Signaling in Proteins",
+          "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein"
+        ],
+        "PhDStudent": [
+          "bsbe:Ananya Anand",
+          "bsbe:Vanshika"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Shirsendu Ghosh",
+          "target": "bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsendu Ghosh",
+          "target": "bsbe:Membrane Biophysics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsendu Ghosh",
+          "target": "bsbe:Immunological signaling pathways",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsendu Ghosh",
+          "target": "bsbe:Allosteric Signaling in Proteins",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Shirsendu Ghosh",
+          "target": "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Ananya Anand",
+          "target": "bsbe:Shirsendu Ghosh",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Ananya Anand",
+          "target": "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+          "type": "STUDIES"
+        },
+        {
+          "source": "bsbe:Vanshika",
+          "target": "bsbe:Shirsendu Ghosh",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Vanshika",
+          "target": "bsbe:Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 6 in IIT Jammu Biosciences & Bioengineering Department:\n  Faculty: Shirsendu Ghosh\n  PhDStudent: Ananya Anand, Vanshika\n  ResearchArea: Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique, Membrane Biophysics, Immunological signaling pathways, Allosteric Signaling in Proteins, Super-resolution microscopy, Immunology, Membrane Biophysics, Allosteric Signaling of Protein\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): bsbe:Shirsendu Ghosh. 2 PhD student(s). working in areas like bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique, bsbe:Membrane Biophysics, bsbe:Immunological signaling pathways.",
+      "summary": "This group includes 1 faculty member(s): bsbe:Shirsendu Ghosh. 2 PhD student(s). working in areas like bsbe:Development of Super/high resolution optical microscopy and Single Molecule Spectroscopy technique, bsbe:Membrane Biophysics, bsbe:Immunological signaling pathways.",
+      "size": 8
+    },
+    {
+      "id": "community_7",
+      "community_id": 7,
       "members": [
         "bsbe:Uday Kiran Roopavath",
         "bsbe:Tissue engineering",
@@ -1019,9 +1017,44 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 8 in IIT Jammu EE Department:\n  Faculty: Uday Kiran Roopavath\n  PhDStudent: Shivam Yadav\n  ResearchArea: Tissue engineering, Biofabrication, Bioengineered organoids and Biodesign, Tissue Engineering\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): bsbe:Uday Kiran Roopavath. 1 PhD student(s). working in areas like bsbe:Tissue engineering, bsbe:Biofabrication, bsbe:Bioengineered organoids and Biodesign.",
+      "text": "Community 7 in IIT Jammu Biosciences & Bioengineering Department:\n  Faculty: Uday Kiran Roopavath\n  PhDStudent: Shivam Yadav\n  ResearchArea: Tissue engineering, Biofabrication, Bioengineered organoids and Biodesign, Tissue Engineering\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): bsbe:Uday Kiran Roopavath. 1 PhD student(s). working in areas like bsbe:Tissue engineering, bsbe:Biofabrication, bsbe:Bioengineered organoids and Biodesign.",
       "summary": "This group includes 1 faculty member(s): bsbe:Uday Kiran Roopavath. 1 PhD student(s). working in areas like bsbe:Tissue engineering, bsbe:Biofabrication, bsbe:Bioengineered organoids and Biodesign.",
       "size": 6
+    },
+    {
+      "id": "community_8",
+      "community_id": 8,
+      "members": [
+        "bsbe:Shubam Sharma",
+        "bsbe:R Umashankar",
+        "bsbe:Bioinspired Engineering"
+      ],
+      "members_by_type": {
+        "PhDStudent": [
+          "bsbe:Shubam Sharma"
+        ],
+        "ExternalPerson": [
+          "bsbe:R Umashankar"
+        ],
+        "ResearchArea": [
+          "bsbe:Bioinspired Engineering"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "bsbe:Shubam Sharma",
+          "target": "bsbe:R Umashankar",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "bsbe:Shubam Sharma",
+          "target": "bsbe:Bioinspired Engineering",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 8 in IIT Jammu Biosciences & Bioengineering Department:\n  ExternalPerson: R Umashankar\n  PhDStudent: Shubam Sharma\n  ResearchArea: Bioinspired Engineering\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: 1 PhD student(s). working in areas like bsbe:Bioinspired Engineering.",
+      "summary": "1 PhD student(s). working in areas like bsbe:Bioinspired Engineering.",
+      "size": 3
     },
     {
       "id": "community_9",
@@ -1038,11 +1071,11 @@
         "bsbe:Anticancer nanotechnology",
         "bsbe:Antimicrobial Resistance and Gene Therapy",
         "bsbe:Courses",
-        "bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu",
-        "bsbe:agency:Startup Research Grant, DST-SERB",
+        "bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm",
+        "bsbe:agency:IIT Jammu Seed Grant",
         "bsbe:project:Research Project by Dr. Vinay Sharma (95.50 lacs (IIT Jammu ",
         "bsbe:agency:National Technical Textile Mission",
-        "bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu",
+        "bsbe:project:Research Project by Dr. Mithu Baidya (30 Lacs) from IIT Jamm",
         "bsbe:Kaifi Ali",
         "bsbe:Electroceuticals for wound management and monitoring",
         "bsbe:Khushboo Warjurkar",
@@ -1073,12 +1106,12 @@
           "bsbe:Nanobiotechnology"
         ],
         "Project": [
-          "bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu",
+          "bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm",
           "bsbe:project:Research Project by Dr. Vinay Sharma (95.50 lacs (IIT Jammu ",
-          "bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu"
+          "bsbe:project:Research Project by Dr. Mithu Baidya (30 Lacs) from IIT Jamm"
         ],
         "FundingAgency": [
-          "bsbe:agency:Startup Research Grant, DST-SERB",
+          "bsbe:agency:IIT Jammu Seed Grant",
           "bsbe:agency:National Technical Textile Mission"
         ],
         "PhDStudent": [
@@ -1141,7 +1174,7 @@
         },
         {
           "source": "bsbe:Vinay Sharma",
-          "target": "bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu",
+          "target": "bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm",
           "type": "PRINCIPAL_INVESTIGATOR"
         },
         {
@@ -1170,13 +1203,13 @@
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu",
+          "source": "bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm",
           "target": "bsbe:Vinay Sharma",
           "type": "PI_IS"
         },
         {
-          "source": "bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu",
-          "target": "bsbe:agency:Startup Research Grant, DST-SERB",
+          "source": "bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm",
+          "target": "bsbe:agency:IIT Jammu Seed Grant",
           "type": "FUNDED_BY"
         },
         {
@@ -1190,8 +1223,8 @@
           "type": "FUNDED_BY"
         },
         {
-          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu",
-          "target": "bsbe:agency:Startup Research Grant, DST-SERB",
+          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (30 Lacs) from IIT Jamm",
+          "target": "bsbe:agency:IIT Jammu Seed Grant",
           "type": "FUNDED_BY"
         },
         {
@@ -1235,7 +1268,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 9 in IIT Jammu EE Department:\n  Faculty: Vinay Sharma\n  FundingAgency: Startup Research Grant, DST-SERB, National Technical Textile Mission\n  PhDStudent: Kaifi Ali, Khushboo Warjurkar, Rajan, Sathya prakash K\n  Project: bsbe:project:Research Project by Dr. Vinay Sharma (~ 32 Lacs) from Startu, bsbe:project:Research Project by Dr. Vinay Sharma (95.50 lacs (IIT Jammu , bsbe:project:Research Project by Dr. Mithu Baidya (~ 28 Lacs) from Startu\n  ResearchArea: Bio-active nanomaterials, Biosensors, Nanopore technology, Nano-Theranostics, Bioimaging probes, Healthcare devices, Nanomedicine, Anticancer nanotechnology, Antimicrobial Resistance and Gene Therapy, Courses, Electroceuticals for wound management and monitoring, Nanomaterial for Biomedical  Application, Nanotheranostics, Nanobiotechnology\n  Relationships: RESEARCHES_IN: 14, PRINCIPAL_INVESTIGATOR: 2, PI_IS: 2, FUNDED_BY: 3, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): bsbe:Vinay Sharma. 4 PhD student(s). working in areas like bsbe:Bio-active nanomaterials, bsbe:Biosensors, bsbe:Nanopore technology.",
+      "text": "Community 9 in IIT Jammu Biosciences & Bioengineering Department:\n  Faculty: Vinay Sharma\n  FundingAgency: IIT Jammu Seed Grant, National Technical Textile Mission\n  PhDStudent: Kaifi Ali, Khushboo Warjurkar, Rajan, Sathya prakash K\n  Project: bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm, bsbe:project:Research Project by Dr. Vinay Sharma (95.50 lacs (IIT Jammu , bsbe:project:Research Project by Dr. Mithu Baidya (30 Lacs) from IIT Jamm\n  ResearchArea: Bio-active nanomaterials, Biosensors, Nanopore technology, Nano-Theranostics, Bioimaging probes, Healthcare devices, Nanomedicine, Anticancer nanotechnology, Antimicrobial Resistance and Gene Therapy, Courses, Electroceuticals for wound management and monitoring, Nanomaterial for Biomedical  Application, Nanotheranostics, Nanobiotechnology\n  Relationships: RESEARCHES_IN: 14, PRINCIPAL_INVESTIGATOR: 2, PI_IS: 2, FUNDED_BY: 3, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): bsbe:Vinay Sharma. 4 PhD student(s). working in areas like bsbe:Bio-active nanomaterials, bsbe:Biosensors, bsbe:Nanopore technology.",
       "summary": "This group includes 1 faculty member(s): bsbe:Vinay Sharma. 4 PhD student(s). working in areas like bsbe:Bio-active nanomaterials, bsbe:Biosensors, bsbe:Nanopore technology.",
       "size": 24
     },
@@ -1243,69 +1276,55 @@
       "id": "community_10",
       "community_id": 10,
       "members": [
-        "bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm",
-        "bsbe:agency:IIT Jammu Seed Grant",
-        "bsbe:project:Research Project by Dr. Mithu Baidya (30 Lacs) from IIT Jamm"
+        "bsbe:Vivek B Raina",
+        "bsbe:Single molecule DNA curtains",
+        "bsbe:DNA Repair",
+        "bsbe:Meiosis",
+        "bsbe:Genomic stability",
+        "bsbe:Reproductive disorders"
       ],
       "members_by_type": {
-        "Project": [
-          "bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm",
-          "bsbe:project:Research Project by Dr. Mithu Baidya (30 Lacs) from IIT Jamm"
-        ],
-        "FundingAgency": [
-          "bsbe:agency:IIT Jammu Seed Grant"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm",
-          "target": "bsbe:agency:IIT Jammu Seed Grant",
-          "type": "FUNDED_BY"
-        },
-        {
-          "source": "bsbe:project:Research Project by Dr. Mithu Baidya (30 Lacs) from IIT Jamm",
-          "target": "bsbe:agency:IIT Jammu Seed Grant",
-          "type": "FUNDED_BY"
-        }
-      ],
-      "text": "Community 10 in IIT Jammu EE Department:\n  FundingAgency: IIT Jammu Seed Grant\n  Project: bsbe:project:Research Project by Dr. Vinay Sharma (30 Lacs) from IIT Jamm, bsbe:project:Research Project by Dr. Mithu Baidya (30 Lacs) from IIT Jamm\n  Relationships: FUNDED_BY: 2\n\nSummary: A cluster of related entities.",
-      "summary": "A cluster of related entities.",
-      "size": 3
-    },
-    {
-      "id": "community_11",
-      "community_id": 11,
-      "members": [
-        "bsbe:Shubam Sharma",
-        "bsbe:R Umashankar",
-        "bsbe:Bioinspired Engineering"
-      ],
-      "members_by_type": {
-        "PhDStudent": [
-          "bsbe:Shubam Sharma"
-        ],
-        "ExternalPerson": [
-          "bsbe:R Umashankar"
+        "Faculty": [
+          "bsbe:Vivek B Raina"
         ],
         "ResearchArea": [
-          "bsbe:Bioinspired Engineering"
+          "bsbe:Single molecule DNA curtains",
+          "bsbe:DNA Repair",
+          "bsbe:Meiosis",
+          "bsbe:Genomic stability",
+          "bsbe:Reproductive disorders"
         ]
       },
       "internal_edges": [
         {
-          "source": "bsbe:Shubam Sharma",
-          "target": "bsbe:R Umashankar",
-          "type": "SUPERVISED_BY"
+          "source": "bsbe:Vivek B Raina",
+          "target": "bsbe:Single molecule DNA curtains",
+          "type": "RESEARCHES_IN"
         },
         {
-          "source": "bsbe:Shubam Sharma",
-          "target": "bsbe:Bioinspired Engineering",
-          "type": "STUDIES"
+          "source": "bsbe:Vivek B Raina",
+          "target": "bsbe:DNA Repair",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vivek B Raina",
+          "target": "bsbe:Meiosis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vivek B Raina",
+          "target": "bsbe:Genomic stability",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "bsbe:Vivek B Raina",
+          "target": "bsbe:Reproductive disorders",
+          "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 11 in IIT Jammu EE Department:\n  ExternalPerson: R Umashankar\n  PhDStudent: Shubam Sharma\n  ResearchArea: Bioinspired Engineering\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: 1 PhD student(s). working in areas like bsbe:Bioinspired Engineering.",
-      "summary": "1 PhD student(s). working in areas like bsbe:Bioinspired Engineering.",
-      "size": 3
+      "text": "Community 10 in IIT Jammu Biosciences & Bioengineering Department:\n  Faculty: Vivek B Raina\n  ResearchArea: Single molecule DNA curtains, DNA Repair, Meiosis, Genomic stability, Reproductive disorders\n  Relationships: RESEARCHES_IN: 5\n\nSummary: This group includes 1 faculty member(s): bsbe:Vivek B Raina. working in areas like bsbe:Single molecule DNA curtains, bsbe:DNA Repair, bsbe:Meiosis.",
+      "summary": "This group includes 1 faculty member(s): bsbe:Vivek B Raina. working in areas like bsbe:Single molecule DNA curtains, bsbe:DNA Repair, bsbe:Meiosis.",
+      "size": 6
     }
   ]
 }

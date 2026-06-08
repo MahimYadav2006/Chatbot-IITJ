@@ -9,17 +9,17 @@
     "civil_engineering:Mir Faizan Ul Haq": 6,
     "civil_engineering:Nitin Joshi": 7,
     "civil_engineering:Pervaiz Fathima Khatoon M": 8,
-    "civil_engineering:Prasun Halder": 9,
+    "civil_engineering:Prasun Halder": 13,
     "civil_engineering:Pratik Kumar": 10,
     "civil_engineering:Rajendra Kumar Varma": 11,
     "civil_engineering:Rimen Jamatia": 12,
-    "civil_engineering:Riya Bhowmik": 9,
+    "civil_engineering:Riya Bhowmik": 13,
     "civil_engineering:Sameer Kumar Sarma Pachalla": 14,
     "civil_engineering:Sarah Mariam Abraham": 15,
     "civil_engineering:Sivakumar G": 16,
-    "civil_engineering:Srishti Singh": 17,
-    "civil_engineering:Surendra Beniwal": 18,
-    "civil_engineering:Ved Prakash Ranjan": 17,
+    "civil_engineering:Srishti Singh": 4,
+    "civil_engineering:Surendra Beniwal": 17,
+    "civil_engineering:Ved Prakash Ranjan": 4,
     "civil_engineering:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions": 0,
     "civil_engineering:b)\u00a0Proactive approaches to road safety": 0,
     "civil_engineering:including the use of surrogate safety measures": 0,
@@ -77,14 +77,14 @@
     "civil_engineering:Life prediction": 8,
     "civil_engineering:Damage assessment in existing structures": 8,
     "civil_engineering:Constitutive modelling of material behaviour of heterogeneous composite materials": 8,
-    "civil_engineering:1. Shallow and Deep Foundation": 9,
-    "civil_engineering:2. Geosynthetic-reinforced geotechnology": 9,
-    "civil_engineering:3. Tunnelling and underground space": 9,
-    "civil_engineering:4. Transportation Geotechnics": 9,
-    "civil_engineering:5. Root-soil interaction": 9,
-    "civil_engineering:6. Computational Geomechanics": 9,
-    "civil_engineering:7. Ground improvement": 9,
-    "civil_engineering:8. Analysis of dam-foundation system on jointed rock": 9,
+    "civil_engineering:1. Shallow and Deep Foundation": 13,
+    "civil_engineering:2. Geosynthetic-reinforced geotechnology": 13,
+    "civil_engineering:3. Tunnelling and underground space": 13,
+    "civil_engineering:4. Transportation Geotechnics": 13,
+    "civil_engineering:5. Root-soil interaction": 13,
+    "civil_engineering:6. Computational Geomechanics": 13,
+    "civil_engineering:7. Ground improvement": 13,
+    "civil_engineering:8. Analysis of dam-foundation system on jointed rock": 13,
     "civil_engineering:1. Wastewater Treatment using state-of-the-art physical and biological technologies": 10,
     "civil_engineering:2. Drinking Water Treatment using Adsorption Techniques": 10,
     "civil_engineering:3. Bioremediation of Water Pollutants using nature-based solution": 10,
@@ -105,11 +105,11 @@
     "civil_engineering:3. Multi-scale multi-phase modeling of geomaterials": 12,
     "civil_engineering:4. Numerical simulation\u00a0for quasi-brittle fracture": 12,
     "civil_engineering:5. Offshore wind turbine": 12,
-    "civil_engineering:Protection works against landslides (debris flow/rockfall/mudslides) in hilly regions": 9,
-    "civil_engineering:Use of geosynthetics for hill road infrastructure": 9,
-    "civil_engineering:Rock-shed tunnels under rockfall impacts": 9,
-    "civil_engineering:Geosynthetics-reinforced infrastructure in seasonally frozen regions": 9,
-    "civil_engineering:Tunnelling-induced instability and surface settlements": 9,
+    "civil_engineering:Protection works against landslides (debris flow/rockfall/mudslides) in hilly regions": 13,
+    "civil_engineering:Use of geosynthetics for hill road infrastructure": 13,
+    "civil_engineering:Rock-shed tunnels under rockfall impacts": 13,
+    "civil_engineering:Geosynthetics-reinforced infrastructure in seasonally frozen regions": 13,
+    "civil_engineering:Tunnelling-induced instability and surface settlements": 13,
     "civil_engineering:Courses Taught": 14,
     "civil_engineering:Structural Analysis": 14,
     "civil_engineering:Prestressed concrete design": 14,
@@ -128,33 +128,33 @@
     "civil_engineering:Study on Soft rocks - Characterisation and its mechanical behaviour": 16,
     "civil_engineering:Intermediate geomaterials\u00a0- Characterisation and its mechanical behaviour": 16,
     "civil_engineering:Fracture Mechanics - Study on crack growth analysis of rock having pre-existing fractures/flaws": 16,
-    "civil_engineering:Geophysics": 17,
-    "civil_engineering:Solid Earth": 17,
-    "civil_engineering:Mantle Convection": 17,
-    "civil_engineering:Geodynamics": 17,
-    "civil_engineering:Plate Tectonics": 17,
-    "civil_engineering:Disaster Management": 17,
-    "civil_engineering:Broad research interests": 18,
-    "civil_engineering:Ultrasonics": 18,
-    "civil_engineering:Structural health monitoring": 18,
-    "civil_engineering:Computational Mechanics": 18,
-    "civil_engineering:and Micromechanics": 18,
-    "civil_engineering:Interested in Applications including": 18,
-    "civil_engineering:Ultrasonic Nondestructive evaluation": 18,
-    "civil_engineering:Subsurface imaging and characterization": 18,
-    "civil_engineering:Numerical modeling of elastic wave propagation and scattering": 18,
-    "civil_engineering:Homogenization of composite materials": 18,
-    "civil_engineering:Solid Waste Management and other areas in environmental engineering": 17,
-    "IIT Jammu CIVIL_ENGINEERING Department": 17,
-    "civil_engineering:ABHISHEK SHARMA": 18,
-    "civil_engineering:Nonlinear ultrasounic application for detection of Microscale Defects in Concrete Structure": 18,
-    "civil_engineering:ADITYA THIMMAIAH GARI": 19,
-    "civil_engineering:Sameer K. Sarma P": 19,
-    "civil_engineering:Behaviour of UHPC beams with openings": 19,
+    "civil_engineering:Geophysics": 4,
+    "civil_engineering:Solid Earth": 4,
+    "civil_engineering:Mantle Convection": 4,
+    "civil_engineering:Geodynamics": 4,
+    "civil_engineering:Plate Tectonics": 4,
+    "civil_engineering:Disaster Management": 4,
+    "civil_engineering:Broad research interests": 17,
+    "civil_engineering:Ultrasonics": 17,
+    "civil_engineering:Structural health monitoring": 17,
+    "civil_engineering:Computational Mechanics": 17,
+    "civil_engineering:and Micromechanics": 17,
+    "civil_engineering:Interested in Applications including": 17,
+    "civil_engineering:Ultrasonic Nondestructive evaluation": 17,
+    "civil_engineering:Subsurface imaging and characterization": 17,
+    "civil_engineering:Numerical modeling of elastic wave propagation and scattering": 17,
+    "civil_engineering:Homogenization of composite materials": 17,
+    "civil_engineering:Solid Waste Management and other areas in environmental engineering": 4,
+    "IIT Jammu CIVIL_ENGINEERING Department": 4,
+    "civil_engineering:ABHISHEK SHARMA": 17,
+    "civil_engineering:Nonlinear ultrasounic application for detection of Microscale Defects in Concrete Structure": 17,
+    "civil_engineering:ADITYA THIMMAIAH GARI": 18,
+    "civil_engineering:Sameer K. Sarma P": 18,
+    "civil_engineering:Behaviour of UHPC beams with openings": 18,
     "civil_engineering:AKHIL GUPTA": 10,
     "civil_engineering:Waste water treatment and valorisation": 10,
-    "civil_engineering:AMAN SHARMA": 9,
-    "civil_engineering:Performance Evaluation of Hill Roads Under Different Possible Loading Conditions": 9,
+    "civil_engineering:AMAN SHARMA": 13,
+    "civil_engineering:Performance Evaluation of Hill Roads Under Different Possible Loading Conditions": 13,
     "civil_engineering:ANAMIKA YADAV": 0,
     "civil_engineering:Analysing Vehicle-Vehicle Interaction Dynamics at Unsignalized Intersection using Surrogate Safety Measures": 0,
     "civil_engineering:ANIKUL ISLAM": 5,
@@ -179,8 +179,8 @@
     "civil_engineering:Size effect study of quasi brittle material under passive confinement": 12,
     "civil_engineering:HEMANT SINGH": 5,
     "civil_engineering:Investigation of snow, glacier and some associated hazards using multispectral data and field data": 5,
-    "civil_engineering:HUMARA IQBAL": 9,
-    "civil_engineering:Landslide studies": 9,
+    "civil_engineering:HUMARA IQBAL": 13,
+    "civil_engineering:Landslide studies": 13,
     "civil_engineering:Harsh Vardhan Singh": 7,
     "civil_engineering:Climate Extremes and Drought Risk Analysis": 7,
     "civil_engineering:I BHARGAV": 11,
@@ -189,25 +189,25 @@
     "civil_engineering:Guardrails on Highways": 0,
     "civil_engineering:JAYPRAKASH KUMAR": 2,
     "civil_engineering:Experimental and Numerical Investigation on Hydrodynamics of Mountainous Rivers": 2,
-    "civil_engineering:KHUSHBOO KANWAR RATHORE": 18,
-    "civil_engineering:Lamb Wave NDE Investigations in Plate-like Structures": 18,
+    "civil_engineering:KHUSHBOO KANWAR RATHORE": 17,
+    "civil_engineering:Lamb Wave NDE Investigations in Plate-like Structures": 17,
     "civil_engineering:KM PUJA RANI": 4,
     "civil_engineering:Concrete Technology": 4,
     "civil_engineering:LALIT SINGH": 1,
     "civil_engineering:Low carbon cement": 1,
     "civil_engineering:MANALI RATHEE": 1,
     "civil_engineering:Geopolymer Concrete": 1,
-    "civil_engineering:MASOOM MAIRAJ": 9,
-    "civil_engineering:Geotechnical Engineering": 9,
+    "civil_engineering:MASOOM MAIRAJ": 13,
+    "civil_engineering:Geotechnical Engineering": 13,
     "civil_engineering:MD MEHRAJ": 5,
     "civil_engineering:Cryosphere Studies using Remote-Sensing-Based Modelling Approaches": 5,
-    "civil_engineering:MEHAK MANZOOR": 17,
-    "civil_engineering:Fate and Transport of Microplastics in Riverine Systems": 17,
-    "civil_engineering:MEHAK WASEEM": 9,
+    "civil_engineering:MEHAK MANZOOR": 4,
+    "civil_engineering:Fate and Transport of Microplastics in Riverine Systems": 4,
+    "civil_engineering:MEHAK WASEEM": 13,
     "civil_engineering:MEHLIL AFRAAZ": 0,
     "civil_engineering:Analysis of Traffic Noise Propagation and Mitigation Strategies Along Road Corridors": 0,
-    "civil_engineering:MOHMMAD UMAR RASOOL": 9,
-    "civil_engineering:Geosynthetic-based solution for hill road infrastructure": 9,
+    "civil_engineering:MOHMMAD UMAR RASOOL": 13,
+    "civil_engineering:Geosynthetic-based solution for hill road infrastructure": 13,
     "civil_engineering:MUNEEM AHMAD DAR": 8,
     "civil_engineering:Fracture in heterogeneous material": 8,
     "civil_engineering:MUZAFAR AHMAD GANIE": 1,
@@ -239,23 +239,23 @@
     "civil_engineering:Flash Drought Dynamics in the Western Himalayas: Remote Sensing and Hydrological Model Ensembles with Machine Learning-Based Driver Attribution": 7,
     "civil_engineering:RISHI GUPTA": 2,
     "civil_engineering:Response of Nature Based Solutions on Integrated Catchment Scale Flood mitigation measures": 2,
-    "civil_engineering:SAHIL GULAB ANGURAL": 19,
-    "civil_engineering:Impact Analysis of UHPC": 19,
+    "civil_engineering:SAHIL GULAB ANGURAL": 18,
+    "civil_engineering:Impact Analysis of UHPC": 18,
     "civil_engineering:SALIM BIN KAISAR": 11,
     "civil_engineering:Numerical Investigation of Wind Loads on Tall Buildings Situated in Hilly Terrain using CFD": 11,
     "civil_engineering:SARVDAMAN SHARMA": 0,
     "civil_engineering:Assessing the Impact of Variable Speed Limit on Driving Behavior": 0,
-    "civil_engineering:SAURABH AGARWAL": 18,
-    "civil_engineering:SEM based Wave Modeling and SHM": 18,
+    "civil_engineering:SAURABH AGARWAL": 17,
+    "civil_engineering:SEM based Wave Modeling and SHM": 17,
     "civil_engineering:SHEIKH AB MAJID": 6,
     "civil_engineering:SHOAIB ASHRAF HAFIZ": 16,
     "civil_engineering:Geomaterial Characterization": 16,
-    "civil_engineering:SHREYA MAHESHWARI": 9,
-    "civil_engineering:Landslide Mitigation Structures: Investigations on Geosynthetics-Reinforced Embankments": 9,
+    "civil_engineering:SHREYA MAHESHWARI": 13,
+    "civil_engineering:Landslide Mitigation Structures: Investigations on Geosynthetics-Reinforced Embankments": 13,
     "civil_engineering:SRISTI GUPTA": 5,
     "civil_engineering:Micromechanics based Deep Learning Model for Prediction of Full field Response of Short Fiber Reinforced Polymer Composites": 5,
-    "civil_engineering:SUHAIB UL REYAZ": 18,
-    "civil_engineering:Structural Health Monitoring of Concrete Structures": 18,
+    "civil_engineering:SUHAIB UL REYAZ": 17,
+    "civil_engineering:Structural Health Monitoring of Concrete Structures": 17,
     "civil_engineering:SUKHJINDER SINGH": 0,
     "civil_engineering:Driving Behavior and Transverse Bar Markings": 0,
     "civil_engineering:SUMIT SINGH THAKUR": 8,
@@ -276,26 +276,27 @@
     "civil_engineering:Decentralized And Sustainable Sewage Treatment For High-Rise Establishments And Public Infrastructure": 10,
     "civil_engineering:ZEESHAN ABBAS": 8,
     "civil_engineering:Fracture and Fatigue Analysis of Concrete Structures": 8,
+    "civil_engineering:lab:Environmental Engineering Laboratory": 4,
     "civil_engineering:**Abdul Haseeb Wani": 11,
     "civil_engineering:Ashok K. Ahuja": 11,
     "civil_engineering:Structural Wind Engineering": 11,
     "civil_engineering:**Satyendra K. Singh": 11,
     "civil_engineering:Arnab Banerjee": 11,
     "civil_engineering:Seismic Performance Assessment of Infilled Sandwich Panel": 11,
-    "civil_engineering:**Suhaib Ul Reyaz": 18,
-    "civil_engineering:**Aanchna Sharma": 13,
-    "civil_engineering:Vinod Kushvaha": 13,
-    "civil_engineering:Fracture and Fatigue behavior of particulate polymer composites": 13,
-    "civil_engineering:**I Bhargav": 13,
-    "civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption": 13,
+    "civil_engineering:**Suhaib Ul Reyaz": 17,
+    "civil_engineering:**Aanchna Sharma": 9,
+    "civil_engineering:Vinod Kushvaha": 9,
+    "civil_engineering:Fracture and Fatigue behavior of particulate polymer composites": 9,
+    "civil_engineering:**I Bhargav": 9,
+    "civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption": 9,
     "civil_engineering:**Pronnoy Bhat": 12,
     "civil_engineering:Constitutive model of concrete under non-uniform passive confinement": 12,
-    "civil_engineering:**Saurabh Agarwal": 18,
-    "civil_engineering:Structural Health Monitoring": 18,
+    "civil_engineering:**Saurabh Agarwal": 17,
+    "civil_engineering:Structural Health Monitoring": 17,
     "civil_engineering:**Hemam Amarjit Singh": 12,
     "civil_engineering:Multi-scale modeling of Granular media": 12,
-    "civil_engineering:**Sristi Gupta": 13,
-    "civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites": 13,
+    "civil_engineering:**Sristi Gupta": 9,
+    "civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites": 9,
     "civil_engineering:**Manali Rathee": 1,
     "civil_engineering:Geopolymer concrete": 1,
     "civil_engineering:**Sumit Singh Thakur": 8,
@@ -310,7 +311,12 @@
     "civil_engineering:Ashoke K Sarkar": 0,
     "civil_engineering:Exclusive Two-Wheeler Lanes: A Step Towards Safe Traffic Movement": 0,
     "civil_engineering:**Anamika Yadav": 0,
-    "civil_engineering:Safety Evaluation of Road Facilities using Surrogate Safety Measures": 0
+    "civil_engineering:Safety Evaluation of Road Facilities using Surrogate Safety Measures": 0,
+    "civil_engineering:lab:Geo-STRIDE Lab": 4,
+    "civil_engineering:lab:Fluid Mechanics lab": 4,
+    "civil_engineering:lab:Rock Mechanics and Geology Lab": 4,
+    "civil_engineering:lab:Soil Mechanics Lab": 4,
+    "civil_engineering:lab:Water Resources Lab": 4
   },
   "reports": [
     {
@@ -656,7 +662,7 @@
           "type": "SUPERVISED_BY"
         }
       ],
-      "text": "Community 0 in IIT Jammu EE Department:\n  ExternalPerson: Ashish Bhaskar, Ashoke K Sarkar\n  Faculty: Ankit Kathuria\n  PhDStudent: ANAMIKA YADAV, HARISH KUMAR SAINI, ISH GUPTA, MEHLIL AFRAAZ, PRABHJOT SINGH GANDHI, SARVDAMAN SHARMA, SUKHJINDER SINGH, SURYA NARAYANA S, **Shivam Singh Chouhan, **Harpreet Singh, **S. Surya Narayanan, **Harish Kumar Saini, **Anamika Yadav\n  ResearchArea: a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions, b)\u00a0Proactive approaches to road safety, including the use of surrogate safety measures, c) Planning and design of dedicated powered two-wheeler lanes for urban and non-urban highways, d) Simulation-based AV's\u00a0and human-driven vehicle interaction, e) Public transportation system design\u00a0and planning with primary focus\u00a0on Bus Rapid Transit Systems, f) Exploring adoption intentions of e-shared mobility alternatives, g) Traffic management using BT and Wifi sensors, Secondary research interest, h) Utilization of surface-modified aggregates in asphalt mixes, Analysing Vehicle-Vehicle Interaction Dynamics at Unsignalized Intersection using Surrogate Safety Measures, Exclusive Motorcycle Lanes: A Step towards Safe Traffic Movement, Guardrails on Highways, Analysis of Traffic Noise Propagation and Mitigation Strategies Along Road Corridors, Urban Mobility and Traffic Management using Bluetooth and Wi-Fi based sensors\n  Relationships: RESEARCHES_IN: 22, SUPERVISED_BY: 16, STUDIES: 13\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Ankit Kathuria. 13 PhD student(s). working in areas like civil_engineering:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions, civil_engineering:b)\u00a0Proactive approaches to road safety, civil_engineering:including the use of surrogate safety measures.",
+      "text": "Community 0 in IIT Jammu Civil Engineering Department:\n  ExternalPerson: Ashish Bhaskar, Ashoke K Sarkar\n  Faculty: Ankit Kathuria\n  PhDStudent: ANAMIKA YADAV, HARISH KUMAR SAINI, ISH GUPTA, MEHLIL AFRAAZ, PRABHJOT SINGH GANDHI, SARVDAMAN SHARMA, SUKHJINDER SINGH, SURYA NARAYANA S, **Shivam Singh Chouhan, **Harpreet Singh, **S. Surya Narayanan, **Harish Kumar Saini, **Anamika Yadav\n  ResearchArea: a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions, b)\u00a0Proactive approaches to road safety, including the use of surrogate safety measures, c) Planning and design of dedicated powered two-wheeler lanes for urban and non-urban highways, d) Simulation-based AV's\u00a0and human-driven vehicle interaction, e) Public transportation system design\u00a0and planning with primary focus\u00a0on Bus Rapid Transit Systems, f) Exploring adoption intentions of e-shared mobility alternatives, g) Traffic management using BT and Wifi sensors, Secondary research interest, h) Utilization of surface-modified aggregates in asphalt mixes, Analysing Vehicle-Vehicle Interaction Dynamics at Unsignalized Intersection using Surrogate Safety Measures, Exclusive Motorcycle Lanes: A Step towards Safe Traffic Movement, Guardrails on Highways, Analysis of Traffic Noise Propagation and Mitigation Strategies Along Road Corridors, Urban Mobility and Traffic Management using Bluetooth and Wi-Fi based sensors\n  Relationships: RESEARCHES_IN: 22, SUPERVISED_BY: 16, STUDIES: 13\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Ankit Kathuria. 13 PhD student(s). working in areas like civil_engineering:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions, civil_engineering:b)\u00a0Proactive approaches to road safety, civil_engineering:including the use of surrogate safety measures.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Ankit Kathuria. 13 PhD student(s). working in areas like civil_engineering:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions, civil_engineering:b)\u00a0Proactive approaches to road safety, civil_engineering:including the use of surrogate safety measures.",
       "size": 38
     },
@@ -800,7 +806,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Anurag Misra\n  PhDStudent: LALIT SINGH, MANALI RATHEE, MUZAFAR AHMAD GANIE, RAFIA RASHID, **Manali Rathee\n  ResearchArea: Utilisation of wastes in concrete, improvements in cover-zone properties of concrete, Performance of High strength steel-concrete composite sections. Polymer composites, High strength steel welding, Low carbon cement, Geopolymer Concrete, NDT- Computerized Tomography, Development of Ultra High Performance Geopolymer Concrete and its Assessment to Durability, Geopolymer concrete\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Anurag Misra. 5 PhD student(s). working in areas like civil_engineering:Utilisation of wastes in concrete, civil_engineering:improvements in cover-zone properties of concrete, civil_engineering:Performance of High strength steel-concrete composite sections. Polymer composites.",
+      "text": "Community 1 in IIT Jammu Civil Engineering Department:\n  Faculty: Anurag Misra\n  PhDStudent: LALIT SINGH, MANALI RATHEE, MUZAFAR AHMAD GANIE, RAFIA RASHID, **Manali Rathee\n  ResearchArea: Utilisation of wastes in concrete, improvements in cover-zone properties of concrete, Performance of High strength steel-concrete composite sections. Polymer composites, High strength steel welding, Low carbon cement, Geopolymer Concrete, NDT- Computerized Tomography, Development of Ultra High Performance Geopolymer Concrete and its Assessment to Durability, Geopolymer concrete\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Anurag Misra. 5 PhD student(s). working in areas like civil_engineering:Utilisation of wastes in concrete, civil_engineering:improvements in cover-zone properties of concrete, civil_engineering:Performance of High strength steel-concrete composite sections. Polymer composites.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Anurag Misra. 5 PhD student(s). working in areas like civil_engineering:Utilisation of wastes in concrete, civil_engineering:improvements in cover-zone properties of concrete, civil_engineering:Performance of High strength steel-concrete composite sections. Polymer composites.",
       "size": 15
     },
@@ -913,7 +919,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Chembolu Vinay\n  PhDStudent: JAYPRAKASH KUMAR, PREM PARKASH, RISHI GUPTA\n  ResearchArea: 1. River Morphology, 2. Experimental Hydraulics, 3. River Engineering, 4. Nature based solutions for River Basin Management, 5. Satellite Remote Sensing for River Management Studies, Experimental and Numerical Investigation on Hydrodynamics of Mountainous Rivers, Water Resources Engineering, Response of Nature Based Solutions on Integrated Catchment Scale Flood mitigation measures\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Chembolu Vinay. 3 PhD student(s). working in areas like civil_engineering:1. River Morphology, civil_engineering:2. Experimental Hydraulics, civil_engineering:3. River Engineering.",
+      "text": "Community 2 in IIT Jammu Civil Engineering Department:\n  Faculty: Chembolu Vinay\n  PhDStudent: JAYPRAKASH KUMAR, PREM PARKASH, RISHI GUPTA\n  ResearchArea: 1. River Morphology, 2. Experimental Hydraulics, 3. River Engineering, 4. Nature based solutions for River Basin Management, 5. Satellite Remote Sensing for River Management Studies, Experimental and Numerical Investigation on Hydrodynamics of Mountainous Rivers, Water Resources Engineering, Response of Nature Based Solutions on Integrated Catchment Scale Flood mitigation measures\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Chembolu Vinay. 3 PhD student(s). working in areas like civil_engineering:1. River Morphology, civil_engineering:2. Experimental Hydraulics, civil_engineering:3. River Engineering.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Chembolu Vinay. 3 PhD student(s). working in areas like civil_engineering:1. River Morphology, civil_engineering:2. Experimental Hydraulics, civil_engineering:3. River Engineering.",
       "size": 12
     },
@@ -1061,7 +1067,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 3 in IIT Jammu EE Department:\n  Faculty: Deepak Yadav\n  PhDStudent: GOUTAM KUMAR, RAINA VENPOSH, SUPRIYA BANSAL\n  ResearchArea: Seismic Response Control, Supplemental Energy Dissipation Devices, Metallic Yielding Dampers, Retrofitting of Structures, Earthquake Resistant Design, Tall Buildings, Aluminum, Steel and RCC Structures, Concrete-Filled Tubes (CFTs), Precast Connections, Seismic Performance of Buckling Restricted Braces, Seismic Response Control., Seismic Performance of Buckling Restrained Braces Frames, Seismic Design\n  Relationships: RESEARCHES_IN: 13, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Deepak Yadav. 3 PhD student(s). working in areas like civil_engineering:Seismic Response Control, civil_engineering:Supplemental Energy Dissipation Devices, civil_engineering:Metallic Yielding Dampers.",
+      "text": "Community 3 in IIT Jammu Civil Engineering Department:\n  Faculty: Deepak Yadav\n  PhDStudent: GOUTAM KUMAR, RAINA VENPOSH, SUPRIYA BANSAL\n  ResearchArea: Seismic Response Control, Supplemental Energy Dissipation Devices, Metallic Yielding Dampers, Retrofitting of Structures, Earthquake Resistant Design, Tall Buildings, Aluminum, Steel and RCC Structures, Concrete-Filled Tubes (CFTs), Precast Connections, Seismic Performance of Buckling Restricted Braces, Seismic Response Control., Seismic Performance of Buckling Restrained Braces Frames, Seismic Design\n  Relationships: RESEARCHES_IN: 13, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Deepak Yadav. 3 PhD student(s). working in areas like civil_engineering:Seismic Response Control, civil_engineering:Supplemental Energy Dissipation Devices, civil_engineering:Metallic Yielding Dampers.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Deepak Yadav. 3 PhD student(s). working in areas like civil_engineering:Seismic Response Control, civil_engineering:Supplemental Energy Dissipation Devices, civil_engineering:Metallic Yielding Dampers.",
       "size": 17
     },
@@ -1070,18 +1076,38 @@
       "community_id": 4,
       "members": [
         "civil_engineering:Dhanendra Kumar",
+        "civil_engineering:Srishti Singh",
+        "civil_engineering:Ved Prakash Ranjan",
         "civil_engineering:Development and investigation of advanced cementitious composites",
         "civil_engineering:Sustainable construction materials",
         "civil_engineering:Thermal and impact effects on concrete materials",
         "civil_engineering:Durability",
         "civil_engineering:sustainability",
         "civil_engineering:and resiliency of concrete materials and infrastructure",
+        "civil_engineering:Geophysics",
+        "civil_engineering:Solid Earth",
+        "civil_engineering:Mantle Convection",
+        "civil_engineering:Geodynamics",
+        "civil_engineering:Plate Tectonics",
+        "civil_engineering:Disaster Management",
+        "civil_engineering:Solid Waste Management and other areas in environmental engineering",
+        "IIT Jammu CIVIL_ENGINEERING Department",
         "civil_engineering:KM PUJA RANI",
-        "civil_engineering:Concrete Technology"
+        "civil_engineering:Concrete Technology",
+        "civil_engineering:MEHAK MANZOOR",
+        "civil_engineering:Fate and Transport of Microplastics in Riverine Systems",
+        "civil_engineering:lab:Environmental Engineering Laboratory",
+        "civil_engineering:lab:Geo-STRIDE Lab",
+        "civil_engineering:lab:Fluid Mechanics lab",
+        "civil_engineering:lab:Rock Mechanics and Geology Lab",
+        "civil_engineering:lab:Soil Mechanics Lab",
+        "civil_engineering:lab:Water Resources Lab"
       ],
       "members_by_type": {
         "Faculty": [
-          "civil_engineering:Dhanendra Kumar"
+          "civil_engineering:Dhanendra Kumar",
+          "civil_engineering:Srishti Singh",
+          "civil_engineering:Ved Prakash Ranjan"
         ],
         "ResearchArea": [
           "civil_engineering:Development and investigation of advanced cementitious composites",
@@ -1090,10 +1116,30 @@
           "civil_engineering:Durability",
           "civil_engineering:sustainability",
           "civil_engineering:and resiliency of concrete materials and infrastructure",
-          "civil_engineering:Concrete Technology"
+          "civil_engineering:Geophysics",
+          "civil_engineering:Solid Earth",
+          "civil_engineering:Mantle Convection",
+          "civil_engineering:Geodynamics",
+          "civil_engineering:Plate Tectonics",
+          "civil_engineering:Disaster Management",
+          "civil_engineering:Solid Waste Management and other areas in environmental engineering",
+          "civil_engineering:Concrete Technology",
+          "civil_engineering:Fate and Transport of Microplastics in Riverine Systems"
+        ],
+        "Department": [
+          "IIT Jammu CIVIL_ENGINEERING Department"
         ],
         "PhDStudent": [
-          "civil_engineering:KM PUJA RANI"
+          "civil_engineering:KM PUJA RANI",
+          "civil_engineering:MEHAK MANZOOR"
+        ],
+        "Lab": [
+          "civil_engineering:lab:Environmental Engineering Laboratory",
+          "civil_engineering:lab:Geo-STRIDE Lab",
+          "civil_engineering:lab:Fluid Mechanics lab",
+          "civil_engineering:lab:Rock Mechanics and Geology Lab",
+          "civil_engineering:lab:Soil Mechanics Lab",
+          "civil_engineering:lab:Water Resources Lab"
         ]
       },
       "internal_edges": [
@@ -1133,6 +1179,61 @@
           "type": "RESEARCHES_IN"
         },
         {
+          "source": "civil_engineering:Dhanendra Kumar",
+          "target": "IIT Jammu CIVIL_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "civil_engineering:Srishti Singh",
+          "target": "civil_engineering:Geophysics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Srishti Singh",
+          "target": "civil_engineering:Solid Earth",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Srishti Singh",
+          "target": "civil_engineering:Mantle Convection",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Srishti Singh",
+          "target": "civil_engineering:Geodynamics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Srishti Singh",
+          "target": "civil_engineering:Plate Tectonics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Srishti Singh",
+          "target": "civil_engineering:Disaster Management",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Srishti Singh",
+          "target": "IIT Jammu CIVIL_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "civil_engineering:Ved Prakash Ranjan",
+          "target": "civil_engineering:Solid Waste Management and other areas in environmental engineering",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Ved Prakash Ranjan",
+          "target": "civil_engineering:Fate and Transport of Microplastics in Riverine Systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Ved Prakash Ranjan",
+          "target": "IIT Jammu CIVIL_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
           "source": "civil_engineering:KM PUJA RANI",
           "target": "civil_engineering:Dhanendra Kumar",
           "type": "SUPERVISED_BY"
@@ -1141,11 +1242,51 @@
           "source": "civil_engineering:KM PUJA RANI",
           "target": "civil_engineering:Concrete Technology",
           "type": "STUDIES"
+        },
+        {
+          "source": "civil_engineering:MEHAK MANZOOR",
+          "target": "civil_engineering:Ved Prakash Ranjan",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "civil_engineering:MEHAK MANZOOR",
+          "target": "civil_engineering:Fate and Transport of Microplastics in Riverine Systems",
+          "type": "STUDIES"
+        },
+        {
+          "source": "civil_engineering:lab:Environmental Engineering Laboratory",
+          "target": "IIT Jammu CIVIL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "civil_engineering:lab:Geo-STRIDE Lab",
+          "target": "IIT Jammu CIVIL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "civil_engineering:lab:Fluid Mechanics lab",
+          "target": "IIT Jammu CIVIL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "civil_engineering:lab:Rock Mechanics and Geology Lab",
+          "target": "IIT Jammu CIVIL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "civil_engineering:lab:Soil Mechanics Lab",
+          "target": "IIT Jammu CIVIL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "civil_engineering:lab:Water Resources Lab",
+          "target": "IIT Jammu CIVIL_ENGINEERING Department",
+          "type": "FACILITY_OF"
         }
       ],
-      "text": "Community 4 in IIT Jammu EE Department:\n  Faculty: Dhanendra Kumar\n  PhDStudent: KM PUJA RANI\n  ResearchArea: Development and investigation of advanced cementitious composites, Sustainable construction materials, Thermal and impact effects on concrete materials, Durability, sustainability, and resiliency of concrete materials and infrastructure, Concrete Technology\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Dhanendra Kumar. 1 PhD student(s). working in areas like civil_engineering:Development and investigation of advanced cementitious composites, civil_engineering:Sustainable construction materials, civil_engineering:Thermal and impact effects on concrete materials.",
-      "summary": "This group includes 1 faculty member(s): civil_engineering:Dhanendra Kumar. 1 PhD student(s). working in areas like civil_engineering:Development and investigation of advanced cementitious composites, civil_engineering:Sustainable construction materials, civil_engineering:Thermal and impact effects on concrete materials.",
-      "size": 9
+      "text": "Community 4 in IIT Jammu Civil Engineering Department:\n  Department: Department of Civil Engineering\n  Faculty: Dhanendra Kumar, Srishti Singh, Ved Prakash Ranjan\n  Lab: Environmental Engineering Laboratory, Geo-STRIDE Lab, Fluid Mechanics lab, Rock Mechanics and Geology Lab, Soil Mechanics Lab, Water Resources Lab\n  PhDStudent: KM PUJA RANI, MEHAK MANZOOR\n  ResearchArea: Development and investigation of advanced cementitious composites, Sustainable construction materials, Thermal and impact effects on concrete materials, Durability, sustainability, and resiliency of concrete materials and infrastructure, Geophysics, Solid Earth, Mantle Convection, Geodynamics, Plate Tectonics, Disaster Management, Solid Waste Management and other areas in environmental engineering, Concrete Technology, Fate and Transport of Microplastics in Riverine Systems\n  Relationships: RESEARCHES_IN: 15, MEMBER_OF: 3, SUPERVISED_BY: 2, STUDIES: 2, FACILITY_OF: 6\n\nSummary: This group includes 3 faculty member(s): civil_engineering:Dhanendra Kumar, civil_engineering:Srishti Singh, civil_engineering:Ved Prakash Ranjan. 2 PhD student(s). working in areas like civil_engineering:Development and investigation of advanced cementitious composites, civil_engineering:Sustainable construction materials, civil_engineering:Thermal and impact effects on concrete materials.",
+      "summary": "This group includes 3 faculty member(s): civil_engineering:Dhanendra Kumar, civil_engineering:Srishti Singh, civil_engineering:Ved Prakash Ranjan. 2 PhD student(s). working in areas like civil_engineering:Development and investigation of advanced cementitious composites, civil_engineering:Sustainable construction materials, civil_engineering:Thermal and impact effects on concrete materials.",
+      "size": 27
     },
     {
       "id": "community_5",
@@ -1367,7 +1508,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Divyesh Varade\n  PhDStudent: ANIKUL ISLAM, APARNA C, DHEERAJ MOHAN GURURANI, HEMANT SINGH, MD MEHRAJ, RASIQ AHMAD MIR, SRISTI GUPTA\n  ResearchArea: Remote Sensing of Snow, Glaciers, and Sea ice, Applied Remote Sensing for Earth Observation, Polarimetric Radar Backscatter Modelling, Hyperspectral Image Analysis, GNSS-Reflectometry, Remote Sensing of Soil Moisture, Applied Machine Learning, Neural Computing, Glaciology, Estimation of Soil Moisture using Microwave Remote Sensing, Water Resources, Remote Sensing & GIS, Investigation of snow, glacier and some associated hazards using multispectral data and field data, Cryosphere Studies using Remote-Sensing-Based Modelling Approaches\n  Relationships: RESEARCHES_IN: 17, SUPERVISED_BY: 7, STUDIES: 7\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Divyesh Varade. 7 PhD student(s). working in areas like civil_engineering:Remote Sensing of Snow, civil_engineering:Glaciers, civil_engineering:and Sea ice.",
+      "text": "Community 5 in IIT Jammu Civil Engineering Department:\n  Faculty: Divyesh Varade\n  PhDStudent: ANIKUL ISLAM, APARNA C, DHEERAJ MOHAN GURURANI, HEMANT SINGH, MD MEHRAJ, RASIQ AHMAD MIR, SRISTI GUPTA\n  ResearchArea: Remote Sensing of Snow, Glaciers, and Sea ice, Applied Remote Sensing for Earth Observation, Polarimetric Radar Backscatter Modelling, Hyperspectral Image Analysis, GNSS-Reflectometry, Remote Sensing of Soil Moisture, Applied Machine Learning, Neural Computing, Glaciology, Estimation of Soil Moisture using Microwave Remote Sensing, Water Resources, Remote Sensing & GIS, Investigation of snow, glacier and some associated hazards using multispectral data and field data, Cryosphere Studies using Remote-Sensing-Based Modelling Approaches\n  Relationships: RESEARCHES_IN: 17, SUPERVISED_BY: 7, STUDIES: 7\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Divyesh Varade. 7 PhD student(s). working in areas like civil_engineering:Remote Sensing of Snow, civil_engineering:Glaciers, civil_engineering:and Sea ice.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Divyesh Varade. 7 PhD student(s). working in areas like civil_engineering:Remote Sensing of Snow, civil_engineering:Glaciers, civil_engineering:and Sea ice.",
       "size": 25
     },
@@ -1447,7 +1588,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 6 in IIT Jammu EE Department:\n  Faculty: Mir Faizan Ul Haq\n  PhDStudent: OWAIS UL HASSAN, SHEIKH AB MAJID\n  ResearchArea: Structural dynamics, seismic base isolation, small modular reactors, large scale testing, Earthquake Engineering\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Mir Faizan Ul Haq. 2 PhD student(s). working in areas like civil_engineering:Structural dynamics, civil_engineering:seismic base isolation, civil_engineering:small modular reactors.",
+      "text": "Community 6 in IIT Jammu Civil Engineering Department:\n  Faculty: Mir Faizan Ul Haq\n  PhDStudent: OWAIS UL HASSAN, SHEIKH AB MAJID\n  ResearchArea: Structural dynamics, seismic base isolation, small modular reactors, large scale testing, Earthquake Engineering\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Mir Faizan Ul Haq. 2 PhD student(s). working in areas like civil_engineering:Structural dynamics, civil_engineering:seismic base isolation, civil_engineering:small modular reactors.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Mir Faizan Ul Haq. 2 PhD student(s). working in areas like civil_engineering:Structural dynamics, civil_engineering:seismic base isolation, civil_engineering:small modular reactors.",
       "size": 8
     },
@@ -1527,7 +1668,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 7 in IIT Jammu EE Department:\n  Faculty: Nitin Joshi\n  PhDStudent: Harsh Vardhan Singh, RAVI KUMAR\n  ResearchArea: Groundwater and Contaminant Transport Modelling, Droughts, Agriculture water management, Climate Extremes and Drought Risk Analysis, Flash Drought Dynamics in the Western Himalayas: Remote Sensing and Hydrological Model Ensembles with Machine Learning-Based Driver Attribution\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Nitin Joshi. 2 PhD student(s). working in areas like civil_engineering:Groundwater and Contaminant Transport Modelling, civil_engineering:Droughts, civil_engineering:Agriculture water management.",
+      "text": "Community 7 in IIT Jammu Civil Engineering Department:\n  Faculty: Nitin Joshi\n  PhDStudent: Harsh Vardhan Singh, RAVI KUMAR\n  ResearchArea: Groundwater and Contaminant Transport Modelling, Droughts, Agriculture water management, Climate Extremes and Drought Risk Analysis, Flash Drought Dynamics in the Western Himalayas: Remote Sensing and Hydrological Model Ensembles with Machine Learning-Based Driver Attribution\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Nitin Joshi. 2 PhD student(s). working in areas like civil_engineering:Groundwater and Contaminant Transport Modelling, civil_engineering:Droughts, civil_engineering:Agriculture water management.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Nitin Joshi. 2 PhD student(s). working in areas like civil_engineering:Groundwater and Contaminant Transport Modelling, civil_engineering:Droughts, civil_engineering:Agriculture water management.",
       "size": 8
     },
@@ -1671,7 +1812,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 8 in IIT Jammu EE Department:\n  Faculty: Pervaiz Fathima Khatoon M\n  PhDStudent: MUNEEM AHMAD DAR, SUMIT SINGH THAKUR, ZEESHAN ABBAS, **Sumit Singh Thakur, **Muneem Ahmad Dar\n  ResearchArea: Fluid flow modelling in fracturing porous materials, Fatigue modelling, Life prediction, Damage assessment in existing structures, Constitutive modelling of material behaviour of heterogeneous composite materials, Fracture in heterogeneous material, Stochastic modelling of fatigue crack growth in concrete, Fracture and Fatigue Analysis of Concrete Structures, Computational solid mechanics\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Pervaiz Fathima Khatoon M. 5 PhD student(s). working in areas like civil_engineering:Fluid flow modelling in fracturing porous materials, civil_engineering:Fatigue modelling, civil_engineering:Life prediction.",
+      "text": "Community 8 in IIT Jammu Civil Engineering Department:\n  Faculty: Pervaiz Fathima Khatoon M\n  PhDStudent: MUNEEM AHMAD DAR, SUMIT SINGH THAKUR, ZEESHAN ABBAS, **Sumit Singh Thakur, **Muneem Ahmad Dar\n  ResearchArea: Fluid flow modelling in fracturing porous materials, Fatigue modelling, Life prediction, Damage assessment in existing structures, Constitutive modelling of material behaviour of heterogeneous composite materials, Fracture in heterogeneous material, Stochastic modelling of fatigue crack growth in concrete, Fracture and Fatigue Analysis of Concrete Structures, Computational solid mechanics\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Pervaiz Fathima Khatoon M. 5 PhD student(s). working in areas like civil_engineering:Fluid flow modelling in fracturing porous materials, civil_engineering:Fatigue modelling, civil_engineering:Life prediction.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Pervaiz Fathima Khatoon M. 5 PhD student(s). working in areas like civil_engineering:Fluid flow modelling in fracturing porous materials, civil_engineering:Fatigue modelling, civil_engineering:Life prediction.",
       "size": 15
     },
@@ -1679,227 +1820,64 @@
       "id": "community_9",
       "community_id": 9,
       "members": [
-        "civil_engineering:Prasun Halder",
-        "civil_engineering:Riya Bhowmik",
-        "civil_engineering:1. Shallow and Deep Foundation",
-        "civil_engineering:2. Geosynthetic-reinforced geotechnology",
-        "civil_engineering:3. Tunnelling and underground space",
-        "civil_engineering:4. Transportation Geotechnics",
-        "civil_engineering:5. Root-soil interaction",
-        "civil_engineering:6. Computational Geomechanics",
-        "civil_engineering:7. Ground improvement",
-        "civil_engineering:8. Analysis of dam-foundation system on jointed rock",
-        "civil_engineering:Protection works against landslides (debris flow/rockfall/mudslides) in hilly regions",
-        "civil_engineering:Use of geosynthetics for hill road infrastructure",
-        "civil_engineering:Rock-shed tunnels under rockfall impacts",
-        "civil_engineering:Geosynthetics-reinforced infrastructure in seasonally frozen regions",
-        "civil_engineering:Tunnelling-induced instability and surface settlements",
-        "civil_engineering:AMAN SHARMA",
-        "civil_engineering:Performance Evaluation of Hill Roads Under Different Possible Loading Conditions",
-        "civil_engineering:HUMARA IQBAL",
-        "civil_engineering:Landslide studies",
-        "civil_engineering:MASOOM MAIRAJ",
-        "civil_engineering:Geotechnical Engineering",
-        "civil_engineering:MEHAK WASEEM",
-        "civil_engineering:MOHMMAD UMAR RASOOL",
-        "civil_engineering:Geosynthetic-based solution for hill road infrastructure",
-        "civil_engineering:SHREYA MAHESHWARI",
-        "civil_engineering:Landslide Mitigation Structures: Investigations on Geosynthetics-Reinforced Embankments"
+        "civil_engineering:**Aanchna Sharma",
+        "civil_engineering:Vinod Kushvaha",
+        "civil_engineering:Fracture and Fatigue behavior of particulate polymer composites",
+        "civil_engineering:**I Bhargav",
+        "civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption",
+        "civil_engineering:**Sristi Gupta",
+        "civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites"
       ],
       "members_by_type": {
-        "Faculty": [
-          "civil_engineering:Prasun Halder",
-          "civil_engineering:Riya Bhowmik"
+        "PhDStudent": [
+          "civil_engineering:**Aanchna Sharma",
+          "civil_engineering:**I Bhargav",
+          "civil_engineering:**Sristi Gupta"
+        ],
+        "ExternalPerson": [
+          "civil_engineering:Vinod Kushvaha"
         ],
         "ResearchArea": [
-          "civil_engineering:1. Shallow and Deep Foundation",
-          "civil_engineering:2. Geosynthetic-reinforced geotechnology",
-          "civil_engineering:3. Tunnelling and underground space",
-          "civil_engineering:4. Transportation Geotechnics",
-          "civil_engineering:5. Root-soil interaction",
-          "civil_engineering:6. Computational Geomechanics",
-          "civil_engineering:7. Ground improvement",
-          "civil_engineering:8. Analysis of dam-foundation system on jointed rock",
-          "civil_engineering:Protection works against landslides (debris flow/rockfall/mudslides) in hilly regions",
-          "civil_engineering:Use of geosynthetics for hill road infrastructure",
-          "civil_engineering:Rock-shed tunnels under rockfall impacts",
-          "civil_engineering:Geosynthetics-reinforced infrastructure in seasonally frozen regions",
-          "civil_engineering:Tunnelling-induced instability and surface settlements",
-          "civil_engineering:Performance Evaluation of Hill Roads Under Different Possible Loading Conditions",
-          "civil_engineering:Landslide studies",
-          "civil_engineering:Geotechnical Engineering",
-          "civil_engineering:Geosynthetic-based solution for hill road infrastructure",
-          "civil_engineering:Landslide Mitigation Structures: Investigations on Geosynthetics-Reinforced Embankments"
-        ],
-        "PhDStudent": [
-          "civil_engineering:AMAN SHARMA",
-          "civil_engineering:HUMARA IQBAL",
-          "civil_engineering:MASOOM MAIRAJ",
-          "civil_engineering:MEHAK WASEEM",
-          "civil_engineering:MOHMMAD UMAR RASOOL",
-          "civil_engineering:SHREYA MAHESHWARI"
+          "civil_engineering:Fracture and Fatigue behavior of particulate polymer composites",
+          "civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption",
+          "civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites"
         ]
       },
       "internal_edges": [
         {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:1. Shallow and Deep Foundation",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:2. Geosynthetic-reinforced geotechnology",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:3. Tunnelling and underground space",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:4. Transportation Geotechnics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:5. Root-soil interaction",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:6. Computational Geomechanics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:7. Ground improvement",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:8. Analysis of dam-foundation system on jointed rock",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:Performance Evaluation of Hill Roads Under Different Possible Loading Conditions",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:Geotechnical Engineering",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Prasun Halder",
-          "target": "civil_engineering:Geosynthetic-based solution for hill road infrastructure",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Riya Bhowmik",
-          "target": "civil_engineering:Protection works against landslides (debris flow/rockfall/mudslides) in hilly regions",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Riya Bhowmik",
-          "target": "civil_engineering:Use of geosynthetics for hill road infrastructure",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Riya Bhowmik",
-          "target": "civil_engineering:Rock-shed tunnels under rockfall impacts",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Riya Bhowmik",
-          "target": "civil_engineering:Geosynthetics-reinforced infrastructure in seasonally frozen regions",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Riya Bhowmik",
-          "target": "civil_engineering:Tunnelling-induced instability and surface settlements",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Riya Bhowmik",
-          "target": "civil_engineering:Landslide studies",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Riya Bhowmik",
-          "target": "civil_engineering:Geotechnical Engineering",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Riya Bhowmik",
-          "target": "civil_engineering:Landslide Mitigation Structures: Investigations on Geosynthetics-Reinforced Embankments",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:AMAN SHARMA",
-          "target": "civil_engineering:Prasun Halder",
+          "source": "civil_engineering:**Aanchna Sharma",
+          "target": "civil_engineering:Vinod Kushvaha",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "civil_engineering:AMAN SHARMA",
-          "target": "civil_engineering:Performance Evaluation of Hill Roads Under Different Possible Loading Conditions",
+          "source": "civil_engineering:**Aanchna Sharma",
+          "target": "civil_engineering:Fracture and Fatigue behavior of particulate polymer composites",
           "type": "STUDIES"
         },
         {
-          "source": "civil_engineering:HUMARA IQBAL",
-          "target": "civil_engineering:Riya Bhowmik",
+          "source": "civil_engineering:**I Bhargav",
+          "target": "civil_engineering:Vinod Kushvaha",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "civil_engineering:HUMARA IQBAL",
-          "target": "civil_engineering:Landslide studies",
+          "source": "civil_engineering:**I Bhargav",
+          "target": "civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption",
           "type": "STUDIES"
         },
         {
-          "source": "civil_engineering:MASOOM MAIRAJ",
-          "target": "civil_engineering:Riya Bhowmik",
+          "source": "civil_engineering:**Sristi Gupta",
+          "target": "civil_engineering:Vinod Kushvaha",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "civil_engineering:MASOOM MAIRAJ",
-          "target": "civil_engineering:Geotechnical Engineering",
-          "type": "STUDIES"
-        },
-        {
-          "source": "civil_engineering:MEHAK WASEEM",
-          "target": "civil_engineering:Prasun Halder",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "civil_engineering:MEHAK WASEEM",
-          "target": "civil_engineering:Geotechnical Engineering",
-          "type": "STUDIES"
-        },
-        {
-          "source": "civil_engineering:MOHMMAD UMAR RASOOL",
-          "target": "civil_engineering:Prasun Halder",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "civil_engineering:MOHMMAD UMAR RASOOL",
-          "target": "civil_engineering:Geosynthetic-based solution for hill road infrastructure",
-          "type": "STUDIES"
-        },
-        {
-          "source": "civil_engineering:SHREYA MAHESHWARI",
-          "target": "civil_engineering:Riya Bhowmik",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "civil_engineering:SHREYA MAHESHWARI",
-          "target": "civil_engineering:Landslide Mitigation Structures: Investigations on Geosynthetics-Reinforced Embankments",
+          "source": "civil_engineering:**Sristi Gupta",
+          "target": "civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 9 in IIT Jammu EE Department:\n  Faculty: Prasun Halder, Riya Bhowmik\n  PhDStudent: AMAN SHARMA, HUMARA IQBAL, MASOOM MAIRAJ, MEHAK WASEEM, MOHMMAD UMAR RASOOL, SHREYA MAHESHWARI\n  ResearchArea: 1. Shallow and Deep Foundation, 2. Geosynthetic-reinforced geotechnology, 3. Tunnelling and underground space, 4. Transportation Geotechnics, 5. Root-soil interaction, 6. Computational Geomechanics, 7. Ground improvement, 8. Analysis of dam-foundation system on jointed rock, Protection works against landslides (debris flow/rockfall/mudslides) in hilly regions, Use of geosynthetics for hill road infrastructure, Rock-shed tunnels under rockfall impacts, Geosynthetics-reinforced infrastructure in seasonally frozen regions, Tunnelling-induced instability and surface settlements, Performance Evaluation of Hill Roads Under Different Possible Loading Conditions, Landslide studies\n  Relationships: RESEARCHES_IN: 19, SUPERVISED_BY: 6, STUDIES: 6\n\nSummary: This group includes 2 faculty member(s): civil_engineering:Prasun Halder, civil_engineering:Riya Bhowmik. 6 PhD student(s). working in areas like civil_engineering:1. Shallow and Deep Foundation, civil_engineering:2. Geosynthetic-reinforced geotechnology, civil_engineering:3. Tunnelling and underground space.",
-      "summary": "This group includes 2 faculty member(s): civil_engineering:Prasun Halder, civil_engineering:Riya Bhowmik. 6 PhD student(s). working in areas like civil_engineering:1. Shallow and Deep Foundation, civil_engineering:2. Geosynthetic-reinforced geotechnology, civil_engineering:3. Tunnelling and underground space.",
-      "size": 26
+      "text": "Community 9 in IIT Jammu Civil Engineering Department:\n  ExternalPerson: Vinod Kushvaha\n  PhDStudent: **Aanchna Sharma, **I Bhargav, **Sristi Gupta\n  ResearchArea: Fracture and Fatigue behavior of particulate polymer composites, Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption, Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites\n  Relationships: SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: 3 PhD student(s). working in areas like civil_engineering:Fracture and Fatigue behavior of particulate polymer composites, civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption, civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites.",
+      "summary": "3 PhD student(s). working in areas like civil_engineering:Fracture and Fatigue behavior of particulate polymer composites, civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption, civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites.",
+      "size": 7
     },
     {
       "id": "community_10",
@@ -2036,7 +2014,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 10 in IIT Jammu EE Department:\n  Faculty: Pratik Kumar\n  PhDStudent: AKHIL GUPTA, QAMARUZ ZAMAN KHAKI, UBHAT ALI, WASEEM RAJA\n  ResearchArea: 1. Wastewater Treatment using state-of-the-art physical and biological technologies, 2. Drinking Water Treatment using Adsorption Techniques, 3. Bioremediation of Water Pollutants using nature-based solution, 4. Applications of Environmental Biotechnology in Product Development, 5. Circular Bioeconomy (Liquid and Solid Waste), 6. Smart bio-sensors for the detection of emerging water pollutants, Waste water treatment and valorisation, Wastewater treatment, Modular Wastewater Treatment, Decentralized And Sustainable Sewage Treatment For High-Rise Establishments And Public Infrastructure\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Pratik Kumar. 4 PhD student(s). working in areas like civil_engineering:1. Wastewater Treatment using state-of-the-art physical and biological technologies, civil_engineering:2. Drinking Water Treatment using Adsorption Techniques, civil_engineering:3. Bioremediation of Water Pollutants using nature-based solution.",
+      "text": "Community 10 in IIT Jammu Civil Engineering Department:\n  Faculty: Pratik Kumar\n  PhDStudent: AKHIL GUPTA, QAMARUZ ZAMAN KHAKI, UBHAT ALI, WASEEM RAJA\n  ResearchArea: 1. Wastewater Treatment using state-of-the-art physical and biological technologies, 2. Drinking Water Treatment using Adsorption Techniques, 3. Bioremediation of Water Pollutants using nature-based solution, 4. Applications of Environmental Biotechnology in Product Development, 5. Circular Bioeconomy (Liquid and Solid Waste), 6. Smart bio-sensors for the detection of emerging water pollutants, Waste water treatment and valorisation, Wastewater treatment, Modular Wastewater Treatment, Decentralized And Sustainable Sewage Treatment For High-Rise Establishments And Public Infrastructure\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Pratik Kumar. 4 PhD student(s). working in areas like civil_engineering:1. Wastewater Treatment using state-of-the-art physical and biological technologies, civil_engineering:2. Drinking Water Treatment using Adsorption Techniques, civil_engineering:3. Bioremediation of Water Pollutants using nature-based solution.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Pratik Kumar. 4 PhD student(s). working in areas like civil_engineering:1. Wastewater Treatment using state-of-the-art physical and biological technologies, civil_engineering:2. Drinking Water Treatment using Adsorption Techniques, civil_engineering:3. Bioremediation of Water Pollutants using nature-based solution.",
       "size": 15
     },
@@ -2269,7 +2247,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 11 in IIT Jammu EE Department:\n  ExternalPerson: Ashok K. Ahuja, Arnab Banerjee\n  Faculty: Rajendra Kumar Varma\n  PhDStudent: ASHFAQ MALIK, I BHARGAV, SALIM BIN KAISAR, SWATI SINGH, VIJAY KUMAR SHARMA, **Abdul Haseeb Wani, **Satyendra K. Singh\n  ResearchArea: CFRP confined concrete, Cyclic Constitutive modeling, Seismic analysis, Computer aided analysis, Finite element analysis, Design of RCC and PSC, Railway Bridges, Numerical modeling, Use of advanced materials in construction, Precast Prestressed Concrete Pavement for Cold Climates and Rain-Prone Regions, Light Weight Honeycomb Lattices for Enhanced Energy Absorption, Numerical Investigation of Wind Loads on Tall Buildings Situated in Hilly Terrain using CFD, Cyclic Analysis of Reinforced Concrete Columns, Impact of Corrosion in steel Rebar, Structural Wind Engineering\n  Relationships: RESEARCHES_IN: 16, SUPERVISED_BY: 9, STUDIES: 7\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Rajendra Kumar Varma. 7 PhD student(s). working in areas like civil_engineering:CFRP confined concrete, civil_engineering:Cyclic Constitutive modeling, civil_engineering:Seismic analysis.",
+      "text": "Community 11 in IIT Jammu Civil Engineering Department:\n  ExternalPerson: Ashok K. Ahuja, Arnab Banerjee\n  Faculty: Rajendra Kumar Varma\n  PhDStudent: ASHFAQ MALIK, I BHARGAV, SALIM BIN KAISAR, SWATI SINGH, VIJAY KUMAR SHARMA, **Abdul Haseeb Wani, **Satyendra K. Singh\n  ResearchArea: CFRP confined concrete, Cyclic Constitutive modeling, Seismic analysis, Computer aided analysis, Finite element analysis, Design of RCC and PSC, Railway Bridges, Numerical modeling, Use of advanced materials in construction, Precast Prestressed Concrete Pavement for Cold Climates and Rain-Prone Regions, Light Weight Honeycomb Lattices for Enhanced Energy Absorption, Numerical Investigation of Wind Loads on Tall Buildings Situated in Hilly Terrain using CFD, Cyclic Analysis of Reinforced Concrete Columns, Impact of Corrosion in steel Rebar, Structural Wind Engineering\n  Relationships: RESEARCHES_IN: 16, SUPERVISED_BY: 9, STUDIES: 7\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Rajendra Kumar Varma. 7 PhD student(s). working in areas like civil_engineering:CFRP confined concrete, civil_engineering:Cyclic Constitutive modeling, civil_engineering:Seismic analysis.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Rajendra Kumar Varma. 7 PhD student(s). working in areas like civil_engineering:CFRP confined concrete, civil_engineering:Cyclic Constitutive modeling, civil_engineering:Seismic analysis.",
       "size": 26
     },
@@ -2458,7 +2436,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 12 in IIT Jammu EE Department:\n  Faculty: Rimen Jamatia\n  PhDStudent: HASINA BANO, HEMAM AMARJIT SINGH, NAQIBULLAH MEHRI, PRONNOY BHAT, Tawfeeq Ahmad Wani, **Pronnoy Bhat, **Hemam Amarjit Singh\n  ResearchArea: 1. Behavior of concrete under non-uniform passive and active confinement, 2. Size effect in concrete (Deterministic and Statistical), 3. Multi-scale multi-phase modeling of geomaterials, 4. Numerical simulation\u00a0for quasi-brittle fracture, 5. Offshore wind turbine, Mechanical Behavior of Rammed Earth Structures in the Ladakh Region: Experimental and Numerical Study, Size effect study of quasi brittle material under passive confinement, Phase Field Model for Quasi-Brittle Fracture, Constitutive Modelling of Concrete under Non-Uniformly Passive Confinement, Fracture Properties of Quasi-Brittle Materials, Constitutive model of concrete under non-uniform passive confinement, Multi-scale modeling of Granular media\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 7, STUDIES: 7\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Rimen Jamatia. 7 PhD student(s). working in areas like civil_engineering:1. Behavior of concrete under non-uniform passive and active confinement, civil_engineering:2. Size effect in concrete (Deterministic and Statistical), civil_engineering:3. Multi-scale multi-phase modeling of geomaterials.",
+      "text": "Community 12 in IIT Jammu Civil Engineering Department:\n  Faculty: Rimen Jamatia\n  PhDStudent: HASINA BANO, HEMAM AMARJIT SINGH, NAQIBULLAH MEHRI, PRONNOY BHAT, Tawfeeq Ahmad Wani, **Pronnoy Bhat, **Hemam Amarjit Singh\n  ResearchArea: 1. Behavior of concrete under non-uniform passive and active confinement, 2. Size effect in concrete (Deterministic and Statistical), 3. Multi-scale multi-phase modeling of geomaterials, 4. Numerical simulation\u00a0for quasi-brittle fracture, 5. Offshore wind turbine, Mechanical Behavior of Rammed Earth Structures in the Ladakh Region: Experimental and Numerical Study, Size effect study of quasi brittle material under passive confinement, Phase Field Model for Quasi-Brittle Fracture, Constitutive Modelling of Concrete under Non-Uniformly Passive Confinement, Fracture Properties of Quasi-Brittle Materials, Constitutive model of concrete under non-uniform passive confinement, Multi-scale modeling of Granular media\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 7, STUDIES: 7\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Rimen Jamatia. 7 PhD student(s). working in areas like civil_engineering:1. Behavior of concrete under non-uniform passive and active confinement, civil_engineering:2. Size effect in concrete (Deterministic and Statistical), civil_engineering:3. Multi-scale multi-phase modeling of geomaterials.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Rimen Jamatia. 7 PhD student(s). working in areas like civil_engineering:1. Behavior of concrete under non-uniform passive and active confinement, civil_engineering:2. Size effect in concrete (Deterministic and Statistical), civil_engineering:3. Multi-scale multi-phase modeling of geomaterials.",
       "size": 20
     },
@@ -2466,64 +2444,227 @@
       "id": "community_13",
       "community_id": 13,
       "members": [
-        "civil_engineering:**Aanchna Sharma",
-        "civil_engineering:Vinod Kushvaha",
-        "civil_engineering:Fracture and Fatigue behavior of particulate polymer composites",
-        "civil_engineering:**I Bhargav",
-        "civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption",
-        "civil_engineering:**Sristi Gupta",
-        "civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites"
+        "civil_engineering:Prasun Halder",
+        "civil_engineering:Riya Bhowmik",
+        "civil_engineering:1. Shallow and Deep Foundation",
+        "civil_engineering:2. Geosynthetic-reinforced geotechnology",
+        "civil_engineering:3. Tunnelling and underground space",
+        "civil_engineering:4. Transportation Geotechnics",
+        "civil_engineering:5. Root-soil interaction",
+        "civil_engineering:6. Computational Geomechanics",
+        "civil_engineering:7. Ground improvement",
+        "civil_engineering:8. Analysis of dam-foundation system on jointed rock",
+        "civil_engineering:Protection works against landslides (debris flow/rockfall/mudslides) in hilly regions",
+        "civil_engineering:Use of geosynthetics for hill road infrastructure",
+        "civil_engineering:Rock-shed tunnels under rockfall impacts",
+        "civil_engineering:Geosynthetics-reinforced infrastructure in seasonally frozen regions",
+        "civil_engineering:Tunnelling-induced instability and surface settlements",
+        "civil_engineering:AMAN SHARMA",
+        "civil_engineering:Performance Evaluation of Hill Roads Under Different Possible Loading Conditions",
+        "civil_engineering:HUMARA IQBAL",
+        "civil_engineering:Landslide studies",
+        "civil_engineering:MASOOM MAIRAJ",
+        "civil_engineering:Geotechnical Engineering",
+        "civil_engineering:MEHAK WASEEM",
+        "civil_engineering:MOHMMAD UMAR RASOOL",
+        "civil_engineering:Geosynthetic-based solution for hill road infrastructure",
+        "civil_engineering:SHREYA MAHESHWARI",
+        "civil_engineering:Landslide Mitigation Structures: Investigations on Geosynthetics-Reinforced Embankments"
       ],
       "members_by_type": {
-        "PhDStudent": [
-          "civil_engineering:**Aanchna Sharma",
-          "civil_engineering:**I Bhargav",
-          "civil_engineering:**Sristi Gupta"
-        ],
-        "ExternalPerson": [
-          "civil_engineering:Vinod Kushvaha"
+        "Faculty": [
+          "civil_engineering:Prasun Halder",
+          "civil_engineering:Riya Bhowmik"
         ],
         "ResearchArea": [
-          "civil_engineering:Fracture and Fatigue behavior of particulate polymer composites",
-          "civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption",
-          "civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites"
+          "civil_engineering:1. Shallow and Deep Foundation",
+          "civil_engineering:2. Geosynthetic-reinforced geotechnology",
+          "civil_engineering:3. Tunnelling and underground space",
+          "civil_engineering:4. Transportation Geotechnics",
+          "civil_engineering:5. Root-soil interaction",
+          "civil_engineering:6. Computational Geomechanics",
+          "civil_engineering:7. Ground improvement",
+          "civil_engineering:8. Analysis of dam-foundation system on jointed rock",
+          "civil_engineering:Protection works against landslides (debris flow/rockfall/mudslides) in hilly regions",
+          "civil_engineering:Use of geosynthetics for hill road infrastructure",
+          "civil_engineering:Rock-shed tunnels under rockfall impacts",
+          "civil_engineering:Geosynthetics-reinforced infrastructure in seasonally frozen regions",
+          "civil_engineering:Tunnelling-induced instability and surface settlements",
+          "civil_engineering:Performance Evaluation of Hill Roads Under Different Possible Loading Conditions",
+          "civil_engineering:Landslide studies",
+          "civil_engineering:Geotechnical Engineering",
+          "civil_engineering:Geosynthetic-based solution for hill road infrastructure",
+          "civil_engineering:Landslide Mitigation Structures: Investigations on Geosynthetics-Reinforced Embankments"
+        ],
+        "PhDStudent": [
+          "civil_engineering:AMAN SHARMA",
+          "civil_engineering:HUMARA IQBAL",
+          "civil_engineering:MASOOM MAIRAJ",
+          "civil_engineering:MEHAK WASEEM",
+          "civil_engineering:MOHMMAD UMAR RASOOL",
+          "civil_engineering:SHREYA MAHESHWARI"
         ]
       },
       "internal_edges": [
         {
-          "source": "civil_engineering:**Aanchna Sharma",
-          "target": "civil_engineering:Vinod Kushvaha",
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:1. Shallow and Deep Foundation",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:2. Geosynthetic-reinforced geotechnology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:3. Tunnelling and underground space",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:4. Transportation Geotechnics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:5. Root-soil interaction",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:6. Computational Geomechanics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:7. Ground improvement",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:8. Analysis of dam-foundation system on jointed rock",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:Performance Evaluation of Hill Roads Under Different Possible Loading Conditions",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:Geotechnical Engineering",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Prasun Halder",
+          "target": "civil_engineering:Geosynthetic-based solution for hill road infrastructure",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Riya Bhowmik",
+          "target": "civil_engineering:Protection works against landslides (debris flow/rockfall/mudslides) in hilly regions",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Riya Bhowmik",
+          "target": "civil_engineering:Use of geosynthetics for hill road infrastructure",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Riya Bhowmik",
+          "target": "civil_engineering:Rock-shed tunnels under rockfall impacts",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Riya Bhowmik",
+          "target": "civil_engineering:Geosynthetics-reinforced infrastructure in seasonally frozen regions",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Riya Bhowmik",
+          "target": "civil_engineering:Tunnelling-induced instability and surface settlements",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Riya Bhowmik",
+          "target": "civil_engineering:Landslide studies",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Riya Bhowmik",
+          "target": "civil_engineering:Geotechnical Engineering",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:Riya Bhowmik",
+          "target": "civil_engineering:Landslide Mitigation Structures: Investigations on Geosynthetics-Reinforced Embankments",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "civil_engineering:AMAN SHARMA",
+          "target": "civil_engineering:Prasun Halder",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "civil_engineering:**Aanchna Sharma",
-          "target": "civil_engineering:Fracture and Fatigue behavior of particulate polymer composites",
+          "source": "civil_engineering:AMAN SHARMA",
+          "target": "civil_engineering:Performance Evaluation of Hill Roads Under Different Possible Loading Conditions",
           "type": "STUDIES"
         },
         {
-          "source": "civil_engineering:**I Bhargav",
-          "target": "civil_engineering:Vinod Kushvaha",
+          "source": "civil_engineering:HUMARA IQBAL",
+          "target": "civil_engineering:Riya Bhowmik",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "civil_engineering:**I Bhargav",
-          "target": "civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption",
+          "source": "civil_engineering:HUMARA IQBAL",
+          "target": "civil_engineering:Landslide studies",
           "type": "STUDIES"
         },
         {
-          "source": "civil_engineering:**Sristi Gupta",
-          "target": "civil_engineering:Vinod Kushvaha",
+          "source": "civil_engineering:MASOOM MAIRAJ",
+          "target": "civil_engineering:Riya Bhowmik",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "civil_engineering:**Sristi Gupta",
-          "target": "civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites",
+          "source": "civil_engineering:MASOOM MAIRAJ",
+          "target": "civil_engineering:Geotechnical Engineering",
+          "type": "STUDIES"
+        },
+        {
+          "source": "civil_engineering:MEHAK WASEEM",
+          "target": "civil_engineering:Prasun Halder",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "civil_engineering:MEHAK WASEEM",
+          "target": "civil_engineering:Geotechnical Engineering",
+          "type": "STUDIES"
+        },
+        {
+          "source": "civil_engineering:MOHMMAD UMAR RASOOL",
+          "target": "civil_engineering:Prasun Halder",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "civil_engineering:MOHMMAD UMAR RASOOL",
+          "target": "civil_engineering:Geosynthetic-based solution for hill road infrastructure",
+          "type": "STUDIES"
+        },
+        {
+          "source": "civil_engineering:SHREYA MAHESHWARI",
+          "target": "civil_engineering:Riya Bhowmik",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "civil_engineering:SHREYA MAHESHWARI",
+          "target": "civil_engineering:Landslide Mitigation Structures: Investigations on Geosynthetics-Reinforced Embankments",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 13 in IIT Jammu EE Department:\n  ExternalPerson: Vinod Kushvaha\n  PhDStudent: **Aanchna Sharma, **I Bhargav, **Sristi Gupta\n  ResearchArea: Fracture and Fatigue behavior of particulate polymer composites, Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption, Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites\n  Relationships: SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: 3 PhD student(s). working in areas like civil_engineering:Fracture and Fatigue behavior of particulate polymer composites, civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption, civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites.",
-      "summary": "3 PhD student(s). working in areas like civil_engineering:Fracture and Fatigue behavior of particulate polymer composites, civil_engineering:Light\u00a0weight\u00a0honeycomb lattices for enhanced energy absorption, civil_engineering:Mixed-mode fracture behavior of shear thickening fluid impregnated GFRP composites.",
-      "size": 7
+      "text": "Community 13 in IIT Jammu Civil Engineering Department:\n  Faculty: Prasun Halder, Riya Bhowmik\n  PhDStudent: AMAN SHARMA, HUMARA IQBAL, MASOOM MAIRAJ, MEHAK WASEEM, MOHMMAD UMAR RASOOL, SHREYA MAHESHWARI\n  ResearchArea: 1. Shallow and Deep Foundation, 2. Geosynthetic-reinforced geotechnology, 3. Tunnelling and underground space, 4. Transportation Geotechnics, 5. Root-soil interaction, 6. Computational Geomechanics, 7. Ground improvement, 8. Analysis of dam-foundation system on jointed rock, Protection works against landslides (debris flow/rockfall/mudslides) in hilly regions, Use of geosynthetics for hill road infrastructure, Rock-shed tunnels under rockfall impacts, Geosynthetics-reinforced infrastructure in seasonally frozen regions, Tunnelling-induced instability and surface settlements, Performance Evaluation of Hill Roads Under Different Possible Loading Conditions, Landslide studies\n  Relationships: RESEARCHES_IN: 19, SUPERVISED_BY: 6, STUDIES: 6\n\nSummary: This group includes 2 faculty member(s): civil_engineering:Prasun Halder, civil_engineering:Riya Bhowmik. 6 PhD student(s). working in areas like civil_engineering:1. Shallow and Deep Foundation, civil_engineering:2. Geosynthetic-reinforced geotechnology, civil_engineering:3. Tunnelling and underground space.",
+      "summary": "This group includes 2 faculty member(s): civil_engineering:Prasun Halder, civil_engineering:Riya Bhowmik. 6 PhD student(s). working in areas like civil_engineering:1. Shallow and Deep Foundation, civil_engineering:2. Geosynthetic-reinforced geotechnology, civil_engineering:3. Tunnelling and underground space.",
+      "size": 26
     },
     {
       "id": "community_14",
@@ -2610,7 +2751,7 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 14 in IIT Jammu EE Department:\n  Faculty: Sameer Kumar Sarma Pachalla\n  ResearchArea: Courses Taught, Structural Analysis, Prestressed concrete design, RCC design, Computer Aided Design and Detailing, Engineering Surveying, Structural Design and Detailing, Design of Tunnels and Support Systems, Maintenance and Monitoring of Tunnels, Product Visualization (Engineering Drawing)\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Sameer Kumar Sarma Pachalla. working in areas like civil_engineering:Courses Taught, civil_engineering:Structural Analysis, civil_engineering:Prestressed concrete design.",
+      "text": "Community 14 in IIT Jammu Civil Engineering Department:\n  Faculty: Sameer Kumar Sarma Pachalla\n  ResearchArea: Courses Taught, Structural Analysis, Prestressed concrete design, RCC design, Computer Aided Design and Detailing, Engineering Surveying, Structural Design and Detailing, Design of Tunnels and Support Systems, Maintenance and Monitoring of Tunnels, Product Visualization (Engineering Drawing)\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Sameer Kumar Sarma Pachalla. working in areas like civil_engineering:Courses Taught, civil_engineering:Structural Analysis, civil_engineering:Prestressed concrete design.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Sameer Kumar Sarma Pachalla. working in areas like civil_engineering:Courses Taught, civil_engineering:Structural Analysis, civil_engineering:Prestressed concrete design.",
       "size": 11
     },
@@ -2697,7 +2838,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 15 in IIT Jammu EE Department:\n  Faculty: Sarah Mariam Abraham\n  PhDStudent: D CHANDRA KANTH, NITISH ANGRAL\n  ResearchArea: Utilization of recycled materials in pavement mixes, Base course and subbase course characterization and design, Pavement design methodologies including low volume roads, Pavement evaluation and maintenance, Erosion of Subbase Layers in Rigid Pavement, Performance Evaluation of Bio-Binders in Bituminous Construction\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Sarah Mariam Abraham. 2 PhD student(s). working in areas like civil_engineering:Utilization of recycled materials in pavement mixes, civil_engineering:Base course and subbase course characterization and design, civil_engineering:Pavement design methodologies including low volume roads.",
+      "text": "Community 15 in IIT Jammu Civil Engineering Department:\n  Faculty: Sarah Mariam Abraham\n  PhDStudent: D CHANDRA KANTH, NITISH ANGRAL\n  ResearchArea: Utilization of recycled materials in pavement mixes, Base course and subbase course characterization and design, Pavement design methodologies including low volume roads, Pavement evaluation and maintenance, Erosion of Subbase Layers in Rigid Pavement, Performance Evaluation of Bio-Binders in Bituminous Construction\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Sarah Mariam Abraham. 2 PhD student(s). working in areas like civil_engineering:Utilization of recycled materials in pavement mixes, civil_engineering:Base course and subbase course characterization and design, civil_engineering:Pavement design methodologies including low volume roads.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Sarah Mariam Abraham. 2 PhD student(s). working in areas like civil_engineering:Utilization of recycled materials in pavement mixes, civil_engineering:Base course and subbase course characterization and design, civil_engineering:Pavement design methodologies including low volume roads.",
       "size": 9
     },
@@ -2803,118 +2944,13 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 16 in IIT Jammu EE Department:\n  Faculty: Sivakumar G\n  PhDStudent: CHIRANTHAN Y, RAMESH BIRADAR PATIL, SHOAIB ASHRAF HAFIZ\n  ResearchArea: Behaviour of Rock mass and its discontinuity, Study on Soft rocks - Characterisation and its mechanical behaviour, Intermediate geomaterials\u00a0- Characterisation and its mechanical behaviour, Fracture Mechanics - Study on crack growth analysis of rock having pre-existing fractures/flaws, Study on Highly Fractured and Highly Weathered Rock Slopes in Himalayan Region, Seismic vulnerability of tunnels in the Himalayan region, Geomaterial Characterization\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Sivakumar G. 3 PhD student(s). working in areas like civil_engineering:Behaviour of Rock mass and its discontinuity, civil_engineering:Study on Soft rocks - Characterisation and its mechanical behaviour, civil_engineering:Intermediate geomaterials\u00a0- Characterisation and its mechanical behaviour.",
+      "text": "Community 16 in IIT Jammu Civil Engineering Department:\n  Faculty: Sivakumar G\n  PhDStudent: CHIRANTHAN Y, RAMESH BIRADAR PATIL, SHOAIB ASHRAF HAFIZ\n  ResearchArea: Behaviour of Rock mass and its discontinuity, Study on Soft rocks - Characterisation and its mechanical behaviour, Intermediate geomaterials\u00a0- Characterisation and its mechanical behaviour, Fracture Mechanics - Study on crack growth analysis of rock having pre-existing fractures/flaws, Study on Highly Fractured and Highly Weathered Rock Slopes in Himalayan Region, Seismic vulnerability of tunnels in the Himalayan region, Geomaterial Characterization\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Sivakumar G. 3 PhD student(s). working in areas like civil_engineering:Behaviour of Rock mass and its discontinuity, civil_engineering:Study on Soft rocks - Characterisation and its mechanical behaviour, civil_engineering:Intermediate geomaterials\u00a0- Characterisation and its mechanical behaviour.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Sivakumar G. 3 PhD student(s). working in areas like civil_engineering:Behaviour of Rock mass and its discontinuity, civil_engineering:Study on Soft rocks - Characterisation and its mechanical behaviour, civil_engineering:Intermediate geomaterials\u00a0- Characterisation and its mechanical behaviour.",
       "size": 11
     },
     {
       "id": "community_17",
       "community_id": 17,
-      "members": [
-        "civil_engineering:Srishti Singh",
-        "civil_engineering:Ved Prakash Ranjan",
-        "civil_engineering:Geophysics",
-        "civil_engineering:Solid Earth",
-        "civil_engineering:Mantle Convection",
-        "civil_engineering:Geodynamics",
-        "civil_engineering:Plate Tectonics",
-        "civil_engineering:Disaster Management",
-        "civil_engineering:Solid Waste Management and other areas in environmental engineering",
-        "IIT Jammu CIVIL_ENGINEERING Department",
-        "civil_engineering:MEHAK MANZOOR",
-        "civil_engineering:Fate and Transport of Microplastics in Riverine Systems"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "civil_engineering:Srishti Singh",
-          "civil_engineering:Ved Prakash Ranjan"
-        ],
-        "ResearchArea": [
-          "civil_engineering:Geophysics",
-          "civil_engineering:Solid Earth",
-          "civil_engineering:Mantle Convection",
-          "civil_engineering:Geodynamics",
-          "civil_engineering:Plate Tectonics",
-          "civil_engineering:Disaster Management",
-          "civil_engineering:Solid Waste Management and other areas in environmental engineering",
-          "civil_engineering:Fate and Transport of Microplastics in Riverine Systems"
-        ],
-        "Department": [
-          "IIT Jammu CIVIL_ENGINEERING Department"
-        ],
-        "PhDStudent": [
-          "civil_engineering:MEHAK MANZOOR"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "civil_engineering:Srishti Singh",
-          "target": "civil_engineering:Geophysics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Srishti Singh",
-          "target": "civil_engineering:Solid Earth",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Srishti Singh",
-          "target": "civil_engineering:Mantle Convection",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Srishti Singh",
-          "target": "civil_engineering:Geodynamics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Srishti Singh",
-          "target": "civil_engineering:Plate Tectonics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Srishti Singh",
-          "target": "civil_engineering:Disaster Management",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Srishti Singh",
-          "target": "IIT Jammu CIVIL_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "civil_engineering:Ved Prakash Ranjan",
-          "target": "civil_engineering:Solid Waste Management and other areas in environmental engineering",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Ved Prakash Ranjan",
-          "target": "civil_engineering:Fate and Transport of Microplastics in Riverine Systems",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "civil_engineering:Ved Prakash Ranjan",
-          "target": "IIT Jammu CIVIL_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "civil_engineering:MEHAK MANZOOR",
-          "target": "civil_engineering:Ved Prakash Ranjan",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "civil_engineering:MEHAK MANZOOR",
-          "target": "civil_engineering:Fate and Transport of Microplastics in Riverine Systems",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 17 in IIT Jammu EE Department:\n  Department: Department of Civil Engineering\n  Faculty: Srishti Singh, Ved Prakash Ranjan\n  PhDStudent: MEHAK MANZOOR\n  ResearchArea: Geophysics, Solid Earth, Mantle Convection, Geodynamics, Plate Tectonics, Disaster Management, Solid Waste Management and other areas in environmental engineering, Fate and Transport of Microplastics in Riverine Systems\n  Relationships: RESEARCHES_IN: 8, MEMBER_OF: 2, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 2 faculty member(s): civil_engineering:Srishti Singh, civil_engineering:Ved Prakash Ranjan. 1 PhD student(s). working in areas like civil_engineering:Geophysics, civil_engineering:Solid Earth, civil_engineering:Mantle Convection.",
-      "summary": "This group includes 2 faculty member(s): civil_engineering:Srishti Singh, civil_engineering:Ved Prakash Ranjan. 1 PhD student(s). working in areas like civil_engineering:Geophysics, civil_engineering:Solid Earth, civil_engineering:Mantle Convection.",
-      "size": 12
-    },
-    {
-      "id": "community_18",
-      "community_id": 18,
       "members": [
         "civil_engineering:Surendra Beniwal",
         "civil_engineering:Broad research interests",
@@ -3106,13 +3142,13 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 18 in IIT Jammu EE Department:\n  Faculty: Surendra Beniwal\n  PhDStudent: ABHISHEK SHARMA, KHUSHBOO KANWAR RATHORE, SAURABH AGARWAL, SUHAIB UL REYAZ, **Suhaib Ul Reyaz, **Saurabh Agarwal\n  ResearchArea: Broad research interests, Ultrasonics, Structural health monitoring, Computational Mechanics, and Micromechanics, Interested in Applications including, Ultrasonic Nondestructive evaluation, Subsurface imaging and characterization, Numerical modeling of elastic wave propagation and scattering, Homogenization of composite materials, Nonlinear ultrasounic application for detection of Microscale Defects in Concrete Structure, Lamb Wave NDE Investigations in Plate-like Structures, SEM based Wave Modeling and SHM, Structural Health Monitoring of Concrete Structures, Structural Health Monitoring\n  Relationships: RESEARCHES_IN: 15, SUPERVISED_BY: 6, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Surendra Beniwal. 6 PhD student(s). working in areas like civil_engineering:Broad research interests, civil_engineering:Ultrasonics, civil_engineering:Structural health monitoring.",
+      "text": "Community 17 in IIT Jammu Civil Engineering Department:\n  Faculty: Surendra Beniwal\n  PhDStudent: ABHISHEK SHARMA, KHUSHBOO KANWAR RATHORE, SAURABH AGARWAL, SUHAIB UL REYAZ, **Suhaib Ul Reyaz, **Saurabh Agarwal\n  ResearchArea: Broad research interests, Ultrasonics, Structural health monitoring, Computational Mechanics, and Micromechanics, Interested in Applications including, Ultrasonic Nondestructive evaluation, Subsurface imaging and characterization, Numerical modeling of elastic wave propagation and scattering, Homogenization of composite materials, Nonlinear ultrasounic application for detection of Microscale Defects in Concrete Structure, Lamb Wave NDE Investigations in Plate-like Structures, SEM based Wave Modeling and SHM, Structural Health Monitoring of Concrete Structures, Structural Health Monitoring\n  Relationships: RESEARCHES_IN: 15, SUPERVISED_BY: 6, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): civil_engineering:Surendra Beniwal. 6 PhD student(s). working in areas like civil_engineering:Broad research interests, civil_engineering:Ultrasonics, civil_engineering:Structural health monitoring.",
       "summary": "This group includes 1 faculty member(s): civil_engineering:Surendra Beniwal. 6 PhD student(s). working in areas like civil_engineering:Broad research interests, civil_engineering:Ultrasonics, civil_engineering:Structural health monitoring.",
       "size": 22
     },
     {
-      "id": "community_19",
-      "community_id": 19,
+      "id": "community_18",
+      "community_id": 18,
       "members": [
         "civil_engineering:ADITYA THIMMAIAH GARI",
         "civil_engineering:Sameer K. Sarma P",
@@ -3155,7 +3191,7 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 19 in IIT Jammu EE Department:\n  ExternalPerson: Sameer K. Sarma P\n  PhDStudent: ADITYA THIMMAIAH GARI, SAHIL GULAB ANGURAL\n  ResearchArea: Behaviour of UHPC beams with openings, Impact Analysis of UHPC\n  Relationships: SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: 2 PhD student(s). working in areas like civil_engineering:Behaviour of UHPC beams with openings, civil_engineering:Impact Analysis of UHPC.",
+      "text": "Community 18 in IIT Jammu Civil Engineering Department:\n  ExternalPerson: Sameer K. Sarma P\n  PhDStudent: ADITYA THIMMAIAH GARI, SAHIL GULAB ANGURAL\n  ResearchArea: Behaviour of UHPC beams with openings, Impact Analysis of UHPC\n  Relationships: SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: 2 PhD student(s). working in areas like civil_engineering:Behaviour of UHPC beams with openings, civil_engineering:Impact Analysis of UHPC.",
       "summary": "2 PhD student(s). working in areas like civil_engineering:Behaviour of UHPC beams with openings, civil_engineering:Impact Analysis of UHPC.",
       "size": 5
     }

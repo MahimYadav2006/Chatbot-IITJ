@@ -1,26 +1,26 @@
 {
   "partition": {
-    "mechanical_engineering:Abhay Sharma": 12,
+    "mechanical_engineering:Abhay Sharma": 0,
     "mechanical_engineering:Akash Subhash Awale": 1,
     "mechanical_engineering:Angshuman Kapil": 2,
-    "mechanical_engineering:Arvind Kumar Rajput": 12,
-    "mechanical_engineering:Ashutosh Bijalwan": 12,
+    "mechanical_engineering:Arvind Kumar Rajput": 3,
+    "mechanical_engineering:Ashutosh Bijalwan": 4,
     "mechanical_engineering:Durai Prabhakaran R T": 5,
-    "mechanical_engineering:Goutam Dutta": 13,
+    "mechanical_engineering:Goutam Dutta": 6,
     "mechanical_engineering:Navneet Kumar": 7,
     "mechanical_engineering:Pothukuchi Harish": 8,
     "mechanical_engineering:Rajkumar V": 9,
     "mechanical_engineering:Roshan Udaram Patil": 10,
     "mechanical_engineering:Sahil Kalra": 11,
-    "mechanical_engineering:Samrat Rao": 12,
-    "mechanical_engineering:Satya Sekhar Bhogilla": 13,
-    "mechanical_engineering:Saurabh Biswas": 14,
-    "mechanical_engineering:Shanmugadas K.p": 15,
-    "mechanical_engineering:Shiva S": 0,
-    "mechanical_engineering:Vijay Kumar Pal": 17,
-    "mechanical_engineering:Manufacturing": 12,
-    "mechanical_engineering:Additive\u00a0Manufacturing": 12,
-    "mechanical_engineering:Material Joining": 12,
+    "mechanical_engineering:Samrat Rao": 0,
+    "mechanical_engineering:Satya Sekhar Bhogilla": 6,
+    "mechanical_engineering:Saurabh Biswas": 10,
+    "mechanical_engineering:Shanmugadas K.p": 13,
+    "mechanical_engineering:Shiva S": 14,
+    "mechanical_engineering:Vijay Kumar Pal": 15,
+    "mechanical_engineering:Manufacturing": 0,
+    "mechanical_engineering:Additive\u00a0Manufacturing": 0,
+    "mechanical_engineering:Material Joining": 0,
     "mechanical_engineering:Sustainable machining and grinding: MQL and cryogenic": 1,
     "mechanical_engineering:Ultrasonic vibration assisted profile machining and grinding": 1,
     "mechanical_engineering:High speed machining": 1,
@@ -33,21 +33,21 @@
     "mechanical_engineering:Process and tooling development": 2,
     "mechanical_engineering:Metal additive manufacturing": 2,
     "mechanical_engineering:Hybrid manufacturing": 2,
-    "mechanical_engineering:Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing)": 12,
-    "mechanical_engineering:Tribological aspects in Wind turbine": 12,
-    "mechanical_engineering:1. Optimal control of soft and living matter": 12,
-    "mechanical_engineering:2. Computational biomechanics and bioinspired soft robotics": 12,
-    "mechanical_engineering:3. Geometric mechanics and variational integrators": 12,
-    "mechanical_engineering:4. Stability and control of falling thin film flows": 12,
-    "mechanical_engineering:Hydrogen Energy": 13,
-    "mechanical_engineering:Thermal management in EVs": 13,
-    "mechanical_engineering:Renewable Energy Systems": 13,
-    "mechanical_engineering:Energy Conversion and Storage": 13,
-    "mechanical_engineering:Fuel Cells": 13,
-    "mechanical_engineering:Sorption Heating and Cooling Systems": 13,
-    "mechanical_engineering:HVAC Systems": 13,
-    "mechanical_engineering:Nuclear reactor thermal-hydraulics and kinetics": 13,
-    "mechanical_engineering:Numerical fluid flow and heat transfer": 13,
+    "mechanical_engineering:Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing)": 3,
+    "mechanical_engineering:Tribological aspects in Wind turbine": 3,
+    "mechanical_engineering:1. Optimal control of soft and living matter": 4,
+    "mechanical_engineering:2. Computational biomechanics and bioinspired soft robotics": 4,
+    "mechanical_engineering:3. Geometric mechanics and variational integrators": 4,
+    "mechanical_engineering:4. Stability and control of falling thin film flows": 4,
+    "mechanical_engineering:Hydrogen Energy": 6,
+    "mechanical_engineering:Thermal management in EVs": 6,
+    "mechanical_engineering:Renewable Energy Systems": 6,
+    "mechanical_engineering:Energy Conversion and Storage": 6,
+    "mechanical_engineering:Fuel Cells": 6,
+    "mechanical_engineering:Sorption Heating and Cooling Systems": 6,
+    "mechanical_engineering:HVAC Systems": 6,
+    "mechanical_engineering:Nuclear reactor thermal-hydraulics and kinetics": 6,
+    "mechanical_engineering:Numerical fluid flow and heat transfer": 6,
     "mechanical_engineering:Primary Area of Research": 7,
     "mechanical_engineering:Fluid mechanics & Thermal Engineering": 7,
     "mechanical_engineering:Secondary Area of Research": 7,
@@ -83,33 +83,33 @@
     "mechanical_engineering:Smart Materials and Structures": 11,
     "mechanical_engineering:Mechanics of Shape Memory Alloys": 11,
     "mechanical_engineering:FE Analysis (Static": 11,
-    "mechanical_engineering:Fluid turbulence of plumes and jets": 12,
-    "mechanical_engineering:Forest-fires in the context of climate change": 12,
-    "mechanical_engineering:Heat transfer in materials science": 12,
-    "mechanical_engineering:Reduced order modeling": 14,
-    "mechanical_engineering:Hysteresis": 14,
-    "mechanical_engineering:Frictional systems": 14,
-    "mechanical_engineering:Dynamics and vibration": 14,
-    "mechanical_engineering:Vehicle dynamics": 14,
-    "mechanical_engineering:and Large rotation problems": 14,
-    "mechanical_engineering:Fuel injector development for rocket and aero engines": 15,
-    "mechanical_engineering:micro-gas turbine combustors": 15,
-    "mechanical_engineering:Droplet impingement": 15,
-    "mechanical_engineering:and wall filming": 15,
-    "mechanical_engineering:**Additive Manufacturing": 0,
-    "mechanical_engineering:**Laser Materials\u00a0Processing": 0,
-    "mechanical_engineering:**Spray Techniques": 0,
-    "mechanical_engineering:**Shape Memory Alloys": 0,
-    "mechanical_engineering:**Smart Materials": 0,
-    "mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM": 17,
-    "mechanical_engineering:LASER machining etc.)": 17,
-    "mechanical_engineering:Tribology": 17,
-    "mechanical_engineering:machining of UHTCs": 17,
-    "mechanical_engineering:Biomaterials": 17,
-    "mechanical_engineering:Nano technology": 17,
-    "mechanical_engineering:super hydrophobic surfaces": 17,
-    "mechanical_engineering:large area micro/nano texturing": 17,
-    "mechanical_engineering:Composites": 17,
+    "mechanical_engineering:Fluid turbulence of plumes and jets": 0,
+    "mechanical_engineering:Forest-fires in the context of climate change": 0,
+    "mechanical_engineering:Heat transfer in materials science": 0,
+    "mechanical_engineering:Reduced order modeling": 10,
+    "mechanical_engineering:Hysteresis": 10,
+    "mechanical_engineering:Frictional systems": 10,
+    "mechanical_engineering:Dynamics and vibration": 10,
+    "mechanical_engineering:Vehicle dynamics": 10,
+    "mechanical_engineering:and Large rotation problems": 10,
+    "mechanical_engineering:Fuel injector development for rocket and aero engines": 13,
+    "mechanical_engineering:micro-gas turbine combustors": 13,
+    "mechanical_engineering:Droplet impingement": 13,
+    "mechanical_engineering:and wall filming": 13,
+    "mechanical_engineering:**Additive Manufacturing": 14,
+    "mechanical_engineering:**Laser Materials\u00a0Processing": 14,
+    "mechanical_engineering:**Spray Techniques": 14,
+    "mechanical_engineering:**Shape Memory Alloys": 14,
+    "mechanical_engineering:**Smart Materials": 14,
+    "mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM": 15,
+    "mechanical_engineering:LASER machining etc.)": 15,
+    "mechanical_engineering:Tribology": 15,
+    "mechanical_engineering:machining of UHTCs": 15,
+    "mechanical_engineering:Biomaterials": 15,
+    "mechanical_engineering:Nano technology": 15,
+    "mechanical_engineering:super hydrophobic surfaces": 15,
+    "mechanical_engineering:large area micro/nano texturing": 15,
+    "mechanical_engineering:Composites": 15,
     "mechanical_engineering:Dr. Rajkumar Velu\u2019s research is centered on additive manufacturing (AM) and advanced materials engineering": 9,
     "mechanical_engineering:with a particular emphasis on the development": 9,
     "mechanical_engineering:processing": 9,
@@ -120,154 +120,258 @@
     "mechanical_engineering:2. Additive manufacturing of functionally graded structures": 9,
     "mechanical_engineering:3. Fabrication of multifunctional components using continuous carbon fibre 3D printing": 9,
     "mechanical_engineering:4. 3D bioprinting for biomedical and energy applications": 9,
-    "mechanical_engineering:B. Satya Sekhar": 12,
-    "IIT Jammu MECHANICAL_ENGINEERING Department": 12,
+    "mechanical_engineering:B. Satya Sekhar": 0,
+    "IIT Jammu MECHANICAL_ENGINEERING Department": 0,
     "mechanical_engineering:ADITYA BAKSHI": 11,
-    "mechanical_engineering:AJAY KUMAR PAL": 12,
-    "mechanical_engineering:AMRITBIR SINGH": 0,
-    "mechanical_engineering:ANAND KUMAR GANDHAM": 17,
+    "mechanical_engineering:AJAY KUMAR PAL": 3,
+    "mechanical_engineering:AMRITBIR SINGH": 14,
+    "mechanical_engineering:ANAND KUMAR GANDHAM": 15,
     "mechanical_engineering:ANAND SANKAR M": 9,
     "mechanical_engineering:ANKIT UPADHYAY": 5,
     "mechanical_engineering:AQIB FAYAZ": 9,
-    "mechanical_engineering:ARCHIT KUMAR VIAS": 13,
+    "mechanical_engineering:ARCHIT KUMAR VIAS": 6,
     "mechanical_engineering:ARUN KUMAR ROY": 10,
-    "mechanical_engineering:ARVIND KUMAR": 3,
-    "mechanical_engineering:Anand Kumar Subramaniyan": 3,
+    "mechanical_engineering:ARVIND KUMAR": 16,
+    "mechanical_engineering:Anand Kumar Subramaniyan": 16,
     "mechanical_engineering:AYUSH KUMAR RAO": 8,
     "mechanical_engineering:DEEPAK KUMAR": 11,
     "mechanical_engineering:FAIZAN HABIB": 5,
     "mechanical_engineering:JAIRAM RAIGAR": 9,
-    "mechanical_engineering:KHOGESH KUMAR RATHORE": 14,
-    "mechanical_engineering:LAKSHMI YADAV": 0,
-    "mechanical_engineering:MANOJ SINGH YADAV": 17,
-    "mechanical_engineering:MOHD RAFIQ PARRAY": 0,
+    "mechanical_engineering:KHOGESH KUMAR RATHORE": 10,
+    "mechanical_engineering:LAKSHMI YADAV": 14,
+    "mechanical_engineering:MANOJ SINGH YADAV": 15,
+    "mechanical_engineering:MOHD RAFIQ PARRAY": 14,
     "mechanical_engineering:MOHIT RAJPUT": 10,
     "mechanical_engineering:MOHIT TEACHER": 9,
-    "mechanical_engineering:NAVNEET KUMAR THAKUR": 12,
-    "mechanical_engineering:NISAR AHMAD DAR": 4,
-    "mechanical_engineering:Prabhat Munshi": 4,
+    "mechanical_engineering:NAVNEET KUMAR THAKUR": 3,
+    "mechanical_engineering:NISAR AHMAD DAR": 17,
+    "mechanical_engineering:Prabhat Munshi": 17,
     "mechanical_engineering:OWAIS NAZIR": 9,
     "mechanical_engineering:PEEUS KUMAR": 10,
-    "mechanical_engineering:RAJARAM KUMAR GUPTA": 17,
-    "mechanical_engineering:RAJKISHORE SINGH": 3,
+    "mechanical_engineering:RAJARAM KUMAR GUPTA": 15,
+    "mechanical_engineering:RAJKISHORE SINGH": 16,
     "mechanical_engineering:RAMPALLY SRIRAMA CHANDRA MURTHY": 7,
     "mechanical_engineering:RISHISH MISHRA": 8,
     "mechanical_engineering:SHIVANI CHAUHAN": 7,
-    "mechanical_engineering:SHUBHAM VAIDYA": 13,
-    "mechanical_engineering:SHUVENDU SHIVAM": 13,
+    "mechanical_engineering:SHUBHAM VAIDYA": 6,
+    "mechanical_engineering:SHUVENDU SHIVAM": 6,
     "mechanical_engineering:SURAJ KALIA": 5,
     "mechanical_engineering:TANUJ CHAUHAN": 8,
     "mechanical_engineering:VINOD KUMAR JAT": 10,
     "mechanical_engineering:VIVEK JOSHI": 11,
-    "mechanical_engineering:VIVEK KUMAR": 13,
-    "mechanical_engineering:VIVEK SAHU": 15,
+    "mechanical_engineering:VIVEK KUMAR": 6,
+    "mechanical_engineering:VIVEK SAHU": 13,
     "mechanical_engineering:WAHENGBAM MANIKETAN SINGH": 8,
     "mechanical_engineering:YOGESH KUMAR YADAV": 11,
-    "mechanical_engineering:category:Thermal": 13,
-    "mechanical_engineering:Hydrogen Energy and Renewable Energy Systems": 13,
-    "mechanical_engineering:Fluid Mechanics, Heat and Mass Transfer": 13,
-    "mechanical_engineering:Multi-phase Flow and Heat Transfer": 13,
-    "mechanical_engineering:Bio-fluid Mechanics": 13,
-    "mechanical_engineering:Gas Turbine Engines and Liquid Rocket Propulsion": 13,
-    "mechanical_engineering:Thermal-hydraulics in nuclear reactor and reactor kinetics": 13,
-    "mechanical_engineering:Atmospheric boundary layer fluid dynamics": 13,
-    "mechanical_engineering:category:Design": 6,
-    "mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design": 6,
-    "mechanical_engineering:Polymer Composites, Design and Manufacturing": 6,
-    "mechanical_engineering:Robotics and Automation": 6,
-    "mechanical_engineering:Dynamics and Vibrations": 6,
-    "mechanical_engineering:Systems with hysteresis, time delay problems": 6,
-    "mechanical_engineering:Computational and Experimental Fracture Mechanics": 6,
-    "mechanical_engineering:Fatigue, Phase Field Method, XFEM, Autofrettage": 6,
-    "mechanical_engineering:category:Manufacturing": 16,
-    "mechanical_engineering:Material Joining, Additive Manufacturing": 16,
-    "mechanical_engineering:Artificial Intelligence applications in manufacturing": 16,
-    "mechanical_engineering:Machining, Grinding, Sustainable Manufacturing, Surface Texturing, Ultrasonic": 16,
-    "mechanical_engineering:Surface Engineering and Inspection Techniques": 16,
-    "mechanical_engineering:Laser Surface Processing, High temperature Coatings": 16,
-    "mechanical_engineering:Machining, Micro/Nano Manufacturing, Fabrication of stretchable sensors/devices": 16,
-    "mechanical_engineering:Additive Manufacturing of Advanced Materials, Functionally graded and composite": 16,
-    "mechanical_engineering:Smart Alloys fabrication": 16,
-    "mechanical_engineering:Desing for Additive Manufacturing": 16,
-    "mechanical_engineering:In-situ monitoring and control of AM Process": 16
+    "mechanical_engineering:category:Thermal": 6,
+    "mechanical_engineering:Hydrogen Energy and Renewable Energy Systems": 6,
+    "mechanical_engineering:Fluid Mechanics, Heat and Mass Transfer": 6,
+    "mechanical_engineering:Multi-phase Flow and Heat Transfer": 6,
+    "mechanical_engineering:Bio-fluid Mechanics": 6,
+    "mechanical_engineering:Gas Turbine Engines and Liquid Rocket Propulsion": 6,
+    "mechanical_engineering:Thermal-hydraulics in nuclear reactor and reactor kinetics": 6,
+    "mechanical_engineering:Atmospheric boundary layer fluid dynamics": 6,
+    "mechanical_engineering:category:Design": 18,
+    "mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design": 18,
+    "mechanical_engineering:Polymer Composites, Design and Manufacturing": 18,
+    "mechanical_engineering:Robotics and Automation": 18,
+    "mechanical_engineering:Dynamics and Vibrations": 18,
+    "mechanical_engineering:Systems with hysteresis, time delay problems": 18,
+    "mechanical_engineering:Computational and Experimental Fracture Mechanics": 18,
+    "mechanical_engineering:Fatigue, Phase Field Method, XFEM, Autofrettage": 18,
+    "mechanical_engineering:category:Manufacturing": 19,
+    "mechanical_engineering:Material Joining, Additive Manufacturing": 19,
+    "mechanical_engineering:Artificial Intelligence applications in manufacturing": 19,
+    "mechanical_engineering:Machining, Grinding, Sustainable Manufacturing, Surface Texturing, Ultrasonic": 19,
+    "mechanical_engineering:Surface Engineering and Inspection Techniques": 19,
+    "mechanical_engineering:Laser Surface Processing, High temperature Coatings": 19,
+    "mechanical_engineering:Machining, Micro/Nano Manufacturing, Fabrication of stretchable sensors/devices": 19,
+    "mechanical_engineering:Additive Manufacturing of Advanced Materials, Functionally graded and composite": 19,
+    "mechanical_engineering:Smart Alloys fabrication": 19,
+    "mechanical_engineering:Desing for Additive Manufacturing": 19,
+    "mechanical_engineering:In-situ monitoring and control of AM Process": 19,
+    "mechanical_engineering:project:Research Project by Dr. Arvind Kumar Rajput (25.66) from Sci": 3,
+    "mechanical_engineering:agency:Science and Engineering Research Board": 10,
+    "mechanical_engineering:project:Research Project by Dr. Sahil Kalra (68) from Department of ": 11,
+    "mechanical_engineering:agency:Department of Science and Technology, Naval Research Board": 11,
+    "mechanical_engineering:project:Research Project by Dr. Rajkumar V (~74) from Department of ": 9,
+    "mechanical_engineering:agency:Department of Scientific and Industrial Research (DSIR), Science and Engineering Research Board": 9,
+    "mechanical_engineering:project:Research Project by Dr. Anand Kumar Subramaniyan (~359.63) f": 12,
+    "mechanical_engineering:agency:Directorate of Extramural Research & Intellectual Property Rights (DRDO), Science and Engineering Research Board, Indian Council of Medical Research, DIA-COE (IIT Bombay)": 12,
+    "mechanical_engineering:project:Research Project by Dr. Navneet Kumar (20.16) from Science a": 10,
+    "mechanical_engineering:project:Research Project by Dr. Pothukuchi Harish (~57.68) from Scie": 8,
+    "mechanical_engineering:agency:Science and Engineering Research Board, Atomic Energy Regulatory Board": 8,
+    "mechanical_engineering:project:Research Project by Dr. Satya Sekhar Bhogilla (~710) from De": 6,
+    "mechanical_engineering:agency:Department of Science and Technology, World Bank, Science and Engineering Research Board": 6,
+    "mechanical_engineering:project:Research Project by Dr. Vijay Kumar Pal (112) from MSME, OH2": 15,
+    "mechanical_engineering:agency:MSME, OH2 LIFE, Science and Engineering Research Board,": 15,
+    "mechanical_engineering:project:Research Project by Prof. Durai Prabhakaran R T (~430) from ": 5,
+    "mechanical_engineering:agency:Department of Science and Technology, Ministry of Textiles, Indian Space Research Organisation": 5,
+    "mechanical_engineering:project:Research Project by Dr. Shanmugadas K P (26) from Science an": 13,
+    "mechanical_engineering:agency:Science and Engineering Research Board, Indian Space Research Organisation": 13,
+    "mechanical_engineering:project:Research Project by Dr. Shiva S (~200) from Department of Sc": 14,
+    "mechanical_engineering:agency:Department of Science and Technology, Indian Space Research Organisation, Directorate of Extramural Research & Intellectual Property Rights (DRDO), Department of Scientific and Industrial Research (DSIR)": 14,
+    "mechanical_engineering:project:Research Project by Dr. Roshan Udaram Patil (~25.21) from Sc": 10,
+    "mechanical_engineering:project:Research Project by Dr. Saurabh Biswas (6.60) from Science a": 10,
+    "mechanical_engineering:project:Research Project by Dr. Samrat Rao (10.38) from Science and ": 0,
+    "mechanical_engineering:project:Research Project by Prof. Goutam Dutta (92) from Science and": 10,
+    "mechanical_engineering:lab:Fluid Mechanics Lab": 0,
+    "mechanical_engineering:lab:Control Engineering Lab": 0,
+    "mechanical_engineering:lab:Kinematics & Dynamics of Machine Lab": 0,
+    "mechanical_engineering:lab:Heat & Mass Transfer Lab": 0,
+    "mechanical_engineering:lab:Energy Systems Lab": 0,
+    "mechanical_engineering:lab:Solid Mechanics Lab": 0,
+    "mechanical_engineering:lab:Manufacturing Lab": 0
   },
   "reports": [
     {
       "id": "community_0",
       "community_id": 0,
       "members": [
-        "mechanical_engineering:Shiva S",
-        "mechanical_engineering:**Additive Manufacturing",
-        "mechanical_engineering:**Laser Materials\u00a0Processing",
-        "mechanical_engineering:**Spray Techniques",
-        "mechanical_engineering:**Shape Memory Alloys",
-        "mechanical_engineering:**Smart Materials",
-        "mechanical_engineering:AMRITBIR SINGH",
-        "mechanical_engineering:LAKSHMI YADAV",
-        "mechanical_engineering:MOHD RAFIQ PARRAY"
+        "mechanical_engineering:Abhay Sharma",
+        "mechanical_engineering:Samrat Rao",
+        "mechanical_engineering:Manufacturing",
+        "mechanical_engineering:Additive\u00a0Manufacturing",
+        "mechanical_engineering:Material Joining",
+        "mechanical_engineering:Fluid turbulence of plumes and jets",
+        "mechanical_engineering:Forest-fires in the context of climate change",
+        "mechanical_engineering:Heat transfer in materials science",
+        "mechanical_engineering:B. Satya Sekhar",
+        "IIT Jammu MECHANICAL_ENGINEERING Department",
+        "mechanical_engineering:project:Research Project by Dr. Samrat Rao (10.38) from Science and ",
+        "mechanical_engineering:lab:Fluid Mechanics Lab",
+        "mechanical_engineering:lab:Control Engineering Lab",
+        "mechanical_engineering:lab:Kinematics & Dynamics of Machine Lab",
+        "mechanical_engineering:lab:Heat & Mass Transfer Lab",
+        "mechanical_engineering:lab:Energy Systems Lab",
+        "mechanical_engineering:lab:Solid Mechanics Lab",
+        "mechanical_engineering:lab:Manufacturing Lab"
       ],
       "members_by_type": {
         "Faculty": [
-          "mechanical_engineering:Shiva S"
+          "mechanical_engineering:Abhay Sharma",
+          "mechanical_engineering:Samrat Rao",
+          "mechanical_engineering:B. Satya Sekhar"
         ],
         "ResearchArea": [
-          "mechanical_engineering:**Additive Manufacturing",
-          "mechanical_engineering:**Laser Materials\u00a0Processing",
-          "mechanical_engineering:**Spray Techniques",
-          "mechanical_engineering:**Shape Memory Alloys",
-          "mechanical_engineering:**Smart Materials"
+          "mechanical_engineering:Manufacturing",
+          "mechanical_engineering:Additive\u00a0Manufacturing",
+          "mechanical_engineering:Material Joining",
+          "mechanical_engineering:Fluid turbulence of plumes and jets",
+          "mechanical_engineering:Forest-fires in the context of climate change",
+          "mechanical_engineering:Heat transfer in materials science"
         ],
-        "PhDStudent": [
-          "mechanical_engineering:AMRITBIR SINGH",
-          "mechanical_engineering:LAKSHMI YADAV",
-          "mechanical_engineering:MOHD RAFIQ PARRAY"
+        "Department": [
+          "IIT Jammu MECHANICAL_ENGINEERING Department"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Samrat Rao (10.38) from Science and "
+        ],
+        "Lab": [
+          "mechanical_engineering:lab:Fluid Mechanics Lab",
+          "mechanical_engineering:lab:Control Engineering Lab",
+          "mechanical_engineering:lab:Kinematics & Dynamics of Machine Lab",
+          "mechanical_engineering:lab:Heat & Mass Transfer Lab",
+          "mechanical_engineering:lab:Energy Systems Lab",
+          "mechanical_engineering:lab:Solid Mechanics Lab",
+          "mechanical_engineering:lab:Manufacturing Lab"
         ]
       },
       "internal_edges": [
         {
-          "source": "mechanical_engineering:Shiva S",
-          "target": "mechanical_engineering:**Additive Manufacturing",
+          "source": "mechanical_engineering:Abhay Sharma",
+          "target": "mechanical_engineering:Manufacturing",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mechanical_engineering:Shiva S",
-          "target": "mechanical_engineering:**Laser Materials\u00a0Processing",
+          "source": "mechanical_engineering:Abhay Sharma",
+          "target": "mechanical_engineering:Additive\u00a0Manufacturing",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mechanical_engineering:Shiva S",
-          "target": "mechanical_engineering:**Spray Techniques",
+          "source": "mechanical_engineering:Abhay Sharma",
+          "target": "mechanical_engineering:Material Joining",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mechanical_engineering:Shiva S",
-          "target": "mechanical_engineering:**Shape Memory Alloys",
+          "source": "mechanical_engineering:Abhay Sharma",
+          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "mechanical_engineering:Samrat Rao",
+          "target": "mechanical_engineering:Fluid turbulence of plumes and jets",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mechanical_engineering:Shiva S",
-          "target": "mechanical_engineering:**Smart Materials",
+          "source": "mechanical_engineering:Samrat Rao",
+          "target": "mechanical_engineering:Forest-fires in the context of climate change",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "mechanical_engineering:AMRITBIR SINGH",
-          "target": "mechanical_engineering:Shiva S",
-          "type": "SUPERVISED_BY"
+          "source": "mechanical_engineering:Samrat Rao",
+          "target": "mechanical_engineering:Heat transfer in materials science",
+          "type": "RESEARCHES_IN"
         },
         {
-          "source": "mechanical_engineering:LAKSHMI YADAV",
-          "target": "mechanical_engineering:Shiva S",
-          "type": "SUPERVISED_BY"
+          "source": "mechanical_engineering:Samrat Rao",
+          "target": "mechanical_engineering:project:Research Project by Dr. Samrat Rao (10.38) from Science and ",
+          "type": "PRINCIPAL_INVESTIGATOR"
         },
         {
-          "source": "mechanical_engineering:MOHD RAFIQ PARRAY",
-          "target": "mechanical_engineering:Shiva S",
-          "type": "SUPERVISED_BY"
+          "source": "mechanical_engineering:Samrat Rao",
+          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "mechanical_engineering:B. Satya Sekhar",
+          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Samrat Rao (10.38) from Science and ",
+          "target": "mechanical_engineering:Samrat Rao",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:lab:Fluid Mechanics Lab",
+          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "mechanical_engineering:lab:Control Engineering Lab",
+          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "mechanical_engineering:lab:Kinematics & Dynamics of Machine Lab",
+          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "mechanical_engineering:lab:Heat & Mass Transfer Lab",
+          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "mechanical_engineering:lab:Energy Systems Lab",
+          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "mechanical_engineering:lab:Solid Mechanics Lab",
+          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "mechanical_engineering:lab:Manufacturing Lab",
+          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
+          "type": "FACILITY_OF"
         }
       ],
-      "text": "Community 0 in IIT Jammu EE Department:\n  Faculty: Shiva S\n  PhDStudent: AMRITBIR SINGH, LAKSHMI YADAV, MOHD RAFIQ PARRAY\n  ResearchArea: **Additive Manufacturing, **Laser Materials\u00a0Processing, **Spray Techniques, **Shape Memory Alloys, **Smart Materials\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 3\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Shiva S. 3 PhD student(s). working in areas like mechanical_engineering:**Additive Manufacturing, mechanical_engineering:**Laser Materials\u00a0Processing, mechanical_engineering:**Spray Techniques.",
-      "summary": "This group includes 1 faculty member(s): mechanical_engineering:Shiva S. 3 PhD student(s). working in areas like mechanical_engineering:**Additive Manufacturing, mechanical_engineering:**Laser Materials\u00a0Processing, mechanical_engineering:**Spray Techniques.",
-      "size": 9
+      "text": "Community 0 in IIT Jammu Mechanical Engineering Department:\n  Department: Department of Mechanical Engineering\n  Faculty: Abhay Sharma, Samrat Rao, B. Satya Sekhar\n  Lab: Fluid Mechanics Lab, Control Engineering Lab, Kinematics & Dynamics of Machine Lab, Heat & Mass Transfer Lab, Energy Systems Lab, Solid Mechanics Lab, Manufacturing Lab\n  Project: mechanical_engineering:project:Research Project by Dr. Samrat Rao (10.38) from Science and \n  ResearchArea: Manufacturing, Additive\u00a0Manufacturing, Material Joining, Fluid turbulence of plumes and jets, Forest-fires in the context of climate change, Heat transfer in materials science\n  Relationships: RESEARCHES_IN: 6, MEMBER_OF: 3, PRINCIPAL_INVESTIGATOR: 1, PI_IS: 1, FACILITY_OF: 7\n\nSummary: This group includes 3 faculty member(s): mechanical_engineering:Abhay Sharma, mechanical_engineering:Samrat Rao, mechanical_engineering:B. Satya Sekhar. working in areas like mechanical_engineering:Manufacturing, mechanical_engineering:Additive\u00a0Manufacturing, mechanical_engineering:Material Joining.",
+      "summary": "This group includes 3 faculty member(s): mechanical_engineering:Abhay Sharma, mechanical_engineering:Samrat Rao, mechanical_engineering:B. Satya Sekhar. working in areas like mechanical_engineering:Manufacturing, mechanical_engineering:Additive\u00a0Manufacturing, mechanical_engineering:Material Joining.",
+      "size": 18
     },
     {
       "id": "community_1",
@@ -333,7 +437,7 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 1 in IIT Jammu EE Department:\n  Faculty: Akash Subhash Awale\n  ResearchArea: Sustainable machining and grinding: MQL and cryogenic, Ultrasonic vibration assisted profile machining and grinding, High speed machining, Surface texturing, laser cladding, Difficult-to-machine and biomedical materials, Magnetic Barkhausen noise analysis\n  Relationships: RESEARCHES_IN: 7\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Akash Subhash Awale. working in areas like mechanical_engineering:Sustainable machining and grinding: MQL and cryogenic, mechanical_engineering:Ultrasonic vibration assisted profile machining and grinding, mechanical_engineering:High speed machining.",
+      "text": "Community 1 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Akash Subhash Awale\n  ResearchArea: Sustainable machining and grinding: MQL and cryogenic, Ultrasonic vibration assisted profile machining and grinding, High speed machining, Surface texturing, laser cladding, Difficult-to-machine and biomedical materials, Magnetic Barkhausen noise analysis\n  Relationships: RESEARCHES_IN: 7\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Akash Subhash Awale. working in areas like mechanical_engineering:Sustainable machining and grinding: MQL and cryogenic, mechanical_engineering:Ultrasonic vibration assisted profile machining and grinding, mechanical_engineering:High speed machining.",
       "summary": "This group includes 1 faculty member(s): mechanical_engineering:Akash Subhash Awale. working in areas like mechanical_engineering:Sustainable machining and grinding: MQL and cryogenic, mechanical_engineering:Ultrasonic vibration assisted profile machining and grinding, mechanical_engineering:High speed machining.",
       "size": 8
     },
@@ -387,7 +491,7 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 2 in IIT Jammu EE Department:\n  Faculty: Angshuman Kapil\n  ResearchArea: Solid-state materials processing (joining), Experimental characterization of process-structure-property relationships, Process and tooling development, Metal additive manufacturing, Hybrid manufacturing\n  Relationships: RESEARCHES_IN: 5\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Angshuman Kapil. working in areas like mechanical_engineering:Solid-state materials processing (joining), mechanical_engineering:Experimental characterization of process-structure-property relationships, mechanical_engineering:Process and tooling development.",
+      "text": "Community 2 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Angshuman Kapil\n  ResearchArea: Solid-state materials processing (joining), Experimental characterization of process-structure-property relationships, Process and tooling development, Metal additive manufacturing, Hybrid manufacturing\n  Relationships: RESEARCHES_IN: 5\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Angshuman Kapil. working in areas like mechanical_engineering:Solid-state materials processing (joining), mechanical_engineering:Experimental characterization of process-structure-property relationships, mechanical_engineering:Process and tooling development.",
       "summary": "This group includes 1 faculty member(s): mechanical_engineering:Angshuman Kapil. working in areas like mechanical_engineering:Solid-state materials processing (joining), mechanical_engineering:Experimental characterization of process-structure-property relationships, mechanical_engineering:Process and tooling development.",
       "size": 6
     },
@@ -395,60 +499,111 @@
       "id": "community_3",
       "community_id": 3,
       "members": [
-        "mechanical_engineering:ARVIND KUMAR",
-        "mechanical_engineering:Anand Kumar Subramaniyan",
-        "mechanical_engineering:RAJKISHORE SINGH"
+        "mechanical_engineering:Arvind Kumar Rajput",
+        "mechanical_engineering:Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing)",
+        "mechanical_engineering:Tribological aspects in Wind turbine",
+        "mechanical_engineering:AJAY KUMAR PAL",
+        "mechanical_engineering:NAVNEET KUMAR THAKUR",
+        "mechanical_engineering:project:Research Project by Dr. Arvind Kumar Rajput (25.66) from Sci"
       ],
       "members_by_type": {
-        "PhDStudent": [
-          "mechanical_engineering:ARVIND KUMAR",
-          "mechanical_engineering:RAJKISHORE SINGH"
+        "Faculty": [
+          "mechanical_engineering:Arvind Kumar Rajput"
         ],
-        "ExternalPerson": [
-          "mechanical_engineering:Anand Kumar Subramaniyan"
+        "ResearchArea": [
+          "mechanical_engineering:Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing)",
+          "mechanical_engineering:Tribological aspects in Wind turbine"
+        ],
+        "PhDStudent": [
+          "mechanical_engineering:AJAY KUMAR PAL",
+          "mechanical_engineering:NAVNEET KUMAR THAKUR"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Arvind Kumar Rajput (25.66) from Sci"
         ]
       },
       "internal_edges": [
         {
-          "source": "mechanical_engineering:ARVIND KUMAR",
-          "target": "mechanical_engineering:Anand Kumar Subramaniyan",
+          "source": "mechanical_engineering:Arvind Kumar Rajput",
+          "target": "mechanical_engineering:Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Arvind Kumar Rajput",
+          "target": "mechanical_engineering:Tribological aspects in Wind turbine",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Arvind Kumar Rajput",
+          "target": "mechanical_engineering:project:Research Project by Dr. Arvind Kumar Rajput (25.66) from Sci",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
+          "source": "mechanical_engineering:AJAY KUMAR PAL",
+          "target": "mechanical_engineering:Arvind Kumar Rajput",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "mechanical_engineering:RAJKISHORE SINGH",
-          "target": "mechanical_engineering:Anand Kumar Subramaniyan",
+          "source": "mechanical_engineering:NAVNEET KUMAR THAKUR",
+          "target": "mechanical_engineering:Arvind Kumar Rajput",
           "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Arvind Kumar Rajput (25.66) from Sci",
+          "target": "mechanical_engineering:Arvind Kumar Rajput",
+          "type": "PI_IS"
         }
       ],
-      "text": "Community 3 in IIT Jammu EE Department:\n  ExternalPerson: Anand Kumar Subramaniyan\n  PhDStudent: ARVIND KUMAR, RAJKISHORE SINGH\n  Relationships: SUPERVISED_BY: 2\n\nSummary: 2 PhD student(s).",
-      "summary": "2 PhD student(s).",
-      "size": 3
+      "text": "Community 3 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Arvind Kumar Rajput\n  PhDStudent: AJAY KUMAR PAL, NAVNEET KUMAR THAKUR\n  Project: mechanical_engineering:project:Research Project by Dr. Arvind Kumar Rajput (25.66) from Sci\n  ResearchArea: Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing), Tribological aspects in Wind turbine\n  Relationships: RESEARCHES_IN: 2, PRINCIPAL_INVESTIGATOR: 1, SUPERVISED_BY: 2, PI_IS: 1\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Arvind Kumar Rajput. 2 PhD student(s). working in areas like mechanical_engineering:Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing), mechanical_engineering:Tribological aspects in Wind turbine.",
+      "summary": "This group includes 1 faculty member(s): mechanical_engineering:Arvind Kumar Rajput. 2 PhD student(s). working in areas like mechanical_engineering:Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing), mechanical_engineering:Tribological aspects in Wind turbine.",
+      "size": 6
     },
     {
       "id": "community_4",
       "community_id": 4,
       "members": [
-        "mechanical_engineering:NISAR AHMAD DAR",
-        "mechanical_engineering:Prabhat Munshi"
+        "mechanical_engineering:Ashutosh Bijalwan",
+        "mechanical_engineering:1. Optimal control of soft and living matter",
+        "mechanical_engineering:2. Computational biomechanics and bioinspired soft robotics",
+        "mechanical_engineering:3. Geometric mechanics and variational integrators",
+        "mechanical_engineering:4. Stability and control of falling thin film flows"
       ],
       "members_by_type": {
-        "PhDStudent": [
-          "mechanical_engineering:NISAR AHMAD DAR"
+        "Faculty": [
+          "mechanical_engineering:Ashutosh Bijalwan"
         ],
-        "ExternalPerson": [
-          "mechanical_engineering:Prabhat Munshi"
+        "ResearchArea": [
+          "mechanical_engineering:1. Optimal control of soft and living matter",
+          "mechanical_engineering:2. Computational biomechanics and bioinspired soft robotics",
+          "mechanical_engineering:3. Geometric mechanics and variational integrators",
+          "mechanical_engineering:4. Stability and control of falling thin film flows"
         ]
       },
       "internal_edges": [
         {
-          "source": "mechanical_engineering:NISAR AHMAD DAR",
-          "target": "mechanical_engineering:Prabhat Munshi",
-          "type": "SUPERVISED_BY"
+          "source": "mechanical_engineering:Ashutosh Bijalwan",
+          "target": "mechanical_engineering:1. Optimal control of soft and living matter",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Ashutosh Bijalwan",
+          "target": "mechanical_engineering:2. Computational biomechanics and bioinspired soft robotics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Ashutosh Bijalwan",
+          "target": "mechanical_engineering:3. Geometric mechanics and variational integrators",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Ashutosh Bijalwan",
+          "target": "mechanical_engineering:4. Stability and control of falling thin film flows",
+          "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 4 in IIT Jammu EE Department:\n  ExternalPerson: Prabhat Munshi\n  PhDStudent: NISAR AHMAD DAR\n  Relationships: SUPERVISED_BY: 1\n\nSummary: 1 PhD student(s).",
-      "summary": "1 PhD student(s).",
-      "size": 2
+      "text": "Community 4 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Ashutosh Bijalwan\n  ResearchArea: 1. Optimal control of soft and living matter, 2. Computational biomechanics and bioinspired soft robotics, 3. Geometric mechanics and variational integrators, 4. Stability and control of falling thin film flows\n  Relationships: RESEARCHES_IN: 4\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Ashutosh Bijalwan. working in areas like mechanical_engineering:1. Optimal control of soft and living matter, mechanical_engineering:2. Computational biomechanics and bioinspired soft robotics, mechanical_engineering:3. Geometric mechanics and variational integrators.",
+      "summary": "This group includes 1 faculty member(s): mechanical_engineering:Ashutosh Bijalwan. working in areas like mechanical_engineering:1. Optimal control of soft and living matter, mechanical_engineering:2. Computational biomechanics and bioinspired soft robotics, mechanical_engineering:3. Geometric mechanics and variational integrators.",
+      "size": 5
     },
     {
       "id": "community_5",
@@ -467,7 +622,9 @@
         "mechanical_engineering:Renewable Energy",
         "mechanical_engineering:ANKIT UPADHYAY",
         "mechanical_engineering:FAIZAN HABIB",
-        "mechanical_engineering:SURAJ KALIA"
+        "mechanical_engineering:SURAJ KALIA",
+        "mechanical_engineering:project:Research Project by Prof. Durai Prabhakaran R T (~430) from ",
+        "mechanical_engineering:agency:Department of Science and Technology, Ministry of Textiles, Indian Space Research Organisation"
       ],
       "members_by_type": {
         "Faculty": [
@@ -489,6 +646,12 @@
           "mechanical_engineering:ANKIT UPADHYAY",
           "mechanical_engineering:FAIZAN HABIB",
           "mechanical_engineering:SURAJ KALIA"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Prof. Durai Prabhakaran R T (~430) from "
+        ],
+        "FundingAgency": [
+          "mechanical_engineering:agency:Department of Science and Technology, Ministry of Textiles, Indian Space Research Organisation"
         ]
       },
       "internal_edges": [
@@ -543,6 +706,11 @@
           "type": "RESEARCHES_IN"
         },
         {
+          "source": "mechanical_engineering:Durai Prabhakaran R T",
+          "target": "mechanical_engineering:project:Research Project by Prof. Durai Prabhakaran R T (~430) from ",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
           "source": "mechanical_engineering:ANKIT UPADHYAY",
           "target": "mechanical_engineering:Durai Prabhakaran R T",
           "type": "SUPERVISED_BY"
@@ -556,79 +724,226 @@
           "source": "mechanical_engineering:SURAJ KALIA",
           "target": "mechanical_engineering:Durai Prabhakaran R T",
           "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Prof. Durai Prabhakaran R T (~430) from ",
+          "target": "mechanical_engineering:Durai Prabhakaran R T",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Prof. Durai Prabhakaran R T (~430) from ",
+          "target": "mechanical_engineering:agency:Department of Science and Technology, Ministry of Textiles, Indian Space Research Organisation",
+          "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 5 in IIT Jammu EE Department:\n  Faculty: Durai Prabhakaran R T\n  PhDStudent: ANKIT UPADHYAY, FAIZAN HABIB, SURAJ KALIA\n  ResearchArea: Fibre Reinforced Polymer Composites \u2013 Design and Manufacturing, Carbon/Carbon Composites, Biomaterials & Natural Fibre Composites, Mechanics of Composite Materials, Composites Recycling, Experimental Characterization of Composites (Static, Interface, Fatigue, Low velocity Impact), Renewable Energy\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 3\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Durai Prabhakaran R T. 3 PhD student(s). working in areas like mechanical_engineering:Fibre Reinforced Polymer Composites \u2013 Design and Manufacturing, mechanical_engineering:Carbon/Carbon Composites, mechanical_engineering:Biomaterials & Natural Fibre Composites.",
+      "text": "Community 5 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Durai Prabhakaran R T\n  FundingAgency: Department of Science and Technology, Ministry of Textiles, Indian Space Research Organisation\n  PhDStudent: ANKIT UPADHYAY, FAIZAN HABIB, SURAJ KALIA\n  Project: mechanical_engineering:project:Research Project by Prof. Durai Prabhakaran R T (~430) from \n  ResearchArea: Fibre Reinforced Polymer Composites \u2013 Design and Manufacturing, Carbon/Carbon Composites, Biomaterials & Natural Fibre Composites, Mechanics of Composite Materials, Composites Recycling, Experimental Characterization of Composites (Static, Interface, Fatigue, Low velocity Impact), Renewable Energy\n  Relationships: RESEARCHES_IN: 10, PRINCIPAL_INVESTIGATOR: 1, SUPERVISED_BY: 3, PI_IS: 1, FUNDED_BY: 1\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Durai Prabhakaran R T. 3 PhD student(s). working in areas like mechanical_engineering:Fibre Reinforced Polymer Composites \u2013 Design and Manufacturing, mechanical_engineering:Carbon/Carbon Composites, mechanical_engineering:Biomaterials & Natural Fibre Composites.",
       "summary": "This group includes 1 faculty member(s): mechanical_engineering:Durai Prabhakaran R T. 3 PhD student(s). working in areas like mechanical_engineering:Fibre Reinforced Polymer Composites \u2013 Design and Manufacturing, mechanical_engineering:Carbon/Carbon Composites, mechanical_engineering:Biomaterials & Natural Fibre Composites.",
-      "size": 14
+      "size": 16
     },
     {
       "id": "community_6",
       "community_id": 6,
       "members": [
-        "mechanical_engineering:category:Design",
-        "mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design",
-        "mechanical_engineering:Polymer Composites, Design and Manufacturing",
-        "mechanical_engineering:Robotics and Automation",
-        "mechanical_engineering:Dynamics and Vibrations",
-        "mechanical_engineering:Systems with hysteresis, time delay problems",
-        "mechanical_engineering:Computational and Experimental Fracture Mechanics",
-        "mechanical_engineering:Fatigue, Phase Field Method, XFEM, Autofrettage"
+        "mechanical_engineering:Goutam Dutta",
+        "mechanical_engineering:Satya Sekhar Bhogilla",
+        "mechanical_engineering:Hydrogen Energy",
+        "mechanical_engineering:Thermal management in EVs",
+        "mechanical_engineering:Renewable Energy Systems",
+        "mechanical_engineering:Energy Conversion and Storage",
+        "mechanical_engineering:Fuel Cells",
+        "mechanical_engineering:Sorption Heating and Cooling Systems",
+        "mechanical_engineering:HVAC Systems",
+        "mechanical_engineering:Nuclear reactor thermal-hydraulics and kinetics",
+        "mechanical_engineering:Numerical fluid flow and heat transfer",
+        "mechanical_engineering:ARCHIT KUMAR VIAS",
+        "mechanical_engineering:SHUBHAM VAIDYA",
+        "mechanical_engineering:SHUVENDU SHIVAM",
+        "mechanical_engineering:VIVEK KUMAR",
+        "mechanical_engineering:category:Thermal",
+        "mechanical_engineering:Hydrogen Energy and Renewable Energy Systems",
+        "mechanical_engineering:Fluid Mechanics, Heat and Mass Transfer",
+        "mechanical_engineering:Multi-phase Flow and Heat Transfer",
+        "mechanical_engineering:Bio-fluid Mechanics",
+        "mechanical_engineering:Gas Turbine Engines and Liquid Rocket Propulsion",
+        "mechanical_engineering:Thermal-hydraulics in nuclear reactor and reactor kinetics",
+        "mechanical_engineering:Atmospheric boundary layer fluid dynamics",
+        "mechanical_engineering:project:Research Project by Dr. Satya Sekhar Bhogilla (~710) from De",
+        "mechanical_engineering:agency:Department of Science and Technology, World Bank, Science and Engineering Research Board"
       ],
       "members_by_type": {
-        "ResearchCategory": [
-          "mechanical_engineering:category:Design"
+        "Faculty": [
+          "mechanical_engineering:Goutam Dutta",
+          "mechanical_engineering:Satya Sekhar Bhogilla"
         ],
         "ResearchArea": [
-          "mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design",
-          "mechanical_engineering:Polymer Composites, Design and Manufacturing",
-          "mechanical_engineering:Robotics and Automation",
-          "mechanical_engineering:Dynamics and Vibrations",
-          "mechanical_engineering:Systems with hysteresis, time delay problems",
-          "mechanical_engineering:Computational and Experimental Fracture Mechanics",
-          "mechanical_engineering:Fatigue, Phase Field Method, XFEM, Autofrettage"
+          "mechanical_engineering:Hydrogen Energy",
+          "mechanical_engineering:Thermal management in EVs",
+          "mechanical_engineering:Renewable Energy Systems",
+          "mechanical_engineering:Energy Conversion and Storage",
+          "mechanical_engineering:Fuel Cells",
+          "mechanical_engineering:Sorption Heating and Cooling Systems",
+          "mechanical_engineering:HVAC Systems",
+          "mechanical_engineering:Nuclear reactor thermal-hydraulics and kinetics",
+          "mechanical_engineering:Numerical fluid flow and heat transfer",
+          "mechanical_engineering:Hydrogen Energy and Renewable Energy Systems",
+          "mechanical_engineering:Fluid Mechanics, Heat and Mass Transfer",
+          "mechanical_engineering:Multi-phase Flow and Heat Transfer",
+          "mechanical_engineering:Bio-fluid Mechanics",
+          "mechanical_engineering:Gas Turbine Engines and Liquid Rocket Propulsion",
+          "mechanical_engineering:Thermal-hydraulics in nuclear reactor and reactor kinetics",
+          "mechanical_engineering:Atmospheric boundary layer fluid dynamics"
+        ],
+        "PhDStudent": [
+          "mechanical_engineering:ARCHIT KUMAR VIAS",
+          "mechanical_engineering:SHUBHAM VAIDYA",
+          "mechanical_engineering:SHUVENDU SHIVAM",
+          "mechanical_engineering:VIVEK KUMAR"
+        ],
+        "ResearchCategory": [
+          "mechanical_engineering:category:Thermal"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Satya Sekhar Bhogilla (~710) from De"
+        ],
+        "FundingAgency": [
+          "mechanical_engineering:agency:Department of Science and Technology, World Bank, Science and Engineering Research Board"
         ]
       },
       "internal_edges": [
         {
-          "source": "mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design",
-          "target": "mechanical_engineering:category:Design",
+          "source": "mechanical_engineering:Goutam Dutta",
+          "target": "mechanical_engineering:Nuclear reactor thermal-hydraulics and kinetics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Goutam Dutta",
+          "target": "mechanical_engineering:Numerical fluid flow and heat transfer",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "target": "mechanical_engineering:Hydrogen Energy",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "target": "mechanical_engineering:Thermal management in EVs",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "target": "mechanical_engineering:Renewable Energy Systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "target": "mechanical_engineering:Energy Conversion and Storage",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "target": "mechanical_engineering:Fuel Cells",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "target": "mechanical_engineering:Sorption Heating and Cooling Systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "target": "mechanical_engineering:HVAC Systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "target": "mechanical_engineering:project:Research Project by Dr. Satya Sekhar Bhogilla (~710) from De",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
+          "source": "mechanical_engineering:HVAC Systems",
+          "target": "mechanical_engineering:category:Thermal",
           "type": "BELONGS_TO_CATEGORY"
         },
         {
-          "source": "mechanical_engineering:Polymer Composites, Design and Manufacturing",
-          "target": "mechanical_engineering:category:Design",
+          "source": "mechanical_engineering:Numerical fluid flow and heat transfer",
+          "target": "mechanical_engineering:category:Thermal",
           "type": "BELONGS_TO_CATEGORY"
         },
         {
-          "source": "mechanical_engineering:Robotics and Automation",
-          "target": "mechanical_engineering:category:Design",
+          "source": "mechanical_engineering:ARCHIT KUMAR VIAS",
+          "target": "mechanical_engineering:Goutam Dutta",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:SHUBHAM VAIDYA",
+          "target": "mechanical_engineering:Goutam Dutta",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:SHUVENDU SHIVAM",
+          "target": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:SHUVENDU SHIVAM",
+          "target": "mechanical_engineering:Goutam Dutta",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:VIVEK KUMAR",
+          "target": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:Hydrogen Energy and Renewable Energy Systems",
+          "target": "mechanical_engineering:category:Thermal",
           "type": "BELONGS_TO_CATEGORY"
         },
         {
-          "source": "mechanical_engineering:Dynamics and Vibrations",
-          "target": "mechanical_engineering:category:Design",
+          "source": "mechanical_engineering:Fluid Mechanics, Heat and Mass Transfer",
+          "target": "mechanical_engineering:category:Thermal",
           "type": "BELONGS_TO_CATEGORY"
         },
         {
-          "source": "mechanical_engineering:Systems with hysteresis, time delay problems",
-          "target": "mechanical_engineering:category:Design",
+          "source": "mechanical_engineering:Multi-phase Flow and Heat Transfer",
+          "target": "mechanical_engineering:category:Thermal",
           "type": "BELONGS_TO_CATEGORY"
         },
         {
-          "source": "mechanical_engineering:Computational and Experimental Fracture Mechanics",
-          "target": "mechanical_engineering:category:Design",
+          "source": "mechanical_engineering:Bio-fluid Mechanics",
+          "target": "mechanical_engineering:category:Thermal",
           "type": "BELONGS_TO_CATEGORY"
         },
         {
-          "source": "mechanical_engineering:Fatigue, Phase Field Method, XFEM, Autofrettage",
-          "target": "mechanical_engineering:category:Design",
+          "source": "mechanical_engineering:Gas Turbine Engines and Liquid Rocket Propulsion",
+          "target": "mechanical_engineering:category:Thermal",
           "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "mechanical_engineering:Thermal-hydraulics in nuclear reactor and reactor kinetics",
+          "target": "mechanical_engineering:category:Thermal",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "mechanical_engineering:Atmospheric boundary layer fluid dynamics",
+          "target": "mechanical_engineering:category:Thermal",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Satya Sekhar Bhogilla (~710) from De",
+          "target": "mechanical_engineering:Satya Sekhar Bhogilla",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Satya Sekhar Bhogilla (~710) from De",
+          "target": "mechanical_engineering:agency:Department of Science and Technology, World Bank, Science and Engineering Research Board",
+          "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 6 in IIT Jammu EE Department:\n  ResearchArea: Tribology: Fluid Film Bearings, Mechanical Design, Polymer Composites, Design and Manufacturing, Robotics and Automation, Dynamics and Vibrations, Systems with hysteresis, time delay problems, Computational and Experimental Fracture Mechanics, Fatigue, Phase Field Method, XFEM, Autofrettage\n  ResearchCategory: Design\n  Relationships: BELONGS_TO_CATEGORY: 7\n\nSummary: working in areas like mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design, mechanical_engineering:Polymer Composites, Design and Manufacturing, mechanical_engineering:Robotics and Automation.",
-      "summary": "working in areas like mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design, mechanical_engineering:Polymer Composites, Design and Manufacturing, mechanical_engineering:Robotics and Automation.",
-      "size": 8
+      "text": "Community 6 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Goutam Dutta, Satya Sekhar Bhogilla\n  FundingAgency: Department of Science and Technology, World Bank, Science and Engineering Research Board\n  PhDStudent: ARCHIT KUMAR VIAS, SHUBHAM VAIDYA, SHUVENDU SHIVAM, VIVEK KUMAR\n  Project: mechanical_engineering:project:Research Project by Dr. Satya Sekhar Bhogilla (~710) from De\n  ResearchArea: Hydrogen Energy, Thermal management in EVs, Renewable Energy Systems, Energy Conversion and Storage, Fuel Cells, Sorption Heating and Cooling Systems, HVAC Systems, Nuclear reactor thermal-hydraulics and kinetics, Numerical fluid flow and heat transfer, Hydrogen Energy and Renewable Energy Systems, Fluid Mechanics, Heat and Mass Transfer, Multi-phase Flow and Heat Transfer, Bio-fluid Mechanics, Gas Turbine Engines and Liquid Rocket Propulsion, Thermal-hydraulics in nuclear reactor and reactor kinetics\n  ResearchCategory: Thermal\n  Relationships: RESEARCHES_IN: 9, PRINCIPAL_INVESTIGATOR: 1, BELONGS_TO_CATEGORY: 9, SUPERVISED_BY: 5, PI_IS: 1, FUNDED_BY: 1\n\nSummary: This group includes 2 faculty member(s): mechanical_engineering:Goutam Dutta, mechanical_engineering:Satya Sekhar Bhogilla. 4 PhD student(s). working in areas like mechanical_engineering:Hydrogen Energy, mechanical_engineering:Thermal management in EVs, mechanical_engineering:Renewable Energy Systems.",
+      "summary": "This group includes 2 faculty member(s): mechanical_engineering:Goutam Dutta, mechanical_engineering:Satya Sekhar Bhogilla. 4 PhD student(s). working in areas like mechanical_engineering:Hydrogen Energy, mechanical_engineering:Thermal management in EVs, mechanical_engineering:Renewable Energy Systems.",
+      "size": 25
     },
     {
       "id": "community_7",
@@ -731,7 +1046,7 @@
           "type": "SUPERVISED_BY"
         }
       ],
-      "text": "Community 7 in IIT Jammu EE Department:\n  Faculty: Navneet Kumar\n  PhDStudent: RAMPALLY SRIRAMA CHANDRA MURTHY, SHIVANI CHAUHAN\n  ResearchArea: Primary Area of Research, Fluid mechanics & Thermal Engineering, Secondary Area of Research, Evaporation, Phase change, Porous media, Multiphase flows, Capillarity, Electronic cooling devices, Agricultural technologies\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 2\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Navneet Kumar. 2 PhD student(s). working in areas like mechanical_engineering:Primary Area of Research, mechanical_engineering:Fluid mechanics & Thermal Engineering, mechanical_engineering:Secondary Area of Research.",
+      "text": "Community 7 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Navneet Kumar\n  PhDStudent: RAMPALLY SRIRAMA CHANDRA MURTHY, SHIVANI CHAUHAN\n  ResearchArea: Primary Area of Research, Fluid mechanics & Thermal Engineering, Secondary Area of Research, Evaporation, Phase change, Porous media, Multiphase flows, Capillarity, Electronic cooling devices, Agricultural technologies\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 2\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Navneet Kumar. 2 PhD student(s). working in areas like mechanical_engineering:Primary Area of Research, mechanical_engineering:Fluid mechanics & Thermal Engineering, mechanical_engineering:Secondary Area of Research.",
       "summary": "This group includes 1 faculty member(s): mechanical_engineering:Navneet Kumar. 2 PhD student(s). working in areas like mechanical_engineering:Primary Area of Research, mechanical_engineering:Fluid mechanics & Thermal Engineering, mechanical_engineering:Secondary Area of Research.",
       "size": 13
     },
@@ -746,7 +1061,9 @@
         "mechanical_engineering:AYUSH KUMAR RAO",
         "mechanical_engineering:RISHISH MISHRA",
         "mechanical_engineering:TANUJ CHAUHAN",
-        "mechanical_engineering:WAHENGBAM MANIKETAN SINGH"
+        "mechanical_engineering:WAHENGBAM MANIKETAN SINGH",
+        "mechanical_engineering:project:Research Project by Dr. Pothukuchi Harish (~57.68) from Scie",
+        "mechanical_engineering:agency:Science and Engineering Research Board, Atomic Energy Regulatory Board"
       ],
       "members_by_type": {
         "Faculty": [
@@ -762,6 +1079,12 @@
           "mechanical_engineering:RISHISH MISHRA",
           "mechanical_engineering:TANUJ CHAUHAN",
           "mechanical_engineering:WAHENGBAM MANIKETAN SINGH"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Pothukuchi Harish (~57.68) from Scie"
+        ],
+        "FundingAgency": [
+          "mechanical_engineering:agency:Science and Engineering Research Board, Atomic Energy Regulatory Board"
         ]
       },
       "internal_edges": [
@@ -779,6 +1102,11 @@
           "source": "mechanical_engineering:Pothukuchi Harish",
           "target": "mechanical_engineering:Fluid Structure Interaction",
           "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Pothukuchi Harish",
+          "target": "mechanical_engineering:project:Research Project by Dr. Pothukuchi Harish (~57.68) from Scie",
+          "type": "PRINCIPAL_INVESTIGATOR"
         },
         {
           "source": "mechanical_engineering:AYUSH KUMAR RAO",
@@ -799,11 +1127,21 @@
           "source": "mechanical_engineering:WAHENGBAM MANIKETAN SINGH",
           "target": "mechanical_engineering:Pothukuchi Harish",
           "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Pothukuchi Harish (~57.68) from Scie",
+          "target": "mechanical_engineering:Pothukuchi Harish",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Pothukuchi Harish (~57.68) from Scie",
+          "target": "mechanical_engineering:agency:Science and Engineering Research Board, Atomic Energy Regulatory Board",
+          "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 8 in IIT Jammu EE Department:\n  Faculty: Pothukuchi Harish\n  PhDStudent: AYUSH KUMAR RAO, RISHISH MISHRA, TANUJ CHAUHAN, WAHENGBAM MANIKETAN SINGH\n  ResearchArea: Boiling Heat Transfer, Multiphase Flows, Fluid Structure Interaction\n  Relationships: RESEARCHES_IN: 3, SUPERVISED_BY: 4\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Pothukuchi Harish. 4 PhD student(s). working in areas like mechanical_engineering:Boiling Heat Transfer, mechanical_engineering:Multiphase Flows, mechanical_engineering:Fluid Structure Interaction.",
+      "text": "Community 8 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Pothukuchi Harish\n  FundingAgency: Science and Engineering Research Board, Atomic Energy Regulatory Board\n  PhDStudent: AYUSH KUMAR RAO, RISHISH MISHRA, TANUJ CHAUHAN, WAHENGBAM MANIKETAN SINGH\n  Project: mechanical_engineering:project:Research Project by Dr. Pothukuchi Harish (~57.68) from Scie\n  ResearchArea: Boiling Heat Transfer, Multiphase Flows, Fluid Structure Interaction\n  Relationships: RESEARCHES_IN: 3, PRINCIPAL_INVESTIGATOR: 1, SUPERVISED_BY: 4, PI_IS: 1, FUNDED_BY: 1\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Pothukuchi Harish. 4 PhD student(s). working in areas like mechanical_engineering:Boiling Heat Transfer, mechanical_engineering:Multiphase Flows, mechanical_engineering:Fluid Structure Interaction.",
       "summary": "This group includes 1 faculty member(s): mechanical_engineering:Pothukuchi Harish. 4 PhD student(s). working in areas like mechanical_engineering:Boiling Heat Transfer, mechanical_engineering:Multiphase Flows, mechanical_engineering:Fluid Structure Interaction.",
-      "size": 8
+      "size": 10
     },
     {
       "id": "community_9",
@@ -824,7 +1162,9 @@
         "mechanical_engineering:AQIB FAYAZ",
         "mechanical_engineering:JAIRAM RAIGAR",
         "mechanical_engineering:MOHIT TEACHER",
-        "mechanical_engineering:OWAIS NAZIR"
+        "mechanical_engineering:OWAIS NAZIR",
+        "mechanical_engineering:project:Research Project by Dr. Rajkumar V (~74) from Department of ",
+        "mechanical_engineering:agency:Department of Scientific and Industrial Research (DSIR), Science and Engineering Research Board"
       ],
       "members_by_type": {
         "Faculty": [
@@ -848,6 +1188,12 @@
           "mechanical_engineering:JAIRAM RAIGAR",
           "mechanical_engineering:MOHIT TEACHER",
           "mechanical_engineering:OWAIS NAZIR"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Rajkumar V (~74) from Department of "
+        ],
+        "FundingAgency": [
+          "mechanical_engineering:agency:Department of Scientific and Industrial Research (DSIR), Science and Engineering Research Board"
         ]
       },
       "internal_edges": [
@@ -902,6 +1248,11 @@
           "type": "RESEARCHES_IN"
         },
         {
+          "source": "mechanical_engineering:Rajkumar V",
+          "target": "mechanical_engineering:project:Research Project by Dr. Rajkumar V (~74) from Department of ",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
           "source": "mechanical_engineering:ANAND SANKAR M",
           "target": "mechanical_engineering:Rajkumar V",
           "type": "SUPERVISED_BY"
@@ -925,37 +1276,77 @@
           "source": "mechanical_engineering:OWAIS NAZIR",
           "target": "mechanical_engineering:Rajkumar V",
           "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Rajkumar V (~74) from Department of ",
+          "target": "mechanical_engineering:Rajkumar V",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Rajkumar V (~74) from Department of ",
+          "target": "mechanical_engineering:agency:Department of Scientific and Industrial Research (DSIR), Science and Engineering Research Board",
+          "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 9 in IIT Jammu EE Department:\n  Faculty: Rajkumar V\n  PhDStudent: ANAND SANKAR M, AQIB FAYAZ, JAIRAM RAIGAR, MOHIT TEACHER, OWAIS NAZIR\n  ResearchArea: Dr. Rajkumar Velu\u2019s research is centered on additive manufacturing (AM) and advanced materials engineering, with a particular emphasis on the development, processing, and application of polymeric, metallic, and composite materials for high-performance and functional components. His multidisciplinary research integrates experimental and computational approaches to explore the following key areas, 1. Selective laser sintering of reactive polymers, 2. Additive manufacturing of functionally graded structures, 3. Fabrication of multifunctional components using continuous carbon fibre 3D printing, 4. 3D bioprinting for biomedical and energy applications\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 5\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Rajkumar V. 5 PhD student(s). working in areas like mechanical_engineering:Dr. Rajkumar Velu\u2019s research is centered on additive manufacturing (AM) and advanced materials engineering, mechanical_engineering:with a particular emphasis on the development, mechanical_engineering:processing.",
+      "text": "Community 9 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Rajkumar V\n  FundingAgency: Department of Scientific and Industrial Research (DSIR), Science and Engineering Research Board\n  PhDStudent: ANAND SANKAR M, AQIB FAYAZ, JAIRAM RAIGAR, MOHIT TEACHER, OWAIS NAZIR\n  Project: mechanical_engineering:project:Research Project by Dr. Rajkumar V (~74) from Department of \n  ResearchArea: Dr. Rajkumar Velu\u2019s research is centered on additive manufacturing (AM) and advanced materials engineering, with a particular emphasis on the development, processing, and application of polymeric, metallic, and composite materials for high-performance and functional components. His multidisciplinary research integrates experimental and computational approaches to explore the following key areas, 1. Selective laser sintering of reactive polymers, 2. Additive manufacturing of functionally graded structures, 3. Fabrication of multifunctional components using continuous carbon fibre 3D printing, 4. 3D bioprinting for biomedical and energy applications\n  Relationships: RESEARCHES_IN: 10, PRINCIPAL_INVESTIGATOR: 1, SUPERVISED_BY: 5, PI_IS: 1, FUNDED_BY: 1\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Rajkumar V. 5 PhD student(s). working in areas like mechanical_engineering:Dr. Rajkumar Velu\u2019s research is centered on additive manufacturing (AM) and advanced materials engineering, mechanical_engineering:with a particular emphasis on the development, mechanical_engineering:processing.",
       "summary": "This group includes 1 faculty member(s): mechanical_engineering:Rajkumar V. 5 PhD student(s). working in areas like mechanical_engineering:Dr. Rajkumar Velu\u2019s research is centered on additive manufacturing (AM) and advanced materials engineering, mechanical_engineering:with a particular emphasis on the development, mechanical_engineering:processing.",
-      "size": 16
+      "size": 18
     },
     {
       "id": "community_10",
       "community_id": 10,
       "members": [
         "mechanical_engineering:Roshan Udaram Patil",
+        "mechanical_engineering:Saurabh Biswas",
         "mechanical_engineering:Phase Field Method",
         "mechanical_engineering:Multi-scale Method",
+        "mechanical_engineering:Reduced order modeling",
+        "mechanical_engineering:Hysteresis",
+        "mechanical_engineering:Frictional systems",
+        "mechanical_engineering:Dynamics and vibration",
+        "mechanical_engineering:Vehicle dynamics",
+        "mechanical_engineering:and Large rotation problems",
         "mechanical_engineering:ARUN KUMAR ROY",
+        "mechanical_engineering:KHOGESH KUMAR RATHORE",
         "mechanical_engineering:MOHIT RAJPUT",
         "mechanical_engineering:PEEUS KUMAR",
-        "mechanical_engineering:VINOD KUMAR JAT"
+        "mechanical_engineering:VINOD KUMAR JAT",
+        "mechanical_engineering:agency:Science and Engineering Research Board",
+        "mechanical_engineering:project:Research Project by Dr. Navneet Kumar (20.16) from Science a",
+        "mechanical_engineering:project:Research Project by Dr. Roshan Udaram Patil (~25.21) from Sc",
+        "mechanical_engineering:project:Research Project by Dr. Saurabh Biswas (6.60) from Science a",
+        "mechanical_engineering:project:Research Project by Prof. Goutam Dutta (92) from Science and"
       ],
       "members_by_type": {
         "Faculty": [
-          "mechanical_engineering:Roshan Udaram Patil"
+          "mechanical_engineering:Roshan Udaram Patil",
+          "mechanical_engineering:Saurabh Biswas"
         ],
         "ResearchArea": [
           "mechanical_engineering:Phase Field Method",
-          "mechanical_engineering:Multi-scale Method"
+          "mechanical_engineering:Multi-scale Method",
+          "mechanical_engineering:Reduced order modeling",
+          "mechanical_engineering:Hysteresis",
+          "mechanical_engineering:Frictional systems",
+          "mechanical_engineering:Dynamics and vibration",
+          "mechanical_engineering:Vehicle dynamics",
+          "mechanical_engineering:and Large rotation problems"
         ],
         "PhDStudent": [
           "mechanical_engineering:ARUN KUMAR ROY",
+          "mechanical_engineering:KHOGESH KUMAR RATHORE",
           "mechanical_engineering:MOHIT RAJPUT",
           "mechanical_engineering:PEEUS KUMAR",
           "mechanical_engineering:VINOD KUMAR JAT"
+        ],
+        "FundingAgency": [
+          "mechanical_engineering:agency:Science and Engineering Research Board"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Navneet Kumar (20.16) from Science a",
+          "mechanical_engineering:project:Research Project by Dr. Roshan Udaram Patil (~25.21) from Sc",
+          "mechanical_engineering:project:Research Project by Dr. Saurabh Biswas (6.60) from Science a",
+          "mechanical_engineering:project:Research Project by Prof. Goutam Dutta (92) from Science and"
         ]
       },
       "internal_edges": [
@@ -970,8 +1361,53 @@
           "type": "RESEARCHES_IN"
         },
         {
+          "source": "mechanical_engineering:Roshan Udaram Patil",
+          "target": "mechanical_engineering:project:Research Project by Dr. Roshan Udaram Patil (~25.21) from Sc",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
+          "source": "mechanical_engineering:Saurabh Biswas",
+          "target": "mechanical_engineering:Reduced order modeling",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Saurabh Biswas",
+          "target": "mechanical_engineering:Hysteresis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Saurabh Biswas",
+          "target": "mechanical_engineering:Frictional systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Saurabh Biswas",
+          "target": "mechanical_engineering:Dynamics and vibration",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Saurabh Biswas",
+          "target": "mechanical_engineering:Vehicle dynamics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Saurabh Biswas",
+          "target": "mechanical_engineering:and Large rotation problems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Saurabh Biswas",
+          "target": "mechanical_engineering:project:Research Project by Dr. Saurabh Biswas (6.60) from Science a",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
           "source": "mechanical_engineering:ARUN KUMAR ROY",
           "target": "mechanical_engineering:Roshan Udaram Patil",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:KHOGESH KUMAR RATHORE",
+          "target": "mechanical_engineering:Saurabh Biswas",
           "type": "SUPERVISED_BY"
         },
         {
@@ -988,11 +1424,41 @@
           "source": "mechanical_engineering:VINOD KUMAR JAT",
           "target": "mechanical_engineering:Roshan Udaram Patil",
           "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Navneet Kumar (20.16) from Science a",
+          "target": "mechanical_engineering:agency:Science and Engineering Research Board",
+          "type": "FUNDED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Roshan Udaram Patil (~25.21) from Sc",
+          "target": "mechanical_engineering:Roshan Udaram Patil",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Roshan Udaram Patil (~25.21) from Sc",
+          "target": "mechanical_engineering:agency:Science and Engineering Research Board",
+          "type": "FUNDED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Saurabh Biswas (6.60) from Science a",
+          "target": "mechanical_engineering:Saurabh Biswas",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Saurabh Biswas (6.60) from Science a",
+          "target": "mechanical_engineering:agency:Science and Engineering Research Board",
+          "type": "FUNDED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Prof. Goutam Dutta (92) from Science and",
+          "target": "mechanical_engineering:agency:Science and Engineering Research Board",
+          "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 10 in IIT Jammu EE Department:\n  Faculty: Roshan Udaram Patil\n  PhDStudent: ARUN KUMAR ROY, MOHIT RAJPUT, PEEUS KUMAR, VINOD KUMAR JAT\n  ResearchArea: Phase Field Method, Multi-scale Method\n  Relationships: RESEARCHES_IN: 2, SUPERVISED_BY: 4\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Roshan Udaram Patil. 4 PhD student(s). working in areas like mechanical_engineering:Phase Field Method, mechanical_engineering:Multi-scale Method.",
-      "summary": "This group includes 1 faculty member(s): mechanical_engineering:Roshan Udaram Patil. 4 PhD student(s). working in areas like mechanical_engineering:Phase Field Method, mechanical_engineering:Multi-scale Method.",
-      "size": 7
+      "text": "Community 10 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Roshan Udaram Patil, Saurabh Biswas\n  FundingAgency: Science and Engineering Research Board\n  PhDStudent: ARUN KUMAR ROY, KHOGESH KUMAR RATHORE, MOHIT RAJPUT, PEEUS KUMAR, VINOD KUMAR JAT\n  Project: mechanical_engineering:project:Research Project by Dr. Navneet Kumar (20.16) from Science a, mechanical_engineering:project:Research Project by Dr. Roshan Udaram Patil (~25.21) from Sc, mechanical_engineering:project:Research Project by Dr. Saurabh Biswas (6.60) from Science a, mechanical_engineering:project:Research Project by Prof. Goutam Dutta (92) from Science and\n  ResearchArea: Phase Field Method, Multi-scale Method, Reduced order modeling, Hysteresis, Frictional systems, Dynamics and vibration, Vehicle dynamics, and Large rotation problems\n  Relationships: RESEARCHES_IN: 8, PRINCIPAL_INVESTIGATOR: 2, SUPERVISED_BY: 5, FUNDED_BY: 4, PI_IS: 2\n\nSummary: This group includes 2 faculty member(s): mechanical_engineering:Roshan Udaram Patil, mechanical_engineering:Saurabh Biswas. 5 PhD student(s). working in areas like mechanical_engineering:Phase Field Method, mechanical_engineering:Multi-scale Method, mechanical_engineering:Reduced order modeling.",
+      "summary": "This group includes 2 faculty member(s): mechanical_engineering:Roshan Udaram Patil, mechanical_engineering:Saurabh Biswas. 5 PhD student(s). working in areas like mechanical_engineering:Phase Field Method, mechanical_engineering:Multi-scale Method, mechanical_engineering:Reduced order modeling.",
+      "size": 20
     },
     {
       "id": "community_11",
@@ -1012,7 +1478,9 @@
         "mechanical_engineering:ADITYA BAKSHI",
         "mechanical_engineering:DEEPAK KUMAR",
         "mechanical_engineering:VIVEK JOSHI",
-        "mechanical_engineering:YOGESH KUMAR YADAV"
+        "mechanical_engineering:YOGESH KUMAR YADAV",
+        "mechanical_engineering:project:Research Project by Dr. Sahil Kalra (68) from Department of ",
+        "mechanical_engineering:agency:Department of Science and Technology, Naval Research Board"
       ],
       "members_by_type": {
         "Faculty": [
@@ -1035,6 +1503,12 @@
           "mechanical_engineering:DEEPAK KUMAR",
           "mechanical_engineering:VIVEK JOSHI",
           "mechanical_engineering:YOGESH KUMAR YADAV"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Sahil Kalra (68) from Department of "
+        ],
+        "FundingAgency": [
+          "mechanical_engineering:agency:Department of Science and Technology, Naval Research Board"
         ]
       },
       "internal_edges": [
@@ -1089,6 +1563,11 @@
           "type": "RESEARCHES_IN"
         },
         {
+          "source": "mechanical_engineering:Sahil Kalra",
+          "target": "mechanical_engineering:project:Research Project by Dr. Sahil Kalra (68) from Department of ",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
           "source": "mechanical_engineering:ADITYA BAKSHI",
           "target": "mechanical_engineering:Sahil Kalra",
           "type": "SUPERVISED_BY"
@@ -1107,430 +1586,60 @@
           "source": "mechanical_engineering:YOGESH KUMAR YADAV",
           "target": "mechanical_engineering:Sahil Kalra",
           "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Sahil Kalra (68) from Department of ",
+          "target": "mechanical_engineering:Sahil Kalra",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Sahil Kalra (68) from Department of ",
+          "target": "mechanical_engineering:agency:Department of Science and Technology, Naval Research Board",
+          "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 11 in IIT Jammu EE Department:\n  Faculty: Sahil Kalra\n  PhDStudent: ADITYA BAKSHI, DEEPAK KUMAR, VIVEK JOSHI, YOGESH KUMAR YADAV\n  ResearchArea: My long terms standing goals are engineering product development, and simulation, analysis of multi-physics Engineering problems. Till date I have explored the following research areas of modern physics, Vibration and Control, Robotics and Control, Mechatronics, Modal Analysis, Smart Materials and Structures, Mechanics of Shape Memory Alloys, FE Analysis (Static\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 4\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Sahil Kalra. 4 PhD student(s). working in areas like mechanical_engineering:My long terms standing goals are engineering product development, mechanical_engineering:and simulation, mechanical_engineering:analysis of multi-physics Engineering problems. Till date I have explored the following research areas of modern physics.",
+      "text": "Community 11 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Sahil Kalra\n  FundingAgency: Department of Science and Technology, Naval Research Board\n  PhDStudent: ADITYA BAKSHI, DEEPAK KUMAR, VIVEK JOSHI, YOGESH KUMAR YADAV\n  Project: mechanical_engineering:project:Research Project by Dr. Sahil Kalra (68) from Department of \n  ResearchArea: My long terms standing goals are engineering product development, and simulation, analysis of multi-physics Engineering problems. Till date I have explored the following research areas of modern physics, Vibration and Control, Robotics and Control, Mechatronics, Modal Analysis, Smart Materials and Structures, Mechanics of Shape Memory Alloys, FE Analysis (Static\n  Relationships: RESEARCHES_IN: 10, PRINCIPAL_INVESTIGATOR: 1, SUPERVISED_BY: 4, PI_IS: 1, FUNDED_BY: 1\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Sahil Kalra. 4 PhD student(s). working in areas like mechanical_engineering:My long terms standing goals are engineering product development, mechanical_engineering:and simulation, mechanical_engineering:analysis of multi-physics Engineering problems. Till date I have explored the following research areas of modern physics.",
       "summary": "This group includes 1 faculty member(s): mechanical_engineering:Sahil Kalra. 4 PhD student(s). working in areas like mechanical_engineering:My long terms standing goals are engineering product development, mechanical_engineering:and simulation, mechanical_engineering:analysis of multi-physics Engineering problems. Till date I have explored the following research areas of modern physics.",
-      "size": 15
+      "size": 17
     },
     {
       "id": "community_12",
       "community_id": 12,
       "members": [
-        "mechanical_engineering:Abhay Sharma",
-        "mechanical_engineering:Arvind Kumar Rajput",
-        "mechanical_engineering:Ashutosh Bijalwan",
-        "mechanical_engineering:Samrat Rao",
-        "mechanical_engineering:Manufacturing",
-        "mechanical_engineering:Additive\u00a0Manufacturing",
-        "mechanical_engineering:Material Joining",
-        "mechanical_engineering:Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing)",
-        "mechanical_engineering:Tribological aspects in Wind turbine",
-        "mechanical_engineering:1. Optimal control of soft and living matter",
-        "mechanical_engineering:2. Computational biomechanics and bioinspired soft robotics",
-        "mechanical_engineering:3. Geometric mechanics and variational integrators",
-        "mechanical_engineering:4. Stability and control of falling thin film flows",
-        "mechanical_engineering:Fluid turbulence of plumes and jets",
-        "mechanical_engineering:Forest-fires in the context of climate change",
-        "mechanical_engineering:Heat transfer in materials science",
-        "mechanical_engineering:B. Satya Sekhar",
-        "IIT Jammu MECHANICAL_ENGINEERING Department",
-        "mechanical_engineering:AJAY KUMAR PAL",
-        "mechanical_engineering:NAVNEET KUMAR THAKUR"
+        "mechanical_engineering:project:Research Project by Dr. Anand Kumar Subramaniyan (~359.63) f",
+        "mechanical_engineering:agency:Directorate of Extramural Research & Intellectual Property Rights (DRDO), Science and Engineering Research Board, Indian Council of Medical Research, DIA-COE (IIT Bombay)"
       ],
       "members_by_type": {
-        "Faculty": [
-          "mechanical_engineering:Abhay Sharma",
-          "mechanical_engineering:Arvind Kumar Rajput",
-          "mechanical_engineering:Ashutosh Bijalwan",
-          "mechanical_engineering:Samrat Rao",
-          "mechanical_engineering:B. Satya Sekhar"
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Anand Kumar Subramaniyan (~359.63) f"
         ],
-        "ResearchArea": [
-          "mechanical_engineering:Manufacturing",
-          "mechanical_engineering:Additive\u00a0Manufacturing",
-          "mechanical_engineering:Material Joining",
-          "mechanical_engineering:Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing)",
-          "mechanical_engineering:Tribological aspects in Wind turbine",
-          "mechanical_engineering:1. Optimal control of soft and living matter",
-          "mechanical_engineering:2. Computational biomechanics and bioinspired soft robotics",
-          "mechanical_engineering:3. Geometric mechanics and variational integrators",
-          "mechanical_engineering:4. Stability and control of falling thin film flows",
-          "mechanical_engineering:Fluid turbulence of plumes and jets",
-          "mechanical_engineering:Forest-fires in the context of climate change",
-          "mechanical_engineering:Heat transfer in materials science"
-        ],
-        "Department": [
-          "IIT Jammu MECHANICAL_ENGINEERING Department"
-        ],
-        "PhDStudent": [
-          "mechanical_engineering:AJAY KUMAR PAL",
-          "mechanical_engineering:NAVNEET KUMAR THAKUR"
+        "FundingAgency": [
+          "mechanical_engineering:agency:Directorate of Extramural Research & Intellectual Property Rights (DRDO), Science and Engineering Research Board, Indian Council of Medical Research, DIA-COE (IIT Bombay)"
         ]
       },
       "internal_edges": [
         {
-          "source": "mechanical_engineering:Abhay Sharma",
-          "target": "mechanical_engineering:Manufacturing",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Abhay Sharma",
-          "target": "mechanical_engineering:Additive\u00a0Manufacturing",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Abhay Sharma",
-          "target": "mechanical_engineering:Material Joining",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Abhay Sharma",
-          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "mechanical_engineering:Arvind Kumar Rajput",
-          "target": "mechanical_engineering:Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Arvind Kumar Rajput",
-          "target": "mechanical_engineering:Tribological aspects in Wind turbine",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Arvind Kumar Rajput",
-          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "mechanical_engineering:Ashutosh Bijalwan",
-          "target": "mechanical_engineering:1. Optimal control of soft and living matter",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Ashutosh Bijalwan",
-          "target": "mechanical_engineering:2. Computational biomechanics and bioinspired soft robotics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Ashutosh Bijalwan",
-          "target": "mechanical_engineering:3. Geometric mechanics and variational integrators",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Ashutosh Bijalwan",
-          "target": "mechanical_engineering:4. Stability and control of falling thin film flows",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Ashutosh Bijalwan",
-          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "mechanical_engineering:Samrat Rao",
-          "target": "mechanical_engineering:Fluid turbulence of plumes and jets",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Samrat Rao",
-          "target": "mechanical_engineering:Forest-fires in the context of climate change",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Samrat Rao",
-          "target": "mechanical_engineering:Heat transfer in materials science",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Samrat Rao",
-          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "mechanical_engineering:B. Satya Sekhar",
-          "target": "IIT Jammu MECHANICAL_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "mechanical_engineering:AJAY KUMAR PAL",
-          "target": "mechanical_engineering:Arvind Kumar Rajput",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mechanical_engineering:NAVNEET KUMAR THAKUR",
-          "target": "mechanical_engineering:Arvind Kumar Rajput",
-          "type": "SUPERVISED_BY"
+          "source": "mechanical_engineering:project:Research Project by Dr. Anand Kumar Subramaniyan (~359.63) f",
+          "target": "mechanical_engineering:agency:Directorate of Extramural Research & Intellectual Property Rights (DRDO), Science and Engineering Research Board, Indian Council of Medical Research, DIA-COE (IIT Bombay)",
+          "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 12 in IIT Jammu EE Department:\n  Department: Department of Mechanical Engineering\n  Faculty: Abhay Sharma, Arvind Kumar Rajput, Ashutosh Bijalwan, Samrat Rao, B. Satya Sekhar\n  PhDStudent: AJAY KUMAR PAL, NAVNEET KUMAR THAKUR\n  ResearchArea: Manufacturing, Additive\u00a0Manufacturing, Material Joining, Tribological Design of Machine elements: Hydrodynamic/ hydrostatic\u00a0 journal and thrust bearing), Tribological aspects in Wind turbine, 1. Optimal control of soft and living matter, 2. Computational biomechanics and bioinspired soft robotics, 3. Geometric mechanics and variational integrators, 4. Stability and control of falling thin film flows, Fluid turbulence of plumes and jets, Forest-fires in the context of climate change, Heat transfer in materials science\n  Relationships: RESEARCHES_IN: 12, MEMBER_OF: 5, SUPERVISED_BY: 2\n\nSummary: This group includes 5 faculty member(s): mechanical_engineering:Abhay Sharma, mechanical_engineering:Arvind Kumar Rajput, mechanical_engineering:Ashutosh Bijalwan, mechanical_engineering:Samrat Rao, mechanical_engineering:B. Satya Sekhar. 2 PhD student(s). working in areas like mechanical_engineering:Manufacturing, mechanical_engineering:Additive\u00a0Manufacturing, mechanical_engineering:Material Joining.",
-      "summary": "This group includes 5 faculty member(s): mechanical_engineering:Abhay Sharma, mechanical_engineering:Arvind Kumar Rajput, mechanical_engineering:Ashutosh Bijalwan, mechanical_engineering:Samrat Rao, mechanical_engineering:B. Satya Sekhar. 2 PhD student(s). working in areas like mechanical_engineering:Manufacturing, mechanical_engineering:Additive\u00a0Manufacturing, mechanical_engineering:Material Joining.",
-      "size": 20
+      "text": "Community 12 in IIT Jammu Mechanical Engineering Department:\n  FundingAgency: Directorate of Extramural Research & Intellectual Property Rights (DRDO), Science and Engineering Research Board, Indian Council of Medical Research, DIA-COE (IIT Bombay)\n  Project: mechanical_engineering:project:Research Project by Dr. Anand Kumar Subramaniyan (~359.63) f\n  Relationships: FUNDED_BY: 1\n\nSummary: A cluster of related entities.",
+      "summary": "A cluster of related entities.",
+      "size": 2
     },
     {
       "id": "community_13",
       "community_id": 13,
-      "members": [
-        "mechanical_engineering:Goutam Dutta",
-        "mechanical_engineering:Satya Sekhar Bhogilla",
-        "mechanical_engineering:Hydrogen Energy",
-        "mechanical_engineering:Thermal management in EVs",
-        "mechanical_engineering:Renewable Energy Systems",
-        "mechanical_engineering:Energy Conversion and Storage",
-        "mechanical_engineering:Fuel Cells",
-        "mechanical_engineering:Sorption Heating and Cooling Systems",
-        "mechanical_engineering:HVAC Systems",
-        "mechanical_engineering:Nuclear reactor thermal-hydraulics and kinetics",
-        "mechanical_engineering:Numerical fluid flow and heat transfer",
-        "mechanical_engineering:ARCHIT KUMAR VIAS",
-        "mechanical_engineering:SHUBHAM VAIDYA",
-        "mechanical_engineering:SHUVENDU SHIVAM",
-        "mechanical_engineering:VIVEK KUMAR",
-        "mechanical_engineering:category:Thermal",
-        "mechanical_engineering:Hydrogen Energy and Renewable Energy Systems",
-        "mechanical_engineering:Fluid Mechanics, Heat and Mass Transfer",
-        "mechanical_engineering:Multi-phase Flow and Heat Transfer",
-        "mechanical_engineering:Bio-fluid Mechanics",
-        "mechanical_engineering:Gas Turbine Engines and Liquid Rocket Propulsion",
-        "mechanical_engineering:Thermal-hydraulics in nuclear reactor and reactor kinetics",
-        "mechanical_engineering:Atmospheric boundary layer fluid dynamics"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "mechanical_engineering:Goutam Dutta",
-          "mechanical_engineering:Satya Sekhar Bhogilla"
-        ],
-        "ResearchArea": [
-          "mechanical_engineering:Hydrogen Energy",
-          "mechanical_engineering:Thermal management in EVs",
-          "mechanical_engineering:Renewable Energy Systems",
-          "mechanical_engineering:Energy Conversion and Storage",
-          "mechanical_engineering:Fuel Cells",
-          "mechanical_engineering:Sorption Heating and Cooling Systems",
-          "mechanical_engineering:HVAC Systems",
-          "mechanical_engineering:Nuclear reactor thermal-hydraulics and kinetics",
-          "mechanical_engineering:Numerical fluid flow and heat transfer",
-          "mechanical_engineering:Hydrogen Energy and Renewable Energy Systems",
-          "mechanical_engineering:Fluid Mechanics, Heat and Mass Transfer",
-          "mechanical_engineering:Multi-phase Flow and Heat Transfer",
-          "mechanical_engineering:Bio-fluid Mechanics",
-          "mechanical_engineering:Gas Turbine Engines and Liquid Rocket Propulsion",
-          "mechanical_engineering:Thermal-hydraulics in nuclear reactor and reactor kinetics",
-          "mechanical_engineering:Atmospheric boundary layer fluid dynamics"
-        ],
-        "PhDStudent": [
-          "mechanical_engineering:ARCHIT KUMAR VIAS",
-          "mechanical_engineering:SHUBHAM VAIDYA",
-          "mechanical_engineering:SHUVENDU SHIVAM",
-          "mechanical_engineering:VIVEK KUMAR"
-        ],
-        "ResearchCategory": [
-          "mechanical_engineering:category:Thermal"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "mechanical_engineering:Goutam Dutta",
-          "target": "mechanical_engineering:Nuclear reactor thermal-hydraulics and kinetics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Goutam Dutta",
-          "target": "mechanical_engineering:Numerical fluid flow and heat transfer",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
-          "target": "mechanical_engineering:Hydrogen Energy",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
-          "target": "mechanical_engineering:Thermal management in EVs",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
-          "target": "mechanical_engineering:Renewable Energy Systems",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
-          "target": "mechanical_engineering:Energy Conversion and Storage",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
-          "target": "mechanical_engineering:Fuel Cells",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
-          "target": "mechanical_engineering:Sorption Heating and Cooling Systems",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Satya Sekhar Bhogilla",
-          "target": "mechanical_engineering:HVAC Systems",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:HVAC Systems",
-          "target": "mechanical_engineering:category:Thermal",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "mechanical_engineering:Numerical fluid flow and heat transfer",
-          "target": "mechanical_engineering:category:Thermal",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "mechanical_engineering:ARCHIT KUMAR VIAS",
-          "target": "mechanical_engineering:Goutam Dutta",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mechanical_engineering:SHUBHAM VAIDYA",
-          "target": "mechanical_engineering:Goutam Dutta",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mechanical_engineering:SHUVENDU SHIVAM",
-          "target": "mechanical_engineering:Satya Sekhar Bhogilla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mechanical_engineering:SHUVENDU SHIVAM",
-          "target": "mechanical_engineering:Goutam Dutta",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mechanical_engineering:VIVEK KUMAR",
-          "target": "mechanical_engineering:Satya Sekhar Bhogilla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mechanical_engineering:Hydrogen Energy and Renewable Energy Systems",
-          "target": "mechanical_engineering:category:Thermal",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "mechanical_engineering:Fluid Mechanics, Heat and Mass Transfer",
-          "target": "mechanical_engineering:category:Thermal",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "mechanical_engineering:Multi-phase Flow and Heat Transfer",
-          "target": "mechanical_engineering:category:Thermal",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "mechanical_engineering:Bio-fluid Mechanics",
-          "target": "mechanical_engineering:category:Thermal",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "mechanical_engineering:Gas Turbine Engines and Liquid Rocket Propulsion",
-          "target": "mechanical_engineering:category:Thermal",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "mechanical_engineering:Thermal-hydraulics in nuclear reactor and reactor kinetics",
-          "target": "mechanical_engineering:category:Thermal",
-          "type": "BELONGS_TO_CATEGORY"
-        },
-        {
-          "source": "mechanical_engineering:Atmospheric boundary layer fluid dynamics",
-          "target": "mechanical_engineering:category:Thermal",
-          "type": "BELONGS_TO_CATEGORY"
-        }
-      ],
-      "text": "Community 13 in IIT Jammu EE Department:\n  Faculty: Goutam Dutta, Satya Sekhar Bhogilla\n  PhDStudent: ARCHIT KUMAR VIAS, SHUBHAM VAIDYA, SHUVENDU SHIVAM, VIVEK KUMAR\n  ResearchArea: Hydrogen Energy, Thermal management in EVs, Renewable Energy Systems, Energy Conversion and Storage, Fuel Cells, Sorption Heating and Cooling Systems, HVAC Systems, Nuclear reactor thermal-hydraulics and kinetics, Numerical fluid flow and heat transfer, Hydrogen Energy and Renewable Energy Systems, Fluid Mechanics, Heat and Mass Transfer, Multi-phase Flow and Heat Transfer, Bio-fluid Mechanics, Gas Turbine Engines and Liquid Rocket Propulsion, Thermal-hydraulics in nuclear reactor and reactor kinetics\n  ResearchCategory: Thermal\n  Relationships: RESEARCHES_IN: 9, BELONGS_TO_CATEGORY: 9, SUPERVISED_BY: 5\n\nSummary: This group includes 2 faculty member(s): mechanical_engineering:Goutam Dutta, mechanical_engineering:Satya Sekhar Bhogilla. 4 PhD student(s). working in areas like mechanical_engineering:Hydrogen Energy, mechanical_engineering:Thermal management in EVs, mechanical_engineering:Renewable Energy Systems.",
-      "summary": "This group includes 2 faculty member(s): mechanical_engineering:Goutam Dutta, mechanical_engineering:Satya Sekhar Bhogilla. 4 PhD student(s). working in areas like mechanical_engineering:Hydrogen Energy, mechanical_engineering:Thermal management in EVs, mechanical_engineering:Renewable Energy Systems.",
-      "size": 23
-    },
-    {
-      "id": "community_14",
-      "community_id": 14,
-      "members": [
-        "mechanical_engineering:Saurabh Biswas",
-        "mechanical_engineering:Reduced order modeling",
-        "mechanical_engineering:Hysteresis",
-        "mechanical_engineering:Frictional systems",
-        "mechanical_engineering:Dynamics and vibration",
-        "mechanical_engineering:Vehicle dynamics",
-        "mechanical_engineering:and Large rotation problems",
-        "mechanical_engineering:KHOGESH KUMAR RATHORE"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "mechanical_engineering:Saurabh Biswas"
-        ],
-        "ResearchArea": [
-          "mechanical_engineering:Reduced order modeling",
-          "mechanical_engineering:Hysteresis",
-          "mechanical_engineering:Frictional systems",
-          "mechanical_engineering:Dynamics and vibration",
-          "mechanical_engineering:Vehicle dynamics",
-          "mechanical_engineering:and Large rotation problems"
-        ],
-        "PhDStudent": [
-          "mechanical_engineering:KHOGESH KUMAR RATHORE"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "mechanical_engineering:Saurabh Biswas",
-          "target": "mechanical_engineering:Reduced order modeling",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Saurabh Biswas",
-          "target": "mechanical_engineering:Hysteresis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Saurabh Biswas",
-          "target": "mechanical_engineering:Frictional systems",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Saurabh Biswas",
-          "target": "mechanical_engineering:Dynamics and vibration",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Saurabh Biswas",
-          "target": "mechanical_engineering:Vehicle dynamics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Saurabh Biswas",
-          "target": "mechanical_engineering:and Large rotation problems",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:KHOGESH KUMAR RATHORE",
-          "target": "mechanical_engineering:Saurabh Biswas",
-          "type": "SUPERVISED_BY"
-        }
-      ],
-      "text": "Community 14 in IIT Jammu EE Department:\n  Faculty: Saurabh Biswas\n  PhDStudent: KHOGESH KUMAR RATHORE\n  ResearchArea: Reduced order modeling, Hysteresis, Frictional systems, Dynamics and vibration, Vehicle dynamics, and Large rotation problems\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Saurabh Biswas. 1 PhD student(s). working in areas like mechanical_engineering:Reduced order modeling, mechanical_engineering:Hysteresis, mechanical_engineering:Frictional systems.",
-      "summary": "This group includes 1 faculty member(s): mechanical_engineering:Saurabh Biswas. 1 PhD student(s). working in areas like mechanical_engineering:Reduced order modeling, mechanical_engineering:Hysteresis, mechanical_engineering:Frictional systems.",
-      "size": 8
-    },
-    {
-      "id": "community_15",
-      "community_id": 15,
       "members": [
         "mechanical_engineering:Shanmugadas K.p",
         "mechanical_engineering:Fuel injector development for rocket and aero engines",
         "mechanical_engineering:micro-gas turbine combustors",
         "mechanical_engineering:Droplet impingement",
         "mechanical_engineering:and wall filming",
-        "mechanical_engineering:VIVEK SAHU"
+        "mechanical_engineering:VIVEK SAHU",
+        "mechanical_engineering:project:Research Project by Dr. Shanmugadas K P (26) from Science an",
+        "mechanical_engineering:agency:Science and Engineering Research Board, Indian Space Research Organisation"
       ],
       "members_by_type": {
         "Faculty": [
@@ -1544,6 +1653,12 @@
         ],
         "PhDStudent": [
           "mechanical_engineering:VIVEK SAHU"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Shanmugadas K P (26) from Science an"
+        ],
+        "FundingAgency": [
+          "mechanical_engineering:agency:Science and Engineering Research Board, Indian Space Research Organisation"
         ]
       },
       "internal_edges": [
@@ -1568,18 +1683,388 @@
           "type": "RESEARCHES_IN"
         },
         {
+          "source": "mechanical_engineering:Shanmugadas K.p",
+          "target": "mechanical_engineering:project:Research Project by Dr. Shanmugadas K P (26) from Science an",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
           "source": "mechanical_engineering:VIVEK SAHU",
           "target": "mechanical_engineering:Shanmugadas K.p",
           "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Shanmugadas K P (26) from Science an",
+          "target": "mechanical_engineering:Shanmugadas K.p",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Shanmugadas K P (26) from Science an",
+          "target": "mechanical_engineering:agency:Science and Engineering Research Board, Indian Space Research Organisation",
+          "type": "FUNDED_BY"
         }
       ],
-      "text": "Community 15 in IIT Jammu EE Department:\n  Faculty: Shanmugadas K.p\n  PhDStudent: VIVEK SAHU\n  ResearchArea: Fuel injector development for rocket and aero engines, micro-gas turbine combustors, Droplet impingement, and wall filming\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Shanmugadas K.p. 1 PhD student(s). working in areas like mechanical_engineering:Fuel injector development for rocket and aero engines, mechanical_engineering:micro-gas turbine combustors, mechanical_engineering:Droplet impingement.",
+      "text": "Community 13 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Shanmugadas K.p\n  FundingAgency: Science and Engineering Research Board, Indian Space Research Organisation\n  PhDStudent: VIVEK SAHU\n  Project: mechanical_engineering:project:Research Project by Dr. Shanmugadas K P (26) from Science an\n  ResearchArea: Fuel injector development for rocket and aero engines, micro-gas turbine combustors, Droplet impingement, and wall filming\n  Relationships: RESEARCHES_IN: 4, PRINCIPAL_INVESTIGATOR: 1, SUPERVISED_BY: 1, PI_IS: 1, FUNDED_BY: 1\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Shanmugadas K.p. 1 PhD student(s). working in areas like mechanical_engineering:Fuel injector development for rocket and aero engines, mechanical_engineering:micro-gas turbine combustors, mechanical_engineering:Droplet impingement.",
       "summary": "This group includes 1 faculty member(s): mechanical_engineering:Shanmugadas K.p. 1 PhD student(s). working in areas like mechanical_engineering:Fuel injector development for rocket and aero engines, mechanical_engineering:micro-gas turbine combustors, mechanical_engineering:Droplet impingement.",
-      "size": 6
+      "size": 8
+    },
+    {
+      "id": "community_14",
+      "community_id": 14,
+      "members": [
+        "mechanical_engineering:Shiva S",
+        "mechanical_engineering:**Additive Manufacturing",
+        "mechanical_engineering:**Laser Materials\u00a0Processing",
+        "mechanical_engineering:**Spray Techniques",
+        "mechanical_engineering:**Shape Memory Alloys",
+        "mechanical_engineering:**Smart Materials",
+        "mechanical_engineering:AMRITBIR SINGH",
+        "mechanical_engineering:LAKSHMI YADAV",
+        "mechanical_engineering:MOHD RAFIQ PARRAY",
+        "mechanical_engineering:project:Research Project by Dr. Shiva S (~200) from Department of Sc",
+        "mechanical_engineering:agency:Department of Science and Technology, Indian Space Research Organisation, Directorate of Extramural Research & Intellectual Property Rights (DRDO), Department of Scientific and Industrial Research (DSIR)"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "mechanical_engineering:Shiva S"
+        ],
+        "ResearchArea": [
+          "mechanical_engineering:**Additive Manufacturing",
+          "mechanical_engineering:**Laser Materials\u00a0Processing",
+          "mechanical_engineering:**Spray Techniques",
+          "mechanical_engineering:**Shape Memory Alloys",
+          "mechanical_engineering:**Smart Materials"
+        ],
+        "PhDStudent": [
+          "mechanical_engineering:AMRITBIR SINGH",
+          "mechanical_engineering:LAKSHMI YADAV",
+          "mechanical_engineering:MOHD RAFIQ PARRAY"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Shiva S (~200) from Department of Sc"
+        ],
+        "FundingAgency": [
+          "mechanical_engineering:agency:Department of Science and Technology, Indian Space Research Organisation, Directorate of Extramural Research & Intellectual Property Rights (DRDO), Department of Scientific and Industrial Research (DSIR)"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "mechanical_engineering:Shiva S",
+          "target": "mechanical_engineering:**Additive Manufacturing",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Shiva S",
+          "target": "mechanical_engineering:**Laser Materials\u00a0Processing",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Shiva S",
+          "target": "mechanical_engineering:**Spray Techniques",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Shiva S",
+          "target": "mechanical_engineering:**Shape Memory Alloys",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Shiva S",
+          "target": "mechanical_engineering:**Smart Materials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Shiva S",
+          "target": "mechanical_engineering:project:Research Project by Dr. Shiva S (~200) from Department of Sc",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
+          "source": "mechanical_engineering:AMRITBIR SINGH",
+          "target": "mechanical_engineering:Shiva S",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:LAKSHMI YADAV",
+          "target": "mechanical_engineering:Shiva S",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:MOHD RAFIQ PARRAY",
+          "target": "mechanical_engineering:Shiva S",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Shiva S (~200) from Department of Sc",
+          "target": "mechanical_engineering:Shiva S",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Shiva S (~200) from Department of Sc",
+          "target": "mechanical_engineering:agency:Department of Science and Technology, Indian Space Research Organisation, Directorate of Extramural Research & Intellectual Property Rights (DRDO), Department of Scientific and Industrial Research (DSIR)",
+          "type": "FUNDED_BY"
+        }
+      ],
+      "text": "Community 14 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Shiva S\n  FundingAgency: Department of Science and Technology, Indian Space Research Organisation, Directorate of Extramural Research & Intellectual Property Rights (DRDO), Department of Scientific and Industrial Research (DSIR)\n  PhDStudent: AMRITBIR SINGH, LAKSHMI YADAV, MOHD RAFIQ PARRAY\n  Project: mechanical_engineering:project:Research Project by Dr. Shiva S (~200) from Department of Sc\n  ResearchArea: **Additive Manufacturing, **Laser Materials\u00a0Processing, **Spray Techniques, **Shape Memory Alloys, **Smart Materials\n  Relationships: RESEARCHES_IN: 5, PRINCIPAL_INVESTIGATOR: 1, SUPERVISED_BY: 3, PI_IS: 1, FUNDED_BY: 1\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Shiva S. 3 PhD student(s). working in areas like mechanical_engineering:**Additive Manufacturing, mechanical_engineering:**Laser Materials\u00a0Processing, mechanical_engineering:**Spray Techniques.",
+      "summary": "This group includes 1 faculty member(s): mechanical_engineering:Shiva S. 3 PhD student(s). working in areas like mechanical_engineering:**Additive Manufacturing, mechanical_engineering:**Laser Materials\u00a0Processing, mechanical_engineering:**Spray Techniques.",
+      "size": 11
+    },
+    {
+      "id": "community_15",
+      "community_id": 15,
+      "members": [
+        "mechanical_engineering:Vijay Kumar Pal",
+        "mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM",
+        "mechanical_engineering:LASER machining etc.)",
+        "mechanical_engineering:Tribology",
+        "mechanical_engineering:machining of UHTCs",
+        "mechanical_engineering:Biomaterials",
+        "mechanical_engineering:Nano technology",
+        "mechanical_engineering:super hydrophobic surfaces",
+        "mechanical_engineering:large area micro/nano texturing",
+        "mechanical_engineering:Composites",
+        "mechanical_engineering:ANAND KUMAR GANDHAM",
+        "mechanical_engineering:MANOJ SINGH YADAV",
+        "mechanical_engineering:RAJARAM KUMAR GUPTA",
+        "mechanical_engineering:project:Research Project by Dr. Vijay Kumar Pal (112) from MSME, OH2",
+        "mechanical_engineering:agency:MSME, OH2 LIFE, Science and Engineering Research Board,"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "mechanical_engineering:Vijay Kumar Pal"
+        ],
+        "ResearchArea": [
+          "mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM",
+          "mechanical_engineering:LASER machining etc.)",
+          "mechanical_engineering:Tribology",
+          "mechanical_engineering:machining of UHTCs",
+          "mechanical_engineering:Biomaterials",
+          "mechanical_engineering:Nano technology",
+          "mechanical_engineering:super hydrophobic surfaces",
+          "mechanical_engineering:large area micro/nano texturing",
+          "mechanical_engineering:Composites"
+        ],
+        "PhDStudent": [
+          "mechanical_engineering:ANAND KUMAR GANDHAM",
+          "mechanical_engineering:MANOJ SINGH YADAV",
+          "mechanical_engineering:RAJARAM KUMAR GUPTA"
+        ],
+        "Project": [
+          "mechanical_engineering:project:Research Project by Dr. Vijay Kumar Pal (112) from MSME, OH2"
+        ],
+        "FundingAgency": [
+          "mechanical_engineering:agency:MSME, OH2 LIFE, Science and Engineering Research Board,"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "mechanical_engineering:Vijay Kumar Pal",
+          "target": "mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Vijay Kumar Pal",
+          "target": "mechanical_engineering:LASER machining etc.)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Vijay Kumar Pal",
+          "target": "mechanical_engineering:Tribology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Vijay Kumar Pal",
+          "target": "mechanical_engineering:machining of UHTCs",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Vijay Kumar Pal",
+          "target": "mechanical_engineering:Biomaterials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Vijay Kumar Pal",
+          "target": "mechanical_engineering:Nano technology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Vijay Kumar Pal",
+          "target": "mechanical_engineering:super hydrophobic surfaces",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Vijay Kumar Pal",
+          "target": "mechanical_engineering:large area micro/nano texturing",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Vijay Kumar Pal",
+          "target": "mechanical_engineering:Composites",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "mechanical_engineering:Vijay Kumar Pal",
+          "target": "mechanical_engineering:project:Research Project by Dr. Vijay Kumar Pal (112) from MSME, OH2",
+          "type": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
+          "source": "mechanical_engineering:ANAND KUMAR GANDHAM",
+          "target": "mechanical_engineering:Vijay Kumar Pal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:MANOJ SINGH YADAV",
+          "target": "mechanical_engineering:Vijay Kumar Pal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:RAJARAM KUMAR GUPTA",
+          "target": "mechanical_engineering:Vijay Kumar Pal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Vijay Kumar Pal (112) from MSME, OH2",
+          "target": "mechanical_engineering:Vijay Kumar Pal",
+          "type": "PI_IS"
+        },
+        {
+          "source": "mechanical_engineering:project:Research Project by Dr. Vijay Kumar Pal (112) from MSME, OH2",
+          "target": "mechanical_engineering:agency:MSME, OH2 LIFE, Science and Engineering Research Board,",
+          "type": "FUNDED_BY"
+        }
+      ],
+      "text": "Community 15 in IIT Jammu Mechanical Engineering Department:\n  Faculty: Vijay Kumar Pal\n  FundingAgency: MSME, OH2 LIFE, Science and Engineering Research Board,\n  PhDStudent: ANAND KUMAR GANDHAM, MANOJ SINGH YADAV, RAJARAM KUMAR GUPTA\n  Project: mechanical_engineering:project:Research Project by Dr. Vijay Kumar Pal (112) from MSME, OH2\n  ResearchArea: Conventional and non-conventional machining (Micro-EDM/ECM, LASER machining etc.), Tribology, machining of UHTCs, Biomaterials, Nano technology, super hydrophobic surfaces, large area micro/nano texturing, Composites\n  Relationships: RESEARCHES_IN: 9, PRINCIPAL_INVESTIGATOR: 1, SUPERVISED_BY: 3, PI_IS: 1, FUNDED_BY: 1\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Vijay Kumar Pal. 3 PhD student(s). working in areas like mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM, mechanical_engineering:LASER machining etc.), mechanical_engineering:Tribology.",
+      "summary": "This group includes 1 faculty member(s): mechanical_engineering:Vijay Kumar Pal. 3 PhD student(s). working in areas like mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM, mechanical_engineering:LASER machining etc.), mechanical_engineering:Tribology.",
+      "size": 15
     },
     {
       "id": "community_16",
       "community_id": 16,
+      "members": [
+        "mechanical_engineering:ARVIND KUMAR",
+        "mechanical_engineering:Anand Kumar Subramaniyan",
+        "mechanical_engineering:RAJKISHORE SINGH"
+      ],
+      "members_by_type": {
+        "PhDStudent": [
+          "mechanical_engineering:ARVIND KUMAR",
+          "mechanical_engineering:RAJKISHORE SINGH"
+        ],
+        "ExternalPerson": [
+          "mechanical_engineering:Anand Kumar Subramaniyan"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "mechanical_engineering:ARVIND KUMAR",
+          "target": "mechanical_engineering:Anand Kumar Subramaniyan",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "mechanical_engineering:RAJKISHORE SINGH",
+          "target": "mechanical_engineering:Anand Kumar Subramaniyan",
+          "type": "SUPERVISED_BY"
+        }
+      ],
+      "text": "Community 16 in IIT Jammu Mechanical Engineering Department:\n  ExternalPerson: Anand Kumar Subramaniyan\n  PhDStudent: ARVIND KUMAR, RAJKISHORE SINGH\n  Relationships: SUPERVISED_BY: 2\n\nSummary: 2 PhD student(s).",
+      "summary": "2 PhD student(s).",
+      "size": 3
+    },
+    {
+      "id": "community_17",
+      "community_id": 17,
+      "members": [
+        "mechanical_engineering:NISAR AHMAD DAR",
+        "mechanical_engineering:Prabhat Munshi"
+      ],
+      "members_by_type": {
+        "PhDStudent": [
+          "mechanical_engineering:NISAR AHMAD DAR"
+        ],
+        "ExternalPerson": [
+          "mechanical_engineering:Prabhat Munshi"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "mechanical_engineering:NISAR AHMAD DAR",
+          "target": "mechanical_engineering:Prabhat Munshi",
+          "type": "SUPERVISED_BY"
+        }
+      ],
+      "text": "Community 17 in IIT Jammu Mechanical Engineering Department:\n  ExternalPerson: Prabhat Munshi\n  PhDStudent: NISAR AHMAD DAR\n  Relationships: SUPERVISED_BY: 1\n\nSummary: 1 PhD student(s).",
+      "summary": "1 PhD student(s).",
+      "size": 2
+    },
+    {
+      "id": "community_18",
+      "community_id": 18,
+      "members": [
+        "mechanical_engineering:category:Design",
+        "mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design",
+        "mechanical_engineering:Polymer Composites, Design and Manufacturing",
+        "mechanical_engineering:Robotics and Automation",
+        "mechanical_engineering:Dynamics and Vibrations",
+        "mechanical_engineering:Systems with hysteresis, time delay problems",
+        "mechanical_engineering:Computational and Experimental Fracture Mechanics",
+        "mechanical_engineering:Fatigue, Phase Field Method, XFEM, Autofrettage"
+      ],
+      "members_by_type": {
+        "ResearchCategory": [
+          "mechanical_engineering:category:Design"
+        ],
+        "ResearchArea": [
+          "mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design",
+          "mechanical_engineering:Polymer Composites, Design and Manufacturing",
+          "mechanical_engineering:Robotics and Automation",
+          "mechanical_engineering:Dynamics and Vibrations",
+          "mechanical_engineering:Systems with hysteresis, time delay problems",
+          "mechanical_engineering:Computational and Experimental Fracture Mechanics",
+          "mechanical_engineering:Fatigue, Phase Field Method, XFEM, Autofrettage"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design",
+          "target": "mechanical_engineering:category:Design",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "mechanical_engineering:Polymer Composites, Design and Manufacturing",
+          "target": "mechanical_engineering:category:Design",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "mechanical_engineering:Robotics and Automation",
+          "target": "mechanical_engineering:category:Design",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "mechanical_engineering:Dynamics and Vibrations",
+          "target": "mechanical_engineering:category:Design",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "mechanical_engineering:Systems with hysteresis, time delay problems",
+          "target": "mechanical_engineering:category:Design",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "mechanical_engineering:Computational and Experimental Fracture Mechanics",
+          "target": "mechanical_engineering:category:Design",
+          "type": "BELONGS_TO_CATEGORY"
+        },
+        {
+          "source": "mechanical_engineering:Fatigue, Phase Field Method, XFEM, Autofrettage",
+          "target": "mechanical_engineering:category:Design",
+          "type": "BELONGS_TO_CATEGORY"
+        }
+      ],
+      "text": "Community 18 in IIT Jammu Mechanical Engineering Department:\n  ResearchArea: Tribology: Fluid Film Bearings, Mechanical Design, Polymer Composites, Design and Manufacturing, Robotics and Automation, Dynamics and Vibrations, Systems with hysteresis, time delay problems, Computational and Experimental Fracture Mechanics, Fatigue, Phase Field Method, XFEM, Autofrettage\n  ResearchCategory: Design\n  Relationships: BELONGS_TO_CATEGORY: 7\n\nSummary: working in areas like mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design, mechanical_engineering:Polymer Composites, Design and Manufacturing, mechanical_engineering:Robotics and Automation.",
+      "summary": "working in areas like mechanical_engineering:Tribology: Fluid Film Bearings, Mechanical Design, mechanical_engineering:Polymer Composites, Design and Manufacturing, mechanical_engineering:Robotics and Automation.",
+      "size": 8
+    },
+    {
+      "id": "community_19",
+      "community_id": 19,
       "members": [
         "mechanical_engineering:category:Manufacturing",
         "mechanical_engineering:Material Joining, Additive Manufacturing",
@@ -1662,114 +2147,9 @@
           "type": "BELONGS_TO_CATEGORY"
         }
       ],
-      "text": "Community 16 in IIT Jammu EE Department:\n  ResearchArea: Material Joining, Additive Manufacturing, Artificial Intelligence applications in manufacturing, Machining, Grinding, Sustainable Manufacturing, Surface Texturing, Ultrasonic, Surface Engineering and Inspection Techniques, Laser Surface Processing, High temperature Coatings, Machining, Micro/Nano Manufacturing, Fabrication of stretchable sensors/devices, Additive Manufacturing of Advanced Materials, Functionally graded and composite, Smart Alloys fabrication, Desing for Additive Manufacturing, In-situ monitoring and control of AM Process\n  ResearchCategory: Manufacturing\n  Relationships: BELONGS_TO_CATEGORY: 10\n\nSummary: working in areas like mechanical_engineering:Material Joining, Additive Manufacturing, mechanical_engineering:Artificial Intelligence applications in manufacturing, mechanical_engineering:Machining, Grinding, Sustainable Manufacturing, Surface Texturing, Ultrasonic.",
+      "text": "Community 19 in IIT Jammu Mechanical Engineering Department:\n  ResearchArea: Material Joining, Additive Manufacturing, Artificial Intelligence applications in manufacturing, Machining, Grinding, Sustainable Manufacturing, Surface Texturing, Ultrasonic, Surface Engineering and Inspection Techniques, Laser Surface Processing, High temperature Coatings, Machining, Micro/Nano Manufacturing, Fabrication of stretchable sensors/devices, Additive Manufacturing of Advanced Materials, Functionally graded and composite, Smart Alloys fabrication, Desing for Additive Manufacturing, In-situ monitoring and control of AM Process\n  ResearchCategory: Manufacturing\n  Relationships: BELONGS_TO_CATEGORY: 10\n\nSummary: working in areas like mechanical_engineering:Material Joining, Additive Manufacturing, mechanical_engineering:Artificial Intelligence applications in manufacturing, mechanical_engineering:Machining, Grinding, Sustainable Manufacturing, Surface Texturing, Ultrasonic.",
       "summary": "working in areas like mechanical_engineering:Material Joining, Additive Manufacturing, mechanical_engineering:Artificial Intelligence applications in manufacturing, mechanical_engineering:Machining, Grinding, Sustainable Manufacturing, Surface Texturing, Ultrasonic.",
       "size": 11
-    },
-    {
-      "id": "community_17",
-      "community_id": 17,
-      "members": [
-        "mechanical_engineering:Vijay Kumar Pal",
-        "mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM",
-        "mechanical_engineering:LASER machining etc.)",
-        "mechanical_engineering:Tribology",
-        "mechanical_engineering:machining of UHTCs",
-        "mechanical_engineering:Biomaterials",
-        "mechanical_engineering:Nano technology",
-        "mechanical_engineering:super hydrophobic surfaces",
-        "mechanical_engineering:large area micro/nano texturing",
-        "mechanical_engineering:Composites",
-        "mechanical_engineering:ANAND KUMAR GANDHAM",
-        "mechanical_engineering:MANOJ SINGH YADAV",
-        "mechanical_engineering:RAJARAM KUMAR GUPTA"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "mechanical_engineering:Vijay Kumar Pal"
-        ],
-        "ResearchArea": [
-          "mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM",
-          "mechanical_engineering:LASER machining etc.)",
-          "mechanical_engineering:Tribology",
-          "mechanical_engineering:machining of UHTCs",
-          "mechanical_engineering:Biomaterials",
-          "mechanical_engineering:Nano technology",
-          "mechanical_engineering:super hydrophobic surfaces",
-          "mechanical_engineering:large area micro/nano texturing",
-          "mechanical_engineering:Composites"
-        ],
-        "PhDStudent": [
-          "mechanical_engineering:ANAND KUMAR GANDHAM",
-          "mechanical_engineering:MANOJ SINGH YADAV",
-          "mechanical_engineering:RAJARAM KUMAR GUPTA"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "mechanical_engineering:Vijay Kumar Pal",
-          "target": "mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Vijay Kumar Pal",
-          "target": "mechanical_engineering:LASER machining etc.)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Vijay Kumar Pal",
-          "target": "mechanical_engineering:Tribology",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Vijay Kumar Pal",
-          "target": "mechanical_engineering:machining of UHTCs",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Vijay Kumar Pal",
-          "target": "mechanical_engineering:Biomaterials",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Vijay Kumar Pal",
-          "target": "mechanical_engineering:Nano technology",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Vijay Kumar Pal",
-          "target": "mechanical_engineering:super hydrophobic surfaces",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Vijay Kumar Pal",
-          "target": "mechanical_engineering:large area micro/nano texturing",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:Vijay Kumar Pal",
-          "target": "mechanical_engineering:Composites",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "mechanical_engineering:ANAND KUMAR GANDHAM",
-          "target": "mechanical_engineering:Vijay Kumar Pal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mechanical_engineering:MANOJ SINGH YADAV",
-          "target": "mechanical_engineering:Vijay Kumar Pal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "mechanical_engineering:RAJARAM KUMAR GUPTA",
-          "target": "mechanical_engineering:Vijay Kumar Pal",
-          "type": "SUPERVISED_BY"
-        }
-      ],
-      "text": "Community 17 in IIT Jammu EE Department:\n  Faculty: Vijay Kumar Pal\n  PhDStudent: ANAND KUMAR GANDHAM, MANOJ SINGH YADAV, RAJARAM KUMAR GUPTA\n  ResearchArea: Conventional and non-conventional machining (Micro-EDM/ECM, LASER machining etc.), Tribology, machining of UHTCs, Biomaterials, Nano technology, super hydrophobic surfaces, large area micro/nano texturing, Composites\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 3\n\nSummary: This group includes 1 faculty member(s): mechanical_engineering:Vijay Kumar Pal. 3 PhD student(s). working in areas like mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM, mechanical_engineering:LASER machining etc.), mechanical_engineering:Tribology.",
-      "summary": "This group includes 1 faculty member(s): mechanical_engineering:Vijay Kumar Pal. 3 PhD student(s). working in areas like mechanical_engineering:Conventional and non-conventional machining (Micro-EDM/ECM, mechanical_engineering:LASER machining etc.), mechanical_engineering:Tribology.",
-      "size": 13
     }
   ]
 }

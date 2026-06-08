@@ -5,7 +5,7 @@ import os
 from unittest.mock import Mock
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from graphrag.llm import GeminiLLM, OllamaLLM, GroqLLM, create_llm_from_env, get_system_prompt, sanitize_response
+from graphrag.llm import BedrockLLM, GeminiLLM, OllamaLLM, GroqLLM, create_llm_from_env, get_system_prompt, sanitize_response
 
 
 class TestSanitizeResponse:
@@ -119,6 +119,153 @@ class TestOllamaLLM:
         assert "error generating a response" in result.lower()
 
 
+class TestBedrockLLM:
+    def test_successful_response(self, monkeypatch):
+        response = Mock()
+        response.status_code = 200
+        response.json.return_value = {
+            "output": {
+                "message": {
+                    "content": [
+                        {"text": "Hello! I am Bedrock."}
+                    ]
+                }
+            }
+        }
+
+        monkeypatch.setattr("graphrag.llm.requests.post", lambda *args, **kwargs: response)
+
+        llm = BedrockLLM(api_key="test-key", model="test-model", region="us-east-1")
+        result = llm.generate("hello")
+        assert result == "Hello! I am Bedrock."
+
+    def test_retries_with_inference_profile_when_base_model_is_rejected(self, monkeypatch):
+        class FakeResponse:
+            def __init__(self, status_code, payload):
+                self.status_code = status_code
+                self._payload = payload
+                self.text = str(payload)
+                self.ok = 200 <= status_code < 300
+
+            def json(self):
+                return self._payload
+
+            def raise_for_status(self):
+                if self.status_code >= 400:
+                    import requests
+                    raise requests.exceptions.HTTPError(
+                        f"{self.status_code} Client Error",
+                        response=self,
+                    )
+
+        calls = []
+
+        def mock_post(url, *args, **kwargs):
+            calls.append(url)
+            if "model/anthropic.claude-haiku-4-5-20251001-v1%3A0/converse" in url:
+                return FakeResponse(
+                    400,
+                    {
+                        "message": (
+                            "Invocation of model ID anthropic.claude-haiku-4-5-20251001-v1:0 "
+                            "with on-demand throughput isn't supported. Retry your request "
+                            "with the ID or ARN of an inference profile that contains this model."
+                        )
+                    },
+                )
+            if "model/us.anthropic.claude-haiku-4-5-20251001-v1%3A0/converse" in url:
+                return FakeResponse(
+                    200,
+                    {
+                        "output": {
+                            "message": {
+                                "content": [
+                                    {"text": "Recovered response"}
+                                ]
+                            }
+                        }
+                    },
+                )
+            raise AssertionError(f"Unexpected URL {url}")
+
+        monkeypatch.setattr("graphrag.llm.requests.post", mock_post)
+
+        llm = BedrockLLM(
+            api_key="test-key",
+            model="anthropic.claude-haiku-4-5-20251001-v1:0",
+            region="us-east-1",
+        )
+        result = llm.generate("hello")
+
+        assert result == "Recovered response"
+        assert llm.model == "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+        assert len(calls) == 2
+
+    def test_missing_api_key_fallback_message(self, monkeypatch):
+        monkeypatch.setenv("AWS_BEARER_TOKEN_BEDROCK", "")
+        llm = BedrockLLM()
+        result = llm.generate("hello")
+        assert "error generating a response" in result.lower()
+
+    def test_falls_back_to_configured_backup_model_when_account_cannot_use_primary(self, monkeypatch):
+        class FakeResponse:
+            def __init__(self, status_code, payload):
+                self.status_code = status_code
+                self._payload = payload
+                self.text = str(payload)
+                self.ok = 200 <= status_code < 300
+
+            def json(self):
+                return self._payload
+
+            def raise_for_status(self):
+                if self.status_code >= 400:
+                    import requests
+                    raise requests.exceptions.HTTPError(
+                        f"{self.status_code} Client Error",
+                        response=self,
+                    )
+
+        def mock_post(url, *args, **kwargs):
+            if "model/us.anthropic.claude-haiku-4-5-20251001-v1%3A0/converse" in url:
+                return FakeResponse(
+                    404,
+                    {
+                        "message": (
+                            "Model use case details have not been submitted for this account."
+                        )
+                    },
+                )
+            if "model/amazon.nova-micro-v1%3A0/converse" in url:
+                return FakeResponse(
+                    200,
+                    {
+                        "output": {
+                            "message": {
+                                "content": [
+                                    {"text": "Fallback response"}
+                                ]
+                            }
+                        }
+                    },
+                )
+            raise AssertionError(f"Unexpected URL {url}")
+
+        monkeypatch.setattr("graphrag.llm.requests.post", mock_post)
+
+        llm = BedrockLLM(
+            api_key="test-key",
+            model="us.anthropic.claude-haiku-4-5-20251001-v1:0",
+            region="us-east-1",
+        )
+        llm.fallback_model = "amazon.nova-micro-v1:0"
+
+        result = llm.generate("hello")
+
+        assert result == "Fallback response"
+        assert llm.model == "amazon.nova-micro-v1:0"
+
+
 class TestLLMFactory:
     def test_create_llm_from_env_uses_ollama(self, monkeypatch):
         monkeypatch.setenv("LLM_PROVIDER", "ollama")
@@ -138,6 +285,18 @@ class TestLLMFactory:
 
         assert isinstance(llm, GeminiLLM)
         assert llm.model == "gemini-test"
+        assert os.environ["VERIFY_RESPONSES"] == "false"
+
+    def test_create_llm_from_env_uses_bedrock(self, monkeypatch):
+        monkeypatch.setenv("LLM_PROVIDER", "bedrock")
+        monkeypatch.setenv("BEDROCK_MODEL", "us.test.model")
+        monkeypatch.setenv("AWS_BEARER_TOKEN_BEDROCK", "test-token")
+        monkeypatch.delenv("VERIFY_RESPONSES", raising=False)
+
+        llm = create_llm_from_env()
+
+        assert isinstance(llm, BedrockLLM)
+        assert llm.model == "us.test.model"
         assert os.environ["VERIFY_RESPONSES"] == "false"
 
 

@@ -8,6 +8,7 @@ import time
 import logging
 import requests
 from html import unescape
+from urllib.parse import quote
 from env_config import load_env_file
 
 load_env_file()
@@ -18,6 +19,42 @@ DEFAULT_OLLAMA_API_URL = "http://localhost:11434/api/chat"
 DEFAULT_OLLAMA_MODEL = "llama3.1"
 DEFAULT_GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta"
 DEFAULT_GEMINI_MODEL = "gemini-2.5-flash-lite"
+DEFAULT_BEDROCK_REGION = "us-east-1"
+DEFAULT_BEDROCK_MODEL = "qwen.qwen3-32b-v1:0"
+DEFAULT_BEDROCK_FALLBACK_MODEL = "qwen.qwen3-32b-v1:0"
+BEDROCK_INFERENCE_PROFILE_PREFIXES = ("us.", "eu.", "au.", "jp.", "global.")
+
+
+def _build_bedrock_api_url(region: str, model: str) -> str:
+    encoded_model = quote(model, safe="")
+    return f"https://bedrock-runtime.{region}.amazonaws.com/model/{encoded_model}/converse"
+
+
+def _derive_bedrock_inference_prefix(region: str) -> str:
+    region = (region or "").strip().lower()
+    if region.startswith(("us-", "ca-", "sa-", "mx-")):
+        return "us"
+    if region.startswith(("eu-", "il-", "me-", "af-")):
+        return "eu"
+    if region.startswith(("ap-southeast-2", "ap-southeast-4")):
+        return "au"
+    if region.startswith(("ap-northeast-1", "ap-northeast-3")):
+        return "jp"
+    return ""
+
+
+def _summarize_http_error(response) -> str:
+    if response is None:
+        return ""
+    try:
+        body = response.json()
+    except ValueError:
+        body = (response.text or "").strip()
+    if isinstance(body, dict):
+        message = body.get("message") or body.get("error") or str(body)
+    else:
+        message = str(body)
+    return message[:300]
 
 
 def get_llm_provider() -> str:
@@ -289,16 +326,219 @@ class GeminiLLM:
         return self.generate(prompt, temperature=0.3, max_tokens=300)
 
 
+class BedrockLLM:
+    def __init__(
+        self,
+        api_key: str = None,
+        model: str = None,
+        region: str = None,
+    ):
+        load_env_file()
+        self.provider = "bedrock"
+        self.api_key = api_key or os.environ.get("AWS_BEARER_TOKEN_BEDROCK", "").strip()
+        self.model = model or os.environ.get("BEDROCK_MODEL", DEFAULT_BEDROCK_MODEL).strip()
+        self.configured_model = self.model
+        self.fallback_model = os.environ.get("BEDROCK_FALLBACK_MODEL", DEFAULT_BEDROCK_FALLBACK_MODEL).strip()
+        self.region = (
+            region
+            or os.environ.get("BEDROCK_REGION")
+            or os.environ.get("AWS_REGION")
+            or os.environ.get("AWS_DEFAULT_REGION")
+            or DEFAULT_BEDROCK_REGION
+        ).strip()
+        self.api_url = _build_bedrock_api_url(self.region, self.model)
+
+    def _set_model(self, model: str) -> None:
+        self.model = model.strip()
+        self.api_url = _build_bedrock_api_url(self.region, self.model)
+
+    def _candidate_inference_profile_models(self):
+        model = (self.configured_model or self.model).strip()
+        if not model or model.startswith("arn:") or model.startswith(BEDROCK_INFERENCE_PROFILE_PREFIXES):
+            return []
+
+        candidates = []
+        preferred_prefix = _derive_bedrock_inference_prefix(self.region)
+        for prefix in (preferred_prefix, "global", "us", "eu", "au", "jp"):
+            if not prefix:
+                continue
+            candidate = f"{prefix}.{model}"
+            if candidate not in candidates:
+                candidates.append(candidate)
+        return candidates
+
+    def _should_retry_with_inference_profile(self, response) -> bool:
+        if response.status_code != 400:
+            return False
+
+        detail = _summarize_http_error(response).lower().replace("’", "'")
+        return (
+            "inference profile" in detail
+            or ("on-demand throughput" in detail and "supported" in detail)
+        )
+
+    def _retry_with_inference_profile(self, payload, headers):
+        last_response = None
+        for candidate in self._candidate_inference_profile_models():
+            if candidate == self.model:
+                continue
+            response = requests.post(
+                _build_bedrock_api_url(self.region, candidate),
+                headers=headers,
+                json=payload,
+                timeout=60,
+            )
+            last_response = response
+            if response.status_code == 429:
+                self._set_model(candidate)
+                logger.warning(
+                    "Bedrock model '%s' needed an inference profile; switched to '%s' but hit a rate limit.",
+                    self.configured_model,
+                    candidate,
+                )
+                return response
+            if response.ok:
+                self._set_model(candidate)
+                logger.warning(
+                    "Bedrock model '%s' required an inference profile; using '%s'. "
+                    "Update BEDROCK_MODEL to this value to avoid the initial retry.",
+                    self.configured_model,
+                    candidate,
+                )
+                return response
+        return last_response
+
+    def _should_retry_with_fallback_model(self, response) -> bool:
+        if response.status_code not in {403, 404}:
+            return False
+        detail = _summarize_http_error(response).lower().replace("’", "'")
+        return (
+            "use case details" in detail
+            or "access to the model is not allowed" in detail
+            or "not authorized to invoke this model" in detail
+        )
+
+    def _retry_with_fallback_model(self, payload, headers):
+        fallback_model = (self.fallback_model or "").strip()
+        if not fallback_model or fallback_model == self.model:
+            return None
+
+        response = requests.post(
+            _build_bedrock_api_url(self.region, fallback_model),
+            headers=headers,
+            json=payload,
+            timeout=60,
+        )
+        if response.ok or response.status_code == 429:
+            previous_model = self.model
+            self._set_model(fallback_model)
+            logger.warning(
+                "Bedrock model '%s' was unavailable for this account; falling back to '%s'. "
+                "Previous effective model was '%s'.",
+                self.configured_model,
+                fallback_model,
+                previous_model,
+            )
+            return response
+        return response
+
+    def generate(
+        self,
+        prompt: str,
+        system_prompt: str = None,
+        temperature: float = 0.3,
+        max_tokens: int = 1024,
+    ) -> str:
+        if not self.api_key:
+            logger.error("Bedrock LLM requested but AWS_BEARER_TOKEN_BEDROCK is not configured.")
+            return "I encountered an error generating a response. Please try again."
+
+        payload = {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": [{"text": prompt}],
+                }
+            ],
+            "inferenceConfig": {
+                "temperature": temperature,
+                "maxTokens": max_tokens,
+            },
+        }
+        if system_prompt:
+            payload["system"] = [{"text": system_prompt}]
+
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}",
+        }
+
+        for attempt in range(2):
+            try:
+                resp = requests.post(self.api_url, headers=headers, json=payload, timeout=60)
+                if resp.status_code == 429:
+                    logger.warning("Bedrock rate limit hit; not retrying to avoid extra quota usage.")
+                    return "I'm sorry, the model is currently rate-limited. Please try again shortly."
+                if self._should_retry_with_inference_profile(resp):
+                    fallback_resp = self._retry_with_inference_profile(payload, headers)
+                    if fallback_resp is not None:
+                        resp = fallback_resp
+                        if resp.status_code == 429:
+                            logger.warning("Bedrock rate limit hit after switching to an inference profile.")
+                            return "I'm sorry, the model is currently rate-limited. Please try again shortly."
+                if self._should_retry_with_fallback_model(resp):
+                    fallback_resp = self._retry_with_fallback_model(payload, headers)
+                    if fallback_resp is not None:
+                        resp = fallback_resp
+                        if resp.status_code == 429:
+                            logger.warning("Bedrock rate limit hit after switching to the fallback model.")
+                            return "I'm sorry, the model is currently rate-limited. Please try again shortly."
+                resp.raise_for_status()
+
+                data = resp.json()
+                parts = data.get("output", {}).get("message", {}).get("content", [])
+                raw_response = "".join(part.get("text", "") for part in parts if part.get("text")).strip()
+                if not raw_response:
+                    raise ValueError("Bedrock returned an empty text response")
+
+                return sanitize_response(raw_response)
+            except requests.exceptions.Timeout:
+                if attempt == 0:
+                    time.sleep(1)
+                    continue
+                return "I'm sorry, the request timed out. Please try again."
+            except requests.exceptions.HTTPError as e:
+                detail = _summarize_http_error(getattr(e, "response", None))
+                suffix = f" | {detail}" if detail else ""
+                logger.error(f"Bedrock LLM HTTP error (attempt {attempt + 1}): {e}{suffix}")
+                return "I encountered an error generating a response. Please try again."
+            except Exception as e:
+                logger.error(f"Bedrock LLM error (attempt {attempt + 1}): {e}")
+                if attempt == 0:
+                    time.sleep(1)
+                    continue
+                return "I encountered an error generating a response. Please try again."
+
+        return "Unable to generate a response. Please try again."
+
+    def __call__(self, prompt: str) -> str:
+        return self.generate(prompt, temperature=0.3, max_tokens=300)
+
+
 def create_llm_from_env(provider: str = None, model: str = None):
     """Instantiate the configured LLM provider."""
     load_env_file()
-    provider = (provider or get_llm_provider()).strip().lower()
+    provider = (provider or get_llm_provider()).strip().lower().replace("_", "-")
 
     if provider == "gemini":
         # Gemini is a paid/rate-limited remote API, so keep the optional
         # verifier off unless explicitly enabled.
         os.environ.setdefault("VERIFY_RESPONSES", "false")
         return GeminiLLM(model=model)
+    if provider in {"bedrock", "aws-bedrock"}:
+        # Bedrock is also a remote paid/rate-limited API.
+        os.environ.setdefault("VERIFY_RESPONSES", "false")
+        return BedrockLLM(model=model)
     if provider == "ollama":
         return OllamaLLM(model=model)
 
@@ -337,12 +577,12 @@ CRITICAL ANTI-HALLUCINATION RULES:
 - Do NOT combine facts from different people or entities.
 - If information comes from multiple departments, clearly attribute which fact comes from which department.
 
-CRITICAL CROSS-DEPARTMENT COMPLETENESS RULES:
-- When information about a topic exists in MULTIPLE departments, you MUST include results from ALL departments provided in the context.
-- Do NOT omit any department's information. Every department section in the context MUST be represented in your answer.
-- Clearly label which department each piece of information comes from (e.g., "In the EE department: ...", "In CSE: ...").
-- If asked "who teaches X" or "who works on X", list ALL matching faculty from ALL departments, not just one.
-- NEVER give the impression that only one department has relevant information when multiple departments are provided.
+CRITICAL CROSS-DEPARTMENT RESPONSE RULES:
+- ONLY include a department in your answer if the context for that department actually contains relevant information to answer the question.
+- If a department's context does NOT contain relevant information, DO NOT mention that department at all — not even to say you don't have information about it there.
+- When only ONE department has the relevant answer, give a single, unified response WITHOUT any department label or header.
+- When MULTIPLE departments genuinely contribute to the answer, clearly label each section (e.g., "In the EE department: ...", "In CSE: ...").
+- If asked "who teaches X" or "who works on X", list ALL matching faculty found in the provided context, organized clearly.
 
 Response guidelines:
 - BE CONCISE. Answer directly without unnecessary elaboration.
@@ -406,12 +646,13 @@ def build_multi_dept_chat_prompt(query: str, dept_contexts: dict) -> str:
 User's Question: {query}
 
 CRITICAL: Answer ONLY from the information provided above.
-- You MUST include information from EVERY department section provided above. Do NOT skip or omit any department.
-- Clearly attribute information to the correct department when answering (e.g., "In EE: ...", "In CSE: ...").
-- If the information above does NOT contain the answer, say: "I don't have that specific information."
+- Include a department in your answer ONLY if its context section actually contains information that answers the question.
+- If only ONE department section has the relevant answer, write a single, clean, unified response — do NOT add headers, labels, or mentions of other departments.
+- If MULTIPLE department sections contribute meaningful information, organize by department with clear section headers.
+- Do NOT write statements like "I don't have information about X in [Department]" — simply omit departments that are not relevant.
+- If NO section contains the answer, say: "I don't have that specific information."
 - NEVER fabricate or invent names, emails, phone numbers, designations, or statistics.
 - For counts, count ONLY from explicitly listed items — do not estimate.
 - Do NOT combine attributes from different people or entities.
-- When listing people from multiple departments, organize by department with clear headers.
 
 Be specific, well-organized, and use plain markdown formatting only — no HTML tags."""

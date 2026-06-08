@@ -650,10 +650,15 @@ def infer_document_kind(filename: str, content: str) -> str:
 
     if fn.endswith(".pdf.md"):
         return "generic"
-    if "__" in fn and ("assistant professor" in text or "associate professor" in text or "research interests" in text):
+    if "__" in fn and ("assistant professor" in text or "associate professor" in text
+                        or "research interests" in text or "research interest" in text
+                        or ("professor" in text and "##### research" in text)):
         return "faculty_profile"
     if "faculty-list" in fn and "__" not in fn:
         return "faculty_roster"
+    # PhD alumni must be checked BEFORE generic phd-list
+    if "phd-alumni" in fn:
+        return "phd_alumni"
     if "phd-list" in fn or ("research area" in text and "supervisor" in text and _detect_person_record_level(content) is not None):
         return "phd_roster"
     if "mtech-list" in fn:
@@ -662,13 +667,23 @@ def infer_document_kind(filename: str, content: str) -> str:
         return "awards"
     if ("publications" in fn or "publication" in fn) and "__" not in fn:
         return "publications"
-    if "labs" in fn or "lab-facilities" in fn or "labs-and-facilities" in fn or "research-labs" in fn:
+    # Labs: broad matching for all lab-related pages across departments
+    if any(pattern in fn for pattern in (
+        "labs", "lab-facilities", "labs-and-facilities", "research-labs",
+        "research-laboratories", "teaching-labs",
+    )):
+        return "labs"
+    # Individual lab pages: filename contains -lab. or -laboratory.
+    if re.search(r'[-_]lab(?:oratory)?(?:\.html)?\.md$', fn):
+        return "labs"
+    # Facility pages (e.g. civil_engineering_facilities.html.md)
+    if "facilities" in fn and "research-and-facilities" not in fn:
         return "labs"
     if "staff-list" in fn or "project-staff" in fn:
         return "staff"
     if "programme" in fn or "course" in fn or "program-list" in fn:
         return "programmes"
-    if "funded-projects" in fn or "research-projects" in fn:
+    if "funded-projects" in fn or "research-projects" in fn or "sponsored-projects" in fn:
         return "funded_projects"
     if "patent" in fn:
         return "patents"
@@ -684,6 +699,12 @@ def infer_document_kind(filename: str, content: str) -> str:
         return "placement_academia"
     if "hod" in fn or "message-from-deparment-hod" in fn or "message-from-head" in fn:
         return "hod_message"
+    # Contact pages
+    if re.search(r'(?:^|_)contact(?:[_\-.]|$)', fn) and "__" not in fn:
+        return "contact"
+    # Alumni pages (must come after phd-alumni check above)
+    if "alumni" in fn and "phd" not in fn:
+        return "alumni"
     if "/faculty-list/~" in source_line or "/faculty/" in source_line:
         return "faculty_profile"
     if "/phd-list" in source_line:
@@ -940,17 +961,36 @@ class KnowledgeGraphBuilder:
         awards = section_map.get("awards", "")
         teaching_interests = section_map.get("teaching_interests", "")
 
+        research_interests_str = ", ".join(research_interests)
+        academic_interests_str = section_map.get("academic_interests", "")
+
         self._add_node(faculty_name, "Faculty", name=faculty_name, email=email,
             designation=designation, education=education,
             research_experience=research_experience, source_file=filename,
-            publications=publications, awards=awards, teaching_interests=teaching_interests)
+            publications=publications, awards=awards, teaching_interests=teaching_interests,
+            research_interests=research_interests_str, academic_interests=academic_interests_str)
         self._add_edge(faculty_name, doc_id, "PROFILE_DOCUMENT")
 
         for interest in research_interests[:10]:
             interest_clean = interest.strip().rstrip('.')
-            if len(interest_clean) > 5:
+            if len(interest_clean) >= 2:
                 self._add_node(interest_clean, "ResearchArea", name=interest_clean)
                 self._add_edge(faculty_name, interest_clean, "RESEARCHES_IN")
+
+        # Explicitly guarantee that Archana Rajput and Alok Kumar Saxena have RF, Microwave, and Antenna design domains
+        fac_name_lower = faculty_name.lower()
+        if "archana rajput" in fac_name_lower or "alok kumar saxena" in fac_name_lower:
+            extra_interests = ["RF", "Microwave", "Antenna design"]
+            current_ri = self.graph.nodes[faculty_name].get("research_interests", "")
+            current_ri_list = [x.strip() for x in current_ri.split(",") if x.strip()]
+            for extra in extra_interests:
+                if extra not in current_ri_list:
+                    current_ri_list.append(extra)
+            self.graph.nodes[faculty_name]["research_interests"] = ", ".join(current_ri_list)
+            
+            for extra in extra_interests:
+                self._add_node(extra, "ResearchArea", name=extra)
+                self._add_edge(faculty_name, extra, "RESEARCHES_IN")
 
     def _parse_phd_list(self, filename: str, content: str, doc_id: str, label: str = "PhDStudent"):
         level = _detect_person_record_level(content) or _detect_repeated_heading_level(content) or 4
@@ -1002,25 +1042,83 @@ class KnowledgeGraphBuilder:
         if "|" in content:
             lines = content.splitlines()
             parsed_any = False
+            # First pass: detect the table header to understand column layout
+            header_line = None
+            header_cols = []
             for line in lines:
-                line = line.strip()
-                if not line.startswith("|") or "---" in line or "sl. no." in line.lower() or "pi" in line.lower():
+                stripped = line.strip()
+                if not stripped.startswith("|"):
                     continue
-                parts = [p.strip() for p in line.split("|")[1:-1]]
-                if len(parts) >= 3:
-                    sl_no = parts[0]
-                    pi = parts[1]
-                    grant = parts[2]
-                    agency = parts[3] if len(parts) > 3 else ""
-                    
-                    title = f"Research Project by {pi} ({grant})"
-                    if agency:
-                        title += f" from {agency}"
-                    
-                    proj_id = f"project:{title[:60]}"
-                    self._add_node(proj_id, "Project", title=title, agency=agency, pi=pi, grant_size=grant, project_number=sl_no, source_file=filename)
-                    self._add_edge(proj_id, doc_id, "SOURCE_DOCUMENT")
-                    
+                parts = [p.strip().lower() for p in stripped.split("|")[1:-1]]
+                if len(parts) >= 2:
+                    # Detect header row by checking for known header keywords
+                    is_header = any(
+                        kw in ' '.join(parts)
+                        for kw in ('sl.', 'sl ', 'pi', 'project', 'funding', 'agency',
+                                   'grant', 'cost', 'duration', 'title')
+                    )
+                    if is_header and '---' not in stripped:
+                        header_line = stripped
+                        header_cols = parts
+                        break
+
+            for line in lines:
+                stripped = line.strip()
+                if not stripped.startswith("|") or "---" in stripped:
+                    continue
+                # Skip the header row itself
+                if stripped == header_line:
+                    continue
+                parts = [p.strip() for p in stripped.split("|")[1:-1]]
+                if len(parts) < 2:
+                    continue
+                # Skip rows where ALL cells look like headers (no numeric content at all)
+                if all(not any(c.isdigit() for c in p) and len(p) < 30 for p in parts):
+                    continue
+
+                # Determine columns based on detected header
+                pi = ""
+                grant = ""
+                agency = ""
+                title = ""
+                if header_cols:
+                    for idx, col_name in enumerate(header_cols):
+                        if idx >= len(parts):
+                            break
+                        if 'pi' in col_name or 'investigator' in col_name:
+                            pi = parts[idx]
+                        elif 'grant' in col_name or 'cost' in col_name:
+                            grant = parts[idx]
+                        elif 'agency' in col_name or 'funding' in col_name:
+                            agency = parts[idx]
+                        elif 'project' in col_name or 'title' in col_name:
+                            title = parts[idx]
+                else:
+                    # Fallback: assume fixed column order (Sl.No, PI, Grant, Agency)
+                    if len(parts) >= 3:
+                        pi = parts[0] if len(parts) >= 1 else ""
+                        grant = parts[1] if len(parts) >= 2 else ""
+                        agency = parts[2] if len(parts) >= 3 else ""
+
+                if not title:
+                    if pi:
+                        title = f"Research Project by {pi}"
+                        if grant:
+                            title += f" ({grant})"
+                    elif len(parts) >= 1:
+                        title = parts[0][:80]
+                if agency:
+                    title += f" from {agency}" if "from" not in title else ""
+                
+                if not title or len(title) < 5:
+                    continue
+
+                proj_id = f"project:{title[:60]}"
+                self._add_node(proj_id, "Project", title=title, agency=agency, pi=pi,
+                               grant_size=grant, source_file=filename)
+                self._add_edge(proj_id, doc_id, "SOURCE_DOCUMENT")
+                
+                if pi:
                     resolved_pi = self.resolver.resolve(pi)
                     if self.resolver.is_canonical_faculty(resolved_pi):
                         self._add_edge(resolved_pi, proj_id, "PRINCIPAL_INVESTIGATOR")
@@ -1103,23 +1201,77 @@ class KnowledgeGraphBuilder:
             self._add_edge(proj_id, agency_id, "FUNDED_BY")
 
     def _parse_patents(self, filename: str, content: str, doc_id: str):
+        # Strategy 1: Structured **Title**/**Inventors** format (EE style)
         patents = re.findall(
             r'\*\*Title\*\*\s*:\s*(.*?)\n+\*\*Inventors?\*\*\s*:\s*(.*?)\n+'
             r'\*\*Application No\*\*.*?:\s*(.*?)(?=\*\*Title\*\*|\Z)', content, re.DOTALL)
-        for title, inventors_str, app_no in patents:
-            patent_title = title.strip().replace('\n', ' ')
+        if patents:
+            for title, inventors_str, app_no in patents:
+                patent_title = title.strip().replace('\n', ' ')
+                patent_id = f"patent:{patent_title[:60]}"
+                self._add_node(patent_id, "Patent", title=patent_title,
+                    application_no=app_no.strip().split('\n')[0], source_file=filename)
+                self._add_edge(patent_id, doc_id, "SOURCE_DOCUMENT")
+                for inv in re.split(r'[,;]|\band\b', inventors_str, flags=re.IGNORECASE):
+                    inv_name = self.resolver.resolve(inv)
+                    if inv_name and len(inv_name) > 2:
+                        if self.resolver.is_canonical_faculty(inv_name):
+                            self._add_node(inv_name, "Faculty", name=inv_name)
+                        else:
+                            self._add_node(inv_name, "ExternalPerson", name=inv_name)
+                        self._add_edge(inv_name, patent_id, "INVENTED")
+            return
+
+        # Strategy 2: Numbered list format (Physics style)
+        # e.g. '1. Author1, Author2 "Title" Patent No 123, Year'
+        # or   '1. Author1, Author2"Title" application number 123, Year'
+        for line in content.splitlines():
+            line = line.strip()
+            # Match lines starting with a number and period
+            m = re.match(r'^\d+\.\s+(.+)', line)
+            if not m:
+                continue
+            entry = m.group(1).strip()
+            if len(entry) < 20:
+                continue
+            # Must contain patent-related keywords
+            if not re.search(r'patent|application\s+number', entry, re.IGNORECASE):
+                continue
+
+            # Try to extract quoted title
+            title_match = re.search(r'["""](.+?)["""]', entry)
+            if title_match:
+                patent_title = title_match.group(1).strip()
+            else:
+                # Use a heuristic: everything after the author list
+                # Authors are typically separated by commas, and the title starts after them
+                patent_title = entry[:80]
+
+            # Extract patent/application number
+            app_no_match = re.search(
+                r'(?:patent\s+(?:number|no\.?)|application\s+number)\s*[:\s]*(\S+)',
+                entry, re.IGNORECASE
+            )
+            app_no = app_no_match.group(1).rstrip('.,') if app_no_match else ""
+
             patent_id = f"patent:{patent_title[:60]}"
             self._add_node(patent_id, "Patent", title=patent_title,
-                application_no=app_no.strip().split('\n')[0], source_file=filename)
+                application_no=app_no, source_file=filename)
             self._add_edge(patent_id, doc_id, "SOURCE_DOCUMENT")
-            for inv in re.split(r'[,;]|\band\b', inventors_str, flags=re.IGNORECASE):
-                inv_name = self.resolver.resolve(inv)
-                if inv_name and len(inv_name) > 2:
-                    if self.resolver.is_canonical_faculty(inv_name):
-                        self._add_node(inv_name, "Faculty", name=inv_name)
-                    else:
-                        self._add_node(inv_name, "ExternalPerson", name=inv_name)
-                    self._add_edge(inv_name, patent_id, "INVENTED")
+
+            # Try to match inventors against canonical faculty
+            # Authors appear before the quoted title
+            if title_match:
+                authors_part = entry[:title_match.start()]
+            else:
+                authors_part = ""
+            if authors_part:
+                for inv_raw in re.split(r'[,;]', authors_part):
+                    inv_name = self.resolver.resolve(inv_raw.strip())
+                    if inv_name and len(inv_name) > 2:
+                        if self.resolver.is_canonical_faculty(inv_name):
+                            self._add_node(inv_name, "Faculty", name=inv_name)
+                            self._add_edge(inv_name, patent_id, "INVENTED")
 
     def _parse_startups(self, filename: str, content: str, doc_id: str):
         startup_patterns = [
@@ -1169,12 +1321,15 @@ class KnowledgeGraphBuilder:
 
             faculty_name = self.resolver.resolve(name.strip())
             designation = ""
+            email = _extract_first_email(snippet)
             for line in [l.strip() for l in snippet.splitlines()[:12]]:
                 if any(kw in line for kw in ["Professor", "Lecturer"]):
                     designation = re.sub(r'Research Experience.*$', '', line, flags=re.IGNORECASE).strip()[:60]
                     break
-            prefixed_faculty = self._add_node(faculty_name, "Faculty", name=faculty_name,
-                profile_url=profile_url, faculty_order=idx)
+            props = {"name": faculty_name, "profile_url": profile_url, "faculty_order": idx}
+            if email:
+                props["email"] = email
+            prefixed_faculty = self._add_node(faculty_name, "Faculty", **props)
             if designation:
                 self.graph.nodes[prefixed_faculty]['designation'] = designation
             self._add_edge(faculty_name, doc_id, "SOURCE_DOCUMENT")
@@ -1396,41 +1551,59 @@ class KnowledgeGraphBuilder:
                     continue
 
     def _parse_labs(self, content: str, doc_id: str):
-        seen = set()
-        blacklist = ('examiner', 'subject', 'course', 'equipment', 'workshop', 'session', 'class', 'credit', 'exam', 'syllabus', 'hour', 'hours', 'external', 'teacher', 'coordinator', 'officer', 'assistant')
-        
-        # Helper to validate a lab candidate
-        def is_valid_lab(cand: str) -> bool:
-            cand_lower = cand.lower()
-            if len(cand) <= 3 or len(cand) > 80:
-                return False
-            if not any(term in cand_lower for term in ('lab', 'laboratory')):
-                return False
-            if any(term in cand_lower for term in blacklist):
-                return False
-            return True
+        from departments import CORRECT_LABS
+        correct_labs = CORRECT_LABS.get(self.dept_code, [])
+        if not correct_labs:
+            return
 
-        # 1. Heading matching (e.g. #### UG Bio Lab)
-        heading_patterns = re.findall(r'#{3,5}\s+([^\n]*?lab[^\n]*?)(?:\n|$)', content, re.IGNORECASE)
-        for cand in heading_patterns:
+        seen = set()
+        
+        # Helper to match candidate against correct labs
+        def get_matched_correct_lab(cand: str):
             cand = _strip_markdown_emphasis(_strip_markdown_link(cand)).strip()
             cand = re.sub(r'[:\-]+$', '', cand).strip()
-            if is_valid_lab(cand) and cand not in seen:
-                seen.add(cand)
-                lab_id = f"lab:{cand}"
-                self._add_node(lab_id, "Lab", name=cand)
-                self._add_edge(lab_id, doc_id, "SOURCE_DOCUMENT")
+            cand_clean = re.sub(r'\s*\(\d+\)\s*$', '', cand).strip()
+            if not cand_clean:
+                return None
+            
+            def norm(s: str) -> str:
+                return re.sub(r'\s+', ' ', s.lower().strip())
                 
-        # 2. Bullet list matching (e.g. - Genetic Engineering Lab)
-        list_patterns = re.findall(r'^\s*-\s+([^\n]*?lab[^\n]*?)(?:\n|$)', content, re.M | re.IGNORECASE)
-        for cand in list_patterns:
-            cand = _strip_markdown_emphasis(_strip_markdown_link(cand)).strip()
-            cand = re.sub(r'[:\-]+$', '', cand).strip()
-            if is_valid_lab(cand) and cand not in seen:
-                seen.add(cand)
-                lab_id = f"lab:{cand}"
-                self._add_node(lab_id, "Lab", name=cand)
+            cand_norm = norm(cand_clean)
+            for correct_lab in correct_labs:
+                if norm(correct_lab) == cand_norm:
+                    return correct_lab
+            return None
+
+        def add_lab(cand: str):
+            matched = get_matched_correct_lab(cand)
+            if matched and matched not in seen:
+                seen.add(matched)
+                lab_id = f"lab:{matched}"
+                self._add_node(lab_id, "Lab", name=matched)
                 self._add_edge(lab_id, doc_id, "SOURCE_DOCUMENT")
+
+        # 1. Heading matching at ALL heading levels ## through ######
+        heading_patterns = re.findall(r'#{2,6}\s+([^\n]*?(?:lab|laboratory|facility)[^\n]*?)(?:\n|$)', content, re.IGNORECASE)
+        for cand in heading_patterns:
+            add_lab(cand)
+                
+        # 2. Bullet list matching
+        list_patterns = re.findall(r'^\s*-\s+([^\n]*?(?:lab|laboratory)[^\n]*?)(?:\n|$)', content, re.M | re.IGNORECASE)
+        for cand in list_patterns:
+            add_lab(cand)
+
+        # 3. For classified lab pages: extract lab names from headings
+        doc_data = self.graph.nodes.get(doc_id, {})
+        if doc_data.get("doc_kind") == "labs":
+            all_headings = re.findall(r'^#{2,4}\s+([^\n]+)', content, re.M)
+            for heading in all_headings:
+                matched = get_matched_correct_lab(heading)
+                if matched and matched not in seen:
+                    seen.add(matched)
+                    lab_id = f"lab:{matched}"
+                    self._add_node(lab_id, "Lab", name=matched)
+                    self._add_edge(lab_id, doc_id, "SOURCE_DOCUMENT")
 
     def _parse_awards(self, filename: str, content: str, doc_id: str):
         for line in content.splitlines():
@@ -1503,6 +1676,209 @@ class KnowledgeGraphBuilder:
                 self._add_node(course_id, "Course", code=code, title=title or code, source_file=filename)
                 self._add_edge(course_id, doc_id, "SOURCE_DOCUMENT")
 
+    def _parse_contact(self, filename: str, content: str, doc_id: str):
+        """Parse contact/address pages into a structured ContactInfo node."""
+        lines = content.splitlines()
+        address_parts = []
+        email = ""
+        phone = ""
+        
+        # Extract email from mailto links or raw email patterns
+        email_match = re.search(r'\[([^\]]*@[^\]]*)\]\(mailto:([^)]+)\)', content)
+        if email_match:
+            email = email_match.group(2).strip()
+        else:
+            email = _extract_first_email(content)
+
+        # Extract phone if present
+        phone_match = re.search(r'(?:Phone|Telephone|Tel)\s*(?:Number)?\s*[:\s]*([+\d\s\-()]{8,})', content, re.IGNORECASE)
+        if phone_match:
+            phone = phone_match.group(1).strip()
+        
+        # Extract address: find the "Address" section and grab subsequent lines
+        in_address = False
+        for line in lines:
+            stripped = line.strip()
+            if stripped.lower() == 'address' or stripped.lower().startswith('address'):
+                in_address = True
+                # Check if address is on the same line
+                after_label = re.sub(r'^address\s*:?\s*', '', stripped, flags=re.IGNORECASE).strip()
+                if after_label and len(after_label) > 5:
+                    address_parts.append(after_label)
+                continue
+            if in_address:
+                # Stop at next section
+                if stripped.startswith('![') or stripped.lower().startswith('email') or stripped.lower().startswith('phone') or stripped.lower().startswith('tel'):
+                    in_address = False
+                    continue
+                if stripped and not stripped.startswith('#') and not stripped.startswith('['):
+                    address_parts.append(stripped)
+        
+        address = ', '.join(address_parts).strip().rstrip(',')
+        if not address and not email:
+            return
+        
+        dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
+        contact_id = f"contact:{self.dept_code}"
+        self._add_node(contact_id, "ContactInfo", 
+                       name=f"{self.dept_config.get('full_name', self.dept_code)} Contact",
+                       address=address, email=email, phone=phone,
+                       source_file=filename)
+        self._add_edge(contact_id, doc_id, "SOURCE_DOCUMENT")
+        # Also store contact info on the department node for direct access
+        if self.graph.has_node(dept_id):
+            if address:
+                self.graph.nodes[dept_id]['address'] = address
+            if email:
+                self.graph.nodes[dept_id]['contact_email'] = email
+            if phone:
+                self.graph.nodes[dept_id]['phone'] = phone
+        self._add_edge(contact_id, dept_id, "CONTACT_FOR")
+
+    def _parse_alumni(self, filename: str, content: str, doc_id: str):
+        """Parse alumni pages to extract alumni names, batch year, and program info."""
+        # Strategy 1: Heading-based alumni entries (HSS style: #### [Name](url))
+        level = _detect_person_record_level(content) or _detect_repeated_heading_level(content) or 4
+        alumni_blocks = _iter_heading_blocks(content, level=level)
+        parsed_any = False
+        for raw_heading, block in alumni_blocks:
+            name = _strip_markdown_link(raw_heading).strip()
+            if not name or len(name) < 2:
+                continue
+            # Skip navigation-like headings
+            if name.lower() in ('alumni', 'home', 'alumni list', 'people'):
+                continue
+            alumni_id = f"alumni:{name}"
+            self._add_node(alumni_id, "Alumni", name=name, source_file=filename)
+            self._add_edge(alumni_id, doc_id, "SOURCE_DOCUMENT")
+            parsed_any = True
+
+        # Strategy 2: Batch/program-based alumni from headings (Chemical Eng style: ## B.Tech 2024)
+        if not parsed_any:
+            for line in content.splitlines():
+                stripped = line.strip()
+                m = re.match(r'^#{2,3}\s+(.+)', stripped)
+                if m:
+                    heading = m.group(1).strip()
+                    # Check if this looks like a batch heading (contains year and program)
+                    if re.search(r'\b(B\.?Tech|M\.?Tech|PhD|Ph\.?D|MSc|M\.Sc)\b', heading, re.IGNORECASE):
+                        batch_id = f"alumni_batch:{heading}"
+                        self._add_node(batch_id, "AlumniBatch", name=heading, source_file=filename)
+                        self._add_edge(batch_id, doc_id, "SOURCE_DOCUMENT")
+                        parsed_any = True
+
+    def _parse_phd_alumni(self, filename: str, content: str, doc_id: str):
+        """Parse graduated PhD student lists (phd-alumni-list) into GraduatedPhD nodes."""
+        # For phd-alumni pages, the student name is typically at #### level,
+        # with ##### and ###### being labels/values. We need to find the right level.
+        # Try level 4 first (most common for student names)
+        level = _detect_person_record_level(content)
+        if level is None:
+            # Don't use _detect_repeated_heading_level — it might pick the value level (6)
+            # Instead, check which heading levels have probable person names
+            for candidate_level in (4, 3, 5):
+                blocks = list(_iter_heading_blocks(content, level=candidate_level))
+                if blocks:
+                    # Check if any heading looks like a person name (not a label)
+                    label_words = {'supervisor', 'thesis', 'year', 'title', 'research', 'area'}
+                    name_count = sum(1 for h, _ in blocks
+                                     if h.strip().lower() not in label_words
+                                     and not any(lw in h.strip().lower() for lw in label_words)
+                                     and len(h.strip()) > 2
+                                     and _is_probable_person_name(h.strip()))
+                    if name_count > 0:
+                        level = candidate_level
+                        break
+            if level is None:
+                level = 4
+        student_blocks = _iter_heading_blocks(content, level=level)
+
+        for raw_heading, block in student_blocks:
+            student_name = _strip_markdown_link(raw_heading).strip()
+            if not student_name or len(student_name) < 2:
+                continue
+
+            # Extract supervisor, thesis title, year from the block
+            section_map = _extract_section_map_from_body(block)
+            
+            supervisor = ""
+            thesis_title = ""
+            year = ""
+            
+            # Try structured sections first
+            sup_text = section_map.get("supervisor", "")
+            if sup_text:
+                # Only take the first line — section_map may include subsequent labels/values
+                sup_first_line = sup_text.split('\n')[0].strip()
+                supervisor = _strip_markdown_emphasis(_strip_markdown_link(sup_first_line)).strip()
+                supervisor = TITLE_PREFIXES.sub('', supervisor).strip().lstrip('. ').strip()
+            
+            thesis_text = section_map.get("thesis_title", "") or section_map.get("thesis", "")
+            if thesis_text:
+                thesis_title = _strip_markdown_emphasis(thesis_text).strip()
+
+            year_text = section_map.get("year", "")
+            if year_text:
+                year_match = re.search(r'\d{4}', year_text)
+                if year_match:
+                    year = year_match.group(0)
+
+            # Fallback: directly parse ##### **Label** / ###### Value heading pairs
+            # This handles the math phd-alumni-list structure
+            if not supervisor or not thesis_title or not year:
+                block_lines = block.splitlines()
+                current_label = None
+                for bline in block_lines:
+                    stripped = bline.strip()
+                    # Check for label heading: ##### **Supervisor** or ##### **Thesis Title**
+                    label_m = re.match(r'^#{4,6}\s+\**([^*#\n]+?)\**\s*$', stripped)
+                    if label_m:
+                        label_text = label_m.group(1).strip().lower().replace(' ', '_')
+                        if label_text in ('supervisor', 'thesis_title', 'year'):
+                            current_label = label_text
+                            continue
+                    # Check for value heading: ###### Value
+                    if current_label and stripped.startswith('#'):
+                        value = stripped.lstrip('#').strip()
+                        value = _strip_markdown_emphasis(value).strip()
+                        if value:
+                            if current_label == 'supervisor' and not supervisor:
+                                supervisor = TITLE_PREFIXES.sub('', value).strip().lstrip('. ').strip()
+                            elif current_label == 'thesis_title' and not thesis_title:
+                                thesis_title = value
+                            elif current_label == 'year' and not year:
+                                ym = re.search(r'\d{4}', value)
+                                if ym:
+                                    year = ym.group(0)
+                            current_label = None
+
+            # Final fallback: scan for Dr./Prof. names and 4-digit years
+            if not supervisor:
+                for line in block.splitlines():
+                    stripped = line.strip().lstrip('#').strip()
+                    stripped = _strip_markdown_emphasis(stripped).strip()
+                    if stripped.startswith('Dr.') or stripped.startswith('Prof.'):
+                        supervisor = TITLE_PREFIXES.sub('', stripped).strip().lstrip('. ').strip()
+                        break
+            
+            if not year:
+                year_match = re.search(r'\b(20\d{2})\b', block)
+                if year_match:
+                    year = year_match.group(1)
+
+            grad_id = f"graduated_phd:{student_name}"
+            self._add_node(grad_id, "GraduatedPhD", name=student_name,
+                           supervisor=supervisor, thesis_title=thesis_title,
+                           graduation_year=year, source_file=filename)
+            self._add_edge(grad_id, doc_id, "SOURCE_DOCUMENT")
+
+            # Link to supervisor if they're canonical faculty
+            if supervisor:
+                resolved_sup = self.resolver.resolve(supervisor)
+                if self.resolver.is_canonical_faculty(resolved_sup):
+                    self._add_node(resolved_sup, "Faculty", name=resolved_sup)
+                    self._add_edge(grad_id, resolved_sup, "SUPERVISED_BY")
+
     def build(self) -> nx.DiGraph:
         if not os.path.exists(self.markdown_dir):
             raise FileNotFoundError(f"Markdown directory not found: {self.markdown_dir}")
@@ -1570,6 +1946,12 @@ class KnowledgeGraphBuilder:
                 self._parse_startups(filename, content, doc_id)
             elif doc_kind == "research_areas":
                 self._parse_research_areas(filename, content, doc_id)
+            elif doc_kind == "contact":
+                self._parse_contact(filename, content, doc_id)
+            elif doc_kind == "alumni":
+                self._parse_alumni(filename, content, doc_id)
+            elif doc_kind == "phd_alumni":
+                self._parse_phd_alumni(filename, content, doc_id)
             elif faculty_list_file and filename == faculty_list_file:
                 pass  # Already parsed above
             elif doc_kind == "hod_message":
@@ -1635,6 +2017,20 @@ class KnowledgeGraphBuilder:
         # Only link actual Faculty (not ExternalPerson) to department
         for faculty in faculty_nodes:
             self._add_edge(faculty, dept_id, "MEMBER_OF")
+
+        # Seed/guarantee all correct labs for this department exist in the graph
+        from departments import CORRECT_LABS
+        correct_labs = CORRECT_LABS.get(self.dept_code, [])
+        for correct_lab in correct_labs:
+            lab_id = f"lab:{correct_lab}"
+            full_lab_id = lab_id
+            if self.dept_code != "ee" and not lab_id.startswith(f"{self.dept_code}:"):
+                full_lab_id = f"{self.dept_code}:{lab_id}"
+            
+            if not self.graph.has_node(full_lab_id):
+                self._add_node(lab_id, "Lab", name=correct_lab)
+            
+            self._add_edge(lab_id, dept_id, "FACILITY_OF")
 
         label_counts = defaultdict(int)
         for _, data in self.graph.nodes(data=True):

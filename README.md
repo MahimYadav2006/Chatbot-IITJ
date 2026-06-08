@@ -562,7 +562,16 @@ GEMINI_API_KEY=your_key_here
 GEMINI_MODEL=gemini-2.5-flash-lite
 ```
 
-This `.env` file is used by both `app.py` and `ingest.py`, so changing `LLM_PROVIDER` switches the project between Ollama and Gemini centrally.
+Or switch it to AWS Bedrock with an API key:
+
+```bash
+LLM_PROVIDER=bedrock
+AWS_BEARER_TOKEN_BEDROCK=your_bedrock_api_key_here
+BEDROCK_MODEL=qwen.qwen3-32b-v1:0
+BEDROCK_REGION=us-east-1
+```
+
+This `.env` file is used by both `app.py` and `ingest.py`, so changing `LLM_PROVIDER` switches the project between Ollama, Gemini, and Bedrock centrally.
 
 ### 4. Start ChatBot
 

@@ -17,6 +17,60 @@ logger = logging.getLogger(__name__)
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
+# Common abbreviation expansions for research topic matching.
+# When a user searches for "ai", we also search for "artificial intelligence", etc.
+TOPIC_EXPANSIONS = {
+    "ai": ["artificial intelligence"],
+    "ml": ["machine learning"],
+    "dl": ["deep learning"],
+    "nlp": ["natural language processing"],
+    "cv": ["computer vision"],
+    "iot": ["internet of things"],
+    "vlsi": ["very large scale integration"],
+    "dsp": ["digital signal processing"],
+    "hci": ["human computer interaction"],
+    "rl": ["reinforcement learning"],
+    "nn": ["neural network", "neural networks"],
+    "cnn": ["convolutional neural network"],
+    "rnn": ["recurrent neural network"],
+    "gan": ["generative adversarial network"],
+    "llm": ["large language model"],
+    "ev": ["electric vehicle"],
+    "uav": ["unmanned aerial vehicle"],
+    "rf": ["radio frequency"],
+    "fpga": ["field programmable gate array"],
+    "bms": ["battery management system"],
+    "mems": ["microelectromechanical systems"],
+}
+
+
+def _topic_matches_text(topic: str, text: str) -> bool:
+    """Check if a research topic matches against text using word-boundary-aware matching.
+
+    For short topics (<=4 chars like 'ai', 'nlp', 'iot'), uses word-boundary regex
+    to prevent substring collisions (e.g. 'ai' matching 'uncertainty').
+    For longer topics (>=5 chars like 'machine learning'), uses substring match.
+    Also expands known abbreviations (e.g. 'ai' also searches 'artificial intelligence').
+    """
+    topic_lower = topic.lower().strip()
+    text_lower = text.lower()
+
+    # Build list of all topic variants to search for
+    variants = [topic_lower]
+    variants.extend(TOPIC_EXPANSIONS.get(topic_lower, []))
+
+    for variant in variants:
+        if len(variant) <= 4:
+            # Short topic: require word boundary match
+            if re.search(r'\b' + re.escape(variant) + r'\b', text_lower):
+                return True
+        else:
+            # Longer topic: substring match is safe
+            if variant in text_lower:
+                return True
+
+    return False
+
 
 class HybridRetriever:
     def __init__(self, graph: nx.DiGraph, embedding_engine, community_reports: List[Dict], dept_code: str = "ee"):
@@ -70,8 +124,8 @@ class HybridRetriever:
         
         # If it asks about a specific topic (e.g. for control engineering), it should be treated
         # as a topic query rather than generic department contact query.
-        if any(term in q for term in ("for ", "about ", "regarding ", "in ")):
-            m = re.search(r"(?:for|about|regarding|in)\s+(.+)", q)
+        if any(re.search(rf"\b{term}\b", q) for term in ("for", "about", "regarding", "in")):
+            m = re.search(r"\b(?:for|about|regarding|in)\b\s+(.+)", q)
             if m:
                 target = m.group(1).strip()
                 generic_terms = {"department", "dept", "admission", "admissions", "general", "queries", "query", "info", "information", "help", "support", "this", "it", "more info", "more information"}
@@ -140,6 +194,181 @@ class HybridRetriever:
             lines.append(f"Profile: [IIT Jammu faculty page]({hod['profile_url']})")
         return "\n".join(lines)
 
+    # ── Lab queries ──────────────────────────────────────────────────────
+
+    def _is_lab_query(self, query: str) -> bool:
+        """Detect queries about department labs/laboratories/facilities."""
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+        lab_triggers = (
+            "lab", "labs", "laboratory", "laboratories", "research lab",
+            "teaching lab", "facilities", "research facilities",
+        )
+        return any(trigger in q for trigger in lab_triggers)
+
+    def _build_labs_answer(self, query: Optional[str] = None) -> Optional[str]:
+        """Build a deterministic answer listing all labs in the department."""
+        from departments import CORRECT_LABS
+        
+        dept_name = self.dept_config.get("full_name", self.dept_code)
+        labs = CORRECT_LABS.get(self.dept_code, [])
+        
+        if not labs:
+            if query:
+                q_lower = query.lower()
+                aliases = self.dept_config.get("aliases", [])
+                aliases_lower = [a.lower() for a in aliases]
+                dept_name_lower = self.dept_config.get("name", "").lower()
+                full_name_lower = dept_name.lower()
+                
+                mentions_dept = (
+                    self.dept_code in q_lower or
+                    dept_name_lower in q_lower or
+                    full_name_lower in q_lower or
+                    any(alias in q_lower for alias in aliases_lower)
+                )
+                if mentions_dept:
+                    return f"There are no laboratories in the {dept_name}."
+            return None
+
+        lines = [f"**Labs and Facilities in {dept_name}:**\n"]
+        for idx, lab_name in enumerate(labs, 1):
+            lines.append(f"{idx}. {lab_name}")
+        return "\n".join(lines)
+
+    # ── Department address / contact info queries ────────────────────────
+
+    def _is_address_query(self, query: str) -> bool:
+        """Detect queries about department address, location, or contact info."""
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+        address_triggers = (
+            "address", "location", "where is the department",
+            "department address", "postal address", "mailing address",
+            "department email", "department phone", "phone number",
+        )
+        return any(trigger in q for trigger in address_triggers)
+
+    def _build_address_answer(self) -> Optional[str]:
+        """Build a deterministic answer with department address/contact info."""
+        # Look for ContactInfo node
+        contact_data = None
+        for nid, data in self.graph.nodes(data=True):
+            if data.get("label") == "ContactInfo":
+                contact_data = data
+                break
+
+        # Fallback: check department node for stored contact info
+        if not contact_data:
+            dept_data = self.graph.nodes.get(self.dept_node_id, {})
+            if dept_data.get("address") or dept_data.get("contact_email"):
+                contact_data = {
+                    "address": dept_data.get("address", ""),
+                    "email": dept_data.get("contact_email", ""),
+                    "phone": dept_data.get("phone", ""),
+                }
+
+        if not contact_data:
+            return None
+
+        dept_name = self.dept_config.get("full_name", self.dept_code)
+        lines = [f"**{dept_name} Contact Information:**\n"]
+        address = contact_data.get("address", "")
+        email = contact_data.get("email", "")
+        phone = contact_data.get("phone", "")
+
+        if address:
+            lines.append(f"**Address:** {address}")
+        if email:
+            lines.append(f"**Email:** {email}")
+        if phone and "update" not in phone.lower():
+            lines.append(f"**Phone:** {phone}")
+        return "\n".join(lines)
+
+    # ── Graduated PhD / PhD alumni queries ───────────────────────────────
+
+    def _is_graduated_phd_query(self, query: str) -> bool:
+        """Detect queries about graduated/passed-out PhD students or PhD alumni."""
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+        triggers = (
+            "graduated phd", "phd alumni", "passed out phd",
+            "completed phd", "phd graduates", "graduated doctoral",
+            "phd passed", "phd who graduated", "phd who have graduated",
+            "former phd", "past phd", "phd alumni list",
+        )
+        return any(trigger in q for trigger in triggers)
+
+    def _build_graduated_phd_answer(self) -> Optional[str]:
+        """Build a deterministic answer listing graduated PhD students."""
+        grads = []
+        for nid, data in self.graph.nodes(data=True):
+            if data.get("label") == "GraduatedPhD":
+                grads.append({
+                    "name": data.get("name", nid),
+                    "supervisor": data.get("supervisor", ""),
+                    "thesis": data.get("thesis_title", ""),
+                    "year": data.get("graduation_year", ""),
+                })
+        if not grads:
+            return None
+
+        # Sort by year descending
+        grads.sort(key=lambda x: x.get("year", "0"), reverse=True)
+
+        dept_name = self.dept_config.get("full_name", self.dept_code)
+        lines = [f"**Graduated PhD Students from {dept_name}:**\n"]
+        for g in grads:
+            line = f"- **{g['name']}**"
+            if g["year"]:
+                line += f" (Year: {g['year']})"
+            if g["supervisor"]:
+                line += f" — Supervisor: {g['supervisor']}"
+            if g["thesis"]:
+                line += f" — Thesis: {g['thesis']}"
+            lines.append(line)
+        return "\n".join(lines)
+
+    # ── Alumni queries ───────────────────────────────────────────────────
+
+    def _is_alumni_query(self, query: str) -> bool:
+        """Detect queries about department alumni."""
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+        triggers = (
+            "alumni", "alumni list", "graduated students", "passed out",
+            "graduating batch", "batch", "former students",
+        )
+        # Avoid matching PhD-specific queries here
+        if self._is_graduated_phd_query(query):
+            return False
+        return any(trigger in q for trigger in triggers)
+
+    def _build_alumni_answer(self) -> Optional[str]:
+        """Build a deterministic answer listing alumni information."""
+        alumni = []
+        batches = []
+        for nid, data in self.graph.nodes(data=True):
+            if data.get("label") == "Alumni":
+                alumni.append(data.get("name", nid))
+            elif data.get("label") == "AlumniBatch":
+                batches.append(data.get("name", nid))
+
+        if not alumni and not batches:
+            return None
+
+        dept_name = self.dept_config.get("full_name", self.dept_code)
+        lines = [f"**Alumni from {dept_name}:**\n"]
+
+        if batches:
+            lines.append("**Alumni Batches:**")
+            for batch in sorted(batches):
+                lines.append(f"- {batch}")
+            lines.append("")
+
+        if alumni:
+            lines.append("**Alumni:**")
+            for name in sorted(alumni):
+                lines.append(f"- {name}")
+
+        return "\n".join(lines)
+
     def _is_broad_reasoning_query(self, query: str) -> bool:
         """Relax strict evidence gating for synthesis-heavy prompts."""
         q = re.sub(r"\s+", " ", query.lower()).strip()
@@ -149,20 +378,24 @@ class HybridRetriever:
             "based on", "synthesis", "relationship between"
         ))
 
+
     def _infer_query_concepts(self, query: str) -> List[str]:
         """Identify concrete concepts that should be explicitly supported by evidence."""
         q = re.sub(r"\s+", " ", query.lower()).strip()
         concept_aliases = {
             "startup": ("startup", "startups", "incubated", "venture", "company", "companies"),
             "patent": ("patent", "patents", "invented", "invention"),
-            "project": ("project", "projects", "funded project", "funding", "grant"),
-            "lab": ("lab", "labs", "laboratory", "laboratories"),
+            "project": ("project", "projects", "funded project", "funding", "grant", "sponsored project"),
+            "lab": ("lab", "labs", "laboratory", "laboratories", "research lab", "teaching lab", "facilities"),
             "placement": ("placement", "placements", "salary", "package", "higher studies", "higher study"),
             "contact": ("contact", "point of contact", "official contact"),
             "publication": ("publication", "publications", "paper", "papers", "journal", "conference"),
             "award": ("award", "awards", "honor", "honors", "honour", "honours", "recogni"),
             "course": ("course", "courses", "programme", "programmes", "program", "programs", "curriculum", "btech", "mtech"),
             "staff": ("staff", "laboratory assistant", "lab assistant", "technician", "officer"),
+            "alumni": ("alumni", "alumni list", "former students", "passed out students"),
+            "graduated_phd": ("phd alumni", "graduated phd", "phd graduates", "completed phd"),
+            "address": ("address", "location", "postal address", "department address", "department email", "department phone"),
         }
         matched = []
         for concept, aliases in concept_aliases.items():
@@ -173,7 +406,7 @@ class HybridRetriever:
     def _concept_supported_by_graph(self, concept: str) -> bool:
         """Check whether the department graph contains the concept structurally."""
         if concept == "contact":
-            return self._get_hod_member() is not None
+            return self._get_hod_member() is not None or self._label_counts.get("ContactInfo", 0) > 0
 
         if concept == "publication":
             return self._label_counts.get("Publication", 0) > 0 or any(
@@ -201,6 +434,9 @@ class HybridRetriever:
             "project": ("Project",),
             "lab": ("Lab",),
             "placement": ("PlacementData", "HigherStudiesData"),
+            "alumni": ("Alumni", "AlumniBatch"),
+            "graduated_phd": ("GraduatedPhD",),
+            "address": ("ContactInfo",),
         }
         labels = label_map.get(concept, ())
         return any(self._label_counts.get(label, 0) > 0 for label in labels)
@@ -305,7 +541,7 @@ class HybridRetriever:
 
         # Concept aliases map to check if concept is mentioned in retrieved context
         concept_aliases = {
-            "startup": ("startup", "startups", "incubated", "venture", "company", "companies"),
+            "startup": ("startup", "startups", "incubated", "incubation", "spin-off", "spinoff"),
             "patent": ("patent", "patents", "invented", "invention"),
             "project": ("project", "projects", "funded project", "funding", "grant"),
             "lab": ("lab", "labs", "laboratory", "laboratories"),
@@ -329,7 +565,7 @@ class HybridRetriever:
             if not supported:
                 missing_concepts.append(concept)
 
-        if missing_concepts and not (local_results or vector_results):
+        if missing_concepts:
             concept_text = ", ".join(sorted(missing_concepts))
             reason = (
                 f"The available department data does not contain grounded {concept_text} information "
@@ -367,8 +603,13 @@ class HybridRetriever:
             for token in self._query_tokens(query)
             if len(token) >= 4 and token not in stop_tokens
         ]
-        evidence_text = self._normalize_token(context)
-        matched_terms = [term for term in focus_terms if term and term in evidence_text]
+        # Build set of normalized words from the context to avoid substring collisions
+        context_words = set()
+        for word in re.findall(r"[A-Za-z0-9]+", context.lower()):
+            norm_word = self._normalize_token(word)
+            if norm_word:
+                context_words.add(norm_word)
+        matched_terms = [term for term in focus_terms if term in context_words]
 
         # Redesigned answerability gate: if we have retrieved vector or local results,
         # we trust the retriever and consider it answerable (even if matched_terms is empty,
@@ -933,6 +1174,30 @@ class HybridRetriever:
             if contact_answer:
                 return contact_answer
 
+        # Lab queries → deterministic lab listing
+        if self._is_lab_query(query):
+            labs_answer = self._build_labs_answer(query)
+            if labs_answer:
+                return labs_answer
+
+        # Department address / contact info queries
+        if self._is_address_query(query):
+            address_answer = self._build_address_answer()
+            if address_answer:
+                return address_answer
+
+        # Graduated PhD / PhD alumni queries
+        if self._is_graduated_phd_query(query):
+            grad_answer = self._build_graduated_phd_answer()
+            if grad_answer:
+                return grad_answer
+
+        # Alumni queries
+        if self._is_alumni_query(query):
+            alumni_answer = self._build_alumni_answer()
+            if alumni_answer:
+                return alumni_answer
+
         # Check for topic contact / expert queries
         # When suppress_topic_match is True (broadcast mode), skip this entire
         # block so the query goes through full retrieval across ALL departments.
@@ -942,8 +1207,9 @@ class HybridRetriever:
         if not suppress_topic_match:
             contact_patterns = [
                 r"who\s+(?:should\s+i\s+|to\s+)?contact\s+(?:for|about|regarding)\s+(.+)",
-                r"who\s+(?:is\s+)?(?:working\s+on|works\s+on|researching|expert\s+in|specialist\s+in)\s+(.+)",
+                r"(?:who|which)\s+(?:faculty|member|professor|people|person|individual|scholars?|students?|is\s+)?(?:working\s+on|works\s+on|researching|expert\s+in|specialist\s+in|does\s+research\s+in|do\s+research\s+in)\s+(.+)",
                 r"who\s+(?:to\s+)?(?:reach\s+out\s+to|write\s+to)\s+(?:for|about|regarding)\s+(.+)",
+                r"(?:find|search|list|get|show)\s+(?:faculty|member|professor|people|person|individual|scholars?|students?)\s+(?:working\s+on|who\s+work\s+on|researching|expert\s+in|specialist\s+in|in\s+the\s+area\s+of|in\s+the\s+field\s+of)\s+(.+)",
             ]
 
             for pat in contact_patterns:
@@ -955,59 +1221,117 @@ class HybridRetriever:
                     break
 
         if is_topic_query and topic:
-            matching_faculty = []
+            matching_faculty = []      # (node_data, matched_area_description)
+            matching_phd_scholars = [] # (node_data, matched_area_description, supervisors)
             topic_lower = topic.lower()
-            
-            # Step A: Check for structural ResearchArea nodes
+
+            # Step A: Check for structural ResearchArea nodes (strongest signal)
+            # Faculty with RESEARCHES_IN edges to matching areas
             for u, v, edge_data in self.graph.edges(data=True):
-                if edge_data.get("type") in ("RESEARCHES_IN", "STUDIES", "RELATED"):
-                    u_data = self.graph.nodes.get(u, {})
-                    v_data = self.graph.nodes.get(v, {})
-                    if u_data.get("label") == "Faculty" and v_data.get("label") in ("ResearchArea", "ResearchCategory"):
-                        area_name = v_data.get("name", "").lower()
-                        if topic_lower in area_name or area_name in topic_lower:
-                            matching_faculty.append((u_data, area_name))
-                            
-            # Step B: Check text fields on all Faculty
+                if edge_data.get("type") not in ("RESEARCHES_IN", "STUDIES", "RELATED"):
+                    continue
+                u_data = self.graph.nodes.get(u, {})
+                v_data = self.graph.nodes.get(v, {})
+                area_name = v_data.get("name", "")
+                if not _topic_matches_text(topic_lower, area_name):
+                    continue
+
+                if u_data.get("label") == "Faculty" and v_data.get("label") in ("ResearchArea", "ResearchCategory"):
+                    matching_faculty.append((u_data, area_name.lower()))
+                elif u_data.get("label") in ("PhDStudent", "MTechStudent") and v_data.get("label") in ("ResearchArea",):
+                    # Collect PhD scholar matches too
+                    supervisors = []
+                    for _, sup_target, sup_edge in self.graph.out_edges(u, data=True):
+                        if sup_edge.get("type") == "SUPERVISED_BY":
+                            sup_data = self.graph.nodes.get(sup_target, {})
+                            supervisors.append(sup_data.get("name", sup_target))
+                    matching_phd_scholars.append((u_data, area_name, supervisors))
+
+            # Step B: Check authoritative text fields on Faculty
+            # ONLY search research_interests and academic_interests — NOT publications,
+            # education, or research_experience which contain too much incidental text
+            # and cause false positives (e.g. 'ai' matching 'uncertainty' in publications).
+            already_matched_names = {f.get("name") for f, _ in matching_faculty}
             for nid, d in self.graph.nodes(data=True):
-                if d.get("label") == "Faculty":
-                    if any(f["name"] == d.get("name") for f, _ in matching_faculty):
-                        continue
-                    matched_field = None
-                    for field in ("research_interests", "academic_interests", "teaching_interests", "publications", "research_experience", "education"):
-                        field_val = d.get(field, "")
-                        if isinstance(field_val, str) and topic_lower in field_val.lower():
-                            matched_field = field
-                            break
-                    if matched_field:
-                        matching_faculty.append((d, f"their listed {matched_field.replace('_', ' ')}"))
-                        
-            if matching_faculty:
+                if d.get("label") != "Faculty":
+                    continue
+                if d.get("name") in already_matched_names:
+                    continue
+                matched_field = None
+                for field in ("research_interests", "academic_interests"):
+                    field_val = d.get(field, "")
+                    if isinstance(field_val, str) and field_val and _topic_matches_text(topic_lower, field_val):
+                        matched_field = field
+                        break
+                if matched_field:
+                    matching_faculty.append((d, f"their listed {matched_field.replace('_', ' ')}"))
+
+            # Step B2: Also check PhD scholars' research_area text field
+            already_matched_scholars = {s.get("name") for s, _, _ in matching_phd_scholars}
+            for nid, d in self.graph.nodes(data=True):
+                if d.get("label") not in ("PhDStudent", "MTechStudent"):
+                    continue
+                if d.get("name") in already_matched_scholars:
+                    continue
+                area = d.get("research_area", "")
+                if area and _topic_matches_text(topic_lower, area):
+                    supervisors = []
+                    for _, sup_target, sup_edge in self.graph.out_edges(nid, data=True):
+                        if sup_edge.get("type") == "SUPERVISED_BY":
+                            sup_data = self.graph.nodes.get(sup_target, {})
+                            supervisors.append(sup_data.get("name", sup_target))
+                    matching_phd_scholars.append((d, area, supervisors))
+
+            if matching_faculty or matching_phd_scholars:
+                # Deduplicate faculty
                 seen_names = set()
-                unique_matches = []
+                unique_faculty = []
                 for fac, source in matching_faculty:
                     name = fac.get("name")
                     if name and name not in seen_names:
                         seen_names.add(name)
-                        unique_matches.append((fac, source))
-                        
-                lines = [
-                    f"Based on the department directory, here are the faculty members working in areas related to **{topic.title()}**:",
-                    ""
-                ]
-                for fac, source in unique_matches:
-                    name = fac.get("name")
-                    email = fac.get("email", "Not specified")
-                    desig = fac.get("designation", "Faculty Member")
-                    name_display = name if name.startswith(("Dr.", "Prof.")) else f"Dr. {name}"
-                    
-                    line = f"- **{name_display}** ({desig})"
-                    if email and email != "Not specified":
-                        line += f" - Email: {email}"
-                    lines.append(line)
-                    
+                        unique_faculty.append((fac, source))
+
+                # Deduplicate PhD scholars
+                seen_scholar_names = set()
+                unique_scholars = []
+                for scholar, area, sups in matching_phd_scholars:
+                    name = scholar.get("name")
+                    if name and name not in seen_scholar_names:
+                        seen_scholar_names.add(name)
+                        unique_scholars.append((scholar, area, sups))
+
+                lines = []
+
+                # Faculty section (listed first)
+                if unique_faculty:
+                    lines.append(f"**Faculty members** working in areas related to **{topic.title()}**:")
+                    lines.append("")
+                    for fac, source in unique_faculty:
+                        name = fac.get("name")
+                        email = fac.get("email", "Not specified")
+                        desig = fac.get("designation", "Faculty Member")
+                        name_display = name if name.startswith(("Dr.", "Prof.")) else f"Dr. {name}"
+                        line = f"- **{name_display}** ({desig})"
+                        if email and email != "Not specified":
+                            line += f" - Email: {email}"
+                        lines.append(line)
+
+                # PhD scholars section (listed after faculty)
+                if unique_scholars:
+                    lines.append("")
+                    lines.append(f"**PhD/M.Tech scholars** working in areas related to **{topic.title()}**:")
+                    lines.append("")
+                    for scholar, area, sups in unique_scholars:
+                        name = scholar.get("name")
+                        label = scholar.get("label", "PhDStudent")
+                        prog = "PhD Scholar" if label == "PhDStudent" else "M.Tech Student"
+                        sup_str = ", ".join(sups) if sups else "Unknown"
+                        line = f"- **{name}** ({prog}) — Research: {area} — Supervisor(s): {sup_str}"
+                        lines.append(line)
+
                 lines.append("")
-                lines.append(f"You can reach out to them for tasks or queries related to {topic}.")
+                lines.append(f"You can reach out to the faculty for tasks or queries related to {topic}.")
                 return "\n".join(lines)
 
         faculty_analytics_answer = self._build_faculty_analytics_answer(query)
@@ -1338,6 +1662,10 @@ class HybridRetriever:
                 lines.append(f"  - Inventor: {s_name}")
             elif rel == "MENTORED_STARTUP":
                 lines.append(f"  - Mentor: {s_name}")
+            elif rel == "RESEARCHES_IN":
+                lines.append(f"  - Researcher (Faculty): {s_name}")
+            elif rel == "STUDIES":
+                lines.append(f"  - Researcher (PhD Student): {s_name}")
 
         # For outgoing INVENTED edges (faculty → patent), also list all co-inventors
         if label == "Faculty":
@@ -1465,34 +1793,45 @@ class HybridRetriever:
         return "\n".join(lines)
 
     def _find_supervisors_by_research_area(self, query: str) -> List[Dict]:
-        """Find supervisors of PhD students whose research area matches query keywords."""
-        from difflib import SequenceMatcher
+        """Find supervisors of PhD students whose research area matches query keywords.
+
+        Uses word-boundary-aware matching via _topic_matches_text() to prevent
+        false positives from short keywords appearing as substrings in unrelated
+        words (e.g. 'ai' matching 'uncertainty').
+        """
         q_lower = query.lower()
 
         # Extract research-area keywords from query
         area_keywords = []
+        stop_words = {
+            'which', 'faculty', 'superise', 'supervise', 'supervises', 'supervising',
+            'students', 'research', 'area', 'working', 'work', 'under', 'who', 'what',
+            'list', 'with', 'from', 'the', 'their', 'have', 'does', 'professor',
+            'members', 'domain', 'related', 'field', 'expert', 'works', 'iit', 'jammu',
+            'department', 'and', 'for', 'are', 'but', 'not', 'you', 'your', 'our', 'out',
+            'about', 'any', 'get', 'has', 'her', 'his', 'him', 'its', 'she', 'they', 'them',
+            'these', 'those', 'this', 'that', 'than', 'then', 'into', 'only', 'some', 'such',
+            'too', 'very', 'was', 'were', 'will', 'would', 'should', 'could', 'can', 'may',
+            'might', 'must', 'shall', 'does', 'do', 'did', 'has', 'have', 'had', 'device', 'devices'
+        }
         for word in q_lower.replace('?', '').replace(',', ' ').split():
-            if len(word) > 3 and word not in (
-                'which', 'faculty', 'supervise', 'supervises', 'supervising',
-                'students', 'research', 'area', 'working', 'work', 'under',
-                'who', 'what', 'list', 'with', 'from', 'the', 'their', 'have',
-                'does', 'professor', 'members'
-            ):
-                area_keywords.append(word)
+            cleaned = word.strip()
+            if len(cleaned) > 2 and cleaned not in stop_words:
+                area_keywords.append(cleaned)
 
         if not area_keywords:
             return []
 
-        # Find matching PhD students
+        # Find matching PhD students using word-boundary-aware matching
         matches = []
         for nid, data in self.graph.nodes(data=True):
             if data.get("label") != "PhDStudent":
                 continue
-            student_area = data.get("research_area", "").lower()
+            student_area = data.get("research_area", "")
             if not student_area:
                 continue
-            # Check if any query keyword appears in the research area
-            if any(kw in student_area for kw in area_keywords):
+            # Check if any query keyword matches the research area
+            if any(_topic_matches_text(kw, student_area) for kw in area_keywords):
                 supervisors = []
                 for _, target, edge_data in self.graph.out_edges(nid, data=True):
                     if edge_data.get("type") == "SUPERVISED_BY":
@@ -1504,24 +1843,53 @@ class HybridRetriever:
                     "supervisors": supervisors
                 })
 
-        if not matches:
+        # Find matching Faculty nodes whose research interests or academic interests match keywords
+        faculty_matches = []
+        for nid, data in self.graph.nodes(data=True):
+            if data.get("label") != "Faculty":
+                continue
+            interests = data.get("research_interests", "")
+            acad_interests = data.get("academic_interests", "")
+            
+            matched = False
+            for kw in area_keywords:
+                if (interests and _topic_matches_text(kw, interests)) or (acad_interests and _topic_matches_text(kw, acad_interests)):
+                    matched = True
+                    break
+            
+            if matched:
+                faculty_matches.append(data.get("name", nid))
+
+        if not matches and not faculty_matches:
             return []
 
         # Build context entries
         results = []
-        lines = [f"**Research Area Supervisor Lookup**"]
-        lines.append(f"Students with research areas matching '{' '.join(area_keywords)}':")
-        supervisor_set = set()
-        for m in matches:
-            sup_str = ', '.join(m['supervisors']) if m['supervisors'] else 'Unknown'
-            lines.append(f"  - {m['student']} — Area: {m['area']} — Supervisor(s): {sup_str}")
-            supervisor_set.update(m['supervisors'])
-        lines.append(f"\nFaculty supervising in this area: {', '.join(sorted(supervisor_set))}")
+        if matches:
+            lines = [f"**Research Area Supervisor Lookup**"]
+            lines.append(f"Students with research areas matching '{' '.join(area_keywords)}':")
+            supervisor_set = set()
+            for m in matches:
+                sup_str = ', '.join(m['supervisors']) if m['supervisors'] else 'Unknown'
+                lines.append(f"  - {m['student']} — Area: {m['area']} — Supervisor(s): {sup_str}")
+                supervisor_set.update(m['supervisors'])
+            lines.append(f"\nFaculty supervising in this area: {', '.join(sorted(supervisor_set))}")
 
-        results.append({
-            "type": "entity", "score": 0.95, "label": "ResearchAreaLookup",
-            "display": "\n".join(lines), "relationships": "",
-        })
+            results.append({
+                "type": "entity", "score": 0.95, "label": "ResearchAreaLookup",
+                "display": "\n".join(lines), "relationships": "",
+            })
+
+        if faculty_matches:
+            lines_fac = [f"**Faculty Research Interests Lookup**"]
+            lines_fac.append(f"Faculty members with interests matching '{' '.join(area_keywords)}':")
+            for f in sorted(faculty_matches):
+                lines_fac.append(f"  - {f}")
+            results.append({
+                "type": "entity", "score": 0.98, "label": "ResearchAreaFacultyLookup",
+                "display": "\n".join(lines_fac), "relationships": "",
+            })
+
         return results
 
     def _local_search(self, query: str, top_k: int = 6) -> List[Dict]:
@@ -1557,8 +1925,8 @@ class HybridRetriever:
                         })
                         seen_ids.add(node_id)
 
-        # Phase 1.5: Research-area based supervisor lookup
-        if any(kw in ql for kw in ["supervis", "faculty", "professor", "who work"]):
+        # Phase 1.5: Research-area based lookup for faculty and supervisors
+        if any(kw in ql for kw in ["supervis", "faculty", "professor", "who work", "research", "expert", "specialist"]):
             area_results = self._find_supervisors_by_research_area(query)
             results.extend(area_results)
         
