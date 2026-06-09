@@ -166,6 +166,43 @@ class MultiDepartmentRetriever:
 
         return False
 
+    def _is_person_or_comparison_query(self, query: str) -> bool:
+        """Detect queries about specific people or comparisons between people.
+
+        Used to prevent admin-only direct answers from short-circuiting
+        broadcast when richer faculty data is available from departments.
+        """
+        import re
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+
+        # Comparison indicators
+        comparison_terms = (
+            "compare", "comparison", "versus", "vs", "difference between",
+            "similarities", "distinguish",
+        )
+        if any(term in q for term in comparison_terms):
+            return True
+
+        # Person identity queries ("who is Dr. X", "tell me about Prof. X")
+        person_patterns = (
+            r"\bwho\s+is\s+(?:dr\.?|prof\.?|mr\.?|ms\.?)\s+\w+",
+            r"\btell\s+(?:me\s+)?about\s+(?:dr\.?|prof\.?|mr\.?|ms\.?)\s+\w+",
+            r"\babout\s+(?:dr\.?|prof\.?)\s+\w+",
+        )
+        if any(re.search(p, q) for p in person_patterns):
+            return True
+
+        # Research-focused queries mentioning people
+        research_person_terms = (
+            "research work", "research interest", "research area",
+            "publication", "publications", "academic work",
+        )
+        has_honorific = bool(re.search(r"\b(?:dr\.?|prof\.?)\b", q))
+        if has_honorific and any(term in q for term in research_person_terms):
+            return True
+
+        return False
+
     def retrieve_broadcast(self, query: str, top_n: int = 3) -> Dict[str, Any]:
         """
         Search ALL loaded departments and return the top-N by relevance.
@@ -231,17 +268,23 @@ class MultiDepartmentRetriever:
         # Phase 2: If we have direct answers from multiple departments, merge them
         if direct_answers:
             if len(direct_answers) == 1 and not is_topic:
-                # Single department, non-topic query — return directly (old behavior)
                 code = list(direct_answers.keys())[0]
-                dept_name = DEPARTMENTS.get(code, {}).get("full_name", code)
-                return {
-                    "context": f"## {dept_name}\n\n{direct_answers[code]}",
-                    "provenance": {"route": "direct_graph", "source_mode": "graph"},
-                    "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
-                    "fallback_response": None,
-                    "departments": [code],
-                    "direct": True,
-                }
+                # Don't let admin-only direct answers short-circuit for person
+                # identity or comparison queries — fall through to full retrieval
+                # so department retrievers can contribute richer faculty data.
+                if code == "administration" and self._is_person_or_comparison_query(query):
+                    logger.info("Admin-only direct answer for person/comparison query — falling through to full retrieval")
+                else:
+                    # Single department, non-topic query — return directly
+                    dept_name = DEPARTMENTS.get(code, {}).get("full_name", code)
+                    return {
+                        "context": f"## {dept_name}\n\n{direct_answers[code]}",
+                        "provenance": {"route": "direct_graph", "source_mode": "graph"},
+                        "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
+                        "fallback_response": None,
+                        "departments": [code],
+                        "direct": True,
+                    }
             elif direct_answers:
                 # Multiple departments have direct answers — merge them all
                 merged_sections = []

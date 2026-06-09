@@ -33,6 +33,7 @@ from departments import (
     get_department,
     get_scraped_markdown_dir,
     resolve_department_code,
+    get_scraped_data_root,
 )
 from utils import (
     MIN_CONTENT_LEN,
@@ -795,12 +796,184 @@ def crawl_department(dept_code: str, clean_output: bool = False, max_pages: Opti
     print(f"Manifest written to: {os.path.join(output_dir, 'crawl_manifest.json')}")
 
 
+def crawl_administration(clean_output: bool = False):
+    output_dir = os.path.join(get_scraped_data_root(), "administration")
+    os.makedirs(output_dir, exist_ok=True)
+
+    if clean_output:
+        print(f"Cleaning previous markdown output in: {output_dir}")
+        _clear_output_dir(output_dir)
+
+    admin_urls = [
+        "https://iitjammu.ac.in/board-of-governors",
+        "https://iitjammu.ac.in/director",
+        "https://iitjammu.ac.in/deans-and-associate-deans",
+        "https://iitjammu.ac.in/registrar",
+        "https://iitjammu.ac.in/finance-committee",
+        "https://iitjammu.ac.in/bogchairman",
+        "https://iitjammu.ac.in/building-and-works-bwc",
+        "https://iitjammu.ac.in/member-senate-academic-council",
+        "https://iitjammu.ac.in/annual-action--plan-committee",
+    ]
+
+    print("\n==================================================")
+    print("Crawling administration pages")
+    print("==================================================")
+
+    binary_urls: List[str] = []
+    seen_binary_urls: Set[str] = set()
+    page_snapshots: Dict[str, Dict[str, str]] = {}
+    page_decisions: List[PageDecision] = []
+    link_decisions: List[LinkDecision] = []
+    processed_urls: List[str] = []
+
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
+        context = browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            )
+        )
+
+        for url in admin_urls:
+            print(f"Processing admin page: {url}")
+            try:
+                snapshot = render_page_snapshot(url, context)
+            except Exception as exc:
+                print(f"✗ Failed to load: {url} – {exc}")
+                page_decisions.append(
+                    PageDecision(
+                        url=url,
+                        final_url=url,
+                        title="",
+                        accepted=False,
+                        reason=f"playwright-error: {exc}",
+                        text_length=0,
+                    )
+                )
+                continue
+
+            final_url = snapshot.get("final_url", url)
+            decision = evaluate_page(url, snapshot)
+            decision = PageDecision(
+                url=decision.url,
+                final_url=final_url,
+                title=decision.title,
+                accepted=True,
+                reason="explicit-administration-page",
+                text_length=decision.text_length,
+            )
+            page_decisions.append(decision)
+            page_snapshots[final_url] = snapshot
+            processed_urls.append(final_url)
+
+            # Extract links to find any binaries (like PDFs)
+            soup = BeautifulSoup(snapshot["html"], "html.parser")
+            base_url = "https://iitjammu.ac.in"
+            for candidate_url in _extract_candidate_links(soup, base_url, final_url):
+                kind, reason = classify_discovered_url(candidate_url, base_url, "iitjammu.ac.in")
+                link_decisions.append(
+                    LinkDecision(
+                        source_url=final_url,
+                        target_url=candidate_url,
+                        kind=kind,
+                        reason=reason,
+                    )
+                )
+                if kind == "binary" and candidate_url not in seen_binary_urls:
+                    seen_binary_urls.add(candidate_url)
+                    binary_urls.append(candidate_url)
+
+        print(f"\nRendered {len(processed_urls)} administration pages and discovered {len(binary_urls)} binary files.\n")
+
+        print("Phase 2: Converting discovered content to Markdown...")
+        combined_sections = [
+            "# IIT Jammu Administration – Crawled Content",
+            "",
+            "Base URL: https://iitjammu.ac.in",
+        ]
+
+        for url in processed_urls:
+            result = download_and_convert(
+                url,
+                output_dir,
+                context,
+                "administration",
+                "https://iitjammu.ac.in",
+                cached_snapshot=page_snapshots.get(url),
+            )
+            if result:
+                markdown, content_flags = result
+                combined_sections.extend(
+                    [
+                        "",
+                        "---",
+                        "",
+                        f"## {urlparse(url).path or '/'}",
+                        "",
+                        f"Source URL: {url}",
+                        "",
+                        f"Content Flags: {', '.join(content_flags) if content_flags else 'none'}",
+                        "",
+                        markdown,
+                    ]
+                )
+
+        for url in binary_urls:
+            print(f"Downloading binary linked from administration: {url}")
+            result = download_and_convert(
+                url,
+                output_dir,
+                context,
+                "administration",
+                "https://iitjammu.ac.in",
+            )
+            if result:
+                markdown, content_flags = result
+                combined_sections.extend(
+                    [
+                        "",
+                        "---",
+                        "",
+                        f"## {urlparse(url).path or '/'}",
+                        "",
+                        f"Source URL: {url}",
+                        "",
+                        f"Content Flags: {', '.join(content_flags) if content_flags else 'none'}",
+                        "",
+                        markdown,
+                    ]
+                )
+
+        combined_path = os.path.join(output_dir, "00_combined_administration_site.md")
+        with open(combined_path, "w", encoding="utf-8") as handle:
+            handle.write("\n".join(combined_sections).strip() + "\n")
+
+        manifest = {
+            "department_code": "administration",
+            "department_name": "Administration",
+            "base_url": "https://iitjammu.ac.in",
+            "accepted_pages": admin_urls,
+            "rendered_pages": processed_urls,
+            "accepted_binaries": binary_urls,
+            "page_decisions": [asdict(item) for item in page_decisions],
+            "link_decisions": [asdict(item) for item in link_decisions],
+        }
+        manifest_path = os.path.join(output_dir, "crawl_manifest.json")
+        with open(manifest_path, "w", encoding="utf-8") as handle:
+            json.dump(manifest, handle, indent=2)
+
+    print(f"\n✅ Completed crawling for administration! Check '{output_dir}'.")
+    print(f"Manifest written to: {os.path.join(output_dir, 'crawl_manifest.json')}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="IIT Jammu Academic Department Web Crawler")
     parser.add_argument(
         "--dept",
         default="ee",
-        help="Department code to crawl (e.g. ee, cse, computer_science_engineering, bsbe)",
+        help="Department code to crawl (e.g. ee, cse, computer_science_engineering, bsbe, administration)",
     )
     parser.add_argument("--all", action="store_true", help="Crawl all academic departments")
     parser.add_argument(
@@ -828,18 +1001,26 @@ def main():
             except Exception as exc:
                 print(f"❌ Failed crawling department {department_code.upper()}: {exc}")
     else:
-        try:
-            crawl_department(
-                args.dept,
-                clean_output=args.clean_output,
-                max_pages=args.max_pages,
-            )
-        except KeyError:
-            print(
-                f"❌ Unknown department code: {args.dept}. "
-                f"Must be one of: {list(DEPARTMENTS.keys())}"
-            )
-            sys.exit(1)
+        dept = args.dept.lower().strip()
+        if dept == "administration":
+            try:
+                crawl_administration(clean_output=args.clean_output)
+            except Exception as exc:
+                print(f"❌ Failed crawling administration: {exc}")
+                sys.exit(1)
+        else:
+            try:
+                crawl_department(
+                    args.dept,
+                    clean_output=args.clean_output,
+                    max_pages=args.max_pages,
+                )
+            except KeyError:
+                print(
+                    f"❌ Unknown department code: {args.dept}. "
+                    f"Must be one of: {list(DEPARTMENTS.keys())} or 'administration'"
+                )
+                sys.exit(1)
 
 
 if __name__ == "__main__":

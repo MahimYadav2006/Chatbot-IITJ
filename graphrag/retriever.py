@@ -369,6 +369,271 @@ class HybridRetriever:
 
         return "\n".join(lines)
 
+    def _build_administration_answer(self, query: str) -> Optional[str]:
+        q = query.lower().strip()
+        
+        # 1. Director / Registrar / BOG Chairman
+        if "director" in q and not any(kw in q for kw in ("committee", "board", "senate")):
+            director_node = None
+            for node_id, data in self.graph.nodes(data=True):
+                if data.get("is_director"):
+                    director_node = data
+                    break
+            if director_node:
+                return f"**{director_node['name']}** is the Director of IIT Jammu.\n\n{director_node.get('details', '')}"
+                
+        if "registrar" in q and not any(kw in q for kw in ("committee", "board", "senate")):
+            registrar_node = None
+            for node_id, data in self.graph.nodes(data=True):
+                if data.get("is_registrar"):
+                    registrar_node = data
+                    break
+            if registrar_node:
+                ans = f"**{registrar_node['name']}** is the Registrar of IIT Jammu."
+                if registrar_node.get("email"):
+                    ans += f"\n- Email: {registrar_node['email']}"
+                return ans
+
+        if ("bog chairman" in q or "board of governors chairman" in q or "chairman of bog" in q or "chairman of the board of governors" in q) and not "committee" in q:
+            chairman_node = None
+            for node_id, data in self.graph.nodes(data=True):
+                if data.get("is_bog_chairman"):
+                    chairman_node = data
+                    break
+            if chairman_node:
+                return f"**{chairman_node['name']}** is the Chairman of the Board of Governors (BoG) of IIT Jammu."
+
+        # 2. Deans and Associate Deans / AD
+        is_deans_list = any(term in q for term in ("list of deans", "list all deans", "who are the deans", "who comprises the deans"))
+        is_assoc_deans_list = any(term in q for term in ("list of associate deans", "list all associate deans", "who are the associate deans", "list of ad", "list all ad", "who are the ad", "who is the ad"))
+        
+        if is_deans_list:
+            deans = []
+            for node_id, data in self.graph.nodes(data=True):
+                if data.get("admin_type") == "Dean":
+                    deans.append(data)
+            if deans:
+                deans.sort(key=lambda x: x["name"])
+                lines = ["### Deans of IIT Jammu", ""]
+                for d in deans:
+                    line = f"- **{d['name']}**: {d.get('admin_role', '')}"
+                    if d.get("email"):
+                        line += f" (Email: {d['email']})"
+                    lines.append(line)
+                return "\n".join(lines)
+
+        if is_assoc_deans_list:
+            adeans = []
+            for node_id, data in self.graph.nodes(data=True):
+                if data.get("admin_type") == "Associate Dean":
+                    adeans.append(data)
+            if adeans:
+                adeans.sort(key=lambda x: x["name"])
+                lines = ["### Associate Deans of IIT Jammu", ""]
+                for d in adeans:
+                    line = f"- **{d['name']}**: Associate Dean of {d.get('admin_role', '')}"
+                    if d.get("email"):
+                        line += f" (Email: {d['email']})"
+                    lines.append(line)
+                return "\n".join(lines)
+
+        if "dean" in q or re.search(r'\bad\b', q):
+            matches = []
+            
+            def stem_word(w):
+                w = w.lower().strip()
+                if w.endswith('ies'):
+                    return w[:-3] + 'y'
+                if w.endswith('s') and not w.endswith('ss'):
+                    return w[:-1]
+                return w
+                
+            q_words = [stem_word(w) for w in re.split(r'\W+', q) if len(stem_word(w)) > 2 or stem_word(w) == 'ad']
+            if "affair" in q_words:
+                q_words.append("activity")
+            if "activity" in q_words:
+                q_words.append("affair")
+                
+            for node_id, data in self.graph.nodes(data=True):
+                admin_role = data.get("admin_role", "")
+                admin_type = data.get("admin_type", "")
+                if admin_role and admin_type:
+                    clean_role = re.sub(r'[\(\)\-]', ' ', admin_role.lower())
+                    role_words = [stem_word(w) for w in re.split(r'\W+', clean_role) if len(stem_word(w)) > 2 or stem_word(w) == 'ad']
+                    
+                    if role_words and all(rw in q_words for rw in role_words):
+                        if "associate" in q or re.search(r'\bad\b', q):
+                            if admin_type != "Associate Dean":
+                                continue
+                        else:
+                            if admin_type != "Dean":
+                                continue
+                        matches.append(data)
+            if matches:
+                lines = []
+                for m in matches:
+                    lines.append(f"**{m['name']}** is the {m['admin_type']} ({m['admin_role']})." + (f" Email: {m['email']}" if m.get('email') else ""))
+                return "\n".join(lines)
+
+        # 3. Committees
+        committees = {
+            "finance_committee": ["finance committee", "finance committe"],
+            "board_of_governors": ["board of governors", "bog", "board of governor"],
+            "building_and_works_bwc": ["building and works", "bwc", "building & works", "building and work"],
+            "senate": ["senate", "academic council", "academic council member"],
+            "annual_action_plan_committee": ["annual action plan", "action plan committee", "annual plan committee", "annual plan"]
+        }
+        
+        target_committee_node = None
+        target_comm_aliases = None
+        for node_id, data in self.graph.nodes(data=True):
+            if data.get("label") == "Committee":
+                name_lower = data.get("name", "").lower()
+                for comm_id, aliases in committees.items():
+                    if any(alias in q for alias in aliases):
+                        if any(alias in name_lower for alias in aliases):
+                            target_committee_node = node_id
+                            target_comm_aliases = aliases
+                            break
+                if target_committee_node:
+                    break
+                
+        if target_committee_node:
+            comm_data = self.graph.nodes[target_committee_node]
+            comm_name = comm_data.get("name", target_committee_node)
+            
+            members = []
+            for source, target, edge_data in self.graph.in_edges(target_committee_node, data=True):
+                if edge_data.get("type") == "MEMBER_OF":
+                    member_data = self.graph.nodes.get(source, {})
+                    role = edge_data.get("role_in_committee", "")
+                    members.append({
+                        "name": member_data.get("name", source),
+                        "role": role
+                    })
+            
+            # Specific member lookup inside committee
+            for m in members:
+                m_name_clean = re.sub(r'\b(?:Dr\.?|Prof\.?|Mr\.?|Ms\.?|Sh\.?|Shri\.?)\b', '', m["name"], flags=re.IGNORECASE).strip().lower()
+                if m_name_clean and m_name_clean in q:
+                    return f"In the **{comm_name}**, **{m['name']}** is: \n\n{m['role']}"
+                    
+            q_clean = q
+            for alias in target_comm_aliases:
+                q_clean = q_clean.replace(alias, "")
+            q_clean = re.sub(r'\b(?:who|is|in|the|of|committee|board|senate|member|representative|nominee)\b', '', q_clean, flags=re.IGNORECASE)
+            q_words = [w.strip() for w in re.split(r'\W+', q_clean) if len(w.strip()) > 1]
+            
+            # List query bypass to list all members instead of single role matching
+            is_list_query = any(kw in q for kw in ("list", "all", "comprise", "who are in", "members", "who comprises"))
+            
+            if q_words and not is_list_query:
+                best_match_member = None
+                best_match_count = 0
+                for m in members:
+                    role_lower = m["role"].lower()
+                    match_count = sum(1 for w in q_words if w in role_lower)
+                    if match_count > best_match_count:
+                        best_match_count = match_count
+                        best_match_member = m
+                if best_match_member and best_match_count >= len(q_words) - 1:
+                    return f"**{best_match_member['name']}** is the {best_match_member['role']} in the **{comm_name}**."
+
+            # Always return full list of members by default for matched committee
+            lines = [f"### Members of the {comm_name}", ""]
+            def member_sort_key(m):
+                role_lower = m["role"].lower()
+                if "chairman" in role_lower or "chairperson" in role_lower:
+                    return 0
+                if "director" in role_lower:
+                    return 1
+                if "secretary" in role_lower:
+                    return 9
+                return 5
+            members.sort(key=lambda x: (member_sort_key(x), x["name"]))
+            
+            for m in members:
+                role_disp = m["role"].replace("\n", " ").strip()
+                lines.append(f"- **{m['name']}**: {role_disp}")
+            return "\n".join(lines)
+
+        # 4. Person lookup (to show their exact post, designation, and committee roles)
+        # Guard: Skip person lookup for queries about research, comparison, or
+        # academic work. These should fall through to department-specific
+        # retrievers that have the actual faculty research data.
+        non_admin_intents = (
+            "compare", "comparison", "versus", "vs", "difference between",
+            "research work", "research interest", "research area",
+            "research output", "research expertise", "research contribution",
+            "academic work", "academic interest",
+            "publication", "publications", "paper", "papers",
+            "journal", "conference",
+            "teaching", "courses taught",
+            "qualification", "education background",
+            "specialization", "specialisation", "expertise area",
+        )
+        if any(term in q for term in non_admin_intents):
+            return None
+
+        potential_names = []
+        for node_id, data in self.graph.nodes(data=True):
+            if data.get("label") in ("Faculty", "AdminOfficial"):
+                name = data.get("name", node_id)
+                potential_names.append((node_id, name, data))
+                
+        matched_person = None
+        for node_id, name, data in potential_names:
+            name_clean = re.sub(r'\b(?:Dr\.?|Prof\.?|Mr\.?|Ms\.?|Sh\.?|Shri\.?)\b', '', name, flags=re.IGNORECASE).strip().lower()
+            name_clean = re.sub(r'\(?ias\)?', '', name_clean, flags=re.IGNORECASE).strip()
+            
+            q_clean_name = re.sub(r'\b(?:who|is|shri|sh\.?|dr\.?|prof\.?|mr\.?|ms\.?|about|role|post|of|in|for|the)\b', '', q, flags=re.IGNORECASE).strip()
+            q_clean_name = re.sub(r'\(?ias\)?', '', q_clean_name, flags=re.IGNORECASE).strip()
+            
+            if name_clean and (name_clean in q_clean_name or q_clean_name in name_clean):
+                matched_person = (node_id, name, data)
+                break
+                
+        if matched_person:
+            node_id, name, data = matched_person
+            roles = []
+            
+            if data.get("is_director"):
+                roles.append("Director of IIT Jammu")
+            if data.get("is_registrar"):
+                roles.append("Registrar of IIT Jammu")
+            if data.get("is_bog_chairman"):
+                roles.append("Chairman of the Board of Governors (BoG)")
+                
+            admin_type = data.get("admin_type")
+            admin_role = data.get("admin_role")
+            if admin_type and admin_role:
+                roles.append(f"{admin_type} ({admin_role})")
+                
+            # Check outgoing MEMBER_OF edges
+            for u, v, edge_data in self.graph.out_edges(node_id, data=True):
+                if edge_data.get("type") == "MEMBER_OF":
+                    comm_node = self.graph.nodes.get(v, {})
+                    comm_name = comm_node.get("name", v)
+                    role_in_comm = edge_data.get("role_in_committee", "Member")
+                    roles.append(f"In the **{comm_name}**: {role_in_comm}")
+                    
+            # Check incoming MEMBER_OF edges
+            for u, v, edge_data in self.graph.in_edges(node_id, data=True):
+                if edge_data.get("type") == "MEMBER_OF":
+                    comm_node = self.graph.nodes.get(u, {})
+                    comm_name = comm_node.get("name", u)
+                    role_in_comm = edge_data.get("role_in_committee", "Member")
+                    roles.append(f"In the **{comm_name}**: {role_in_comm}")
+
+            if roles:
+                ans_lines = [f"**{name}** holds the following position(s) at IIT Jammu:", ""]
+                for r in roles:
+                    r_cleaned = re.sub(r'\s+', ' ', r.replace('\n', ' ')).strip()
+                    ans_lines.append(f"- {r_cleaned}")
+                if data.get("email"):
+                    ans_lines.append(f"- Email: {data['email']}")
+                return "\n".join(ans_lines)
+
     def _is_broad_reasoning_query(self, query: str) -> bool:
         """Relax strict evidence gating for synthesis-heavy prompts."""
         q = re.sub(r"\s+", " ", query.lower()).strip()
@@ -1168,6 +1433,11 @@ class HybridRetriever:
         """
         ql = query.lower()
         q_cleaned = re.sub(r"\s+", " ", query.strip().lower()).strip(" ?.")
+
+        if self.dept_code == "administration":
+            admin_answer = self._build_administration_answer(query)
+            if admin_answer:
+                return admin_answer
 
         if self._is_department_contact_query(query) or any(kw in q_cleaned for kw in ("who is the hod", "who is the head of department", "who is the head of the department", "who is the department head", "head of department name", "name of the hod", "name of hod", "name of head of department")):
             contact_answer = self._build_department_contact_answer()

@@ -27,6 +27,12 @@ logger = logging.getLogger(__name__)
 # NOT subject keywords like "machine learning", "antenna", etc.
 
 DEPT_NAME_ALIASES = {
+    "administration": [
+        "administration", "admin", "senate", "board of governors", "bog",
+        "finance committee", "finance committe", "building and works", "bwc",
+        "deans", "associate deans", "ad", "director", "registrar",
+        "governance", "committee", "committees"
+    ],
     "ee": [
         "electrical engineering", "electrical", "ee", "ee department",
         "dept of ee", "department of electrical",

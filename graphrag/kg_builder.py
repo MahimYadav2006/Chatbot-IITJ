@@ -151,8 +151,31 @@ def normalize_name(name: str) -> str:
     name = TITLE_PREFIXES.sub('', name)
     name = re.sub(r'\s+', ' ', name).strip()
     name = name.strip('., ')
-    name = ' '.join(w.capitalize() for w in name.split())
-    return name
+    
+    words = []
+    for w in name.split():
+        if '.' in w:
+            parts = w.split('.')
+            parts_cap = [p.upper() if len(p) <= 1 else p.capitalize() for p in parts]
+            words.append('.'.join(parts_cap))
+        elif w.isupper() and len(w) <= 3:
+            words.append(w)
+        else:
+            words.append(w.capitalize())
+            
+    return ' '.join(words)
+
+
+def clean_admin_member_name(name: str) -> str:
+    n = name
+    n = re.sub(r'\(?Retd\.?\)?', '', n, flags=re.IGNORECASE)
+    n = re.compile(r'\b(?:Dr\.?|Prof\.?|Mr\.?|Ms\.?|Mrs\.?|Shri\.?|Sh\.?|Col\.?|Er\.?|Lt\.?|Gen\.?|Smt\.?)\b', re.IGNORECASE).sub('', n)
+    n = re.sub(r'[,–\-]\s*(?:Director|Registrar|Deputy\s+Registrar|Dean|Associate\s+Dean|HoD|HOD|SOM|CARE|Emeritus|Chairman|Chairperson|Member|Secretary|Nominee|Special\s+Invitee|Joint\s+Secretary|Financial\s+Advisor|Ministry|Deptt|Dept|IIT|Univ).*$', '', n, flags=re.IGNORECASE)
+    n = re.sub(r'\b(?:Director|Registrar|Dean|Associate\s+Dean|HOD|HoD|Secretary)\b.*$', '', n, flags=re.IGNORECASE)
+    n = re.sub(r'[\*\(\)\[\]]', '', n)
+    n = re.sub(r'\s+', ' ', n).strip()
+    n = n.strip(',.- ')
+    return n
 
 
 def _strip_markdown_emphasis(text: str) -> str:
@@ -647,6 +670,17 @@ def infer_document_kind(filename: str, content: str) -> str:
     fn = (filename or "").lower()
     text = (content or "").lower()
     source_line = next((line.lower() for line in content.splitlines()[:3] if "source url" in line.lower()), "")
+
+    if "director" in fn:
+        return "admin_director"
+    if "registrar" in fn:
+        return "admin_registrar"
+    if "bogchairman" in fn:
+        return "admin_bogchairman"
+    if "deans-and-associate-deans" in fn:
+        return "admin_deans"
+    if any(p in fn for p in ("board-of-governors", "finance-committee", "building-and-works-bwc", "member-senate-academic-council", "annual-action--plan-committee")):
+        return "admin_committee"
 
     if fn.endswith(".pdf.md"):
         return "generic"
@@ -1879,6 +1913,202 @@ class KnowledgeGraphBuilder:
                     self._add_node(resolved_sup, "Faculty", name=resolved_sup)
                     self._add_edge(grad_id, resolved_sup, "SUPERVISED_BY")
 
+    def _parse_admin_director(self, filename: str, content: str, doc_id: str):
+        lines = content.splitlines()
+        name = "Manoj Singh Gaur"
+        designation = "Director"
+        
+        for line in lines:
+            if line.startswith("## "):
+                raw_name = line[3:].strip()
+                name = clean_admin_member_name(raw_name)
+                break
+                
+        resolved_name = self.resolver.resolve(name)
+        props = {
+            "name": resolved_name,
+            "designation": designation,
+            "is_director": True,
+            "source_file": filename,
+            "profile_url": "https://iitjammu.ac.in/director"
+        }
+        self._add_node(resolved_name, "Faculty", **props)
+        self._add_edge(resolved_name, doc_id, "SOURCE_DOCUMENT")
+        
+        dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
+        self._add_edge(resolved_name, dept_id, "MEMBER_OF")
+
+    def _parse_admin_registrar(self, filename: str, content: str, doc_id: str):
+        lines = content.splitlines()
+        name = "Virinder Singh Jeji"
+        designation = "Registrar"
+        email = "registrar@iitjammu.ac.in"
+        
+        for line in lines:
+            if line.startswith("### "):
+                raw_name = line[4:].strip()
+                name = clean_admin_member_name(raw_name)
+            elif "email" in line.lower():
+                email = _deobfuscate_email_text(line.split("-")[-1].strip())
+                
+        resolved_name = self.resolver.resolve(name)
+        props = {
+            "name": resolved_name,
+            "designation": designation,
+            "is_registrar": True,
+            "email": email,
+            "source_file": filename
+        }
+        self._add_node(resolved_name, "AdminOfficial", **props)
+        self._add_edge(resolved_name, doc_id, "SOURCE_DOCUMENT")
+        
+        dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
+        self._add_edge(resolved_name, dept_id, "MEMBER_OF")
+
+    def _parse_admin_bogchairman(self, filename: str, content: str, doc_id: str):
+        lines = content.splitlines()
+        name = "Sharad Kumar Saraf"
+        designation = "BOG Chairman"
+        
+        for line in lines:
+            if line.startswith("### "):
+                raw_name = line[4:].strip()
+                name = clean_admin_member_name(raw_name)
+                
+        resolved_name = self.resolver.resolve(name)
+        props = {
+            "name": resolved_name,
+            "designation": designation,
+            "is_bog_chairman": True,
+            "source_file": filename
+        }
+        self._add_node(resolved_name, "AdminOfficial", **props)
+        self._add_edge(resolved_name, doc_id, "SOURCE_DOCUMENT")
+        
+        dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
+        self._add_edge(resolved_name, dept_id, "MEMBER_OF")
+
+    def _parse_admin_deans(self, filename: str, content: str, doc_id: str):
+        lines = content.splitlines()
+        current_section = "Dean"
+        
+        i = 0
+        while i < len(lines):
+            line = lines[i].strip()
+            if not line:
+                i += 1
+                continue
+            
+            if "ASSOCIATE DEANS" in line.upper():
+                current_section = "Associate Dean"
+                i += 1
+                continue
+            elif "DEANS" in line.upper():
+                current_section = "Dean"
+                i += 1
+                continue
+            
+            if line.startswith("####"):
+                raw_name = line.replace("####", "").strip()
+                if raw_name.upper() in ("DEANS", "ASSOCIATE DEANS") or len(raw_name) < 2:
+                    i += 1
+                    continue
+                
+                name = clean_admin_member_name(raw_name)
+                role = ""
+                email = ""
+                profile_url = ""
+                
+                i += 1
+                while i < len(lines) and not lines[i].strip().startswith("####"):
+                    next_line = lines[i].strip()
+                    if next_line:
+                        if "[PROFILE]" in next_line:
+                            m = re.search(r'\((https?://[^\s)]+)\)', next_line)
+                            if m:
+                                profile_url = m.group(1).strip()
+                        elif "dot" in next_line.lower() and "at" in next_line.lower() or "@" in next_line:
+                            email = _deobfuscate_email_text(next_line)
+                        elif not role and not next_line.startswith("!["):
+                            role = next_line
+                    i += 1
+                
+                resolved_name = self.resolver.resolve(name)
+                label = "Faculty" if self.resolver.is_canonical_faculty(resolved_name) else "AdminOfficial"
+                props = {
+                    "name": resolved_name,
+                    "designation": f"{current_section} - {role}" if role else current_section,
+                    "admin_role": role,
+                    "admin_type": current_section,
+                    "source_file": filename
+                }
+                if email:
+                    props["email"] = email
+                if profile_url:
+                    props["profile_url"] = profile_url
+                
+                self._add_node(resolved_name, label, **props)
+                self._add_edge(resolved_name, doc_id, "SOURCE_DOCUMENT")
+                
+                dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
+                self._add_edge(resolved_name, dept_id, "MEMBER_OF")
+                continue
+            
+            i += 1
+
+    def _parse_admin_committee(self, filename: str, content: str, doc_id: str):
+        committee_name = ""
+        for line in content.splitlines():
+            if line.startswith("## "):
+                committee_name = line[3:].strip()
+                break
+        if not committee_name:
+            committee_name = filename.replace("administration_", "").replace(".md", "").replace("-", " ").title()
+            
+        committee_id = f"committee:{committee_name.lower().replace(' ', '_')}"
+        self._add_node(committee_id, "Committee", name=committee_name, source_file=filename)
+        self._add_edge(committee_id, doc_id, "SOURCE_DOCUMENT")
+        
+        dept_id = f"IIT Jammu {self.dept_code.upper()} Department"
+        self._add_edge(committee_id, dept_id, "COMMITTEE_OF")
+        
+        headers = []
+        for line in content.splitlines():
+            line = line.strip()
+            if line.startswith("|"):
+                cells = [c.strip() for c in line.split("|")[1:-1]]
+                if not cells:
+                    continue
+                if cells[0] == "Name" or "---" in cells[0]:
+                    if cells[0] == "Name":
+                        headers = cells
+                    continue
+                
+                name_cell = cells[0]
+                designation_cell = cells[1] if len(cells) > 1 else ""
+                
+                clean_name = clean_admin_member_name(name_cell)
+                if not clean_name or len(clean_name) < 4 or clean_name.lower() in ("all", "each", "any", "deputy"):
+                    clean_name = re.sub(r'[\*\(\)\[\]]', '', name_cell).strip()
+                    clean_name = re.sub(r'\s+', ' ', clean_name)
+                    
+                if not clean_name or clean_name.lower() in ("name", "chairperson", "member"):
+                    continue
+                    
+                resolved_name = self.resolver.resolve(clean_name)
+                label = "Faculty" if self.resolver.is_canonical_faculty(resolved_name) else "AdminOfficial"
+                
+                props = {
+                    "name": resolved_name,
+                    "source_file": filename
+                }
+                self._add_node(resolved_name, label, **props)
+                self._add_edge(resolved_name, doc_id, "SOURCE_DOCUMENT")
+                
+                self._add_edge(resolved_name, committee_id, "MEMBER_OF", 
+                               role_in_committee=designation_cell, 
+                               committee_name=committee_name)
+
     def build(self) -> nx.DiGraph:
         if not os.path.exists(self.markdown_dir):
             raise FileNotFoundError(f"Markdown directory not found: {self.markdown_dir}")
@@ -1926,6 +2156,16 @@ class KnowledgeGraphBuilder:
 
             if doc_kind == "faculty_profile":
                 self._parse_faculty_profile(filename, content, doc_id)
+            elif doc_kind == "admin_director":
+                self._parse_admin_director(filename, content, doc_id)
+            elif doc_kind == "admin_registrar":
+                self._parse_admin_registrar(filename, content, doc_id)
+            elif doc_kind == "admin_bogchairman":
+                self._parse_admin_bogchairman(filename, content, doc_id)
+            elif doc_kind == "admin_deans":
+                self._parse_admin_deans(filename, content, doc_id)
+            elif doc_kind == "admin_committee":
+                self._parse_admin_committee(filename, content, doc_id)
             elif doc_kind == "phd_roster":
                 self._parse_phd_list(filename, content, doc_id)
             elif doc_kind == "mtech_roster":

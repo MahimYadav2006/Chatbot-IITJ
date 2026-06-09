@@ -14,6 +14,12 @@ SCRAPED_DATA_ROOT = os.environ.get(
 )
 
 DEPARTMENTS = {
+    "administration": {
+        "name": "Administration",
+        "full_name": "Administration of IIT Jammu",
+        "base_url": "https://iitjammu.ac.in",
+        "template": "A",
+    },
     "ee": {
         "name": "Electrical Engineering",
         "full_name": "Department of Electrical Engineering",
