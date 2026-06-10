@@ -148,9 +148,11 @@ def is_same_department_url(url: str, base_url: str) -> bool:
     candidate = urllib.parse.urlparse(url)
     base_prefix = base.path.rstrip("/")
     candidate_path = candidate.path.rstrip("/")
+    base_netloc = base.netloc.lower().replace("www.", "")
+    candidate_netloc = candidate.netloc.lower().replace("www.", "")
     return (
         candidate.scheme in {"http", "https"}
-        and candidate.netloc == base.netloc
+        and candidate_netloc == base_netloc
         and (
             candidate_path == base_prefix
             or candidate_path.startswith(base_prefix + "/")
@@ -163,7 +165,9 @@ def classify_discovered_url(url: str, base_url: str, allowed_domain: str) -> Tup
     parsed = urllib.parse.urlparse(url)
     if parsed.scheme not in {"http", "https"}:
         return "reject", "unsupported-scheme"
-    if parsed.netloc != allowed_domain:
+    parsed_netloc = parsed.netloc.lower().replace("www.", "")
+    allowed_netloc = allowed_domain.lower().replace("www.", "")
+    if parsed_netloc != allowed_netloc:
         return "reject", "external-domain"
     if is_static_asset_url(url):
         return "reject", "static-asset"
@@ -172,6 +176,7 @@ def classify_discovered_url(url: str, base_url: str, allowed_domain: str) -> Tup
     if is_same_department_url(url, base_url):
         return "page", "department-page"
     return "reject", "outside-department-scope"
+
 
 
 def is_generic_page(title: str, text: str) -> bool:

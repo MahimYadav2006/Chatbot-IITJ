@@ -1476,10 +1476,28 @@ class HybridRetriever:
 
         if not suppress_topic_match:
             contact_patterns = [
+                # "who should I contact for X", "who to contact about X"
                 r"who\s+(?:should\s+i\s+|to\s+)?contact\s+(?:for|about|regarding)\s+(.+)",
+                # "who works on X", "which faculty working on X", "who researches X"
                 r"(?:who|which)\s+(?:faculty|member|professor|people|person|individual|scholars?|students?|is\s+)?(?:working\s+on|works\s+on|researching|expert\s+in|specialist\s+in|does\s+research\s+in|do\s+research\s+in)\s+(.+)",
+                # "who to reach out to for X"
                 r"who\s+(?:to\s+)?(?:reach\s+out\s+to|write\s+to)\s+(?:for|about|regarding)\s+(.+)",
+                # "find/list faculty working on X"
                 r"(?:find|search|list|get|show)\s+(?:faculty|member|professor|people|person|individual|scholars?|students?)\s+(?:working\s+on|who\s+work\s+on|researching|expert\s+in|specialist\s+in|in\s+the\s+area\s+of|in\s+the\s+field\s+of)\s+(.+)",
+                # "experts in X", "specialists in X"
+                r"(?:experts?|specialists?)\s+(?:in|on|for)\s+(.+)",
+                # "faculty for X", "professors for X"
+                r"(?:faculty|professors?|researchers?)\s+(?:for|in|on)\s+(.+)\s+(?:at\s+iit\s+jammu|iit\s+jammu|department)",
+                # "X researchers at IIT Jammu", "X experts at IIT Jammu"
+                r"(.+?)\s+(?:researchers?|experts?|faculty|professors?)\s+(?:at\s+iit|in\s+iit|at\s+the\s+iit)",
+                # "X research at IIT Jammu" (e.g. "computer vision research at IIT Jammu")
+                r"(.+?)\s+research\s+(?:at|in)\s+(?:iit|the\s+department)",
+                # "who is doing X", "who is working in X"
+                r"who\s+(?:is\s+)?(?:doing|working\s+in|involved\s+in)\s+(.+)",
+                # "faculty in the area of X", "faculty in the field of X"
+                r"faculty\s+(?:in\s+the\s+area\s+of|in\s+the\s+field\s+of|specializing\s+in|with\s+expertise\s+in)\s+(.+)",
+                # "which professor works in X" / "any professor working in X"
+                r"(?:any|is\s+there\s+any)\s+(?:faculty|professor|researcher)\s+(?:working\s+on|working\s+in|who\s+works\s+on|who\s+works\s+in)\s+(.+)",
             ]
 
             for pat in contact_patterns:
@@ -1488,6 +1506,10 @@ class HybridRetriever:
                     is_topic_query = True
                     topic = m.group(1).strip()
                     topic = re.sub(r"\s*(?:related\s+tasks|tasks|work|research|lab|projects|area|field|topics|subject|course|class|\?|\.)+$", "", topic, flags=re.IGNORECASE).strip()
+                    # Strip trailing department/context qualifiers that were captured
+                    topic = re.sub(r"\s+(?:at\s+iit\s+jammu|at\s+iit|in\s+iit|iit\s+jammu|in\s+the\s+department|at\s+the\s+department)$", "", topic, flags=re.IGNORECASE).strip()
+                    if not topic:
+                        is_topic_query = False
                     break
 
         if is_topic_query and topic:

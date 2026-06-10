@@ -212,3 +212,40 @@ def get_data_dir(code: str) -> str:
     """Return the data directory path for a department."""
     canonical = resolve_department_code(code)
     return os.path.join(PROJECT_ROOT, "data", canonical)
+
+SECTIONS = {
+    "academics": {"name": "Academics", "base_url": "https://www.iitjammu.ac.in/academics"},
+    "alumni-affairs": {"name": "Alumni Affairs", "base_url": "https://iitjammu.ac.in/alumni-affairs"},
+    "cds": {"name": "CDS", "base_url": "https://iitjammu.ac.in/cds"},
+    "counselling": {"name": "Counselling", "base_url": "https://iitjammu.ac.in/counselling"},
+    "di": {"name": "DI", "base_url": "https://iitjammu.ac.in/di"},
+    "e2": {"name": "E2", "base_url": "https://www.iitjammu.ac.in/e2"},
+    "saral": {"name": "Saral", "base_url": "https://iitjammu.ac.in/saral"},
+    "accounts": {"name": "Accounts", "base_url": "https://www.iitjammu.ac.in/accounts"},
+    "hindicell": {"name": "Hindi Cell", "base_url": "https://sites.google.com/iitjammu.ac.in/hindicell"},
+    "ir": {"name": "IR", "base_url": "https://ir.iitjammu.ac.in/"},
+    "library": {"name": "Library", "base_url": "https://library.iitjammu.ac.in/"},
+    "medical-centre": {"name": "Medical Centre", "base_url": "https://iitjammu.ac.in/medical-centre/"},
+    "osd": {"name": "OSD", "base_url": "https://iitjammu.ac.in/osd/"},
+    "sp": {"name": "SP", "base_url": "https://www.iitjammu.ac.in/sp"},
+    "rc": {"name": "RC", "base_url": "https://www.iitjammu.ac.in/rc"},
+    "sw": {"name": "SW", "base_url": "https://iitjammu.ac.in/sw"},
+    "security": {"name": "Security", "base_url": "https://www.iitjammu.ac.in/security/"},
+    "tlu": {"name": "TLU", "base_url": "https://sites.google.com/iitjammu.ac.in/tlu"},
+    "tinkerers-lab": {"name": "Tinkerers Lab", "base_url": "https://iitjammu.ac.in/tinkerers-lab"},
+}
+
+def get_section_markdown_dir(code: str) -> str:
+    """Return the canonical crawl output directory for a section under `scraped_data/sections/`."""
+    if code not in SECTIONS:
+        raise KeyError(f"Section code '{code}' not found in registry.")
+    return os.path.join(SCRAPED_DATA_ROOT, "sections", code)
+
+
+def get_section_data_dir(code: str) -> str:
+    """Return the data directory path for a section."""
+    if code not in SECTIONS:
+        raise KeyError(f"Section code '{code}' not found in registry.")
+    return os.path.join(PROJECT_ROOT, "data", "sections", code)
+
+

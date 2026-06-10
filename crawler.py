@@ -34,6 +34,8 @@ from departments import (
     get_scraped_markdown_dir,
     resolve_department_code,
     get_scraped_data_root,
+    SECTIONS,
+    get_section_markdown_dir,
 )
 from utils import (
     MIN_CONTENT_LEN,
@@ -191,7 +193,15 @@ def render_page_snapshot(url: str, context) -> Dict[str, str]:
     page = context.new_page()
     try:
         print(f"Loading page via Playwright: {url}")
-        page.goto(url, wait_until="networkidle", timeout=60000)
+        try:
+            page.goto(url, wait_until="networkidle", timeout=60000)
+        except Exception as e:
+            print(f"Playwright: networkidle failed/timed out, retrying with wait_until='load': {e}")
+            try:
+                page.goto(url, wait_until="load", timeout=30000)
+            except Exception as e2:
+                print(f"Playwright: load failed/timed out, retrying with wait_until='domcontentloaded': {e2}")
+                page.goto(url, wait_until="domcontentloaded", timeout=30000)
         page.wait_for_timeout(PLAYWRIGHT_WAIT_MS)
         html_content = page.content()
         final_url = page.url
@@ -796,6 +806,128 @@ def crawl_department(dept_code: str, clean_output: bool = False, max_pages: Opti
     print(f"Manifest written to: {os.path.join(output_dir, 'crawl_manifest.json')}")
 
 
+def crawl_section(section_code: str, clean_output: bool = False, max_pages: Optional[int] = None):
+    if section_code not in SECTIONS:
+        raise KeyError(f"Section code '{section_code}' not found in registry.")
+
+    section_config = SECTIONS[section_code]
+    output_dir = get_section_markdown_dir(section_code)
+    os.makedirs(output_dir, exist_ok=True)
+
+    if clean_output:
+        print(f"Cleaning previous markdown output in: {output_dir}")
+        _clear_output_dir(output_dir)
+
+    base_url = section_config["base_url"].rstrip("/")
+
+    print("\n==================================================")
+    print(f"Crawling section: {section_config['name']} ({section_code})")
+    print(f"Base URL: {base_url}")
+    print("==================================================")
+
+    with sync_playwright() as playwright:
+        print("Phase 1: Discovering validated pages...")
+        browser = playwright.chromium.launch(headless=True)
+        context = browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            )
+        )
+
+        pages, binaries, page_snapshots, page_decisions, link_decisions = discover_site(
+            base_url,
+            context,
+            max_pages=max_pages,
+        )
+        page_urls_to_export = _page_urls_to_export(page_decisions, page_snapshots)
+        print(
+            f"Validated {len(pages)} HTML pages, rendered {len(page_urls_to_export)} HTML pages, "
+            f"and discovered {len(binaries)} binary files.\n"
+        )
+
+        print("Phase 2: Converting discovered content to Markdown...")
+        combined_sections = [
+            f"# IIT Jammu {section_config['name']} – Crawled Content",
+            "",
+            f"Base URL: {base_url}",
+        ]
+
+        for url in page_urls_to_export:
+            result = download_and_convert(
+                url,
+                output_dir,
+                context,
+                section_code,
+                base_url,
+                cached_snapshot=page_snapshots.get(url),
+            )
+            if result:
+                markdown, content_flags = result
+                combined_sections.extend(
+                    [
+                        "",
+                        "---",
+                        "",
+                        f"## {urlparse(url).path or '/'}",
+                        "",
+                        f"Source URL: {url}",
+                        "",
+                        f"Content Flags: {', '.join(content_flags) if content_flags else 'none'}",
+                        "",
+                        markdown,
+                    ]
+                )
+
+        for url in binaries:
+            result = download_and_convert(
+                url,
+                output_dir,
+                context,
+                section_code,
+                base_url,
+            )
+            if result:
+                markdown, content_flags = result
+                combined_sections.extend(
+                    [
+                        "",
+                        "---",
+                        "",
+                        f"## {urlparse(url).path or '/'}",
+                        "",
+                        f"Source URL: {url}",
+                        "",
+                        f"Content Flags: {', '.join(content_flags) if content_flags else 'none'}",
+                        "",
+                        markdown,
+                    ]
+                )
+
+        combined_path = os.path.join(output_dir, f"00_combined_{section_code}_site.md")
+        with open(combined_path, "w", encoding="utf-8") as handle:
+            handle.write("\n".join(combined_sections).strip() + "\n")
+
+        manifest = {
+            "section_code": section_code,
+            "section_name": section_config["name"],
+            "base_url": base_url,
+            "accepted_pages": pages,
+            "rendered_pages": page_urls_to_export,
+            "accepted_binaries": binaries,
+            "page_decisions": [asdict(item) for item in page_decisions],
+            "link_decisions": [asdict(item) for item in link_decisions],
+        }
+        manifest_path = os.path.join(output_dir, "crawl_manifest.json")
+        with open(manifest_path, "w", encoding="utf-8") as handle:
+            json.dump(manifest, handle, indent=2)
+
+        browser.close()
+
+    print(f"\n✅ Completed crawling for section {section_code}! Check '{output_dir}'.")
+    print(f"Manifest written to: {os.path.join(output_dir, 'crawl_manifest.json')}")
+
+
 def crawl_administration(clean_output: bool = False):
     output_dir = os.path.join(get_scraped_data_root(), "administration")
     os.makedirs(output_dir, exist_ok=True)
@@ -977,9 +1109,15 @@ def main():
     )
     parser.add_argument("--all", action="store_true", help="Crawl all academic departments")
     parser.add_argument(
+        "--section",
+        default=None,
+        help="Section code to crawl (e.g. academics, alumni-affairs, cds, counselling, di, e2, saral, accounts, hindicell, ir, library, medical-centre, osd, sp, rc, sw, security, tlu, tinkerers-lab)",
+    )
+    parser.add_argument("--all-sections", action="store_true", help="Crawl all section websites")
+    parser.add_argument(
         "--clean-output",
         action="store_true",
-        help="Remove existing markdown files for the department before crawling",
+        help="Remove existing markdown files for the department/section before crawling",
     )
     parser.add_argument(
         "--max-pages",
@@ -989,7 +1127,29 @@ def main():
     )
     args = parser.parse_args()
 
-    if args.all:
+    if args.all_sections:
+        print("Crawling ALL sections...")
+        for section_code in SECTIONS:
+            try:
+                crawl_section(
+                    section_code,
+                    clean_output=args.clean_output,
+                    max_pages=args.max_pages,
+                )
+            except Exception as exc:
+                print(f"❌ Failed crawling section {section_code}: {exc}")
+    elif args.section:
+        section = args.section.lower().strip()
+        try:
+            crawl_section(
+                section,
+                clean_output=args.clean_output,
+                max_pages=args.max_pages,
+            )
+        except Exception as exc:
+            print(f"❌ Failed crawling section {section}: {exc}")
+            sys.exit(1)
+    elif args.all:
         print("Crawling ALL academic departments...")
         for department_code in DEPARTMENTS:
             try:

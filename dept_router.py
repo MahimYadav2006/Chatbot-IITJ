@@ -88,6 +88,35 @@ DEPT_NAME_ALIASES = {
     ],
 }
 
+SECTION_NAME_ALIASES = {
+    "academics": [
+        "academics", "academic affairs", "academic section", 
+        "ug admission", "pg admission", "course registration",
+        "examination", "grading", "convocation", "scholarship",
+        "academic programs", "curriculum", "specialisation",
+        "specialization", "course", "syllabus", "admission"
+    ],
+    "accounts": [
+        "accounts", "accounts section", "finance", "billing",
+        "fee payment", "financial aid", "payroll", "finance & accounts"
+    ],
+    "counselling": [
+        "counselling", "counseling", "mental health", 
+        "counselor", "counsellor", "psychological",
+        "stress management", "therapy"
+    ],
+    "di": [
+        "digital infrastructure", "di", "c3i", "it services", 
+        "network services", "data center", "software development",
+        "campus network", "internet"
+    ],
+    "e2": [
+        "establishment ii", "establishment 2", "e2", "e-2",
+        "hr matters", "service book", "leave management",
+        "recruitment process"
+    ],
+}
+
 
 @dataclass
 class RouteResult:
@@ -96,10 +125,11 @@ class RouteResult:
     confidence: str                   # "exact" | "broadcast"
     reason: str                       # Human-readable routing explanation
     query: str = ""                   # Original query
+    sections: List[str] = field(default_factory=list)  # Canonical section codes
 
 
 class DepartmentRouter:
-    """Routes queries to the correct department(s) based on department-name aliases."""
+    """Routes queries to the correct department(s) or section(s) based on aliases."""
 
     def __init__(self):
         # Build sorted alias → code lookup (longest aliases first for greedy matching)
@@ -108,77 +138,101 @@ class DepartmentRouter:
             for alias in aliases:
                 self._alias_map.append((alias.lower().strip(), dept_code))
 
-        # Sort by alias length descending so "computer science engineering"
-        # matches before "computer science" or "computer"
+        # Sort by alias length descending
         self._alias_map.sort(key=lambda x: len(x[0]), reverse=True)
 
-        # Also build a set of all canonical codes for validation
+        self._section_alias_map: List[tuple] = []
+        for sec_code, aliases in SECTION_NAME_ALIASES.items():
+            for alias in aliases:
+                self._section_alias_map.append((alias.lower().strip(), sec_code))
+        self._section_alias_map.sort(key=lambda x: len(x[0]), reverse=True)
+
         self._valid_codes = set(DEPARTMENTS.keys())
 
     def route(self, query: str) -> RouteResult:
         """
-        Analyze a query and determine which department(s) it targets.
-
-        Returns a RouteResult with:
-          - departments: list of canonical department codes
-          - confidence: "exact" if department was detected, "broadcast" otherwise
-          - reason: human-readable explanation
+        Analyze a query and determine which department(s) and/or section(s) it targets.
         """
-        detected = self._detect_departments(query)
+        detected_depts = self._detect_departments(query)
+        detected_secs = self._detect_sections(query)
 
-        if detected:
-            dept_names = [DEPARTMENTS[d]["name"] for d in detected]
-            if len(detected) == 1:
-                reason = f"Matched department: {dept_names[0]}"
-            else:
-                reason = f"Matched departments: {', '.join(dept_names)}"
+        if detected_depts or detected_secs:
+            reasons = []
+            if detected_depts:
+                dept_names = [DEPARTMENTS[d]["name"] for d in detected_depts]
+                reasons.append(f"Matched departments: {', '.join(dept_names)}")
+            if detected_secs:
+                from departments import SECTIONS
+                sec_names = [SECTIONS[s]["name"] for s in detected_secs]
+                reasons.append(f"Matched sections: {', '.join(sec_names)}")
 
             return RouteResult(
-                departments=detected,
+                departments=detected_depts,
+                sections=detected_secs,
                 confidence="exact",
-                reason=reason,
+                reason="; ".join(reasons),
                 query=query,
             )
 
-        # No department signal detected → broadcast
+        # No specific department/section signal detected → broadcast
         return RouteResult(
-            departments=[],  # Empty = broadcast to all
+            departments=[],
+            sections=[],
             confidence="broadcast",
-            reason="No specific department detected — will search all departments",
+            reason="No specific department/section detected — will search all",
             query=query,
         )
 
     def _detect_departments(self, query: str) -> List[str]:
-        """
-        Detect department references in query text using greedy alias matching.
-        Returns deduplicated list of canonical department codes, preserving order.
-        """
+        """Detect department references in query text using greedy alias matching."""
         q_lower = re.sub(r"\s+", " ", query.lower()).strip()
-        # Remove punctuation for matching but keep the text
         q_clean = re.sub(r"[?!.,;:'\"-]", " ", q_lower)
         q_clean = re.sub(r"\s+", " ", q_clean).strip()
 
         detected = []
         seen = set()
-        matched_spans = []  # Track matched character ranges to avoid overlaps
+        matched_spans = []
 
         for alias, dept_code in self._alias_map:
             if dept_code in seen:
                 continue
 
-            # Use word-boundary matching to avoid partial matches
-            # e.g., "physics" shouldn't match inside "astrophysics"
             pattern = r"(?<![a-z])" + re.escape(alias) + r"(?![a-z])"
-
             match = re.search(pattern, q_clean)
             if match:
-                # Check for overlap with already-matched spans
                 start, end = match.start(), match.end()
                 if any(s <= start < e or s < end <= e for s, e in matched_spans):
                     continue
 
                 detected.append(dept_code)
                 seen.add(dept_code)
+                matched_spans.append((start, end))
+
+        return detected
+
+    def _detect_sections(self, query: str) -> List[str]:
+        """Detect section references in query text using greedy alias matching."""
+        q_lower = re.sub(r"\s+", " ", query.lower()).strip()
+        q_clean = re.sub(r"[?!.,;:'\"-]", " ", q_lower)
+        q_clean = re.sub(r"\s+", " ", q_clean).strip()
+
+        detected = []
+        seen = set()
+        matched_spans = []
+
+        for alias, sec_code in self._section_alias_map:
+            if sec_code in seen:
+                continue
+
+            pattern = r"(?<![a-z])" + re.escape(alias) + r"(?![a-z])"
+            match = re.search(pattern, q_clean)
+            if match:
+                start, end = match.start(), match.end()
+                if any(s <= start < e or s < end <= e for s, e in matched_spans):
+                    continue
+
+                detected.append(sec_code)
+                seen.add(sec_code)
                 matched_spans.append((start, end))
 
         return detected
@@ -192,3 +246,14 @@ class DepartmentRouter:
             if os.path.exists(os.path.join(data_dir, "graph.pkl")):
                 ingested.append(code)
         return ingested
+
+    def get_ingested_sections(self) -> List[str]:
+        """Return list of section codes that have been ingested."""
+        from departments import get_section_data_dir, SECTIONS
+        ingested = []
+        for code in SECTIONS:
+            data_dir = get_section_data_dir(code)
+            if os.path.exists(os.path.join(data_dir, "graph.pkl")):
+                ingested.append(code)
+        return ingested
+

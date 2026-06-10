@@ -60,3 +60,38 @@ def test_generic_page_detection():
         "Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innovators",
         "Computer Science & Engineering Copyright © 2020 IIT Jammu, all rights reserved",
     )
+
+
+def test_section_url_matching():
+    # Test www. vs non-www domain classification
+    base_url_www = "https://www.iitjammu.ac.in/academics"
+    allowed_domain_www = "www.iitjammu.ac.in"
+
+    # 1. Matches when domain is non-www in candidate but www in allowed_domain
+    candidate_non_www = "https://iitjammu.ac.in/academics/program-list"
+    kind1, reason1 = classify_discovered_url(candidate_non_www, base_url_www, allowed_domain_www)
+    assert kind1 == "page"
+    assert reason1 == "department-page"
+
+    # 2. Matches when domain is www in candidate but non-www in base_url
+    base_url_non_www = "https://iitjammu.ac.in/alumni-affairs"
+    allowed_domain_non_www = "iitjammu.ac.in"
+    candidate_www = "https://www.iitjammu.ac.in/alumni-affairs/events"
+    kind2, reason2 = classify_discovered_url(candidate_www, base_url_non_www, allowed_domain_non_www)
+    assert kind2 == "page"
+    assert reason2 == "department-page"
+
+    # 3. Google Sites paths
+    sites_base = "https://sites.google.com/iitjammu.ac.in/hindicell"
+    sites_allowed = "sites.google.com"
+    sites_candidate = "https://sites.google.com/iitjammu.ac.in/hindicell/announcements"
+    kind3, reason3 = classify_discovered_url(sites_candidate, sites_base, sites_allowed)
+    assert kind3 == "page"
+    assert reason3 == "department-page"
+
+    # 4. Google Sites path out of scope
+    sites_other = "https://sites.google.com/iitjammu.ac.in/tlu"
+    kind4, reason4 = classify_discovered_url(sites_other, sites_base, sites_allowed)
+    assert kind4 == "reject"
+    assert reason4 == "outside-department-scope"
+

@@ -62,20 +62,33 @@ def get_llm_provider() -> str:
     return os.environ.get("LLM_PROVIDER", "ollama").strip().lower()
 
 def get_system_prompt(dept_code: str = "ee") -> str:
-    from departments import get_department
+    from departments import get_department, SECTIONS
+    is_section = False
     try:
-        dept_config = get_department(dept_code)
-        dept_name = dept_config["name"]
-        dept_full_name = dept_config["full_name"]
-        base_url = dept_config["base_url"]
-        official_contact = dept_config.get("official_contact_email", "")
+        if dept_code in SECTIONS:
+            is_section = True
+            sec_config = SECTIONS[dept_code]
+            dept_name = sec_config["name"]
+            dept_full_name = f"{sec_config['name']} Section"
+            base_url = sec_config["base_url"]
+            official_contact = ""
+        else:
+            dept_config = get_department(dept_code)
+            dept_name = dept_config["name"]
+            dept_full_name = dept_config["full_name"]
+            base_url = dept_config["base_url"]
+            official_contact = dept_config.get("official_contact_email", "")
     except Exception:
         dept_name = "EE"
         dept_full_name = "Department of Electrical Engineering"
         base_url = "https://iitjammu.ac.in/ee"
         official_contact = ""
 
-    if official_contact:
+    if is_section:
+        contact_guidance = (
+            f'For official inquiries, please use the official website/page at {base_url}.'
+        )
+    elif official_contact:
         contact_guidance = (
             f'For official inquiries, please contact the department at {official_contact} or visit {base_url}.'
         )
@@ -593,10 +606,13 @@ Response guidelines:
 
 
 def build_chat_prompt(query: str, context: str, dept_code: str = "ee") -> str:
-    from departments import get_department
+    from departments import get_department, SECTIONS
     try:
-        dept_config = get_department(dept_code)
-        dept_full_name = dept_config["full_name"]
+        if dept_code in SECTIONS:
+            dept_full_name = f"{SECTIONS[dept_code]['name']} Section"
+        else:
+            dept_config = get_department(dept_code)
+            dept_full_name = dept_config["full_name"]
     except Exception:
         dept_full_name = "Department of Electrical Engineering"
 
