@@ -30,7 +30,7 @@ DEPT_NAME_ALIASES = {
     "administration": [
         "administration", "admin", "senate", "board of governors", "bog",
         "finance committee", "finance committe", "building and works", "bwc",
-        "deans", "associate deans", "ad", "director", "registrar",
+        "dean", "deans", "associate deans", "associate dean", "ad", "director", "registrar",
         "governance", "committee", "committees"
     ],
     "ee": [
@@ -87,7 +87,6 @@ DEPT_NAME_ALIASES = {
         "dept of physics", "department of physics",
     ],
 }
-
 SECTION_NAME_ALIASES = {
     "academics": [
         "academics", "academic affairs", "academic section", 
@@ -114,6 +113,49 @@ SECTION_NAME_ALIASES = {
         "establishment ii", "establishment 2", "e2", "e-2",
         "hr matters", "service book", "leave management",
         "recruitment process"
+    ],
+    "alumni-affairs": [
+        "alumni", "alumni affairs", "alumni office", "alumni medalist",
+        "alumni award", "alumni directory", "alumni contact", "convocation medalist",
+        "gold medal", "silver medal", "institute medalist"
+    ],
+    "cds": [
+        "cds", "career development services", "career development",
+        "placement", "placements", "campus placement", "campus recruitment",
+        "recruiter", "recruiters", "past recruiters", "placement statistics",
+        "placement report", "placement policy", "rise-up", "riseup",
+        "internship", "internships", "campus hiring",
+        "placement highlights", "highest package", "average package",
+        "offer", "lpa", "ctc", "salary", "company", "eligible"
+    ],
+    "ir": [
+        "international relations", "ir office", "office of international relations",
+        "mou", "mous", "memorandum of understanding", "exchange program",
+        "student exchange", "faculty exchange", "erasmus", "daad",
+        "club", "clubs", "student clubs", "sports clubs", "sports fest",
+        "ebsb", "coding club", "robotics", "robo-sapiens", "fintech",
+        "beatstreet", "dramatizers", "malang", "wellness club", "nac",
+        "abhivyakta", "anisoul", "astria", "kritash", "mesh club",
+        "sae club", "re4m", "foot tinkerers",
+        "hostel", "hostels", "residential life", "dining", "mess",
+        "cultural events", "festivals", "fest", "fests",
+        "anhad", "pravaah", "convoquer", "nexus", "pragyaan", "udyamitsav",
+        "pahal", "inter-gen"
+    ],
+    "medical-centre": [
+        "medical centre", "medical center", "health centre", "health center",
+        "health and wellness", "doctor", "doctors", "hospital",
+        "ambulance", "pharmacy", "dental", "physiotherapy", "ecg",
+        "laboratory services", "ward facility", "dressing room",
+        "empaneled hospital", "empaneled hospitals", "cghs",
+        "medical facility", "medical facilities"
+    ],
+    "osd": [
+        "osd", "outreach", "outreach and skill development",
+        "skill development", "unnat bharat abhiyan", "uba",
+        "ces", "centre for essential skills", "center for essential skills",
+        "raise", "outreach division", "school visit",
+        "capacity building", "training program"
     ],
 }
 

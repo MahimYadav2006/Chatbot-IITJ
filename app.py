@@ -119,6 +119,8 @@ def _is_identity_query(query: str) -> bool:
 
     Returns False for queries about research areas, PhD scholars, publications,
     teaching, supervision, etc. — those need department-specific retrieval.
+    Also returns False for admin-role queries (e.g. "who is the dean") that
+    should be routed to the administration department's deterministic logic.
     """
     q = query.lower().strip()
 
@@ -152,6 +154,16 @@ def _is_identity_query(query: str) -> bool:
         # Projects / startups
         "project", "projects", "startup", "startups",
         "lab", "laboratory",
+        # Section items (clubs, hostels, fests, sports, mous, etc.)
+        "club", "clubs", "hostel", "hostels", "fest", "fests", "festival", "festivals",
+        "sports", "facility", "facilities", "mou", "mous", "collaboration", "collaborations",
+        "medical service", "medical services", "service timings", "hospital", "hospitals",
+        "timing", "timings",
+        # Admin role queries — should go through administration dept routing,
+        # not person index (which can contain role-placeholder names).
+        "dean of", "dean ", "associate dean",
+        "registrar", "director of iit",
+        "bog chairman", "chairman of",
     )
 
     if any(kw in q for kw in non_identity_keywords):
@@ -183,12 +195,35 @@ def get_global_person_direct_answer(query: str) -> Optional[str]:
     admin_keywords = ("dean", "coordinator", "registrar", "ar", "assistant registrar", "associate dean", "head", "incharge", "in charge")
     has_admin_request = any(kw in q for kw in admin_keywords)
 
+    matched_name = None
     for name in person_index.person_roles.keys():
         # Word boundary check
         pattern = r"\b" + re.escape(name.lower()) + r"\b"
         if re.search(pattern, q):
-            res = person_index.lookup(name)
-            if res:
+            matched_name = name
+            break
+
+    if not matched_name:
+        # Try matching unique/significant parts of the name of length >= 4
+        # We explicitly ignore generic terms/titles to prevent false matches on queries like "clubs at IIT Jammu"
+        ignored_tokens = {
+            "prof", "profs", "professor", "professors", "appointed", "by", "iit", "jammu", 
+            "committee", "members", "member", "faculty", "staff", "administration", "administrator", 
+            "officer", "officers", "department", "division", "counselling", "counselor", 
+            "counselors", "services", "service", "medical", "centre", "center", "health", 
+            "unit", "cell", "library", "librarian", "office", "head", "chairperson", 
+            "coordinator", "assistant", "associate", "dean", "deans", "director", "registrar",
+            "institutes", "institute", "iitj", "kumar", "singh", "sharma", "doctor", "dr"
+        }
+        for name in person_index.person_roles.keys():
+            parts = [p.lower() for p in name.split() if len(p) >= 4 and p.lower() not in ignored_tokens]
+            if parts and any(re.search(r"\b" + re.escape(part) + r"\b", q) for part in parts):
+                matched_name = name
+                break
+
+    if matched_name:
+        res = person_index.lookup(matched_name)
+        if res:
                 roles = res["roles"]
                 
                 # Sort roles
@@ -201,10 +236,18 @@ def get_global_person_direct_answer(query: str) -> Optional[str]:
 
                 sorted_roles = sorted(roles, key=sort_key)
                 
-                lines = [f"**{res['name']}** holds the following role(s) at IIT Jammu:"]
+                display_name = res['name']
+                is_doc = any(r.get("label") == "MedicalDoctor" for r in sorted_roles)
+                if is_doc and not display_name.startswith("Dr. ") and not display_name.startswith("Dr "):
+                    display_name = f"Dr. {display_name}"
+                lines = [f"**{display_name}** holds the following role(s) at IIT Jammu:"]
                 for r in sorted_roles:
                     source_name = r["source"].replace("_", " ").title()
                     lines.append(f"- **{r['designation']}** under the {source_name} division/department")
+                    if r.get("qualifications"):
+                        lines.append(f"  - Qualifications: {r['qualifications']}")
+                    if r.get("experience"):
+                        lines.append(f"  - Experience: {r['experience']}")
                     if r.get("email"):
                         lines.append(f"  - Email: {r['email']}")
                     if r.get("phone"):

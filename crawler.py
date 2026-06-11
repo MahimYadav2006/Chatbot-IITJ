@@ -193,21 +193,44 @@ def render_page_snapshot(url: str, context) -> Dict[str, str]:
     page = context.new_page()
     try:
         print(f"Loading page via Playwright: {url}")
+        navigation_succeeded = False
         try:
             page.goto(url, wait_until="networkidle", timeout=60000)
+            navigation_succeeded = True
         except Exception as e:
             print(f"Playwright: networkidle failed/timed out, retrying with wait_until='load': {e}")
             try:
-                page.goto(url, wait_until="load", timeout=30000)
+                page.goto(url, wait_until="load", timeout=45000)
+                navigation_succeeded = True
             except Exception as e2:
                 print(f"Playwright: load failed/timed out, retrying with wait_until='domcontentloaded': {e2}")
-                page.goto(url, wait_until="domcontentloaded", timeout=30000)
-        page.wait_for_timeout(PLAYWRIGHT_WAIT_MS)
+                try:
+                    page.goto(url, wait_until="domcontentloaded", timeout=45000)
+                    navigation_succeeded = True
+                except Exception as e3:
+                    print(f"Playwright: domcontentloaded also failed: {e3}")
+                    # Final attempt: just commit to the URL and wait a fixed period
+                    try:
+                        page.goto(url, wait_until="commit", timeout=30000)
+                        page.wait_for_timeout(10000)  # wait 10s for content to load
+                        navigation_succeeded = True
+                        print("Playwright: recovered via 'commit' + fixed wait")
+                    except Exception as e4:
+                        print(f"Playwright: all navigation strategies failed for {url}: {e4}")
+
+        if navigation_succeeded:
+            page.wait_for_timeout(PLAYWRIGHT_WAIT_MS)
+
+        # Always try to extract whatever content is available
         html_content = page.content()
         final_url = page.url
         title = page.title()
         soup = BeautifulSoup(html_content, "html.parser")
         text = soup.get_text(" ", strip=True)
+
+        if not navigation_succeeded and len(text.strip()) < 50:
+            raise RuntimeError(f"All navigation strategies failed and no content loaded for {url}")
+
         return {
             "html": html_content,
             "final_url": final_url,

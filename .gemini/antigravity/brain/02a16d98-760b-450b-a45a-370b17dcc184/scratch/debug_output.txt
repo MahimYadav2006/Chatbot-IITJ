@@ -1,0 +1,401 @@
+13:54:32 [INFO] Initializing IIT Jammu Unified Chatbot...
+13:54:32 [INFO] Using LLM provider 'gemini' with model 'gemini-2.5-flash-lite'
+13:54:32 [INFO] Loading GraphRAG retriever for department 'administration'...
+13:54:33 [INFO] Loading knowledge graph for department 'administration'...
+13:54:33 [INFO] Graph: 113 nodes, 181 edges
+13:54:33 [INFO] Loading embeddings...
+13:54:33 [INFO] Loading embedding model: all-mpnet-base-v2
+13:54:34 [INFO] Using device 'cpu' for SentenceTransformer
+13:54:34 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:54:37 [INFO] Model loaded. Embedding dim: 768
+13:54:37 [INFO] Loading faiss with AVX2 support.
+13:54:37 [INFO] Successfully loaded faiss with AVX2 support.
+13:54:37 [INFO] Loaded FAISS index: 103 vectors
+13:54:37 [INFO] FAISS index: 103 vectors
+13:54:37 [INFO] Loading communities...
+13:54:37 [INFO] Communities: 0
+13:54:37 [INFO] Hybrid retriever for 'administration' ready!
+13:54:37 [INFO] ✅ Retriever for department 'administration' loaded!
+13:54:37 [INFO] Loading GraphRAG retriever for department 'ee'...
+13:54:37 [INFO] Loading knowledge graph for department 'ee'...
+13:54:37 [INFO] Graph: 570 nodes, 771 edges
+13:54:37 [INFO] Loading embeddings...
+13:54:37 [INFO] Loading embedding model: all-mpnet-base-v2
+13:54:37 [INFO] Using device 'cpu' for SentenceTransformer
+13:54:37 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:54:40 [INFO] Model loaded. Embedding dim: 768
+13:54:40 [INFO] Loaded FAISS index: 556 vectors
+13:54:40 [INFO] FAISS index: 556 vectors
+13:54:40 [INFO] Loading communities...
+13:54:40 [INFO] Communities: 28
+13:54:40 [INFO] Hybrid retriever for 'ee' ready!
+13:54:40 [INFO] ✅ Retriever for department 'ee' loaded!
+13:54:40 [INFO] Loading GraphRAG retriever for department 'computer_science_engineering'...
+13:54:40 [INFO] Loading knowledge graph for department 'computer_science_engineering'...
+13:54:40 [INFO] Graph: 241 nodes, 308 edges
+13:54:40 [INFO] Loading embeddings...
+13:54:40 [INFO] Loading embedding model: all-mpnet-base-v2
+13:54:40 [INFO] Using device 'cpu' for SentenceTransformer
+13:54:40 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:54:44 [INFO] Model loaded. Embedding dim: 768
+13:54:44 [INFO] Loaded FAISS index: 220 vectors
+13:54:44 [INFO] FAISS index: 220 vectors
+13:54:44 [INFO] Loading communities...
+13:54:44 [INFO] Communities: 11
+13:54:44 [INFO] Hybrid retriever for 'computer_science_engineering' ready!
+13:54:44 [INFO] ✅ Retriever for department 'computer_science_engineering' loaded!
+13:54:44 [INFO] Loading GraphRAG retriever for department 'mechanical_engineering'...
+13:54:44 [INFO] Loading knowledge graph for department 'mechanical_engineering'...
+13:54:44 [INFO] Graph: 399 nodes, 499 edges
+13:54:44 [INFO] Loading embeddings...
+13:54:44 [INFO] Loading embedding model: all-mpnet-base-v2
+13:54:44 [INFO] Using device 'cpu' for SentenceTransformer
+13:54:44 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:54:47 [INFO] Model loaded. Embedding dim: 768
+13:54:47 [INFO] Loaded FAISS index: 385 vectors
+13:54:47 [INFO] FAISS index: 385 vectors
+13:54:47 [INFO] Loading communities...
+13:54:47 [INFO] Communities: 20
+13:54:47 [INFO] Hybrid retriever for 'mechanical_engineering' ready!
+13:54:47 [INFO] ✅ Retriever for department 'mechanical_engineering' loaded!
+13:54:47 [INFO] Loading GraphRAG retriever for department 'civil_engineering'...
+13:54:47 [INFO] Loading knowledge graph for department 'civil_engineering'...
+13:54:47 [INFO] Graph: 588 nodes, 714 edges
+13:54:47 [INFO] Loading embeddings...
+13:54:47 [INFO] Loading embedding model: all-mpnet-base-v2
+13:54:47 [INFO] Using device 'cpu' for SentenceTransformer
+13:54:47 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:54:50 [INFO] Model loaded. Embedding dim: 768
+13:54:50 [INFO] Loaded FAISS index: 533 vectors
+13:54:50 [INFO] FAISS index: 533 vectors
+13:54:50 [INFO] Loading communities...
+13:54:50 [INFO] Communities: 19
+13:54:50 [INFO] Hybrid retriever for 'civil_engineering' ready!
+13:54:50 [INFO] ✅ Retriever for department 'civil_engineering' loaded!
+13:54:50 [INFO] Loading GraphRAG retriever for department 'chemical-engineering'...
+13:54:50 [INFO] Loading knowledge graph for department 'chemical-engineering'...
+13:54:50 [INFO] Graph: 335 nodes, 353 edges
+13:54:50 [INFO] Loading embeddings...
+13:54:50 [INFO] Loading embedding model: all-mpnet-base-v2
+13:54:50 [INFO] Using device 'cpu' for SentenceTransformer
+13:54:50 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:54:53 [INFO] Model loaded. Embedding dim: 768
+13:54:53 [INFO] Loaded FAISS index: 271 vectors
+13:54:53 [INFO] FAISS index: 271 vectors
+13:54:53 [INFO] Loading communities...
+13:54:53 [INFO] Communities: 13
+13:54:53 [INFO] Hybrid retriever for 'chemical-engineering' ready!
+13:54:53 [INFO] ✅ Retriever for department 'chemical-engineering' loaded!
+13:54:53 [INFO] Loading GraphRAG retriever for department 'bsbe'...
+13:54:53 [INFO] Loading knowledge graph for department 'bsbe'...
+13:54:53 [INFO] Graph: 236 nodes, 290 edges
+13:54:53 [INFO] Loading embeddings...
+13:54:53 [INFO] Loading embedding model: all-mpnet-base-v2
+13:54:53 [INFO] Using device 'cpu' for SentenceTransformer
+13:54:53 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:54:56 [INFO] Model loaded. Embedding dim: 768
+13:54:56 [INFO] Loaded FAISS index: 219 vectors
+13:54:56 [INFO] FAISS index: 219 vectors
+13:54:56 [INFO] Loading communities...
+13:54:56 [INFO] Communities: 11
+13:54:56 [INFO] Hybrid retriever for 'bsbe' ready!
+13:54:56 [INFO] ✅ Retriever for department 'bsbe' loaded!
+13:54:56 [INFO] Loading GraphRAG retriever for department 'chemistry'...
+13:54:56 [INFO] Loading knowledge graph for department 'chemistry'...
+13:54:56 [INFO] Graph: 207 nodes, 222 edges
+13:54:56 [INFO] Loading embeddings...
+13:54:56 [INFO] Loading embedding model: all-mpnet-base-v2
+13:54:56 [INFO] Using device 'cpu' for SentenceTransformer
+13:54:56 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:54:59 [INFO] Model loaded. Embedding dim: 768
+13:54:59 [INFO] Loaded FAISS index: 183 vectors
+13:54:59 [INFO] FAISS index: 183 vectors
+13:54:59 [INFO] Loading communities...
+13:54:59 [INFO] Communities: 9
+13:54:59 [INFO] Hybrid retriever for 'chemistry' ready!
+13:54:59 [INFO] ✅ Retriever for department 'chemistry' loaded!
+13:54:59 [INFO] Loading GraphRAG retriever for department 'hss'...
+13:54:59 [INFO] Loading knowledge graph for department 'hss'...
+13:54:59 [INFO] Graph: 506 nodes, 473 edges
+13:54:59 [INFO] Loading embeddings...
+13:54:59 [INFO] Loading embedding model: all-mpnet-base-v2
+13:54:59 [INFO] Using device 'cpu' for SentenceTransformer
+13:54:59 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:02 [INFO] Model loaded. Embedding dim: 768
+13:55:02 [INFO] Loaded FAISS index: 414 vectors
+13:55:02 [INFO] FAISS index: 414 vectors
+13:55:02 [INFO] Loading communities...
+13:55:02 [INFO] Communities: 14
+13:55:02 [INFO] Hybrid retriever for 'hss' ready!
+13:55:02 [INFO] ✅ Retriever for department 'hss' loaded!
+13:55:02 [INFO] Loading GraphRAG retriever for department 'idp'...
+13:55:02 [INFO] Loading knowledge graph for department 'idp'...
+13:55:02 [INFO] Graph: 95 nodes, 96 edges
+13:55:02 [INFO] Loading embeddings...
+13:55:02 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:02 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:02 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:05 [INFO] Model loaded. Embedding dim: 768
+13:55:05 [INFO] Loaded FAISS index: 88 vectors
+13:55:05 [INFO] FAISS index: 88 vectors
+13:55:05 [INFO] Loading communities...
+13:55:05 [INFO] Communities: 7
+13:55:05 [INFO] Hybrid retriever for 'idp' ready!
+13:55:05 [INFO] ✅ Retriever for department 'idp' loaded!
+13:55:05 [INFO] Loading GraphRAG retriever for department 'materials-engineering'...
+13:55:05 [INFO] Loading knowledge graph for department 'materials-engineering'...
+13:55:05 [INFO] Graph: 260 nodes, 297 edges
+13:55:05 [INFO] Loading embeddings...
+13:55:05 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:05 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:05 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:09 [INFO] Model loaded. Embedding dim: 768
+13:55:09 [INFO] Loaded FAISS index: 242 vectors
+13:55:09 [INFO] FAISS index: 242 vectors
+13:55:09 [INFO] Loading communities...
+13:55:09 [INFO] Communities: 16
+13:55:09 [INFO] Hybrid retriever for 'materials-engineering' ready!
+13:55:09 [INFO] ✅ Retriever for department 'materials-engineering' loaded!
+13:55:09 [INFO] Loading GraphRAG retriever for department 'mathematics'...
+13:55:09 [INFO] Loading knowledge graph for department 'mathematics'...
+13:55:09 [INFO] Graph: 172 nodes, 202 edges
+13:55:09 [INFO] Loading embeddings...
+13:55:09 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:09 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:09 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:12 [INFO] Model loaded. Embedding dim: 768
+13:55:12 [INFO] Loaded FAISS index: 143 vectors
+13:55:12 [INFO] FAISS index: 143 vectors
+13:55:12 [INFO] Loading communities...
+13:55:12 [INFO] Communities: 9
+13:55:12 [INFO] Hybrid retriever for 'mathematics' ready!
+13:55:12 [INFO] ✅ Retriever for department 'mathematics' loaded!
+13:55:12 [INFO] Loading GraphRAG retriever for department 'physics'...
+13:55:12 [INFO] Loading knowledge graph for department 'physics'...
+13:55:12 [INFO] Graph: 236 nodes, 277 edges
+13:55:12 [INFO] Loading embeddings...
+13:55:12 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:12 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:12 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:15 [INFO] Model loaded. Embedding dim: 768
+13:55:15 [INFO] Loaded FAISS index: 225 vectors
+13:55:15 [INFO] FAISS index: 225 vectors
+13:55:15 [INFO] Loading communities...
+13:55:15 [INFO] Communities: 18
+13:55:15 [INFO] Hybrid retriever for 'physics' ready!
+13:55:15 [INFO] ✅ Retriever for department 'physics' loaded!
+13:55:15 [INFO] Loading GraphRAG retriever for section 'academics'...
+13:55:15 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:15 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:15 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:18 [INFO] Model loaded. Embedding dim: 768
+13:55:18 [INFO] Loaded FAISS index: 49 vectors
+13:55:18 [INFO] Loaded embeddings index for section academics
+13:55:18 [INFO] ✅ Retriever for section 'academics' loaded!
+13:55:18 [INFO] Loading GraphRAG retriever for section 'alumni-affairs'...
+13:55:18 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:18 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:18 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:22 [INFO] Model loaded. Embedding dim: 768
+13:55:22 [INFO] Loaded FAISS index: 64 vectors
+13:55:22 [INFO] Loaded embeddings index for section alumni-affairs
+13:55:22 [INFO] ✅ Retriever for section 'alumni-affairs' loaded!
+13:55:22 [INFO] Loading GraphRAG retriever for section 'cds'...
+13:55:22 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:22 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:22 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:25 [INFO] Model loaded. Embedding dim: 768
+13:55:25 [INFO] Loaded FAISS index: 216 vectors
+13:55:25 [INFO] Loaded embeddings index for section cds
+13:55:25 [INFO] ✅ Retriever for section 'cds' loaded!
+13:55:25 [INFO] Loading GraphRAG retriever for section 'counselling'...
+13:55:25 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:25 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:25 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:28 [INFO] Model loaded. Embedding dim: 768
+13:55:28 [INFO] Loaded FAISS index: 17 vectors
+13:55:28 [INFO] Loaded embeddings index for section counselling
+13:55:28 [INFO] ✅ Retriever for section 'counselling' loaded!
+13:55:28 [INFO] Loading GraphRAG retriever for section 'di'...
+13:55:28 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:28 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:28 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:31 [INFO] Model loaded. Embedding dim: 768
+13:55:31 [INFO] Loaded FAISS index: 29 vectors
+13:55:31 [INFO] Loaded embeddings index for section di
+13:55:31 [INFO] ✅ Retriever for section 'di' loaded!
+13:55:31 [INFO] Loading GraphRAG retriever for section 'e2'...
+13:55:31 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:31 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:31 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:34 [INFO] Model loaded. Embedding dim: 768
+13:55:34 [INFO] Loaded FAISS index: 12 vectors
+13:55:34 [INFO] Loaded embeddings index for section e2
+13:55:34 [INFO] ✅ Retriever for section 'e2' loaded!
+13:55:34 [INFO] Loading GraphRAG retriever for section 'saral'...
+13:55:34 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:34 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:34 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:37 [INFO] Model loaded. Embedding dim: 768
+13:55:37 [INFO] Loaded FAISS index: 1 vectors
+13:55:37 [INFO] Loaded embeddings index for section saral
+13:55:37 [INFO] ✅ Retriever for section 'saral' loaded!
+13:55:37 [INFO] Loading GraphRAG retriever for section 'accounts'...
+13:55:37 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:37 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:37 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:40 [INFO] Model loaded. Embedding dim: 768
+13:55:40 [INFO] Loaded FAISS index: 15 vectors
+13:55:40 [INFO] Loaded embeddings index for section accounts
+13:55:40 [INFO] ✅ Retriever for section 'accounts' loaded!
+13:55:40 [INFO] Loading GraphRAG retriever for section 'hindicell'...
+13:55:40 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:40 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:40 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:43 [INFO] Model loaded. Embedding dim: 768
+13:55:43 [INFO] Loaded FAISS index: 16 vectors
+13:55:43 [INFO] Loaded embeddings index for section hindicell
+13:55:43 [INFO] ✅ Retriever for section 'hindicell' loaded!
+13:55:43 [INFO] Loading GraphRAG retriever for section 'ir'...
+13:55:43 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:43 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:43 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:46 [INFO] Model loaded. Embedding dim: 768
+13:55:46 [INFO] Loaded FAISS index: 76 vectors
+13:55:46 [INFO] Loaded embeddings index for section ir
+13:55:46 [INFO] ✅ Retriever for section 'ir' loaded!
+13:55:46 [INFO] Loading GraphRAG retriever for section 'library'...
+13:55:46 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:46 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:46 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:49 [INFO] Model loaded. Embedding dim: 768
+13:55:49 [INFO] Loaded FAISS index: 137 vectors
+13:55:49 [INFO] Loaded embeddings index for section library
+13:55:49 [INFO] ✅ Retriever for section 'library' loaded!
+13:55:49 [INFO] Loading GraphRAG retriever for section 'medical-centre'...
+13:55:49 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:49 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:49 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:52 [INFO] Model loaded. Embedding dim: 768
+13:55:52 [INFO] Loaded FAISS index: 41 vectors
+13:55:52 [INFO] Loaded embeddings index for section medical-centre
+13:55:52 [INFO] ✅ Retriever for section 'medical-centre' loaded!
+13:55:52 [INFO] Loading GraphRAG retriever for section 'osd'...
+13:55:52 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:52 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:52 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:56 [INFO] Model loaded. Embedding dim: 768
+13:55:56 [INFO] Loaded FAISS index: 128 vectors
+13:55:56 [INFO] Loaded embeddings index for section osd
+13:55:56 [INFO] ✅ Retriever for section 'osd' loaded!
+13:55:56 [INFO] Loading GraphRAG retriever for section 'sp'...
+13:55:56 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:56 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:56 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:55:59 [INFO] Model loaded. Embedding dim: 768
+13:55:59 [INFO] Loaded FAISS index: 15 vectors
+13:55:59 [INFO] Loaded embeddings index for section sp
+13:55:59 [INFO] ✅ Retriever for section 'sp' loaded!
+13:55:59 [INFO] Loading GraphRAG retriever for section 'rc'...
+13:55:59 [INFO] Loading embedding model: all-mpnet-base-v2
+13:55:59 [INFO] Using device 'cpu' for SentenceTransformer
+13:55:59 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:56:02 [INFO] Model loaded. Embedding dim: 768
+13:56:02 [INFO] Loaded FAISS index: 15 vectors
+13:56:02 [INFO] Loaded embeddings index for section rc
+13:56:02 [INFO] ✅ Retriever for section 'rc' loaded!
+13:56:02 [INFO] Loading GraphRAG retriever for section 'sw'...
+13:56:02 [INFO] Loading embedding model: all-mpnet-base-v2
+13:56:02 [INFO] Using device 'cpu' for SentenceTransformer
+13:56:02 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:56:05 [INFO] Model loaded. Embedding dim: 768
+13:56:05 [INFO] Loaded FAISS index: 1 vectors
+13:56:05 [INFO] Loaded embeddings index for section sw
+13:56:05 [INFO] ✅ Retriever for section 'sw' loaded!
+13:56:05 [INFO] Loading GraphRAG retriever for section 'security'...
+13:56:05 [INFO] Loading embedding model: all-mpnet-base-v2
+13:56:05 [INFO] Using device 'cpu' for SentenceTransformer
+13:56:05 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:56:08 [INFO] Model loaded. Embedding dim: 768
+13:56:08 [INFO] Loaded FAISS index: 1 vectors
+13:56:08 [INFO] Loaded embeddings index for section security
+13:56:08 [INFO] ✅ Retriever for section 'security' loaded!
+13:56:08 [INFO] Loading GraphRAG retriever for section 'tlu'...
+13:56:08 [INFO] Loading embedding model: all-mpnet-base-v2
+13:56:08 [INFO] Using device 'cpu' for SentenceTransformer
+13:56:08 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:56:11 [INFO] Model loaded. Embedding dim: 768
+13:56:11 [INFO] Loaded FAISS index: 7 vectors
+13:56:11 [INFO] Loaded embeddings index for section tlu
+13:56:11 [INFO] ✅ Retriever for section 'tlu' loaded!
+13:56:11 [INFO] Loading GraphRAG retriever for section 'tinkerers-lab'...
+13:56:11 [INFO] Loading embedding model: all-mpnet-base-v2
+13:56:11 [INFO] Using device 'cpu' for SentenceTransformer
+13:56:11 [INFO] Load pretrained SentenceTransformer: all-mpnet-base-v2
+13:56:14 [INFO] Model loaded. Embedding dim: 768
+13:56:14 [INFO] Loaded FAISS index: 1 vectors
+13:56:14 [INFO] Loaded embeddings index for section tinkerers-lab
+13:56:14 [INFO] ✅ Retriever for section 'tinkerers-lab' loaded!
+13:56:15 [INFO] ✅ Unified system initialized! 13 departments and 19 sections loaded.
+13:56:15 [INFO] Routing: 'List of Institute medalists...' → broadcast | depts=[] | sections=[] | No specific department/section detected — will search all
+13:56:15 [INFO] Retrieved: ~464 words, 4 entities, 3 chunks, 0 communities
+13:56:15 [INFO] Retrieved: ~346 words, 4 entities, 2 chunks, 1 communities
+13:56:15 [INFO] Retrieved: ~300 words, 0 entities, 3 chunks, 1 communities
+13:56:15 [INFO] Retrieved: ~438 words, 3 entities, 3 chunks, 1 communities
+13:56:15 [INFO] Retrieved: ~205 words, 4 entities, 3 chunks, 1 communities
+13:56:15 [INFO] Retrieved: ~195 words, 2 entities, 3 chunks, 1 communities
+13:56:15 [INFO] Retrieved: ~204 words, 4 entities, 1 chunks, 1 communities
+13:56:16 [INFO] Retrieved: ~119 words, 1 entities, 3 chunks, 1 communities
+13:56:16 [INFO] Retrieved: ~376 words, 4 entities, 3 chunks, 1 communities
+13:56:16 [INFO] Retrieved: ~199 words, 1 entities, 3 chunks, 1 communities
+13:56:16 [INFO] Retrieved: ~207 words, 2 entities, 3 chunks, 1 communities
+13:56:16 [INFO] Retrieved: ~120 words, 1 entities, 3 chunks, 1 communities
+13:56:16 [INFO] Retrieved: ~66 words, 2 entities, 0 chunks, 1 communities
+13:56:16 [INFO] [ALUMNI-AFFAIRS] Provenance | mode=graph | route=direct_graph | graph_items=0 | vector_items=0 | answerable=True
+13:56:16 [INFO] Routing: 'List of doctors at IIT Jammu...' → exact | depts=[] | sections=['medical-centre'] | Matched sections: Medical Centre
+13:56:16 [INFO] [MEDICAL-CENTRE] Provenance | mode=graph | route=direct_graph | graph_items=0 | vector_items=0 | answerable=True
+13:56:16 [INFO] Routing: 'List of all clubs at iit jammu...' → exact | depts=[] | sections=['ir'] | Matched sections: International Relations (IR)
+13:56:16 [INFO] [IR] Provenance | mode=graph | route=direct_graph | graph_items=0 | vector_items=0 | answerable=True
+13:56:16 [INFO] Routing: 'List of hostels at iit jammu...' → exact | depts=[] | sections=['ir'] | Matched sections: International Relations (IR)
+13:56:16 [INFO] [IR] Provenance | mode=graph | route=direct_graph | graph_items=0 | vector_items=0 | answerable=True
+13:56:16 [INFO] Routing: 'What are the fests organized at iit jammu...' → exact | depts=[] | sections=['ir'] | Matched sections: International Relations (IR)
+13:56:16 [INFO] [IR] Provenance | mode=graph | route=direct_graph | graph_items=0 | vector_items=0 | answerable=True
+13:56:16 [INFO] Routing: 'timings of dental services...' → exact | depts=[] | sections=['medical-centre'] | Matched sections: Medical Centre
+13:56:16 [INFO] [MEDICAL-CENTRE] Provenance | mode=graph | route=direct_graph | graph_items=0 | vector_items=0 | answerable=True
+
+==========================================
+QUERY: List of Institute medalists
+==========================================
+{'direct': True, 'response': '## Alumni Affairs\n\n### IIT Jammu Alumni Medalists:\n\n#### Batch / Convocation Year: 2024\n- **Soham Naik**: Institute Gold Medal (Thermal and Energy Systems Engineering)\n- **Devin**: Institute Silver Medal (Mechanical Engineering)\n- **Ravnish Jandial**: Institute Silver Medal (Civil Engineering)\n- **Aryan**: Institute Silver Medal (Computer Science and Engineering)\n- **Rajyavardhan Singh**: Institute Silver Medal (Electrical Engineering)\n- **Prakriti Gupta**: Institute Silver Medal (Materials Engineering)\n- **Paras Gandotra**: Institute Silver Medal (Civil Engineering)\n- **Arunav Arya**: Institute Silver Medal (Electrical Engineering)\n- **Sovan Sundar Dhauria**: Institute Silver Medal (Chemistry)\n- **Rimjhim Agarwal**: President Gold Medal (Chemical Engineering)\n\n#### Batch / Convocation Year: 2023\n- **Parwaan Virk**: Director’s Gold Medal (Electrical Engineering)\n- **Arpita Nema**: Institute Gold Medal (Computer Science & Engineering)\n- **Harshit RAJ**: Institute Silver Medal (Civil Engineering)\n- **Shubham Awasthi**: Institute Silver Medal (Chemical Engineering)\n- **Poorvi Joshi**: Institute Silver Medal (Electrical Engineering)\n- **Nishtha Gupta**: Institute Silver Medal (Mechanical Engineering)\n- **Sufyan Khan**: Institute Silver Medal (Materials Engineering)\n- **Mehta HET Atulkumar**: Institute Silver Medal (Civil Engineering)\n- **S Sweta**: Institute Silver Medal (Electrical Engineering)\n- **Kondapally SAI Kiran**: Institute Silver Medal (Jointly offered by Mechanical Engineering and Chemical Engineering)\n- **Nitish Kumar**: Outstanding Doctoral Student Award (Physics)\n- **Shreyas Chatterjee**: President Gold Medal (Computer Science and Engineering)\n\n#### Batch / Convocation Year: 2022\n- **Mrigank JHA**: Institute Gold Medal (Mechanical Engineering)\n- **Abhisek Keshari**: Institute Silver Medal (Mechanical Engineering)\n- **Abhinav Sharma**: Institute Silver Medal (Civil Engineering)\n- **Daksh Chauhan**: Institute Silver Medal (Computer Science and Engineering)\n- **Rishabh Ranjan**: Institute Silver Medal (Electrical Engineering)\n- **Mathi Saihemanth**: Institute Silver Medal (Chemical Engineering)\n- **Animesh**: Institute Silver Medal (Civil Engineering)\n- **Parth Dharmendrakumar Pathak**: Institute Silver Medal (Computer Science and Engineering)\n- **Navjot Kour**: Institute Silver Medal (Electrical Engineering)\n- **Vipul RAJ**: Institute Silver Medal (Mechanical Engineering)\n- **Mohammad Ayoub Sofi**: Outstanding Doctoral Student Award (Electrical Engineering)\n- **Siddharth Srivastava**: President Gold Medal (Civil Engineering)\n\n#### Batch / Convocation Year: 2021\n- **Anupam Pandey**: Director’s Gold Medal (Mechanical Engineering)\n- **Aijaz Ahmad Bhat**: Institute Gold Medal (Electrical Engineering)\n- **Ajay Kushwaha**: Institute Silver Medal (Mechanical Engineering)\n- **Rajat Khanna**: Institute Silver Medal (Computer Science and Engineering)\n- **Satyam Mahajan**: Institute Silver Medal (Electrical Engineering)\n- **Shashank Shekhar**: Institute Silver Medal (Civil Engineering)\n- **Palash Gupta**: Institute Silver Medal (Electrical Engineering)\n- **Sneha Shukla**: Institute Silver Medal (Computer Science and Engineering)\n- **Gaurav Bansal**: President Gold Medal (Computer Science and Engineering)\n\n#### Batch / Convocation Year: 2020\n- **Aakar Sharma**: Institute Silver Medal (Computer Science and Engineering)\n- **Shubhendra Singh Yadav**: Institute Silver Medal (Mechanical Engineering)\n- **Shreyanshu Kumar**: Institute Silver Medal (Electrical Engineering)\n- **Taijaswaini Agarwal**: President Gold Medal (Mechanical Engineering)', 'retrieval_time': 1.73, 'routed_departments': [], 'routed_sections': ['alumni-affairs'], 'routing_reason': 'No specific department/section detected — will search all', 'total_time': 1.73}
+
+==========================================
+QUERY: List of doctors at IIT Jammu
+==========================================
+{'direct': True, 'response': '### Doctors at the Health Centre, IIT Jammu:\n- **Ankush Kumar** (Medical Officer) - Email: medical.gdmo2@iitjammu.ac.in\n- **Bhavnesh** (Physiotherapist) - Email: bhavnesh@iitjammu.ac.in\n- **Deepa** (Lady Medical Officer) - Email: deepa@iitjammu.ac.in\n- **Harpreet Singh** (Medical Officer) - Email: harpreet.singh@iitjammu.ac.in\n- **Karunika Sharma** (Medical Officer) - Email: karunika.sharma@iitjammu.ac.in\n- **Pawanjeet Kour** (Medical Officer) - Email: medical.gdmo5@iitjammu.ac.in\n- **Sanat Kumar Tiwari** (Chairperson - Medical Unit) - Email: sanat.tiwari@iitjammu.ac.in\n- **Shivani** (Dentist) - Email: shivani@iitjammu.ac.in', 'retrieval_time': 0.02, 'routed_departments': [], 'routed_sections': ['medical-centre'], 'routing_reason': 'Matched sections: Medical Centre', 'total_time': 0.02}
+
+==========================================
+QUERY: List of all clubs at iit jammu
+==========================================
+{'direct': True, 'response': '### Student Clubs at IIT Jammu:\n- **Coding Club** (Technical Club): Promotes coding culture and competitive programming.\n- **Kriti** (Cultural Club): Fine arts club at IIT Jammu.\n- **MESH** (Technical & Cultural Club): MESH (Mesh of Engineering Science and Humanities) is a forum promoting Interdisciplinary Thinking.\n- **Navya** (Cultural Club): Literary club at IIT Jammu.\n- **Pratibimb** (Cultural Club): Drama and theatre club at IIT Jammu.\n- **Robo-Sapiens** (Technical Club): Robotics club focused on building autonomous and manual robots.\n- **Yugantar** (Cultural Club): Music club at IIT Jammu.', 'retrieval_time': 0.0, 'routed_departments': [], 'routed_sections': ['ir'], 'routing_reason': 'Matched sections: International Relations (IR)', 'total_time': 0.0}
+
+==========================================
+QUERY: List of hostels at iit jammu
+==========================================
+{'direct': True, 'response': "### Student Hostels at IIT Jammu:\n- **Braeg Hostel** (Boys' Hostel): Braeg is a Boys student hostel at IIT Jammu.\n- **Canary Hostel** (Boys' Hostel): Canary is a Boys student hostel at IIT Jammu.\n- **Dedhar Hostel** (Girls' Hostel): Dedhar is a Girls student hostel at IIT Jammu.\n- **Egret Hostel** (Girls' Hostel): Egret is a Girls student hostel at IIT Jammu.\n- **Fulgar Hostel** (Boys' Hostel): Fulgar is a Boys student hostel at IIT Jammu.", 'retrieval_time': 0.0, 'routed_departments': [], 'routed_sections': ['ir'], 'routing_reason': 'Matched sections: International Relations (IR)', 'total_time': 0.0}
+
+==========================================
+QUERY: What are the fests organized at iit jammu
+==========================================
+{'direct': True, 'response': '### Annual Festivals & Events at IIT Jammu:\n- **Anhad** (Cultural & Techno Fest): Annual flagship festival celebrating culture and technology.\n- **Convoquer** (Cultural Fest): Cultural festival highlighting music, dance, and arts.\n- **Nexus** (Technical Fest): Technical festival showcasing robotics, coding, and engineering projects.\n- **Pragyaan** (Academic Fest): Science and humanities discussion fest.\n- **Pravaah** (Sports Fest): Annual intra-institute and inter-collegiate sports festival.\n- **Udyamitsav** (Entrepreneurship Fest): Entrepreneurship and startup pitch fest organized by MESH.', 'retrieval_time': 0.0, 'routed_departments': [], 'routed_sections': ['ir'], 'routing_reason': 'Matched sections: International Relations (IR)', 'total_time': 0.0}
+
+==========================================
+QUERY: timings of dental services
+==========================================
+13:56:16 [INFO] Routing: 'Who is the coordinator of counselling services?...' → exact | depts=[] | sections=['counselling'] | Matched sections: Counselling
+13:56:16 [INFO] [COUNSELLING] Provenance | mode=graph | route=direct_graph | graph_items=0 | vector_items=0 | answerable=True
+{'direct': True, 'response': '### Medical Services & Working Hours at Health Centre:\n- **Ambulance**: Timings: 24x7 | Description: Emergency patient transport services.\n- **Dental Services**: Timings: Mon, Wed, Fri: 2:30 PM - 5:30 PM | Description: Comprehensive dental treatment.\n- **Dressing Room**: Timings: 24x7 | Description: First aid and dressing/minor procedure room.\n- **ECG Services**: Timings: Daily | Description: Electrocardiogram facility for cardiac monitoring.\n- **Laboratory Services**: Timings: Daily | Description: Basic blood tests and diagnostics.\n- **Medical Centre Info**: Timings: | Description: 24x7 medical assistance with full-time doctors and emergency staff.\n- **Pharmacy**: Timings: 24x7 / Daily | Description: Availability of basic and prescribed medications.\n- **Physiotherapy**: Timings: Monday - Friday: 9:00 AM - 5:30 PM | Description: Rehabilitation and physical therapy services.\n- **Ward Facility**: Timings: 24x7 | Description: Observation ward for student recovery.', 'retrieval_time': 0.0, 'routed_departments': [], 'routed_sections': ['medical-centre'], 'routing_reason': 'Matched sections: Medical Centre', 'total_time': 0.0}
+
+==========================================
+QUERY: Who is the coordinator of counselling services?
+==========================================
+{'direct': True, 'response': '### Head / Coordinator of Counselling:\n- **Sanat Kumar Tiwari** (Coordinator - Counselling Services)\n - Email: sanat.tiwari@iitjammu.ac.in\n - Phone: 0191-257-0281', 'retrieval_time': 0.0, 'routed_departments': [], 'routed_sections': ['counselling'], 'routing_reason': 'Matched sections: Counselling', 'total_time': 0.0}

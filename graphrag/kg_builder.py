@@ -2102,6 +2102,10 @@ class KnowledgeGraphBuilder:
                     "name": resolved_name,
                     "source_file": filename
                 }
+                # Store the designation on the node so GlobalPersonIndex can read it.
+                # (The edge also carries role_in_committee for committee-listing queries.)
+                if designation_cell:
+                    props["designation"] = designation_cell
                 self._add_node(resolved_name, label, **props)
                 self._add_edge(resolved_name, doc_id, "SOURCE_DOCUMENT")
                 

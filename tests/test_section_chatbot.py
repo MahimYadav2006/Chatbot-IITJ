@@ -130,3 +130,53 @@ def test_section_retriever_direct_answers():
     ans = acad_retriever.get_direct_answer("computer science specialisation curriculum link")
     assert ans is not None
     assert "https://drive.google.com/drive/folders/1abc123" in ans
+
+
+def test_new_sections_retriever_direct_answers():
+    # Setup mock graphs for new sections
+    alumni_graph = DiGraph()
+    alumni_graph.add_node("medalist:john_doe:2024", label="AlumniMedalist", name="John Doe", award="President Gold Medal", year=2024, department="CSE")
+    
+    cds_graph = DiGraph()
+    cds_graph.add_node("recruiter:google", label="Recruiter", name="Google")
+    cds_graph.add_node("policy:cgpa_cutoff", label="PlacementPolicy", name="CGPA Cutoff", description="Minimum 6 CGPA", category="Eligibility")
+    
+    ir_graph = DiGraph()
+    ir_graph.add_node("club:coding", label="Club", name="Coding Club", category="Technical", description="Coding club")
+    ir_graph.add_node("hostel:canary", label="Hostel", name="Canary", gender="Boys", description="Boys Hostel")
+    
+    medical_graph = DiGraph()
+    medical_graph.add_node("doc:dr_smith", label="MedicalDoctor", name="Dr. Smith", designation="Medical Officer", email="smith@iitjammu.ac.in")
+    
+    osd_graph = DiGraph()
+    osd_graph.add_node("uba:main", label="UBAProgram", name="Unnat Bharat Abhiyan", description="UBA", focus_areas="Water", coordinator="Dr. Sameer")
+    
+    # 1. Alumni Affairs
+    retriever = SectionRetriever("alumni-affairs", alumni_graph, [], None)
+    ans = retriever.get_direct_answer("Who won the President Gold Medal in 2024?")
+    assert ans is not None and "John Doe" in ans
+    
+    # 2. CDS
+    retriever = SectionRetriever("cds", cds_graph, [], None)
+    ans = retriever.get_direct_answer("list recruiters")
+    assert ans is not None and "Google" in ans
+    ans = retriever.get_direct_answer("placement policy CGPA cutoff")
+    assert ans is not None and "Minimum 6 CGPA" in ans
+    
+    # 3. IR
+    retriever = SectionRetriever("ir", ir_graph, [], None)
+    ans = retriever.get_direct_answer("list student clubs")
+    assert ans is not None and "Coding Club" in ans
+    ans = retriever.get_direct_answer("hostels canary")
+    assert ans is not None and "Canary" in ans
+    
+    # 4. Medical Centre
+    retriever = SectionRetriever("medical-centre", medical_graph, [], None)
+    ans = retriever.get_direct_answer("list health centre doctors")
+    assert ans is not None and "Dr. Smith" in ans
+    
+    # 5. OSD
+    retriever = SectionRetriever("osd", osd_graph, [], None)
+    ans = retriever.get_direct_answer("what is Unnat Bharat Abhiyan?")
+    assert ans is not None and "Unnat Bharat Abhiyan" in ans
+
