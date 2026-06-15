@@ -90,41 +90,15 @@ class SectionRetriever:
             }
         }
 
-    def get_direct_answer(self, query: str, global_person_index=None) -> Optional[str]:
-        """Check for direct, deterministic answers based on section-specific entities."""
+    def get_deterministic_context(self, query: str) -> Optional[str]:
+        """Return deterministic context from section-specific graph entities.
+
+        The returned text is intended as high-priority context for the LLM,
+        NOT as a final response returned directly to the user.
+        """
         q = query.lower().strip()
 
-        # 1. Global Person Cross-Reference Check first
-        #    Only for identity queries ("who is X?", "tell me about X").
-        #    Skip for research/PhD/publication queries so full retrieval handles them.
-        if global_person_index:
-            from app import _is_identity_query
-            if _is_identity_query(query):
-                # Look for names in the query
-                for p_name in global_person_index.person_roles.keys():
-                    # Word boundary check to avoid partial matching (e.g. "Ajay" matching "Ajay Singh")
-                    pattern = r"\b" + re.escape(p_name.lower()) + r"\b"
-                    if re.search(pattern, q):
-                        res = global_person_index.lookup(p_name)
-                        if res:
-                            # Build formatted answer
-                            roles_lines = []
-                            for role in res["roles"]:
-                                source_label = role["source"].upper()
-                                roles_lines.append(f"- **{role['designation']}** under {source_label}")
-                                if role.get("email"):
-                                    roles_lines.append(f"  - Email: {role['email']}")
-                                if role.get("phone"):
-                                    roles_lines.append(f"  - Phone: {role['phone']}")
-                                if role.get("office"):
-                                    roles_lines.append(f"  - Office: {role['office']}")
-                                    
-                            return (
-                                f"**{res['name']}** holds the following role(s) at IIT Jammu:\n" +
-                                "\n".join(roles_lines)
-                            )
-
-        # 2. Section Contact Query
+        # Section Contact Query
         if any(term in q for term in ("contact", "email", "phone", "hours", "timing", "address", "number")) and not any(svc in q for svc in ("dental", "physiotherapy", "pharmacy", "ambulance", "ward", "ecg", "laboratory")):
             contacts = [d for n, d in self.graph.nodes(data=True) if d.get("label") == "SectionContact"]
             if contacts:
@@ -206,26 +180,68 @@ class SectionRetriever:
 
         # 6. Academics spec/course Catalog and Rules check
         if self.section_code == "academics":
-            if any(term in q for term in ("specialisation", "specialization", "course", "curriculum", "m.tech in", "m.sc in", "minor in", "micro-specialisation", "honours in")):
-                # Retrieve course spec text chunk
-                spec_chunks = [c["text"] for c in self.chunks if "specialisation-and-courses" in c.get("metadata", {}).get("doc", "")]
-                if spec_chunks:
-                    # Filter matching courses/specialisations if specific keywords found
-                    # Otherwise return the full overview
-                    for line in spec_chunks[0].splitlines():
-                        if any(kw in line.lower() for kw in q.split()) and "drive.google.com" in line:
-                            return f"Here is the curriculum document link you requested:\n{line}"
-                    return spec_chunks[0]
+            is_link_query = any(term in q for term in ("link", "url", "download", "website", "document", "pdf", "file", "drive"))
+            if is_link_query:
+                # Scan raw scraped markdown files for direct matching drive/doc links
+                import os
+                scraped_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "scraped_data", "sections", "academics"))
+                if os.path.exists(scraped_dir):
+                    query_terms = [t.lower() for t in re.findall(r'\w+', q) if len(t) > 2 and t.lower() not in (
+                        'what', 'the', 'link', 'for', 'download', 'pdf', 'document', 'url', 'file', 'drive', 'how', 'get', 'give', 'can', 'find', 'show', 'where'
+                    )]
+                    if query_terms:
+                        matches = []
+                        for fn in os.listdir(scraped_dir):
+                            if not fn.endswith('.md'):
+                                continue
+                            filepath = os.path.join(scraped_dir, fn)
+                            try:
+                                with open(filepath, 'r', encoding='utf-8') as f:
+                                    for line in f:
+                                        if '[' in line and '](' in line:
+                                            link_text = re.findall(r'\[([^\]]+)\]', line)
+                                            if link_text:
+                                                lt = link_text[0].lower()
+                                                matches_count = sum(1 for term in query_terms if term in lt)
+                                                if matches_count > 0:
+                                                    matches.append((matches_count, line.strip()))
+                            except Exception:
+                                pass
+                        if matches:
+                            matches.sort(key=lambda x: x[0], reverse=True)
+                            seen = set()
+                            result_links = []
+                            max_matches = matches[0][0]
+                            threshold = max(1, min(2, max_matches))
+                            for count, link in matches:
+                                if count >= threshold and link not in seen:
+                                    seen.add(link)
+                                    clean_line = re.sub(r'^\d+\.\s*', '', link)
+                                    result_links.append(f"- {clean_line}")
+                                    if len(result_links) >= 5:
+                                        break
+                            if result_links:
+                                return "Here are the relevant document links found on the Academics website:\n\n" + "\n".join(result_links)
+                
+                # Fallback to search self.chunks if directory check was skipped or yielded no results
+                query_terms = [t.lower() for t in re.findall(r'\w+', q) if len(t) > 2 and t.lower() not in (
+                    'what', 'the', 'link', 'for', 'download', 'pdf', 'document', 'url', 'file', 'drive', 'how', 'get', 'give', 'can', 'find', 'show', 'where'
+                )]
+                if query_terms:
+                    matches = []
+                    for chunk in self.chunks:
+                        for line in chunk.get("text", "").split("\n"):
+                            # Check if line contains any query term and looks like a link
+                            if any(term in line.lower() for term in query_terms) and ("http" in line or "[" in line or "drive" in line):
+                                matches.append(line.strip())
+                    if matches:
+                        # Clean prefix bullet if present
+                        cleaned_matches = []
+                        for m in matches[:5]:
+                            m_clean = re.sub(r'^\d+\.\s*|-\s*', '', m)
+                            cleaned_matches.append(f"- {m_clean}")
+                        return "Here are the relevant document links found on the Academics website:\n\n" + "\n".join(cleaned_matches)
 
-            if any(term in q for term in ("rules", "regulation", "regulations", "manual", "handbook")):
-                rule_chunks = [c["text"] for c in self.chunks if "rules-and-regulations" in c.get("metadata", {}).get("doc", "")]
-                if rule_chunks:
-                    return rule_chunks[0]
-
-            if any(term in q for term in ("function", "responsibility", "work breakdown", "tasks", "mcm", "scholarship", "freeship", "fellowship", "contingency", "stipend")):
-                func_chunks = [c["text"] for c in self.chunks if "function-list" in c.get("metadata", {}).get("doc", "")]
-                if func_chunks:
-                    return func_chunks[0]
 
         # 7. DI specific queries (Divisions details)
         if self.section_code == "di":
@@ -576,21 +592,114 @@ class SectionRetriever:
         max_context_words: int = 4500,
     ) -> Dict[str, Any]:
         """Retrieve relevant context for a section query. Falls back to BM25/vector search over chunks."""
-        # 1. Check direct answer
-        direct_ans = self.get_direct_answer(query)
-        if direct_ans:
-            provenance = self._build_provenance(
-                direct=True,
-                local_results=[],
-                vector_results=[],
-                section_word_counts={"graph": len(direct_ans.split())},
+        rules_context = ""
+        rules_provenance = None
+        is_academic_rules_request = False
+        
+        if self.section_code == "academics":
+            from graphrag.rules_retriever import RulesRetriever
+            from graphrag.intent_utils import is_academic_rules_query
+            rr = RulesRetriever()
+            intent = rr.classify_intent(query)
+            is_rules_q = is_academic_rules_query(query) or (
+                intent["grades"]
+                or intent["milestones"]
+                or intent["credits"]
+                or intent["facts"]
+                or any(term in query.lower() for term in (
+                    "rule", "regulation", "requirement", "curriculum",
+                    "minor", "specialization", "specialisation"
+                ))
             )
-            return {
-                "context": direct_ans,
-                "provenance": provenance,
-                "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
-                "fallback_response": None,
-            }
+            is_academic_rules_request = bool(is_rules_q)
+            if is_rules_q:
+                ret_res = rr.retrieve(query)
+                if ret_res["fts_results"] or any(ret_res["structured_data"].values()):
+                    rules_context = rr.generate_context(ret_res)
+                
+                # Scan raw scraped markdown files for matching document links
+                # only when the user explicitly asks for links/documents.
+                import os
+                scraped_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "scraped_data", "sections", "academics"))
+                is_link_query = any(term in query.lower() for term in (
+                    "link", "url", "download", "pdf", "document", "file", "drive"
+                ))
+                if is_link_query and os.path.exists(scraped_dir):
+                    query_terms = [t.lower() for t in re.findall(r'\w+', query) if len(t) > 2 and t.lower() not in (
+                        'what', 'the', 'link', 'for', 'download', 'pdf', 'document', 'url', 'file', 'drive', 'how', 'get', 'give', 'can', 'find', 'show', 'where'
+                    )]
+                    if query_terms:
+                        matches = []
+                        for fn in os.listdir(scraped_dir):
+                            if not fn.endswith('.md'):
+                                continue
+                            filepath = os.path.join(scraped_dir, fn)
+                            try:
+                                with open(filepath, 'r', encoding='utf-8') as f:
+                                    for line in f:
+                                        if '[' in line and '](' in line:
+                                            link_text = re.findall(r'\[([^\]]+)\]', line)
+                                            if link_text:
+                                                lt = link_text[0].lower()
+                                                matches_count = sum(1 for term in query_terms if term in lt)
+                                                if matches_count > 0:
+                                                    matches.append((matches_count, line.strip()))
+                            except Exception:
+                                pass
+                        if matches:
+                            matches.sort(key=lambda x: x[0], reverse=True)
+                            seen = set()
+                            result_links = []
+                            max_matches = matches[0][0]
+                            threshold = max(1, min(2, max_matches))
+                            for count, link in matches:
+                                if count >= threshold and link not in seen:
+                                    seen.add(link)
+                                    clean_line = re.sub(r'^\d+\.\s*', '', link)
+                                    result_links.append(f"- {clean_line}")
+                                    if len(result_links) >= 5:
+                                        break
+                            if result_links:
+                                links_block = "Relevant document links found on the Academics website:\n" + "\n".join(result_links)
+                                if rules_context:
+                                    rules_context = rules_context + "\n\n" + links_block
+                                else:
+                                    rules_context = links_block
+                
+                if rules_context:
+                    rules_provenance = self._build_provenance(
+                        direct=False,
+                        local_results=[],
+                        vector_results=[],
+                        section_word_counts={"graph": len(rules_context.split())}
+                    )
+                    rules_provenance["route"] = "rules_db"
+                    rules_provenance["source_mode"] = "hybrid_db"
+
+        # 1. Deterministic context from graph (prepend to combined blocks, don't return early)
+        direct_ctx = self.get_deterministic_context(query)
+        if direct_ctx:
+            logger.info(f"Section '{self.section_code}': deterministic context found, injecting as priority context.")
+
+        if self.section_code == "academics" and is_academic_rules_request:
+            has_course_code = bool(re.search(r"\b[a-zA-Z]{2,3}\s*\d{3}\b", query))
+            is_course_query = any(term in query.lower() for term in ("course", "syllabus", "curriculum", "ltp", "l-t-p", "structure of", "specialization", "specialisation", "minor")) and not any(term in query.lower() for term in ("rule", "regulation", "policy", "guideline", "requirement", "criteria"))
+            
+            if rules_context and not has_course_code and not is_course_query:
+                return {
+                    "context": rules_context,
+                    "provenance": rules_provenance or self._build_provenance(
+                        direct=False,
+                        local_results=[],
+                        vector_results=[],
+                        section_word_counts={"graph": len(rules_context.split())},
+                    ),
+                    "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
+                    "fallback_response": None,
+                }
+            # Fall through to vector/local search if rules_context is empty or if it looks like a course/curriculum query
+
+
 
         # 2. Check semantic vector search if Embedding Engine is available
         vector_results = []
@@ -630,6 +739,14 @@ class SectionRetriever:
         combined_blocks = []
         word_count = 0
         
+        if direct_ctx:
+            combined_blocks.append("## Authoritative Section Data\n\n" + direct_ctx)
+            word_count += len(direct_ctx.split())
+
+        if rules_context:
+            combined_blocks.append(rules_context)
+            word_count += len(rules_context.split())
+        
         for item in local_results:
             text_block = item["text"]
             block_words = len(text_block.split())
@@ -658,6 +775,12 @@ class SectionRetriever:
                 "vector": sum(len(r["text"].split()) for r in vector_results),
             }
         )
+        
+        if rules_provenance:
+            # Merge provenances
+            provenance["route"] = "rules_db+chunks"
+            provenance["source_mode"] = "hybrid_db+chunks"
+            provenance["graph"]["word_count"] = provenance["graph"].get("word_count", 0) + rules_provenance["graph"].get("word_count", 0)
 
         return {
             "context": context,
