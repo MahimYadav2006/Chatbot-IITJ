@@ -29,7 +29,7 @@ class TestCSEPhDEmails:
                 return []
 
         retriever = HybridRetriever(cse_graph, DummyEmbeddings(), [], dept_code="computer_science_engineering")
-        answer = retriever.get_direct_answer("What is the email of Alex Joseph?")
+        answer = retriever.get_deterministic_context("What is the email of Alex Joseph?")
         assert answer == "Alex Joseph's official email is alex.joseph@iitjammu.ac.in."
 
     def test_phd_roster_context_can_include_email(self, cse_graph):
@@ -40,6 +40,6 @@ class TestCSEPhDEmails:
                 return []
 
         retriever = HybridRetriever(cse_graph, DummyEmbeddings(), [], dept_code="computer_science_engineering")
-        answer = retriever.get_direct_answer("List all PhD scholars in CSE")
+        answer = retriever.get_deterministic_context("List all PhD scholars in CSE")
         assert answer is not None
         assert "alex.joseph@iitjammu.ac.in" in answer

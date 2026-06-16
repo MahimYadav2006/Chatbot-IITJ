@@ -122,6 +122,7 @@ def _is_identity_query(query: str) -> bool:
     Also returns False for admin-role queries (e.g. "who is the dean") that
     should be routed to the administration department's deterministic logic.
     """
+    import re
     q = query.lower().strip()
 
     # Non-identity intents: if the query contains ANY of these, it is NOT a
@@ -159,6 +160,9 @@ def _is_identity_query(query: str) -> bool:
         "sports", "facility", "facilities", "mou", "mous", "collaboration", "collaborations",
         "medical service", "medical services", "service timings", "hospital", "hospitals",
         "timing", "timings",
+        # Academic terms
+        "minor", "minors", "credit", "credits", "curriculum", "semester", 
+        "eligible", "eligibility", "syllabus", "degree",
         # Admin role queries — should go through administration dept routing,
         # not person index (which can contain role-placeholder names).
         "dean of", "dean ", "associate dean",
@@ -166,7 +170,14 @@ def _is_identity_query(query: str) -> bool:
         "bog chairman", "chairman of",
     )
 
-    if any(kw in q for kw in non_identity_keywords):
+    matched_non_id = [kw for kw in non_identity_keywords if kw in q]
+    if matched_non_id:
+        admin_roles = {"dean of", "dean ", "associate dean", "registrar", "director of iit", "bog chairman", "chairman of"}
+        if all(kw in admin_roles for kw in matched_non_id) and person_index:
+            for name in person_index.person_roles.keys():
+                pattern = r"\b" + re.escape(name.lower()) + r"\b"
+                if re.search(pattern, q):
+                    return True
         return False
 
     return True
@@ -213,7 +224,10 @@ def get_global_person_direct_answer(query: str) -> Optional[str]:
             "counselors", "services", "service", "medical", "centre", "center", "health", 
             "unit", "cell", "library", "librarian", "office", "head", "chairperson", 
             "coordinator", "assistant", "associate", "dean", "deans", "director", "registrar",
-            "institutes", "institute", "iitj", "kumar", "singh", "sharma", "doctor", "dr"
+            "institutes", "institute", "iitj", "kumar", "singh", "sharma", "doctor", "dr",
+            "computer", "science", "engineering", "electrical", "mechanical", "civil", 
+            "chemical", "biosciences", "bioengineering", "materials", "physics", 
+            "chemistry", "mathematics", "humanities", "social"
         }
         for name in person_index.person_roles.keys():
             parts = [p.lower() for p in name.split() if len(p) >= 4 and p.lower() not in ignored_tokens]
@@ -354,24 +368,35 @@ def chat():
     try:
         start = time.time()
 
-        # Step 0: Check global person direct answer first
+        # Step 0: Check global person index for identity queries
+        # For pure identity queries ("Who is Dr. X?"), fast-path via short LLM call.
+        # For non-identity queries with person names, save context as supplementary.
+        person_context = None
         person_direct_ans = get_global_person_direct_answer(query)
-        if person_direct_ans:
+        if person_direct_ans and _is_identity_query(query):
+            # Identity fast-path: LLM synthesizes from person context (short response)
+            prompt = build_chat_prompt(query, person_direct_ans, dept_code="administration")
+            system_prompt = get_system_prompt(dept_code="administration")
+            response = llm.generate(prompt, system_prompt=system_prompt, max_tokens=300)
             total_time = time.time() - start
             _log_retrieval_provenance(
                 [], query,
-                {"route": "direct_graph", "source_mode": "graph"},
+                {"route": "identity_fast_path", "source_mode": "graph+llm"},
                 {"answerable": True},
             )
             return jsonify({
-                "response": sanitize_response(person_direct_ans),
+                "response": sanitize_response(response),
                 "routed_departments": [],
                 "routed_sections": [],
-                "routing_reason": "Person query resolved via Global Person Index",
+                "routing_reason": "Identity query resolved via Global Person Index + LLM",
                 "retrieval_time": round(total_time, 2),
                 "total_time": round(total_time, 2),
                 "direct": True,
             })
+        elif person_direct_ans:
+            # Non-identity query with person name — save as supplementary context
+            person_context = person_direct_ans
+            logger.info("Person context found but query is not identity — continuing to full retrieval.")
 
         # Step 1: Route query to department(s) and/or section(s)
         route_result = router.route(query)
@@ -395,28 +420,12 @@ def chat():
                         "total_time": 0.0,
                     })
 
-                # Check for direct graph answers first
-                direct_response = sec_retriever.get_direct_answer(query, global_person_index=person_index)
-                if direct_response:
-                    total_time = time.time() - start
-                    _log_retrieval_provenance(
-                        [sec_code], query,
-                        {"route": "direct_graph", "source_mode": "graph"},
-                        {"answerable": True},
-                    )
-                    return jsonify({
-                        "response": sanitize_response(direct_response),
-                        "routed_departments": [],
-                        "routed_sections": [sec_code],
-                        "routing_reason": route_result.reason,
-                        "retrieval_time": round(total_time, 2),
-                        "total_time": round(total_time, 2),
-                        "direct": True,
-                    })
-
-                # Full hybrid retrieval for section
+                # Full hybrid retrieval for section (deterministic context is handled inside retrieve_bundle)
                 bundle = sec_retriever.retrieve_bundle(query)
                 context = bundle["context"]
+                # Prepend person context if available
+                if person_context:
+                    context = f"## Person Information\n\n{person_context}\n\n---\n\n{context}"
                 answerability = bundle["answerability"]
                 retrieval_time = time.time() - start
 
@@ -515,30 +524,14 @@ def chat():
                     "total_time": 0.0,
                 })
 
-            # Check for direct graph answers first
-            direct_response = dept_retriever.get_direct_answer(query)
-            if direct_response:
-                total_time = time.time() - start
-                _log_retrieval_provenance(
-                    [dept_code], query,
-                    {"route": "direct_graph", "source_mode": "graph"},
-                    {"answerable": True},
-                )
-                return jsonify({
-                    "response": sanitize_response(direct_response),
-                    "routed_departments": [dept_code],
-                    "routed_sections": [],
-                    "routing_reason": route_result.reason,
-                    "retrieval_time": round(total_time, 2),
-                    "total_time": round(total_time, 2),
-                    "direct": True,
-                })
-
-            # Full hybrid retrieval
+            # Full hybrid retrieval (deterministic context is handled inside retrieve_bundle)
             bundle = dept_retriever.retrieve_bundle(
                 query, local_top_k=5, vector_top_k=5, global_top_k=3, max_context_words=4500
             )
             context = bundle["context"]
+            # Prepend person context if available
+            if person_context:
+                context = f"## Person Information\n\n{person_context}\n\n---\n\n{context}"
             answerability = bundle["answerability"]
             retrieval_time = time.time() - start
 
@@ -592,6 +585,9 @@ def chat():
             all_codes = route_result.departments + route_result.sections
             bundle = multi_retriever.retrieve_multi(query, all_codes)
             context = bundle["context"]
+            # Prepend person context if available
+            if person_context:
+                context = f"## Person Information\n\n{person_context}\n\n---\n\n{context}"
             answerability = bundle.get("answerability", {})
             retrieval_time = time.time() - start
 
@@ -641,44 +637,15 @@ def chat():
         else:
             bundle = multi_retriever.retrieve_broadcast(query, top_n=len(retrievers) + len(section_retrievers))
             context = bundle["context"]
+            # Prepend person context if available
+            if person_context:
+                context = f"## Person Information\n\n{person_context}\n\n---\n\n{context}"
             answerability = bundle.get("answerability", {})
             routed_depts = bundle.get("departments", [])
             routed_secs = bundle.get("sections", [])
             retrieval_time = time.time() - start
 
             _log_retrieval_provenance(routed_depts + routed_secs, query, bundle.get("provenance", {}), answerability)
-
-            # Handle direct answers from broadcast
-            if bundle.get("direct"):
-                if len(routed_depts) + len(routed_secs) <= 1:
-                    total_time = time.time() - start
-                    return jsonify({
-                        "response": sanitize_response(context),
-                        "routed_departments": routed_depts,
-                        "routed_sections": routed_secs,
-                        "routing_reason": route_result.reason,
-                        "retrieval_time": round(retrieval_time, 2),
-                        "total_time": round(total_time, 2),
-                        "direct": True,
-                    })
-                else:
-                    dept_contexts = bundle.get("dept_contexts", {})
-                    if dept_contexts:
-                        prompt = build_multi_dept_chat_prompt(query, dept_contexts)
-                    else:
-                        prompt = build_chat_prompt(query, context, dept_code="ee")
-                    system_prompt = get_unified_system_prompt()
-                    response = llm.generate(prompt, system_prompt=system_prompt, max_tokens=1800)
-                    total_time = time.time() - start
-                    return jsonify({
-                        "response": sanitize_response(response),
-                        "routed_departments": routed_depts,
-                        "routed_sections": routed_secs,
-                        "routing_reason": route_result.reason,
-                        "retrieval_time": round(retrieval_time, 2),
-                        "total_time": round(total_time, 2),
-                        "direct": True,
-                    })
 
             if not answerability.get("answerable", True):
                 total_time = time.time() - start

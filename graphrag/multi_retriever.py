@@ -252,6 +252,18 @@ class MultiDepartmentRetriever:
         all_retrievers.update(self.retrievers)
         all_retrievers.update(self.section_retrievers)
 
+        # Early check for academic rules/regulations query to prevent irrelevant broadcast matches
+        from graphrag.intent_utils import is_academic_rules_query
+        if is_academic_rules_query(query):
+            academics_retriever = self.section_retrievers.get("academics")
+            if academics_retriever:
+                logger.info("Broadcast query intercepted as academic rules query. Routing directly to academics section.")
+                bundle = academics_retriever.retrieve_bundle(query)
+                if bundle.get("context", "").strip():
+                    bundle["departments"] = []
+                    bundle["sections"] = ["academics"]
+                    return bundle
+
         if not all_retrievers:
             return {
                 "context": "",
@@ -263,32 +275,16 @@ class MultiDepartmentRetriever:
 
         is_topic = self._is_topic_query(query)
 
-        # Phase 1: Collect direct answers from ALL departments.
-        # For topic queries (is_topic=True), we do NOT suppress topic matching —
-        # we let each department run its own deterministic topic-expert lookup and
-        # then merge all results below. suppress_topic_match was previously set to
-        # is_topic which accidentally disabled the very feature that produces
-        # correct faculty-by-domain answers across departments.
-        direct_answers = {}
+        # Phase 1: Retrieve bundles from ALL departments/sections.
+        # Each department's retrieve_bundle() now handles deterministic context
+        # internally (admin info, rosters, topic experts, etc.) and injects it
+        # as high-priority context alongside RAG results.
         dept_scores = []
         dept_bundles = {}
 
         for code, retriever in all_retrievers.items():
             try:
                 is_sec = code in self.section_retrievers
-                if is_sec:
-                    direct = retriever.get_direct_answer(query)
-                else:
-                    # Always run topic matching (suppress_topic_match=False).
-                    # For topic queries we collect every dept's answer and merge;
-                    # we no longer suppress topic matching to "prevent" early return —
-                    # instead the merging logic below handles cross-dept aggregation.
-                    direct = retriever.get_direct_answer(
-                        query, suppress_topic_match=False
-                    )
-                if direct:
-                    direct_answers[code] = direct
-
                 if is_sec:
                     bundle = retriever.retrieve_bundle(query)
                 else:
@@ -320,100 +316,7 @@ class MultiDepartmentRetriever:
                 logger.warning(f"Broadcast retrieval failed for '{code}': {e}")
                 continue
 
-        # Phase 2: If we have direct answers, handle them.
-        #
-        # For TOPIC queries (is_topic=True): always merge ALL direct answers from
-        # all departments into a single cross-department response.  Even a single
-        # match should be returned (topic queries are meant to be global).
-        # Guard: skip if the ONLY result is from "administration" (admin nodes
-        # don't hold research-domain data and would give a false answer).
-        #
-        # For NON-TOPIC queries with exactly 1 direct answer: return it directly
-        # unless it's an admin answer for a person/comparison query.
-        if direct_answers:
-            if is_topic:
-                # Filter out administration-only results for topic queries
-                topic_answers = {
-                    code: ans for code, ans in direct_answers.items()
-                    if code != "administration"
-                }
-                if not topic_answers:
-                    logger.info("Topic query: only admin direct answer found — falling through to full retrieval")
-                else:
-                    logger.info(f"Topic query: merging direct answers from {list(topic_answers.keys())}")
-                    merged_sections = []
-                    for code, answer in topic_answers.items():
-                        is_sec = code in self.section_retrievers
-                        if is_sec:
-                            from departments import SECTIONS
-                            dept_name = SECTIONS.get(code, {}).get("name", code.upper())
-                        else:
-                            dept_name = DEPARTMENTS.get(code, {}).get("full_name", code)
-                        merged_sections.append(f"## {dept_name}\n\n{answer}")
-                    return {
-                        "context": "\n\n---\n\n".join(merged_sections),
-                        "provenance": {"route": "direct_graph_multi", "source_mode": "graph"},
-                        "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
-                        "fallback_response": None,
-                        "departments": [c for c in topic_answers.keys() if c not in self.section_retrievers],
-                        "sections": [c for c in topic_answers.keys() if c in self.section_retrievers],
-                        "dept_contexts": {
-                            code: {
-                                "name": (SECTIONS.get(code, {}).get("name", code.upper()) if code in self.section_retrievers else DEPARTMENTS.get(code, {}).get("full_name", code)),
-                                "context": ans
-                            }
-                            for code, ans in topic_answers.items()
-                        },
-                        "direct": True,
-                    }
-            elif len(direct_answers) == 1:
-                # Non-topic single department answer
-                code = list(direct_answers.keys())[0]
-                if code == "administration" and self._is_person_or_comparison_query(query):
-                    logger.info("Admin-only direct answer for person/comparison query — falling through to full retrieval")
-                else:
-                    is_sec = code in self.section_retrievers
-                    if is_sec:
-                        from departments import SECTIONS
-                        dept_name = SECTIONS.get(code, {}).get("name", code.upper())
-                    else:
-                        dept_name = DEPARTMENTS.get(code, {}).get("full_name", code)
-                    return {
-                        "context": f"## {dept_name}\n\n{direct_answers[code]}",
-                        "provenance": {"route": "direct_graph", "source_mode": "graph"},
-                        "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
-                        "fallback_response": None,
-                        "departments": [code] if not is_sec else [],
-                        "sections": [code] if is_sec else [],
-                        "direct": True,
-                    }
-            else:
-                # Non-topic multiple direct answers — merge them all
-                merged_sections = []
-                for code, answer in direct_answers.items():
-                    is_sec = code in self.section_retrievers
-                    if is_sec:
-                        from departments import SECTIONS
-                        dept_name = SECTIONS.get(code, {}).get("name", code.upper())
-                    else:
-                        dept_name = DEPARTMENTS.get(code, {}).get("full_name", code)
-                    merged_sections.append(f"## {dept_name}\n\n{answer}")
-                return {
-                    "context": "\n\n---\n\n".join(merged_sections),
-                    "provenance": {"route": "direct_graph_multi", "source_mode": "graph"},
-                    "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
-                    "fallback_response": None,
-                    "departments": [c for c in direct_answers.keys() if c not in self.section_retrievers],
-                    "sections": [c for c in direct_answers.keys() if c in self.section_retrievers],
-                    "dept_contexts": {
-                        code: {
-                            "name": (SECTIONS.get(code, {}).get("name", code.upper()) if code in self.section_retrievers else DEPARTMENTS.get(code, {}).get("full_name", code)),
-                            "context": ans
-                        }
-                        for code, ans in direct_answers.items()
-                    },
-                    "direct": True,
-                }
+
 
         if not dept_scores:
             return {

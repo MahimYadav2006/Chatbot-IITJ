@@ -93,7 +93,8 @@ SECTION_NAME_ALIASES = {
         "ug admission", "pg admission", "course registration",
         "examination", "grading", "convocation", "scholarship",
         "academic programs", "curriculum", "specialisation",
-        "specialization", "course", "syllabus", "admission"
+        "specialization", "course", "syllabus", "admission",
+        "minor", "minors", "elective", "electives"
     ],
     "accounts": [
         "accounts", "accounts section", "finance", "billing",
@@ -124,7 +125,9 @@ SECTION_NAME_ALIASES = {
         "placement", "placements", "campus placement", "campus recruitment",
         "recruiter", "recruiters", "past recruiters", "placement statistics",
         "placement report", "placement policy", "rise-up", "riseup",
-        "internship", "internships", "campus hiring",
+        "campus internship", "campus internships", "placement internship",
+        "placement internships", "internship placement", "internship offer",
+        "campus hiring",
         "placement highlights", "highest package", "average package",
         "offer", "lpa", "ctc", "salary", "company", "eligible"
     ],
@@ -195,8 +198,23 @@ class DepartmentRouter:
         """
         Analyze a query and determine which department(s) and/or section(s) it targets.
         """
+        from graphrag.intent_utils import is_academic_rules_query
+        if is_academic_rules_query(query):
+            return RouteResult(
+                departments=[],
+                sections=["academics"],
+                confidence="exact",
+                reason="Query identified as academic rules and regulations request",
+                query=query,
+            )
+
         detected_depts = self._detect_departments(query)
         detected_secs = self._detect_sections(query)
+
+        # Inject academics for all department queries
+        if detected_depts:
+            if "academics" not in detected_secs:
+                detected_secs.append("academics")
 
         if detected_depts or detected_secs:
             reasons = []
@@ -298,4 +316,3 @@ class DepartmentRouter:
             if os.path.exists(os.path.join(data_dir, "graph.pkl")):
                 ingested.append(code)
         return ingested
-

@@ -33,7 +33,7 @@ def test_queries():
     
     print("\n--- TEST 3: list of doctors (should exclude Sanat Kumar Tiwari) ---")
     retriever_medical = app.section_retrievers["medical-centre"]
-    ans3 = retriever_medical.get_direct_answer("list of doctors", global_person_index=app.person_index)
+    ans3 = retriever_medical.get_deterministic_context("list of doctors")
     print(ans3)
     assert ans3 is not None
     assert "Dr. Karunika Sharma" in ans3
@@ -42,26 +42,26 @@ def test_queries():
     
     print("\n--- TEST 4: list all clubs ---")
     retriever_ir = app.section_retrievers["ir"]
-    ans4 = retriever_ir.get_direct_answer("list all clubs")
+    ans4 = retriever_ir.get_deterministic_context("list all clubs")
     # count lines starting with "- **" to verify number of clubs
     club_lines = [l for l in ans4.splitlines() if l.startswith("- **")]
     print(f"Total clubs returned: {len(club_lines)}")
     assert len(club_lines) == 17
     
     print("\n--- TEST 5: specific club details ---")
-    ans5 = retriever_ir.get_direct_answer("tell me about coding club")
+    ans5 = retriever_ir.get_deterministic_context("tell me about coding club")
     print(ans5)
     assert "Coding Club" in ans5
     assert "Fintech Club" not in ans5
     
     print("\n--- TEST 6: specific hostel details ---")
-    ans6 = retriever_ir.get_direct_answer("tell me about canary hostel")
+    ans6 = retriever_ir.get_deterministic_context("tell me about canary hostel")
     print(ans6)
     assert "Canary Hostel" in ans6
     assert "Fulgar Hostel" not in ans6
 
     print("\n--- TEST 7: chairperson of medical unit ---")
-    ans7 = retriever_medical.get_direct_answer("who is the chairperson of the medical unit")
+    ans7 = retriever_medical.get_deterministic_context("who is the chairperson of the medical unit")
     print(ans7)
     assert "Sanat Kumar Tiwari" in ans7
 

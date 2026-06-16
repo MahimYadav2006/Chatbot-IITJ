@@ -35,7 +35,7 @@ class TestFacultyCountRetrieval:
 
     def test_direct_faculty_answer_is_complete(self, retriever, canonical_faculty):
         """The direct graph answer should not rely on LLM counting."""
-        answer = retriever.get_direct_answer("Give me all faculty members count and list")
+        answer = retriever.get_deterministic_context("Give me all faculty members count and list")
         assert answer is not None
         assert "**24 faculty members**" in answer
         missing = [name for name in canonical_faculty if name not in answer]
@@ -52,7 +52,7 @@ class TestPhDRosterRetrieval:
 
     def test_direct_phd_answer_is_exact(self, retriever):
         """The direct graph answer should return the exact PhD scholar count."""
-        answer = retriever.get_direct_answer("What is the total number of PhD scholars in EE at IIT Jammu?")
+        answer = retriever.get_deterministic_context("What is the total number of PhD scholars in EE at IIT Jammu?")
         assert answer is not None
         assert "**66 PhD scholars**" in answer
         assert "phd-list.html" in answer
@@ -70,7 +70,7 @@ class TestFacultyProfileRetrieval:
 class TestDirectSupervisorAnswers:
     def test_supervisor_query_is_answered_directly(self, retriever):
         """Supervisor questions should bypass the LLM and use graph edges directly."""
-        answer = retriever.get_direct_answer("Who supervises Ritujoy Biswas?")
+        answer = retriever.get_deterministic_context("Who supervises Ritujoy Biswas?")
         assert answer is not None
         assert "Ritujoy Biswas" in answer
         assert "Karan Nathwani" in answer
@@ -90,7 +90,7 @@ def cse_retriever():
 class TestCSEFacultyAnalytics:
     def test_cse_faculty_roster_count_is_authoritative(self, cse_retriever):
         """CSE faculty count/list should come from the graph roster, not chunk counting."""
-        answer = cse_retriever.get_direct_answer("Give me the faculty count and list in the CSE department")
+        answer = cse_retriever.get_deterministic_context("Give me the faculty count and list in the CSE department")
         assert answer is not None
         assert "**15 faculty members**" in answer
         for name in (
@@ -104,7 +104,7 @@ class TestCSEFacultyAnalytics:
 
     def test_gender_ratio_query_is_rejected_when_attribute_is_missing(self, cse_retriever):
         """Gender analytics must not be guessed from names or partial retrieval."""
-        answer = cse_retriever.get_direct_answer(
+        answer = cse_retriever.get_deterministic_context(
             "What is the ratio of male to female in CSE department faculties? Calculate it."
         )
         assert answer is not None
@@ -115,7 +115,7 @@ class TestCSEFacultyAnalytics:
 
     def test_main_point_of_contact_is_answered_directly(self, cse_retriever):
         """Generic contact questions should resolve to the HoD instead of drifting into unrelated facts."""
-        answer = cse_retriever.get_direct_answer("Who is the main point of contact?")
+        answer = cse_retriever.get_deterministic_context("Who is the main point of contact?")
         assert answer is not None
         assert "Yamuna Prasad" in answer
         assert "Head of Department" in answer
@@ -152,7 +152,7 @@ class TestCSEFacultyAnalytics:
 class TestLaboratoryRetrieval:
     def test_ee_labs_retrieval(self, retriever):
         """Ask about EE labs and verify the correct list is returned."""
-        answer = retriever.get_direct_answer("What labs are there in the EE department?")
+        answer = retriever.get_deterministic_context("What labs are there in the EE department?")
         assert answer is not None
         assert "Low Voltage Lab1" in answer
         assert "AADHRIT Lab" in answer
@@ -160,14 +160,14 @@ class TestLaboratoryRetrieval:
 
     def test_cse_labs_retrieval_negative(self, cse_retriever):
         """Ask about CSE labs specifically and verify deterministic empty message."""
-        answer = cse_retriever.get_direct_answer("Are there labs in the CSE department?")
+        answer = cse_retriever.get_deterministic_context("Are there labs in the CSE department?")
         assert answer is not None
         assert "no laboratories" in answer.lower()
         assert "Computer Science and Engineering" in answer
 
     def test_cse_labs_retrieval_broadcast_ignored(self, cse_retriever):
         """Ask a general lab query to CSE retriever and verify it returns None to not pollute broadcast."""
-        answer = cse_retriever.get_direct_answer("List all department labs")
+        answer = cse_retriever.get_deterministic_context("List all department labs")
         assert answer is None
 
 

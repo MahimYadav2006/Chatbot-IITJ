@@ -130,7 +130,7 @@ def main():
         start_time = time.time()
         try:
             # 1. Run through the retriever pipeline
-            direct_response = retriever.get_direct_answer(question)
+            direct_response = retriever.get_deterministic_context(question)
             if direct_response:
                 actual_response = sanitize_response(direct_response)
                 is_direct = True

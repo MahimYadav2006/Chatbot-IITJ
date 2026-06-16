@@ -540,7 +540,7 @@ def _run_chatbot_query(
     question: str,
 ) -> Dict[str, Any]:
     start = time.time()
-    direct_response = retriever.get_direct_answer(question)
+    direct_response = retriever.get_deterministic_context(question)
     if direct_response:
         elapsed = round(time.time() - start, 2)
         provenance = {

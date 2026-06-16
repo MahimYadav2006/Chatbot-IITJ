@@ -242,6 +242,273 @@ class SectionRetriever:
                             cleaned_matches.append(f"- {m_clean}")
                         return "Here are the relevant document links found on the Academics website:\n\n" + "\n".join(cleaned_matches)
 
+            # If not a link query, check structured academic program/specialization details in graph
+            specializations = [d for n, d in self.graph.nodes(data=True) if d.get("label") == "Specialization"]
+            programs = [d for n, d in self.graph.nodes(data=True) if d.get("label") == "AcademicProgram"]
+
+            # Helper to find matching specialization/program node
+            matched_entity = None
+            matched_id = None
+            best_score = 0
+
+            # Exact word-based analysis to avoid substring matching bugs (e.g. 'ee' matching 'engineering')
+            q_words = set(re.findall(r'\w+', q.lower()))
+            q_expanded_words = set(q_words)
+            if "cse" in q_words:
+                q_expanded_words.update({"computer", "science", "cse"})
+            if "ee" in q_words:
+                q_expanded_words.update({"electrical", "engineering", "electronics", "ee"})
+            if "me" in q_words:
+                q_expanded_words.update({"mechanical", "me"})
+            if "ce" in q_words:
+                q_expanded_words.update({"civil", "ce"})
+
+            stop_words = {
+                "what", "is", "are", "the", "for", "of", "in", "and", "a", "to", "i", "can", "do", "offer",
+                "offered", "available", "at", "iit", "jammu", "program", "programmes", "programs", "programme",
+                "specialization", "specializations", "specialisation", "specialisations", "minor", "minors",
+                "micro", "honours", "honors", "course", "courses", "curriculum", "credits", "credit", "graduate",
+                "graduation", "student", "students", "require", "required", "requirement", "requirements",
+                "how", "many", "engineering", "department", "dept", "academic", "academics", "information",
+                "details", "subject", "subjects", "syllabus", "syllabi", "study"
+            }
+            filtered_q_words = {w for w in q_expanded_words if w not in stop_words and len(w) > 1}
+
+            # Map known abbreviation expansions for precise matching (e.g., CSP -> Communication and Signal Processing)
+            ABBREVIATIONS = {
+                "csp": {"communication", "signal", "processing"},
+                "cse": {"computer", "science", "engineering"},
+                "ee": {"electrical", "engineering"},
+                "me": {"mechanical", "engineering"},
+                "ce": {"civil", "engineering"},
+                "ch": {"chemical", "engineering"},
+                "chemical": {"chemical", "engineering"},
+                "mechanical": {"mechanical", "engineering"},
+                "electrical": {"electrical", "engineering"},
+                "civil": {"civil", "engineering"},
+            }
+            expanded_q_words = set(filtered_q_words)
+            for w in filtered_q_words:
+                if w in ABBREVIATIONS:
+                    expanded_q_words.update(ABBREVIATIONS[w])
+
+            # Check if query targets a specific department with word boundary safety
+            from departments import DEPARTMENTS
+            target_dept = None
+            for code, config in DEPARTMENTS.items():
+                aliases = [code.lower(), config["name"].lower()] + [a.lower() for a in config.get("aliases", [])]
+                if any(re.search(r'\b' + re.escape(a) + r'\b', q.lower()) for a in aliases):
+                    target_dept = code
+                    break
+
+            is_course_query = any(term in q.lower() for term in ("course", "curriculum", "syllabus", "subject", "credit"))
+
+            if expanded_q_words:
+                for node_id, d in self.graph.nodes(data=True):
+                    if d.get("label") in ("Specialization", "AcademicProgram"):
+                        name_words = set(re.findall(r'\w+', d.get("name", "").lower()))
+                        node_expanded_words = set(name_words)
+                        for w in name_words:
+                            if w in ABBREVIATIONS:
+                                node_expanded_words.update(ABBREVIATIONS[w])
+                        
+                        overlap = len(expanded_q_words.intersection(node_expanded_words))
+                        
+                        # Apply department match bonus
+                        if target_dept and d.get("department") == target_dept:
+                            overlap += 2
+                            
+                        # If node has 'cse' in name, and query has 'cse', boost it
+                        if "cse" in q_words and "cse" in name_words:
+                            overlap += 1
+                        if "ee" in q_words and ("ee" in name_words or "electrical" in name_words):
+                            overlap += 1
+                        if ("civil" in q_words or "ce" in q_words) and ("civil" in name_words or "ce" in name_words):
+                            overlap += 1
+                        if ("mechanical" in q_words or "me" in q_words) and ("mechanical" in name_words or "me" in name_words):
+                            overlap += 1
+                        if ("chemical" in q_words or "ch" in q_words) and ("chemical" in name_words or "ch" in name_words):
+                            overlap += 1
+                        if "bsbe" in q_words and "bsbe" in name_words:
+                            overlap += 1
+                        if "hss" in q_words and "hss" in name_words:
+                            overlap += 1
+                        if ("materials" in q_words or "mt" in q_words or "mty" in q_words) and ("materials" in name_words or "mt" in name_words or "mty" in name_words):
+                            overlap += 1
+
+                        # Apply type-matching bonuses (Minor, Honours, Micro Specialization)
+                        node_name_lower = d.get("name", "").lower()
+                        node_type_lower = str(d.get("type", "")).lower()
+                        if "minor" in q_words and ("minor" in node_name_lower or "minor" in node_type_lower):
+                            overlap += 3
+                        if ("honour" in q_words or "honor" in q_words or "honours" in q_words) and ("honour" in node_name_lower or "honor" in node_name_lower or "honours" in node_name_lower or "honour" in node_type_lower or "honor" in node_type_lower or "honours" in node_type_lower):
+                            overlap += 3
+                        if "micro" in q_words and ("micro" in node_name_lower or "micro" in node_type_lower):
+                            overlap += 3
+
+                        # Apply course-existence bonus if this is a course query
+                        if is_course_query:
+                            has_courses = any(self.graph.nodes[t].get("label") == "Course" 
+                                              for s, t, edge_data in self.graph.out_edges(node_id, data=True) 
+                                              if edge_data.get("type") == "OFFERS_COURSE")
+                            if has_courses:
+                                overlap += 4
+
+                        # Apply level matching bonus
+                        node_level = str(d.get("level", "")).lower()
+                        is_pg_query = any(w in q_words for w in ("mtech", "m.tech", "postgraduate", "pg", "master", "masters", "phd", "specialization", "specializations"))
+                        is_ug_query = any(w in q_words for w in ("btech", "b.tech", "undergraduate", "ug", "bachelor", "bachelors"))
+                        if is_pg_query and ("pg" in node_level or "mtech" in node_level or "master" in node_level or "m.tech" in node_name_lower or "mtech" in node_name_lower):
+                            overlap += 3
+                        elif is_ug_query and ("ug" in node_level or "btech" in node_level or "b.tech" in node_name_lower or "btech" in node_name_lower):
+                            overlap += 3
+                        elif not is_pg_query and ("ug" in node_level or "btech" in node_level or "b.tech" in node_name_lower or "btech" in node_name_lower):
+                            overlap += 1
+
+                        # De-prioritize superseded versions
+                        if d.get("superseded", False):
+                            overlap -= 2
+
+                        if overlap > best_score:
+                            best_score = overlap
+                            matched_entity = d
+                            matched_id = node_id
+
+            # If we matched an entity with a decent overlap, and the query is asking about courses/credits
+            if matched_entity and best_score >= 1 and any(term in q.lower() for term in ("course", "curriculum", "syllabus", "subject", "credit")):
+                # Find all course nodes connected to this program/specialization
+                courses = []
+                out_edges = list(self.graph.out_edges(matched_id, data=True))
+                for s, t, edge_data in out_edges:
+                    if edge_data.get("type") == "OFFERS_COURSE" and self.graph.nodes[t].get("label") == "Course":
+                        c_node = self.graph.nodes[t]
+                        courses.append({
+                            "name": c_node.get("name"),
+                            "code": c_node.get("code"),
+                            "ltp": c_node.get("ltp"),
+                            "credits": c_node.get("credits"),
+                            "semester": edge_data.get("semester"),
+                            "category": edge_data.get("category"),
+                            "bucket": edge_data.get("bucket")
+                        })
+
+                if courses:
+                    lines = []
+                    if matched_entity.get("total_credits"):
+                        lines.append(f"**Total Graduation Credits Requirement:** {matched_entity['total_credits']} credits\n")
+                    lines.append(f"### Courses offered in {matched_entity['name']}:")
+                    from collections import defaultdict
+                    by_sem = defaultdict(list)
+                    by_cat = defaultdict(list)
+                    other_courses = []
+
+                    for c in courses:
+                        if c["semester"]:
+                            by_sem[c["semester"]].append(c)
+                        elif c["category"]:
+                            by_cat[c["category"]].append(c)
+                        else:
+                            other_courses.append(c)
+
+                    if by_sem:
+                        for sem in sorted(by_sem.keys()):
+                            lines.append(f"\n#### Semester {sem}:")
+                            for c in sorted(by_sem[sem], key=lambda x: (x["code"] or "", x["name"] or "")):
+                                c_info = f"- **{c['name']}**"
+                                if c['code']:
+                                    c_info += f" ({c['code']})"
+                                if c['credits'] or c['ltp']:
+                                    details = []
+                                    if c['ltp']: details.append(f"L-T-P: {c['ltp']}")
+                                    if c['credits']: details.append(f"Credits: {c['credits']}")
+                                    c_info += f" — {', '.join(details)}"
+                                lines.append(c_info)
+                    elif by_cat:
+                        for cat in sorted(by_cat.keys()):
+                            lines.append(f"\n#### {cat}:")
+                            for c in sorted(by_cat[cat], key=lambda x: (x["code"] or "", x["name"] or "")):
+                                c_info = f"- **{c['name']}**"
+                                if c['code']:
+                                    c_info += f" ({c['code']})"
+                                if c['credits'] or c['ltp']:
+                                    details = []
+                                    if c['ltp']: details.append(f"L-T-P: {c['ltp']}")
+                                    if c['credits']: details.append(f"Credits: {c['credits']}")
+                                    c_info += f" — {', '.join(details)}"
+                                lines.append(c_info)
+                    else:
+                        for c in sorted(other_courses, key=lambda x: (x["code"] or "", x["name"] or "")):
+                            c_info = f"- **{c['name']}**"
+                            if c['code']:
+                                c_info += f" ({c['code']})"
+                            if c['credits'] or c['ltp']:
+                                details = []
+                                if c['ltp']: details.append(f"L-T-P: {c['ltp']}")
+                                if c['credits']: details.append(f"Credits: {c['credits']}")
+                                c_info += f" — {', '.join(details)}"
+                            lines.append(c_info)
+
+                    if matched_entity.get("link"):
+                        lines.append(f"\nOfficial Curriculum Document: [Download/View Link]({matched_entity['link']})")
+                    return "\n".join(lines)
+
+            # General Specialization / Minor Lookup
+            from departments import DEPARTMENTS
+            target_dept = None
+            for code, config in DEPARTMENTS.items():
+                aliases = [code.lower(), config["name"].lower()] + [a.lower() for a in config.get("aliases", [])]
+                if any(a in q for a in aliases):
+                    target_dept = code
+                    break
+
+            is_minor_q = any(term in q for term in ("minor", "minors"))
+            is_micro_q = any(term in q for term in ("micro", "micros"))
+            is_honours_q = any(term in q for term in ("honours", "honor", "honors"))
+            is_spec_q = any(term in q for term in ("specialization", "specialisation", "specializations", "specialisations"))
+            is_program_q = any(term in q for term in ("program", "programs", "programme", "programmes", "course", "courses"))
+
+            if is_minor_q or is_micro_q or is_honours_q or is_spec_q or is_program_q or target_dept:
+                matching_specs = []
+                matching_progs = []
+
+                for s in specializations:
+                    if target_dept and s.get("department") != target_dept:
+                        continue
+                    s_type = s.get("type", "").lower()
+                    if is_minor_q and "minor" not in s_type and "minor" not in s.get("name", "").lower():
+                        continue
+                    if is_micro_q and "micro" not in s_type:
+                        continue
+                    if is_honours_q and "honour" not in s_type and "honor" not in s_type:
+                        continue
+                    matching_specs.append(s)
+
+                for p in programs:
+                    if target_dept and p.get("department") != target_dept:
+                        continue
+                    matching_progs.append(p)
+
+                lines = []
+                if matching_specs:
+                    lines.append("### Relevant Academic Specializations & Minors:")
+                    for s in sorted(matching_specs, key=lambda x: x.get("name", "")):
+                        status = " (Superseded/Old Version)" if s.get("superseded") else ""
+                        lines.append(f"- **{s['name']}** ({s.get('type', 'Specialization')}){status}")
+                        if s.get("link"):
+                            lines.append(f"  - Document Link: {s['link']}")
+
+                if matching_progs:
+                    lines.append("\n### Relevant Academic Programs / Curriculum Frameworks:")
+                    for p in sorted(matching_progs, key=lambda x: x.get("name", "")):
+                        status = " (Superseded/Old Version)" if p.get("superseded") else ""
+                        lines.append(f"- **{p['name']}** ({p.get('level', 'UG/PG')}){status}")
+                        if p.get("link"):
+                            lines.append(f"  - Document Link: {p['link']}")
+
+                if lines:
+                    return "\n".join(lines)
+
+
 
         # 7. DI specific queries (Divisions details)
         if self.section_code == "di":
@@ -683,7 +950,10 @@ class SectionRetriever:
 
         if self.section_code == "academics" and is_academic_rules_request:
             has_course_code = bool(re.search(r"\b[a-zA-Z]{2,3}\s*\d{3}\b", query))
-            is_course_query = any(term in query.lower() for term in ("course", "syllabus", "curriculum", "ltp", "l-t-p", "structure of", "specialization", "specialisation", "minor")) and not any(term in query.lower() for term in ("rule", "regulation", "policy", "guideline", "requirement", "criteria"))
+            is_course_query = (
+                any(term in query.lower() for term in ("course", "syllabus", "curriculum", "ltp", "l-t-p", "structure of", "specialization", "specialisation", "minor", "credit", "credits", "graduate", "graduation")) 
+                and not any(term in query.lower() for term in ("rule", "regulation", "policy", "guideline", "requirement", "criteria", "scheme", "evaluation", "convention", "award", "medal", "medals", "registration", "register", "withdrawal", "withdraw", "allotment", "internship", "amendment", "change"))
+            )
             
             if rules_context and not has_course_code and not is_course_query:
                 return {

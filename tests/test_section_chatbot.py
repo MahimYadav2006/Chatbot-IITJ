@@ -114,22 +114,25 @@ def test_section_retriever_direct_answers():
     
     # Test E2 Section Head answer
     e2_retriever = SectionRetriever("e2", e2_graph, [], None)
-    ans = e2_retriever.get_direct_answer("Who is the head of E2 section?")
+    ans = e2_retriever.get_deterministic_context("Who is the head of E2 section?")
     assert ans is not None
     assert "Puja Rajyaguru" in ans
     assert "Assistant Registrar" in ans
     
     # Test Counselling contact info answer
     counselling_retriever = SectionRetriever("counselling", counselling_graph, [], None)
-    ans = counselling_retriever.get_direct_answer("counselling contact email")
+    ans = counselling_retriever.get_deterministic_context("counselling contact email")
     assert ans is not None
     assert "counselling@iitjammu.ac.in" in ans
     
     # Test Academics doc link redirection answer
-    acad_retriever = SectionRetriever("academics", academics_graph, acad_chunks, None)
-    ans = acad_retriever.get_direct_answer("computer science specialisation curriculum link")
+    from unittest.mock import patch
+    with patch("os.path.exists", return_value=False):
+        acad_retriever = SectionRetriever("academics", academics_graph, acad_chunks, None)
+        ans = acad_retriever.get_deterministic_context("computer science specialisation curriculum link")
     assert ans is not None
     assert "https://drive.google.com/drive/folders/1abc123" in ans
+
 
 
 def test_new_sections_retriever_direct_answers():
@@ -153,30 +156,30 @@ def test_new_sections_retriever_direct_answers():
     
     # 1. Alumni Affairs
     retriever = SectionRetriever("alumni-affairs", alumni_graph, [], None)
-    ans = retriever.get_direct_answer("Who won the President Gold Medal in 2024?")
+    ans = retriever.get_deterministic_context("Who won the President Gold Medal in 2024?")
     assert ans is not None and "John Doe" in ans
     
     # 2. CDS
     retriever = SectionRetriever("cds", cds_graph, [], None)
-    ans = retriever.get_direct_answer("list recruiters")
+    ans = retriever.get_deterministic_context("list recruiters")
     assert ans is not None and "Google" in ans
-    ans = retriever.get_direct_answer("placement policy CGPA cutoff")
+    ans = retriever.get_deterministic_context("placement policy CGPA cutoff")
     assert ans is not None and "Minimum 6 CGPA" in ans
     
     # 3. IR
     retriever = SectionRetriever("ir", ir_graph, [], None)
-    ans = retriever.get_direct_answer("list student clubs")
+    ans = retriever.get_deterministic_context("list student clubs")
     assert ans is not None and "Coding Club" in ans
-    ans = retriever.get_direct_answer("hostels canary")
+    ans = retriever.get_deterministic_context("hostels canary")
     assert ans is not None and "Canary" in ans
     
     # 4. Medical Centre
     retriever = SectionRetriever("medical-centre", medical_graph, [], None)
-    ans = retriever.get_direct_answer("list health centre doctors")
+    ans = retriever.get_deterministic_context("list health centre doctors")
     assert ans is not None and "Dr. Smith" in ans
     
     # 5. OSD
     retriever = SectionRetriever("osd", osd_graph, [], None)
-    ans = retriever.get_direct_answer("what is Unnat Bharat Abhiyan?")
+    ans = retriever.get_deterministic_context("what is Unnat Bharat Abhiyan?")
     assert ans is not None and "Unnat Bharat Abhiyan" in ans
 

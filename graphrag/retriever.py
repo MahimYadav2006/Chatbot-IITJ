@@ -1422,9 +1422,12 @@ class HybridRetriever:
 
         return "\n".join(lines)
 
-    def get_direct_answer(self, query: str, suppress_topic_match: bool = False) -> Optional[str]:
-        """Return deterministic answers for questions that should not rely on LLM inference.
-        
+    def get_deterministic_context(self, query: str, suppress_topic_match: bool = False) -> Optional[str]:
+        """Return deterministic context from graph data for queries with authoritative answers.
+
+        The returned text is intended to be used as high-priority context for the LLM,
+        NOT as a final response returned directly to the user.
+
         Args:
             query: The user's question.
             suppress_topic_match: If True, skip topic/expert contact matching.
@@ -2303,88 +2306,38 @@ class HybridRetriever:
         global_top_k: int = 2,
         max_context_words: int = 3000,
     ) -> Dict[str, Any]:
-        """Run full hybrid retrieval and return context plus provenance metadata."""
-        if self._is_department_contact_query(query):
-            contact_answer = self._build_department_contact_answer()
-            if contact_answer:
-                provenance = self._build_provenance(
-                    direct=True,
-                    local_results=[],
-                    vector_results=[],
-                    global_results=[],
-                    section_word_counts={"graph": len(contact_answer.split())},
-                )
-                return {
-                    "context": contact_answer,
-                    "provenance": provenance,
-                    "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
-                    "fallback_response": None,
-                }
+        """Run full hybrid retrieval and return context plus provenance metadata.
 
-        faculty_analytics_answer = self._build_faculty_analytics_answer(query)
-        if faculty_analytics_answer:
-            logger.info("Retrieved deterministic faculty analytics answer/context.")
-            provenance = self._build_provenance(
-                direct=True,
-                local_results=[],
-                vector_results=[],
-                global_results=[],
-                section_word_counts={"graph": len(faculty_analytics_answer.split())},
-            )
-            return {
-                "context": faculty_analytics_answer,
-                "provenance": provenance,
-                "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
-                "fallback_response": None,
-            }
-        if self._is_faculty_roster_query(query):
-            context = self._faculty_roster_context()
-            logger.info("Retrieved authoritative faculty roster context.")
-            provenance = self._build_provenance(
-                direct=True,
-                local_results=[],
-                vector_results=[],
-                global_results=[],
-                section_word_counts={"graph": len(context.split())},
-            )
-            return {
-                "context": context,
-                "provenance": provenance,
-                "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
-                "fallback_response": None,
-            }
-        if self._is_phd_roster_query(query):
-            context = self._phd_roster_context()
-            logger.info("Retrieved authoritative PhD roster context.")
-            provenance = self._build_provenance(
-                direct=True,
-                local_results=[],
-                vector_results=[],
-                global_results=[],
-                section_word_counts={"graph": len(context.split())},
-            )
-            return {
-                "context": context,
-                "provenance": provenance,
-                "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
-                "fallback_response": None,
-            }
-        if self._is_mtech_roster_query(query):
-            context = self._mtech_roster_context()
-            logger.info("Retrieved authoritative M.Tech roster context.")
-            provenance = self._build_provenance(
-                direct=True,
-                local_results=[],
-                vector_results=[],
-                global_results=[],
-                section_word_counts={"graph": len(context.split())},
-            )
-            return {
-                "context": context,
-                "provenance": provenance,
-                "answerability": {"answerable": True, "reason": "", "matched_terms": [], "missing_concepts": []},
-                "fallback_response": None,
-            }
+        Deterministic graph context (admin info, rosters, topic experts, etc.) is
+        computed first and injected as high-priority context. The LLM always
+        generates the final response — deterministic data is never returned raw.
+        For enumeration queries (roster listings), vector search is skipped to
+        avoid noise; only the authoritative graph data + local search are used.
+        """
+        # --- Phase 0: Compute deterministic context from graph ---
+        deterministic_context = ""
+        is_enumeration = False  # If True, skip vector search
+
+        # A. Main deterministic dispatch (admin, hod, labs, topics, emails, etc.)
+        det_ctx = self.get_deterministic_context(query)
+        if det_ctx:
+            deterministic_context = det_ctx
+            logger.info("Retrieved deterministic graph context for query.")
+
+        # B. Roster/enumeration queries — authoritative listings, skip vector search
+        if not deterministic_context:
+            if self._is_faculty_roster_query(query):
+                deterministic_context = self._faculty_roster_context()
+                is_enumeration = True
+                logger.info("Retrieved authoritative faculty roster (enumeration).")
+            elif self._is_phd_roster_query(query):
+                deterministic_context = self._phd_roster_context()
+                is_enumeration = True
+                logger.info("Retrieved authoritative PhD roster (enumeration).")
+            elif self._is_mtech_roster_query(query):
+                deterministic_context = self._mtech_roster_context()
+                is_enumeration = True
+                logger.info("Retrieved authoritative M.Tech roster (enumeration).")
 
         if self._is_exact_count_query(query):
             global_top_k = 0
@@ -2396,14 +2349,22 @@ class HybridRetriever:
             logger.info("Injected structured placement data context.")
 
         local_results = self._local_search(query, top_k=local_top_k)
-        vector_results = self._vector_search(query, top_k=vector_top_k)
+        # Skip vector search for enumeration queries (authoritative graph data suffices)
+        vector_results = [] if is_enumeration else self._vector_search(query, top_k=vector_top_k)
         global_results = self._global_search(query, top_k=global_top_k) if global_top_k > 0 else []
 
         sections = []
         word_count = 0
         section_word_counts = {"graph": 0, "vector": 0, "community": 0}
 
-        # Section 0: Structured placement data (highest priority for salary/placement queries)
+        # Section 0: Deterministic context from graph (highest priority)
+        if deterministic_context:
+            sections.append("## Authoritative Department Data\n\n" + deterministic_context)
+            dc_words = len(deterministic_context.split())
+            word_count += dc_words
+            section_word_counts["graph"] += dc_words
+
+        # Section 0b: Structured placement data
         if placement_context:
             sections.append(placement_context)
             word_count += len(placement_context.split())

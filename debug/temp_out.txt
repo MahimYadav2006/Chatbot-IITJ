@@ -1,0 +1,68 @@
+[1] [9.6953] academics_academics-specialisation-and-courses.md: ## UG
+
+1. Specialisation
+
+1. Honours in Electrical Engineering (2022 Scheme)
+2. Micro Specialisation
+[2] [9.6953] academics_curriculum_ug_course_offering_framework_B.Tech_in_Engineering_Physics.md: ---
+source_file: "B.Tech in Engineering Physics.pdf"
+source_path: "academics-specialisation-and-cour
+[3] [9.6953] academics_curriculum_ug_course_offering_framework_Course_Framework_UG_mathematics_and_Computing.md: ---
+source_file: "Course Framework UG mathematics and Computing.pdf"
+source_path: "academics-special
+[4] [9.6953] academics_curriculum_ug_specialization_Minor_in_Quantum_Technology.md: ---
+source_file: "Minor in Quantum Technology.pdf"
+source_path: "academics-specialisation-and-course
+[5] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Aperciation_-_UG_2019_Batch.xlsx.md: | | Awardees of Certificate of Academic Appreciation for UG 2019 Batch | | | | | | Academic Semester
+[6] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Aperciation_-_UG_2019_Batch.xlsx.md: 2019UCH0023 | Acad/CA/0105 | | | Civil Engineering | HARSHIT RAJ | 2019UCE0040 | Acad/CA/0106 | | | 
+[7] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Aperciation_-_UG_2019_Batch.xlsx.md: | | | Materials Engineering | SUFYAN KHAN | 2019UMT0149 | Acad/CA/0134 | | | | PREM BHARTI | 2019UMT
+[8] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Aperciation_-_UG_2019_Batch.xlsx.md: Civil Engineering | HARSHIT RAJ | 2019UCE0040 | Acad/CA/0161 | | | | BHAVYTA AGGARWAL | 2019UCE0056 
+[9] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation-UG_2021_Batch..xlsx.md: | Awardees of Certificate of Academic Appreciation for UG 2021 Batch | | | | | | | Academic Semester
+[10] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation-UG_2021_Batch..xlsx.md: 2021UCH0006 | Acad/CA/0061 | | | | | GAYTRI SACHDEVA | 2021UCH0008 | Acad/CA/0062 | | | | | HARDIK P
+[11] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation-UG_2021_Batch..xlsx.md: | | | AAYUSH GUPTA | 2021UCS0082 | Acad/CA/0026 | | | | | BHAVESH SAHU | 2021UCS0089 | Acad/CA/0027 
+[12] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation-UG_2021_Batch..xlsx.md: | SANSKAR PURWAR | 2021UMT0189 | Acad/CA/0291 | | | | | ADITI MAHESHWARI | 2021UMT0162 | Acad/CA/029
+[13] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation_-_UG_2020_Batch..xlsx.md: | | | | | | Awardees of Certificate of Academic Appreciation for UG 2020 Batch | | | | | Academic Se
+[14] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation_-_UG_2020_Batch..xlsx.md: 2020-02 | | | | | Chemical Engineering | RIMJHIM AGARWAL | 2020UCH0013 | Acad/CA/0202 | | | NEERAJ S
+[15] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation_-_UG_2020_Batch..xlsx.md: SRIVASTAV | 2020UMT0168 | Acad/CA/0395 | | | NIRANJAN SHARMA | 2020UMT0170 | Acad/CA/0396 | | | PRAK
+[16] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation_-_UG_2020_Batch..xlsx.md: Acad/CA/0008 | | | UMANG SHARMA | 2020UEE0124 | Acad/CA/0009 | | Computer Science and Engineering | 
+[17] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation_-_UG_2022_Batch..xlsx.md: | Awardees of Certificate of Academic Appreciation for UG 2022 Batch | | | | | Academic Semester : 2
+[18] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation_-_UG_2022_Batch..xlsx.md: | HITESH CHOUDHARY | 2022UCS0092 | Acad/CA/0242 | | | SANGEET | 2022UCS0107 | Acad/CA/0243 | | | RIS
+[19] [8.0801] academics_Facilities_academics_certificate-of-academic-appreciation_Certificate_of_Academic_Appreciation_-_UG_2023_Batch..xlsx.md: ## Sheet: Sheet1
+| Awardees of Certificate of Academic Appreciation for UG 2023 Batch |  |  |  |
+| A
+[20] [8.0801] academics_academics-specialisation-and-courses.md: # Page Title: Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innova
+[21] [8.0801] academics_curriculum_pg_mtech_M._Tech._specialization_in_“Data_Sciences”_and_“Information_Security”_by_the_Department_of_Computer_and_Science_Engineering_for_14092021.md: <!-- Page 7 -->
+2. Professional C++, Marc Gregoire, Third Edition, Wrox (Wiley) Publication
+3. Ellis
+[22] [8.0801] academics_curriculum_pg_mtech_M._Tech._with_specialization_in_“Computer_Technology”_by_the_Departments_of_Electrical,_and_Computer_Science_and_Engineering_in_RA_scheme_mode.md: ---
+source_file: "M. Tech.  with specialization in “Computer Technology” by the Departments of Elect
+[23] [8.0801] academics_curriculum_ug_course_offering_framework_UG_2022_CE.md: ---
+source_file: "UG 2022 CE.xlsx"
+source_path: "UG/Course Offering Framework/UG 2022 CE.xlsx"
+docum
+[24] [8.0801] academics_curriculum_ug_course_offering_framework_UG_2022_CSE.md: # B.Tech in Computer Science and Engineering (CSE)
+
+## Curriculum Framework (2022)
+
+**Total Curricul
+[25] [8.0801] academics_curriculum_ug_course_offering_framework_UG_2022_EE.md: ---
+source_file: "UG 2022 EE.xlsx"
+source_path: "UG/Course Offering Framework/UG 2022 EE.xlsx"
+docum
+[26] [8.0801] academics_curriculum_ug_course_offering_framework_UG_2022_ME.md: ---
+source_file: "UG 2022 ME.xlsx"
+source_path: "UG/Course Offering Framework/UG 2022 ME.xlsx"
+docum
+[27] [7.3992] academics_curriculum_ug_specialization_Specialization_in_VLSI.md: ---
+source_file: "Specialization in VLSI.pdf"
+source_path: "academics-specialisation-and-courses/UG/
+[28] [7.3992] academics_curriculum_ug_specialization_Specialization_in_VLSI.md: ### Focus Areas
+
+- Processor Architecture
+- Hardware–Software Co-design
+- Embedded Platforms
+- Syste
+[29] [6.8308] academics_curriculum_pg_mtech_M._Tech._specialization_in_“Data_Sciences”_and_“Information_Security”_by_the_Department_of_Computer_and_Science_Engineering_for_14092021.md: <!-- Page 4 -->
+2. Database Management Systems (3:0:0 = 3)
+3. Introductory Topics in Operating Syste
+[30] [6.8308] academics_curriculum_pg_mtech_M._Tech._specialization_in_“Data_Sciences”_and_“Information_Security”_by_the_Department_of_Computer_and_Science_Engineering_for_14092021.md: | 1. | Discipline/Center/School proposing the course | Department of Computer Science and Engineerin

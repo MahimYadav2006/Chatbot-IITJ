@@ -9,6 +9,7 @@ import re
 import json
 import pickle
 import logging
+from typing import Optional, Dict, List, Any
 from collections import defaultdict
 import networkx as nx
 
@@ -309,6 +310,331 @@ class SectionKGBuilder:
                            source_file=filename)
             self._add_edge(resolved_name, doc_id, "SOURCE_DOCUMENT")
 
+    def _parse_curriculum_document(self, filename: str, content: str, doc_id: str):
+        """Parse academic curriculum and specialization documents."""
+        # 1. Determine level (UG/PG) and category/type from filename
+        level = "UG"
+        if "pg_mtech" in filename:
+            level = "PG (M.Tech)"
+        elif "pg_msc" in filename:
+            level = "PG (M.Sc)"
+        elif "pg_phd" in filename:
+            level = "PG (PhD)"
+
+        prog_type = "Course Offering Framework"
+        if "specialization" in filename:
+            if "micro" in filename:
+                prog_type = "Micro Specialization"
+            elif "minor" in filename:
+                prog_type = "Minor"
+            elif "honours" in filename or "honor" in filename:
+                prog_type = "Honours"
+            else:
+                prog_type = "Specialization"
+
+        # 2. Extract program or specialization title from the first H1 header
+        title = ""
+        first_h1_match = re.search(r'^\s*#\s+(.+)$', content, re.MULTILINE)
+        if first_h1_match:
+            title = first_h1_match.group(1).strip()
+        else:
+            title = filename.replace("academics_curriculum_", "").replace(".md", "").replace("_", " ").title()
+
+        # Clean title
+        title = re.sub(r'\*+', '', title).strip()
+
+        # Handle superseded versions (check for keywords in filename/content)
+        superseded = False
+        if any(k in filename.lower() for k in ("before-2024", "before_2024", "2019_scheme", "2019-scheme", "2017", "2018")):
+            superseded = True
+
+        # Extract total credits / graduation requirement if present in content
+        total_credits = None
+        req_match = re.search(r'graduation\s+requirement[s]?\s*[:*]*\s*([0-9.]+)(?:\s*credits)?', content, re.IGNORECASE)
+        if req_match:
+            total_credits = req_match.group(1).strip()
+        else:
+            tot_match = re.search(r'total\s+(?:program\s+)?credits\s*[:*]*\s*([0-9./-]+)', content, re.IGNORECASE)
+            if tot_match:
+                total_credits = tot_match.group(1).strip()
+
+        # 3. Create Program or Specialization Node
+        dept = self._infer_department(title)
+        if prog_type in ("Minor", "Specialization", "Micro Specialization", "Honours"):
+            entity_label = "Specialization"
+            entity_id = f"specialization:{normalize_name(title)}"
+            self._add_node(entity_id, "Specialization",
+                           name=title,
+                           type=prog_type,
+                           level=level,
+                           department=dept,
+                           superseded=superseded,
+                           total_credits=total_credits,
+                           source_file=filename)
+        else:
+            entity_label = "AcademicProgram"
+            entity_id = f"program:{normalize_name(title)}"
+            self._add_node(entity_id, "AcademicProgram",
+                           name=title,
+                           level=level,
+                           department=dept,
+                           superseded=superseded,
+                           total_credits=total_credits,
+                           source_file=filename)
+
+        self._add_edge(entity_id, doc_id, "SOURCE_DOCUMENT")
+
+        # Connect Academics section node to the Program/Specialization
+        academics_sec_node = f"section:{self.section_code}"
+        if self.graph.has_node(academics_sec_node):
+            self._add_edge(academics_sec_node, entity_id, "OFFERS_PROGRAM" if entity_label == "AcademicProgram" else "OFFERS_SPECIALIZATION")
+
+        # 4. Parse Tables
+        lines = content.splitlines()
+        table_lines = []
+        in_table = False
+        current_semester = None
+        current_category = None
+        current_bucket = None
+
+        # Helper to parse standard table
+        def parse_table(t_lines):
+            if len(t_lines) < 3:
+                return []
+            
+            # Let's search for the header row among the rows of the table
+            # Usually it's row 0, but could be row 2 if row 0 is a title row like "Semester-I"
+            header_row_idx = 0
+            header_cells = [c.strip() for c in t_lines[0].split('|')[1:-1]]
+            
+            def check_headers(cells):
+                name_found = False
+                code_found = False
+                for cell in cells:
+                    cell_lower = cell.lower()
+                    if any(k in cell_lower for k in ("course name", "coursename", "course_name", "subject", "subject name", "subject_name", "subjectname", "name of the course", "course title", "course_title", "coursetitle", "course")):
+                        name_found = True
+                    if any(k in cell_lower for k in ("course no.", "course no", "course code", "subject code", "code", "course_code", "coursecode", "subjectcode")):
+                        code_found = True
+                return name_found or code_found
+
+            if not check_headers(header_cells):
+                # Try row 2
+                if len(t_lines) > 2:
+                    row2_cells = [c.strip() for c in t_lines[2].split('|')[1:-1]]
+                    if check_headers(row2_cells):
+                        header_cells = row2_cells
+                        header_row_idx = 2
+
+            name_idx = -1
+            code_idx = -1
+            ltp_idx = -1
+            credits_idx = -1
+            l_idx, t_idx, p_idx = -1, -1, -1
+            has_course_header = False
+            for idx, cell in enumerate(header_cells):
+                cell_lower = cell.lower()
+                if any(k in cell_lower for k in ("course name", "coursename", "course_name", "subject", "subject name", "subject_name", "subjectname", "name of the course", "course title", "course_title", "coursetitle")) and name_idx == -1:
+                    name_idx = idx
+                    has_course_header = True
+                elif cell_lower == "course" and name_idx == -1:
+                    name_idx = idx
+                    has_course_header = True
+                elif any(k in cell_lower for k in ("course no.", "course no", "course code", "subject code", "code", "course_code", "coursecode", "subjectcode")) and code_idx == -1:
+                    code_idx = idx
+                    has_course_header = True
+                elif any(k in cell_lower for k in ("l-t-p", "l-t-p-c", "credit structure", "ltp", "structure")) and ltp_idx == -1:
+                    ltp_idx = idx
+                elif any(k in cell_lower for k in ("total credits", "totalcredit", "totalcredits", "credits", "credit", "c")) and credits_idx == -1:
+                    if cell_lower != "co-curricular":
+                        credits_idx = idx
+                elif cell_lower == "l":
+                    l_idx = idx
+                elif cell_lower == "t":
+                    t_idx = idx
+                elif cell_lower == "p":
+                    p_idx = idx
+
+            if not has_course_header:
+                return []
+
+            results = []
+            start_row = max(2, header_row_idx + 1)
+            for line in t_lines[start_row:]:
+                cells = [c.strip() for c in line.split('|')[1:-1]]
+                if not cells or len(cells) < max(name_idx, code_idx, ltp_idx, credits_idx, l_idx, t_idx, p_idx) + 1:
+                    continue
+
+                course_name = cells[name_idx] if name_idx != -1 else ""
+                course_code = cells[code_idx] if code_idx != -1 else ""
+                ltp = cells[ltp_idx] if ltp_idx != -1 else ""
+                credits_val = cells[credits_idx] if credits_idx != -1 else ""
+
+                if not course_name or course_name.lower() in ("total", "semester credits", "course", "subject", "course name"):
+                    continue
+                if re.search(r'^\s*total\b', course_name.lower()) or re.search(r'semester credits', course_name.lower()):
+                    continue
+
+                course_name = re.sub(r'\*+', '', course_name).strip()
+                course_name = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', course_name).strip()
+
+                if any(placeholder in course_name.lower() for placeholder in ("elective-", "elective -", "dept. elective", "open elective", "department elective", "hss-", "hss i", "hss ii", "hss elective")):
+                    continue
+
+                if l_idx != -1 and t_idx != -1 and p_idx != -1:
+                    l_val = cells[l_idx]
+                    t_val = cells[t_idx]
+                    p_val = cells[p_idx]
+                    ltp = f"{l_val}-{t_val}-{p_val}"
+
+                if ltp and ":" in ltp:
+                    parts = ltp.split(":")
+                    ltp = parts[0].strip()
+                    if not credits_val:
+                        credits_val = parts[1].strip()
+
+                course_code = re.sub(r'\s+', '', course_code).strip()
+
+                results.append({
+                    "name": course_name,
+                    "code": course_code,
+                    "ltp": ltp,
+                    "credits": credits_val
+                })
+            return results
+
+        # Helper to parse key-value table
+        def parse_kv_table(t_lines):
+            c_name, c_code, c_ltp, c_credits = "", "", "", ""
+            for line in t_lines:
+                cells = [c.strip() for c in line.split('|')[1:-1]]
+                if len(cells) < 3:
+                    continue
+                key = cells[1].strip().lower()
+                val = cells[2].strip()
+
+                if "course title" in key or "course_title" in key or key == "course":
+                    c_name = val
+                elif "course number" in key or "course_number" in key or "course code" in key or key in ("course no", "course no."):
+                    c_code = val
+                elif "l-t-p" in key or "ltp structure" in key or "ltp_structure" in key or key == "structure":
+                    c_ltp = val
+                elif "credits" in key or key == "credit":
+                    c_credits = val
+
+            if c_name and (c_code or c_ltp or c_credits):
+                c_name = re.sub(r'\*+', '', c_name).strip()
+                c_code = re.sub(r'\s+', '', c_code).strip()
+                return {
+                    "name": c_name,
+                    "code": c_code,
+                    "ltp": c_ltp,
+                    "credits": c_credits
+                }
+            return None
+
+        # 5. Process Table Lines & Heading Contexts
+        for idx, line in enumerate(lines):
+            line_stripped = line.strip()
+
+            # Track semesters, categories, and buckets
+            if line_stripped.startswith("## "):
+                heading = line_stripped[3:].strip()
+                # Check for semester
+                sem_match = re.search(r'Semester\s+([IVXLCDM\d]+)', heading, re.IGNORECASE)
+                if sem_match:
+                    current_semester = sem_match.group(1).upper()
+                else:
+                    # Check for elective bucket or theme
+                    if any(k in heading.lower() for k in ("elective", "basket", "track", "theme")):
+                        current_bucket = heading
+                        current_semester = None
+                    else:
+                        current_category = heading
+                        current_semester = None
+                        current_bucket = None
+            elif line_stripped.startswith("### "):
+                heading = line_stripped[4:].strip()
+                if any(k in heading.lower() for k in ("elective", "basket", "track", "theme")):
+                    current_bucket = heading
+                else:
+                    current_category = heading
+
+            if line_stripped.startswith("|"):
+                in_table = True
+                table_lines.append(line_stripped)
+            else:
+                if in_table:
+                    # Parse the table we just finished gathering
+                    parsed_courses = parse_table(table_lines)
+                    if not parsed_courses:
+                        kv_c = parse_kv_table(table_lines)
+                        if kv_c:
+                            parsed_courses = [kv_c]
+
+                    # Add parsed courses as nodes and connect to the program/specialization
+                    for course in parsed_courses:
+                        c_name = course["name"]
+                        c_code = course["code"]
+                        c_ltp = course["ltp"]
+                        c_credits = course["credits"]
+
+                        c_node_id = f"course:{normalize_name(c_code if c_code else c_name)}"
+                        
+                        self._add_node(c_node_id, "Course",
+                                       name=c_name,
+                                       code=c_code,
+                                       ltp=c_ltp,
+                                       credits=c_credits,
+                                       source_file=filename)
+
+                        self._add_edge(entity_id, c_node_id, "OFFERS_COURSE",
+                                       semester=current_semester,
+                                       category=current_category,
+                                       bucket=current_bucket)
+
+                        if current_bucket:
+                            bucket_id = f"bucket:{normalize_name(current_bucket)}"
+                            self._add_node(bucket_id, "ElectiveBucket",
+                                           name=current_bucket,
+                                           source_file=filename)
+                            self._add_edge(c_node_id, bucket_id, "BELONGS_TO_BUCKET")
+                            self._add_edge(entity_id, bucket_id, "HAS_BUCKET")
+
+                    table_lines = []
+                    in_table = False
+
+        if in_table:
+            # Handle trailing table at EOF
+            parsed_courses = parse_table(table_lines)
+            if not parsed_courses:
+                kv_c = parse_kv_table(table_lines)
+                if kv_c:
+                    parsed_courses = [kv_c]
+            for course in parsed_courses:
+                c_name = course["name"]
+                c_code = course["code"]
+                c_ltp = course["ltp"]
+                c_credits = course["credits"]
+                c_node_id = f"course:{normalize_name(c_code if c_code else c_name)}"
+                self._add_node(c_node_id, "Course",
+                               name=c_name,
+                               code=c_code,
+                               ltp=c_ltp,
+                               credits=c_credits,
+                               source_file=filename)
+                self._add_edge(entity_id, c_node_id, "OFFERS_COURSE",
+                               semester=current_semester,
+                               category=current_category,
+                               bucket=current_bucket)
+                if current_bucket:
+                    bucket_id = f"bucket:{normalize_name(current_bucket)}"
+                    self._add_node(bucket_id, "ElectiveBucket",
+                                   name=current_bucket,
+                                   source_file=filename)
+                    self._add_edge(c_node_id, bucket_id, "BELONGS_TO_BUCKET")
+                    self._add_edge(entity_id, bucket_id, "HAS_BUCKET")
+
     def build(self) -> nx.DiGraph:
         if not os.path.exists(self.markdown_dir):
             raise FileNotFoundError(f"Markdown directory not found: {self.markdown_dir}")
@@ -408,6 +734,11 @@ class SectionKGBuilder:
                     self._parse_osd_ces(filename, content, doc_id)
                 elif "events" in filename:
                     self._parse_osd_events(filename, content, doc_id)
+            elif self.section_code == "academics":
+                if "curriculum" in filename:
+                    self._parse_curriculum_document(filename, content, doc_id)
+                elif "specialisation-and-courses" in filename:
+                    self._parse_specialisation_index(filename, content, doc_id)
 
         # Connect Section Person nodes to Section Head
         section_node = f"section:{self.section_code}"
@@ -422,6 +753,117 @@ class SectionKGBuilder:
 
         logger.info(f"Section Graph built: {self.graph.number_of_nodes()} nodes, {self.graph.number_of_edges()} edges")
         return self.graph
+
+    def _infer_department(self, title_str: str) -> Optional[str]:
+        title_lower = title_str.lower()
+        
+        def has_word(w: str) -> bool:
+            return bool(re.search(r'\b' + re.escape(w) + r'\b', title_lower))
+
+        if "computer science" in title_lower or has_word("cse") or "data science" in title_lower or "information security" in title_lower:
+            return "computer_science_engineering"
+        if "electrical" in title_lower or has_word("ee") or "vlsi" in title_lower or "microelectronics" in title_lower or "communication and signal" in title_lower or "cyber physical systems" in title_lower:
+            return "ee"
+        if "civil" in title_lower or "geotechnical" in title_lower or "structural" in title_lower or "tunnel" in title_lower or has_word("ce"):
+            return "civil_engineering"
+        if "mechanical" in title_lower or "thermal" in title_lower or "system design" in title_lower or "energy systems" in title_lower or has_word("me"):
+            return "mechanical_engineering"
+        if "chemical" in title_lower or "sustainable energy" in title_lower or has_word("ch") or has_word("che"):
+            return "chemical-engineering"
+        if "bioengineering" in title_lower or "biosciences" in title_lower or has_word("bsbe"):
+            return "bsbe"
+        if "chemistry" in title_lower:
+            return "chemistry"
+        if "physics" in title_lower:
+            return "physics"
+        if "materials" in title_lower or "metallurgy" in title_lower or has_word("mt") or has_word("mty"):
+            return "materials-engineering"
+        if "mathematics" in title_lower or "computing" in title_lower:
+            return "mathematics"
+        if "economics" in title_lower or has_word("hss"):
+            return "hss"
+        return None
+
+    def _parse_specialisation_index(self, filename: str, content: str, doc_id: str):
+        """Parse the academics-specialisation-and-courses index file."""
+        lines = content.splitlines()
+        current_level = "UG"
+        current_type = ""
+
+        for line in lines:
+            line_stripped = line.strip()
+            if not line_stripped:
+                continue
+
+            if line_stripped.startswith("## "):
+                heading = line_stripped[3:].strip()
+                if "PG" in heading.upper():
+                    current_level = "PG"
+                elif "UG" in heading.upper():
+                    current_level = "UG"
+                continue
+
+            subheading_match = re.match(r'^\d+\.\s+([A-Za-z.\s&/_()\-]+)$', line_stripped)
+            if subheading_match:
+                current_type = subheading_match.group(1).strip()
+                continue
+
+            link_match = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', line_stripped)
+            for link_text, link_url in link_match:
+                title = re.sub(r'\*+', '', link_text).strip()
+                superseded = False
+                if any(k in title.lower() or k in link_url.lower() for k in ("before-2024", "before_2024", "2019_scheme", "2019-scheme", "2017", "2018", "old")):
+                    superseded = True
+
+                prog_type = current_type
+                if "micro" in title.lower():
+                    prog_type = "Micro Specialization"
+                elif "minor" in title.lower():
+                    prog_type = "Minor"
+                elif "honours" in title.lower() or "honor" in title.lower():
+                    prog_type = "Honours"
+
+                # Extract total credits / graduation requirement if present in content
+                total_credits = None
+                req_match = re.search(r'graduation\s+requirement[s]?\s*[:*]*\s*([0-9.]+)(?:\s*credits)?', content, re.IGNORECASE)
+                if req_match:
+                    total_credits = req_match.group(1).strip()
+                else:
+                    tot_match = re.search(r'total\s+(?:program\s+)?credits\s*[:*]*\s*([0-9./-]+)', content, re.IGNORECASE)
+                    if tot_match:
+                        total_credits = tot_match.group(1).strip()
+
+                dept = self._infer_department(title)
+
+                if prog_type in ("Minor", "Specialization", "Micro Specialization", "Honours") or "specialization" in title.lower() or "minor" in title.lower() or "micro" in title.lower() or "honours" in title.lower():
+                    entity_label = "Specialization"
+                    entity_id = f"specialization:{normalize_name(title)}"
+                    self._add_node(entity_id, "Specialization",
+                                   name=title,
+                                   type=prog_type if prog_type else "Specialization",
+                                   level=current_level,
+                                   link=link_url,
+                                   department=dept,
+                                   superseded=superseded,
+                                   total_credits=total_credits,
+                                   source_file=filename)
+                else:
+                    entity_label = "AcademicProgram"
+                    entity_id = f"program:{normalize_name(title)}"
+                    self._add_node(entity_id, "AcademicProgram",
+                                   name=title,
+                                   level=f"{current_level} ({prog_type})" if prog_type else current_level,
+                                   link=link_url,
+                                   department=dept,
+                                   superseded=superseded,
+                                   total_credits=total_credits,
+                                   source_file=filename)
+
+                self._add_edge(entity_id, doc_id, "SOURCE_DOCUMENT")
+
+                academics_sec_node = f"section:{self.section_code}"
+                if self.graph.has_node(academics_sec_node):
+                    self._add_edge(academics_sec_node, entity_id, "OFFERS_PROGRAM" if entity_label == "AcademicProgram" else "OFFERS_SPECIALIZATION")
 
     def _parse_alumni_medalists(self, filename: str, content: str, doc_id: str):
         lines = [l.strip() for l in content.splitlines()]
@@ -1233,6 +1675,30 @@ def create_section_entity_descriptions(graph, section_code: str) -> list:
                 parts.append(f"Category: {data['category']}.")
             if data.get("description"):
                 parts.append(f"Details: {data['description']}.")
+        elif label == "AcademicProgram":
+            parts.append(f"{name} is an Academic Program offered by the Academics section at IIT Jammu.")
+            if data.get("level"):
+                parts.append(f"Program Level: {data['level']}.")
+            if data.get("superseded"):
+                parts.append("Note: This program version/curriculum is superseded by a newer version.")
+        elif label == "Specialization":
+            parts.append(f"{name} is an academic Specialization/Minor/Honours program offered by the Academics section at IIT Jammu.")
+            if data.get("type"):
+                parts.append(f"Specialization Type: {data['type']}.")
+            if data.get("level"):
+                parts.append(f"Program Level: {data['level']}.")
+            if data.get("superseded"):
+                parts.append("Note: This specialization version/curriculum is superseded by a newer version.")
+        elif label == "Course":
+            parts.append(f"Course: {name}.")
+            if data.get("code"):
+                parts.append(f"Course Code: {data['code']}.")
+            if data.get("ltp"):
+                parts.append(f"L-T-P Structure: {data['ltp']}.")
+            if data.get("credits"):
+                parts.append(f"Credits: {data['credits']}.")
+        elif label == "ElectiveBucket":
+            parts.append(f"Elective Bucket/Track: {name}.")
         else:
             parts.append(f"{name} ({label}) in {section_name} section.")
 

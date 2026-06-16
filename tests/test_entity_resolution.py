@@ -133,7 +133,7 @@ class TestCSEGraphParsing:
     def test_direct_answer_returns_students_under_vinit(self, cse_graph):
         retriever = HybridRetriever(cse_graph, embedding_engine=None, community_reports=[],
                                     dept_code="computer_science_engineering")
-        answer = retriever.get_direct_answer("PhD students under Dr. Vinit Jakhetiya")
+        answer = retriever.get_deterministic_context("PhD students under Dr. Vinit Jakhetiya")
         assert answer is not None
         assert "Ajeet Kumar Verma" in answer
         assert "Ambreen Bashir" in answer
