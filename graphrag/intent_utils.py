@@ -138,6 +138,19 @@ def is_academic_rules_query(query: str) -> bool:
     )
     
     # Check if any strong academic rule keyword is present
+    notification_keywords = (
+        "dpgc", "dugc", "committee member", "committee chairperson",
+        "faculty advisor", "programme coordinator", "program coordinator",
+        "fee structure", "fee notification", "tuition fee", "fee waiver",
+        "euler", "earn while you learn", "travel grant", "travel support",
+        "contingency grant", "research contingency", "bs honours", "bs honors",
+        "open research day", "stic dinner", "summer term incentive",
+        "htra", "partial financial support", "international student fee",
+        "study in india", "sii", "early start phd"
+    )
+    if any(term in q for term in notification_keywords):
+        return True
+
     if any(term in q for term in jrf_srf_keywords):
         return True
     if any(term in q for term in malpractice_keywords):

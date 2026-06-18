@@ -64,11 +64,16 @@ class SectionKGBuilder:
         if url_match:
             source_url = url_match.group(1).strip()
 
-        clean_title = (filename.replace(".html.md", "").replace(".md", "")
+        base_fn = os.path.basename(filename)
+        clean_title = (base_fn.replace(".html.md", "").replace(".md", "")
             .replace(f"{self.section_code}_", "").replace("_", " ").title())
 
+        # Extract notification date if present
+        date_match = re.search(r'\*\*Date:\*\*\s*([0-9a-zA-Z\s,]+)', content, re.IGNORECASE)
+        date_str = date_match.group(1).strip() if date_match else None
+
         doc_id = self._add_node(f"doc:{filename}", "Document", title=clean_title,
-            filename=filename, source_url=source_url)
+            filename=filename, source_url=source_url, notification_date=date_str)
 
         # Clean content before chunking — remove boilerplate
         clean_content = clean_content_for_chunks(content)
@@ -81,7 +86,8 @@ class SectionKGBuilder:
             chunk_meta = chunk_item.get("meta", {})
             if len(chunk_text_str.strip()) < 30:
                 continue
-            chunk_id = f"chunk_{filename}_{idx}"
+            safe_fn = filename.replace("/", "_").replace("\\", "_")
+            chunk_id = f"chunk_{safe_fn}_{idx}"
             self._add_node(chunk_id, "TextChunk", text=chunk_text_str,
                 doc_filename=filename, chunk_index=idx, source_url=source_url,
                 chunk_strategy=chunk_meta.get("strategy", "unknown"))
@@ -309,6 +315,504 @@ class SectionKGBuilder:
                            is_head=True,
                            source_file=filename)
             self._add_edge(resolved_name, doc_id, "SOURCE_DOCUMENT")
+
+    def _parse_committee_document(self, filename: str, content: str, doc_id: str):
+        lines = content.splitlines()
+        
+        # Extract notification date if present
+        date_match = re.search(r'\*\*Date:\*\*\s*([0-9a-zA-Z\s,]+)', content, re.IGNORECASE)
+        date_str = date_match.group(1).strip() if date_match else None
+        
+        # Determine committee title from first H1 or title
+        title = ""
+        h1_match = re.search(r'^\s*#\s+(.+)$', content, re.MULTILINE)
+        if h1_match:
+            title = h1_match.group(1).strip()
+        else:
+            title = os.path.basename(filename).replace(".md", "").replace("_", " ").title()
+            
+        title = re.sub(r'\*+', '', title).strip()
+        
+        # If it is DPGC or DUGC, we use department sub-headings to partition
+        is_dept_committee = "dpgc" in filename.lower() or "dugc" in filename.lower()
+        committee_type = "DPGC" if "dpgc" in filename.lower() else ("DUGC" if "dugc" in filename.lower() else "General")
+        
+        current_dept = None
+        in_table = False
+        headers = []
+        
+        for line in lines:
+            line_stripped = line.strip()
+            
+            # Check for department heading
+            if is_dept_committee:
+                dept_match = re.match(r'^(?:#|##)\s+Department\s+of\s+(.+)$', line_stripped, re.IGNORECASE)
+                if dept_match:
+                    current_dept = dept_match.group(1).strip()
+                    in_table = False
+                    continue
+            
+            if line_stripped.startswith('|'):
+                cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+                if not cells:
+                    continue
+                
+                # Check for divider
+                if all(re.match(r'^:?-+:?$', c) for c in cells):
+                    in_table = True
+                    continue
+                    
+                if not in_table:
+                    headers = [c.lower() for c in cells]
+                    continue
+                
+                # Check if this row is metadata (contains Institution, Date, etc.)
+                if any(h in headers for h in ("field", "value")) or any(c.lower() in ("institution", "notification number", "date", "document type", "subject", "issuing authority") for c in cells):
+                    continue
+                
+                # We are in table rows
+                if len(cells) >= 2:
+                    name = ""
+                    role = ""
+                    
+                    # Check columns based on headers if available
+                    name_idx = -1
+                    role_idx = -1
+                    for idx, h in enumerate(headers):
+                        if any(kw in h for kw in ("member", "name", "faculty advisor", "coordinator", "designation")):
+                            if name_idx == -1:
+                                name_idx = idx
+                        if any(kw in h for kw in ("role", "department", "designation")):
+                            if idx != name_idx:
+                                role_idx = idx
+                                
+                    if name_idx != -1 and name_idx < len(cells):
+                        name = cells[name_idx]
+                    else:
+                        name = cells[0]
+                        
+                    if role_idx != -1 and role_idx < len(cells):
+                        role = cells[role_idx]
+                    elif len(cells) > 1:
+                        role = cells[1]
+                        
+                    name = clean_admin_member_name(name)
+                    if not name or name.lower() in ("member", "designation", "s. no.", "s.no.", "value", "field") or len(name) < 3:
+                        continue
+                        
+                    # Skip numeric serial numbers
+                    if re.match(r'^\d+$', name):
+                        continue
+                        
+                    resolved_name = self.resolver.resolve(name)
+                    
+                    dept_key = current_dept if current_dept else "Institute"
+                    node_key = f"committee_member:{normalize_name(committee_type)}:{normalize_name(dept_key)}:{normalize_name(resolved_name)}"
+                    
+                    self._add_node(node_key, "CommitteeMember",
+                                   name=resolved_name,
+                                   designation=role,
+                                   department=dept_key,
+                                   committee_type=committee_type,
+                                   committee_name=title,
+                                   notification_date=date_str,
+                                   source_file=filename)
+                    self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+                    
+                    # Connect to academics section node
+                    academics_sec_node = f"section:{self.section_code}"
+                    if self.graph.has_node(academics_sec_node):
+                        self._add_edge(node_key, academics_sec_node, "BELONGS_TO_SECTION")
+
+    def _parse_advisor_document(self, filename: str, content: str, doc_id: str, label: str):
+        lines = content.splitlines()
+        
+        # Extract notification date if present
+        date_match = re.search(r'\*\*Date:\*\*\s*([0-9a-zA-Z\s,]+)', content, re.IGNORECASE)
+        date_str = date_match.group(1).strip() if date_match else None
+        
+        # Extract batch year from filename/title (e.g. 2025)
+        batch_year = "2025"
+        year_match = re.search(r'\b(20\d{2})\b', filename)
+        if year_match:
+            batch_year = year_match.group(1)
+            
+        in_table = False
+        headers = []
+        for line in lines:
+            line_stripped = line.strip()
+            if line_stripped.startswith('|'):
+                cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+                if not cells:
+                    continue
+                if all(re.match(r'^:?-+:?$', c) for c in cells):
+                    in_table = True
+                    continue
+                if not in_table:
+                    headers = [c.lower() for c in cells]
+                    continue
+                
+                # Check for metadata
+                if any(c.lower() in ("field", "value", "institution", "date", "document type") for c in cells):
+                    continue
+                
+                # Table rows
+                if len(cells) >= 3:
+                    prog_name = cells[1]
+                    name = clean_admin_member_name(cells[2])
+                    
+                    if not name or len(name) < 3:
+                        continue
+                    if re.match(r'^\d+$', name):
+                        continue
+                        
+                    resolved_name = self.resolver.resolve(name)
+                    node_key = f"{label.lower()}:{normalize_name(prog_name)}:{normalize_name(resolved_name)}"
+                    
+                    self._add_node(node_key, label,
+                                   name=resolved_name,
+                                   programme=prog_name,
+                                   batch_year=batch_year,
+                                   notification_date=date_str,
+                                   source_file=filename)
+                    self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+                    
+                    # Connect to academics section node
+                    academics_sec_node = f"section:{self.section_code}"
+                    if self.graph.has_node(academics_sec_node):
+                        self._add_edge(node_key, academics_sec_node, "BELONGS_TO_SECTION")
+
+    def _parse_fee_structure_document(self, filename: str, content: str, doc_id: str):
+        lines = content.splitlines()
+        
+        # Extract notification date if present
+        date_match = re.search(r'\*\*Date:\*\*\s*([0-9a-zA-Z\s,]+)', content, re.IGNORECASE)
+        date_str = date_match.group(1).strip() if date_match else None
+        
+        current_category = "General"
+        in_table = False
+        headers = []
+        
+        for line in lines:
+            line_stripped = line.strip()
+            
+            # Check headers
+            category_match = re.match(r'^(?:#|##)\s+(.+?)(?:\s+Programmes|\s+Programmes\s*\(Continued\))?$', line_stripped, re.IGNORECASE)
+            if category_match:
+                match_val = category_match.group(1).strip()
+                if "b.tech" in match_val.lower() or "ug-bs" in match_val.lower() or "m.tech" in match_val.lower() or "m.sc" in match_val.lower() or "ph.d" in match_val.lower():
+                    current_category = match_val
+                    in_table = False
+                    continue
+            
+            if line_stripped.startswith('|'):
+                cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+                if not cells:
+                    continue
+                if all(re.match(r'^:?-+:?$', c) for c in cells):
+                    in_table = True
+                    continue
+                if not in_table:
+                    headers = [c.lower() for c in cells]
+                    continue
+                
+                # Check for metadata
+                if any(c.lower() in ("field", "value", "institution", "date", "document type") for c in cells):
+                    continue
+                
+                # Table rows
+                if len(cells) >= 3:
+                    entry_year = cells[0]
+                    # Skip if not starting with a year
+                    if not re.search(r'\b\d{4}\b', entry_year):
+                        continue
+                        
+                    income_category = "All"
+                    if "income category" in headers:
+                        income_idx = headers.index("income category")
+                        income_category = cells[income_idx]
+                    
+                    programme = current_category
+                    if "programme" in headers:
+                        prog_idx = headers.index("programme")
+                        programme = cells[prog_idx]
+                    elif "category" in headers:
+                        cat_idx = headers.index("category")
+                        programme = f"{current_category} ({cells[cat_idx]})"
+                        
+                    # Find Fee Gen and Fee SC/ST
+                    fee_gen_idx = -1
+                    fee_sc_idx = -1
+                    for idx, h in enumerate(headers):
+                        if any(kw in h for kw in ("general/obc/ews", "general/obc/ews fee", "tuition fee + other charges")):
+                            fee_gen_idx = idx
+                        if any(kw in h for kw in ("sc/st/pwd", "sc/st/pwd fee", "sc/st/pwd charges")):
+                            fee_sc_idx = idx
+                            
+                    fee_gen = ""
+                    fee_sc_st_pwd = ""
+                    if fee_gen_idx != -1 and fee_gen_idx < len(cells):
+                        fee_gen = cells[fee_gen_idx]
+                    elif len(cells) >= 3:
+                        fee_gen = cells[2]
+                        
+                    if fee_sc_idx != -1 and fee_sc_idx < len(cells):
+                        fee_sc_st_pwd = cells[fee_sc_idx]
+                    elif len(cells) >= 4:
+                        fee_sc_st_pwd = cells[3]
+                        
+                    # Create structured fee structure node
+                    node_key = f"fee_structure:{normalize_name(programme)}:{normalize_name(entry_year)}:{normalize_name(income_category)}"
+                    self._add_node(node_key, "FeeStructure",
+                                   programme=programme,
+                                   entry_year=entry_year,
+                                   income_category=income_category,
+                                   fee_gen_obc_ews=fee_gen,
+                                   fee_sc_st_pwd=fee_sc_st_pwd,
+                                   category=current_category,
+                                   notification_date=date_str,
+                                   source_file=filename)
+                    self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+                    
+                    # Connect to academics section node
+                    academics_sec_node = f"section:{self.section_code}"
+                    if self.graph.has_node(academics_sec_node):
+                        self._add_edge(node_key, academics_sec_node, "BELONGS_TO_SECTION")
+
+    def _parse_notification_policy_document(self, filename: str, content: str, doc_id: str):
+        lines = content.splitlines()
+        
+        # 1. Extract notification number
+        notification_number = None
+        number_match = re.search(r'(?:No\.|Notification No\.?:?)\s*(IITJMU/[^\s\n,\*;]+)', content, re.IGNORECASE)
+        if number_match:
+            notification_number = number_match.group(1).strip()
+            notification_number = re.sub(r'[.\s]+$', '', notification_number)
+
+        # 2. Extract notification date
+        date_match = re.search(r'\*\*Date:\*\*\s*([0-9a-zA-Z\s,]+)', content, re.IGNORECASE)
+        if not date_match:
+            date_match = re.search(r'(?:Date|Dated)(?::-|:)?\s*([0-9]{1,2}(?:st|nd|rd|th)?\s+[a-zA-Z,.\s]+\s+[0-9]{4})', content, re.IGNORECASE)
+        if not date_match:
+            date_match = re.search(r'(?:Date|Dated)(?::-|:)?\s*([0-9a-zA-Z\s,.-]+)', content, re.IGNORECASE)
+        date_str = date_match.group(1).strip() if date_match else None
+        if date_str:
+            date_str = re.sub(r'\s+', ' ', date_str)
+
+        # 3. Determine clean title from first H1 or filename
+        title = ""
+        h1_match = re.search(r'^\s*#\s+(.+)$', content, re.MULTILINE)
+        if h1_match:
+            title = h1_match.group(1).strip()
+        else:
+            title = os.path.basename(filename).replace(".md", "").replace("_", " ").title()
+        title = re.sub(r'\*+', '', title).strip()
+
+        # 4. Classify category based on filename and content
+        fn_lower = filename.lower()
+        content_lower = content.lower()
+        
+        category = "general"
+        if any(w in fn_lower for w in ["internship", "six-month", "6-month"]):
+            category = "internship_policy"
+        elif any(w in fn_lower for w in ["fee_waiver", "tuition_fee"]):
+            category = "financial_policy"
+        elif any(w in fn_lower for w in ["transfer_of_doctoral", "phd_transfer"]):
+            category = "phd_policy"
+        elif any(w in fn_lower for w in ["grade_moderation", "moderation"]):
+            category = "grading_policy"
+        elif any(w in fn_lower for w in ["early_start_phd", "early_start"]):
+            category = "phd_policy"
+        elif any(w in fn_lower for w in ["phd_scholars_quota", "quota_under_project"]):
+            category = "phd_policy"
+        elif any(w in fn_lower for w in ["open_research_day", "open_research"]):
+            category = "phd_policy"
+        elif any(w in fn_lower for w in ["new_pg_program", "pg_programs", "starting_new_pg", "introducing_new_m"]):
+            category = "pg_procedure"
+        elif any(w in fn_lower for w in ["backlog", "re-examination", "re_examination"]):
+            category = "grading_policy"
+        elif any(w in fn_lower for w in ["partial_financial_support", "international_students"]):
+            category = "financial_policy"
+        elif any(w in fn_lower for w in ["study_in_india", "sii"]):
+            category = "admission_policy"
+        elif any(w in fn_lower for w in ["foreign_nationals", "foreign_national"]):
+            category = "admission_policy"
+        elif any(w in fn_lower for w in ["spoc", "spoc_notification"]):
+            category = "admin_notification"
+        elif any(w in fn_lower for w in ["stic_dinner", "stic"]):
+            category = "admin_notification"
+        elif any(w in fn_lower for w in ["fellowship_extension", "htra_to_female", "extension_of_htra"]):
+            category = "phd_policy"
+        elif any(w in fn_lower for w in ["revision_of_hra", "hra_on_fellowship"]):
+            category = "financial_policy"
+        elif any(w in fn_lower for w in ["summer_term_financial", "financial_incentive"]):
+            category = "financial_policy"
+
+        # 5. Extract applies_to
+        applies_to = []
+        if "b.tech" in content_lower or "ug" in content_lower:
+            applies_to.append("B.Tech")
+        if "m.tech" in content_lower or "pg" in content_lower or "m.sc" in content_lower or "ms(r)" in content_lower:
+            applies_to.append("PG")
+        if "phd" in content_lower or "ph.d" in content_lower or "doctoral" in content_lower:
+            applies_to.append("PhD")
+        if "international" in content_lower or "foreign" in content_lower:
+            applies_to.append("International Students")
+        if not applies_to:
+            applies_to = ["All"]
+
+        # 6. Keywords
+        keywords = []
+        kw_options = ["internship", "fee waiver", "remission", "phd transfer", "backlog", "re-examination", "grade moderation",
+                      "early start", "project funding", "open research day", "pg programs", "stipend", "fellowship", "admission",
+                      "hra", "contingency", "credit limit", "preparatory", "mini project", "study in india", "spoc", "stic dinner"]
+        for kw in kw_options:
+            if kw in content_lower:
+                keywords.append(kw.title())
+
+        # 7. Extract Summary (first few paragraphs)
+        summary_paragraphs = []
+        for line in lines:
+            line_str = line.strip()
+            if not line_str or line_str.startswith("#") or line_str.startswith("---") or line_str.startswith("<!--") or line_str.startswith("**") or ":" in line_str[:20]:
+                continue
+            summary_paragraphs.append(line_str)
+            if len(summary_paragraphs) >= 3:
+                break
+        summary = "\n\n".join(summary_paragraphs)
+
+        # 8. Eligibility Criteria extraction
+        eligibility_criteria = []
+        in_eligibility_section = False
+        for line in lines:
+            line_str = line.strip()
+            if not line_str:
+                continue
+            if line_str.startswith("#") and any(w in line_str.lower() for w in ["eligibility", "condition", "requirement", "guideline"]):
+                in_eligibility_section = True
+                continue
+            elif line_str.startswith("#"):
+                in_eligibility_section = False
+                
+            if in_eligibility_section:
+                if line_str.startswith("-") or line_str.startswith("*"):
+                    item = line_str.lstrip("-* ").strip()
+                    if item: eligibility_criteria.append(item)
+                elif re.match(r'^\d+\.\s*', line_str):
+                    item = re.sub(r'^\d+\.\s*', '', line_str).strip()
+                    if item: eligibility_criteria.append(item)
+
+        # 9. Procedure Steps extraction
+        procedure_steps = []
+        in_procedure_section = False
+        for line in lines:
+            line_str = line.strip()
+            if not line_str:
+                continue
+            if line_str.startswith("#") and any(w in line_str.lower() for w in ["procedure", "step", "process", "workflow", "how to"]):
+                in_procedure_section = True
+                continue
+            elif line_str.startswith("#"):
+                in_procedure_section = False
+                
+            if in_procedure_section:
+                if line_str.startswith("-") or line_str.startswith("*"):
+                    item = line_str.lstrip("-* ").strip()
+                    if item: procedure_steps.append(item)
+                elif re.match(r'^\d+\.\s*', line_str) or line_str.startswith(">"):
+                    item = re.sub(r'^\d+\.\s*|>\s*', '', line_str).strip()
+                    if item: procedure_steps.append(item)
+
+        # 10. Extract key facts (slabs, deadlines, limits, numbers)
+        key_facts = []
+        if notification_number:
+            key_facts.append({"key": "Notification Number", "value": notification_number})
+        if date_str:
+            key_facts.append({"key": "Notification Date", "value": date_str})
+
+        if "tuition_fee_waiver" in fn_lower or "fee_waiver" in fn_lower or "tuition" in fn_lower:
+            key_facts.extend([
+                {"key": "SC / ST / PH Students Benefit", "value": "100% Tuition Fee Waiver"},
+                {"key": "Most Economically Backward (Income < 1 Lakh) Benefit", "value": "100% Tuition Fee Remission"},
+                {"key": "Other Economically Backward (Income 1 Lakh to 5 Lakh) Benefit", "value": "2/3rd Tuition Fee Remission"},
+                {"key": "Income Above 5 Lakh Benefit", "value": "No Tuition Fee Remission"},
+                {"key": "Submission Portal", "value": "SARAL Portal"},
+                {"key": "Portal Request Type", "value": "Income Certificate / Category Change Request"},
+                {"key": "Submission Deadline for AY 2026-27", "value": "15 June 2026"}
+            ])
+        elif "six-month_internship" in fn_lower or "internship_policy" in fn_lower or "internship" in fn_lower:
+            key_facts.extend([
+                {"key": "Internship Duration", "value": "Up to 6 months"},
+                {"key": "B.Tech Eligibility Window", "value": "8th Semester (December - June)"},
+                {"key": "M.Tech/M.Sc. Eligibility Window", "value": "4th Semester (December - June)"},
+                {"key": "M.Tech/MS(R) (3 Years) Eligibility Window", "value": "6th Semester (December - June)"},
+                {"key": "UG Course Allowance During Internship", "value": "Maximum 1 online course (with prior approval)"},
+                {"key": "PG Course Allowance During Internship", "value": "No online courses allowed. Must complete coursework first."},
+                {"key": "Stipend/Scholarship", "value": "No stipend or scholarship provided by the Institute during internship"},
+                {"key": "Placements Restriction", "value": "If a student has a confirmed 6-month internship offer, they are not eligible for other placement/I+J opportunities"}
+            ])
+        elif "transfer_of_doctoral" in fn_lower or "transfer" in fn_lower:
+            key_facts.extend([
+                {"key": "Eligible Sending Institutions", "value": "IISc, IITs, NITs, IISERs, ISI, IMSc, CMI, NIRF Top 100 relevant discipline, Foreign QS < 750"},
+                {"key": "Maximum Prior Registration at Sending Institute", "value": "2 Years"},
+                {"key": "Minimum CGPA for Transfer", "value": "8.0"},
+                {"key": "Transfer Timeline", "value": "Must start within one year of the supervisor joining IIT Jammu"},
+                {"key": "Minimum Residency Requirement", "value": "One Year enrollment at IIT Jammu before thesis submission"},
+                {"key": "Maximum Scholarship Support Duration", "value": "5 Years (including support received at transferring institution)"}
+            ])
+        elif "scholars_quota" in fn_lower or "project_funding" in fn_lower:
+            key_facts.extend([
+                {"key": "Additional PhD Scholar Allowance", "value": "One additional PhD scholar under Project Funding beyond normal quota"},
+                {"key": "Minimum Service Requirement for Faculty", "value": "Five years of service at IIT Jammu"},
+                {"key": "PhD Graduation Record Requirement", "value": "At least one PhD scholar defended at IIT Jammu"},
+                {"key": "Remaining Project Funding Duration", "value": "Minimum 3 years remaining"},
+                {"key": "Conversion Limit to Institute Funding", "value": "Maximum 2 project-funded PhD students under the faculty member"}
+            ])
+        elif "grade_moderation" in fn_lower or "moderation" in fn_lower:
+            key_facts.extend([
+                {"key": "Maximum AA Grade Percentage", "value": "10% of students in any course"},
+                {"key": "Minimum Passing Marks", "value": "Above 30% on an absolute scale"},
+                {"key": "Expected Course Average Grade Range", "value": "6.5 to 7.5"},
+                {"key": "Maximum Allowed Average Grade", "value": "8.50"},
+                {"key": "Normal Grade Distribution Requirement", "value": "Expected in courses with more than 30 graded students"}
+            ])
+        elif "early_start" in fn_lower:
+            key_facts.extend([
+                {"key": "GATE Requirement", "value": "No GATE qualification is required"},
+                {"key": "Minimum UG CGPA/CPI for General/OBC/EWS", "value": "8.0 at the end of the third year"},
+                {"key": "Minimum UG CGPA/CPI for SC/ST/PwD", "value": "7.5 at the end of the third year"},
+                {"key": "Department Quota", "value": "One early start PhD position per department per year"},
+                {"key": "Maximum Fellowship Duration", "value": "5 years"},
+                {"key": "Fee Payment Deadline", "value": "Within two weeks from the date of email notification"}
+            ])
+
+        amount_matches = re.findall(r'(?:Rs\.?|INR|₹)\s*[\d,]+', content)
+        for amt in amount_matches[:3]:
+            context_match = re.search(r'([^.\n]{0,30}' + re.escape(amt) + r'[^.\n]{0,30})', content)
+            if context_match:
+                key_facts.append({"key": "Financial Detail", "value": context_match.group(1).strip()})
+
+        # Create structured notification node
+        node_key = f"policy_notification:{normalize_name(title)}"
+        self._add_node(node_key, "PolicyNotification",
+                       title=title,
+                       notification_number=notification_number,
+                       notification_date=date_str,
+                       category=category,
+                       applies_to=applies_to,
+                       keywords=keywords,
+                       summary=summary,
+                       key_facts=key_facts,
+                       eligibility_criteria=eligibility_criteria,
+                       procedure_steps=procedure_steps,
+                       source_file=filename)
+                       
+        self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+        
+        # Connect to academics section node
+        academics_sec_node = f"section:{self.section_code}"
+        if self.graph.has_node(academics_sec_node):
+            self._add_edge(node_key, academics_sec_node, "BELONGS_TO_SECTION")
 
     def _parse_curriculum_document(self, filename: str, content: str, doc_id: str):
         """Parse academic curriculum and specialization documents."""
@@ -643,6 +1147,17 @@ class SectionKGBuilder:
                      if f.endswith(".md") and not f.startswith("00_combined")
                      and not f.endswith(".json")]
 
+        # Discover files in subdirectories for academics section (academic_notifications)
+        if self.section_code == "academics":
+            notifications_dir = os.path.join(self.markdown_dir, "parsed_documents", "academic_notifications")
+            if os.path.exists(notifications_dir):
+                notification_files = [f for f in os.listdir(notifications_dir)
+                                      if f.endswith(".md") and not f.startswith("00_combined")
+                                      and not f.endswith(".json")]
+                for nf in notification_files:
+                    # Keep relative path under markdown_dir
+                    filenames.append(os.path.join("parsed_documents", "academic_notifications", nf))
+
         logger.info(f"Processing {len(filenames)} section markdown files...")
 
         # Parse E2 head Puja Rajyaguru as SectionHead
@@ -739,6 +1254,16 @@ class SectionKGBuilder:
                     self._parse_curriculum_document(filename, content, doc_id)
                 elif "specialisation-and-courses" in filename:
                     self._parse_specialisation_index(filename, content, doc_id)
+                elif "DPGC" in filename or "DUGC" in filename or "Committee" in filename:
+                    self._parse_committee_document(filename, content, doc_id)
+                elif "Faculty_Advisor" in filename:
+                    self._parse_advisor_document(filename, content, doc_id, "FacultyAdvisor")
+                elif "Program_Coordinator" in filename:
+                    self._parse_advisor_document(filename, content, doc_id, "ProgramCoordinator")
+                elif "Fee_Notification" in filename:
+                    self._parse_fee_structure_document(filename, content, doc_id)
+                elif "academic_notifications" in filename:
+                    self._parse_notification_policy_document(filename, content, doc_id)
 
         # Connect Section Person nodes to Section Head
         section_node = f"section:{self.section_code}"
@@ -1699,6 +2224,28 @@ def create_section_entity_descriptions(graph, section_code: str) -> list:
                 parts.append(f"Credits: {data['credits']}.")
         elif label == "ElectiveBucket":
             parts.append(f"Elective Bucket/Track: {name}.")
+        elif label == "CommitteeMember":
+            parts.append(f"{name} is a member of the {data.get('committee_type', 'committee')} ({data.get('committee_name', '')}) of {data.get('department', '')} department at IIT Jammu.")
+            if data.get("designation"):
+                parts.append(f"Role/Designation: {data['designation']}.")
+            if data.get("notification_date"):
+                parts.append(f"Notification Date: {data['notification_date']}.")
+        elif label == "FacultyAdvisor":
+            parts.append(f"{name} is the Faculty Advisor for {data.get('programme', '')} (Batch Year: {data.get('batch_year', '')}) at IIT Jammu.")
+            if data.get("notification_date"):
+                parts.append(f"Notification Date: {data['notification_date']}.")
+        elif label == "ProgramCoordinator":
+            parts.append(f"{name} is the Programme Coordinator for {data.get('programme', '')} (Batch Year: {data.get('batch_year', '')}) at IIT Jammu.")
+            if data.get("notification_date"):
+                parts.append(f"Notification Date: {data['notification_date']}.")
+        elif label == "FeeStructure":
+            parts.append(f"Fee structure for {data.get('programme', '')} (Entry/Admission Year: {data.get('entry_year', '')}).")
+            if data.get("income_category"):
+                parts.append(f"Income Category: {data['income_category']}.")
+            if data.get("fee_gen_obc_ews"):
+                parts.append(f"Tuition Fee & Other Charges (General/OBC/EWS): {data['fee_gen_obc_ews']}.")
+            if data.get("fee_sc_st_pwd"):
+                parts.append(f"SC/ST/PwD Charges: {data['fee_sc_st_pwd']}.")
         else:
             parts.append(f"{name} ({label}) in {section_name} section.")
 

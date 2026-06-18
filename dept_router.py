@@ -94,7 +94,14 @@ SECTION_NAME_ALIASES = {
         "examination", "grading", "convocation", "scholarship",
         "academic programs", "curriculum", "specialisation",
         "specialization", "course", "syllabus", "admission",
-        "minor", "minors", "elective", "electives"
+        "minor", "minors", "elective", "electives",
+        "dpgc", "dugc", "committee", "faculty advisor", 
+        "program coordinator", "programme coordinator",
+        "fee notification", "fee structure", "semester fee",
+        "tuition fee", "fee waiver", "fellowship", "contingency",
+        "euler", "earn while you learn", "travel grant",
+        "bs honours", "bs honors", "research contingency",
+        "jrf", "srf", "htra"
     ],
     "accounts": [
         "accounts", "accounts section", "finance", "billing",

@@ -67,7 +67,7 @@ def test_section_retriever_routing_academics():
     
     # Explicit link query should still return the direct template answer
     bundle_link = retriever.retrieve_bundle("give me the link for the academic rules manual pdf")
-    assert bundle_link["provenance"]["route"] in ("direct_graph", "rules_db")
+    assert bundle_link["provenance"]["route"] in ("direct_graph", "rules_db", "rules_db+chunks")
 
 
 @pytest.mark.parametrize("query", [
@@ -130,7 +130,7 @@ def test_academic_rules_do_not_mix_notice_list_chunks():
     retriever = SectionRetriever(section_code="academics", graph=graph, chunks=chunks, embedding_engine=None)
     bundle = retriever.retrieve_bundle("Procedure of BTP allotment")
 
-    assert bundle["provenance"]["route"] == "rules_db"
+    assert bundle["provenance"]["route"] in ("rules_db", "rules_db+chunks")
     assert "BTP allotment" in bundle["context"]
     assert "Committee for framing policy of grading for the PG Thesis and BTP" not in bundle["context"]
 

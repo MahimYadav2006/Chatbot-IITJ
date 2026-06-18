@@ -331,13 +331,19 @@ def derive_title(filename: str) -> str:
 #  MAIN PIPELINE
 # ═══════════════════════════════════════════════════════════════════════
 
-def determine_category(rel_path: str) -> Tuple[str, str]:
-    """Determine category and subcategory from relative path."""
-    parts = Path(rel_path).parts
+def determine_category(path: str) -> Tuple[str, str]:
+    """Determine category and subcategory from file path."""
+    parts = Path(path).parts
     category = "academics"
     subcategory = "general"
 
-    if "Rules and Regulations" in parts:
+    # Normalize parts to check for academic notifications (handles any directory separators and capitalization/spacing/typos)
+    normalized_parts = [p.lower().replace("_", " ").replace("-", " ").strip() for p in parts]
+
+    if any("academic notifications" in p or "academic notiications" in p for p in normalized_parts):
+        category = "academic_notifications"
+        subcategory = "general"
+    elif "Rules and Regulations" in parts:
         category = "rules_and_regulations"
         if "UG" in parts:
             subcategory = "undergraduate"
@@ -400,7 +406,7 @@ def process_file(
 
     log.info(f"📄 Processing: {rel_path}")
 
-    category, subcategory = determine_category(rel_path)
+    category, subcategory = determine_category(input_path)
     title = derive_title(filename)
     report = {"file": rel_path, "category": category, "subcategory": subcategory}
 

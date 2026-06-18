@@ -47,7 +47,7 @@ class TestPhDRosterRetrieval:
         """Department-level PhD count questions should bypass fuzzy community summaries."""
         context = retriever.retrieve("total number of phd scholar in ee at iit jammu")
         assert "66 PhD scholars" in context
-        assert "Authoritative PhD Scholar Roster" in context
+        assert "Authoritative Department Data" in context or "Authoritative PhD Scholar Roster" in context
         assert "Department Overview" not in context
 
     def test_direct_phd_answer_is_exact(self, retriever):
