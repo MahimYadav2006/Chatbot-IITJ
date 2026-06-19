@@ -1162,7 +1162,20 @@ class SectionKGBuilder:
                     # Keep relative path under markdown_dir
                     filenames.append(os.path.join("parsed_documents", "academic_notifications", nf))
 
+        # Filter out boilerplate files for student sections
+        if self.section_code.startswith("students-"):
+            from departments import STUDENT_SECTION_SKIP_PATTERNS
+            orig_count = len(filenames)
+            filenames = [
+                f for f in filenames
+                if not any(pat in f for pat in STUDENT_SECTION_SKIP_PATTERNS)
+            ]
+            skipped = orig_count - len(filenames)
+            if skipped:
+                logger.info(f"Skipped {skipped} boilerplate files for section '{self.section_code}'")
+
         logger.info(f"Processing {len(filenames)} section markdown files...")
+
 
         # Parse E2 head Puja Rajyaguru as SectionHead
         if self.section_code == "e2":
@@ -1268,6 +1281,21 @@ class SectionKGBuilder:
                     self._parse_fee_structure_document(filename, content, doc_id)
                 elif "academic_notifications" in filename:
                     self._parse_notification_policy_document(filename, content, doc_id)
+            # ── Student Section Dispatchers ──────────────────────────────
+            elif self.section_code == "students-faq":
+                self._parse_faq_document(filename, content, doc_id)
+            elif self.section_code == "students-schedule":
+                self._parse_schedule_document(filename, content, doc_id)
+            elif self.section_code == "students-certificate-programs":
+                self._parse_certificate_program(filename, content, doc_id)
+            elif self.section_code == "students-pmrf":
+                self._parse_pmrf_fellow(filename, content, doc_id)
+            elif self.section_code in (
+                "students-ug-admissions",
+                "students-pg-admissions",
+                "students-phd-admissions",
+            ):
+                self._parse_admission_page(filename, content, doc_id)
 
         # Connect Section Person nodes to Section Head
         section_node = f"section:{self.section_code}"
@@ -2013,7 +2041,291 @@ class SectionKGBuilder:
                        source_file=filename)
         self._add_edge(contact_id, doc_id, "SOURCE_DOCUMENT")
 
+    # ──────────────────────────────────────────────────────────────────────
+    # Student Section Parsers
+    # ──────────────────────────────────────────────────────────────────────
+
+    def _parse_faq_document(self, filename: str, content: str, doc_id: str):
+        """Extract FAQ Q&A pairs as structured FAQ nodes.
+
+        Handles the IIT Jammu FAQ format:
+          - **Question text?**
+          Answer text...
+        """
+        # Split on bold question markers
+        qa_blocks = re.split(r'- \*\*(.+?)\*\*', content)
+        faq_count = 0
+        for i in range(1, len(qa_blocks), 2):
+            question = qa_blocks[i].strip()
+            answer = qa_blocks[i + 1].strip() if i + 1 < len(qa_blocks) else ""
+            if not question or len(answer) < 10:
+                continue
+            # Clean answer — remove leftover list markers at start
+            answer = re.sub(r'^\s*\n', '', answer)
+            node_key = f"faq:{normalize_name(question[:80])}"
+            self._add_node(node_key, "FAQ",
+                           question=question,
+                           answer=answer,
+                           source_file=filename)
+            self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+            faq_count += 1
+        if faq_count:
+            logger.info(f"  Extracted {faq_count} FAQ entries from {filename}")
+
+    def _parse_schedule_document(self, filename: str, content: str, doc_id: str):
+        """Extract academic schedule events from markdown tables.
+
+        Creates ScheduleEvent nodes with event name, dates, and programme level.
+        Also extracts Holiday nodes from holiday tables.
+        """
+        # Detect programme level from filename and content headings
+        fn_lower = filename.lower()
+        if "ug" in fn_lower:
+            default_level = "UG"
+        elif "mtech" in fn_lower or "pg" in fn_lower:
+            default_level = "PG"
+        elif "phd" in fn_lower:
+            default_level = "PhD"
+        else:
+            default_level = "General"
+
+        # Parse content by sections (## headings)
+        sections = re.split(r'^(##\s+.+)$', content, flags=re.MULTILINE)
+        current_level = default_level
+        event_count = 0
+
+        for idx_s, section_text in enumerate(sections):
+            sec_lower = section_text.lower()
+            # Detect level from heading
+            if section_text.startswith("##"):
+                if "1st year" in sec_lower:
+                    current_level = "UG 1st Year"
+                elif "2nd" in sec_lower and "3rd" in sec_lower:
+                    current_level = "UG 2nd/3rd Year"
+                elif "4th year" in sec_lower:
+                    current_level = "UG 4th Year"
+                elif "mtech" in sec_lower or "m.tech" in sec_lower:
+                    current_level = "MTech"
+                elif "phd" in sec_lower:
+                    current_level = "PhD"
+                elif "holiday" in sec_lower:
+                    current_level = "Holiday"
+                continue
+
+            # Parse table rows
+            in_table = False
+            for line in section_text.splitlines():
+                line_stripped = line.strip()
+                if not line_stripped.startswith('|'):
+                    continue
+                cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+                if not cells:
+                    continue
+                # Skip separator rows
+                if all(re.match(r'^:?-+:?$', c) for c in cells if c):
+                    in_table = True
+                    continue
+                # Skip header rows
+                if not in_table:
+                    if any(h in ' '.join(cells).lower() for h in ('s.no', 'event', 'date', 'holiday', 'day')):
+                        in_table = True
+                    continue
+
+                if current_level == "Holiday" and len(cells) >= 3:
+                    holiday_name = cells[0]
+                    date_str = cells[1]
+                    day_str = cells[2] if len(cells) > 2 else ""
+                    node_key = f"holiday:{normalize_name(holiday_name[:60])}"
+                    self._add_node(node_key, "Holiday",
+                                   name=holiday_name,
+                                   date=date_str,
+                                   day=day_str,
+                                   source_file=filename)
+                    self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+                    event_count += 1
+                elif len(cells) >= 4:
+                    event_name = cells[1]
+                    from_date = cells[2]
+                    to_date = cells[3]
+                    if not event_name or event_name == '—' or event_name == '-':
+                        continue
+                    node_key = f"schedule:{current_level}:{normalize_name(event_name[:60])}"
+                    self._add_node(node_key, "ScheduleEvent",
+                                   event=event_name,
+                                   from_date=from_date,
+                                   to_date=to_date,
+                                   level=current_level,
+                                   source_file=filename)
+                    self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+                    event_count += 1
+
+        if event_count:
+            logger.info(f"  Extracted {event_count} schedule/holiday events from {filename}")
+
+    def _parse_certificate_program(self, filename: str, content: str, doc_id: str):
+        """Extract certificate program details as structured CertificateProgram nodes.
+
+        Parses program name, modules, eligibility, highlights, and contact info.
+        """
+        # Extract program name from source URL or first heading
+        name = None
+        url_match = re.search(r'# Source URL:\s*https?://[^/]+/(.+)', content)
+        if url_match:
+            name = url_match.group(1).replace('-', ' ').replace('_', ' ').title()
+
+        h1_match = re.search(r'^#\s+(?:Program\s+)?(.+)$', content, re.MULTILINE)
+        if h1_match and "Source URL" not in h1_match.group(0):
+            name = h1_match.group(1).strip()
+
+        if not name:
+            name = os.path.basename(filename).replace('.md', '').replace('_', ' ').replace('-', ' ').title()
+
+        # Extract sections
+        modules = self._extract_section_list(content, r"Modules?")
+        eligibility = self._extract_section_text(content, r"Eligibility\s*Criteria?")
+        highlights = self._extract_section_list(content, r"(?:Program\s+)?Highlights?")
+        learning_outcomes = self._extract_section_list(content, r"Learning\s+Outcomes?")
+        contact = self._extract_section_text(content, r"Contact\s*Details?")
+        admission = self._extract_section_text(content, r"Admission\s+Process")
+        ideal_for = self._extract_section_list(content, r"Ideal\s+For")
+
+        node_key = f"cert_program:{normalize_name(name[:80])}"
+        self._add_node(node_key, "CertificateProgram",
+                       name=name,
+                       modules="; ".join(modules) if modules else "",
+                       eligibility=eligibility or "",
+                       highlights="; ".join(highlights) if highlights else "",
+                       learning_outcomes="; ".join(learning_outcomes) if learning_outcomes else "",
+                       contact=contact or "",
+                       admission_process=admission or "",
+                       ideal_for="; ".join(ideal_for) if ideal_for else "",
+                       source_file=filename)
+        self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+        logger.info(f"  Extracted certificate program: {name[:60]}")
+
+    def _extract_section_list(self, content: str, heading_pattern: str) -> List[str]:
+        """Extract a list of items under a markdown heading."""
+        pattern = rf'^##\s+{heading_pattern}\s*$(.+?)(?=^##\s|\Z)'
+        match = re.search(pattern, content, re.MULTILINE | re.DOTALL | re.IGNORECASE)
+        if not match:
+            return []
+        section_text = match.group(1)
+        items = re.findall(r'^[\s]*[-*]\s+(.+)$', section_text, re.MULTILINE)
+        return [item.strip() for item in items if item.strip()]
+
+    def _extract_section_text(self, content: str, heading_pattern: str) -> Optional[str]:
+        """Extract text under a markdown heading as a single block."""
+        pattern = rf'^##\s+{heading_pattern}\s*$(.+?)(?=^##\s|\Z)'
+        match = re.search(pattern, content, re.MULTILINE | re.DOTALL | re.IGNORECASE)
+        if not match:
+            return None
+        text = match.group(1).strip()
+        return text if text else None
+
+    def _parse_pmrf_fellow(self, filename: str, content: str, doc_id: str):
+        """Extract PMRF fellow/scheme information.
+
+        For the about page, creates a PMRF Scheme node.
+        For individual fellow pages, creates PMRFFellow nodes.
+        """
+        fn_lower = filename.lower()
+        if "about" in fn_lower:
+            # Extract scheme description
+            desc_match = re.search(r'The Prime Minister.*?(?=\n\n|\*\*|$)', content, re.DOTALL)
+            if desc_match:
+                node_key = "pmrf_scheme"
+                self._add_node(node_key, "PMRFScheme",
+                               name="Prime Minister's Research Fellowship (PMRF)",
+                               description=desc_match.group(0).strip(),
+                               source_file=filename)
+                self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+        elif "fellow" in fn_lower or "phd-scholar" in fn_lower:
+            # Parse individual fellow names from list format
+            names = re.findall(r'(?:^|\|)\s*(\d+)\s*\|\s*([A-Z][a-z]+(?: [A-Z][a-z]+)+)', content, re.MULTILINE)
+            for sno, name in names:
+                node_key = f"pmrf_fellow:{normalize_name(name)}"
+                self._add_node(node_key, "PMRFFellow",
+                               name=name.strip(),
+                               source_file=filename)
+                self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+        # Other PMRF sub-pages are handled by the generic chunking pipeline
+
+    def _parse_admission_page(self, filename: str, content: str, doc_id: str):
+        """Extract admission information from UG/PG/PhD admission pages.
+
+        Creates AdmissionInfo nodes with programme type, apply links,
+        advertisement references, and shortlist details.
+        """
+        fn_lower = filename.lower()
+
+        # Determine programme type
+        if self.section_code == "students-ug-admissions" or "ugadm" in fn_lower:
+            prog_type = "UG"
+        elif self.section_code == "students-pg-admissions" or "pg" in fn_lower:
+            prog_type = "PG"
+        else:
+            prog_type = "PhD"
+
+        # Extract all "Apply Online" links
+        apply_links = re.findall(r'\[Apply\s+Online\]\(([^)]+)\)', content, re.IGNORECASE)
+
+        # Extract advertisement titles and their links
+        advt_matches = re.findall(
+            r'(?:##\s+)(.+?(?:Admission|Advertisement|Programme).+?)$',
+            content, re.MULTILINE | re.IGNORECASE
+        )
+
+        # Extract shortlist links with department names
+        shortlist_entries = re.findall(
+            r'\[([^\]]+)\]\(([^)]*shortlist[^)]*)\)',
+            content, re.IGNORECASE
+        )
+
+        node_key = f"admission:{prog_type}:{normalize_name(os.path.basename(filename)[:60])}"
+        self._add_node(node_key, "AdmissionInfo",
+                       name=f"{prog_type} Admissions",
+                       programme_type=prog_type,
+                       apply_links="; ".join(apply_links) if apply_links else "",
+                       advertisements="; ".join(advt_matches) if advt_matches else "",
+                       shortlist_departments="; ".join(
+                           f"{dept} ({url})" for dept, url in shortlist_entries
+                       ) if shortlist_entries else "",
+                       source_file=filename)
+        self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
+        # For seat matrix files, extract structured data
+        if "seat" in fn_lower or "matrix" in fn_lower:
+            self._parse_seat_matrix(filename, content, doc_id, prog_type)
+
+    def _parse_seat_matrix(self, filename: str, content: str, doc_id: str, prog_type: str):
+        """Extract seat matrix data from table format."""
+        in_table = False
+        for line in content.splitlines():
+            line_stripped = line.strip()
+            if not line_stripped.startswith('|'):
+                continue
+            cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+            if not cells:
+                continue
+            if all(re.match(r'^:?-+:?$', c) for c in cells if c):
+                in_table = True
+                continue
+            if not in_table:
+                continue
+            # Try to find programme name and seats
+            if len(cells) >= 2:
+                programme = cells[0] if cells[0] else (cells[1] if len(cells) > 1 else "")
+                if programme and not programme.startswith('-'):
+                    node_key = f"seat_matrix:{prog_type}:{normalize_name(programme[:60])}"
+                    self._add_node(node_key, "SeatMatrix",
+                                   programme=programme,
+                                   programme_type=prog_type,
+                                   row_data=" | ".join(cells),
+                                   source_file=filename)
+                    self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
     def save(self, output_dir: str = None):
+
         if output_dir is None:
             output_dir = get_section_data_dir(self.section_code)
         os.makedirs(output_dir, exist_ok=True)
@@ -2250,6 +2562,31 @@ def create_section_entity_descriptions(graph, section_code: str) -> list:
                 parts.append(f"Tuition Fee & Other Charges (General/OBC/EWS): {data['fee_gen_obc_ews']}.")
             if data.get("fee_sc_st_pwd"):
                 parts.append(f"SC/ST/PwD Charges: {data['fee_sc_st_pwd']}.")
+        # ── Student Section Entity Descriptions ──────────────────────────
+        elif label == "FAQ":
+            parts.append(f"FAQ: Q: {data.get('question', '')} A: {data.get('answer', '')[:200]}")
+        elif label == "ScheduleEvent":
+            parts.append(f"Schedule Event: {data.get('event', '')} for {data.get('level', '')} students. From: {data.get('from_date', '—')} To: {data.get('to_date', '—')}.")
+        elif label == "Holiday":
+            parts.append(f"Holiday: {data.get('name', '')} on {data.get('date', '')} ({data.get('day', '')}).")
+        elif label == "CertificateProgram":
+            parts.append(f"Certificate Program: {data.get('name', '')}.")
+            if data.get("modules"):
+                parts.append(f"Modules: {data['modules'][:200]}.")
+            if data.get("eligibility"):
+                parts.append(f"Eligibility: {data['eligibility'][:200]}.")
+        elif label == "AdmissionInfo":
+            parts.append(f"{data.get('programme_type', '')} Admission information at IIT Jammu.")
+            if data.get("apply_links"):
+                parts.append(f"Apply at: {data['apply_links']}.")
+            if data.get("advertisements"):
+                parts.append(f"Advertisements: {data['advertisements'][:200]}.")
+        elif label == "SeatMatrix":
+            parts.append(f"Seat Matrix for {data.get('programme_type', '')} programme: {data.get('programme', '')}. Data: {data.get('row_data', '')}.")
+        elif label == "PMRFScheme":
+            parts.append(f"PMRF (Prime Minister's Research Fellowship) Scheme. {data.get('description', '')[:200]}")
+        elif label == "PMRFFellow":
+            parts.append(f"{data.get('name', '')} is a PMRF Fellow at IIT Jammu.")
         else:
             parts.append(f"{name} ({label}) in {section_name} section.")
 

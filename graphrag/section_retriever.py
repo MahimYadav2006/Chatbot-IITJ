@@ -687,6 +687,127 @@ class SectionRetriever:
                 if lines:
                     return "\n".join(lines)
 
+        # ── Student Section Deterministic Handlers ───────────────────────
+        # FAQ lookup: match question words against graph FAQ nodes
+        if self.section_code == "students-faq":
+            faqs = [d for n, d in self.graph.nodes(data=True) if d.get("label") == "FAQ"]
+            if faqs:
+                q_words = set(re.findall(r'\w+', q.lower()))
+                q_words -= {"what", "is", "are", "the", "how", "does", "do", "at", "iit", "jammu",
+                             "can", "tell", "me", "about", "where", "which", "why", "for", "to", "in", "a"}
+                scored = []
+                for faq in faqs:
+                    question_words = set(re.findall(r'\w+', faq.get("question", "").lower()))
+                    overlap = len(q_words & question_words)
+                    if overlap >= 2:
+                        scored.append((overlap, faq))
+                if scored:
+                    scored.sort(key=lambda x: x[0], reverse=True)
+                    lines = []
+                    # Return top matching FAQs (up to 3)
+                    for score, faq in scored[:3]:
+                        lines.append(f"**Q: {faq['question']}**\n\n{faq['answer']}\n")
+                    return "\n---\n".join(lines)
+
+        # Schedule/Holiday lookup: match events by level and keyword
+        if self.section_code == "students-schedule":
+            events = [d for n, d in self.graph.nodes(data=True) if d.get("label") == "ScheduleEvent"]
+            holidays = [d for n, d in self.graph.nodes(data=True) if d.get("label") == "Holiday"]
+
+            # Check if asking about holidays
+            if any(term in q for term in ("holiday", "holidays", "festival", "diwali", "dussehra",
+                                           "christmas", "independence day", "nanak")):
+                if holidays:
+                    lines = ["### Holidays at IIT Jammu:"]
+                    for h in holidays:
+                        lines.append(f"- **{h.get('name', '')}** — {h.get('date', '')} ({h.get('day', '')})")
+                    return "\n".join(lines)
+
+            if events:
+                # Filter by level
+                target_level = None
+                if any(term in q for term in ("1st year", "first year", "fresher")):
+                    target_level = "1st Year"
+                elif any(term in q for term in ("2nd year", "second year", "3rd year", "third year")):
+                    target_level = "2nd/3rd Year"
+                elif any(term in q for term in ("4th year", "fourth year", "final year")):
+                    target_level = "4th Year"
+                elif any(term in q for term in ("mtech", "m.tech", "pg ")):
+                    target_level = "MTech"
+                elif any(term in q for term in ("phd", "ph.d", "doctoral")):
+                    target_level = "PhD"
+
+                filtered = events
+                if target_level:
+                    filtered = [e for e in events if target_level.lower() in e.get("level", "").lower()]
+
+                # Also filter by specific event keywords
+                event_keywords = [w for w in re.findall(r'\w+', q.lower())
+                                  if w not in {"when", "is", "the", "date", "for", "of", "what",
+                                               "are", "iit", "jammu", "schedule", "ug", "pg"}
+                                  and len(w) > 2]
+                if event_keywords and filtered:
+                    keyword_filtered = []
+                    for e in filtered:
+                        event_lower = e.get("event", "").lower()
+                        if any(kw in event_lower for kw in event_keywords):
+                            keyword_filtered.append(e)
+                    if keyword_filtered:
+                        filtered = keyword_filtered
+
+                if filtered:
+                    lines = []
+                    level_str = target_level if target_level else "All"
+                    lines.append(f"### Academic Schedule Events ({level_str} Students):")
+                    for e in filtered:
+                        from_d = e.get("from_date", "—")
+                        to_d = e.get("to_date", "—")
+                        date_str = f"{from_d} → {to_d}" if from_d != "—" and to_d != "—" else (from_d if from_d != "—" else to_d)
+                        lines.append(f"- **{e.get('event', '')}** [{e.get('level', '')}]: {date_str}")
+                    return "\n".join(lines)
+
+        # Certificate program lookup
+        if self.section_code == "students-certificate-programs":
+            programs = [d for n, d in self.graph.nodes(data=True) if d.get("label") == "CertificateProgram"]
+            if programs:
+                # Try to match specific program by keywords
+                q_words = set(re.findall(r'\w+', q.lower()))
+                q_words -= {"what", "is", "are", "the", "certificate", "program", "programme",
+                             "programs", "programmes", "at", "iit", "jammu", "tell", "about",
+                             "me", "for", "available", "offered", "list", "all"}
+
+                if not q_words or any(term in q for term in ("all", "list", "available", "offered")):
+                    # List all programs
+                    lines = ["### Certificate Programs at IIT Jammu:"]
+                    for p in sorted(programs, key=lambda x: x.get("name", "")):
+                        lines.append(f"- **{p.get('name', '')}**")
+                        if p.get("eligibility"):
+                            lines.append(f"  - Eligibility: {p['eligibility'][:150]}")
+                    return "\n".join(lines)
+                else:
+                    # Match specific program
+                    scored = []
+                    for p in programs:
+                        name_words = set(re.findall(r'\w+', p.get("name", "").lower()))
+                        overlap = len(q_words & name_words)
+                        if overlap >= 1:
+                            scored.append((overlap, p))
+                    if scored:
+                        scored.sort(key=lambda x: x[0], reverse=True)
+                        p = scored[0][1]
+                        lines = [f"### {p.get('name', '')}"]
+                        if p.get("modules"):
+                            lines.append(f"\n**Modules:** {p['modules']}")
+                        if p.get("eligibility"):
+                            lines.append(f"\n**Eligibility:** {p['eligibility']}")
+                        if p.get("highlights"):
+                            lines.append(f"\n**Highlights:** {p['highlights']}")
+                        if p.get("admission_process"):
+                            lines.append(f"\n**Admission Process:** {p['admission_process'][:300]}")
+                        if p.get("contact"):
+                            lines.append(f"\n**Contact:** {p['contact']}")
+                        return "\n".join(lines)
+
         # Section Contact Query
         if any(term in q for term in ("contact", "email", "phone", "hours", "timing", "address", "number")) and not any(svc in q for svc in ("dental", "physiotherapy", "pharmacy", "ambulance", "ward", "ecg", "laboratory")):
             contacts = [d for n, d in self.graph.nodes(data=True) if d.get("label") == "SectionContact"]

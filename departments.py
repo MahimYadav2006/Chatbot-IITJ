@@ -233,12 +233,54 @@ SECTIONS = {
     "security": {"name": "Security Section", "base_url": "https://www.iitjammu.ac.in/security/"},
     "tlu": {"name": "Teaching Learning Unit (TLU)", "base_url": "https://sites.google.com/iitjammu.ac.in/tlu"},
     "tinkerers-lab": {"name": "Tinkerers' Lab", "base_url": "https://iitjammu.ac.in/tinkerers-lab"},
+    # ── Student Data Sections ────────────────────────────────────────────
+    "students-faq": {"name": "Student FAQ", "base_url": "https://iitjammu.ac.in/faq-main-website"},
+    "students-schedule": {"name": "Academic Calendar & Schedules", "base_url": "https://iitjammu.ac.in/calendar-schedule-time-table"},
+    "students-phd-admissions": {"name": "PhD Admissions", "base_url": "https://iitjammu.ac.in/phd"},
+    "students-pg-admissions": {"name": "PG Admissions", "base_url": "https://iitjammu.ac.in/pg-admissions"},
+    "students-ug-admissions": {"name": "UG Admissions", "base_url": "https://iitjammu.ac.in/ugadm"},
+    "students-certificate-programs": {"name": "Certificate Programs", "base_url": "https://iitjammu.ac.in/certificate-programs"},
+    "students-online-education": {"name": "Online Education", "base_url": "https://iitjammu.ac.in/online-education"},
+    "students-pmrf": {"name": "PMRF Scheme", "base_url": "https://iitjammu.ac.in/pmrf"},
+    "students-visvesvaraya": {"name": "Visvesvaraya PhD Scheme", "base_url": "https://iitjammu.ac.in/visvesvaraya-phd"},
+    "students-why-iitjammu": {"name": "Why IIT Jammu", "base_url": "https://www.iitjammu.ac.in/why-iitjammu"},
+    "students-academic-downloads": {"name": "Academic General Downloads", "base_url": "https://iitjammu.ac.in/academics/academics-general-downloads"},
 }
 
+# Mapping from student section codes to their actual scraped_data subdirectory
+# (they live under scraped_data/students/ instead of scraped_data/sections/)
+STUDENT_SECTION_FOLDER_MAP = {
+    "students-faq": "students/faq-main-website",
+    "students-schedule": "students/calendar-schedule-time-table",
+    "students-phd-admissions": "students/phd",
+    "students-pg-admissions": "students/pg-admissions",
+    "students-ug-admissions": "students/ugadm",
+    "students-certificate-programs": "students/certificate-programs",
+    "students-online-education": "students/online-education",
+    "students-pmrf": "students/pmrf",
+    "students-visvesvaraya": "students/visvesvaraya-phd",
+    "students-why-iitjammu": "students/why-iitjammu",
+    "students-academic-downloads": "students/academics-general-downloads",
+}
+
+# Boilerplate filenames to skip during student section ingestion
+STUDENT_SECTION_SKIP_PATTERNS = [
+    "_nirf_", "_rti_", "_SGRC_", "_index.md",
+    "nirf_2026", "CERT-IN_Certificate",
+    "Student_Grievance_Redressal_Committee",
+]
+
+
 def get_section_markdown_dir(code: str) -> str:
-    """Return the canonical crawl output directory for a section under `scraped_data/sections/`."""
+    """Return the canonical crawl output directory for a section.
+
+    Student sections live under ``scraped_data/students/`` while
+    institutional sections live under ``scraped_data/sections/``.
+    """
     if code not in SECTIONS:
         raise KeyError(f"Section code '{code}' not found in registry.")
+    if code in STUDENT_SECTION_FOLDER_MAP:
+        return os.path.join(SCRAPED_DATA_ROOT, STUDENT_SECTION_FOLDER_MAP[code])
     return os.path.join(SCRAPED_DATA_ROOT, "sections", code)
 
 
@@ -247,5 +289,4 @@ def get_section_data_dir(code: str) -> str:
     if code not in SECTIONS:
         raise KeyError(f"Section code '{code}' not found in registry.")
     return os.path.join(PROJECT_ROOT, "data", "sections", code)
-
 

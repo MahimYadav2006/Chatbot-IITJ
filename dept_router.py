@@ -205,6 +205,99 @@ SECTION_NAME_ALIASES = {
         "teaching-learning", "teaching learning centre",
         "teaching learning center"
     ],
+    # ── Student Data Section Aliases ─────────────────────────────────────
+    "students-faq": [
+        "faq", "frequently asked questions", "common questions",
+        "how to reach iit jammu", "where is iit jammu located",
+        "climatic condition", "hostel accommodation",
+        "registration documents", "student id", "entry number",
+        "fee refund policy", "preparatory students",
+        "income certificate", "parent stay hostel",
+        "furniture hostel", "campus life"
+    ],
+    "students-schedule": [
+        "academic calendar", "semester schedule", "time table", "timetable",
+        "class schedule", "exam schedule", "examination schedule",
+        "mid semester exam", "end semester exam",
+        "winter vacation", "summer vacation",
+        "holiday list", "holidays",
+        "class test date", "grade submission date",
+        "add drop date", "course withdrawal date",
+        "reporting date schedule", "orientation program date"
+    ],
+    "students-phd-admissions": [
+        "phd admission", "phd programme admission", "phd program admission",
+        "doctoral admission", "phd application",
+        "phd eligibility", "phd shortlist", "phd shortlisting",
+        "joint doctoral programme", "jdp programme",
+        "phd foreign national", "phd advertisement",
+        "research areas phd", "phd interview schedule",
+        "phd entrance", "phd apply online"
+    ],
+    "students-pg-admissions": [
+        "pg admission", "pg programme admission",
+        "mtech admission", "m.tech admission",
+        "mtech apply", "mtech eligibility",
+        "mtech shortlist", "mtech shortlisting",
+        "pg application", "pg apply online",
+        "pg entrance", "gate score cutoff",
+        "mtech advertisement", "pg reporting"
+    ],
+    "students-ug-admissions": [
+        "ug admission", "ug programme admission",
+        "btech admission", "b.tech admission",
+        "josaa admission", "jee advanced admission",
+        "seat matrix", "ug seat matrix",
+        "ug application", "ug reporting",
+        "bspa programme", "behavioural sciences programme",
+        "ug scholarship", "institute scholarship policy",
+        "ug guidelines", "fresher guidelines"
+    ],
+    "students-certificate-programs": [
+        "certificate program", "certificate programme",
+        "nanodegree program", "nano degree",
+        "pg certificate", "executive certificate",
+        "professional certificate",
+        "ai for leaders certificate", "generative ai certificate",
+        "iot certificate program", "ev technology certificate",
+        "automotive design certificate", "data science certificate",
+        "agentic ai certificate", "digital marketing ai certificate",
+        "accredian program", "i3c certificate program"
+    ],
+    "students-online-education": [
+        "online education", "online program", "online programme",
+        "executive mtech", "online mtech",
+        "distance learning", "online degree",
+        "cyber security diploma", "timespro programme",
+        "genai data science online", "vlsi design online",
+        "online certificate program"
+    ],
+    "students-pmrf": [
+        "pmrf", "prime minister research fellow",
+        "prime minister's research fellow",
+        "pmrf scheme", "pmrf fellow", "pmrf scholar",
+        "pmrf guidelines", "pmrf iit jammu"
+    ],
+    "students-visvesvaraya": [
+        "visvesvaraya", "visvesvaraya phd", "visvesvaraya scheme",
+        "visvesvaraya fellowship", "yfrf",
+        "young faculty research fellowship",
+        "post doctoral fellowship visvesvaraya",
+        "visvesvaraya phd fellow",
+        "esdm phd scheme", "digital india phd"
+    ],
+    "students-why-iitjammu": [
+        "why iit jammu", "why join iit jammu",
+        "reasons to join iit jammu",
+        "campus highlights iit jammu",
+        "salient features iit jammu",
+        "jagti campus", "400 acres campus",
+        "agastya hpc", "saptarshi cif"
+    ],
+    "students-academic-downloads": [
+        "academic downloads", "general downloads",
+        "academic forms download", "academic documents download"
+    ],
 }
 
 
@@ -260,6 +353,18 @@ class DepartmentRouter:
         if detected_depts:
             if "academics" not in detected_secs:
                 detected_secs.append("academics")
+
+        # Inject academics alongside student sections that have overlapping data
+        # (user decision: if data lies in both areas, both should be explored)
+        _student_academic_overlap = {
+            "students-ug-admissions", "students-pg-admissions",
+            "students-phd-admissions", "students-schedule",
+            "students-faq", "students-academic-downloads",
+        }
+        if detected_secs and any(s in _student_academic_overlap for s in detected_secs):
+            if "academics" not in detected_secs:
+                detected_secs.append("academics")
+
 
         if detected_depts or detected_secs:
             reasons = []
