@@ -125,6 +125,8 @@ class SectionKGBuilder:
                         designation = sub_line[7:].strip()
                     elif "@" in sub_line or "at" in sub_line.lower():
                         email = _deobfuscate_email_text(sub_line.replace("#####", "").strip())
+                    elif sub_line and not sub_line.startswith("#") and not designation:
+                        designation = sub_line.strip()
                     j += 1
                 
                 # Resolve name
@@ -296,7 +298,9 @@ class SectionKGBuilder:
         # Look for #### or ### name / designation
         for i, line in enumerate(lines):
             if line.startswith("### "):
-                name = clean_admin_member_name(line[4:])
+                cand_name = clean_admin_member_name(line[4:])
+                if cand_name.lower() not in ("message", "about us", "contact", "overview", "introduction"):
+                    name = cand_name
             elif line.startswith("#### "):
                 designation = line[5:].replace("**", "").replace("|", "").strip()
                 
@@ -1176,7 +1180,7 @@ class SectionKGBuilder:
             doc_map[filename] = (doc_id, content)
 
         for filename, (doc_id, content) in doc_map.items():
-            if "people-list" in filename or "team" in filename:
+            if "people-list" in filename or "team" in filename or "staff-list" in filename:
                 if self.section_code == "counselling":
                     self._parse_counselling_team(filename, content, doc_id)
                 elif self.section_code == "di":

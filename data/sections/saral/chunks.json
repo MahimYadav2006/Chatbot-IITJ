@@ -1,1 +1,187 @@
-[]
+[
+  {
+    "id": "chunk_saral_Facilities_eg_EG_Privacy_Policy.pdf.md_0",
+    "text": "EG Privacy Policy Overview The institute uses the e-Governance (EG) System to automate its academic and administrative processes. EG stores a significant amount of personal and official data of users. Poor practices at the end user level may result in data compromise or the loss of personal information. All users are responsible for taking the appropriate steps to review and secure their data within the application, as outlined below. Purpose This policy is meant to help you understand what information we collect, why we collect it, share information, and how you can update and manage your information. Scope The scope of this policy includes all users who have or are responsible for an account on the e-Governance system or have access to its portals. Policy \u25cf In this privacy policy, the term \"Personal Information\" refers to any information from which the account holder's identity is apparent or can be reasonably ascertained. \u25cf Generally, this application, while being used, does not collect personal information. However, for government service records, regulatory compliance, and administrative purposes, the following information is collected and stored in the application: \u25cb Name, gender, PAN (for remuneration), Aadhar number (service, scholarships), PRAN (for NPS), date of birth, marital status, family details (for LTC members and medical dependents), hometown (for LTC), present and permanent addresses (for communication), personal email id, mobile number, emergency contacts (for necessary communication, OTP), previous government or industry service details and experience, educational qualifications, medical records for employee and dependents, passport number (Ex-India leave), contributions to the institute, etc. \u25cb This information is collected upon joining the institute or when people submit this information to offices for attestation or reimbursement. \u25cf This application records your visits and logs the following information for statistical purposes: \u25cb The date and time of accessing the site; the pages accessed; the IP address accessed, etc. \u25cb We will not identify people or their activities except when a law enforcement agency may exercise a warrant to inspect the application or service provider's logs. \u25cf EG does not track the location information. If a browser application asks for a location, one may disable or block it. \u25cf This web application uses cookies for session management. A cookie is a piece of software code that an internet website sends to the browser when people access information at the site. \u25cf Email address and mobile number will not be used for other purposes",
+    "metadata": {
+      "doc": "saral_Facilities_eg_EG_Privacy_Policy.pdf.md",
+      "url": "https://iitjammu.ac.in/Facilities/eg/EG_Privacy_Policy.pdf",
+      "title": "Facilities Eg Eg Privacy Policy.Pdf",
+      "chunk_idx": 0,
+      "chunk_strategy": "word_window",
+      "chunk_meta": {
+        "strategy": "word_window"
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_Facilities_eg_EG_Privacy_Policy.pdf.md_1",
+    "text": "agency may exercise a warrant to inspect the application or service provider's logs. \u25cf EG does not track the location information. If a browser application asks for a location, one may disable or block it. \u25cf This web application uses cookies for session management. A cookie is a piece of software code that an internet website sends to the browser when people access information at the site. \u25cf Email address and mobile number will not be used for other purposes than to contact and communicate with people. \u25cf For most administrative requirements, Information stored in the application will be used and will not be asked through other means such as email or forms. People are advised to keep their information updated, which is necessary for communication, career progression, and contribution to various services. \u25cf As an account holder, one must not share any information about other people (accessible on EG) without the explicit approval of the competent authority. This is necessary to protect our information individually and collectively. \u25cf Bulk information extraction and sharing through external means such as email or other communication channels is prohibited. \u25cf The Institute reserves the right to the overall design, workflows provisioned, and innovations done within the application. \u25cf The application does not endorse any third-party service provider whose link may be available in the application. \u25cf Users are encouraged to report bugs or technical issues related to applications in workflows with a screen capture. Enforcement \u25cf It is the responsibility of the end user (individually) and offices (collectively) to ensure the enforcement of the above policies. \u25cf If one believes their privacy or personal data may have been compromised, such incidents should be reported to the institute and/or the concerned offices.",
+    "metadata": {
+      "doc": "saral_Facilities_eg_EG_Privacy_Policy.pdf.md",
+      "url": "https://iitjammu.ac.in/Facilities/eg/EG_Privacy_Policy.pdf",
+      "title": "Facilities Eg Eg Privacy Policy.Pdf",
+      "chunk_idx": 1,
+      "chunk_strategy": "word_window",
+      "chunk_meta": {
+        "strategy": "word_window"
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_about.md_0",
+    "text": "# Page Title: Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innovators\n\n- About Us\n- Team\n\nIn July 2018, IIT Jammu embarked upon an ambitious journey to simplify its Academic, Research, and Administrative processes (Academic Affairs, Student Affairs, HR, Accounts and Audit, R and C, Procurement, CEP, etc.). Within a year, we built an integrated e-Governance Solution (EGS) to cater to all the processes and workflows with a vision of an almost paperless office. Entire workflow automation is achieved through an organic, bottom-up iterative process with end-user participation.\n\nOver the past six years, our people have recognised the outstanding achievements of EGS in improving institutess ability to create and evolve high-quality software-dependent systems. However, human touch is essential. EGS has demonstrated an exceptional degree of significant, measured, sustained, and shared productivity improvements by composing a symphony of organically designed workflows. EG/SARAL is still a work in progress with evolving processes and new experiments in Academia. True to its name, SARAL helps simplify academic, research, and administrative process logistics and record keeping.\n\n**The Journey**\n\n- e-Governance Solution brought **transparency, efficiency, and accountability** for all stakeholders. Our anytime, anywhere solution has helped us to reduce the paper footprint to a larger extent. During the lockdowns of 2019 and 2020, EGS came in handy in keeping all required office functionalities alive at IIT Jammu.\n- We admitted the UG batch 2018 through registrations in the EGS and every admission thereafter. We have maintained every single academic course grade since inception. Course feedback from students and faculty is also available online.\n- The HR information is maintained through EGS, including subsequent updates. Faculty and Staff data capture are used for review and progressions.\n- In due course, Help Desk (ticketing), leave, scholarships, payroll processing, travel approvals, academic transcripts, grade sheets, admission portals, R and C projects management, including disbursals, reimbursements, and many other administrative processes made their way into this integrated e-Governance Solution.\n- Multiple custom workflows have been created with tracking and time limits. Inefficiencies and bottlenecks are addressed through landing page alerts, dashboards,\u00a0 triggered reports, and Auto-Escalation alerts.\n\n**Achievements**",
+    "metadata": {
+      "doc": "saral_about.md",
+      "url": "https://iitjammu.ac.in/saral/about",
+      "title": "About",
+      "chunk_idx": 0,
+      "chunk_strategy": "structural_blocks",
+      "chunk_meta": {
+        "strategy": "structural_blocks",
+        "block_count": 20
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_about.md_1",
+    "text": "- The list of features provisioned in EGS is huge, along with 140 workflows and several other transactional interfaces. The system is supported by robust reports, dashboards for ready references (summary data), and user messaging channels, including email, SMS, and Telegram integration.\n- Processes were defined, matured, and optimized over time. Workflows were defined, iterated, and improved to help us over time. Now, it is fairly easy to add another workflow or report!\n- A lot of effort has gone into the design, application building blocks, thought process, and customization with rigour. Our early investment in the e-Governance Solution, a continued thrust, and much-needed support from the administration have helped us to witness a digital transformation of processes - it's right here in front of us. Director IIT Jammu, an exponent of digital infrastructure for institutes, has been very supportive and inspiring and has encouraged us at each stage. EGS keeps the campus and people connected, irrespective of their physical presence.\n- While we have successfully implemented our system, we are supporting other higher education institutes in their journey of e-Governance by assisting on the concept, RFP preparation, deployment discussions, and our institutional memory on e-Governance.\n\n**Access**\n\n- To access the saral\u00a0application, please visit: **saral.iitjammu.ac.in**\n- First-time users (students and employees) receive credentials on their institute email ID.\n- Please ensure you can access the IIT Jammu email ID to receive the password reset confirmation link and OTP. Please check the spam folder if the email is not received in your Inbox and mark emails from saral.noreply, as Safe (Not Spam). It is strongly recommended not to save the passwords in the web browser.\n- Users are requested to use the Help Desk in the e-Governance application for raising various requests related to day-to-day activities. Students should use the Student Requests interface for any help related to Academic Affairs and Student Affairs. For civil, electrical repair/maintenance, and IT services-related matters, please use Help Desk requests.\n\n**Security and Privacy**\n\nWe use industry best practices for the security of the EG application. An independent third-party service provider, impaneled with CERT-IN, has conducted a security audit. The personal data captured in the individual profiles is never shared externally, and privacy of Personally Identifiable Information (PII) is maintained.\n\n**Privacy Policy**\n\n**Portals integrated with Saral application**",
+    "metadata": {
+      "doc": "saral_about.md",
+      "url": "https://iitjammu.ac.in/saral/about",
+      "title": "About",
+      "chunk_idx": 1,
+      "chunk_strategy": "structural_blocks",
+      "chunk_meta": {
+        "strategy": "structural_blocks",
+        "block_count": 20
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_about.md_2",
+    "text": "- Ph.D. Admission portal: **saral.iitjammu.ac.in/phdapplication**\n- PG Admission portal: **saral.iitjammu.ac.in/pgapplication**\n- Vendor Registration portal: **saral.iitjammu.ac.in/vrp**\n- Donations portal: **saral.iitjammu.ac.in/donations**\n- Saptarshi portal: **saral.iitjammu.ac.in/saptarshi**\n- Intern\u2019s Application portal: **saral.iitjammu.ac.in/internrp**\n\nFor queries related to E - Governance\u00a0system, kindly contact:\n\n**saral@iitjammu.ac.in**\n\n**For E - Governance\u00a0interface-related matters, please contact saral@iitjammu.ac.in (Level 1).\n\nIf your problem is unresolved in 5 working days, kindly escalate the matter to ad.egs@iitjammu.ac.in (Level 2).**\n\n**For office-specific matters (Academic Affairs, Student Affairs, Establishment (Faculty), Establishment (Staff), Accounts, R and C, Procurement and Inventory, CEP, etc.), please contact the respective offices.**",
+    "metadata": {
+      "doc": "saral_about.md",
+      "url": "https://iitjammu.ac.in/saral/about",
+      "title": "About",
+      "chunk_idx": 2,
+      "chunk_strategy": "structural_blocks",
+      "chunk_meta": {
+        "strategy": "structural_blocks",
+        "block_count": 20
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_ai-coe-moe.md_0",
+    "text": "# Page Title: Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innovators\n# Content Flags: short-markdown\n\nAI CoE Portal developed for MoE\u00a0**https://iitjammu.ac.in/aicpmu**",
+    "metadata": {
+      "doc": "saral_ai-coe-moe.md",
+      "url": "https://iitjammu.ac.in/saral/ai-coe-moe",
+      "title": "Ai-Coe-Moe",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_flight-manifest-cisf.md_0",
+    "text": "# Page Title: Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innovators\n# Content Flags: short-markdown\n\nSaralFlight Manifest Search Portal for CISF",
+    "metadata": {
+      "doc": "saral_flight-manifest-cisf.md",
+      "url": "https://iitjammu.ac.in/saral/flight-manifest-cisf",
+      "title": "Flight-Manifest-Cisf",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_intranet.md_0",
+    "text": "# Page Title: Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innovators\n\nIIT Jammu Intranet portal, provisioned in 2020, provides some useful information such as minutes of meetings of statutory committees, previous annual reports, Memorandums of Understanding (MoUs) for collaborations with other institutes or organizations, some office-specific documents, checklists, etc. meant for internal circulation. Intranet portal is accessible from within the campus. Hence the name. To access Intranet portal, please visit\u00a0**intranet.iitjammu.ac.in**\u00a0from within the campus network.",
+    "metadata": {
+      "doc": "saral_intranet.md",
+      "url": "https://iitjammu.ac.in/saral/intranet",
+      "title": "Intranet",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_lgsdf-2021.md_0",
+    "text": "# Page Title: Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innovators\n\nLGSDF Portal developed for JK-UT\u00a0**iitjammu.ac.in/LGfellowships**",
+    "metadata": {
+      "doc": "saral_lgsdf-2021.md",
+      "url": "https://iitjammu.ac.in/saral/lgsdf-2021",
+      "title": "Lgsdf-2021",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_nep-2020.md_0",
+    "text": "# Page Title: Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innovators\n# Content Flags: short-markdown\n\nNEP 2020 Portal developed for JK-UT\u00a0**iitjammu.ac.in/nep2020**",
+    "metadata": {
+      "doc": "saral_nep-2020.md",
+      "url": "https://iitjammu.ac.in/saral/nep-2020",
+      "title": "Nep-2020",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_recruitment-portal.md_0",
+    "text": "# Page Title: Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innovators\n\nRecruitment Portals are developed and managed by e-Governance section since initial creation in 2018.\n\nPlease note that \"No enquiries related to process or results are monitored by EGS. Please contact the concerned as per advised in the respective advertisement published.\"\n\nRecruitment portals are hosted at\u00a0**apply.iitjammu.ac.in**",
+    "metadata": {
+      "doc": "saral_recruitment-portal.md",
+      "url": "https://iitjammu.ac.in/saral/recruitment-portal",
+      "title": "Recruitment-Portal",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_saral.md_0",
+    "text": "# Page Title: IIT Jammu SARAL - Student Portal\n\n### About Us\n\nIn July 2018, IIT Jammu embarked upon an ambitious journey to simplify its Academic, Research, and Administrative processes (Academic Affairs, Student Affairs, HR, Accounts and Audit, R and C, Procurement, CEP, etc.). Within a year, we built an integrated e-Governance Solution (EGS) to cater to all the processes and workflows with a vision of an almost paperless office. Entire workflow automation is achieved through an organic, bottom-up iterative process with end-user participation.\n\n### Message\n\nEG effortlessly established accountability for service delivery and functional elegance in the very roots of the campus activities.\n\n##### Suman Sarkar\nAssociate Dean - Digital Infrastructure (SARAL)",
+    "metadata": {
+      "doc": "saral_saral.md",
+      "url": "https://iitjammu.ac.in/saral",
+      "title": "Saral",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  },
+  {
+    "id": "chunk_saral_team.md_0",
+    "text": "# Page Title: Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innovators\n\n- About Us\n- Team\n\n| S.No. | People | Roles and Responsibilities |\n| --- | --- | --- |\n| 1. | Suman Sarkar | Associate Dean - Digital Infrastructure (SARAL) |\n| 2. | Rajendra Kumar Solanki | Senior Scientific Officer |\n| 3. | Narendra Singh Chouhan | Senior Technical Officer |\n| 4. | Ravi Kumar Bhall | Scientific Officer |\n| 5. | Bhuvam Mahajan | Associate |\n\nFor queries related to Saral\u00a0system, kindly contact:\n\n**saral@iitjammu.ac.in**\n\n**For Saral\u200b\u200b\u200b\u200b\u200b\u00a0interface-related matters, please contact saral@iitjammu.ac.in (Level 1).\n\nIf your problem is unresolved in 5 working days, kindly escalate the matter to ad.egs@iitjammu.ac.in (Level 2).**\n\n**For office-specific matters (Academic Affairs, Student Affairs, Establishment (Faculty), Establishment (Staff), Accounts, R and C, Procurement and Inventory, CEP, etc.), please contact the respective offices.**",
+    "metadata": {
+      "doc": "saral_team.md",
+      "url": "https://iitjammu.ac.in/saral/team",
+      "title": "Team",
+      "chunk_idx": 0,
+      "chunk_strategy": "single_chunk",
+      "chunk_meta": {
+        "strategy": "single_chunk"
+      }
+    }
+  }
+]

@@ -90,8 +90,24 @@ def canonicalize_url(base_url: str, current_url: str, href: str) -> Optional[str
     dept_slug = base_segments[-1] if base_segments else ""
     site_root = f"{base_parsed.scheme}://{base_parsed.netloc}/"
 
+    base_prefix = base_parsed.path.rstrip("/")
+
+    # Special handling for relative certificate/nanodegree links at root level
+    is_certificate_relative = False
+    if base_prefix == "/certificate-programs" and not href.startswith(("/", "./", "../", "http://", "https://")):
+        href_lower = href.lower()
+        if (
+            "certificate-program" in href_lower
+            or "-certificate-" in href_lower
+            or "-certification-" in href_lower
+            or "-nanodegree-" in href_lower
+        ):
+            is_certificate_relative = True
+
     if href.startswith(("http://", "https://")):
         absolute = href
+    elif is_certificate_relative:
+        absolute = urllib.parse.urljoin(site_root, href)
     elif href.startswith("/"):
         absolute = urllib.parse.urljoin(site_root, href.lstrip("/"))
     else:
@@ -118,6 +134,18 @@ def canonicalize_url(base_url: str, current_url: str, href: str) -> Optional[str
     normalized_path = _collapse_duplicate_segments(normalized_path)
     if normalized_path == "/.":
         normalized_path = "/"
+
+    # Clean up resolved URL if it incorrectly includes /certificate-programs/ prefix for root certificate pages
+    if "/certificate-programs/" in normalized_path:
+        path_lower = normalized_path.lower()
+        if (
+            "certificate-program" in path_lower
+            or "-certificate-" in path_lower
+            or "-certification-" in path_lower
+            or "-nanodegree-" in path_lower
+        ):
+            normalized_path = normalized_path.replace("/certificate-programs/", "/")
+
 
     normalized_query = urllib.parse.quote_plus(
         urllib.parse.unquote_plus(parsed.query),
@@ -150,13 +178,23 @@ def is_same_department_url(url: str, base_url: str) -> bool:
     candidate_path = candidate.path.rstrip("/")
     base_netloc = base.netloc.lower().replace("www.", "")
     candidate_netloc = candidate.netloc.lower().replace("www.", "")
+
+    if candidate.scheme not in {"http", "https"} or candidate_netloc != base_netloc:
+        return False
+
+    if base_prefix == "/certificate-programs":
+        path_lower = candidate_path.lower()
+        if (
+            "certificate-program" in path_lower
+            or "-certificate-" in path_lower
+            or "-certification-" in path_lower
+            or "-nanodegree-" in path_lower
+        ):
+            return True
+
     return (
-        candidate.scheme in {"http", "https"}
-        and candidate_netloc == base_netloc
-        and (
-            candidate_path == base_prefix
-            or candidate_path.startswith(base_prefix + "/")
-        )
+        candidate_path == base_prefix
+        or candidate_path.startswith(base_prefix + "/")
     )
 
 

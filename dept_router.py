@@ -167,6 +167,44 @@ SECTION_NAME_ALIASES = {
         "raise", "outreach division", "school visit",
         "capacity building", "training program"
     ],
+    "rc": [
+        "rc", "research centre", "research center", "research cell",
+        "sponsored research", "funded research", "project research",
+        "research grant", "research funding", "research section"
+    ],
+    "saral": [
+        "saral", "student portal", "saral portal",
+        "e-governance", "egovernance", "online portal",
+        "student services portal"
+    ],
+    "security": [
+        "security", "security section", "campus security",
+        "security office", "guard", "visitors",
+        "visitor instructions", "security instructions",
+        "emergency security"
+    ],
+    "sp": [
+        "sp", "stores and purchase", "stores & purchase",
+        "procurement", "purchase section", "inventory",
+        "procurement section", "stores section",
+        "purchase order", "tender"
+    ],
+    "sw": [
+        "sw", "student welfare", "student affairs",
+        "hostel affairs", "mess management",
+        "student activities", "sports and wellness",
+        "student welfare section"
+    ],
+    "tinkerers-lab": [
+        "tinkerers lab", "tinkerers' lab", "tinkerer lab",
+        "tinkerer's lab", "maker space", "makerspace",
+        "tinkering lab", "innovation lab"
+    ],
+    "tlu": [
+        "tlu", "teaching learning unit", "teaching learning",
+        "teaching-learning", "teaching learning centre",
+        "teaching learning center"
+    ],
 }
 
 
