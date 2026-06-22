@@ -78,6 +78,8 @@ def test_section_retriever_routing_academics():
     "Procedure of BTP allotment",
     "What is the Provision of semester internship",
     "Is Change of department possible at iit jammu",
+    "Is changing branch after admission permitted at iit jammu",
+    "Is change of branch possible after admission?",
 ])
 def test_academic_policy_queries_route_to_academics(query):
     route = DepartmentRouter().route(query)
@@ -93,6 +95,8 @@ def test_academic_policy_queries_route_to_academics(query):
     ("Procedure of BTP allotment", "BTP allotment"),
     ("What is the Provision of semester internship", "Provision of semester internship"),
     ("Is Change of department possible at iit jammu", "not to offer the change of department"),
+    ("Is changing branch after admission permitted at iit jammu", "not to offer the change of department"),
+    ("Is change of branch possible after admission?", "not to offer the change of department"),
 ])
 def test_rules_retriever_finds_policy_evidence(query, expected):
     retriever = RulesRetriever()

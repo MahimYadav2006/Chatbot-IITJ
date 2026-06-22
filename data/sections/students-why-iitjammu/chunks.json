@@ -7,10 +7,10 @@
       "url": "https://www.iitjammu.ac.in/why-iitjammu",
       "title": "Why-Iitjammu Why-Iitjammu",
       "chunk_idx": 0,
-      "chunk_strategy": "structural_blocks",
+      "chunk_strategy": "heading_sections",
       "chunk_meta": {
-        "strategy": "structural_blocks",
-        "block_count": 10
+        "strategy": "heading_sections",
+        "section_count": 2
       }
     }
   },
@@ -22,10 +22,25 @@
       "url": "https://www.iitjammu.ac.in/why-iitjammu",
       "title": "Why-Iitjammu Why-Iitjammu",
       "chunk_idx": 1,
-      "chunk_strategy": "structural_blocks",
+      "chunk_strategy": "heading_sections",
       "chunk_meta": {
-        "strategy": "structural_blocks",
-        "block_count": 10
+        "strategy": "heading_sections",
+        "section_count": 2
+      }
+    }
+  },
+  {
+    "id": "chunk_why-iitjammu_why-iitjammu.md_2",
+    "text": "## NIRF Ranking \u2013 IIT Jammu\n\nIIT Jammu is ranked **56th in Engineering** as per the **National Institutional Ranking Framework (NIRF) 2026**, published by the Ministry of Education, Government of India. This ranking reflects the institute's growing academic reputation, research output, and student outcomes.\n\n| Category | NIRF Rank (2026) |\n|---|---|\n| Engineering | 56 |\n\nNIRF rankings are based on five key parameters: Teaching, Learning & Resources (TLR), Research and Professional Practice (RP), Graduation Outcomes (GO), Outreach and Inclusivity (OI), and Perception (PR).\n\nMore details: https://www.nirfindia.org/",
+    "metadata": {
+      "doc": "why-iitjammu_why-iitjammu.md",
+      "url": "https://www.iitjammu.ac.in/why-iitjammu",
+      "title": "Why-Iitjammu Why-Iitjammu",
+      "chunk_idx": 2,
+      "chunk_strategy": "heading_sections",
+      "chunk_meta": {
+        "strategy": "heading_sections",
+        "section_count": 2
       }
     }
   }

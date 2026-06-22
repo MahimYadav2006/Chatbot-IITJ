@@ -31,7 +31,8 @@ DEPT_NAME_ALIASES = {
         "administration", "admin", "senate", "board of governors", "bog",
         "finance committee", "finance committe", "building and works", "bwc",
         "dean", "deans", "associate deans", "associate dean", "ad", "director", "registrar",
-        "governance", "committee", "committees"
+        "governance", "committee", "committees",
+        "nirf", "nirf rank", "nirf ranking", "nirf report", "nirf 2026"
     ],
     "ee": [
         "electrical engineering", "electrical", "ee", "ee department",
@@ -237,6 +238,8 @@ SECTION_NAME_ALIASES = {
     "students-pg-admissions": [
         "pg admission", "pg programme admission",
         "mtech admission", "m.tech admission",
+        "admission in mtech", "admission to mtech",
+        "admission in m.tech", "admission to m.tech",
         "mtech apply", "mtech eligibility",
         "mtech shortlist", "mtech shortlisting",
         "pg application", "pg apply online",
@@ -246,6 +249,10 @@ SECTION_NAME_ALIASES = {
     "students-ug-admissions": [
         "ug admission", "ug programme admission",
         "btech admission", "b.tech admission",
+        "admission in btech", "admission to btech",
+        "admission in b.tech", "admission to b.tech",
+        "btech programme", "b.tech programme",
+        "btech program", "b.tech program",
         "josaa admission", "jee advanced admission",
         "seat matrix", "ug seat matrix",
         "ug application", "ug reporting",
@@ -292,7 +299,8 @@ SECTION_NAME_ALIASES = {
         "campus highlights iit jammu",
         "salient features iit jammu",
         "jagti campus", "400 acres campus",
-        "agastya hpc", "saptarshi cif"
+        "agastya hpc", "saptarshi cif",
+        "nirf", "nirf rank", "nirf ranking", "nirf report"
     ],
     "students-academic-downloads": [
         "academic downloads", "general downloads",

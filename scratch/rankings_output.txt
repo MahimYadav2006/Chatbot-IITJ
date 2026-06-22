@@ -1,0 +1,136 @@
+==================================================
+VECTOR SEARCH RESULTS FOR students-ug-admissions:
+==================================================
+Rank 1 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_homepage_pg_admissions_iitjammu_seat_matrix_2019_uploa
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 2 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_seatmatrix_2018.Jpg.Md
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 3 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_seat_matrix_2022.Png.Md
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 4 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_seatmatrix_2024.Png.Md
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 5 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_seatmatrix_2023.Png.Md
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 6 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_institute_scholarship_final_pol
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 7 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_iit_jammu_seat_matrix_2021.Png
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 8 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_iit_jammu_seat_matrix_2020.Png
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 9 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2026_seat_matrix_jossa-2026.Png
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 10 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2026_bachelor_of_science_in_beh
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 11 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2026_bspa.Pdf.Md
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 12 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2025_documents_student_admissio
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 13 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2025_documents_self_declaration
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 14 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2025_documents_invitation_lette
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 15 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2025_documents_general_guidelin
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 16 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2025_documents_form_e-hostel_ad
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 17 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2025_documents_form_b_and_c.Pdf
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 18 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2025_documents_form_a.Pdf.Md
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 19 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2025_transport_facilities-2025
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+Rank 20 | Score: 0.7101 | ID: students-ug-admissions:admission:UG:Ugadm_programme_ugadmissions_2025_josaa_seatmatrix-2025.Png
+Text Preview: UG Admission information at IIT Jammu....
+------------------------------
+
+==================================================
+KEYWORD OVERLAP RESULTS FOR students-ug-admissions:
+==================================================
+Rank 1 | Score: 0.7500 | Matched: {'iit', 'rank', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2026_Bachelor_of_Science_in_Behavioural_Sciences.pdf.md_1
+Text Preview: time to time. 2. An invalid/wrong JEE rank will lead to the cancellation of the candidature. No representation will be entertained. Course Fee Structu...
+------------------------------
+Rank 2 | Score: 0.7500 | Matched: {'iit', 'rank', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2026_Bachelor_of_Science_in_Behavioural_Sciences.pdf.md_2
+Text Preview: Analytics, candidates need to register and fill out the online application by accessing the application link at https://saral.iitjammu.ac.in/bsapplica...
+------------------------------
+Rank 3 | Score: 0.7500 | Matched: {'iit', 'rank', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_ugadm.md_0
+Text Preview: # Page Title: Indian Institute of Technology Jammu | Leading Engineering Institute for Future Innovators
+
+### !Image
+
+Students
+
+- UG Programme
+- Acade...
+------------------------------
+Rank 4 | Score: 0.7500 | Matched: {'iit', 'rank', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_ugadm.md_2
+Text Preview: ## Admission to UG Programme
+
+The admission to these 4-year B.Tech. programmes is done through Joint Entrance Examination - Advanced (JEE-Advanced) ra...
+------------------------------
+Rank 5 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_Guidelines_for_BTech_2025.pdf.md_0
+Text Preview: Online Registration and Fee Payment 1) Student will receive an email and SMS regarding the registration credentials in your personal email ID and mobi...
+------------------------------
+Rank 6 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_Guidelines_for_BTech_2025.pdf.md_1
+Text Preview: Pay link to pay the fee online, after clicking on Pay link, a pop-up for confirmation will be seen. After verifying amount, click on Submit to pay. Pa...
+------------------------------
+Rank 7 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_FORM_B_and_C.pdf.md_0
+Text Preview: Form B (UG) INDIAN INSTITUTE OF TECHNOLOGY JAMMU FAMILY INCOME STATEMENT NAME OF THE STUDENT STUDENT ID. CATEGORY _ STUDENT’S MOBILE NO.__________ STU...
+------------------------------
+Rank 8 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_FORM_E-Hostel_Admission.pdf.md_0
+Text Preview: FORM E HOSTEL DECLARATION FORM I………………………………………………………………………………………… (Application ID…………………………………..) have read the understated rules and regulations for...
+------------------------------
+Rank 9 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_General_Guidelines_for_the_freshers_First_year_UG_students.pdf.md_0
+Text Preview: General Guidelines for the freshers (First year UG students) Dear Students and Parents, Warm greetings and welcome to IIT Jammu! As you prepare to joi...
+------------------------------
+Rank 10 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Preparatory_Students_UG_2025_final.pdf.md_0
+Text Preview: Website: www.iitjammu.ac.in Phone: 0191-2570633 Email: ugoffice.acad@iitjammu.ac.in Dated: 15 July, 2025 Offer Letter for Undergraduate (UG) Admission...
+------------------------------
+Rank 11 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Preparatory_Students_UG_2025_final.pdf.md_4
+Text Preview: course students. These will be informed through notifications uploaded in website. 6. The student will be required to renew his/her registration every...
+------------------------------
+Rank 12 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Preparatory_Students_UG_2025_final.pdf.md_5
+Text Preview: IIT Jammu see to it that these requirements are met promptly and in the best way possible. We would like you to extend your assistance for the same by...
+------------------------------
+Rank 13 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Preparatory_Students_UG_2025_final.pdf.md_7
+Text Preview: strictly banned in the campus and we are extremely vigilant and strict in this matter. In case of any issue which is quite unlikely, the student shoul...
+------------------------------
+Rank 14 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Students_2025_UG_final.pdf.md_0
+Text Preview: Website: www.iitjammu.ac.in Phone: 0191-2570633 Email: ugoffice.acad@iitjammu.ac.in Dated: 15 July, 2025 Offer Letter for Undergraduate (UG) Admission...
+------------------------------
+Rank 15 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Students_2025_UG_final.pdf.md_1
+Text Preview: bring all the original certificates (10th and 12th marksheet), Date of Birth certificate, forms duly signed (list of forms is given in Annexure “A” of...
+------------------------------
+Rank 16 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Students_2025_UG_final.pdf.md_2
+Text Preview: Rs. 1,25,390/- Rs. 58,723/- Rs. 25,390/- Rs. 40,390/- Processing Charge by JOSAA) Note: Fee components other than tuition fees will increase annually ...
+------------------------------
+Rank 17 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Students_2025_UG_final.pdf.md_4
+Text Preview: qualification etc. and/or claiming reservation under any category applied for, as per Central Government rules/notifications. 2. The Institute reserve...
+------------------------------
+Rank 18 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Students_2025_UG_final.pdf.md_5
+Text Preview: other states don’t function. Students/Parents are advised to have a post-paid connection for the initial days until they get a pre-paid sim from J&K. ...
+------------------------------
+Rank 19 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Students_2025_UG_final.pdf.md_6
+Text Preview: Structure A typical academic year at IIT Jammu is divided into two semesters – Autumn Semester and Spring Semester The curriculum at IIT Jammu is base...
+------------------------------
+Rank 20 | Score: 0.6250 | Matched: {'iit', 'the', 'of', 'is', 'jammu'} | ID: chunk_ugadm_Programme_ugadmissions_2025_documents_Invitation_Letter_Students_2025_UG_final.pdf.md_7
+Text Preview: our students. General lifestyle of students includes a lot of extracurricular activities in fields of sports, cultural and technical activities, at in...
+------------------------------

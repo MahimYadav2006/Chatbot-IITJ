@@ -19,6 +19,7 @@ def _normalized_query(query: str) -> str:
         "b.tech. project": "btech project",
         "oe": "open elective",
         "oes": "open electives",
+        "changing": "change",
     }
     for old, new in replacements.items():
         q = re.sub(rf"\b{re.escape(old)}\b", new, q)
@@ -134,7 +135,7 @@ def is_academic_rules_query(query: str) -> bool:
         "minimum degree requirement", "minimum degree requirements",
         "compulsory hss", "hss course", "hss courses",
         "change of department", "department change", "branch change",
-        "change department", "change branch",
+        "change department", "change branch", "change of branch",
     )
     
     # Check if any strong academic rule keyword is present

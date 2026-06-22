@@ -40,6 +40,7 @@ class RulesRetriever:
         "program": "programme",
         "b.tech": "btech",
         "b.tech.": "btech",
+        "changing": "change",
     }
 
     PHRASE_EXPANSIONS = {
@@ -54,6 +55,9 @@ class RulesRetriever:
         "hss course": ["humanities and social sciences", "hss core", "literature", "economics"],
         "change department": ["change of department", "department change", "branch change"],
         "department change": ["change of department", "department change", "branch change"],
+        "change branch": ["change of department", "department change", "branch change"],
+        "branch change": ["change of department", "department change", "branch change"],
+        "change of branch": ["change of department", "department change", "branch change"],
         "evaluation scheme": ["evaluation scheme", "evaluation mode", "theoretical courses", "class test", "mid semester", "end semester"],
         "evaluation mode": ["evaluation scheme", "evaluation mode", "theoretical courses", "class test", "mid semester", "end semester"],
         "theoretical course": ["evaluation modes of theoretical courses", "evaluation scheme of the theoretical courses"],
@@ -176,7 +180,7 @@ class RulesRetriever:
             "btech", "b.tech", "undergraduate", "ug", "minor", "specialization",
             "co-curricular", "btp", "btech project", "open elective",
             "hss", "idp", "semester internship", "change of department",
-            "department change", "branch change"
+            "department change", "branch change", "change branch", "change of branch"
         ]):
             program = "UG"
             
@@ -212,7 +216,7 @@ class RulesRetriever:
             facts_to_lookup.append("semester_internship_policy")
         if "withdrawal" in q_lower and "course" in q_lower:
             facts_to_lookup.append("course_withdrawal_policy")
-        if any(w in q_lower for w in ["change of department", "department change", "branch change", "change department"]):
+        if any(w in q_lower for w in ["change of department", "department change", "branch change", "change department", "change branch", "change of branch"]):
             facts_to_lookup.append("department_change_policy")
             
         # 3. Structural Intent Flags
