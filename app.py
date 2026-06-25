@@ -163,6 +163,9 @@ def _is_identity_query(query: str) -> bool:
         # Academic terms
         "minor", "minors", "credit", "credits", "curriculum", "semester", 
         "eligible", "eligibility", "syllabus", "degree",
+        # Office / address queries — need full retrieval, not identity fast-path
+        "address", "office address", "office location", "office of",
+        "cabin", "room number", "where is the office",
         # Admin role queries — should go through administration dept routing,
         # not person index (which can contain role-placeholder names).
         "dean of", "dean ", "associate dean",
@@ -183,6 +186,91 @@ def _is_identity_query(query: str) -> bool:
     return True
 
 
+def extract_person_name_from_query(query: str) -> Optional[str]:
+    """Extract a name from queries like 'Who is X?' or 'tell me about X'."""
+    import re
+    q = query.strip()
+    patterns = [
+        r"(?i)\bwho\s+is\s+(?:dr\.?|prof\.?|mr\.?|ms\.?|sh\.?|shri\.?|smt\.?)?\s*([a-zA-Z\s]+)",
+        r"(?i)\btell\s+me\s+about\s+(?:dr\.?|prof\.?|mr\.?|ms\.?|sh\.?|shri\.?|smt\.?)?\s*([a-zA-Z\s]+)",
+        r"(?i)\bprofile\s+of\s+(?:dr\.?|prof\.?|mr\.?|ms\.?|sh\.?|shri\.?|smt\.?)?\s*([a-zA-Z\s]+)",
+        r"(?i)\binfo\s+on\s+(?:dr\.?|prof\.?|mr\.?|ms\.?|sh\.?|shri\.?|smt\.?)?\s*([a-zA-Z\s]+)",
+        r"(?i)\binformation\s+about\s+(?:dr\.?|prof\.?|mr\.?|ms\.?|sh\.?|shri\.?|smt\.?)?\s*([a-zA-Z\s]+)",
+        r"(?i)\bwho\s+was\s+(?:dr\.?|prof\.?|mr\.?|ms\.?|sh\.?|shri\.?|smt\.?)?\s*([a-zA-Z\s]+)",
+    ]
+    for pattern in patterns:
+        m = re.search(pattern, q)
+        if m:
+            name = m.group(1).strip()
+            name = re.sub(r"[?!.,;:]", "", name).strip()
+            if len(name) >= 3 and len(name.split()) <= 4:
+                return name
+    
+    # Fallback: if query is exactly 2 or 3 words and all are alphabetic
+    words = q.split()
+    if 2 <= len(words) <= 3 and all(w.isalpha() and len(w) >= 3 for w in words):
+        return q
+    return None
+
+
+def search_scraped_data_for_person(name: str) -> Optional[str]:
+    """Search all .md files in scraped_data for the given person name and extract context."""
+    import os
+    import re
+    scraped_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "scraped_data"))
+    if not os.path.exists(scraped_dir):
+        return None
+
+    clean_name = name.strip().lower()
+    if not clean_name:
+        return None
+
+    matches = []
+    max_files = 5
+    pattern = re.compile(r"\b" + re.escape(clean_name) + r"\b", re.IGNORECASE)
+
+    for root, dirs, files in os.walk(scraped_dir):
+        for file in files:
+            if not file.endswith(".md"):
+                continue
+            if "00_combined" in file:
+                continue
+            filepath = os.path.join(root, file)
+            try:
+                with open(filepath, "r", encoding="utf-8") as f:
+                    content = f.read()
+                    if pattern.search(content):
+                        lines = content.splitlines()
+                        file_matches = []
+                        for i, line in enumerate(lines):
+                            if pattern.search(line):
+                                start_idx = max(0, i - 4)
+                                end_idx = min(len(lines), i + 10)
+                                snippet = "\n".join(lines[start_idx:end_idx])
+                                file_matches.append(snippet)
+                                break
+                        if file_matches:
+                            rel_path = os.path.relpath(filepath, scraped_dir)
+                            matches.append((rel_path, file_matches[0]))
+                            if len(matches) >= max_files:
+                                break
+            except Exception as e:
+                logger.warning(f"Error reading file {filepath} in markdown fallback: {e}")
+        if len(matches) >= max_files:
+            break
+
+    if not matches:
+        return None
+
+    blocks = []
+    for rel_path, snippet in matches:
+        norm_path = rel_path.replace("\\", "/")
+        source_name = norm_path.split("/")[0].replace("_", " ").title()
+        blocks.append(f"### Source: {source_name} ({norm_path})\n\n{snippet}")
+
+    return "\n\n---\n\n".join(blocks)
+
+
 def get_global_person_direct_answer(query: str) -> Optional[str]:
     """Check if query is about a person and return a deterministic direct answer from Global Person Index.
 
@@ -193,6 +281,12 @@ def get_global_person_direct_answer(query: str) -> Optional[str]:
     """
     global person_index
     if not person_index:
+        # Even if person_index is not loaded, we can still attempt raw markdown fallback search
+        extracted_name = extract_person_name_from_query(query)
+        if extracted_name:
+            fallback_ctx = search_scraped_data_for_person(extracted_name)
+            if fallback_ctx:
+                return f"**{extracted_name}** is mentioned in the following department/division documents:\n\n{fallback_ctx}"
         return None
 
     # Intent guard: skip role-card for non-identity queries
@@ -227,7 +321,9 @@ def get_global_person_direct_answer(query: str) -> Optional[str]:
             "institutes", "institute", "iitj", "kumar", "singh", "sharma", "doctor", "dr",
             "computer", "science", "engineering", "electrical", "mechanical", "civil", 
             "chemical", "biosciences", "bioengineering", "materials", "physics", 
-            "chemistry", "mathematics", "humanities", "social"
+            "chemistry", "mathematics", "humanities", "social",
+            "gupta", "yadav", "verma", "patel", "das", "devi", "prasad", "lal", 
+            "choudhary", "sen", "roy", "mishra", "pandey", "dutta", "bose"
         }
         for name in person_index.person_roles.keys():
             parts = [p.lower() for p in name.split() if len(p) >= 4 and p.lower() not in ignored_tokens]
@@ -252,25 +348,51 @@ def get_global_person_direct_answer(query: str) -> Optional[str]:
                 
                 display_name = res['name']
                 is_doc = any(r.get("label") == "MedicalDoctor" for r in sorted_roles)
+                is_student = any(r.get("is_student") for r in sorted_roles)
                 if is_doc and not display_name.startswith("Dr. ") and not display_name.startswith("Dr "):
                     display_name = f"Dr. {display_name}"
-                lines = [f"**{display_name}** holds the following role(s) at IIT Jammu:"]
-                for r in sorted_roles:
-                    source_name = r["source"].replace("_", " ").title()
-                    lines.append(f"- **{r['designation']}** under the {source_name} division/department")
-                    if r.get("qualifications"):
-                        lines.append(f"  - Qualifications: {r['qualifications']}")
-                    if r.get("experience"):
-                        lines.append(f"  - Experience: {r['experience']}")
-                    if r.get("email"):
-                        lines.append(f"  - Email: {r['email']}")
-                    if r.get("phone"):
-                        lines.append(f"  - Phone: {r['phone']}")
-                    if r.get("office"):
-                        lines.append(f"  - Office: {r['office']}")
-                    if r.get("profile_url"):
-                        lines.append(f"  - Profile: [Faculty Page]({r['profile_url']})")
+
+                if is_student:
+                    # Build student-specific role card
+                    lines = [f"**{display_name}** is a student at IIT Jammu:"]
+                    for r in sorted_roles:
+                        source_name = r["source"].replace("_", " ").title()
+                        program = r.get("program", "")
+                        lines.append(f"- **{program} Scholar** in the {source_name} department")
+                        if r.get("supervisor"):
+                            lines.append(f"  - Supervisor: {r['supervisor']}")
+                        if r.get("research_area"):
+                            lines.append(f"  - Research Area: {r['research_area']}")
+                        if r.get("thesis_title"):
+                            lines.append(f"  - Thesis: {r['thesis_title']}")
+                        if r.get("email"):
+                            lines.append(f"  - Email: {r['email']}")
+                else:
+                    lines = [f"**{display_name}** holds the following role(s) at IIT Jammu:"]
+                    for r in sorted_roles:
+                        source_name = r["source"].replace("_", " ").title()
+                        lines.append(f"- **{r['designation']}** under the {source_name} division/department")
+                        if r.get("qualifications"):
+                            lines.append(f"  - Qualifications: {r['qualifications']}")
+                        if r.get("experience"):
+                            lines.append(f"  - Experience: {r['experience']}")
+                        if r.get("email"):
+                            lines.append(f"  - Email: {r['email']}")
+                        if r.get("phone"):
+                            lines.append(f"  - Phone: {r['phone']}")
+                        if r.get("office"):
+                            lines.append(f"  - Office: {r['office']}")
+                        if r.get("profile_url"):
+                            lines.append(f"  - Profile: [Faculty Page]({r['profile_url']})")
                 return "\n".join(lines)
+
+    # Try raw markdown fallback search before giving up
+    extracted_name = extract_person_name_from_query(query)
+    if extracted_name:
+        fallback_ctx = search_scraped_data_for_person(extracted_name)
+        if fallback_ctx:
+            return f"**{extracted_name}** is mentioned in the following department/division documents:\n\n{fallback_ctx}"
+
     return None
 
 
@@ -375,8 +497,48 @@ def chat():
         person_direct_ans = get_global_person_direct_answer(query)
         if person_direct_ans and _is_identity_query(query):
             # Identity fast-path: LLM synthesizes from person context (short response)
-            prompt = build_chat_prompt(query, person_direct_ans, dept_code="administration")
-            system_prompt = get_system_prompt(dept_code="administration")
+            # Use the person's actual department for system prompt scoping
+            identity_dept_code = "administration"
+            if person_index:
+                import re
+                q_lower = query.lower().strip()
+                for name in person_index.person_roles.keys():
+                    pattern = r"\b" + re.escape(name.lower()) + r"\b"
+                    if re.search(pattern, q_lower):
+                        for r in person_index.person_roles[name]:
+                            if r.get("source") and not r.get("is_section", False):
+                                identity_dept_code = r["source"]
+                                break
+                        break
+                # Partial name fallback
+                if identity_dept_code == "administration":
+                    ignored_tokens = {
+                        "prof", "professor", "iit", "jammu", "kumar", "singh", "sharma", "dr",
+                    }
+                    for name in person_index.person_roles.keys():
+                        parts = [p.lower() for p in name.split() if len(p) >= 4 and p.lower() not in ignored_tokens]
+                        if parts and any(re.search(r"\b" + re.escape(part) + r"\b", q_lower) for part in parts):
+                            for r in person_index.person_roles[name]:
+                                if r.get("source") and not r.get("is_section", False):
+                                    identity_dept_code = r["source"]
+                                    break
+                            break
+
+            # Extract department code from raw markdown search results if applicable
+            if "### Source:" in person_direct_ans:
+                import re
+                for line in person_direct_ans.splitlines():
+                    if "Source:" in line:
+                        m = re.search(r"\(([^/]+)/", line)
+                        if m:
+                            potential_dept = m.group(1)
+                            from departments import DEPARTMENTS, SECTIONS
+                            if potential_dept in DEPARTMENTS or potential_dept in SECTIONS:
+                                identity_dept_code = potential_dept
+                                break
+
+            prompt = build_chat_prompt(query, person_direct_ans, dept_code=identity_dept_code)
+            system_prompt = get_system_prompt(dept_code=identity_dept_code)
             response = llm.generate(prompt, system_prompt=system_prompt, max_tokens=300)
             total_time = time.time() - start
             _log_retrieval_provenance(
@@ -400,6 +562,44 @@ def chat():
 
         # Step 1: Route query to department(s) and/or section(s)
         route_result = router.route(query)
+
+        # RC-5: Person-aware department injection for broadcast queries.
+        # When a person is matched but the query isn't a pure identity question
+        # (e.g., "address of Dr. Rimen Jamatia"), inject the person's department
+        # into the route result so retrieval targets the correct department.
+        if route_result.confidence == "broadcast" and person_context and person_index:
+            # Extract department(s) from the matched person's roles
+            import re
+            q = query.lower().strip()
+            for name in person_index.person_roles.keys():
+                pattern = r"\b" + re.escape(name.lower()) + r"\b"
+                if re.search(pattern, q):
+                    person_roles = person_index.person_roles[name]
+                    for r in person_roles:
+                        source = r.get("source", "")
+                        if source and not r.get("is_section", False):
+                            if source not in route_result.departments:
+                                route_result.departments.append(source)
+                                route_result.confidence = "exact"
+                                route_result.reason = f"Person-aware routing: matched '{name}' → {source}"
+                                logger.info(f"Person-aware routing: injected dept '{source}' for person '{name}'")
+                    break
+            # Also try partial name matching (same as get_global_person_direct_answer)
+            if route_result.confidence == "broadcast":
+                for name in person_index.person_roles.keys():
+                    parts = [p.lower() for p in name.split() if len(p) >= 4]
+                    if parts and any(re.search(r"\b" + re.escape(part) + r"\b", q) for part in parts):
+                        person_roles = person_index.person_roles[name]
+                        for r in person_roles:
+                            source = r.get("source", "")
+                            if source and not r.get("is_section", False):
+                                if source not in route_result.departments:
+                                    route_result.departments.append(source)
+                                    route_result.confidence = "exact"
+                                    route_result.reason = f"Person-aware routing: matched '{name}' → {source}"
+                                    logger.info(f"Person-aware routing: injected dept '{source}' for person '{name}'")
+                        break
+
         logger.info(f"Routing: '{query[:60]}...' → {route_result.confidence} | depts={route_result.departments} | sections={route_result.sections} | {route_result.reason}")
 
         # Step 2: Retrieve context based on routing

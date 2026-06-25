@@ -306,6 +306,84 @@ SECTION_NAME_ALIASES = {
         "academic downloads", "general downloads",
         "academic forms download", "academic documents download"
     ],
+    "media": [
+        # General media terms
+        "media", "media section", "media cell", "media body",
+        "annual report", "annual reports", "brochure", "brochures",
+        "certificates", "institute certificates",
+        "institute in news", "news digest", "campus connect",
+        "newsletter", "newsletters", "archived newsletters",
+        # Donations
+        "donation", "donations", "donate", "giving back",
+        "csr", "csr registration", "corporate social responsibility",
+        # Events / Gallery
+        "events", "event gallery", "gallery", "seminars",
+        "samvaad", "iccmde", "gyansetu",
+        # Holidays
+        "holiday", "holidays", "holiday list", "holidays 2026",
+        "list of holidays", "gazetted holiday", "gazetted holidays",
+        "republic day holiday", "diwali holiday", "holi holiday",
+        # MoU (co-route with ir)
+        "mou", "mous", "memorandum of understanding",
+        "collaborations", "partnerships", "partner institutes",
+        # PRISM
+        "prism", "student media body", "student media",
+        "prism iit jammu",
+        # Sangam magazine
+        "sangam", "sangam magazine", "student magazine",
+        "magazine", "campus magazine",
+    ],
+    # ── Quick Links Section Aliases ───────────────────────────────────
+    "quick-adjunct-faculty": [
+        "adjunct faculty", "adjunct professor", "adjunct professors",
+        "visiting faculty", "honorary faculty", "adjunct",
+    ],
+    "quick-anti-ragging": [
+        "anti ragging", "anti-ragging", "ragging", "ragging complaint",
+        "ragging helpline", "anti ragging squad", "ars", "arc",
+        "anti ragging committee", "ragging prevention",
+        "national ragging helpline", "1800-180-5522",
+        "caste discrimination", "caste based discrimination",
+        "zero tolerance ragging",
+    ],
+    "quick-committees": [
+        "equal opportunity cell", "eoc", "equal opportunity",
+        "ethics committee", "iec", "institute ethics committee",
+        "internal complaint committee", "icc",
+        "sexual harassment", "complaint committee",
+        "grievance redressal", "sgrc", "student grievance",
+        "ombudsperson", "ombudsman",
+        "sc st cell", "sc/st cell", "sc st", "sc/st", "scheduled caste",
+        "scheduled tribe", "pwd liaison", "obc liaison",
+        "liaison officer",
+        "discrimination", "discriminated", "caste",
+        "caste discrimination", "caste based",
+    ],
+    "quick-staff": [
+        "staff directory", "staff list", "staff page",
+        "institute staff", "non-teaching staff", "administrative staff",
+        "lab assistant", "laboratory officer", "laboratory assistant",
+        "workshop officer", "deputy registrar", "assistant registrar",
+        "section officer", "junior engineer", "senior assistant",
+        "caretaker", "mess manager", "security officer",
+        "training placement officer", "tpo",
+        "deputy librarian", "librarian",
+        "honorary chair professor", "chair professor",
+    ],
+    "quick-contacts": [
+        "voip", "voip directory", "phone directory", "phone number",
+        "telephone number", "intercom", "extension number",
+        "welcome contacts", "contact directory", "contact number",
+        "office phone", "office telephone", "dial",
+    ],
+    "quick-rti": [
+        "rti", "right to information", "rti act",
+        "cpio", "public information officer",
+        "first appellate authority", "faa",
+        "suo moto", "suo-moto", "suo moto disclosure",
+        "transparency audit", "third party audit",
+        "audited report", "annual audit",
+    ],
 }
 
 
@@ -357,6 +435,19 @@ class DepartmentRouter:
         detected_depts = self._detect_departments(query)
         detected_secs = self._detect_sections(query)
 
+        # Inject program-specific admission sections for admission-related queries
+        q_lower = query.lower()
+        if any(w in q_lower for w in ("admission", "admissions", "admitted")):
+            if any(w in q_lower for w in ("ug", "undergraduate", "btech", "b.tech")):
+                if "students-ug-admissions" not in detected_secs:
+                    detected_secs.append("students-ug-admissions")
+            if any(w in q_lower for w in ("pg", "postgraduate", "mtech", "m.tech", "msc", "m.sc")):
+                if "students-pg-admissions" not in detected_secs:
+                    detected_secs.append("students-pg-admissions")
+            if any(w in q_lower for w in ("phd", "ph.d", "doctoral")):
+                if "students-phd-admissions" not in detected_secs:
+                    detected_secs.append("students-phd-admissions")
+
         # Inject academics for all department queries
         if detected_depts:
             if "academics" not in detected_secs:
@@ -372,6 +463,51 @@ class DepartmentRouter:
         if detected_secs and any(s in _student_academic_overlap for s in detected_secs):
             if "academics" not in detected_secs:
                 detected_secs.append("academics")
+
+        # Inject cross-routing for media / ir and media / students-schedule overlaps
+        _media_ir_overlap_terms = {"mou", "mous", "memorandum of understanding", "collaborations", "partnerships"}
+        _media_schedule_overlap_terms = {"holiday", "holidays", "holiday list"}
+        q_lower = query.lower()
+        if "media" in detected_secs or "ir" in detected_secs:
+            if any(term in q_lower for term in _media_ir_overlap_terms):
+                if "ir" not in detected_secs:
+                    detected_secs.append("ir")
+                if "media" not in detected_secs:
+                    detected_secs.append("media")
+        if "media" in detected_secs or "students-schedule" in detected_secs:
+            if any(term in q_lower for term in _media_schedule_overlap_terms):
+                if "students-schedule" not in detected_secs:
+                    detected_secs.append("students-schedule")
+                if "media" not in detected_secs:
+                    detected_secs.append("media")
+
+        # Cross-routing: complaints/grievances → committees + sw
+        _complaint_terms = {"complaint", "grievance", "harassment", "discrimination"}
+        if any(term in q_lower for term in _complaint_terms):
+            for sec in ["quick-committees", "sw"]:
+                if sec not in detected_secs:
+                    detected_secs.append(sec)
+
+        # Cross-routing: liaison officer → anti-ragging + committees
+        if "liaison" in q_lower:
+            for sec in ["quick-anti-ragging", "quick-committees"]:
+                if sec not in detected_secs:
+                    detected_secs.append(sec)
+
+        # Cross-routing: staff queries → quick-staff alongside department staff
+        if any(term in q_lower for term in ["staff", "non-teaching", "lab assistant"]):
+            if "quick-staff" not in detected_secs:
+                detected_secs.append("quick-staff")
+
+        # Cross-routing: phone/contact → quick-contacts
+        if any(term in q_lower for term in ["phone number", "contact number", "voip", "telephone", "intercom"]):
+            if "quick-contacts" not in detected_secs:
+                detected_secs.append("quick-contacts")
+
+        # Cross-routing: adjunct → quick-adjunct-faculty alongside department
+        if "adjunct" in q_lower:
+            if "quick-adjunct-faculty" not in detected_secs:
+                detected_secs.append("quick-adjunct-faculty")
 
 
         if detected_depts or detected_secs:

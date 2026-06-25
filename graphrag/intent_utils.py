@@ -74,7 +74,7 @@ def is_academic_rules_query(query: str) -> bool:
         "rule", "rules", "regulation", "regulations", "policy", "policies", 
         "manual", "handbook", "statute", "statutes", "guideline", "guidelines", 
         "ordinance", "ordinances", "requirement", "requirements", "criteria", 
-        "eligibility"
+        "eligibility", "consequence", "consequences", "penalty", "penalties"
     )
     
     malpractice_keywords = (
@@ -110,7 +110,11 @@ def is_academic_rules_query(query: str) -> bool:
         "curriculum", "course structure", "course offering", "elective basket",
         "elective bucket", "elective track", "list of courses", "course syllabus",
         "course code", "course name", "ltp", "ltp structure", "credits of",
-        "credit distribution", "credits do", "credits to graduate", "credits needed"
+        "credit distribution", "credits do", "credits to graduate", "credits needed",
+        "attendance requirement", "attendance criteria", "low attendance",
+        "minimum attendance", "deregistration", "detention", "academic probation",
+        "complete phd", "phd completion", "phd duration", "how many years", "maximum duration",
+        "minimum duration", "maximum period", "registration period", "maximum years", "minimum years"
     )
 
     academic_policy_phrases = (
@@ -136,6 +140,8 @@ def is_academic_rules_query(query: str) -> bool:
         "compulsory hss", "hss course", "hss courses",
         "change of department", "department change", "branch change",
         "change department", "change branch", "change of branch",
+        "consequences of low attendance", "consequences of having low attendance",
+        "attendance policy", "attendance rule", "attendance rules",
     )
     
     # Check if any strong academic rule keyword is present

@@ -67,6 +67,10 @@ class RulesRetriever:
         "ta category": ["ta category", "teaching assistant", "course structure for students under ta category", "typical m tech programme under ta category"],
         "course code convention": ["course code convention", "subject codes", "type of course", "level denoting", "alphanumeric characters"],
         "course coded": ["course code convention", "coded as", "will indicate", "subject code", "level denoting"],
+        "attendance policy": ["attendance policy", "attendance requirement", "75% attendance", "75 % attendance", "low attendance"],
+        "low attendance": ["attendance policy", "low attendance", "grade fw", "probation"],
+        "phd duration": ["period of registration", "minimum period", "maximum of seven years", "submit their ph.d thesis"],
+        "complete phd": ["period of registration", "minimum period", "maximum of seven years", "submit their ph.d thesis"],
     }
 
     def __init__(self, db: Optional[RulesDB] = None):
@@ -313,6 +317,21 @@ class RulesRetriever:
             elif "al055p4i" in compact_query and "al055p4i" in compact_section:
                 score += 80.0
 
+            # Attendance policy boost
+            if "attendance" in q:
+                if "attendance policy" in body_lower or "75 % attendance" in body_lower or "75% attendance" in body_lower:
+                    score += 150.0
+                elif "attendance" in title_lower:
+                    score += 50.0
+
+            # PhD duration boost
+            if "phd" in q or "ph.d" in q:
+                if any(w in q for w in ("duration", "year", "years", "complete", "completion", "period", "maximum", "minimum")):
+                    if any(term in body_lower for term in ("minimum period of registration", "submit their ph.d. thesis", "submit their phd thesis", "period of not less than three calendar years")):
+                        score += 150.0
+                    elif sec.get("section_number") in ("R.11.1", "R.11.2"):
+                        score += 120.0
+
             if score > 0:
                 ranked = dict(sec)
                 ranked["rank"] = -score
@@ -323,6 +342,31 @@ class RulesRetriever:
             return []
 
         scored.sort(key=lambda item: (-item["_retrieval_score"], item.get("program", ""), item.get("source_file", "")))
+
+        # Specific reordering for PhD duration queries
+        if ("phd" in q or "ph.d" in q) and any(w in q for w in ("duration", "year", "years", "complete", "completion", "period", "maximum", "minimum")):
+            target_sections = [
+                item for item in scored
+                if item.get("program") == "PhD"
+                and item.get("section_number") in ("R.11.1", "R.11.2")
+            ]
+            if target_sections:
+                target_ids = {s["section_number"] for s in target_sections}
+                other_sections = [s for s in scored if s.get("section_number") not in target_ids]
+                scored = target_sections + other_sections
+
+        # Specific reordering for attendance queries
+        if "attendance" in q:
+            target_sections = [
+                item for item in scored
+                if ("attendance policy" in (item.get("title", "") + " " + item.get("full_text", "")).lower()
+                    or "75 % attendance" in item.get("full_text", "").lower()
+                    or "75% attendance" in item.get("full_text", "").lower())
+            ]
+            if target_sections:
+                target_ids = {s["section_number"] for s in target_sections}
+                other_sections = [s for s in scored if s.get("section_number") not in target_ids]
+                scored = target_sections + other_sections
 
         def has_text(item: Dict[str, Any], needle: str) -> bool:
             return needle in f"{item.get('title', '')} {item.get('full_text', '')}".lower()

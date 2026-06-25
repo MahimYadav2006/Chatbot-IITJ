@@ -23,7 +23,17 @@ class GlobalPersonIndex:
         "dean ", "all dean", "upto ", "nominated ",
         "one representative", "two representative", "three representative",
         "four representative", "five representative",
+        "hos ", "head of ", "liaison ",
     )
+
+    # Words that strongly indicate a role descriptor rather than a personal name
+    _ROLE_DESCRIPTOR_WORDS = {
+        "officer", "affairs", "liaison", "coordinator", "convener",
+        "chairperson", "chairman", "representative", "nominee",
+        "warden", "provost", "controller", "superintendent",
+        "incharge", "in-charge", "section", "coordinating",
+        "deputy", "registrar", "director", "council", "ex-officio",
+    }
 
     @classmethod
     def _is_role_placeholder(cls, name: str) -> bool:
@@ -34,13 +44,34 @@ class GlobalPersonIndex:
         # Very long "names" with generic committee phrasing
         if len(nl.split()) > 8:
             return True
+        # Names containing 2+ role-descriptor words are almost certainly position titles
+        words = set(nl.split())
+        role_word_count = len(words & cls._ROLE_DESCRIPTOR_WORDS)
+        if role_word_count >= 2:
+            return True
+        # Also check substrings for garbled/concatenated role words (e.g., "affairsex-officio")
+        if role_word_count >= 1:
+            for word in words:
+                for desc in cls._ROLE_DESCRIPTOR_WORDS:
+                    if desc in word and word != desc:
+                        role_word_count += 1
+                        break
+            if role_word_count >= 2:
+                return True
+        # Single-word names that are pure role titles
+        if len(words) <= 2 and words.issubset(cls._ROLE_DESCRIPTOR_WORDS | {"for", "of", "the", "and", "sc/st", "sc", "st", "obc", "pwd"}):
+            return True
+        # Names starting with institutional generic terms (not personal names)
+        _generic_starts = ("ad ", "student ", "faculty ", "staff ", "office ")
+        if any(nl.startswith(gs) for gs in _generic_starts):
+            return True
         return False
 
     def index_graph(self, graph, source_name: str, is_section: bool = False):
         """Extract person entities from a graph and index them."""
         for node_id, data in graph.nodes(data=True):
             label = data.get("label")
-            if label in ("Faculty", "AdminOfficial", "SectionPerson", "SectionHead", "Counselor", "MedicalDoctor"):
+            if label in ("Faculty", "AdminOfficial", "SectionPerson", "SectionHead", "Counselor", "MedicalDoctor", "PhDStudent"):
                 name = data.get("name") or str(node_id)
                 # Strip prefix if any (e.g. ee:Dr. Alok Kumar Saxena -> Dr. Alok Kumar Saxena)
                 if ":" in name and not name.startswith("http"):
@@ -62,8 +93,19 @@ class GlobalPersonIndex:
                     "profile_url": data.get("profile_url") or "",
                     "office": data.get("office") or "",
                     "qualifications": data.get("qualifications") or "",
-                    "experience": data.get("experience") or ""
+                    "experience": data.get("experience") or "",
                 }
+
+                # Enrich with student-specific fields
+                if label == "PhDStudent":
+                    role["is_student"] = True
+                    role["program"] = "PhD"
+                    role["supervisor"] = data.get("supervisor") or ""
+                    role["research_area"] = data.get("research_area") or data.get("research_topic") or ""
+                    role["thesis_title"] = data.get("thesis_title") or ""
+                    # Use a sensible designation for students
+                    if not role["designation"]:
+                        role["designation"] = "PhD Scholar"
                 
                 # Check for duplicate roles from the same source to keep it clean
                 existing = self.person_roles[resolved_name]

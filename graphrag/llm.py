@@ -325,6 +325,11 @@ class GeminiLLM:
                 return "I'm sorry, the request timed out. Please try again."
             except requests.exceptions.HTTPError as e:
                 logger.error(f"Gemini LLM HTTP error (attempt {attempt + 1}): {e}")
+                status = getattr(e.response, "status_code", None)
+                if status in {500, 502, 503, 504} and attempt == 0:
+                    logger.info("Transient %s from Gemini; retrying in 2s…", status)
+                    time.sleep(2)
+                    continue
                 return "I encountered an error generating a response. Please try again."
             except Exception as e:
                 logger.error(f"Gemini LLM error (attempt {attempt + 1}): {e}")

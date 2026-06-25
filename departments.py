@@ -245,6 +245,15 @@ SECTIONS = {
     "students-visvesvaraya": {"name": "Visvesvaraya PhD Scheme", "base_url": "https://iitjammu.ac.in/visvesvaraya-phd"},
     "students-why-iitjammu": {"name": "Why IIT Jammu", "base_url": "https://www.iitjammu.ac.in/why-iitjammu"},
     "students-academic-downloads": {"name": "Academic General Downloads", "base_url": "https://iitjammu.ac.in/academics/academics-general-downloads"},
+    # ── Media Section ────────────────────────────────────────────
+    "media": {"name": "Media & Communications", "base_url": "https://iitjammu.ac.in/events"},
+    # ── Quick Links Sections ─────────────────────────────────────
+    "quick-adjunct-faculty": {"name": "Adjunct Faculty", "base_url": "https://iitjammu.ac.in/adjunct-faculty"},
+    "quick-anti-ragging": {"name": "Anti-Ragging", "base_url": "https://iitjammu.ac.in/anti-ragging"},
+    "quick-committees": {"name": "Institute Committees", "base_url": "https://iitjammu.ac.in/equal-opportunity-cell"},
+    "quick-staff": {"name": "Institute Staff Directory", "base_url": "https://iitjammu.ac.in/staff-page"},
+    "quick-contacts": {"name": "Contact Directory", "base_url": "https://iitjammu.ac.in/voip-directory"},
+    "quick-rti": {"name": "RTI & Transparency", "base_url": "https://iitjammu.ac.in/rti"},
 }
 
 # Mapping from student section codes to their actual scraped_data subdirectory
@@ -263,6 +272,45 @@ STUDENT_SECTION_FOLDER_MAP = {
     "students-academic-downloads": "students/academics-general-downloads",
 }
 
+# Mapping from media section code to Media directory
+MEDIA_SECTION_FOLDER_MAP = {
+    "media": "Media",
+}
+
+# Mapping from quick section codes to their actual scraped_data subdirectory
+QUICK_SECTION_FOLDER_MAP = {
+    "quick-adjunct-faculty": "Quick/adjunct-faculty",
+    "quick-anti-ragging": "Quick/anti-ragging",
+    "quick-committees": "Quick",         # Multi-source: pulls from multiple Quick subdirs
+    "quick-staff": "Quick/staff-page",
+    "quick-contacts": "Quick",            # Multi-source: voip-directory + welcome-contacts
+    "quick-rti": "Quick/rti",
+}
+
+# For quick sections that pull from multiple subdirectories, list them here.
+# The builder will iterate over all source dirs for these sections.
+QUICK_MULTI_SOURCE = {
+    "quick-committees": [
+        "Quick/equal-opportunity-cell",
+        "Quick/institute-ethics-committee",
+        "Quick/internal-complaint-committee",
+        "Quick/st-sc-cell",
+        "Quick/Pdf-data",
+    ],
+    "quick-contacts": [
+        "Quick/voip-directory",
+        "Quick/welcome-contacts",
+    ],
+    "quick-anti-ragging": [
+        "Quick/anti-ragging",
+        "Quick/Pdf-data",
+    ],
+    "quick-rti": [
+        "Quick/rti",
+        "Quick/suo-moto-disclosure",
+    ],
+}
+
 # Boilerplate filenames to skip during student section ingestion
 STUDENT_SECTION_SKIP_PATTERNS = [
     "_nirf_", "_rti_", "_SGRC_", "_index.md",
@@ -270,17 +318,32 @@ STUDENT_SECTION_SKIP_PATTERNS = [
     "Student_Grievance_Redressal_Committee",
 ]
 
+MEDIA_SECTION_SKIP_PATTERNS = [
+    "_index.md", "crawl_manifest.json",
+    "CERT-IN", "SGRC", "nirf_2026",
+]
+
+QUICK_SECTION_SKIP_PATTERNS = [
+    "_index.md", "crawl_manifest.json",
+    "00_combined_",
+]
+
 
 def get_section_markdown_dir(code: str) -> str:
     """Return the canonical crawl output directory for a section.
 
-    Student sections live under ``scraped_data/students/`` while
-    institutional sections live under ``scraped_data/sections/``.
+    Student sections live under ``scraped_data/students/``.
+    Quick sections live under ``scraped_data/Quick/``.
+    Institutional sections live under ``scraped_data/sections/``.
     """
     if code not in SECTIONS:
         raise KeyError(f"Section code '{code}' not found in registry.")
     if code in STUDENT_SECTION_FOLDER_MAP:
         return os.path.join(SCRAPED_DATA_ROOT, STUDENT_SECTION_FOLDER_MAP[code])
+    if code in MEDIA_SECTION_FOLDER_MAP:
+        return os.path.join(SCRAPED_DATA_ROOT, MEDIA_SECTION_FOLDER_MAP[code])
+    if code in QUICK_SECTION_FOLDER_MAP:
+        return os.path.join(SCRAPED_DATA_ROOT, QUICK_SECTION_FOLDER_MAP[code])
     return os.path.join(SCRAPED_DATA_ROOT, "sections", code)
 
 

@@ -13,7 +13,7 @@ from typing import Optional, Dict, List, Any
 from collections import defaultdict
 import networkx as nx
 
-from departments import SECTIONS, get_section_markdown_dir, get_section_data_dir
+from departments import SECTIONS, get_section_markdown_dir, get_section_data_dir, SCRAPED_DATA_ROOT
 from graphrag.kg_builder import (
     clean_content_for_chunks,
     smart_chunk_text,
@@ -1143,36 +1143,686 @@ class SectionKGBuilder:
                     self._add_edge(c_node_id, bucket_id, "BELONGS_TO_BUCKET")
                     self._add_edge(entity_id, bucket_id, "HAS_BUCKET")
 
+    # ── Quick Links Helpers & Parsers ──────────────────────────────────────
+
+    def _strip_quick_links_sidebar(self, content: str) -> str:
+        """Remove the repeated Quick Links sidebar navigation from Quick section files."""
+        lines = content.split('\n')
+        cleaned = []
+        in_sidebar = False
+        for line in lines:
+            if 'Quick Links' in line and not in_sidebar:
+                in_sidebar = True
+                continue
+            if in_sidebar:
+                stripped = line.strip()
+                if stripped.startswith('- [') or stripped.startswith('### !['):
+                    continue
+                if stripped == '':
+                    continue
+                # First non-sidebar line exits sidebar mode
+                in_sidebar = False
+            if not in_sidebar:
+                cleaned.append(line)
+        return '\n'.join(cleaned)
+
+    def _parse_adjunct_faculty(self, filename: str, content: str, doc_id: str):
+        """Parse adjunct faculty tables (current + past) from adjunct-faculty_adjunct-faculty.md."""
+        content = self._strip_quick_links_sidebar(content)
+        lines = content.splitlines()
+        in_table = False
+        headers = []
+        current_status = "Current"
+
+        for line in lines:
+            line_stripped = line.strip()
+
+            # Detect section headings for Current vs Past
+            if re.search(r'(?:past|former)\s+adjunct', line_stripped, re.IGNORECASE):
+                current_status = "Past"
+                in_table = False
+                headers = []
+                continue
+            if re.search(r'current\s+adjunct', line_stripped, re.IGNORECASE):
+                current_status = "Current"
+                in_table = False
+                headers = []
+                continue
+
+            if not line_stripped.startswith('|'):
+                continue
+
+            cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+            if not cells:
+                continue
+            if all(re.match(r'^:?-+:?$', c) for c in cells):
+                in_table = True
+                continue
+            if not in_table:
+                headers = [c.lower() for c in cells]
+                continue
+
+            # Data row
+            if len(cells) < 3:
+                continue
+
+            # Skip serial number column — find name, affiliation, discipline
+            name_idx = -1
+            affiliation_idx = -1
+            discipline_idx = -1
+            for idx, h in enumerate(headers):
+                if any(kw in h for kw in ("name", "faculty")):
+                    name_idx = idx
+                elif "affiliation" in h or "institute" in h or "institution" in h:
+                    affiliation_idx = idx
+                elif "discipline" in h or "area" in h or "department" in h:
+                    discipline_idx = idx
+                elif "acceptance" in h or "date" in h:
+                    pass  # We'll pick these up positionally
+
+            # Fallback to positional if headers didn't match
+            if name_idx == -1:
+                name_idx = 1 if len(cells) > 1 else 0
+            if affiliation_idx == -1:
+                affiliation_idx = 2 if len(cells) > 2 else -1
+            if discipline_idx == -1:
+                discipline_idx = 3 if len(cells) > 3 else -1
+
+            name = clean_admin_member_name(_strip_markdown_link(cells[name_idx])) if name_idx < len(cells) else ""
+            if not name or len(name) < 3 or re.match(r'^\d+$', name):
+                continue
+
+            affiliation = cells[affiliation_idx] if affiliation_idx != -1 and affiliation_idx < len(cells) else ""
+            discipline = cells[discipline_idx] if discipline_idx != -1 and discipline_idx < len(cells) else ""
+
+            # Get acceptance date and term end if present
+            acceptance_date = ""
+            term_end = ""
+            for idx, h in enumerate(headers):
+                if "acceptance" in h and idx < len(cells):
+                    acceptance_date = cells[idx]
+                elif ("end" in h or "term" in h) and idx < len(cells):
+                    term_end = cells[idx]
+
+            resolved_name = self.resolver.resolve(name)
+            node_key = f"adjunct_faculty:{normalize_name(resolved_name)}"
+            self._add_node(node_key, "AdjunctFaculty",
+                           name=resolved_name,
+                           affiliation=_strip_markdown_link(affiliation),
+                           discipline=discipline,
+                           acceptance_date=acceptance_date,
+                           term_end=term_end,
+                           status=current_status,
+                           source_file=filename)
+            self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
+    def _parse_anti_ragging(self, filename: str, content: str, doc_id: str):
+        """Parse anti-ragging pages and PDF data files.
+
+        Extracts: ARC committee members, ARS squad schedule, liaison officers,
+        emergency contacts, and policy text.
+        """
+        content = self._strip_quick_links_sidebar(content)
+        fn_lower = filename.lower()
+        lines = content.splitlines()
+
+        # Detect which type of anti-ragging document this is
+        is_ars_schedule = "anti-ragging squad" in content.lower() or "ars" in fn_lower
+        is_nrpp = "national ragging" in content.lower() or "national anti-ragging" in content.lower()
+        is_zero_tolerance = "zero-tolerance" in fn_lower or "zero tolerance" in content.lower()[:200]
+        is_caste = "caste" in fn_lower
+
+        # Skip caste-related PDFs (they go to quick-committees)
+        if is_caste:
+            return
+
+        in_table = False
+        headers = []
+
+        for line in lines:
+            line_stripped = line.strip()
+            if not line_stripped.startswith('|'):
+                continue
+
+            cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+            if not cells:
+                continue
+            if all(re.match(r'^:?-+:?$', c) for c in cells):
+                in_table = True
+                continue
+            if not in_table:
+                headers = [c.lower() for c in cells]
+                continue
+
+            # ARS Squad schedule: Faculty1 | Faculty2 | Date
+            if is_ars_schedule and len(cells) >= 3:
+                for faculty_cell_idx in range(len(cells)):
+                    h = headers[faculty_cell_idx] if faculty_cell_idx < len(headers) else ""
+                    if "faculty" not in h and "name" not in h:
+                        continue
+                    raw = cells[faculty_cell_idx]
+                    # Extract name, phone, email from format like "Dr. Name (phone, email)"
+                    name_match = re.match(r'^((?:Dr\.|Prof\.|Mr\.|Ms\.)\s*[^(]+)', raw)
+                    if not name_match:
+                        name_match = re.match(r'^([A-Z][a-z]+(?:\s+[A-Za-z]+)+)', raw)
+                    if not name_match:
+                        continue
+                    name = clean_admin_member_name(name_match.group(1).strip())
+                    if not name or len(name) < 3:
+                        continue
+
+                    phone_match = re.search(r'(\d{10})', raw)
+                    email_match = re.search(r'[\w.\-]+@[\w.\-]+\.\w+', raw)
+                    phone = phone_match.group(1) if phone_match else ""
+                    email = email_match.group(0) if email_match else ""
+
+                    # Date column
+                    date_str = ""
+                    for ci, ch in enumerate(headers):
+                        if "date" in ch and ci < len(cells):
+                            date_str = cells[ci]
+
+                    resolved_name = self.resolver.resolve(name)
+                    node_key = f"ars_member:{normalize_name(resolved_name)}"
+                    self._add_node(node_key, "SectionPerson",
+                                   name=resolved_name,
+                                   designation="Anti-Ragging Squad (ARS) Member",
+                                   email=email,
+                                   phone=phone,
+                                   duty_date=date_str,
+                                   source_file=filename)
+                    self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
+            # ARC Committee members: Name | Designation | Contact | Email
+            elif not is_ars_schedule and len(cells) >= 2:
+                # Try to find name column
+                name_raw = cells[0]
+                name = clean_admin_member_name(_strip_markdown_link(name_raw))
+                if not name or len(name) < 3 or re.match(r'^\d+$', name):
+                    continue
+                # Skip generic role titles
+                if name.lower() in ("coordinating warden", "respective hod",
+                                     "student council representative (general secretary)"):
+                    # Still create a node for "Student Council Representative"
+                    if "student council" in name.lower():
+                        pass  # fall through
+                    else:
+                        continue
+
+                designation = cells[1] if len(cells) > 1 else ""
+                phone = ""
+                email = ""
+                for ci in range(len(cells)):
+                    cell_val = cells[ci]
+                    p = re.search(r'(\d{10})', cell_val)
+                    if p:
+                        phone = p.group(1)
+                    e = re.search(r'[\w.\-]+@[\w.\-]+\.\w+', cell_val)
+                    if e:
+                        email = e.group(0)
+
+                resolved_name = self.resolver.resolve(name)
+                node_key = f"arc_member:{normalize_name(resolved_name)}"
+                self._add_node(node_key, "SectionPerson",
+                               name=resolved_name,
+                               designation=f"Anti-Ragging Committee Member - {designation}" if designation else "Anti-Ragging Committee Member",
+                               email=email,
+                               phone=phone,
+                               source_file=filename)
+                self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
+    def _parse_quick_committee(self, filename: str, content: str, doc_id: str):
+        """Parse committee membership files for EOC, IEC, ICC, SC/ST Cell, SGRC.
+
+        Multi-file parser: called for each file in the committee source directories.
+        """
+        content = self._strip_quick_links_sidebar(content)
+        fn_lower = filename.lower()
+        content_lower = content.lower()
+
+        # Determine which committee this file belongs to
+        committee_name = "Unknown Committee"
+        if "equal-opportunity" in fn_lower or "equal opportunity" in content_lower[:200]:
+            committee_name = "Equal Opportunity Cell (EOC)"
+        elif "ethics-committee" in fn_lower or "institute ethics committee" in content_lower[:200]:
+            committee_name = "Institute Ethics Committee (IEC)"
+        elif "internal-complaint" in fn_lower or "internal complaint" in content_lower[:200]:
+            committee_name = "Internal Complaint Committee (ICC)"
+        elif "st-sc" in fn_lower or "sc/st" in content_lower[:200] or "sc-st" in fn_lower:
+            committee_name = "SC/ST Cell"
+        elif "grievance" in fn_lower or "sgrc" in content_lower[:200]:
+            committee_name = "Student Grievance Redressal Committee (SGRC)"
+        elif "caste" in fn_lower:
+            committee_name = "Caste-Based Discrimination Prevention"
+        else:
+            # Not a committee file we handle (e.g., ragging PDFs in Pdf-data)
+            return
+
+        # Extract notification date
+        date_match = re.search(r'\*\*Date:\*\*\s*([0-9a-zA-Z\s,]+)', content, re.IGNORECASE)
+        date_str = date_match.group(1).strip() if date_match else None
+
+        # Extract tenure
+        tenure_match = re.search(r'(\d{1,2}\s+\w+\s+\d{4})\s*[–\-]\s*(\d{1,2}\s+\w+\s+\d{4})', content)
+        tenure = f"{tenure_match.group(1)} – {tenure_match.group(2)}" if tenure_match else None
+
+        lines = content.splitlines()
+        in_table = False
+        headers = []
+
+        for line in lines:
+            line_stripped = line.strip()
+
+            # Special: Extract ombudsperson from SGRC
+            if "sgrc" in committee_name.lower() and "ombudsperson" in line_stripped.lower():
+                continue  # Will be picked up from ### heading below
+
+            if line_stripped.startswith('### ') and "sgrc" in committee_name.lower():
+                # E.g. "### Dr. S. N. Singh" under Ombudsperson heading
+                name_cand = clean_admin_member_name(line_stripped[4:])
+                if name_cand and len(name_cand) > 3 and not name_cand.lower().startswith(("note", "tenure", "language", "appointment", "distribution", "copy")):
+                    resolved_name = self.resolver.resolve(name_cand)
+                    node_key = f"committee:{normalize_name(committee_name)}:{normalize_name(resolved_name)}"
+                    self._add_node(node_key, "SectionPerson",
+                                   name=resolved_name,
+                                   designation="Ombudsperson",
+                                   committee_name=committee_name,
+                                   tenure=tenure,
+                                   source_file=filename)
+                    self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
+            if not line_stripped.startswith('|'):
+                continue
+
+            cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+            if not cells:
+                continue
+            if all(re.match(r'^:?-+:?$', c) for c in cells):
+                in_table = True
+                continue
+            if not in_table:
+                headers = [c.lower() for c in cells]
+                continue
+
+            # Parse table rows for committee members
+            if len(cells) < 2:
+                continue
+
+            # Find name and role columns
+            name = ""
+            role = ""
+            email = ""
+            phone = ""
+            remarks = ""
+
+            for idx, cell in enumerate(cells):
+                h = headers[idx] if idx < len(headers) else ""
+                # Skip serial number columns
+                if re.match(r'^\d+$', cell.strip()):
+                    continue
+                if "s. no" in h or "sl" in h:
+                    continue
+                if any(kw in h for kw in ("name", "designation", "member")):
+                    if not name:
+                        name = cell
+                    elif not role:
+                        role = cell
+                elif "role" in h:
+                    role = cell
+                elif "remark" in h:
+                    remarks = cell
+                elif "email" in h or "@" in cell:
+                    email_match = re.search(r'[\w.\-]+@[\w.\-]+\.\w+', cell)
+                    if email_match:
+                        email = email_match.group(0)
+                elif "contact" in h or "phone" in h or "mobile" in h:
+                    phone_match = re.search(r'(\d{10})', cell)
+                    if phone_match:
+                        phone = phone_match.group(1)
+                elif not name:
+                    name = cell
+
+            # If name wasn't found via headers, use first non-serial cell
+            if not name:
+                for cell in cells:
+                    if not re.match(r'^\d+$', cell.strip()) and len(cell.strip()) > 2:
+                        name = cell
+                        break
+            if not role and len(cells) > 1:
+                # Second meaningful cell is often the role
+                for cell in cells[1:]:
+                    if cell != name and not re.match(r'^\d+$', cell.strip()):
+                        role = cell
+                        break
+
+            name = clean_admin_member_name(_strip_markdown_link(name))
+            if not name or len(name) < 3 or re.match(r'^\d+$', name):
+                continue
+
+            # Build combined designation
+            designation = role if role else ""
+            if remarks and remarks != "—" and remarks != "–":
+                designation = f"{designation} ({remarks})" if designation else remarks
+
+            resolved_name = self.resolver.resolve(name)
+            node_key = f"committee:{normalize_name(committee_name)}:{normalize_name(resolved_name)}"
+            self._add_node(node_key, "SectionPerson",
+                           name=resolved_name,
+                           designation=designation,
+                           committee_name=committee_name,
+                           email=email,
+                           phone=phone,
+                           tenure=tenure,
+                           notification_date=date_str,
+                           source_file=filename)
+            self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
+    def _parse_staff_directory(self, filename: str, content: str, doc_id: str):
+        """Parse the institute staff directory page.
+
+        Staff page format:
+        #### Name
+        ##### Designation
+        - ###### Department1
+        - ###### Department2
+        """
+        content = self._strip_quick_links_sidebar(content)
+        fn_lower = filename.lower()
+
+        # Honorary chair professors (separate tabular format)
+        if "honorary-chair" in fn_lower or "honorary_chair" in fn_lower:
+            self._parse_honorary_chair_professors(filename, content, doc_id)
+            return
+
+        lines = content.splitlines()
+        i = 0
+        while i < len(lines):
+            line = lines[i].strip()
+            if line.startswith("#### ") and not line.startswith("##### "):
+                name = clean_admin_member_name(line[5:])
+                if not name or len(name) < 3:
+                    i += 1
+                    continue
+
+                designation = ""
+                departments_list = []
+
+                j = i + 1
+                while j < len(lines):
+                    sub_line = lines[j].strip()
+                    if sub_line.startswith("#### ") and not sub_line.startswith("##### "):
+                        break
+                    if sub_line.startswith("##### "):
+                        designation = sub_line[6:].strip()
+                    elif sub_line.startswith("###### ") or (sub_line.startswith("- ###### ")):
+                        dept = sub_line.replace("- ###### ", "").replace("###### ", "").strip()
+                        if dept:
+                            departments_list.append(dept)
+                    j += 1
+
+                resolved_name = self.resolver.resolve(name)
+                node_key = f"staff:{normalize_name(resolved_name)}"
+                self._add_node(node_key, "SectionPerson",
+                               name=resolved_name,
+                               designation=designation,
+                               departments=", ".join(departments_list) if departments_list else "",
+                               source_file=filename)
+                self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+                i = j
+            else:
+                i += 1
+
+    def _parse_honorary_chair_professors(self, filename: str, content: str, doc_id: str):
+        """Parse the honorary chair professor table."""
+        lines = content.splitlines()
+        in_table = False
+        headers = []
+
+        for line in lines:
+            line_stripped = line.strip()
+            if not line_stripped.startswith('|'):
+                continue
+            cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+            if not cells:
+                continue
+            if all(re.match(r'^:?-+:?$', c) for c in cells):
+                in_table = True
+                continue
+            if not in_table:
+                headers = [c.lower() for c in cells]
+                continue
+
+            if len(cells) < 2:
+                continue
+            # Skip serial number
+            name_idx = 0
+            for idx, c in enumerate(cells):
+                if not re.match(r'^\d+$', c.strip()):
+                    name_idx = idx
+                    break
+
+            name = clean_admin_member_name(_strip_markdown_link(cells[name_idx]))
+            if not name or len(name) < 3:
+                continue
+
+            affiliation = cells[name_idx + 1] if name_idx + 1 < len(cells) else ""
+            discipline = cells[name_idx + 2] if name_idx + 2 < len(cells) else ""
+
+            resolved_name = self.resolver.resolve(name)
+            node_key = f"honorary_chair:{normalize_name(resolved_name)}"
+            self._add_node(node_key, "SectionPerson",
+                           name=resolved_name,
+                           designation="Honorary Chair Professor",
+                           affiliation=_strip_markdown_link(affiliation),
+                           discipline=discipline,
+                           source_file=filename)
+            self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
+    def _parse_contact_directory(self, filename: str, content: str, doc_id: str):
+        """Parse VoIP directory and welcome contacts."""
+        content = self._strip_quick_links_sidebar(content)
+        fn_lower = filename.lower()
+        lines = content.splitlines()
+        in_table = False
+        headers = []
+
+        for line in lines:
+            line_stripped = line.strip()
+            if not line_stripped.startswith('|'):
+                continue
+            cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+            if not cells:
+                continue
+            if all(re.match(r'^:?-+:?$', c) for c in cells):
+                in_table = True
+                continue
+            if not in_table:
+                headers = [c.lower() for c in cells]
+                continue
+
+            if len(cells) < 2:
+                continue
+
+            if "voip" in fn_lower:
+                # VoIP: Department/Office | VOIP Number
+                office = cells[0].strip()
+                voip_number = cells[1].strip() if len(cells) > 1 else ""
+                if not office or re.match(r'^:?-+:?$', office):
+                    continue
+
+                node_key = f"voip:{normalize_name(office)}"
+                self._add_node(node_key, "ContactEntry",
+                               name=office,
+                               voip_number=voip_number,
+                               contact_type="VoIP",
+                               source_file=filename)
+                self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
+            elif "welcome" in fn_lower or "contact" in fn_lower:
+                # Welcome Contacts: Name/Office | Email | Phone
+                office = cells[0].strip()
+                email = ""
+                phone = ""
+                for cell in cells[1:]:
+                    email_match = re.search(r'[\w.\-]+@[\w.\-]+\.\w+', cell)
+                    if email_match:
+                        email = email_match.group(0)
+                    phone_match = re.search(r'[\d\-+()]{8,}', cell)
+                    if phone_match:
+                        phone = phone_match.group(0)
+
+                if not office or re.match(r'^:?-+:?$', office):
+                    continue
+
+                node_key = f"contact:{normalize_name(office)}"
+                self._add_node(node_key, "ContactEntry",
+                               name=office,
+                               email=_deobfuscate_email_text(email),
+                               phone=phone,
+                               contact_type="Welcome Contact",
+                               source_file=filename)
+                self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
+    def _parse_rti_overview(self, filename: str, content: str, doc_id: str):
+        """Parse RTI overview page and suo-moto disclosure.
+
+        Extracts RTI officers (CPIO, FAA, Nodal Officer), audited reports, and
+        suo-moto governance metadata. Skips individual RTI filing documents.
+        """
+        content = self._strip_quick_links_sidebar(content)
+        fn_lower = filename.lower()
+
+        # RTI main page: extract officers from the table
+        if "rti" in fn_lower and "suo" not in fn_lower:
+            lines = content.splitlines()
+            in_table = False
+            headers = []
+            for line in lines:
+                line_stripped = line.strip()
+                if not line_stripped.startswith('|'):
+                    continue
+                cells = [c.strip() for c in line_stripped.split('|')[1:-1]]
+                if not cells:
+                    continue
+                if all(re.match(r'^:?-+:?$', c) for c in cells):
+                    in_table = True
+                    continue
+                if not in_table:
+                    headers = [c.lower() for c in cells]
+                    continue
+
+                if len(cells) < 2:
+                    continue
+
+                # RTI officer table: Name | Designation (contains role + email)
+                name_raw = cells[0]
+                designation_raw = cells[1] if len(cells) > 1 else ""
+
+                # Extract email from cells
+                email = ""
+                for cell in cells:
+                    cleaned_cell = cell.replace(" [AT] ", "@").replace(" [DOT] ", ".")
+                    email_match = re.search(r'[\w.\-]+@[\w.\-]+\.\w+', cleaned_cell)
+                    if email_match:
+                        email = email_match.group(0)
+
+                # Clean name — may contain designation inline
+                name = re.sub(r'(Assistant Professor|Associate Professor|Professor)', '', name_raw).strip()
+                name = clean_admin_member_name(name)
+                if not name or len(name) < 3:
+                    continue
+                # Skip RTI filing reference rows
+                if name.startswith("IITJK") or name.startswith("[IITJ"):
+                    continue
+
+                role = designation_raw.split("\n")[0].strip() if designation_raw else ""
+
+                resolved_name = self.resolver.resolve(name)
+                node_key = f"rti_officer:{normalize_name(resolved_name)}"
+                self._add_node(node_key, "SectionPerson",
+                               name=resolved_name,
+                               designation=role,
+                               email=email,
+                               source_file=filename)
+                self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
+
     def build(self) -> nx.DiGraph:
         if not os.path.exists(self.markdown_dir):
             raise FileNotFoundError(f"Markdown directory not found: {self.markdown_dir}")
 
-        filenames = [f for f in os.listdir(self.markdown_dir)
-                     if f.endswith(".md") and not f.startswith("00_combined")
-                     and not f.endswith(".json")]
+        if self.section_code == "media":
+            from departments import MEDIA_SECTION_SKIP_PATTERNS
+            media_filenames = []
+            for subdir in sorted(os.listdir(self.markdown_dir)):
+                subdir_path = os.path.join(self.markdown_dir, subdir)
+                if not os.path.isdir(subdir_path) or subdir.startswith("."):
+                    continue
+                for f in sorted(os.listdir(subdir_path)):
+                    if not f.endswith(".md"):
+                        continue
+                    if f.startswith("00_combined"):
+                        continue
+                    if any(pat in f for pat in MEDIA_SECTION_SKIP_PATTERNS):
+                        continue
+                    media_filenames.append(os.path.join(subdir, f))
+            filenames = media_filenames
+            logger.info(f"Media section: discovered {len(filenames)} files across subdirectories")
+        elif self.section_code.startswith("quick-"):
+            from departments import QUICK_MULTI_SOURCE, QUICK_SECTION_SKIP_PATTERNS
+            # Quick sections may pull from multiple subdirectories
+            if self.section_code in QUICK_MULTI_SOURCE:
+                quick_filenames = []
+                for rel_subdir in QUICK_MULTI_SOURCE[self.section_code]:
+                    abs_subdir = os.path.join(SCRAPED_DATA_ROOT, rel_subdir)
+                    if not os.path.exists(abs_subdir):
+                        logger.warning(f"Quick multi-source dir not found: {abs_subdir}")
+                        continue
+                    for f in sorted(os.listdir(abs_subdir)):
+                        if not f.endswith(".md"):
+                            continue
+                        if any(pat in f for pat in QUICK_SECTION_SKIP_PATTERNS):
+                            continue
+                        # Store as relative_subdir/filename so we can reconstruct the path
+                        quick_filenames.append(os.path.join(rel_subdir, f))
+                filenames = quick_filenames
+                # Override markdown_dir to scraped_data root for multi-source
+                self.markdown_dir = SCRAPED_DATA_ROOT
+            else:
+                filenames = [f for f in os.listdir(self.markdown_dir)
+                             if f.endswith(".md") and not f.startswith("00_combined")
+                             and not f.endswith(".json")]
+                filenames = [
+                    f for f in filenames
+                    if not any(pat in f for pat in QUICK_SECTION_SKIP_PATTERNS)
+                ]
+            logger.info(f"Quick section '{self.section_code}': discovered {len(filenames)} files")
+        else:
+            filenames = [f for f in os.listdir(self.markdown_dir)
+                         if f.endswith(".md") and not f.startswith("00_combined")
+                         and not f.endswith(".json")]
 
-        # Discover files in subdirectories for academics section (academic_notifications)
-        if self.section_code == "academics":
-            notifications_dir = os.path.join(self.markdown_dir, "parsed_documents", "academic_notifications")
-            if os.path.exists(notifications_dir):
-                notification_files = [f for f in os.listdir(notifications_dir)
-                                      if f.endswith(".md") and not f.startswith("00_combined")
-                                      and not f.endswith(".json")]
-                for nf in notification_files:
-                    # Keep relative path under markdown_dir
-                    filenames.append(os.path.join("parsed_documents", "academic_notifications", nf))
+            # Discover files in subdirectories for academics section (academic_notifications)
+            if self.section_code == "academics":
+                notifications_dir = os.path.join(self.markdown_dir, "parsed_documents", "academic_notifications")
+                if os.path.exists(notifications_dir):
+                    notification_files = [f for f in os.listdir(notifications_dir)
+                                          if f.endswith(".md") and not f.startswith("00_combined")
+                                          and not f.endswith(".json")]
+                    for nf in notification_files:
+                        # Keep relative path under markdown_dir
+                        filenames.append(os.path.join("parsed_documents", "academic_notifications", nf))
 
-        # Filter out boilerplate files for student sections
-        if self.section_code.startswith("students-"):
-            from departments import STUDENT_SECTION_SKIP_PATTERNS
-            orig_count = len(filenames)
-            filenames = [
-                f for f in filenames
-                if not any(pat in f for pat in STUDENT_SECTION_SKIP_PATTERNS)
-            ]
-            skipped = orig_count - len(filenames)
-            if skipped:
-                logger.info(f"Skipped {skipped} boilerplate files for section '{self.section_code}'")
+            # Filter out boilerplate files for student sections
+            if self.section_code.startswith("students-"):
+                from departments import STUDENT_SECTION_SKIP_PATTERNS
+                orig_count = len(filenames)
+                filenames = [
+                    f for f in filenames
+                    if not any(pat in f for pat in STUDENT_SECTION_SKIP_PATTERNS)
+                ]
+                skipped = orig_count - len(filenames)
+                if skipped:
+                    logger.info(f"Skipped {skipped} boilerplate files for section '{self.section_code}'")
 
         logger.info(f"Processing {len(filenames)} section markdown files...")
 
@@ -1296,6 +1946,47 @@ class SectionKGBuilder:
                 "students-phd-admissions",
             ):
                 self._parse_admission_page(filename, content, doc_id)
+            elif self.section_code == "media":
+                subfolder = filename.split("/")[0] if "/" in filename else ""
+                if subfolder == "holidays-list-2026":
+                    self._parse_media_holidays(filename, content, doc_id)
+                elif subfolder == "mou":
+                    self._parse_media_mous(filename, content, doc_id)
+                elif subfolder == "events":
+                    self._parse_media_events(filename, content, doc_id)
+                elif subfolder == "donations":
+                    self._parse_media_donations(filename, content, doc_id)
+                elif subfolder == "prism":
+                    self._parse_media_prism(filename, content, doc_id)
+                elif subfolder == "sangam-2-0":
+                    self._parse_media_sangam(filename, content, doc_id)
+                elif subfolder == "newsdigest":
+                    self._parse_media_newsdigest(filename, content, doc_id)
+            # ── Quick Links Section Dispatchers ───────────────────────────
+            elif self.section_code == "quick-adjunct-faculty":
+                self._parse_adjunct_faculty(filename, content, doc_id)
+            elif self.section_code == "quick-anti-ragging":
+                # Only parse anti-ragging related files from Pdf-data
+                if "Pdf-data" in filename:
+                    fn_lower = filename.lower()
+                    if any(kw in fn_lower for kw in ("ragging", "ars", "anti-ragging", "zero-tolerance", "zero tolerance")):
+                        self._parse_anti_ragging(filename, content, doc_id)
+                else:
+                    self._parse_anti_ragging(filename, content, doc_id)
+            elif self.section_code == "quick-committees":
+                # Only parse committee-related files from Pdf-data
+                if "Pdf-data" in filename:
+                    fn_lower = filename.lower()
+                    if any(kw in fn_lower for kw in ("grievance", "sgrc", "caste", "discrimination")):
+                        self._parse_quick_committee(filename, content, doc_id)
+                else:
+                    self._parse_quick_committee(filename, content, doc_id)
+            elif self.section_code == "quick-staff":
+                self._parse_staff_directory(filename, content, doc_id)
+            elif self.section_code == "quick-contacts":
+                self._parse_contact_directory(filename, content, doc_id)
+            elif self.section_code == "quick-rti":
+                self._parse_rti_overview(filename, content, doc_id)
 
         # Connect Section Person nodes to Section Head
         section_node = f"section:{self.section_code}"
@@ -2324,6 +3015,152 @@ class SectionKGBuilder:
                                    source_file=filename)
                     self._add_edge(node_key, doc_id, "SOURCE_DOCUMENT")
 
+    def _parse_media_holidays(self, filename: str, content: str, doc_id: str):
+        """Parse the holidays-list-2026 table."""
+        for line in content.splitlines():
+            line = line.strip()
+            if not line.startswith("|") or "SI.No." in line or "---" in line:
+                continue
+            parts = [p.strip() for p in line.split("|")[1:-1]]
+            if len(parts) >= 4:
+                sl_no, holiday_name, date_str, day_of_week = parts[:4]
+                holiday_name = holiday_name.replace("*", "").strip()
+                node_id = f"holiday:{normalize_name(holiday_name)}"
+                self._add_node(node_id, "Holiday",
+                               name=holiday_name,
+                               date=date_str,
+                               day=day_of_week,
+                               day_of_week=day_of_week,
+                               year=2026)
+                self._add_edge(node_id, doc_id, "MENTIONED_IN")
+
+    def _parse_media_mous(self, filename: str, content: str, doc_id: str):
+        """Parse MoUs table."""
+        for line in content.splitlines():
+            line = line.strip()
+            if not line.startswith("|") or "Organization Name" in line or "---" in line:
+                continue
+            parts = [p.strip() for p in line.split("|")[1:-1]]
+            if len(parts) >= 1:
+                org_name = parts[0]
+                date_str = parts[1] if len(parts) >= 2 else ""
+                year = None
+                if date_str:
+                    match = re.search(r'\b(20\d{2})\b', date_str)
+                    if match:
+                        year = int(match.group(1))
+                node_id = f"mou:{normalize_name(org_name)}"
+                self._add_node(node_id, "MoU",
+                               organization=org_name,
+                               name=org_name,
+                               date=date_str,
+                               year=year)
+                self._add_edge(node_id, doc_id, "MENTIONED_IN")
+
+    def _parse_media_events(self, filename: str, content: str, doc_id: str):
+        """Parse events list."""
+        blocks = content.split('- [![Image]')
+        for block in blocks[1:]:
+            date_match = re.search(r'\b\d{2}-\d{2}-\d{4}\b', block)
+            date_str = date_match.group(0) if date_match else ""
+            title_match = re.search(r'###\s*(.*?)(?=\]\(|$)', block)
+            title_str = title_match.group(1).strip() if title_match else ""
+            if title_str:
+                year = None
+                if date_str:
+                    parts = date_str.split("-")
+                    if len(parts) == 3:
+                        year = int(parts[2])
+                node_id = f"event:{normalize_name(title_str)}"
+                self._add_node(node_id, "Event",
+                               name=title_str,
+                               date=date_str,
+                               year=year)
+                self._add_edge(node_id, doc_id, "MENTIONED_IN")
+
+    def _parse_media_donations(self, filename: str, content: str, doc_id: str):
+        """Parse donations information."""
+        if "donations_donations" in filename:
+            emails = []
+            for match in re.finditer(r'([a-zA-Z0-9_\-\.]+)\s*\[AT\]\s*([a-zA-Z0-9_\-\.]+)\s*\[DOT\]\s*([a-zA-Z0-9_\-\.]+)\s*\[DOT\]\s*([a-zA-Z0-9_\-\.]+)', content):
+                email = f"{match.group(1)}@{match.group(2)}.{match.group(3)}.{match.group(4)}".lower()
+                emails.append(email)
+            csr_match = re.search(r'CSR\d+', content)
+            csr_no = csr_match.group(0) if csr_match else "CSR00013197"
+            node_id = "donation_info"
+            self._add_node(node_id, "DonationInfo",
+                           name="IIT Jammu Donation Information",
+                           csr_number=csr_no,
+                           contact_emails=emails,
+                           portal_url="http://saral.iitjammu.ac.in/donations",
+                           description="IIT Jammu welcomes donations to support academic programmes, research, innovation, and outreach.")
+            self._add_edge(node_id, doc_id, "MENTIONED_IN")
+        elif "Approval_Letter" in filename:
+            pan_match = re.search(r'PAN\s*:\s*([A-Z0-9]+)', content)
+            pan = pan_match.group(1) if pan_match else ""
+            csr_match = re.search(r'CSR\d+', content)
+            csr_no = csr_match.group(0) if csr_match else ""
+            date_match = re.search(r'Dated\s*:\s*([0-9\-]+)', content)
+            date_str = date_match.group(1) if date_match else ""
+            node_id = "csr_registration"
+            self._add_node(node_id, "CSRRegistration",
+                           name="CSR Registration ROC Approval",
+                           csr_number=csr_no,
+                           pan=pan,
+                           date=date_str,
+                           issuer="Ministry of Corporate Affairs, Office of the Registrar of Companies")
+            self._add_edge(node_id, doc_id, "MENTIONED_IN")
+
+    def _parse_media_prism(self, filename: str, content: str, doc_id: str):
+        """Parse PRISM details."""
+        if "prism_prism" in filename:
+            full_name = "PRISM"
+            full_form = "Promoting, Reporting, Inspiring, Showcasing, Media"
+            description = "The official Student Media Body of IIT Jammu, serving as the creative and communicative backbone of the institute."
+            node_id = "prism_media_body"
+            self._add_node(node_id, "StudentBody",
+                           name=full_name,
+                           full_form=full_form,
+                           description=description,
+                           role="Official Student Media Body")
+            self._add_edge(node_id, doc_id, "MENTIONED_IN")
+
+    def _parse_media_sangam(self, filename: str, content: str, doc_id: str):
+        """Parse Sangam issues and team members."""
+        if "Magzines" in filename:
+            editions = re.findall(r'Edition\s*(\d+)\s*\n+\s*([a-zA-Z\s\-0-9]+)', content)
+            for ed_num, theme in editions:
+                theme = theme.strip()
+                node_id = f"sangam_edition:{ed_num}"
+                self._add_node(node_id, "MagazineEdition",
+                               edition_number=int(ed_num),
+                               theme=theme,
+                               name=f"Sangam Magazine Edition {ed_num}")
+                self._add_edge(node_id, doc_id, "MENTIONED_IN")
+        elif "Team" in filename:
+            matches = re.findall(r'!\[Image\]\([^\)]+\)\s*\n+\s*([^\n]+)\s*\n+\s*([^\n]+)', content)
+            for name, role in matches:
+                name = name.strip()
+                role = role.strip()
+                node_id = f"sangam_member:{normalize_name(name)}"
+                self._add_node(node_id, "MagazineTeamMember",
+                               name=name,
+                               role=role)
+                self._add_edge(node_id, doc_id, "MENTIONED_IN")
+
+    def _parse_media_newsdigest(self, filename: str, content: str, doc_id: str):
+        """Parse Campus Connect / news newsletters."""
+        matches = re.findall(r'\[\!\[Image\]\(([^\)]+)\)\]\(([^\)]+)\)', content)
+        for img_url, link in matches:
+            filename_part = img_url.split("/")[-1].replace(".jpg", "").replace(".jpeg", "").replace(".png", "")
+            name = filename_part.replace("_", " ").title()
+            node_id = f"newsletter:{normalize_name(filename_part)}"
+            self._add_node(node_id, "Newsletter",
+                           name=name,
+                           url=link,
+                           image_url=img_url)
+            self._add_edge(node_id, doc_id, "MENTIONED_IN")
+
     def save(self, output_dir: str = None):
 
         if output_dir is None:
@@ -2587,6 +3424,83 @@ def create_section_entity_descriptions(graph, section_code: str) -> list:
             parts.append(f"PMRF (Prime Minister's Research Fellowship) Scheme. {data.get('description', '')[:200]}")
         elif label == "PMRFFellow":
             parts.append(f"{data.get('name', '')} is a PMRF Fellow at IIT Jammu.")
+        elif label == "MoU":
+            parts.append(f"IIT Jammu has signed a Memorandum of Understanding (MoU) with organization {name}.")
+            if data.get("date"):
+                parts.append(f"MoU Date: {data['date']}.")
+            if data.get("year"):
+                parts.append(f"MoU Year: {data['year']}.")
+        elif label == "Event":
+            parts.append(f"Event: {name} held at IIT Jammu.")
+            if data.get("date"):
+                parts.append(f"Event Date: {data['date']}.")
+            if data.get("year"):
+                parts.append(f"Event Year: {data['year']}.")
+        elif label == "DonationInfo":
+            parts.append(f"IIT Jammu Donation Info - {name}.")
+            if data.get("csr_number"):
+                parts.append(f"CSR Registration Number: {data['csr_number']}.")
+            if data.get("contact_emails"):
+                parts.append(f"Contact Emails: {', '.join(data['contact_emails'])}.")
+            if data.get("portal_url"):
+                parts.append(f"Online Portal: {data['portal_url']}.")
+            if data.get("description"):
+                parts.append(f"Description: {data['description']}.")
+        elif label == "CSRRegistration":
+            parts.append(f"CSR Registration Details - {name}.")
+            if data.get("csr_number"):
+                parts.append(f"CSR Registration Number: {data['csr_number']}.")
+            if data.get("pan"):
+                parts.append(f"PAN: {data['pan']}.")
+            if data.get("date"):
+                parts.append(f"Approval Date: {data['date']}.")
+            if data.get("issuer"):
+                parts.append(f"Issuer: {data['issuer']}.")
+        elif label == "StudentBody":
+            parts.append(f"Student Body: {name}.")
+            if data.get("full_form"):
+                parts.append(f"Full Name/Form: {data['full_form']}.")
+            if data.get("description"):
+                parts.append(f"Description: {data['description']}.")
+            if data.get("role"):
+                parts.append(f"Role: {data['role']}.")
+        elif label == "MagazineEdition":
+            parts.append(f"Sangam Magazine Edition: {name}.")
+            if data.get("edition_number"):
+                parts.append(f"Edition Number: {data['edition_number']}.")
+            if data.get("theme"):
+                parts.append(f"Theme: {data['theme']}.")
+        elif label == "MagazineTeamMember":
+            parts.append(f"{name} is a team member of Sangam Magazine at IIT Jammu.")
+            if data.get("role"):
+                parts.append(f"Role: {data['role']}.")
+        elif label == "Newsletter":
+            parts.append(f"IIT Jammu Newsletter Issue: {name}.")
+            if data.get("url"):
+                parts.append(f"Newsletter Link: {data['url']}.")
+            if data.get("image_url"):
+                parts.append(f"Image Link: {data['image_url']}.")
+        # ── Quick Links Entity Descriptions ──────────────────────────────
+        elif label == "AdjunctFaculty":
+            status = data.get("status", "")
+            parts.append(f"{name} is a {status} Adjunct Faculty at IIT Jammu." if status else f"{name} is an Adjunct Faculty at IIT Jammu.")
+            if data.get("affiliation"):
+                parts.append(f"Affiliation: {data['affiliation']}.")
+            if data.get("discipline"):
+                parts.append(f"Discipline/Department: {data['discipline']}.")
+            if data.get("acceptance_date"):
+                parts.append(f"Acceptance Date: {data['acceptance_date']}.")
+            if data.get("term_end"):
+                parts.append(f"Term End: {data['term_end']}.")
+        elif label == "ContactEntry":
+            contact_type = data.get("contact_type", "Contact")
+            parts.append(f"{contact_type} entry for {name} at IIT Jammu.")
+            if data.get("voip_number"):
+                parts.append(f"VoIP/Phone Number: {data['voip_number']}.")
+            if data.get("email"):
+                parts.append(f"Email: {data['email']}.")
+            if data.get("phone"):
+                parts.append(f"Phone: {data['phone']}.")
         else:
             parts.append(f"{name} ({label}) in {section_name} section.")
 
