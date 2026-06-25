@@ -261,6 +261,37 @@ class GeminiLLM:
         self.model = model or os.environ.get("GEMINI_MODEL", DEFAULT_GEMINI_MODEL)
         self.api_base = (api_base or os.environ.get("GEMINI_API_BASE", DEFAULT_GEMINI_API_BASE)).rstrip("/")
 
+    @staticmethod
+    def validate_key(api_key: str, model: str = None, api_base: str = None) -> tuple:
+        """Validate an API key by making a minimal request to the Gemini API."""
+        api_key = (api_key or "").strip()
+        if not api_key:
+            return False, "API key cannot be empty."
+        
+        model = model or os.environ.get("GEMINI_MODEL", DEFAULT_GEMINI_MODEL)
+        api_base = (api_base or os.environ.get("GEMINI_API_BASE", DEFAULT_GEMINI_API_BASE)).rstrip("/")
+        
+        url = f"{api_base}/models/{model}:generateContent"
+        headers = {
+            "Content-Type": "application/json",
+            "x-goog-api-key": api_key,
+        }
+        payload = {
+            "contents": [{"parts": [{"text": "Hello"}]}],
+            "generationConfig": {"maxOutputTokens": 1},
+        }
+        try:
+            resp = requests.post(url, headers=headers, json=payload, timeout=10)
+            if resp.status_code == 200:
+                return True, ""
+            try:
+                err_detail = resp.json().get("error", {}).get("message", "Invalid API key")
+            except Exception:
+                err_detail = resp.text or "Invalid API key"
+            return False, err_detail
+        except Exception as e:
+            return False, f"Connection error: {str(e)}"
+
     def generate(
         self,
         prompt: str,

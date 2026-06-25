@@ -915,6 +915,62 @@ def chat():
         }), 500
 
 
+@app.route("/api/llm-status", methods=["GET"])
+def llm_status():
+    """Return the current LLM provider and whether an API key is configured."""
+    global llm
+    if llm is None:
+        return jsonify({
+            "provider": None,
+            "has_api_key": False,
+            "model": None
+        })
+    
+    provider = getattr(llm, "provider", "unknown")
+    api_key = getattr(llm, "api_key", None)
+    model = getattr(llm, "model", None)
+    
+    return jsonify({
+        "provider": provider,
+        "has_api_key": bool(api_key),
+        "model": model
+    })
+
+
+@app.route("/api/set-gemini-key", methods=["POST", "DELETE"])
+def set_gemini_key():
+    """Set or clear the Gemini API key in-memory."""
+    global llm, verifier
+    from graphrag.llm import GeminiLLM
+    from graphrag.verifier import ResponseVerifier
+    
+    if request.method == "DELETE":
+        logger.info("Reverting Gemini API key to default config")
+        llm = GeminiLLM()
+        verifier = ResponseVerifier(llm)
+        return jsonify({"ok": True, "message": "Gemini API key reverted to default config"})
+        
+    data = request.get_json() or {}
+    api_key = data.get("api_key", "").strip()
+    
+    if not api_key:
+        return jsonify({"ok": False, "error": "API key cannot be empty"}), 400
+        
+    valid, error_msg = GeminiLLM.validate_key(api_key)
+    if not valid:
+        return jsonify({"ok": False, "error": f"Invalid API key: {error_msg}"}), 400
+        
+    logger.info("Updating global Gemini LLM with user-provided API key")
+    llm = GeminiLLM(api_key=api_key)
+    verifier = ResponseVerifier(llm)
+    
+    return jsonify({
+        "ok": True,
+        "message": "Gemini API key successfully configured",
+        "model": llm.model
+    })
+
+
 @app.route("/api/health")
 def health():
     """Health check endpoint."""

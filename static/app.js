@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     chatInput.addEventListener('keydown', handleKeyDown);
     chatInput.addEventListener('input', autoGrow);
     chatInput.focus();
+    checkLlmStatus();
 });
 
 // ─── Event Handlers ─────────────────────────────────────────────────────────
@@ -380,3 +381,246 @@ function setLoading(loading) {
     isLoading = loading;
     sendButton.disabled = loading;
 }
+
+// ─── API Key Modal State & Operations ───────────────────────────────────────
+
+const apiKeyModal = document.getElementById('api-key-modal');
+const apiKeyInput = document.getElementById('api-key-input');
+const settingsButton = document.getElementById('settings-button');
+const modalError = document.getElementById('modal-error');
+const modalSuccess = document.getElementById('modal-success');
+const btnSaveKey = document.getElementById('btn-save-key');
+const btnClearKey = document.getElementById('btn-clear-key');
+const successToast = document.getElementById('success-toast');
+
+let isGeminiActive = false;
+
+function checkLlmStatus() {
+    fetch('/api/llm-status')
+        .then(res => res.json())
+        .then(data => {
+            if (data.provider === 'gemini') {
+                isGeminiActive = true;
+                settingsButton.style.display = 'flex';
+                updateStatusBadge(data.has_api_key);
+                
+                if (!data.has_api_key) {
+                    const savedKey = localStorage.getItem('gemini_api_key');
+                    if (savedKey) {
+                        autoSubmitApiKey(savedKey);
+                    } else {
+                        openApiKeyModal(true);
+                    }
+                }
+            } else {
+                isGeminiActive = false;
+                settingsButton.style.display = 'none';
+            }
+        })
+        .catch(err => console.error('Error fetching LLM status:', err));
+}
+
+function updateStatusBadge(hasKey) {
+    const statusText = document.querySelector('.status-text');
+    const statusBadge = document.getElementById('status-badge');
+    const statusDot = document.querySelector('.status-dot');
+    if (isGeminiActive) {
+        if (hasKey) {
+            statusText.textContent = 'Gemini Active';
+            statusBadge.style.background = 'rgba(59, 130, 246, 0.1)';
+            statusBadge.style.borderColor = 'rgba(59, 130, 246, 0.2)';
+            statusText.style.color = 'var(--accent-primary)';
+            statusDot.style.background = 'var(--accent-primary)';
+        } else {
+            statusText.textContent = 'Gemini (No Key)';
+            statusBadge.style.background = 'rgba(239, 68, 68, 0.1)';
+            statusBadge.style.borderColor = 'rgba(239, 68, 68, 0.2)';
+            statusText.style.color = '#ef4444';
+            statusDot.style.background = '#ef4444';
+        }
+    } else {
+        statusText.textContent = 'Online';
+        statusBadge.style.background = 'rgba(16, 185, 129, 0.1)';
+        statusBadge.style.borderColor = 'rgba(16, 185, 129, 0.2)';
+        statusText.style.color = '#10b981';
+        statusDot.style.background = '#10b981';
+    }
+}
+
+function openApiKeyModal(blocking = false) {
+    modalError.style.display = 'none';
+    modalSuccess.style.display = 'none';
+    
+    const savedKey = localStorage.getItem('gemini_api_key');
+    if (savedKey) {
+        apiKeyInput.value = savedKey;
+        btnClearKey.style.display = 'inline-flex';
+    } else {
+        apiKeyInput.value = '';
+        btnClearKey.style.display = 'none';
+    }
+    
+    const closeBtn = document.querySelector('.modal-close');
+    if (blocking) {
+        closeBtn.style.visibility = 'hidden';
+    } else {
+        closeBtn.style.visibility = 'visible';
+    }
+    
+    apiKeyModal.style.display = 'flex';
+    apiKeyInput.focus();
+}
+
+function closeApiKeyModal() {
+    const savedKey = localStorage.getItem('gemini_api_key');
+    if (isGeminiActive && !savedKey) {
+        showModalError('An API Key is required to chat with the Gemini model.');
+        return;
+    }
+    apiKeyModal.style.display = 'none';
+}
+
+function togglePasswordVisibility() {
+    const eyeIcon = document.getElementById('eye-icon');
+    if (apiKeyInput.type === 'password') {
+        apiKeyInput.type = 'text';
+        eyeIcon.innerHTML = `
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+            <line x1="1" y1="1" x2="23" y2="23"></line>
+        `;
+    } else {
+        apiKeyInput.type = 'password';
+        eyeIcon.innerHTML = `
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+        `;
+    }
+}
+
+function showModalError(msg) {
+    modalError.textContent = msg;
+    modalError.style.display = 'block';
+    modalSuccess.style.display = 'none';
+}
+
+// Ensure error is cleared when typing
+apiKeyInput.addEventListener('input', () => {
+    modalError.style.display = 'none';
+});
+
+function showModalSuccess(msg) {
+    modalSuccess.textContent = msg;
+    modalSuccess.style.display = 'block';
+    modalError.style.display = 'none';
+}
+
+function saveApiKey() {
+    const api_key = apiKeyInput.value.trim();
+    if (!api_key) {
+        showModalError('Please enter an API Key.');
+        return;
+    }
+    
+    setModalLoading(true);
+    
+    fetch('/api/set-gemini-key', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ api_key })
+    })
+    .then(res => res.json().then(data => ({ status: res.status, data })))
+    .then(({ status, data }) => {
+        setModalLoading(false);
+        if (status === 200 && data.ok) {
+            localStorage.setItem('gemini_api_key', api_key);
+            showModalSuccess('API Key is valid and saved!');
+            updateStatusBadge(true);
+            showToast();
+            setTimeout(() => {
+                closeApiKeyModal();
+            }, 1000);
+        } else {
+            showModalError(data.error || 'Failed to validate API Key.');
+            updateStatusBadge(false);
+        }
+    })
+    .catch(err => {
+        setModalLoading(false);
+        console.error('Error setting API key:', err);
+        showModalError('Connection error while validating the key.');
+    });
+}
+
+function autoSubmitApiKey(api_key) {
+    fetch('/api/set-gemini-key', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ api_key })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.ok) {
+            updateStatusBadge(true);
+        } else {
+            localStorage.removeItem('gemini_api_key');
+            updateStatusBadge(false);
+            openApiKeyModal(true);
+        }
+    })
+    .catch(err => {
+        console.error('Error auto-submitting API key:', err);
+        updateStatusBadge(false);
+    });
+}
+
+function clearApiKey() {
+    fetch('/api/set-gemini-key', {
+        method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.ok) {
+            localStorage.removeItem('gemini_api_key');
+            apiKeyInput.value = '';
+            showModalSuccess('API Key cleared.');
+            updateStatusBadge(false);
+            btnClearKey.style.display = 'none';
+            setTimeout(() => {
+                openApiKeyModal(true);
+            }, 1000);
+        }
+    })
+    .catch(err => {
+        console.error('Error clearing API key:', err);
+        showModalError('Failed to contact server to clear key.');
+    });
+}
+
+function setModalLoading(loading) {
+    const btnText = btnSaveKey.querySelector('.btn-text');
+    const btnSpinner = btnSaveKey.querySelector('.btn-spinner');
+    
+    btnSaveKey.disabled = loading;
+    apiKeyInput.disabled = loading;
+    
+    if (loading) {
+        btnText.style.opacity = '0.5';
+        btnSpinner.style.display = 'inline-block';
+    } else {
+        btnText.style.opacity = '1';
+        btnSpinner.style.display = 'none';
+    }
+}
+
+function showToast() {
+    successToast.style.display = 'flex';
+    successToast.style.opacity = '1';
+    successToast.style.transition = 'opacity 0.5s ease';
+    setTimeout(() => {
+        successToast.style.opacity = '0';
+        setTimeout(() => {
+            successToast.style.display = 'none';
+        }, 500);
+    }, 3000);
+}
+
