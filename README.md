@@ -1,4 +1,4 @@
-<![CDATA[# IIT Jammu Unified GraphRAG Chatbot
+# IIT Jammu Unified GraphRAG Chatbot
 
 > A production-grade, multi-tenant university assistant powered by Graph-based Retrieval-Augmented Generation (GraphRAG). Covers **13 academic departments**, **19 institutional sections**, **11 student data domains**, **6 quick-link directories**, and **1 media section** — totalling **50+ independent knowledge bases** served through a single unified API.
 
@@ -47,7 +47,7 @@ The system follows a **"Structure Over Fuzzy Parsing"** philosophy — determini
 │  └────────────┘ └────────────┘ └─────────────┘ └────────────────┘  │
 ├─────────────────────────────────────────────────────────────────────┤
 │                    Data Layer                                       │
-│  scraped_data/   →  data/<dept>/  →  FAISS indices + KG pickles    │
+│  scraped_data/   →  data/{dept}/  →  FAISS indices + KG pickles    │
 │  (Markdown)         (Processed)      (Runtime)                      │
 └─────────────────────────────────────────────────────────────────────┘
 ```
@@ -112,15 +112,15 @@ chatbot/
 │   └── rules.db              # Pre-built SQLite database
 │
 ├── scraped_data/             # Raw crawled markdown (multi-tenant)
-│   ├── <department>/         # 13 department directories
+│   ├── {department}/         # 13 department directories
 │   ├── sections/             # 19 institutional sections
 │   ├── students/             # 11 student data categories
 │   ├── Quick/                # 6 quick-link directories
 │   └── Media/                # Media & communications
 │
 ├── data/                     # Processed runtime data
-│   ├── <department>/         # KG pickles + FAISS indices per dept
-│   └── sections/<section>/   # KG pickles + FAISS indices per section
+│   ├── {department}/         # KG pickles + FAISS indices per dept
+│   └── sections/{section}/   # KG pickles + FAISS indices per section
 │
 ├── scripts/                  # Automation & tooling
 │   ├── crawl_students.py     # Student section crawler
@@ -161,7 +161,7 @@ The crawler uses **stateful Playwright rendering** with BFS discovery to handle 
 ### Specialized Crawlers
 | Script | Target | Output |
 |--------|--------|--------|
-| `crawler.py` | Department websites | `scraped_data/<dept>/` |
+| `crawler.py` | Department websites | `scraped_data/{dept}/` |
 | `scripts/crawl_students.py` | Student data pages | `scraped_data/students/` |
 | `scripts/crawl_media.py` | Media & events | `scraped_data/Media/` |
 | `scripts/crawl_quick.py` | Quick-link pages | `scraped_data/Quick/` |
@@ -245,7 +245,7 @@ Markdown Files → KG Builder → Community Detection → Embedding Index → Di
 3. **Community Summarization** — Each community gets an LLM-generated or rule-based summary describing its research cluster.
 4. **Embedding Generation** — `all-mpnet-base-v2` (768-dim) encodes all chunks, entity descriptions, and community summaries.
 5. **FAISS Indexing** — `IndexFlatIP` (inner product on L2-normalized vectors = cosine similarity).
-6. **Persistence** — Graph pickle, community JSON, FAISS index, and metadata JSON are saved to `data/<dept>/` or `data/sections/<section>/`.
+6. **Persistence** — Graph pickle, community JSON, FAISS index, and metadata JSON are saved to `data/{dept}/` or `data/sections/{section}/`.
 
 ### Running Ingestion
 
@@ -496,11 +496,11 @@ OLLAMA_API_URL=http://localhost:11434/api/chat
 OLLAMA_MODEL=llama3.1
 
 # Gemini (cloud)
-GEMINI_API_KEY=<your-key>
+GEMINI_API_KEY=your-key-here
 GEMINI_MODEL=gemini-2.5-flash-lite
 
 # AWS Bedrock
-AWS_BEARER_TOKEN_BEDROCK=<your-token>
+AWS_BEARER_TOKEN_BEDROCK=your-token-here
 BEDROCK_MODEL=qwen.qwen3-32b-v1:0
 BEDROCK_REGION=us-east-1
 
@@ -523,7 +523,7 @@ SCRAPED_DATA_ROOT=./scraped_data
 
 ```bash
 # Clone and install
-git clone <repo-url> && cd chatbot
+git clone https://github.com/MahimYadav2006/Chatbot-IITJ.git && cd chatbot
 pip install -r requirements.txt
 
 # Install Playwright browsers (for crawling only)
@@ -616,4 +616,3 @@ playwright>=1.48.0     # Browser automation for crawling
 ## License
 
 Internal project — IIT Jammu.
-]]>
