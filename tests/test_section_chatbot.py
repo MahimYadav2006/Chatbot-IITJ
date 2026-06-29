@@ -36,6 +36,16 @@ def test_section_routing():
     res = router.route("Contact details of Establishment II section")
     assert "e2" in res.sections
 
+    # Test Central Instrumentation & Innovation (CI) routing
+    res = router.route("What instruments are available in the Saptarshi CIF?")
+    assert "ci" in res.sections
+
+    res = router.route("What facilities does the central workshop have?")
+    assert "ci" in res.sections
+
+    res = router.route("What incubation programs does I3C run?")
+    assert "ci" in res.sections
+
 
 def test_global_person_index_role_prioritization():
     # Construct a mock graph with a person holding academic role and administrative role

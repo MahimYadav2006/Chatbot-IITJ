@@ -1,34 +1,19 @@
 /**
- * IIT Jammu Unified AI Assistant — Frontend JavaScript
+ * IIT Jammu AI Assistant — Frontend JavaScript
  *
  * Handles:
- *   - Sending/receiving chat messages via API (no department selection)
- *   - Auto department routing display (dept badge on responses)
+ *   - Sending/receiving chat messages via API
  *   - Rendering markdown-like formatting in responses
  *   - Auto-growing textarea
  *   - Typing indicator animation
  *   - Auto-scroll behavior
+ *   - New chat functionality
+ *   - Welcome hero hide/show
  */
 
 // ─── State ──────────────────────────────────────────────────────────────────
 
 let isLoading = false;
-
-// Department display names for badge rendering
-const DEPT_DISPLAY_NAMES = {
-    ee: "Electrical Engineering",
-    computer_science_engineering: "Computer Science & Engineering",
-    mechanical_engineering: "Mechanical Engineering",
-    civil_engineering: "Civil Engineering",
-    "chemical-engineering": "Chemical Engineering",
-    bsbe: "Biosciences & Bioengineering",
-    chemistry: "Chemistry",
-    hss: "Humanities & Social Sciences",
-    idp: "Interdisciplinary Programmes",
-    "materials-engineering": "Materials Engineering",
-    mathematics: "Mathematics",
-    physics: "Physics",
-};
 
 // ─── DOM References ─────────────────────────────────────────────────────────
 
@@ -60,12 +45,86 @@ function autoGrow() {
     chatInput.style.height = Math.min(chatInput.scrollHeight, 120) + 'px';
 }
 
+// ─── Welcome Hero ───────────────────────────────────────────────────────────
+
+function hideWelcome() {
+    const hero = document.getElementById('welcome-hero');
+    if (hero) {
+        hero.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        hero.style.opacity = '0';
+        hero.style.transform = 'translateY(-10px)';
+        setTimeout(() => hero.remove(), 300);
+    }
+}
+
+function startNewChat() {
+    // Clear all messages
+    chatMessages.innerHTML = '';
+
+    // Re-create welcome hero
+    const welcome = document.createElement('div');
+    welcome.className = 'welcome';
+    welcome.id = 'welcome-hero';
+    welcome.innerHTML = `
+        <div class="welcome__glow"></div>
+        <div class="welcome__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <defs>
+                    <linearGradient id="icon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#6366f1"/>
+                        <stop offset="100%" style="stop-color:#06b6d4"/>
+                    </linearGradient>
+                </defs>
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+            </svg>
+        </div>
+        <h2 class="welcome__title">
+            <span class="welcome__greeting">Hello!</span>
+            How can I help you today?
+        </h2>
+        <p class="welcome__subtitle">
+            I'm your AI assistant for <strong>IIT Jammu</strong>. Ask me anything about departments, faculty, research, admissions, placements, and more.
+        </p>
+        <div class="welcome__chips" id="welcome-chips">
+            <button class="welcome__chip" onclick="sendSuggestion(this)">
+                <span class="welcome__chip-icon">🎓</span>
+                <span class="welcome__chip-text">Who is the CSE Head of Department?</span>
+            </button>
+            <button class="welcome__chip" onclick="sendSuggestion(this)">
+                <span class="welcome__chip-icon">🔬</span>
+                <span class="welcome__chip-text">What research areas does EE cover?</span>
+            </button>
+            <button class="welcome__chip" onclick="sendSuggestion(this)">
+                <span class="welcome__chip-icon">👥</span>
+                <span class="welcome__chip-text">How many faculty are in Physics?</span>
+            </button>
+            <button class="welcome__chip" onclick="sendSuggestion(this)">
+                <span class="welcome__chip-icon">📊</span>
+                <span class="welcome__chip-text">Compare labs in Chemistry and Materials</span>
+            </button>
+            <button class="welcome__chip" onclick="sendSuggestion(this)">
+                <span class="welcome__chip-icon">📋</span>
+                <span class="welcome__chip-text">What are the B.Tech admission requirements?</span>
+            </button>
+            <button class="welcome__chip" onclick="sendSuggestion(this)">
+                <span class="welcome__chip-icon">🏆</span>
+                <span class="welcome__chip-text">What is IIT Jammu's NIRF ranking?</span>
+            </button>
+        </div>
+    `;
+    chatMessages.appendChild(welcome);
+    chatInput.focus();
+}
+
 // ─── Send Message ───────────────────────────────────────────────────────────
 
 function sendMessage() {
     const message = chatInput.value.trim();
     if (!message || isLoading) return;
 
+    hideWelcome();
     addMessage(message, 'user');
 
     chatInput.value = '';
@@ -87,8 +146,6 @@ function sendMessage() {
             addMessage(data.response, 'bot', {
                 retrievalTime: data.retrieval_time,
                 totalTime: data.total_time,
-                routedDepartments: data.routed_departments || [],
-                routingReason: data.routing_reason || '',
             });
         } else if (data.error) {
             addMessage('Sorry, I encountered an error. Please try again.', 'bot');
@@ -106,20 +163,10 @@ function sendMessage() {
 }
 
 function sendSuggestion(chipElement) {
-    const text = chipElement.textContent.trim();
+    const textEl = chipElement.querySelector('.welcome__chip-text');
+    const text = textEl ? textEl.textContent.trim() : chipElement.textContent.trim();
     chatInput.value = text;
     sendMessage();
-}
-
-// ─── Department Badge Rendering ─────────────────────────────────────────────
-
-function renderDeptBadges(departments) {
-    if (!departments || departments.length === 0) return '';
-    const badges = departments.map(code => {
-        const name = DEPT_DISPLAY_NAMES[code] || code;
-        return `<span class="dept-badge">📍 ${name}</span>`;
-    });
-    return `<div class="dept-badges">${badges.join('')}</div>`;
 }
 
 // ─── Message Rendering ─────────────────────────────────────────────────────
@@ -129,22 +176,17 @@ function addMessage(text, sender, meta = {}) {
     messageDiv.className = `message ${sender}-message`;
 
     const avatarSVG = sender === 'bot'
-        ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 2L2 7l10 5 10-5-10-5z"/>
             <path d="M2 17l10 5 10-5"/>
             <path d="M2 12l10 5 10-5"/>
            </svg>`
-        : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
             <circle cx="12" cy="7" r="4"/>
            </svg>`;
 
     let formattedText = sender === 'bot' ? renderMarkdown(text) : escapeHtml(text);
-
-    let badgesHtml = '';
-    if (sender === 'bot' && meta.routedDepartments && meta.routedDepartments.length > 0) {
-        badgesHtml = renderDeptBadges(meta.routedDepartments);
-    }
 
     let metaHtml = '';
     if (meta.totalTime) {
@@ -157,7 +199,6 @@ function addMessage(text, sender, meta = {}) {
     messageDiv.innerHTML = `
         <div class="message-avatar">${avatarSVG}</div>
         <div class="message-content">
-            ${badgesHtml}
             <div class="message-text">${formattedText}</div>
             ${metaHtml}
         </div>
@@ -176,7 +217,7 @@ function showTypingIndicator() {
 
     indicator.innerHTML = `
         <div class="message-avatar">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                 <path d="M2 17l10 5 10-5"/>
                 <path d="M2 12l10 5 10-5"/>
@@ -421,27 +462,27 @@ function checkLlmStatus() {
 }
 
 function updateStatusBadge(hasKey) {
-    const statusText = document.querySelector('.status-text');
+    const statusText = document.querySelector('.status-pill__text');
     const statusBadge = document.getElementById('status-badge');
-    const statusDot = document.querySelector('.status-dot');
+    const statusDot = document.querySelector('.status-pill__dot');
     if (isGeminiActive) {
         if (hasKey) {
             statusText.textContent = 'Gemini Active';
-            statusBadge.style.background = 'rgba(59, 130, 246, 0.1)';
-            statusBadge.style.borderColor = 'rgba(59, 130, 246, 0.2)';
-            statusText.style.color = 'var(--accent-primary)';
-            statusDot.style.background = 'var(--accent-primary)';
+            statusBadge.style.background = 'rgba(99,102,241,0.08)';
+            statusBadge.style.borderColor = 'rgba(99,102,241,0.15)';
+            statusText.style.color = 'var(--accent-1)';
+            statusDot.style.background = 'var(--accent-1)';
         } else {
             statusText.textContent = 'Gemini (No Key)';
-            statusBadge.style.background = 'rgba(239, 68, 68, 0.1)';
-            statusBadge.style.borderColor = 'rgba(239, 68, 68, 0.2)';
+            statusBadge.style.background = 'rgba(239,68,68,0.08)';
+            statusBadge.style.borderColor = 'rgba(239,68,68,0.15)';
             statusText.style.color = '#ef4444';
             statusDot.style.background = '#ef4444';
         }
     } else {
         statusText.textContent = 'Online';
-        statusBadge.style.background = 'rgba(16, 185, 129, 0.1)';
-        statusBadge.style.borderColor = 'rgba(16, 185, 129, 0.2)';
+        statusBadge.style.background = 'rgba(16,185,129,0.08)';
+        statusBadge.style.borderColor = 'rgba(16,185,129,0.15)';
         statusText.style.color = '#10b981';
         statusDot.style.background = '#10b981';
     }
@@ -623,4 +664,3 @@ function showToast() {
         }, 500);
     }, 3000);
 }
-

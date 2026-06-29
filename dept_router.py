@@ -201,6 +201,14 @@ SECTION_NAME_ALIASES = {
         "tinkerer's lab", "maker space", "makerspace",
         "tinkering lab", "innovation lab"
     ],
+    "ci": [
+        "ci", "cif", "central instruments facility", "saptarshi", "saptarshi cif",
+        "instruments", "instrumentation", "spectroscopy", "microscopy", "xrd", "x-ray",
+        "water quality testing", "central workshop", "workshop facilities", "workshop",
+        "machinery", "fabrication", "lathe", "cnc", "welding", "fitting",
+        "i3c", "incubation", "innovation", "startup", "entrepreneurship", "mentor",
+        "mentors", "stakeholders", "catalyst-30", "incubator"
+    ],
     "tlu": [
         "tlu", "teaching learning unit", "teaching learning",
         "teaching-learning", "teaching learning centre",

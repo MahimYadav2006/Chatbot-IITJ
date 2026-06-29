@@ -233,6 +233,7 @@ SECTIONS = {
     "security": {"name": "Security Section", "base_url": "https://www.iitjammu.ac.in/security/"},
     "tlu": {"name": "Teaching Learning Unit (TLU)", "base_url": "https://sites.google.com/iitjammu.ac.in/tlu"},
     "tinkerers-lab": {"name": "Tinkerers' Lab", "base_url": "https://iitjammu.ac.in/tinkerers-lab"},
+    "ci": {"name": "Central Instruments & Innovation (CI)", "base_url": "https://iitjammu.ac.in/cif"},
     # ── Student Data Sections ────────────────────────────────────────────
     "students-faq": {"name": "Student FAQ", "base_url": "https://iitjammu.ac.in/faq-main-website"},
     "students-schedule": {"name": "Academic Calendar & Schedules", "base_url": "https://iitjammu.ac.in/calendar-schedule-time-table"},
