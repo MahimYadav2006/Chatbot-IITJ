@@ -326,6 +326,67 @@ class HybridRetriever:
             lines.append(line)
         return "\n".join(lines)
 
+    # ── Department Research Areas queries ────────────────────────────────
+
+    def _is_department_research_areas_query(self, query: str) -> bool:
+        """Detect broad queries asking for the department's research areas."""
+        q = re.sub(r"\s+", " ", query.lower()).strip()
+        patterns = [
+            r"what research areas does\b",
+            r"research areas of\b",
+            r"what areas does\b",
+            r"research focus of\b",
+            r"what does .* research\b",
+            r"list research areas\b",
+            r"all research areas\b",
+        ]
+        return any(re.search(p, q) for p in patterns)
+
+    def _build_department_research_areas_answer(self) -> Optional[str]:
+        """Build a deterministic list of the department's research areas and connected faculty."""
+        from collections import defaultdict
+        
+        area_to_faculty = defaultdict(list)
+        
+        # 1. Collect all ResearchArea / ResearchCategory nodes connected to Faculty
+        for u, v, edge_data in self.graph.edges(data=True):
+            if edge_data.get("type") in ("RESEARCHES_IN", "STUDIES", "RELATED"):
+                u_data = self.graph.nodes.get(u, {})
+                v_data = self.graph.nodes.get(v, {})
+                
+                if u_data.get("label") == "Faculty" and v_data.get("label") in ("ResearchArea", "ResearchCategory"):
+                    fac_name = u_data.get("name")
+                    area_name = v_data.get("name")
+                    if fac_name and area_name:
+                        if fac_name not in area_to_faculty[area_name]:
+                            area_to_faculty[area_name].append(fac_name)
+
+        dept_name = self.dept_config.get("full_name", self.dept_code)
+        lines = [f"**Research Areas in the {dept_name}:**\n"]
+        
+        if area_to_faculty:
+            # We have structured research areas in the graph
+            for area in sorted(area_to_faculty.keys()):
+                faculty = sorted(area_to_faculty[area])
+                lines.append(f"- **{area}**: {', '.join(faculty)}")
+            return "\n".join(lines)
+            
+        # 2. Fallback: Aggregate research_interests from all Faculty nodes if no structural areas exist
+        faculty_interests = []
+        for nid, d in self.graph.nodes(data=True):
+            if d.get("label") == "Faculty":
+                interests = d.get("research_interests") or d.get("academic_interests")
+                if interests:
+                    faculty_interests.append((d.get("name"), interests))
+                    
+        if faculty_interests:
+            faculty_interests.sort(key=lambda x: x[0])
+            for fac, interests in faculty_interests:
+                lines.append(f"- **{fac}**: {interests}")
+            return "\n".join(lines)
+            
+        return None
+
     # ── Alumni queries ───────────────────────────────────────────────────
 
     def _is_alumni_query(self, query: str) -> bool:
@@ -1470,6 +1531,12 @@ class HybridRetriever:
             alumni_answer = self._build_alumni_answer()
             if alumni_answer:
                 return alumni_answer
+
+        # Department Research Areas Listing
+        if self._is_department_research_areas_query(query):
+            research_areas_answer = self._build_department_research_areas_answer()
+            if research_areas_answer:
+                return research_areas_answer
 
         # Check for topic contact / expert queries
         # When suppress_topic_match is True (broadcast mode), skip this entire

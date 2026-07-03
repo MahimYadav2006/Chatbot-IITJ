@@ -252,17 +252,7 @@ class MultiDepartmentRetriever:
         all_retrievers.update(self.retrievers)
         all_retrievers.update(self.section_retrievers)
 
-        # Early check for academic rules/regulations query to prevent irrelevant broadcast matches
-        from graphrag.intent_utils import is_academic_rules_query
-        if is_academic_rules_query(query):
-            academics_retriever = self.section_retrievers.get("academics")
-            if academics_retriever:
-                logger.info("Broadcast query intercepted as academic rules query. Routing directly to academics section.")
-                bundle = academics_retriever.retrieve_bundle(query)
-                if bundle.get("context", "").strip():
-                    bundle["departments"] = []
-                    bundle["sections"] = ["academics"]
-                    return bundle
+
 
         if not all_retrievers:
             return {

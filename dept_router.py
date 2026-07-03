@@ -430,31 +430,36 @@ class DepartmentRouter:
         """
         Analyze a query and determine which department(s) and/or section(s) it targets.
         """
-        from graphrag.intent_utils import is_academic_rules_query
-        if is_academic_rules_query(query):
-            return RouteResult(
-                departments=[],
-                sections=["academics"],
-                confidence="exact",
-                reason="Query identified as academic rules and regulations request",
-                query=query,
-            )
-
         detected_depts = self._detect_departments(query)
         detected_secs = self._detect_sections(query)
+
+        from graphrag.intent_utils import is_academic_rules_query
+        if is_academic_rules_query(query):
+            if "academics" not in detected_secs:
+                detected_secs.append("academics")
 
         # Inject program-specific admission sections for admission-related queries
         q_lower = query.lower()
         if any(w in q_lower for w in ("admission", "admissions", "admitted")):
+            is_specific = False
             if any(w in q_lower for w in ("ug", "undergraduate", "btech", "b.tech")):
+                is_specific = True
                 if "students-ug-admissions" not in detected_secs:
                     detected_secs.append("students-ug-admissions")
             if any(w in q_lower for w in ("pg", "postgraduate", "mtech", "m.tech", "msc", "m.sc")):
+                is_specific = True
                 if "students-pg-admissions" not in detected_secs:
                     detected_secs.append("students-pg-admissions")
             if any(w in q_lower for w in ("phd", "ph.d", "doctoral")):
+                is_specific = True
                 if "students-phd-admissions" not in detected_secs:
                     detected_secs.append("students-phd-admissions")
+            
+            # If generic "admissions", inject all of them
+            if not is_specific:
+                for sec in ("students-ug-admissions", "students-pg-admissions", "students-phd-admissions"):
+                    if sec not in detected_secs:
+                        detected_secs.append(sec)
 
         # Inject academics for all department queries
         if detected_depts:
