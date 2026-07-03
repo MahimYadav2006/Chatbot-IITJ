@@ -81,6 +81,8 @@ class HybridRetriever:
         from departments import get_department
         self.dept_config = get_department(dept_code)
         self.dept_node_id = f"IIT Jammu {dept_code.upper()} Department"
+        from graphrag.cache import get_bundle_cache, is_cache_enabled
+        self.bundle_cache = get_bundle_cache() if is_cache_enabled() else None
         self._build_indexes()
 
     def _build_indexes(self):
@@ -2381,6 +2383,14 @@ class HybridRetriever:
         For enumeration queries (roster listings), vector search is skipped to
         avoid noise; only the authoritative graph data + local search are used.
         """
+        from graphrag.cache import normalize_query
+        cache_key = normalize_query(query) if self.bundle_cache else None
+        if self.bundle_cache:
+            cached_result = self.bundle_cache.get(cache_key)
+            if cached_result:
+                logger.info(f"[CACHE HIT] Bundle retrieved from L2 cache for query: {query}")
+                return cached_result
+
         # --- Phase 0: Compute deterministic context from graph ---
         deterministic_context = ""
         is_enumeration = False  # If True, skip vector search
@@ -2523,12 +2533,18 @@ class HybridRetriever:
 
         logger.info(f"Retrieved: ~{word_count} words, {len(local_results)} entities, "
                     f"{len(vector_results)} chunks, {len(global_results)} communities")
-        return {
+        
+        result = {
             "context": context,
             "provenance": provenance,
             "answerability": answerability,
             "fallback_response": fallback_response,
         }
+        
+        if self.bundle_cache and answerability.get("answerable", True):
+            self.bundle_cache.set(cache_key, result)
+            
+        return result
 
 
 def load_retriever(dept_code: str = "ee", data_dir: str = None) -> HybridRetriever:

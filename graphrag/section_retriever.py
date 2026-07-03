@@ -35,6 +35,9 @@ class SectionRetriever:
             except Exception as e:
                 logger.warning(f"Failed to load embeddings index for section {section_code}: {e}")
 
+        from graphrag.cache import get_bundle_cache, is_cache_enabled
+        self.bundle_cache = get_bundle_cache() if is_cache_enabled() else None
+
     def _build_provenance(
         self,
         direct: bool,
@@ -1723,6 +1726,14 @@ class SectionRetriever:
         max_context_words: int = 4500,
     ) -> Dict[str, Any]:
         """Retrieve relevant context for a section query. Falls back to BM25/vector search over chunks."""
+        from graphrag.cache import normalize_query
+        cache_key = normalize_query(query) if self.bundle_cache else None
+        if self.bundle_cache:
+            cached_result = self.bundle_cache.get(cache_key)
+            if cached_result:
+                logger.info(f"[CACHE HIT] Section Bundle retrieved from L2 cache for query: {query}")
+                return cached_result
+
         rules_context = ""
         rules_provenance = None
         is_academic_rules_request = False
@@ -1907,7 +1918,7 @@ class SectionRetriever:
             provenance["source_mode"] = "hybrid_db+chunks"
             provenance["graph"]["word_count"] = provenance["graph"].get("word_count", 0) + rules_provenance["graph"].get("word_count", 0)
 
-        return {
+        result = {
             "context": context,
             "provenance": provenance,
             "answerability": {
@@ -1921,3 +1932,8 @@ class SectionRetriever:
                 f"to answer that question. Please visit the official website at {self.section_config['base_url']}."
             )
         }
+        
+        if self.bundle_cache and result["answerability"]["answerable"]:
+            self.bundle_cache.set(cache_key, result)
+            
+        return result

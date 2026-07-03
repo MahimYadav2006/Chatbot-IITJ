@@ -35,6 +35,7 @@ multi_retriever = None          # MultiDepartmentRetriever
 router = None                   # DepartmentRouter
 llm = None                      # Active response LLM provider
 verifier = None                 # ResponseVerifier
+response_cache = None           # L1 ResponseCache
 
 
 def _log_retrieval_provenance(dept_codes, query, provenance, answerability=None):
@@ -398,7 +399,7 @@ def get_global_person_direct_answer(query: str) -> Optional[str]:
 
 def init_app():
     """Initialize the LLM, router, verifier, and preload all ingested retrievers."""
-    global llm, multi_retriever, router, verifier, person_index
+    global llm, multi_retriever, router, verifier, person_index, response_cache
 
     from graphrag.llm import create_llm_from_env
     from graphrag.verifier import ResponseVerifier
@@ -421,6 +422,10 @@ def init_app():
 
     # Initialize verifier
     verifier = ResponseVerifier(llm)
+
+    from graphrag.cache import get_response_cache, is_cache_enabled
+    if is_cache_enabled():
+        response_cache = get_response_cache()
 
     # Preload all ingested department retrievers
     loaded_count = 0
@@ -487,6 +492,21 @@ def chat():
     if not query:
         return jsonify({"error": "Empty message"}), 400
 
+
+    def _finalize_response(resp_dict):
+        if response_cache and resp_dict.get("information_available"):
+            response_cache.set(cache_key, resp_dict)
+        return jsonify(resp_dict)
+
+    from graphrag.cache import normalize_query
+    cache_key = normalize_query(query) if response_cache else None
+
+    if response_cache:
+        cached_resp = response_cache.get(cache_key)
+        if cached_resp:
+            logger.info(f"[CACHE HIT] L1 Response Cache for query: {query}")
+            return jsonify(cached_resp)
+
     try:
         start = time.time()
 
@@ -546,7 +566,7 @@ def chat():
                 {"route": "identity_fast_path", "source_mode": "graph+llm"},
                 {"answerable": True},
             )
-            return jsonify({
+            return _finalize_response({
                 "response": sanitize_response(response),
                 "routed_departments": [],
                 "routed_sections": [],
@@ -611,7 +631,7 @@ def chat():
                 sec_retriever = get_section_retriever(sec_code)
 
                 if not sec_retriever:
-                    return jsonify({
+                    return _finalize_response({
                         "response": f"The knowledge base for section **{sec_code}** is not available yet.",
                         "routed_departments": [],
                         "routed_sections": [sec_code],
@@ -633,7 +653,7 @@ def chat():
 
                 if not answerability.get("answerable", True):
                     total_time = time.time() - start
-                    return jsonify({
+                    return _finalize_response({
                         "response": sanitize_response(bundle["fallback_response"]),
                         "routed_departments": [],
                         "routed_sections": [sec_code],
@@ -663,7 +683,7 @@ def chat():
                 total_time = time.time() - start
                 logger.info(f"[{sec_code.upper()}] Query: '{query[:50]}...' | Total: {total_time:.2f}s")
 
-                return jsonify({
+                return _finalize_response({
                     "response": response,
                     "routed_departments": [],
                     "routed_sections": [sec_code],
@@ -683,7 +703,7 @@ def chat():
 
                 if not answerability.get("answerable", True):
                     total_time = time.time() - start
-                    return jsonify({
+                    return _finalize_response({
                         "response": sanitize_response(bundle.get("fallback_response", "I don't have that information.")),
                         "routed_departments": [],
                         "routed_sections": route_result.sections,
@@ -699,7 +719,7 @@ def chat():
                 response = llm.generate(prompt, system_prompt=system_prompt, max_tokens=1800)
 
                 total_time = time.time() - start
-                return jsonify({
+                return _finalize_response({
                     "response": response,
                     "routed_departments": [],
                     "routed_sections": bundle.get("sections", route_result.sections),
@@ -715,7 +735,7 @@ def chat():
             dept_retriever = get_retriever(dept_code)
 
             if not dept_retriever:
-                return jsonify({
+                return _finalize_response({
                     "response": f"The knowledge base for **{dept_code}** is not available yet.",
                     "routed_departments": [dept_code],
                     "routed_sections": [],
@@ -739,7 +759,7 @@ def chat():
 
             if not answerability.get("answerable", True):
                 total_time = time.time() - start
-                return jsonify({
+                return _finalize_response({
                     "response": sanitize_response(bundle["fallback_response"]),
                     "routed_departments": [dept_code],
                     "routed_sections": [],
@@ -769,7 +789,7 @@ def chat():
             total_time = time.time() - start
             logger.info(f"[{dept_code.upper()}] Query: '{query[:50]}...' | Total: {total_time:.2f}s")
 
-            return jsonify({
+            return _finalize_response({
                 "response": response,
                 "routed_departments": [dept_code],
                 "routed_sections": [],
@@ -795,7 +815,7 @@ def chat():
 
             if not answerability.get("answerable", True):
                 total_time = time.time() - start
-                return jsonify({
+                return _finalize_response({
                     "response": sanitize_response(bundle.get("fallback_response", "I don't have that information.")),
                     "routed_departments": bundle.get("departments", []),
                     "routed_sections": bundle.get("sections", []),
@@ -823,7 +843,7 @@ def chat():
             total_time = time.time() - start
             logger.info(f"[MULTI] Query: '{query[:50]}...' | Total: {total_time:.2f}s")
 
-            return jsonify({
+            return _finalize_response({
                 "response": response,
                 "routed_departments": bundle.get("departments", []),
                 "routed_sections": bundle.get("sections", []),
@@ -849,7 +869,7 @@ def chat():
 
             if not answerability.get("answerable", True):
                 total_time = time.time() - start
-                return jsonify({
+                return _finalize_response({
                     "response": sanitize_response(bundle.get("fallback_response",
                         "I don't have that specific information. Try mentioning a department/section for better results.")),
                     "routed_departments": routed_depts,
@@ -898,7 +918,7 @@ def chat():
             total_time = time.time() - start
             logger.info(f"[BROADCAST] Query: '{query[:50]}...' | Routed depts: {routed_depts} | Routed secs: {routed_secs} | Total: {total_time:.2f}s")
 
-            return jsonify({
+            return _finalize_response({
                 "response": response,
                 "routed_departments": routed_depts,
                 "routed_sections": routed_secs,
@@ -909,7 +929,7 @@ def chat():
             })
     except Exception as e:
         logger.error(f"Error processing query: {e}", exc_info=True)
-        return jsonify({
+        return _finalize_response({
             "error": "An error occurred while processing your request.",
             "response": "I'm sorry, I encountered an error. Please try again."
         }), 500
@@ -948,6 +968,7 @@ def set_gemini_key():
         logger.info("Reverting Gemini API key to default config")
         llm = GeminiLLM()
         verifier = ResponseVerifier(llm)
+        if response_cache: response_cache.clear()
         return jsonify({"ok": True, "message": "Gemini API key reverted to default config"})
         
     data = request.get_json() or {}
@@ -963,6 +984,7 @@ def set_gemini_key():
     logger.info("Updating global Gemini LLM with user-provided API key")
     llm = GeminiLLM(api_key=api_key)
     verifier = ResponseVerifier(llm)
+    if response_cache: response_cache.clear()
     
     return jsonify({
         "ok": True,
@@ -982,6 +1004,41 @@ def health():
         "verifier_loaded": verifier is not None,
     })
 
+
+
+@app.route("/api/cache/stats", methods=["GET"])
+def cache_stats():
+    stats = {}
+    if response_cache:
+        stats["L1_response_cache"] = response_cache.stats()
+    else:
+        stats["L1_response_cache"] = "disabled"
+        
+    stats["L2_bundle_caches"] = {}
+    for code, ret in retrievers.items():
+        if hasattr(ret, "bundle_cache") and ret.bundle_cache:
+            stats["L2_bundle_caches"][code] = ret.bundle_cache.stats()
+    for code, ret in section_retrievers.items():
+        if hasattr(ret, "bundle_cache") and ret.bundle_cache:
+            stats["L2_bundle_caches"][code] = ret.bundle_cache.stats()
+            
+    return jsonify(stats)
+
+@app.route("/api/cache/clear", methods=["POST"])
+def cache_clear():
+    cleared = 0
+    if response_cache:
+        response_cache.clear()
+        cleared += 1
+    for ret in retrievers.values():
+        if hasattr(ret, "bundle_cache") and ret.bundle_cache:
+            ret.bundle_cache.clear()
+            cleared += 1
+    for ret in section_retrievers.values():
+        if hasattr(ret, "bundle_cache") and ret.bundle_cache:
+            ret.bundle_cache.clear()
+            cleared += 1
+    return jsonify({"ok": True, "message": f"Cleared {cleared} caches."})
 
 if __name__ == "__main__":
     init_app()

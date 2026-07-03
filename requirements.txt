@@ -22,3 +22,4 @@ flask>=2.0
 beautifulsoup4
 Pillow
 playwright>=1.48.0
+cachetools>=5.3
