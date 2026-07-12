@@ -31,6 +31,7 @@
     "idp:Ultracapacitor": 3,
     "idp:Nanoporous Materials": 3,
     "idp:Solid-state batteries": 3,
+    "idp:Goal": 4,
     "idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues": 4,
     "idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)": 4,
     "idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models": 4,
@@ -53,6 +54,7 @@
     "idp:Biomedical Data Analysis": 6,
     "idp:Deep Learning": 6,
     "idp:Reinforcement Learning": 6,
+    "idp:Yogesh Madhukarrao Nimdeo": 6,
     "IIT Jammu IDP Department": 6
   },
   "reports": [
@@ -305,6 +307,7 @@
       "community_id": 4,
       "members": [
         "idp:Santhilal Subhash",
+        "idp:Goal",
         "idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues",
         "idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)",
         "idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models",
@@ -320,6 +323,7 @@
           "idp:Santhilal Subhash"
         ],
         "ResearchArea": [
+          "idp:Goal",
           "idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues",
           "idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME)",
           "idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models",
@@ -332,6 +336,11 @@
         ]
       },
       "internal_edges": [
+        {
+          "source": "idp:Santhilal Subhash",
+          "target": "idp:Goal",
+          "type": "RESEARCHES_IN"
+        },
         {
           "source": "idp:Santhilal Subhash",
           "target": "idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues",
@@ -378,9 +387,9 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 4 in IIT Jammu Interdisciplinary Programmes Department:\n  Faculty: Santhilal Subhash\n  ResearchArea: Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models, we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health, Key Focus Areas, Reproductive Biology, Genomics & Single Cell Biology, Multi-omics, Bioinformatics\n  Relationships: RESEARCHES_IN: 9\n\nSummary: This group includes 1 faculty member(s): idp:Santhilal Subhash. working in areas like idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models.",
-      "summary": "This group includes 1 faculty member(s): idp:Santhilal Subhash. working in areas like idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), idp:which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models.",
-      "size": 10
+      "text": "Community 4 in IIT Jammu Interdisciplinary Programmes Department:\n  Faculty: Santhilal Subhash\n  ResearchArea: Goal, Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME), which drive cellular heterogeneity and plasticity. By employing advanced Next-Generation Sequencing (NGS) techniques and computational models, we aim to map these regulatory elements to uncover mechanisms underlying disease progression and treatment resistance. The ultimate goal is to develop targeted therapies that address tissue heterogeneity and improve women's reproductive health, Key Focus Areas, Reproductive Biology, Genomics & Single Cell Biology, Multi-omics, Bioinformatics\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): idp:Santhilal Subhash. working in areas like idp:Goal, idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME).",
+      "summary": "This group includes 1 faculty member(s): idp:Santhilal Subhash. working in areas like idp:Goal, idp:Our lab at IIT Jammu focuses on understanding the complexities of female reproductive tissues, idp:particularly in the context of gynecological diseases and cancers. This research emphasizes the significance of both coding and noncoding regulatory elements in the genome (REGULOME).",
+      "size": 11
     },
     {
       "id": "community_5",
@@ -479,11 +488,13 @@
         "idp:Biomedical Data Analysis",
         "idp:Deep Learning",
         "idp:Reinforcement Learning",
+        "idp:Yogesh Madhukarrao Nimdeo",
         "IIT Jammu IDP Department"
       ],
       "members_by_type": {
         "Faculty": [
-          "idp:Uma Satya Ranjan"
+          "idp:Uma Satya Ranjan",
+          "idp:Yogesh Madhukarrao Nimdeo"
         ],
         "ResearchArea": [
           "idp:Biomedical Data Analysis",
@@ -514,11 +525,16 @@
           "source": "idp:Uma Satya Ranjan",
           "target": "IIT Jammu IDP Department",
           "type": "MEMBER_OF"
+        },
+        {
+          "source": "idp:Yogesh Madhukarrao Nimdeo",
+          "target": "IIT Jammu IDP Department",
+          "type": "MEMBER_OF"
         }
       ],
-      "text": "Community 6 in IIT Jammu Interdisciplinary Programmes Department:\n  Department: Interdisciplinary Programmes\n  Faculty: Uma Satya Ranjan\n  ResearchArea: Biomedical Data Analysis, Deep Learning, Reinforcement Learning\n  Relationships: RESEARCHES_IN: 3, MEMBER_OF: 1\n\nSummary: This group includes 1 faculty member(s): idp:Uma Satya Ranjan. working in areas like idp:Biomedical Data Analysis, idp:Deep Learning, idp:Reinforcement Learning.",
-      "summary": "This group includes 1 faculty member(s): idp:Uma Satya Ranjan. working in areas like idp:Biomedical Data Analysis, idp:Deep Learning, idp:Reinforcement Learning.",
-      "size": 5
+      "text": "Community 6 in IIT Jammu Interdisciplinary Programmes Department:\n  Department: Interdisciplinary Programmes\n  Faculty: Uma Satya Ranjan, Yogesh Madhukarrao Nimdeo\n  ResearchArea: Biomedical Data Analysis, Deep Learning, Reinforcement Learning\n  Relationships: RESEARCHES_IN: 3, MEMBER_OF: 2\n\nSummary: This group includes 2 faculty member(s): idp:Uma Satya Ranjan, idp:Yogesh Madhukarrao Nimdeo. working in areas like idp:Biomedical Data Analysis, idp:Deep Learning, idp:Reinforcement Learning.",
+      "summary": "This group includes 2 faculty member(s): idp:Uma Satya Ranjan, idp:Yogesh Madhukarrao Nimdeo. working in areas like idp:Biomedical Data Analysis, idp:Deep Learning, idp:Reinforcement Learning.",
+      "size": 6
     }
   ]
 }

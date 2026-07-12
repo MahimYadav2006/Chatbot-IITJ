@@ -1,551 +1,190 @@
 {
   "partition": {
-    "chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction": 2,
-    "chemical-engineering:CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT)": 12,
-    "chemical-engineering:Batteries": 2,
-    "chemical-engineering:X-ray photoelectron spectroscopy": 3,
-    "chemical-engineering:Mohd Aurif Shergujri": 3,
-    "chemical-engineering:Nucleate Pool Boiling": 1,
-    "chemical-engineering:Disease Detection and Drug Delivery": 10,
-    "chemical-engineering:Bharath P": 2,
-    "chemical-engineering:Natural product extraction and Downstream Processing": 3,
-    "chemical-engineering:Intensification of Biomass Pyrolysis and its applications of the products": 3,
-    "chemical-engineering:Dharitri Rath": 9,
-    "chemical-engineering:Upasana Gupta": 10,
-    "chemical-engineering:Carbon Capture": 11,
-    "chemical-engineering:Modeling and Simulation of Multi-Phase Reactor and Machine learning": 12,
-    "chemical-engineering:Electrochemical applications: Supercapacitors": 2,
-    "chemical-engineering:Ashutosh Yadav": 12,
-    "chemical-engineering:and wet-spinning techniques": 2,
-    "chemical-engineering:Battery/ Energy Generation": 3,
-    "chemical-engineering:1. Non-continuum energy and mass diffusion studies": 1,
-    "chemical-engineering:RPT (Radioactive Particle Tracking), CFD": 12,
-    "chemical-engineering:Srabani Roychowdhury": 10,
-    "chemical-engineering:Yogesh Madhukarrao Nimdeo": 1,
-    "chemical-engineering:Plasmonics": 3,
-    "chemical-engineering:Krishna Mohan Gupta": 11,
-    "chemical-engineering:Haroon Ali Khan": 9,
-    "chemical-engineering:Microfluidics and Biosensors": 9,
-    "chemical-engineering:Photochemistry and Photocatalysis": 3,
-    "chemical-engineering:Dakshita Snud Sharma": 9,
-    "chemical-engineering:3. Development of optical techniques for engineering and bio-medical applications": 1,
-    "chemical-engineering:1. Methane recovery from natural gas hydrates (NGH development)": 4,
-    "chemical-engineering:Smartphone enabled Point of care diagnostics kit development": 9,
-    "chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System": 7,
-    "chemical-engineering:Multiphase Reactors": 12,
-    "chemical-engineering:Affordable Healthcare": 9,
-    "chemical-engineering:lab:Process Modelling & Simulation Lab": 5,
-    "chemical-engineering:Bio-engineering": 9,
-    "chemical-engineering:Energy Storage devices": 10,
-    "chemical-engineering:Computational and Experimental Investigation of Pressure Swing Adsorption Process for Carbon Capture": 12,
-    "chemical-engineering:Monika Kumari": 10,
-    "chemical-engineering:Saimatun Nisa": 3,
-    "chemical-engineering:quantifying intrinsic kinetics versus mass transport": 6,
-    "chemical-engineering:energy storage and flow assurance (Modelling and Experiments)": 4,
-    "chemical-engineering:CO2 reduction": 2,
-    "chemical-engineering:Petroleum Refining": 12,
-    "chemical-engineering:Tarun Mahajan": 2,
-    "chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery": 11,
-    "chemical-engineering:Ravi Kumar Arun": 10,
-    "chemical-engineering:Electrochemical Energy Storage": 10,
-    "chemical-engineering:we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches": 4,
-    "chemical-engineering:Steady state and Transient analysis of THTD": 7,
-    "chemical-engineering:Hydrogen Economy": 11,
-    "chemical-engineering:Latika Dixit": 7,
-    "chemical-engineering:\u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes": 0,
-    "chemical-engineering:Multi-scale Modeling and Simulations:** Molecular Simulation": 11,
-    "chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore": 8,
-    "chemical-engineering:Point-of-care Diagnostic Devices. Further information can be found here... [https://sites.google.com/iitjammu.ac.in/dharitri/home](https://sites.google.com/iitjammu.ac.in/dharitri/home)": 9,
-    "chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors": 6,
-    "chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction": 6,
-    "chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement": 10,
-    "chemical-engineering:Akash Lata": 10,
-    "chemical-engineering:Polymer nanocomposites": 2,
-    "chemical-engineering:Natish Kumar": 10,
-    "chemical-engineering:Ankit Patil": 1,
-    "chemical-engineering:Additionally": 4,
-    "chemical-engineering:Environmental Engineering": 12,
-    "chemical-engineering:lab:Separation Processes And Chemical Reaction Engineering Laboratory": 5,
-    "chemical-engineering:Yash Mishra": 8,
-    "chemical-engineering:Jenish S": 12,
-    "chemical-engineering:water splitting": 6,
-    "chemical-engineering:P.k. Vijayan": 7,
-    "chemical-engineering:Design and development of technology for industrial waste water treatment": 1,
-    "chemical-engineering:Electro-catalysis": 2,
-    "chemical-engineering:Process Optimization": 12,
-    "chemical-engineering:and intensification of separation techniques": 1,
-    "chemical-engineering:\u2022 Atomic Layer Deposition of materials": 0,
-    "chemical-engineering:Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases": 10,
-    "chemical-engineering:Pulkit Garg": 2,
-    "chemical-engineering:lab:Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath)": 5,
-    "chemical-engineering:Catalytic conversion of hydrocarbon into fuel": 0,
-    "chemical-engineering:Sensing and removal of toxic elements from industrial wastewater": 2,
-    "chemical-engineering:Biochemical and Bioprocess Engineering": 3,
+    "chemical-engineering:Mahesh Nadda": 4,
+    "chemical-engineering:Bio-engineering": 1,
+    "chemical-engineering:Aditya Shankar Sandupatla": 2,
+    "chemical-engineering:Design and development of technology for industrial waste water treatment": 7,
+    "chemical-engineering:Machine Learning": 4,
+    "chemical-engineering:CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT)": 4,
+    "chemical-engineering:MD Simulation": 5,
+    "chemical-engineering:Swati Gupta": 7,
+    "chemical-engineering:Dharitri Rath": 1,
+    "chemical-engineering:Petroleum Refining": 4,
     "chemical-engineering:organic transformation": 6,
-    "chemical-engineering:Water Purification": 11,
-    "chemical-engineering:Shafali Thakur": 3,
-    "chemical-engineering:Synthesis of layered 2D nanomaterials": 2,
-    "chemical-engineering:Ravi Raushan": 1,
-    "chemical-engineering:Lomas Rishi": 0,
-    "chemical-engineering:Mathematical Modeling": 11,
-    "chemical-engineering:Rakshith VS": 12,
-    "chemical-engineering:Mahesh Nadda": 12,
-    "IIT Jammu CHEMICAL-ENGINEERING Department": 5,
-    "chemical-engineering:Praneet Mishra": 12,
-    "chemical-engineering:Lab on a Chip Devices": 10,
-    "chemical-engineering:4. Applications of optical sensing techniques for transport phenomena studies": 1,
-    "chemical-engineering:Anna Anandita": 9,
-    "chemical-engineering:Process Intensification": 3,
-    "chemical-engineering:\u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene": 0,
-    "chemical-engineering:Carbon capture storage and utilization (CCSU)": 3,
-    "chemical-engineering:Dhakane Vishal": 12,
-    "chemical-engineering:Computational and experimental investigation of": 0,
-    "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar": 4,
-    "chemical-engineering:Computational and Experimental Investigations for the Design of Temperature/Pressure Swing Adsorption for Carbon Capture": 12,
-    "chemical-engineering:Swati Gupta": 1,
-    "chemical-engineering:Microfluidics based Organ-on-chip technology": 10,
-    "chemical-engineering:Amrita Chatterjee": 6,
-    "chemical-engineering:2. Carbon capture and sequestration in porous medium as hydrates (CCS)": 4,
-    "chemical-engineering:4. Hydrate inhibition in oil and gas pipelines for flow assurance": 4,
-    "chemical-engineering:Machine\u00a0Learning": 11,
-    "chemical-engineering:and metal oxides": 2,
-    "chemical-engineering:Chandra Shekhar Lohani": 0,
-    "chemical-engineering:Production of green ammonia via electrocatalytic nitrogen reduction reaction": 2,
-    "chemical-engineering:Debapriya Mandal": 8,
-    "chemical-engineering:Swati Gangwar": 7,
-    "chemical-engineering:Machine Learning": 12,
-    "chemical-engineering:and sol forming colloidal suspensions": 1,
-    "chemical-engineering:lab:Fluid Flow & Mechanical Operations Laboratory": 5,
-    "chemical-engineering:lab:Process Instrumentation Dynamics & Control Lab": 5,
-    "chemical-engineering:optimization": 1,
-    "chemical-engineering:Gas hydrates or clathrate hydrates for their applications in NGH development": 4,
-    "chemical-engineering:Aditya Shankar Sandupatla": 0,
-    "chemical-engineering:Gaurav Ashok Bhaduri": 3,
-    "chemical-engineering:Rheological studies of complex fluids": 1,
-    "chemical-engineering:Heterogeneous catalysis (tri-phasic reactions)": 3,
-    "chemical-engineering:5. Design": 1,
-    "chemical-engineering:lab:Heat Transfer & Thermodynamics Laboratory": 5,
-    "chemical-engineering:Zeolite-based Carbon Capture": 9,
-    "chemical-engineering:Synthesis of functional polymer fibers: Electrospinning": 2,
-    "chemical-engineering:Clinical diagnostics kit development": 9,
-    "chemical-engineering:MD Simulation": 11,
-    "chemical-engineering:Sagnik Das": 9,
-    "chemical-engineering:Ankit Tyagi": 2,
+    "chemical-engineering:and sol forming colloidal suspensions": 7,
+    "chemical-engineering:Carbon Capture": 5,
+    "chemical-engineering:Praneet Mishra": 4,
+    "chemical-engineering:2. Carbon capture and sequestration in porous medium as hydrates (CCS)": 9,
+    "chemical-engineering:Polymer nanocomposites": 10,
+    "chemical-engineering:Dhakane Vishal": 4,
+    "chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction": 10,
+    "chemical-engineering:X-ray photoelectron spectroscopy": 0,
+    "chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System": 3,
+    "chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery": 5,
+    "chemical-engineering:Energy Storage devices": 11,
+    "chemical-engineering:Dakshita Snud Sharma": 1,
+    "chemical-engineering:Carbon capture storage and utilization (CCSU)": 0,
+    "chemical-engineering:Rheological studies of complex fluids": 7,
+    "chemical-engineering:Nanomaterial synthesis and characterization": 0,
+    "chemical-engineering:Microfluidics and Biosensors": 1,
+    "chemical-engineering:lab:Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath)": 8,
+    "chemical-engineering:Plasmonics": 0,
+    "chemical-engineering:Heterogeneous catalysis (tri-phasic reactions)": 0,
+    "chemical-engineering:and metal oxides": 10,
+    "chemical-engineering:\u2022 Atomic Layer Deposition of materials": 2,
+    "chemical-engineering:Anna Anandita": 1,
+    "chemical-engineering:RPT (Radioactive Particle Tracking), CFD": 4,
+    "chemical-engineering:3. Natural gas and hydrogen storage as hydrates (Energy storage)": 9,
+    "chemical-engineering:Environmental Engineering": 4,
+    "chemical-engineering:Batteries": 10,
+    "chemical-engineering:Tarun Mahajan": 10,
+    "chemical-engineering:Water Purification": 5,
+    "chemical-engineering:Upasana Gupta": 11,
+    "chemical-engineering:Jenish S": 4,
+    "chemical-engineering:Multiphase Reactors": 4,
+    "chemical-engineering:5. Design": 7,
+    "chemical-engineering:Chandra Shekhar Lohani": 2,
+    "chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction": 6,
+    "chemical-engineering:Smartphone enabled Point of care diagnostics kit development": 1,
+    "chemical-engineering:Multi-scale Modeling and Simulations:** Molecular Simulation": 5,
+    "chemical-engineering:lab:Separation Processes And Chemical Reaction Engineering Laboratory": 8,
+    "chemical-engineering:2. Physical behavior and dynamics of glass": 7,
+    "chemical-engineering:4. Hydrate inhibition in oil and gas pipelines for flow assurance": 9,
+    "chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors": 6,
+    "chemical-engineering:Electro-catalysis": 10,
     "chemical-engineering:3) Electrolyte synthesis and interface engineering in solid state batteries for room temperature and sub zero applications": 6,
-    "chemical-engineering:Waste to wealth": 3,
-    "chemical-engineering:Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane": 0,
-    "chemical-engineering:2. Physical behavior and dynamics of glass": 1,
-    "chemical-engineering:3. Natural gas and hydrogen storage as hydrates (Energy storage)": 4,
-    "chemical-engineering:Advance Nanoporous Materials:**Covalent Organic Frameworks (COFs)": 11,
+    "chemical-engineering:Catalytic conversion of hydrocarbon into fuel": 2,
+    "chemical-engineering:lab:Fluid Flow & Mechanical Operations Laboratory": 8,
+    "chemical-engineering:lab:Process Instrumentation Dynamics & Control Lab": 8,
+    "chemical-engineering:Gaurav Ashok Bhaduri": 0,
+    "chemical-engineering:Clinical diagnostics kit development": 1,
+    "chemical-engineering:\u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene": 2,
+    "chemical-engineering:Point-of-care Diagnostic Devices. Further information can be found here... [https://sites.google.com/iitjammu.ac.in/dharitri/home](https://sites.google.com/iitjammu.ac.in/dharitri/home)": 1,
+    "chemical-engineering:Additionally": 9,
+    "chemical-engineering:Synthesis of layered 2D nanomaterials": 10,
+    "chemical-engineering:Krishna Mohan Gupta": 5,
+    "chemical-engineering:we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches": 9,
+    "chemical-engineering:Process Optimization": 4,
+    "chemical-engineering:Rakshith VS": 4,
+    "chemical-engineering:energy storage and flow assurance (Modelling and Experiments)": 9,
+    "chemical-engineering:and intensification of separation techniques": 7,
+    "chemical-engineering:Lomas Rishi": 2,
+    "chemical-engineering:Yash Mishra": 12,
+    "chemical-engineering:Latika Dixit": 3,
+    "chemical-engineering:Computational and Experimental Investigations for the Design of Temperature/Pressure Swing Adsorption for Carbon Capture": 4,
+    "chemical-engineering:Pulkit Garg": 10,
     "chemical-engineering:1) Pore engineering in metal and covalent organic frameworks ( MOFs and COFs) and hierarchical carbon": 6,
-    "chemical-engineering:Nanomaterial synthesis and characterization": 3
+    "chemical-engineering:Modeling and Simulation of Multi-Phase Reactor and Machine learning": 4,
+    "chemical-engineering:Production of green ammonia via electrocatalytic nitrogen reduction reaction": 10,
+    "chemical-engineering:Monika Kumari": 11,
+    "chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement": 11,
+    "chemical-engineering:lab:Process Modelling & Simulation Lab": 8,
+    "chemical-engineering:\u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes": 2,
+    "chemical-engineering:Synthesis of functional polymer fibers: Electrospinning": 10,
+    "chemical-engineering:1. Methane recovery from natural gas hydrates (NGH development)": 9,
+    "chemical-engineering:Srabani Roychowdhury": 11,
+    "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar": 9,
+    "IIT Jammu CHEMICAL-ENGINEERING Department": 8,
+    "chemical-engineering:Ravi Kumar Arun": 11,
+    "chemical-engineering:Waste to wealth": 0,
+    "chemical-engineering:Electrochemical Energy Storage": 11,
+    "chemical-engineering:Saimatun Nisa": 0,
+    "chemical-engineering:and wet-spinning techniques": 10,
+    "chemical-engineering:Yogesh Madhukarrao Nimdeo": 7,
+    "chemical-engineering:Computational and experimental investigation of": 2,
+    "chemical-engineering:Hydrogen Economy": 5,
+    "chemical-engineering:Disease Detection and Drug Delivery": 11,
+    "chemical-engineering:lab:Heat Transfer & Thermodynamics Laboratory": 8,
+    "chemical-engineering:Ashutosh Yadav": 4,
+    "chemical-engineering:water splitting": 6,
+    "chemical-engineering:Mathematical Modeling": 5,
+    "chemical-engineering:Advance Nanoporous Materials:**Covalent Organic Frameworks (COFs)": 5,
+    "chemical-engineering:1. Non-continuum energy and mass diffusion studies": 7,
+    "chemical-engineering:Shafali Thakur": 0,
+    "chemical-engineering:Amrita Chatterjee": 6,
+    "chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore": 12,
+    "chemical-engineering:Nucleate Pool Boiling": 7,
+    "chemical-engineering:Haroon Ali Khan": 1,
+    "chemical-engineering:Photochemistry and Photocatalysis": 0,
+    "chemical-engineering:Biochemical and Bioprocess Engineering": 0,
+    "chemical-engineering:Ankit Patil": 7,
+    "chemical-engineering:Lab on a Chip Devices": 11,
+    "chemical-engineering:Steady state and Transient analysis of THTD": 3,
+    "chemical-engineering:Intensification of Biomass Pyrolysis and its applications of the products": 0,
+    "chemical-engineering:optimization": 7,
+    "chemical-engineering:quantifying intrinsic kinetics versus mass transport": 6,
+    "chemical-engineering:Natural product extraction and Downstream Processing": 0,
+    "chemical-engineering:Microfluidics based Organ-on-chip technology": 11,
+    "chemical-engineering:Debapriya Mandal": 12,
+    "chemical-engineering:4. Applications of optical sensing techniques for transport phenomena studies": 7,
+    "chemical-engineering:3. Development of optical techniques for engineering and bio-medical applications": 7,
+    "chemical-engineering:Zeolite-based Carbon Capture": 1,
+    "chemical-engineering:Bharath P": 10,
+    "chemical-engineering:Battery/ Energy Generation": 0,
+    "chemical-engineering:Process Intensification": 0,
+    "chemical-engineering:Computational and Experimental Investigation of Pressure Swing Adsorption Process for Carbon Capture": 4,
+    "chemical-engineering:Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases": 11,
+    "chemical-engineering:Electrochemical applications: Supercapacitors": 10,
+    "chemical-engineering:Gas hydrates or clathrate hydrates for their applications in NGH development": 9,
+    "chemical-engineering:Sagnik Das": 1,
+    "chemical-engineering:CO2 reduction": 10,
+    "chemical-engineering:Mohd Aurif Shergujri": 0,
+    "chemical-engineering:Sensing and removal of toxic elements from industrial wastewater": 10,
+    "chemical-engineering:Ravi Raushan": 7,
+    "chemical-engineering:P.K. Vijayan": 3,
+    "chemical-engineering:Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane": 2,
+    "chemical-engineering:Akash Lata": 11,
+    "chemical-engineering:Natish Kumar": 11,
+    "chemical-engineering:Swati Gangwar": 3,
+    "chemical-engineering:Ankit Tyagi": 10,
+    "chemical-engineering:Affordable Healthcare": 1,
+    "chemical-engineering:QSAR": 5,
+    "chemical-engineering:Machine\u00a0Learning": 5
   },
   "reports": [
     {
       "id": "community_0",
       "community_id": 0,
       "members": [
-        "chemical-engineering:\u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes",
-        "chemical-engineering:\u2022 Atomic Layer Deposition of materials",
-        "chemical-engineering:Catalytic conversion of hydrocarbon into fuel",
-        "chemical-engineering:Lomas Rishi",
-        "chemical-engineering:\u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene",
-        "chemical-engineering:Computational and experimental investigation of",
-        "chemical-engineering:Chandra Shekhar Lohani",
-        "chemical-engineering:Aditya Shankar Sandupatla",
-        "chemical-engineering:Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "chemical-engineering:\u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes",
-          "chemical-engineering:\u2022 Atomic Layer Deposition of materials",
-          "chemical-engineering:Catalytic conversion of hydrocarbon into fuel",
-          "chemical-engineering:\u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene",
-          "chemical-engineering:Computational and experimental investigation of",
-          "chemical-engineering:Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane"
-        ],
-        "PhDStudent": [
-          "chemical-engineering:Lomas Rishi",
-          "chemical-engineering:Chandra Shekhar Lohani"
-        ],
-        "Faculty": [
-          "chemical-engineering:Aditya Shankar Sandupatla"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemical-engineering:Aditya Shankar Sandupatla",
-          "target": "chemical-engineering:Computational and experimental investigation of",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Aditya Shankar Sandupatla",
-          "target": "chemical-engineering:\u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Aditya Shankar Sandupatla",
-          "target": "chemical-engineering:\u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Aditya Shankar Sandupatla",
-          "target": "chemical-engineering:\u2022 Atomic Layer Deposition of materials",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Aditya Shankar Sandupatla",
-          "target": "chemical-engineering:Catalytic conversion of hydrocarbon into fuel",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Aditya Shankar Sandupatla",
-          "target": "chemical-engineering:Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Chandra Shekhar Lohani",
-          "target": "chemical-engineering:Aditya Shankar Sandupatla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Chandra Shekhar Lohani",
-          "target": "chemical-engineering:Catalytic conversion of hydrocarbon into fuel",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemical-engineering:Lomas Rishi",
-          "target": "chemical-engineering:Aditya Shankar Sandupatla",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Lomas Rishi",
-          "target": "chemical-engineering:Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 0 in IIT Jammu Chemical Engineering Department:\n  Faculty: Aditya Shankar Sandupatla\n  PhDStudent: Lomas Rishi, Chandra Shekhar Lohani\n  ResearchArea: \u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes, \u2022 Atomic Layer Deposition of materials, Catalytic conversion of hydrocarbon into fuel, \u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene, Computational and experimental investigation of, Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Aditya Shankar Sandupatla. 2 PhD student(s). working in areas like chemical-engineering:\u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes, chemical-engineering:\u2022 Atomic Layer Deposition of materials, chemical-engineering:Catalytic conversion of hydrocarbon into fuel.",
-      "summary": "This group includes 1 faculty member(s): chemical-engineering:Aditya Shankar Sandupatla. 2 PhD student(s). working in areas like chemical-engineering:\u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes, chemical-engineering:\u2022 Atomic Layer Deposition of materials, chemical-engineering:Catalytic conversion of hydrocarbon into fuel.",
-      "size": 9
-    },
-    {
-      "id": "community_1",
-      "community_id": 1,
-      "members": [
-        "chemical-engineering:Nucleate Pool Boiling",
-        "chemical-engineering:1. Non-continuum energy and mass diffusion studies",
-        "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-        "chemical-engineering:3. Development of optical techniques for engineering and bio-medical applications",
-        "chemical-engineering:Ankit Patil",
-        "chemical-engineering:Design and development of technology for industrial waste water treatment",
-        "chemical-engineering:and intensification of separation techniques",
-        "chemical-engineering:Ravi Raushan",
-        "chemical-engineering:4. Applications of optical sensing techniques for transport phenomena studies",
-        "chemical-engineering:Swati Gupta",
-        "chemical-engineering:and sol forming colloidal suspensions",
-        "chemical-engineering:optimization",
-        "chemical-engineering:Rheological studies of complex fluids",
-        "chemical-engineering:5. Design",
-        "chemical-engineering:2. Physical behavior and dynamics of glass"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "chemical-engineering:Nucleate Pool Boiling",
-          "chemical-engineering:1. Non-continuum energy and mass diffusion studies",
-          "chemical-engineering:3. Development of optical techniques for engineering and bio-medical applications",
-          "chemical-engineering:Design and development of technology for industrial waste water treatment",
-          "chemical-engineering:and intensification of separation techniques",
-          "chemical-engineering:4. Applications of optical sensing techniques for transport phenomena studies",
-          "chemical-engineering:and sol forming colloidal suspensions",
-          "chemical-engineering:optimization",
-          "chemical-engineering:Rheological studies of complex fluids",
-          "chemical-engineering:5. Design",
-          "chemical-engineering:2. Physical behavior and dynamics of glass"
-        ],
-        "Faculty": [
-          "chemical-engineering:Yogesh Madhukarrao Nimdeo"
-        ],
-        "PhDStudent": [
-          "chemical-engineering:Ankit Patil",
-          "chemical-engineering:Ravi Raushan",
-          "chemical-engineering:Swati Gupta"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:1. Non-continuum energy and mass diffusion studies",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:2. Physical behavior and dynamics of glass",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:and sol forming colloidal suspensions",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:3. Development of optical techniques for engineering and bio-medical applications",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:4. Applications of optical sensing techniques for transport phenomena studies",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:5. Design",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:optimization",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:and intensification of separation techniques",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:Rheological studies of complex fluids",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:Nucleate Pool Boiling",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "target": "chemical-engineering:Design and development of technology for industrial waste water treatment",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Patil",
-          "target": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Ankit Patil",
-          "target": "chemical-engineering:Rheological studies of complex fluids",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemical-engineering:Ravi Raushan",
-          "target": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Ravi Raushan",
-          "target": "chemical-engineering:Nucleate Pool Boiling",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemical-engineering:Swati Gupta",
-          "target": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Swati Gupta",
-          "target": "chemical-engineering:Design and development of technology for industrial waste water treatment",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 1 in IIT Jammu Chemical Engineering Department:\n  Faculty: Yogesh Madhukarrao Nimdeo\n  PhDStudent: Ankit Patil, Ravi Raushan, Swati Gupta\n  ResearchArea: Nucleate Pool Boiling, 1. Non-continuum energy and mass diffusion studies, 3. Development of optical techniques for engineering and bio-medical applications, Design and development of technology for industrial waste water treatment, and intensification of separation techniques, 4. Applications of optical sensing techniques for transport phenomena studies, and sol forming colloidal suspensions, optimization, Rheological studies of complex fluids, 5. Design, 2. Physical behavior and dynamics of glass\n  Relationships: RESEARCHES_IN: 11, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Yogesh Madhukarrao Nimdeo. 3 PhD student(s). working in areas like chemical-engineering:Nucleate Pool Boiling, chemical-engineering:1. Non-continuum energy and mass diffusion studies, chemical-engineering:3. Development of optical techniques for engineering and bio-medical applications.",
-      "summary": "This group includes 1 faculty member(s): chemical-engineering:Yogesh Madhukarrao Nimdeo. 3 PhD student(s). working in areas like chemical-engineering:Nucleate Pool Boiling, chemical-engineering:1. Non-continuum energy and mass diffusion studies, chemical-engineering:3. Development of optical techniques for engineering and bio-medical applications.",
-      "size": 15
-    },
-    {
-      "id": "community_2",
-      "community_id": 2,
-      "members": [
-        "chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction",
-        "chemical-engineering:Batteries",
-        "chemical-engineering:Bharath P",
-        "chemical-engineering:Electrochemical applications: Supercapacitors",
-        "chemical-engineering:and wet-spinning techniques",
-        "chemical-engineering:CO2 reduction",
-        "chemical-engineering:Tarun Mahajan",
-        "chemical-engineering:Polymer nanocomposites",
-        "chemical-engineering:Electro-catalysis",
-        "chemical-engineering:Pulkit Garg",
-        "chemical-engineering:Sensing and removal of toxic elements from industrial wastewater",
-        "chemical-engineering:Synthesis of layered 2D nanomaterials",
-        "chemical-engineering:and metal oxides",
-        "chemical-engineering:Production of green ammonia via electrocatalytic nitrogen reduction reaction",
-        "chemical-engineering:Synthesis of functional polymer fibers: Electrospinning",
-        "chemical-engineering:Ankit Tyagi"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction",
-          "chemical-engineering:Batteries",
-          "chemical-engineering:Electrochemical applications: Supercapacitors",
-          "chemical-engineering:and wet-spinning techniques",
-          "chemical-engineering:CO2 reduction",
-          "chemical-engineering:Polymer nanocomposites",
-          "chemical-engineering:Electro-catalysis",
-          "chemical-engineering:Sensing and removal of toxic elements from industrial wastewater",
-          "chemical-engineering:Synthesis of layered 2D nanomaterials",
-          "chemical-engineering:and metal oxides",
-          "chemical-engineering:Production of green ammonia via electrocatalytic nitrogen reduction reaction",
-          "chemical-engineering:Synthesis of functional polymer fibers: Electrospinning"
-        ],
-        "PhDStudent": [
-          "chemical-engineering:Bharath P",
-          "chemical-engineering:Tarun Mahajan",
-          "chemical-engineering:Pulkit Garg"
-        ],
-        "Faculty": [
-          "chemical-engineering:Ankit Tyagi"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:Synthesis of layered 2D nanomaterials",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:and metal oxides",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:Synthesis of functional polymer fibers: Electrospinning",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:and wet-spinning techniques",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:Electrochemical applications: Supercapacitors",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:Batteries",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:Electro-catalysis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:CO2 reduction",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:Sensing and removal of toxic elements from industrial wastewater",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:Production of green ammonia via electrocatalytic nitrogen reduction reaction",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:Polymer nanocomposites",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Ankit Tyagi",
-          "target": "chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Tarun Mahajan",
-          "target": "chemical-engineering:Ankit Tyagi",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Tarun Mahajan",
-          "target": "chemical-engineering:Production of green ammonia via electrocatalytic nitrogen reduction reaction",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemical-engineering:Bharath P",
-          "target": "chemical-engineering:Ankit Tyagi",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Bharath P",
-          "target": "chemical-engineering:Polymer nanocomposites",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemical-engineering:Pulkit Garg",
-          "target": "chemical-engineering:Ankit Tyagi",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Pulkit Garg",
-          "target": "chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 2 in IIT Jammu Chemical Engineering Department:\n  Faculty: Ankit Tyagi\n  PhDStudent: Bharath P, Tarun Mahajan, Pulkit Garg\n  ResearchArea: Seawater electrocatalysis, Oxygen evolution reaction, Batteries, Electrochemical applications: Supercapacitors, and wet-spinning techniques, CO2 reduction, Polymer nanocomposites, Electro-catalysis, Sensing and removal of toxic elements from industrial wastewater, Synthesis of layered 2D nanomaterials, and metal oxides, Production of green ammonia via electrocatalytic nitrogen reduction reaction, Synthesis of functional polymer fibers: Electrospinning\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Ankit Tyagi. 3 PhD student(s). working in areas like chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction, chemical-engineering:Batteries, chemical-engineering:Electrochemical applications: Supercapacitors.",
-      "summary": "This group includes 1 faculty member(s): chemical-engineering:Ankit Tyagi. 3 PhD student(s). working in areas like chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction, chemical-engineering:Batteries, chemical-engineering:Electrochemical applications: Supercapacitors.",
-      "size": 16
-    },
-    {
-      "id": "community_3",
-      "community_id": 3,
-      "members": [
         "chemical-engineering:X-ray photoelectron spectroscopy",
-        "chemical-engineering:Mohd Aurif Shergujri",
-        "chemical-engineering:Natural product extraction and Downstream Processing",
-        "chemical-engineering:Intensification of Biomass Pyrolysis and its applications of the products",
-        "chemical-engineering:Battery/ Energy Generation",
-        "chemical-engineering:Plasmonics",
-        "chemical-engineering:Photochemistry and Photocatalysis",
-        "chemical-engineering:Saimatun Nisa",
-        "chemical-engineering:Biochemical and Bioprocess Engineering",
-        "chemical-engineering:Shafali Thakur",
-        "chemical-engineering:Process Intensification",
         "chemical-engineering:Carbon capture storage and utilization (CCSU)",
-        "chemical-engineering:Gaurav Ashok Bhaduri",
+        "chemical-engineering:Nanomaterial synthesis and characterization",
+        "chemical-engineering:Plasmonics",
         "chemical-engineering:Heterogeneous catalysis (tri-phasic reactions)",
+        "chemical-engineering:Gaurav Ashok Bhaduri",
         "chemical-engineering:Waste to wealth",
-        "chemical-engineering:Nanomaterial synthesis and characterization"
+        "chemical-engineering:Saimatun Nisa",
+        "chemical-engineering:Shafali Thakur",
+        "chemical-engineering:Photochemistry and Photocatalysis",
+        "chemical-engineering:Biochemical and Bioprocess Engineering",
+        "chemical-engineering:Intensification of Biomass Pyrolysis and its applications of the products",
+        "chemical-engineering:Natural product extraction and Downstream Processing",
+        "chemical-engineering:Battery/ Energy Generation",
+        "chemical-engineering:Process Intensification",
+        "chemical-engineering:Mohd Aurif Shergujri"
       ],
       "members_by_type": {
         "ResearchArea": [
           "chemical-engineering:X-ray photoelectron spectroscopy",
-          "chemical-engineering:Natural product extraction and Downstream Processing",
-          "chemical-engineering:Intensification of Biomass Pyrolysis and its applications of the products",
-          "chemical-engineering:Battery/ Energy Generation",
-          "chemical-engineering:Plasmonics",
-          "chemical-engineering:Photochemistry and Photocatalysis",
-          "chemical-engineering:Biochemical and Bioprocess Engineering",
-          "chemical-engineering:Process Intensification",
           "chemical-engineering:Carbon capture storage and utilization (CCSU)",
+          "chemical-engineering:Nanomaterial synthesis and characterization",
+          "chemical-engineering:Plasmonics",
           "chemical-engineering:Heterogeneous catalysis (tri-phasic reactions)",
           "chemical-engineering:Waste to wealth",
-          "chemical-engineering:Nanomaterial synthesis and characterization"
-        ],
-        "PhDStudent": [
-          "chemical-engineering:Mohd Aurif Shergujri",
-          "chemical-engineering:Saimatun Nisa",
-          "chemical-engineering:Shafali Thakur"
+          "chemical-engineering:Photochemistry and Photocatalysis",
+          "chemical-engineering:Biochemical and Bioprocess Engineering",
+          "chemical-engineering:Intensification of Biomass Pyrolysis and its applications of the products",
+          "chemical-engineering:Natural product extraction and Downstream Processing",
+          "chemical-engineering:Battery/ Energy Generation",
+          "chemical-engineering:Process Intensification"
         ],
         "Faculty": [
           "chemical-engineering:Gaurav Ashok Bhaduri"
+        ],
+        "PhDStudent": [
+          "chemical-engineering:Saimatun Nisa",
+          "chemical-engineering:Shafali Thakur",
+          "chemical-engineering:Mohd Aurif Shergujri"
         ]
       },
       "internal_edges": [
@@ -640,333 +279,45 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 3 in IIT Jammu Chemical Engineering Department:\n  Faculty: Gaurav Ashok Bhaduri\n  PhDStudent: Mohd Aurif Shergujri, Saimatun Nisa, Shafali Thakur\n  ResearchArea: X-ray photoelectron spectroscopy, Natural product extraction and Downstream Processing, Intensification of Biomass Pyrolysis and its applications of the products, Battery/ Energy Generation, Plasmonics, Photochemistry and Photocatalysis, Biochemical and Bioprocess Engineering, Process Intensification, Carbon capture storage and utilization (CCSU), Heterogeneous catalysis (tri-phasic reactions), Waste to wealth, Nanomaterial synthesis and characterization\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Gaurav Ashok Bhaduri. 3 PhD student(s). working in areas like chemical-engineering:X-ray photoelectron spectroscopy, chemical-engineering:Natural product extraction and Downstream Processing, chemical-engineering:Intensification of Biomass Pyrolysis and its applications of the products.",
-      "summary": "This group includes 1 faculty member(s): chemical-engineering:Gaurav Ashok Bhaduri. 3 PhD student(s). working in areas like chemical-engineering:X-ray photoelectron spectroscopy, chemical-engineering:Natural product extraction and Downstream Processing, chemical-engineering:Intensification of Biomass Pyrolysis and its applications of the products.",
+      "text": "Community 0 in IIT Jammu Chemical Engineering Department:\n  Faculty: Gaurav Ashok Bhaduri\n  PhDStudent: Saimatun Nisa, Shafali Thakur, Mohd Aurif Shergujri\n  ResearchArea: X-ray photoelectron spectroscopy, Carbon capture storage and utilization (CCSU), Nanomaterial synthesis and characterization, Plasmonics, Heterogeneous catalysis (tri-phasic reactions), Waste to wealth, Photochemistry and Photocatalysis, Biochemical and Bioprocess Engineering, Intensification of Biomass Pyrolysis and its applications of the products, Natural product extraction and Downstream Processing, Battery/ Energy Generation, Process Intensification\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Gaurav Ashok Bhaduri. 3 PhD student(s). working in areas like chemical-engineering:X-ray photoelectron spectroscopy, chemical-engineering:Carbon capture storage and utilization (CCSU), chemical-engineering:Nanomaterial synthesis and characterization.",
+      "summary": "This group includes 1 faculty member(s): chemical-engineering:Gaurav Ashok Bhaduri. 3 PhD student(s). working in areas like chemical-engineering:X-ray photoelectron spectroscopy, chemical-engineering:Carbon capture storage and utilization (CCSU), chemical-engineering:Nanomaterial synthesis and characterization.",
       "size": 16
     },
     {
-      "id": "community_4",
-      "community_id": 4,
+      "id": "community_1",
+      "community_id": 1,
       "members": [
-        "chemical-engineering:1. Methane recovery from natural gas hydrates (NGH development)",
-        "chemical-engineering:energy storage and flow assurance (Modelling and Experiments)",
-        "chemical-engineering:we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches",
-        "chemical-engineering:Additionally",
-        "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
-        "chemical-engineering:2. Carbon capture and sequestration in porous medium as hydrates (CCS)",
-        "chemical-engineering:4. Hydrate inhibition in oil and gas pipelines for flow assurance",
-        "chemical-engineering:Gas hydrates or clathrate hydrates for their applications in NGH development",
-        "chemical-engineering:3. Natural gas and hydrogen storage as hydrates (Energy storage)"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "chemical-engineering:1. Methane recovery from natural gas hydrates (NGH development)",
-          "chemical-engineering:energy storage and flow assurance (Modelling and Experiments)",
-          "chemical-engineering:we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches",
-          "chemical-engineering:Additionally",
-          "chemical-engineering:2. Carbon capture and sequestration in porous medium as hydrates (CCS)",
-          "chemical-engineering:4. Hydrate inhibition in oil and gas pipelines for flow assurance",
-          "chemical-engineering:Gas hydrates or clathrate hydrates for their applications in NGH development",
-          "chemical-engineering:3. Natural gas and hydrogen storage as hydrates (Energy storage)"
-        ],
-        "Faculty": [
-          "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
-          "target": "chemical-engineering:Gas hydrates or clathrate hydrates for their applications in NGH development",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
-          "target": "chemical-engineering:energy storage and flow assurance (Modelling and Experiments)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
-          "target": "chemical-engineering:1. Methane recovery from natural gas hydrates (NGH development)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
-          "target": "chemical-engineering:2. Carbon capture and sequestration in porous medium as hydrates (CCS)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
-          "target": "chemical-engineering:3. Natural gas and hydrogen storage as hydrates (Energy storage)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
-          "target": "chemical-engineering:4. Hydrate inhibition in oil and gas pipelines for flow assurance",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
-          "target": "chemical-engineering:Additionally",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
-          "target": "chemical-engineering:we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches",
-          "type": "RESEARCHES_IN"
-        }
-      ],
-      "text": "Community 4 in IIT Jammu Chemical Engineering Department:\n  Faculty: Dnyaneshwar Ramloo Bhawangirkar\n  ResearchArea: 1. Methane recovery from natural gas hydrates (NGH development), energy storage and flow assurance (Modelling and Experiments), we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches, Additionally, 2. Carbon capture and sequestration in porous medium as hydrates (CCS), 4. Hydrate inhibition in oil and gas pipelines for flow assurance, Gas hydrates or clathrate hydrates for their applications in NGH development, 3. Natural gas and hydrogen storage as hydrates (Energy storage)\n  Relationships: RESEARCHES_IN: 8\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar. working in areas like chemical-engineering:1. Methane recovery from natural gas hydrates (NGH development), chemical-engineering:energy storage and flow assurance (Modelling and Experiments), chemical-engineering:we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches.",
-      "summary": "This group includes 1 faculty member(s): chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar. working in areas like chemical-engineering:1. Methane recovery from natural gas hydrates (NGH development), chemical-engineering:energy storage and flow assurance (Modelling and Experiments), chemical-engineering:we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches.",
-      "size": 9
-    },
-    {
-      "id": "community_5",
-      "community_id": 5,
-      "members": [
-        "chemical-engineering:lab:Process Modelling & Simulation Lab",
-        "chemical-engineering:lab:Separation Processes And Chemical Reaction Engineering Laboratory",
-        "chemical-engineering:lab:Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath)",
-        "IIT Jammu CHEMICAL-ENGINEERING Department",
-        "chemical-engineering:lab:Fluid Flow & Mechanical Operations Laboratory",
-        "chemical-engineering:lab:Process Instrumentation Dynamics & Control Lab",
-        "chemical-engineering:lab:Heat Transfer & Thermodynamics Laboratory"
-      ],
-      "members_by_type": {
-        "Lab": [
-          "chemical-engineering:lab:Process Modelling & Simulation Lab",
-          "chemical-engineering:lab:Separation Processes And Chemical Reaction Engineering Laboratory",
-          "chemical-engineering:lab:Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath)",
-          "chemical-engineering:lab:Fluid Flow & Mechanical Operations Laboratory",
-          "chemical-engineering:lab:Process Instrumentation Dynamics & Control Lab",
-          "chemical-engineering:lab:Heat Transfer & Thermodynamics Laboratory"
-        ],
-        "Department": [
-          "IIT Jammu CHEMICAL-ENGINEERING Department"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemical-engineering:lab:Process Instrumentation Dynamics & Control Lab",
-          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
-          "type": "FACILITY_OF"
-        },
-        {
-          "source": "chemical-engineering:lab:Process Modelling & Simulation Lab",
-          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
-          "type": "FACILITY_OF"
-        },
-        {
-          "source": "chemical-engineering:lab:Separation Processes And Chemical Reaction Engineering Laboratory",
-          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
-          "type": "FACILITY_OF"
-        },
-        {
-          "source": "chemical-engineering:lab:Fluid Flow & Mechanical Operations Laboratory",
-          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
-          "type": "FACILITY_OF"
-        },
-        {
-          "source": "chemical-engineering:lab:Heat Transfer & Thermodynamics Laboratory",
-          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
-          "type": "FACILITY_OF"
-        },
-        {
-          "source": "chemical-engineering:lab:Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath)",
-          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
-          "type": "FACILITY_OF"
-        }
-      ],
-      "text": "Community 5 in IIT Jammu Chemical Engineering Department:\n  Department: Department of Chemical Engineering\n  Lab: Process Modelling & Simulation Lab, Separation Processes And Chemical Reaction Engineering Laboratory, Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath), Fluid Flow & Mechanical Operations Laboratory, Process Instrumentation Dynamics & Control Lab, Heat Transfer & Thermodynamics Laboratory\n  Relationships: FACILITY_OF: 6\n\nSummary: A cluster of related entities.",
-      "summary": "A cluster of related entities.",
-      "size": 7
-    },
-    {
-      "id": "community_6",
-      "community_id": 6,
-      "members": [
-        "chemical-engineering:quantifying intrinsic kinetics versus mass transport",
-        "chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors",
-        "chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction",
-        "chemical-engineering:water splitting",
-        "chemical-engineering:organic transformation",
-        "chemical-engineering:Amrita Chatterjee",
-        "chemical-engineering:3) Electrolyte synthesis and interface engineering in solid state batteries for room temperature and sub zero applications",
-        "chemical-engineering:1) Pore engineering in metal and covalent organic frameworks ( MOFs and COFs) and hierarchical carbon"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "chemical-engineering:quantifying intrinsic kinetics versus mass transport",
-          "chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors",
-          "chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction",
-          "chemical-engineering:water splitting",
-          "chemical-engineering:organic transformation",
-          "chemical-engineering:3) Electrolyte synthesis and interface engineering in solid state batteries for room temperature and sub zero applications",
-          "chemical-engineering:1) Pore engineering in metal and covalent organic frameworks ( MOFs and COFs) and hierarchical carbon"
-        ],
-        "Faculty": [
-          "chemical-engineering:Amrita Chatterjee"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemical-engineering:Amrita Chatterjee",
-          "target": "chemical-engineering:1) Pore engineering in metal and covalent organic frameworks ( MOFs and COFs) and hierarchical carbon",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Amrita Chatterjee",
-          "target": "chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Amrita Chatterjee",
-          "target": "chemical-engineering:3) Electrolyte synthesis and interface engineering in solid state batteries for room temperature and sub zero applications",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Amrita Chatterjee",
-          "target": "chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Amrita Chatterjee",
-          "target": "chemical-engineering:water splitting",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Amrita Chatterjee",
-          "target": "chemical-engineering:organic transformation",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Amrita Chatterjee",
-          "target": "chemical-engineering:quantifying intrinsic kinetics versus mass transport",
-          "type": "RESEARCHES_IN"
-        }
-      ],
-      "text": "Community 6 in IIT Jammu Chemical Engineering Department:\n  Faculty: Amrita Chatterjee\n  ResearchArea: quantifying intrinsic kinetics versus mass transport, 2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors, 4) Photo and electrocatalysis for waste- to- energy via CO2 reduction, water splitting, organic transformation, 3) Electrolyte synthesis and interface engineering in solid state batteries for room temperature and sub zero applications, 1) Pore engineering in metal and covalent organic frameworks ( MOFs and COFs) and hierarchical carbon\n  Relationships: RESEARCHES_IN: 7\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Amrita Chatterjee. working in areas like chemical-engineering:quantifying intrinsic kinetics versus mass transport, chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors, chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction.",
-      "summary": "This group includes 1 faculty member(s): chemical-engineering:Amrita Chatterjee. working in areas like chemical-engineering:quantifying intrinsic kinetics versus mass transport, chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors, chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction.",
-      "size": 8
-    },
-    {
-      "id": "community_7",
-      "community_id": 7,
-      "members": [
-        "chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System",
-        "chemical-engineering:Steady state and Transient analysis of THTD",
-        "chemical-engineering:Latika Dixit",
-        "chemical-engineering:P.k. Vijayan",
-        "chemical-engineering:Swati Gangwar"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System",
-          "chemical-engineering:Steady state and Transient analysis of THTD"
-        ],
-        "PhDStudent": [
-          "chemical-engineering:Latika Dixit",
-          "chemical-engineering:Swati Gangwar"
-        ],
-        "ExternalPerson": [
-          "chemical-engineering:P.k. Vijayan"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemical-engineering:Latika Dixit",
-          "target": "chemical-engineering:P.k. Vijayan",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Latika Dixit",
-          "target": "chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemical-engineering:Swati Gangwar",
-          "target": "chemical-engineering:P.k. Vijayan",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Swati Gangwar",
-          "target": "chemical-engineering:Steady state and Transient analysis of THTD",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 7 in IIT Jammu Chemical Engineering Department:\n  ExternalPerson: P.k. Vijayan\n  PhDStudent: Latika Dixit, Swati Gangwar\n  ResearchArea: The effect of loop inventory on Two Phase Natural Circulation System, Steady state and Transient analysis of THTD\n  Relationships: SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: 2 PhD student(s). working in areas like chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System, chemical-engineering:Steady state and Transient analysis of THTD.",
-      "summary": "2 PhD student(s). working in areas like chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System, chemical-engineering:Steady state and Transient analysis of THTD.",
-      "size": 5
-    },
-    {
-      "id": "community_8",
-      "community_id": 8,
-      "members": [
-        "chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore",
-        "chemical-engineering:Yash Mishra",
-        "chemical-engineering:Debapriya Mandal"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore"
-        ],
-        "PhDStudent": [
-          "chemical-engineering:Yash Mishra"
-        ],
-        "ExternalPerson": [
-          "chemical-engineering:Debapriya Mandal"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "chemical-engineering:Yash Mishra",
-          "target": "chemical-engineering:Debapriya Mandal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Yash Mishra",
-          "target": "chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 8 in IIT Jammu Chemical Engineering Department:\n  ExternalPerson: Debapriya Mandal\n  PhDStudent: Yash Mishra\n  ResearchArea: CO2 conversion to useful products and Extraction of lithium from its ore\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: 1 PhD student(s). working in areas like chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore.",
-      "summary": "1 PhD student(s). working in areas like chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore.",
-      "size": 3
-    },
-    {
-      "id": "community_9",
-      "community_id": 9,
-      "members": [
-        "chemical-engineering:Dharitri Rath",
-        "chemical-engineering:Haroon Ali Khan",
-        "chemical-engineering:Microfluidics and Biosensors",
-        "chemical-engineering:Dakshita Snud Sharma",
-        "chemical-engineering:Smartphone enabled Point of care diagnostics kit development",
-        "chemical-engineering:Affordable Healthcare",
         "chemical-engineering:Bio-engineering",
-        "chemical-engineering:Point-of-care Diagnostic Devices. Further information can be found here... [https://sites.google.com/iitjammu.ac.in/dharitri/home](https://sites.google.com/iitjammu.ac.in/dharitri/home)",
+        "chemical-engineering:Dharitri Rath",
+        "chemical-engineering:Dakshita Snud Sharma",
+        "chemical-engineering:Microfluidics and Biosensors",
         "chemical-engineering:Anna Anandita",
-        "chemical-engineering:Zeolite-based Carbon Capture",
+        "chemical-engineering:Smartphone enabled Point of care diagnostics kit development",
         "chemical-engineering:Clinical diagnostics kit development",
-        "chemical-engineering:Sagnik Das"
+        "chemical-engineering:Point-of-care Diagnostic Devices. Further information can be found here... [https://sites.google.com/iitjammu.ac.in/dharitri/home](https://sites.google.com/iitjammu.ac.in/dharitri/home)",
+        "chemical-engineering:Haroon Ali Khan",
+        "chemical-engineering:Zeolite-based Carbon Capture",
+        "chemical-engineering:Sagnik Das",
+        "chemical-engineering:Affordable Healthcare"
       ],
       "members_by_type": {
+        "ResearchArea": [
+          "chemical-engineering:Bio-engineering",
+          "chemical-engineering:Microfluidics and Biosensors",
+          "chemical-engineering:Smartphone enabled Point of care diagnostics kit development",
+          "chemical-engineering:Clinical diagnostics kit development",
+          "chemical-engineering:Point-of-care Diagnostic Devices. Further information can be found here... [https://sites.google.com/iitjammu.ac.in/dharitri/home](https://sites.google.com/iitjammu.ac.in/dharitri/home)",
+          "chemical-engineering:Zeolite-based Carbon Capture",
+          "chemical-engineering:Affordable Healthcare"
+        ],
         "Faculty": [
           "chemical-engineering:Dharitri Rath"
         ],
         "PhDStudent": [
-          "chemical-engineering:Haroon Ali Khan",
           "chemical-engineering:Dakshita Snud Sharma",
           "chemical-engineering:Anna Anandita",
+          "chemical-engineering:Haroon Ali Khan",
           "chemical-engineering:Sagnik Das"
-        ],
-        "ResearchArea": [
-          "chemical-engineering:Microfluidics and Biosensors",
-          "chemical-engineering:Smartphone enabled Point of care diagnostics kit development",
-          "chemical-engineering:Affordable Healthcare",
-          "chemical-engineering:Bio-engineering",
-          "chemical-engineering:Point-of-care Diagnostic Devices. Further information can be found here... [https://sites.google.com/iitjammu.ac.in/dharitri/home](https://sites.google.com/iitjammu.ac.in/dharitri/home)",
-          "chemical-engineering:Zeolite-based Carbon Capture",
-          "chemical-engineering:Clinical diagnostics kit development"
         ]
       },
       "internal_edges": [
@@ -1046,265 +397,189 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 9 in IIT Jammu Chemical Engineering Department:\n  Faculty: Dharitri Rath\n  PhDStudent: Haroon Ali Khan, Dakshita Snud Sharma, Anna Anandita, Sagnik Das\n  ResearchArea: Microfluidics and Biosensors, Smartphone enabled Point of care diagnostics kit development, Affordable Healthcare, Bio-engineering, Point-of-care Diagnostic Devices. Further information can be found here... [https://sites.google.com/iitjammu.ac.in/dharitri/home](https://sites.google.com/iitjammu.ac.in/dharitri/home), Zeolite-based Carbon Capture, Clinical diagnostics kit development\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Dharitri Rath. 4 PhD student(s). working in areas like chemical-engineering:Microfluidics and Biosensors, chemical-engineering:Smartphone enabled Point of care diagnostics kit development, chemical-engineering:Affordable Healthcare.",
-      "summary": "This group includes 1 faculty member(s): chemical-engineering:Dharitri Rath. 4 PhD student(s). working in areas like chemical-engineering:Microfluidics and Biosensors, chemical-engineering:Smartphone enabled Point of care diagnostics kit development, chemical-engineering:Affordable Healthcare.",
+      "text": "Community 1 in IIT Jammu Chemical Engineering Department:\n  Faculty: Dharitri Rath\n  PhDStudent: Dakshita Snud Sharma, Anna Anandita, Haroon Ali Khan, Sagnik Das\n  ResearchArea: Bio-engineering, Microfluidics and Biosensors, Smartphone enabled Point of care diagnostics kit development, Clinical diagnostics kit development, Point-of-care Diagnostic Devices. Further information can be found here... [https://sites.google.com/iitjammu.ac.in/dharitri/home](https://sites.google.com/iitjammu.ac.in/dharitri/home), Zeolite-based Carbon Capture, Affordable Healthcare\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Dharitri Rath. 4 PhD student(s). working in areas like chemical-engineering:Bio-engineering, chemical-engineering:Microfluidics and Biosensors, chemical-engineering:Smartphone enabled Point of care diagnostics kit development.",
+      "summary": "This group includes 1 faculty member(s): chemical-engineering:Dharitri Rath. 4 PhD student(s). working in areas like chemical-engineering:Bio-engineering, chemical-engineering:Microfluidics and Biosensors, chemical-engineering:Smartphone enabled Point of care diagnostics kit development.",
       "size": 12
     },
     {
-      "id": "community_10",
-      "community_id": 10,
+      "id": "community_2",
+      "community_id": 2,
       "members": [
-        "chemical-engineering:Disease Detection and Drug Delivery",
-        "chemical-engineering:Upasana Gupta",
-        "chemical-engineering:Srabani Roychowdhury",
-        "chemical-engineering:Energy Storage devices",
-        "chemical-engineering:Monika Kumari",
-        "chemical-engineering:Ravi Kumar Arun",
-        "chemical-engineering:Electrochemical Energy Storage",
-        "chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement",
-        "chemical-engineering:Akash Lata",
-        "chemical-engineering:Natish Kumar",
-        "chemical-engineering:Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases",
-        "chemical-engineering:Lab on a Chip Devices",
-        "chemical-engineering:Microfluidics based Organ-on-chip technology"
+        "chemical-engineering:Aditya Shankar Sandupatla",
+        "chemical-engineering:\u2022 Atomic Layer Deposition of materials",
+        "chemical-engineering:Chandra Shekhar Lohani",
+        "chemical-engineering:Catalytic conversion of hydrocarbon into fuel",
+        "chemical-engineering:\u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene",
+        "chemical-engineering:Lomas Rishi",
+        "chemical-engineering:\u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes",
+        "chemical-engineering:Computational and experimental investigation of",
+        "chemical-engineering:Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane"
       ],
       "members_by_type": {
+        "Faculty": [
+          "chemical-engineering:Aditya Shankar Sandupatla"
+        ],
         "ResearchArea": [
-          "chemical-engineering:Disease Detection and Drug Delivery",
-          "chemical-engineering:Energy Storage devices",
-          "chemical-engineering:Electrochemical Energy Storage",
-          "chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement",
-          "chemical-engineering:Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases",
-          "chemical-engineering:Lab on a Chip Devices",
-          "chemical-engineering:Microfluidics based Organ-on-chip technology"
+          "chemical-engineering:\u2022 Atomic Layer Deposition of materials",
+          "chemical-engineering:Catalytic conversion of hydrocarbon into fuel",
+          "chemical-engineering:\u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene",
+          "chemical-engineering:\u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes",
+          "chemical-engineering:Computational and experimental investigation of",
+          "chemical-engineering:Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane"
         ],
         "PhDStudent": [
-          "chemical-engineering:Upasana Gupta",
-          "chemical-engineering:Srabani Roychowdhury",
-          "chemical-engineering:Monika Kumari",
-          "chemical-engineering:Akash Lata",
-          "chemical-engineering:Natish Kumar"
-        ],
-        "Faculty": [
-          "chemical-engineering:Ravi Kumar Arun"
+          "chemical-engineering:Chandra Shekhar Lohani",
+          "chemical-engineering:Lomas Rishi"
         ]
       },
       "internal_edges": [
         {
-          "source": "chemical-engineering:Ravi Kumar Arun",
-          "target": "chemical-engineering:Electrochemical Energy Storage",
+          "source": "chemical-engineering:Aditya Shankar Sandupatla",
+          "target": "chemical-engineering:Computational and experimental investigation of",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemical-engineering:Ravi Kumar Arun",
-          "target": "chemical-engineering:Lab on a Chip Devices",
+          "source": "chemical-engineering:Aditya Shankar Sandupatla",
+          "target": "chemical-engineering:\u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemical-engineering:Ravi Kumar Arun",
-          "target": "chemical-engineering:Energy Storage devices",
+          "source": "chemical-engineering:Aditya Shankar Sandupatla",
+          "target": "chemical-engineering:\u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemical-engineering:Ravi Kumar Arun",
-          "target": "chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement",
+          "source": "chemical-engineering:Aditya Shankar Sandupatla",
+          "target": "chemical-engineering:\u2022 Atomic Layer Deposition of materials",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemical-engineering:Ravi Kumar Arun",
-          "target": "chemical-engineering:Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases",
+          "source": "chemical-engineering:Aditya Shankar Sandupatla",
+          "target": "chemical-engineering:Catalytic conversion of hydrocarbon into fuel",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemical-engineering:Ravi Kumar Arun",
-          "target": "chemical-engineering:Disease Detection and Drug Delivery",
+          "source": "chemical-engineering:Aditya Shankar Sandupatla",
+          "target": "chemical-engineering:Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "chemical-engineering:Ravi Kumar Arun",
-          "target": "chemical-engineering:Microfluidics based Organ-on-chip technology",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Akash Lata",
-          "target": "chemical-engineering:Ravi Kumar Arun",
+          "source": "chemical-engineering:Chandra Shekhar Lohani",
+          "target": "chemical-engineering:Aditya Shankar Sandupatla",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "chemical-engineering:Akash Lata",
-          "target": "chemical-engineering:Energy Storage devices",
+          "source": "chemical-engineering:Chandra Shekhar Lohani",
+          "target": "chemical-engineering:Catalytic conversion of hydrocarbon into fuel",
           "type": "STUDIES"
         },
         {
-          "source": "chemical-engineering:Monika Kumari",
-          "target": "chemical-engineering:Ravi Kumar Arun",
+          "source": "chemical-engineering:Lomas Rishi",
+          "target": "chemical-engineering:Aditya Shankar Sandupatla",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "chemical-engineering:Monika Kumari",
-          "target": "chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemical-engineering:Natish Kumar",
-          "target": "chemical-engineering:Ravi Kumar Arun",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Natish Kumar",
-          "target": "chemical-engineering:Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemical-engineering:Srabani Roychowdhury",
-          "target": "chemical-engineering:Ravi Kumar Arun",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Srabani Roychowdhury",
-          "target": "chemical-engineering:Disease Detection and Drug Delivery",
-          "type": "STUDIES"
-        },
-        {
-          "source": "chemical-engineering:Upasana Gupta",
-          "target": "chemical-engineering:Ravi Kumar Arun",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "chemical-engineering:Upasana Gupta",
-          "target": "chemical-engineering:Microfluidics based Organ-on-chip technology",
+          "source": "chemical-engineering:Lomas Rishi",
+          "target": "chemical-engineering:Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 10 in IIT Jammu Chemical Engineering Department:\n  Faculty: Ravi Kumar Arun\n  PhDStudent: Upasana Gupta, Srabani Roychowdhury, Monika Kumari, Akash Lata, Natish Kumar\n  ResearchArea: Disease Detection and Drug Delivery, Energy Storage devices, Electrochemical Energy Storage, Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement, Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases, Lab on a Chip Devices, Microfluidics based Organ-on-chip technology\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Ravi Kumar Arun. 5 PhD student(s). working in areas like chemical-engineering:Disease Detection and Drug Delivery, chemical-engineering:Energy Storage devices, chemical-engineering:Electrochemical Energy Storage.",
-      "summary": "This group includes 1 faculty member(s): chemical-engineering:Ravi Kumar Arun. 5 PhD student(s). working in areas like chemical-engineering:Disease Detection and Drug Delivery, chemical-engineering:Energy Storage devices, chemical-engineering:Electrochemical Energy Storage.",
-      "size": 13
+      "text": "Community 2 in IIT Jammu Chemical Engineering Department:\n  Faculty: Aditya Shankar Sandupatla\n  PhDStudent: Chandra Shekhar Lohani, Lomas Rishi\n  ResearchArea: \u2022 Atomic Layer Deposition of materials, Catalytic conversion of hydrocarbon into fuel, \u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene, \u2022\u00a0Activation of methane to produce hydrogen and carbon nanotubes, Computational and experimental investigation of, Experimental and computational heterogeneous catalysis, thermocatalytic decomposition of methane\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Aditya Shankar Sandupatla. 2 PhD student(s). working in areas like chemical-engineering:\u2022 Atomic Layer Deposition of materials, chemical-engineering:Catalytic conversion of hydrocarbon into fuel, chemical-engineering:\u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene.",
+      "summary": "This group includes 1 faculty member(s): chemical-engineering:Aditya Shankar Sandupatla. 2 PhD student(s). working in areas like chemical-engineering:\u2022 Atomic Layer Deposition of materials, chemical-engineering:Catalytic conversion of hydrocarbon into fuel, chemical-engineering:\u2022 Catalytic dehydrogenation of propane to produce hydrogen and propene.",
+      "size": 9
     },
     {
-      "id": "community_11",
-      "community_id": 11,
+      "id": "community_3",
+      "community_id": 3,
       "members": [
-        "chemical-engineering:Carbon Capture",
-        "chemical-engineering:Krishna Mohan Gupta",
-        "chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery",
-        "chemical-engineering:Hydrogen Economy",
-        "chemical-engineering:Multi-scale Modeling and Simulations:** Molecular Simulation",
-        "chemical-engineering:Water Purification",
-        "chemical-engineering:Mathematical Modeling",
-        "chemical-engineering:Machine\u00a0Learning",
-        "chemical-engineering:MD Simulation",
-        "chemical-engineering:Advance Nanoporous Materials:**Covalent Organic Frameworks (COFs)"
+        "chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System",
+        "chemical-engineering:Latika Dixit",
+        "chemical-engineering:Steady state and Transient analysis of THTD",
+        "chemical-engineering:P.K. Vijayan",
+        "chemical-engineering:Swati Gangwar"
       ],
       "members_by_type": {
         "ResearchArea": [
-          "chemical-engineering:Carbon Capture",
-          "chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery",
-          "chemical-engineering:Hydrogen Economy",
-          "chemical-engineering:Multi-scale Modeling and Simulations:** Molecular Simulation",
-          "chemical-engineering:Water Purification",
-          "chemical-engineering:Mathematical Modeling",
-          "chemical-engineering:Machine\u00a0Learning",
-          "chemical-engineering:MD Simulation",
-          "chemical-engineering:Advance Nanoporous Materials:**Covalent Organic Frameworks (COFs)"
+          "chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System",
+          "chemical-engineering:Steady state and Transient analysis of THTD"
         ],
-        "Faculty": [
-          "chemical-engineering:Krishna Mohan Gupta"
+        "PhDStudent": [
+          "chemical-engineering:Latika Dixit",
+          "chemical-engineering:Swati Gangwar"
+        ],
+        "ExternalPerson": [
+          "chemical-engineering:P.K. Vijayan"
         ]
       },
       "internal_edges": [
         {
-          "source": "chemical-engineering:Krishna Mohan Gupta",
-          "target": "chemical-engineering:Multi-scale Modeling and Simulations:** Molecular Simulation",
-          "type": "RESEARCHES_IN"
+          "source": "chemical-engineering:Latika Dixit",
+          "target": "chemical-engineering:P.K. Vijayan",
+          "type": "SUPERVISED_BY"
         },
         {
-          "source": "chemical-engineering:Krishna Mohan Gupta",
-          "target": "chemical-engineering:Mathematical Modeling",
-          "type": "RESEARCHES_IN"
+          "source": "chemical-engineering:Latika Dixit",
+          "target": "chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System",
+          "type": "STUDIES"
         },
         {
-          "source": "chemical-engineering:Krishna Mohan Gupta",
-          "target": "chemical-engineering:MD Simulation",
-          "type": "RESEARCHES_IN"
+          "source": "chemical-engineering:Swati Gangwar",
+          "target": "chemical-engineering:P.K. Vijayan",
+          "type": "SUPERVISED_BY"
         },
         {
-          "source": "chemical-engineering:Krishna Mohan Gupta",
-          "target": "chemical-engineering:Machine\u00a0Learning",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Krishna Mohan Gupta",
-          "target": "chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Krishna Mohan Gupta",
-          "target": "chemical-engineering:Water Purification",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Krishna Mohan Gupta",
-          "target": "chemical-engineering:Hydrogen Economy",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Krishna Mohan Gupta",
-          "target": "chemical-engineering:Carbon Capture",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "chemical-engineering:Krishna Mohan Gupta",
-          "target": "chemical-engineering:Advance Nanoporous Materials:**Covalent Organic Frameworks (COFs)",
-          "type": "RESEARCHES_IN"
+          "source": "chemical-engineering:Swati Gangwar",
+          "target": "chemical-engineering:Steady state and Transient analysis of THTD",
+          "type": "STUDIES"
         }
       ],
-      "text": "Community 11 in IIT Jammu Chemical Engineering Department:\n  Faculty: Krishna Mohan Gupta\n  ResearchArea: Carbon Capture, Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery, Hydrogen Economy, Multi-scale Modeling and Simulations:** Molecular Simulation, Water Purification, Mathematical Modeling, Machine\u00a0Learning, MD Simulation, Advance Nanoporous Materials:**Covalent Organic Frameworks (COFs)\n  Relationships: RESEARCHES_IN: 9\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Krishna Mohan Gupta. working in areas like chemical-engineering:Carbon Capture, chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery, chemical-engineering:Hydrogen Economy.",
-      "summary": "This group includes 1 faculty member(s): chemical-engineering:Krishna Mohan Gupta. working in areas like chemical-engineering:Carbon Capture, chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery, chemical-engineering:Hydrogen Economy.",
-      "size": 10
+      "text": "Community 3 in IIT Jammu Chemical Engineering Department:\n  ExternalPerson: P.K. Vijayan\n  PhDStudent: Latika Dixit, Swati Gangwar\n  ResearchArea: The effect of loop inventory on Two Phase Natural Circulation System, Steady state and Transient analysis of THTD\n  Relationships: SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: 2 PhD student(s). working in areas like chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System, chemical-engineering:Steady state and Transient analysis of THTD.",
+      "summary": "2 PhD student(s). working in areas like chemical-engineering:The effect of loop inventory on Two Phase Natural Circulation System, chemical-engineering:Steady state and Transient analysis of THTD.",
+      "size": 5
     },
     {
-      "id": "community_12",
-      "community_id": 12,
+      "id": "community_4",
+      "community_id": 4,
       "members": [
-        "chemical-engineering:CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT)",
-        "chemical-engineering:Modeling and Simulation of Multi-Phase Reactor and Machine learning",
-        "chemical-engineering:Ashutosh Yadav",
-        "chemical-engineering:RPT (Radioactive Particle Tracking), CFD",
-        "chemical-engineering:Multiphase Reactors",
-        "chemical-engineering:Computational and Experimental Investigation of Pressure Swing Adsorption Process for Carbon Capture",
-        "chemical-engineering:Petroleum Refining",
-        "chemical-engineering:Environmental Engineering",
-        "chemical-engineering:Jenish S",
-        "chemical-engineering:Process Optimization",
-        "chemical-engineering:Rakshith VS",
         "chemical-engineering:Mahesh Nadda",
+        "chemical-engineering:Machine Learning",
+        "chemical-engineering:CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT)",
+        "chemical-engineering:Petroleum Refining",
         "chemical-engineering:Praneet Mishra",
         "chemical-engineering:Dhakane Vishal",
+        "chemical-engineering:RPT (Radioactive Particle Tracking), CFD",
+        "chemical-engineering:Environmental Engineering",
+        "chemical-engineering:Jenish S",
+        "chemical-engineering:Multiphase Reactors",
+        "chemical-engineering:Process Optimization",
+        "chemical-engineering:Rakshith VS",
         "chemical-engineering:Computational and Experimental Investigations for the Design of Temperature/Pressure Swing Adsorption for Carbon Capture",
-        "chemical-engineering:Machine Learning"
+        "chemical-engineering:Modeling and Simulation of Multi-Phase Reactor and Machine learning",
+        "chemical-engineering:Ashutosh Yadav",
+        "chemical-engineering:Computational and Experimental Investigation of Pressure Swing Adsorption Process for Carbon Capture"
       ],
       "members_by_type": {
+        "PhDStudent": [
+          "chemical-engineering:Mahesh Nadda",
+          "chemical-engineering:Praneet Mishra",
+          "chemical-engineering:Dhakane Vishal",
+          "chemical-engineering:Jenish S",
+          "chemical-engineering:Rakshith VS"
+        ],
         "ResearchArea": [
+          "chemical-engineering:Machine Learning",
           "chemical-engineering:CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT)",
-          "chemical-engineering:Modeling and Simulation of Multi-Phase Reactor and Machine learning",
-          "chemical-engineering:RPT (Radioactive Particle Tracking), CFD",
-          "chemical-engineering:Multiphase Reactors",
-          "chemical-engineering:Computational and Experimental Investigation of Pressure Swing Adsorption Process for Carbon Capture",
           "chemical-engineering:Petroleum Refining",
+          "chemical-engineering:RPT (Radioactive Particle Tracking), CFD",
           "chemical-engineering:Environmental Engineering",
+          "chemical-engineering:Multiphase Reactors",
           "chemical-engineering:Process Optimization",
           "chemical-engineering:Computational and Experimental Investigations for the Design of Temperature/Pressure Swing Adsorption for Carbon Capture",
-          "chemical-engineering:Machine Learning"
+          "chemical-engineering:Modeling and Simulation of Multi-Phase Reactor and Machine learning",
+          "chemical-engineering:Computational and Experimental Investigation of Pressure Swing Adsorption Process for Carbon Capture"
         ],
         "Faculty": [
           "chemical-engineering:Ashutosh Yadav"
-        ],
-        "PhDStudent": [
-          "chemical-engineering:Jenish S",
-          "chemical-engineering:Rakshith VS",
-          "chemical-engineering:Mahesh Nadda",
-          "chemical-engineering:Praneet Mishra",
-          "chemical-engineering:Dhakane Vishal"
         ]
       },
       "internal_edges": [
@@ -1409,9 +684,742 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 12 in IIT Jammu Chemical Engineering Department:\n  Faculty: Ashutosh Yadav\n  PhDStudent: Jenish S, Rakshith VS, Mahesh Nadda, Praneet Mishra, Dhakane Vishal\n  ResearchArea: CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT), Modeling and Simulation of Multi-Phase Reactor and Machine learning, RPT (Radioactive Particle Tracking), CFD, Multiphase Reactors, Computational and Experimental Investigation of Pressure Swing Adsorption Process for Carbon Capture, Petroleum Refining, Environmental Engineering, Process Optimization, Computational and Experimental Investigations for the Design of Temperature/Pressure Swing Adsorption for Carbon Capture, Machine Learning\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Ashutosh Yadav. 5 PhD student(s). working in areas like chemical-engineering:CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT), chemical-engineering:Modeling and Simulation of Multi-Phase Reactor and Machine learning, chemical-engineering:RPT (Radioactive Particle Tracking), CFD.",
-      "summary": "This group includes 1 faculty member(s): chemical-engineering:Ashutosh Yadav. 5 PhD student(s). working in areas like chemical-engineering:CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT), chemical-engineering:Modeling and Simulation of Multi-Phase Reactor and Machine learning, chemical-engineering:RPT (Radioactive Particle Tracking), CFD.",
+      "text": "Community 4 in IIT Jammu Chemical Engineering Department:\n  Faculty: Ashutosh Yadav\n  PhDStudent: Mahesh Nadda, Praneet Mishra, Dhakane Vishal, Jenish S, Rakshith VS\n  ResearchArea: Machine Learning, CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT), Petroleum Refining, RPT (Radioactive Particle Tracking), CFD, Environmental Engineering, Multiphase Reactors, Process Optimization, Computational and Experimental Investigations for the Design of Temperature/Pressure Swing Adsorption for Carbon Capture, Modeling and Simulation of Multi-Phase Reactor and Machine learning, Computational and Experimental Investigation of Pressure Swing Adsorption Process for Carbon Capture\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Ashutosh Yadav. 5 PhD student(s). working in areas like chemical-engineering:Machine Learning, chemical-engineering:CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT), chemical-engineering:Petroleum Refining.",
+      "summary": "This group includes 1 faculty member(s): chemical-engineering:Ashutosh Yadav. 5 PhD student(s). working in areas like chemical-engineering:Machine Learning, chemical-engineering:CFD, CFD-DEM, Multiphase Flow Modeling, Fluidization, Machine Learning, and Radiactive Particle Tracing (RPT), chemical-engineering:Petroleum Refining.",
       "size": 16
+    },
+    {
+      "id": "community_5",
+      "community_id": 5,
+      "members": [
+        "chemical-engineering:MD Simulation",
+        "chemical-engineering:Carbon Capture",
+        "chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery",
+        "chemical-engineering:Water Purification",
+        "chemical-engineering:Multi-scale Modeling and Simulations:** Molecular Simulation",
+        "chemical-engineering:Krishna Mohan Gupta",
+        "chemical-engineering:Hydrogen Economy",
+        "chemical-engineering:Mathematical Modeling",
+        "chemical-engineering:Advance Nanoporous Materials:**Covalent Organic Frameworks (COFs)",
+        "chemical-engineering:QSAR",
+        "chemical-engineering:Machine\u00a0Learning"
+      ],
+      "members_by_type": {
+        "ResearchArea": [
+          "chemical-engineering:MD Simulation",
+          "chemical-engineering:Carbon Capture",
+          "chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery",
+          "chemical-engineering:Water Purification",
+          "chemical-engineering:Multi-scale Modeling and Simulations:** Molecular Simulation",
+          "chemical-engineering:Hydrogen Economy",
+          "chemical-engineering:Mathematical Modeling",
+          "chemical-engineering:Advance Nanoporous Materials:**Covalent Organic Frameworks (COFs)",
+          "chemical-engineering:QSAR",
+          "chemical-engineering:Machine\u00a0Learning"
+        ],
+        "Faculty": [
+          "chemical-engineering:Krishna Mohan Gupta"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemical-engineering:Krishna Mohan Gupta",
+          "target": "chemical-engineering:Multi-scale Modeling and Simulations:** Molecular Simulation",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Krishna Mohan Gupta",
+          "target": "chemical-engineering:Mathematical Modeling",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Krishna Mohan Gupta",
+          "target": "chemical-engineering:MD Simulation",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Krishna Mohan Gupta",
+          "target": "chemical-engineering:QSAR",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Krishna Mohan Gupta",
+          "target": "chemical-engineering:Machine\u00a0Learning",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Krishna Mohan Gupta",
+          "target": "chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Krishna Mohan Gupta",
+          "target": "chemical-engineering:Water Purification",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Krishna Mohan Gupta",
+          "target": "chemical-engineering:Hydrogen Economy",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Krishna Mohan Gupta",
+          "target": "chemical-engineering:Carbon Capture",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Krishna Mohan Gupta",
+          "target": "chemical-engineering:Advance Nanoporous Materials:**Covalent Organic Frameworks (COFs)",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 5 in IIT Jammu Chemical Engineering Department:\n  Faculty: Krishna Mohan Gupta\n  ResearchArea: MD Simulation, Carbon Capture, Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery, Water Purification, Multi-scale Modeling and Simulations:** Molecular Simulation, Hydrogen Economy, Mathematical Modeling, Advance Nanoporous Materials:**Covalent Organic Frameworks (COFs), QSAR, Machine\u00a0Learning\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Krishna Mohan Gupta. working in areas like chemical-engineering:MD Simulation, chemical-engineering:Carbon Capture, chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery.",
+      "summary": "This group includes 1 faculty member(s): chemical-engineering:Krishna Mohan Gupta. working in areas like chemical-engineering:MD Simulation, chemical-engineering:Carbon Capture, chemical-engineering:Membrane Development\u00a0for Energy and Environmental Applications**: Solvent Recovery.",
+      "size": 11
+    },
+    {
+      "id": "community_6",
+      "community_id": 6,
+      "members": [
+        "chemical-engineering:organic transformation",
+        "chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction",
+        "chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors",
+        "chemical-engineering:3) Electrolyte synthesis and interface engineering in solid state batteries for room temperature and sub zero applications",
+        "chemical-engineering:1) Pore engineering in metal and covalent organic frameworks ( MOFs and COFs) and hierarchical carbon",
+        "chemical-engineering:water splitting",
+        "chemical-engineering:Amrita Chatterjee",
+        "chemical-engineering:quantifying intrinsic kinetics versus mass transport"
+      ],
+      "members_by_type": {
+        "ResearchArea": [
+          "chemical-engineering:organic transformation",
+          "chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction",
+          "chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors",
+          "chemical-engineering:3) Electrolyte synthesis and interface engineering in solid state batteries for room temperature and sub zero applications",
+          "chemical-engineering:1) Pore engineering in metal and covalent organic frameworks ( MOFs and COFs) and hierarchical carbon",
+          "chemical-engineering:water splitting",
+          "chemical-engineering:quantifying intrinsic kinetics versus mass transport"
+        ],
+        "Faculty": [
+          "chemical-engineering:Amrita Chatterjee"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemical-engineering:Amrita Chatterjee",
+          "target": "chemical-engineering:1) Pore engineering in metal and covalent organic frameworks ( MOFs and COFs) and hierarchical carbon",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Amrita Chatterjee",
+          "target": "chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Amrita Chatterjee",
+          "target": "chemical-engineering:3) Electrolyte synthesis and interface engineering in solid state batteries for room temperature and sub zero applications",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Amrita Chatterjee",
+          "target": "chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Amrita Chatterjee",
+          "target": "chemical-engineering:water splitting",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Amrita Chatterjee",
+          "target": "chemical-engineering:organic transformation",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Amrita Chatterjee",
+          "target": "chemical-engineering:quantifying intrinsic kinetics versus mass transport",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 6 in IIT Jammu Chemical Engineering Department:\n  Faculty: Amrita Chatterjee\n  ResearchArea: organic transformation, 4) Photo and electrocatalysis for waste- to- energy via CO2 reduction, 2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors, 3) Electrolyte synthesis and interface engineering in solid state batteries for room temperature and sub zero applications, 1) Pore engineering in metal and covalent organic frameworks ( MOFs and COFs) and hierarchical carbon, water splitting, quantifying intrinsic kinetics versus mass transport\n  Relationships: RESEARCHES_IN: 7\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Amrita Chatterjee. working in areas like chemical-engineering:organic transformation, chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction, chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors.",
+      "summary": "This group includes 1 faculty member(s): chemical-engineering:Amrita Chatterjee. working in areas like chemical-engineering:organic transformation, chemical-engineering:4) Photo and electrocatalysis for waste- to- energy via CO2 reduction, chemical-engineering:2) Electrode design and synthesis for lithium ion and sodium ion batteries and supercapacitors.",
+      "size": 8
+    },
+    {
+      "id": "community_7",
+      "community_id": 7,
+      "members": [
+        "chemical-engineering:Design and development of technology for industrial waste water treatment",
+        "chemical-engineering:Swati Gupta",
+        "chemical-engineering:and sol forming colloidal suspensions",
+        "chemical-engineering:Rheological studies of complex fluids",
+        "chemical-engineering:5. Design",
+        "chemical-engineering:2. Physical behavior and dynamics of glass",
+        "chemical-engineering:and intensification of separation techniques",
+        "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+        "chemical-engineering:1. Non-continuum energy and mass diffusion studies",
+        "chemical-engineering:Nucleate Pool Boiling",
+        "chemical-engineering:Ankit Patil",
+        "chemical-engineering:optimization",
+        "chemical-engineering:4. Applications of optical sensing techniques for transport phenomena studies",
+        "chemical-engineering:3. Development of optical techniques for engineering and bio-medical applications",
+        "chemical-engineering:Ravi Raushan"
+      ],
+      "members_by_type": {
+        "ResearchArea": [
+          "chemical-engineering:Design and development of technology for industrial waste water treatment",
+          "chemical-engineering:and sol forming colloidal suspensions",
+          "chemical-engineering:Rheological studies of complex fluids",
+          "chemical-engineering:5. Design",
+          "chemical-engineering:2. Physical behavior and dynamics of glass",
+          "chemical-engineering:and intensification of separation techniques",
+          "chemical-engineering:1. Non-continuum energy and mass diffusion studies",
+          "chemical-engineering:Nucleate Pool Boiling",
+          "chemical-engineering:optimization",
+          "chemical-engineering:4. Applications of optical sensing techniques for transport phenomena studies",
+          "chemical-engineering:3. Development of optical techniques for engineering and bio-medical applications"
+        ],
+        "PhDStudent": [
+          "chemical-engineering:Swati Gupta",
+          "chemical-engineering:Ankit Patil",
+          "chemical-engineering:Ravi Raushan"
+        ],
+        "Faculty": [
+          "chemical-engineering:Yogesh Madhukarrao Nimdeo"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:1. Non-continuum energy and mass diffusion studies",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:2. Physical behavior and dynamics of glass",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:and sol forming colloidal suspensions",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:3. Development of optical techniques for engineering and bio-medical applications",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:4. Applications of optical sensing techniques for transport phenomena studies",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:5. Design",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:optimization",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:and intensification of separation techniques",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:Rheological studies of complex fluids",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:Nucleate Pool Boiling",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "target": "chemical-engineering:Design and development of technology for industrial waste water treatment",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Patil",
+          "target": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Ankit Patil",
+          "target": "chemical-engineering:Rheological studies of complex fluids",
+          "type": "STUDIES"
+        },
+        {
+          "source": "chemical-engineering:Ravi Raushan",
+          "target": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Ravi Raushan",
+          "target": "chemical-engineering:Nucleate Pool Boiling",
+          "type": "STUDIES"
+        },
+        {
+          "source": "chemical-engineering:Swati Gupta",
+          "target": "chemical-engineering:Yogesh Madhukarrao Nimdeo",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Swati Gupta",
+          "target": "chemical-engineering:Design and development of technology for industrial waste water treatment",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 7 in IIT Jammu Chemical Engineering Department:\n  Faculty: Yogesh Madhukarrao Nimdeo\n  PhDStudent: Swati Gupta, Ankit Patil, Ravi Raushan\n  ResearchArea: Design and development of technology for industrial waste water treatment, and sol forming colloidal suspensions, Rheological studies of complex fluids, 5. Design, 2. Physical behavior and dynamics of glass, and intensification of separation techniques, 1. Non-continuum energy and mass diffusion studies, Nucleate Pool Boiling, optimization, 4. Applications of optical sensing techniques for transport phenomena studies, 3. Development of optical techniques for engineering and bio-medical applications\n  Relationships: RESEARCHES_IN: 11, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Yogesh Madhukarrao Nimdeo. 3 PhD student(s). working in areas like chemical-engineering:Design and development of technology for industrial waste water treatment, chemical-engineering:and sol forming colloidal suspensions, chemical-engineering:Rheological studies of complex fluids.",
+      "summary": "This group includes 1 faculty member(s): chemical-engineering:Yogesh Madhukarrao Nimdeo. 3 PhD student(s). working in areas like chemical-engineering:Design and development of technology for industrial waste water treatment, chemical-engineering:and sol forming colloidal suspensions, chemical-engineering:Rheological studies of complex fluids.",
+      "size": 15
+    },
+    {
+      "id": "community_8",
+      "community_id": 8,
+      "members": [
+        "chemical-engineering:lab:Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath)",
+        "chemical-engineering:lab:Separation Processes And Chemical Reaction Engineering Laboratory",
+        "chemical-engineering:lab:Fluid Flow & Mechanical Operations Laboratory",
+        "chemical-engineering:lab:Process Instrumentation Dynamics & Control Lab",
+        "chemical-engineering:lab:Process Modelling & Simulation Lab",
+        "IIT Jammu CHEMICAL-ENGINEERING Department",
+        "chemical-engineering:lab:Heat Transfer & Thermodynamics Laboratory"
+      ],
+      "members_by_type": {
+        "Lab": [
+          "chemical-engineering:lab:Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath)",
+          "chemical-engineering:lab:Separation Processes And Chemical Reaction Engineering Laboratory",
+          "chemical-engineering:lab:Fluid Flow & Mechanical Operations Laboratory",
+          "chemical-engineering:lab:Process Instrumentation Dynamics & Control Lab",
+          "chemical-engineering:lab:Process Modelling & Simulation Lab",
+          "chemical-engineering:lab:Heat Transfer & Thermodynamics Laboratory"
+        ],
+        "Department": [
+          "IIT Jammu CHEMICAL-ENGINEERING Department"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemical-engineering:lab:Process Instrumentation Dynamics & Control Lab",
+          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "chemical-engineering:lab:Process Modelling & Simulation Lab",
+          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "chemical-engineering:lab:Separation Processes And Chemical Reaction Engineering Laboratory",
+          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "chemical-engineering:lab:Fluid Flow & Mechanical Operations Laboratory",
+          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "chemical-engineering:lab:Heat Transfer & Thermodynamics Laboratory",
+          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
+          "type": "FACILITY_OF"
+        },
+        {
+          "source": "chemical-engineering:lab:Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath)",
+          "target": "IIT Jammu CHEMICAL-ENGINEERING Department",
+          "type": "FACILITY_OF"
+        }
+      ],
+      "text": "Community 8 in IIT Jammu Chemical Engineering Department:\n  Department: Department of Chemical Engineering\n  Lab: Research Laboratories : Process Intensification and Nanoscale Advanced Materials (Faculty Name - Dr. Gaurav A. Bhaduri) , Microfluidics and Energy Systems Lab (Faculty Name - Dr. Ravi K. Arun) , Microfludics Design and Bioengineering Lab - (Faculty Name - Dr. Dharitri Rath), Separation Processes And Chemical Reaction Engineering Laboratory, Fluid Flow & Mechanical Operations Laboratory, Process Instrumentation Dynamics & Control Lab, Process Modelling & Simulation Lab, Heat Transfer & Thermodynamics Laboratory\n  Relationships: FACILITY_OF: 6\n\nSummary: A cluster of related entities.",
+      "summary": "A cluster of related entities.",
+      "size": 7
+    },
+    {
+      "id": "community_9",
+      "community_id": 9,
+      "members": [
+        "chemical-engineering:2. Carbon capture and sequestration in porous medium as hydrates (CCS)",
+        "chemical-engineering:3. Natural gas and hydrogen storage as hydrates (Energy storage)",
+        "chemical-engineering:4. Hydrate inhibition in oil and gas pipelines for flow assurance",
+        "chemical-engineering:Additionally",
+        "chemical-engineering:we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches",
+        "chemical-engineering:energy storage and flow assurance (Modelling and Experiments)",
+        "chemical-engineering:1. Methane recovery from natural gas hydrates (NGH development)",
+        "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
+        "chemical-engineering:Gas hydrates or clathrate hydrates for their applications in NGH development"
+      ],
+      "members_by_type": {
+        "ResearchArea": [
+          "chemical-engineering:2. Carbon capture and sequestration in porous medium as hydrates (CCS)",
+          "chemical-engineering:3. Natural gas and hydrogen storage as hydrates (Energy storage)",
+          "chemical-engineering:4. Hydrate inhibition in oil and gas pipelines for flow assurance",
+          "chemical-engineering:Additionally",
+          "chemical-engineering:we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches",
+          "chemical-engineering:energy storage and flow assurance (Modelling and Experiments)",
+          "chemical-engineering:1. Methane recovery from natural gas hydrates (NGH development)",
+          "chemical-engineering:Gas hydrates or clathrate hydrates for their applications in NGH development"
+        ],
+        "Faculty": [
+          "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
+          "target": "chemical-engineering:Gas hydrates or clathrate hydrates for their applications in NGH development",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
+          "target": "chemical-engineering:energy storage and flow assurance (Modelling and Experiments)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
+          "target": "chemical-engineering:1. Methane recovery from natural gas hydrates (NGH development)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
+          "target": "chemical-engineering:2. Carbon capture and sequestration in porous medium as hydrates (CCS)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
+          "target": "chemical-engineering:3. Natural gas and hydrogen storage as hydrates (Energy storage)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
+          "target": "chemical-engineering:4. Hydrate inhibition in oil and gas pipelines for flow assurance",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
+          "target": "chemical-engineering:Additionally",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar",
+          "target": "chemical-engineering:we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches",
+          "type": "RESEARCHES_IN"
+        }
+      ],
+      "text": "Community 9 in IIT Jammu Chemical Engineering Department:\n  Faculty: Dnyaneshwar Ramloo Bhawangirkar\n  ResearchArea: 2. Carbon capture and sequestration in porous medium as hydrates (CCS), 3. Natural gas and hydrogen storage as hydrates (Energy storage), 4. Hydrate inhibition in oil and gas pipelines for flow assurance, Additionally, we are also equally interested in developing strategies for enhancing the oil recovery (EOR) through different approaches, energy storage and flow assurance (Modelling and Experiments), 1. Methane recovery from natural gas hydrates (NGH development), Gas hydrates or clathrate hydrates for their applications in NGH development\n  Relationships: RESEARCHES_IN: 8\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar. working in areas like chemical-engineering:2. Carbon capture and sequestration in porous medium as hydrates (CCS), chemical-engineering:3. Natural gas and hydrogen storage as hydrates (Energy storage), chemical-engineering:4. Hydrate inhibition in oil and gas pipelines for flow assurance.",
+      "summary": "This group includes 1 faculty member(s): chemical-engineering:Dnyaneshwar Ramloo Bhawangirkar. working in areas like chemical-engineering:2. Carbon capture and sequestration in porous medium as hydrates (CCS), chemical-engineering:3. Natural gas and hydrogen storage as hydrates (Energy storage), chemical-engineering:4. Hydrate inhibition in oil and gas pipelines for flow assurance.",
+      "size": 9
+    },
+    {
+      "id": "community_10",
+      "community_id": 10,
+      "members": [
+        "chemical-engineering:Polymer nanocomposites",
+        "chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction",
+        "chemical-engineering:and metal oxides",
+        "chemical-engineering:Batteries",
+        "chemical-engineering:Tarun Mahajan",
+        "chemical-engineering:Electro-catalysis",
+        "chemical-engineering:Synthesis of layered 2D nanomaterials",
+        "chemical-engineering:Pulkit Garg",
+        "chemical-engineering:Production of green ammonia via electrocatalytic nitrogen reduction reaction",
+        "chemical-engineering:Synthesis of functional polymer fibers: Electrospinning",
+        "chemical-engineering:and wet-spinning techniques",
+        "chemical-engineering:Bharath P",
+        "chemical-engineering:Electrochemical applications: Supercapacitors",
+        "chemical-engineering:CO2 reduction",
+        "chemical-engineering:Sensing and removal of toxic elements from industrial wastewater",
+        "chemical-engineering:Ankit Tyagi"
+      ],
+      "members_by_type": {
+        "ResearchArea": [
+          "chemical-engineering:Polymer nanocomposites",
+          "chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction",
+          "chemical-engineering:and metal oxides",
+          "chemical-engineering:Batteries",
+          "chemical-engineering:Electro-catalysis",
+          "chemical-engineering:Synthesis of layered 2D nanomaterials",
+          "chemical-engineering:Production of green ammonia via electrocatalytic nitrogen reduction reaction",
+          "chemical-engineering:Synthesis of functional polymer fibers: Electrospinning",
+          "chemical-engineering:and wet-spinning techniques",
+          "chemical-engineering:Electrochemical applications: Supercapacitors",
+          "chemical-engineering:CO2 reduction",
+          "chemical-engineering:Sensing and removal of toxic elements from industrial wastewater"
+        ],
+        "PhDStudent": [
+          "chemical-engineering:Tarun Mahajan",
+          "chemical-engineering:Pulkit Garg",
+          "chemical-engineering:Bharath P"
+        ],
+        "Faculty": [
+          "chemical-engineering:Ankit Tyagi"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:Synthesis of layered 2D nanomaterials",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:and metal oxides",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:Synthesis of functional polymer fibers: Electrospinning",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:and wet-spinning techniques",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:Electrochemical applications: Supercapacitors",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:Batteries",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:Electro-catalysis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:CO2 reduction",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:Sensing and removal of toxic elements from industrial wastewater",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:Production of green ammonia via electrocatalytic nitrogen reduction reaction",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:Polymer nanocomposites",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ankit Tyagi",
+          "target": "chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Tarun Mahajan",
+          "target": "chemical-engineering:Ankit Tyagi",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Tarun Mahajan",
+          "target": "chemical-engineering:Production of green ammonia via electrocatalytic nitrogen reduction reaction",
+          "type": "STUDIES"
+        },
+        {
+          "source": "chemical-engineering:Bharath P",
+          "target": "chemical-engineering:Ankit Tyagi",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Bharath P",
+          "target": "chemical-engineering:Polymer nanocomposites",
+          "type": "STUDIES"
+        },
+        {
+          "source": "chemical-engineering:Pulkit Garg",
+          "target": "chemical-engineering:Ankit Tyagi",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Pulkit Garg",
+          "target": "chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 10 in IIT Jammu Chemical Engineering Department:\n  Faculty: Ankit Tyagi\n  PhDStudent: Tarun Mahajan, Pulkit Garg, Bharath P\n  ResearchArea: Polymer nanocomposites, Seawater electrocatalysis, Oxygen evolution reaction, and metal oxides, Batteries, Electro-catalysis, Synthesis of layered 2D nanomaterials, Production of green ammonia via electrocatalytic nitrogen reduction reaction, Synthesis of functional polymer fibers: Electrospinning, and wet-spinning techniques, Electrochemical applications: Supercapacitors, CO2 reduction, Sensing and removal of toxic elements from industrial wastewater\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Ankit Tyagi. 3 PhD student(s). working in areas like chemical-engineering:Polymer nanocomposites, chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction, chemical-engineering:and metal oxides.",
+      "summary": "This group includes 1 faculty member(s): chemical-engineering:Ankit Tyagi. 3 PhD student(s). working in areas like chemical-engineering:Polymer nanocomposites, chemical-engineering:Seawater electrocatalysis, Oxygen evolution reaction, chemical-engineering:and metal oxides.",
+      "size": 16
+    },
+    {
+      "id": "community_11",
+      "community_id": 11,
+      "members": [
+        "chemical-engineering:Energy Storage devices",
+        "chemical-engineering:Upasana Gupta",
+        "chemical-engineering:Monika Kumari",
+        "chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement",
+        "chemical-engineering:Srabani Roychowdhury",
+        "chemical-engineering:Ravi Kumar Arun",
+        "chemical-engineering:Electrochemical Energy Storage",
+        "chemical-engineering:Disease Detection and Drug Delivery",
+        "chemical-engineering:Lab on a Chip Devices",
+        "chemical-engineering:Microfluidics based Organ-on-chip technology",
+        "chemical-engineering:Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases",
+        "chemical-engineering:Akash Lata",
+        "chemical-engineering:Natish Kumar"
+      ],
+      "members_by_type": {
+        "ResearchArea": [
+          "chemical-engineering:Energy Storage devices",
+          "chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement",
+          "chemical-engineering:Electrochemical Energy Storage",
+          "chemical-engineering:Disease Detection and Drug Delivery",
+          "chemical-engineering:Lab on a Chip Devices",
+          "chemical-engineering:Microfluidics based Organ-on-chip technology",
+          "chemical-engineering:Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases"
+        ],
+        "PhDStudent": [
+          "chemical-engineering:Upasana Gupta",
+          "chemical-engineering:Monika Kumari",
+          "chemical-engineering:Srabani Roychowdhury",
+          "chemical-engineering:Akash Lata",
+          "chemical-engineering:Natish Kumar"
+        ],
+        "Faculty": [
+          "chemical-engineering:Ravi Kumar Arun"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemical-engineering:Ravi Kumar Arun",
+          "target": "chemical-engineering:Electrochemical Energy Storage",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ravi Kumar Arun",
+          "target": "chemical-engineering:Lab on a Chip Devices",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ravi Kumar Arun",
+          "target": "chemical-engineering:Energy Storage devices",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ravi Kumar Arun",
+          "target": "chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ravi Kumar Arun",
+          "target": "chemical-engineering:Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ravi Kumar Arun",
+          "target": "chemical-engineering:Disease Detection and Drug Delivery",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Ravi Kumar Arun",
+          "target": "chemical-engineering:Microfluidics based Organ-on-chip technology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "chemical-engineering:Akash Lata",
+          "target": "chemical-engineering:Ravi Kumar Arun",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Akash Lata",
+          "target": "chemical-engineering:Energy Storage devices",
+          "type": "STUDIES"
+        },
+        {
+          "source": "chemical-engineering:Monika Kumari",
+          "target": "chemical-engineering:Ravi Kumar Arun",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Monika Kumari",
+          "target": "chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement",
+          "type": "STUDIES"
+        },
+        {
+          "source": "chemical-engineering:Natish Kumar",
+          "target": "chemical-engineering:Ravi Kumar Arun",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Natish Kumar",
+          "target": "chemical-engineering:Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases",
+          "type": "STUDIES"
+        },
+        {
+          "source": "chemical-engineering:Srabani Roychowdhury",
+          "target": "chemical-engineering:Ravi Kumar Arun",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Srabani Roychowdhury",
+          "target": "chemical-engineering:Disease Detection and Drug Delivery",
+          "type": "STUDIES"
+        },
+        {
+          "source": "chemical-engineering:Upasana Gupta",
+          "target": "chemical-engineering:Ravi Kumar Arun",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Upasana Gupta",
+          "target": "chemical-engineering:Microfluidics based Organ-on-chip technology",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 11 in IIT Jammu Chemical Engineering Department:\n  Faculty: Ravi Kumar Arun\n  PhDStudent: Upasana Gupta, Monika Kumari, Srabani Roychowdhury, Akash Lata, Natish Kumar\n  ResearchArea: Energy Storage devices, Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement, Electrochemical Energy Storage, Disease Detection and Drug Delivery, Lab on a Chip Devices, Microfluidics based Organ-on-chip technology, Development of Rapid, Sensitive Point of Care Diagnostic Technologies for the Respiratory Diseases\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): chemical-engineering:Ravi Kumar Arun. 5 PhD student(s). working in areas like chemical-engineering:Energy Storage devices, chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement, chemical-engineering:Electrochemical Energy Storage.",
+      "summary": "This group includes 1 faculty member(s): chemical-engineering:Ravi Kumar Arun. 5 PhD student(s). working in areas like chemical-engineering:Energy Storage devices, chemical-engineering:Biomolecules Detection, Diagnosis & Treatment in Microfluidics Confinement, chemical-engineering:Electrochemical Energy Storage.",
+      "size": 13
+    },
+    {
+      "id": "community_12",
+      "community_id": 12,
+      "members": [
+        "chemical-engineering:Yash Mishra",
+        "chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore",
+        "chemical-engineering:Debapriya Mandal"
+      ],
+      "members_by_type": {
+        "PhDStudent": [
+          "chemical-engineering:Yash Mishra"
+        ],
+        "ResearchArea": [
+          "chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore"
+        ],
+        "ExternalPerson": [
+          "chemical-engineering:Debapriya Mandal"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "chemical-engineering:Yash Mishra",
+          "target": "chemical-engineering:Debapriya Mandal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "chemical-engineering:Yash Mishra",
+          "target": "chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 12 in IIT Jammu Chemical Engineering Department:\n  ExternalPerson: Debapriya Mandal\n  PhDStudent: Yash Mishra\n  ResearchArea: CO2 conversion to useful products and Extraction of lithium from its ore\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: 1 PhD student(s). working in areas like chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore.",
+      "summary": "1 PhD student(s). working in areas like chemical-engineering:CO2 conversion to useful products and Extraction of lithium from its ore.",
+      "size": 3
     }
   ]
 }

@@ -200,7 +200,7 @@
     "Meghna": 4,
     "A. Chauhan": 24,
     "D. Goel": 24,
-    "V.jakhetiya": 24,
+    "V.Jakhetiya": 24,
     "V. V. R. Suresh": 24,
     "S. Chaudhur": 24,
     "patent:Method for Thermal Video Surveillance based on Feature Pooli": 24,
@@ -3418,7 +3418,7 @@
         "patent:A System and a Method for Underwater Image Enhancemen",
         "A. Chauhan",
         "D. Goel",
-        "V.jakhetiya",
+        "V.Jakhetiya",
         "V. V. R. Suresh",
         "S. Chaudhur",
         "patent:Method for Thermal Video Surveillance based on Feature Pooli",
@@ -3472,7 +3472,7 @@
         "ExternalPerson": [
           "A. Chauhan",
           "D. Goel",
-          "V.jakhetiya",
+          "V.Jakhetiya",
           "V. V. R. Suresh",
           "S. Chaudhur",
           "M. Panda",
@@ -3571,22 +3571,22 @@
           "type": "INVENTED"
         },
         {
-          "source": "V.jakhetiya",
+          "source": "V.Jakhetiya",
           "target": "patent:A System and a Method for Underwater Image Enhancemen",
           "type": "INVENTED"
         },
         {
-          "source": "V.jakhetiya",
+          "source": "V.Jakhetiya",
           "target": "patent:Method for Thermal Video Surveillance based on Feature Pooli",
           "type": "INVENTED"
         },
         {
-          "source": "V.jakhetiya",
+          "source": "V.Jakhetiya",
           "target": "patent:Image Enhancement and Object Detection System for Degraded U",
           "type": "INVENTED"
         },
         {
-          "source": "V.jakhetiya",
+          "source": "V.Jakhetiya",
           "target": "patent:A System and Method for Arc-Flash Detection using Local Chan",
           "type": "INVENTED"
         },
@@ -3746,7 +3746,7 @@
           "type": "SUPERVISED_BY"
         }
       ],
-      "text": "Community 24 in IIT Jammu Electrical Engineering Department:\n  ExternalPerson: A. Chauhan, D. Goel, V.jakhetiya, V. V. R. Suresh, S. Chaudhur, M. Panda, T. Veerakumar, S. Esakkirajan, A. Ghos, H. Singh, S. Suman, Vinit Jakhetiya, R. Maruthadurai, Suresh Roland Devasahayam\n  Faculty: Badri Narayan Subudhi\n  Patent: patent:A System and a Method for Underwater Image Enhancemen, patent:Method for Thermal Video Surveillance based on Feature Pooli, patent:Image Enhancement and Object Detection System for Degraded U, patent:Action Detection System for Dark Videos using Spatio-Tempora, patent:Method and system for detection of stem and root borer infes, patent:A System and Method for Arc-Flash Detection using Local Chan\n  PhDStudent: Alisha Gupta, Gokul Singh Chauhan, Himanshu Singh, Mahima Gandotra, Mehvish Nissar, Sarif Saleem\n  ResearchArea: Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning, Action Recognition and Localization using Deep Learning, Advancing Grid-Connected Renewable Energy Systems through AI Integration, Underwater Surveillance, Deep-sea video surveillance\n  Relationships: RESEARCHES_IN: 7, INVENTED: 30, SUPERVISED_BY: 8, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): Badri Narayan Subudhi. 6 PhD student(s). working in areas like Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning.",
+      "text": "Community 24 in IIT Jammu Electrical Engineering Department:\n  ExternalPerson: A. Chauhan, D. Goel, V.Jakhetiya, V. V. R. Suresh, S. Chaudhur, M. Panda, T. Veerakumar, S. Esakkirajan, A. Ghos, H. Singh, S. Suman, Vinit Jakhetiya, R. Maruthadurai, Suresh Roland Devasahayam\n  Faculty: Badri Narayan Subudhi\n  Patent: patent:A System and a Method for Underwater Image Enhancemen, patent:Method for Thermal Video Surveillance based on Feature Pooli, patent:Image Enhancement and Object Detection System for Degraded U, patent:Action Detection System for Dark Videos using Spatio-Tempora, patent:Method and system for detection of stem and root borer infes, patent:A System and Method for Arc-Flash Detection using Local Chan\n  PhDStudent: Alisha Gupta, Gokul Singh Chauhan, Himanshu Singh, Mahima Gandotra, Mehvish Nissar, Sarif Saleem\n  ResearchArea: Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning, Action Recognition and Localization using Deep Learning, Advancing Grid-Connected Renewable Energy Systems through AI Integration, Underwater Surveillance, Deep-sea video surveillance\n  Relationships: RESEARCHES_IN: 7, INVENTED: 30, SUPERVISED_BY: 8, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): Badri Narayan Subudhi. 6 PhD student(s). working in areas like Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning.",
       "summary": "This group includes 1 faculty member(s): Badri Narayan Subudhi. 6 PhD student(s). working in areas like Website:\u00a0[https://sites.google.com/view/badrisubudhi/home](https://sites.google.com/view/badrisubudhi/home), PPG based heart rate detection using superlet transform, Medical Image Analysis using Deep Learning.",
       "size": 34
     },

@@ -1,442 +1,375 @@
 {
   "partition": {
-    "hss:Narrative": 0,
-    "hss:Industrial Economics": 13,
-    "hss:Financial Inclusion": 2,
-    "hss:Tribal Education": 3,
-    "hss:b)\u00a0Proactive approaches to road safety": 4,
-    "hss:Subaltern Studies and Historiography.\u00a0 Postcolonialism**": 5,
-    "hss:Religion and Materiality": 0,
-    "hss:Faisal Javid": 5,
-    "hss:Riya Jain": 11,
-    "hss:Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology)": 9,
-    "hss:Garima Singh": 8,
-    "hss:Amitash Ojha": 11,
-    "hss:Sociology of Education": 9,
-    "hss:Human-Agent Interaction": 11,
-    "hss:Malvika Sharma": 0,
-    "hss:f) Exploring adoption intentions of e-shared mobility alternatives": 4,
-    "hss:Areas of Research": 12,
-    "hss:Ethnicity Nation-states and Nationalism": 0,
-    "hss:Shafkat Shafi Dar": 2,
-    "hss:Subrat Kumar Maity": 9,
-    "hss:Nadeem Ahmad Rather": 6,
-    "hss:Essays on public finance": 2,
-    "hss:Ethics": 12,
-    "hss:Gender studies": 7,
-    "hss:delay discounting": 8,
-    "hss:Sparklin Pradhan": 3,
-    "hss:lab:Language Experiential Lab": 0,
-    "hss:Secondary research interest": 4,
-    "hss:Digital Divide": 1,
-    "hss:Sounds and the Everyday": 0,
-    "hss:Social Stratification and Mobility": 9,
-    "hss:Phenomenological": 0,
-    "hss:g) Traffic management using BT and Wifi sensors": 4,
-    "hss:Bijoy H Boruah": 0,
-    "hss:Sukanya Mondal": 6,
-    "hss:Quleen Kaur Bijral": 5,
-    "hss:Social Norm": 7,
-    "hss:Social Stigma": 7,
-    "hss:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions": 4,
-    "hss:Institutional Economics": 2,
-    "hss:Rajat Jain": 11,
-    "hss:Parushi Ruhil": 6,
-    "hss:Epistemology": 12,
-    "hss:Tribal studies with special focus on Gujjars & Bakerwals": 6,
-    "hss:Tribal Studies with a focus on Pahari Literature": 5,
-    "hss:Sonam Nehra": 8,
-    "hss:Kishore Kumar Jagini": 10,
-    "hss:Ethics and Epistemology of nudging": 12,
-    "hss:Social Psychology": 7,
-    "hss:Cognitive Science": 11,
-    "hss:Understanding Student Behaviour in Higher Education\n[LinkedIn Profile](https://www.linkedin.com/in/ridham-gupta-18904377)": 11,
-    "hss:Nudge Theory and its Ethical Analysis": 12,
-    "hss:Gender and Economics": 2,
-    "hss:Sayantan Mandal": 3,
-    "hss:Hardeep Singh": 13,
-    "hss:Ankita Yadav": 1,
-    "hss:metacognition": 8,
-    "hss:Cognitive-Behavioral Psychology": 11,
-    "hss:Critical Thinking and Interpretation": 1,
-    "hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology": 10,
-    "hss:Environmental Economics": 2,
-    "hss:e) Public transportation system design\u00a0and planning with primary focus\u00a0on Bus Rapid Transit Systems": 4,
-    "hss:Development Economics": 13,
-    "hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals": 5,
-    "hss:Neural mechanisms of reward processing": 8,
-    "hss:decision-making and aberrant behaviours in clinical versus healthy populations through neuroimaging methods": 8,
-    "hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129)": 6,
-    "hss:Mehreen Choudhary": 6,
-    "hss:Stigma, Structure and Struggle: An intersectional study of the higher educational experiences of Gujjar and Bakerwal women": 11,
-    "hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans": 3,
-    "hss:Ilam E Nasser": 5,
-    "hss:Applied Psychology": 7,
-    "hss:Everyday Religion and Practice": 0,
-    "hss:Sociology of Sports": 9,
-    "hss:d) Simulation-based AV's\u00a0and human-driven vehicle interaction": 4,
-    "hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)": 6,
-    "hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives": 5,
-    "hss:Sustainable Finance, Environmental, Social, and Governance (ESG)": 11,
-    "hss:Surabhi Das": 7,
-    "hss:Climate Change and Environmental Marginalities": 9,
-    "hss:Agricultural economics": 13,
-    "hss:Aditi Magotra": 6,
-    "hss:Human and Artificial Intelligence": 11,
-    "hss:AI and Data Protection": 1,
-    "hss:h) Utilization of surface-modified aggregates in asphalt mixes": 4,
-    "hss:Saloni Walia": 6,
-    "hss:and Metaphysical Exploration of Self and Subjectivity": 0,
-    "hss:Agricultural Economics": 13,
-    "hss:Partition and Borderlands": 0,
-    "hss:Joby Varghese": 12,
-    "hss:Technoscience and Transhumanism": 0,
-    "hss:Priya": 13,
-    "hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia)": 6,
+    "hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)": 4,
+    "hss:Nudge Theory and its Ethical Analysis": 1,
     "hss:Experimental Work on Non-Verbal Modalities, Gestures and Emotions, Emotional Behavioral Patterns, Creativity Using Eye-tracking, Physiological Measures and fNIRS.": 11,
-    "hss:and memory dynamics": 8,
-    "hss:Marve Batool Sofi": 11,
-    "hss:Philosophy of Science": 12,
-    "hss:Visual Metaphors": 11,
-    "hss:Cognitive Science & Neuropsychology": 8,
-    "hss:Ritesh Bansal": 12,
-    "hss:Meenakshi Rajeev": 13,
-    "hss:Ankit Kathuria": 4,
-    "hss:Sanchita Srivastava": 7,
-    "hss:Ajaz Ahmed": 5,
-    "hss:Applied Econometrics": 13,
-    "hss:Creativity": 11,
-    "hss:Values in Science and Technology": 12,
-    "hss:Sumit Sikdar": 12,
-    "hss:Ridham Gupta": 11,
-    "hss:Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity": 13,
-    "hss:Kaushiky Hazra": 13,
-    "hss:Gender and Media": 7,
-    "hss:Usability Engineering": 11,
-    "hss:Shramana Singha Roy": 10,
-    "hss:Multi-modal Communication": 11,
-    "hss:Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries": 9,
+    "hss:g) Traffic management using BT and Wifi sensors": 3,
+    "hss:Mehreen Choudhary": 4,
     "hss:Urvashi": 11,
-    "hss:Muhammed Haneefa A.p": 9,
-    "hss:c) Planning and design of dedicated powered two-wheeler lanes for urban and non-urban highways": 4,
-    "hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)": 6,
-    "hss:Game Theory": 13,
-    "hss:Manzoor Ahmad Lone": 2,
-    "hss:Digital Financial Inclusion": 2,
-    "IIT Jammu HSS Department": 0,
-    "hss:Sayari Misra": 3,
-    "hss:Post-truth Politics and Democracy": 12,
-    "hss:including the use of surrogate safety measures": 4,
-    "hss:Financial Economics": 13,
-    "hss:Judgement and Decision Making": 1
+    "hss:and memory dynamics": 5,
+    "hss:Epistemology": 1,
+    "hss:Development Economics": 10,
+    "hss:Quleen Kaur Bijral": 13,
+    "hss:d) Simulation-based AV's\u00a0and human-driven vehicle interaction": 3,
+    "hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans": 9,
+    "hss:Faisal Javid": 13,
+    "hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals": 13,
+    "hss:Sumit Sikdar": 1,
+    "hss:Gender and Economics": 12,
+    "hss:Areas of Research": 1,
+    "hss:Ethics and Epistemology of nudging": 1,
+    "hss:Applied Psychology": 6,
+    "hss:Climate Change and Environmental Marginalities": 2,
+    "hss:Social Norm": 6,
+    "hss:Cognitive Science & Neuropsychology": 5,
+    "hss:delay discounting": 5,
+    "hss:Surabhi Das": 6,
+    "hss:Kaushiky Hazra": 10,
+    "hss:Bijoy H Boruah": 7,
+    "hss:and Metaphysical Exploration of Self and Subjectivity": 7,
+    "hss:lab:Language Experiential Lab": 7,
+    "hss:Phenomenological": 7,
+    "hss:Meenakshi Rajeev": 10,
+    "hss:Sociology of Education": 2,
+    "hss:Sparklin Pradhan": 9,
+    "hss:Social Stratification and Mobility": 2,
+    "hss:Gender studies": 6,
+    "hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia)": 4,
+    "hss:Agricultural Economics": 10,
+    "hss:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions": 3,
+    "hss:Game Theory": 10,
+    "hss:Manzoor Ahmad Lone": 12,
+    "hss:Cognitive-Behavioral Psychology": 11,
+    "hss:Hardeep Singh": 10,
+    "hss:Ethics": 1,
+    "hss:Sounds and the Everyday": 8,
+    "hss:b)\u00a0Proactive approaches to road safety": 3,
+    "hss:Usability Engineering": 11,
+    "hss:Cognitive Science": 11,
+    "hss:Judgement and Decision Making": 7,
+    "hss:Applied Econometrics": 10,
+    "hss:Human-Agent Interaction": 11,
+    "hss:Neural mechanisms of reward processing": 5,
+    "hss:Institutional Economics": 12,
+    "hss:Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology)": 2,
+    "hss:Sayantan Mandal": 9,
+    "hss:Ankit Kathuria": 3,
+    "hss:Sukanya Mondal": 4,
+    "hss:Sayari Misra": 9,
+    "hss:Sanchita Srivastava": 6,
+    "hss:Financial Inclusion": 12,
+    "hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives": 13,
+    "hss:AI and Data Protection": 7,
+    "hss:Creativity": 11,
+    "hss:Understanding Student Behaviour in Higher Education\n[LinkedIn Profile](https://www.linkedin.com/in/ridham-gupta-18904377)": 11,
+    "hss:Shafkat Shafi Dar": 12,
+    "hss:Ilam E Nasser": 13,
+    "hss:Digital Divide": 7,
+    "hss:decision-making and aberrant behaviours in clinical versus healthy populations through neuroimaging methods": 5,
+    "hss:Partition and Borderlands": 8,
+    "hss:Sociology of Sports": 2,
+    "hss:Visual Metaphors": 11,
+    "hss:Tribal Studies with a focus on Pahari Literature": 13,
+    "hss:Marve Batool Sofi": 11,
+    "hss:Sustainable Finance, Environmental, Social, and Governance (ESG)": 11,
+    "hss:Riya Jain": 11,
+    "hss:Tribal Education": 9,
+    "hss:f) Exploring adoption intentions of e-shared mobility alternatives": 3,
+    "hss:Parushi Ruhil": 4,
+    "hss:Social Stigma": 6,
+    "hss:Human and Artificial Intelligence": 11,
+    "hss:Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries": 2,
+    "hss:Ridham Gupta": 11,
+    "hss:Saloni Walia": 4,
+    "hss:Narrative": 7,
+    "hss:Kishore Kumar Jagini": 0,
+    "hss:Garima Singh": 5,
+    "hss:Financial Economics": 10,
+    "hss:Philosophy of Science": 1,
+    "hss:Digital Financial Inclusion": 12,
+    "hss:Social Psychology": 6,
+    "hss:Subaltern Studies and Historiography.\u00a0 Postcolonialism**": 13,
+    "hss:Technoscience and Transhumanism": 7,
+    "hss:including the use of surrogate safety measures": 3,
+    "hss:Multi-modal Communication": 11,
+    "hss:Ajaz Ahmed": 13,
+    "hss:Ethnicity Nation-states and Nationalism": 8,
+    "hss:Values in Science and Technology": 1,
+    "hss:Tribal studies with special focus on Gujjars & Bakerwals": 4,
+    "hss:Nadeem Ahmad Rather": 4,
+    "hss:Gender and Media": 6,
+    "hss:Essays on public finance": 12,
+    "hss:Priya": 10,
+    "hss:Ritesh Bansal": 1,
+    "hss:Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity": 10,
+    "hss:h) Utilization of surface-modified aggregates in asphalt mixes": 3,
+    "hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129)": 4,
+    "hss:Stigma, Structure and Struggle: An intersectional study of the higher educational experiences of Gujjar and Bakerwal women": 11,
+    "hss:Malvika Sharma": 8,
+    "hss:Critical Thinking and Interpretation": 7,
+    "hss:Joby Varghese": 1,
+    "hss:Rajat Jain": 11,
+    "hss:Environmental Economics": 12,
+    "hss:Shramana Singha Roy": 0,
+    "hss:Aditi Magotra": 4,
+    "hss:Subrat Kumar Maity": 2,
+    "hss:Post-truth Politics and Democracy": 1,
+    "hss:Secondary research interest": 3,
+    "hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)": 4,
+    "hss:Religion and Materiality": 8,
+    "hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology": 0,
+    "hss:c) Planning and design of dedicated powered two-wheeler lanes for urban and non-urban highways": 3,
+    "hss:e) Public transportation system design\u00a0and planning with primary focus\u00a0on Bus Rapid Transit Systems": 3,
+    "hss:Amitash Ojha": 11,
+    "hss:Muhammed Haneefa A.P": 2,
+    "hss:Sonam Nehra": 5,
+    "hss:Everyday Religion and Practice": 8,
+    "IIT Jammu HSS Department": 7,
+    "hss:Ankita Yadav": 7,
+    "hss:metacognition": 5,
+    "hss:Agricultural economics": 10,
+    "hss:Industrial Economics": 10
   },
   "reports": [
     {
       "id": "community_0",
       "community_id": 0,
       "members": [
-        "hss:Narrative",
-        "hss:Religion and Materiality",
-        "hss:Malvika Sharma",
-        "hss:Ethnicity Nation-states and Nationalism",
-        "hss:lab:Language Experiential Lab",
-        "hss:Sounds and the Everyday",
-        "hss:Phenomenological",
-        "hss:Bijoy H Boruah",
-        "hss:Everyday Religion and Practice",
-        "hss:and Metaphysical Exploration of Self and Subjectivity",
-        "hss:Partition and Borderlands",
-        "hss:Technoscience and Transhumanism",
-        "IIT Jammu HSS Department"
+        "hss:Kishore Kumar Jagini",
+        "hss:Shramana Singha Roy",
+        "hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology"
       ],
       "members_by_type": {
+        "ExternalPerson": [
+          "hss:Kishore Kumar Jagini"
+        ],
+        "PhDStudent": [
+          "hss:Shramana Singha Roy"
+        ],
         "ResearchArea": [
-          "hss:Narrative",
-          "hss:Religion and Materiality",
-          "hss:Ethnicity Nation-states and Nationalism",
-          "hss:Sounds and the Everyday",
-          "hss:Phenomenological",
-          "hss:Everyday Religion and Practice",
-          "hss:and Metaphysical Exploration of Self and Subjectivity",
-          "hss:Partition and Borderlands",
-          "hss:Technoscience and Transhumanism"
-        ],
-        "Faculty": [
-          "hss:Malvika Sharma",
-          "hss:Bijoy H Boruah"
-        ],
-        "Lab": [
-          "hss:lab:Language Experiential Lab"
-        ],
-        "Department": [
-          "IIT Jammu HSS Department"
+          "hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology"
         ]
       },
       "internal_edges": [
         {
-          "source": "hss:Bijoy H Boruah",
-          "target": "hss:Narrative",
-          "type": "RESEARCHES_IN"
+          "source": "hss:Shramana Singha Roy",
+          "target": "hss:Kishore Kumar Jagini",
+          "type": "SUPERVISED_BY"
         },
         {
-          "source": "hss:Bijoy H Boruah",
-          "target": "hss:Phenomenological",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Bijoy H Boruah",
-          "target": "hss:and Metaphysical Exploration of Self and Subjectivity",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Bijoy H Boruah",
-          "target": "hss:Technoscience and Transhumanism",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Bijoy H Boruah",
-          "target": "IIT Jammu HSS Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "hss:Malvika Sharma",
-          "target": "hss:Partition and Borderlands",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Malvika Sharma",
-          "target": "hss:Ethnicity Nation-states and Nationalism",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Malvika Sharma",
-          "target": "hss:Everyday Religion and Practice",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Malvika Sharma",
-          "target": "hss:Religion and Materiality",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Malvika Sharma",
-          "target": "hss:Sounds and the Everyday",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Malvika Sharma",
-          "target": "IIT Jammu HSS Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "hss:lab:Language Experiential Lab",
-          "target": "IIT Jammu HSS Department",
-          "type": "FACILITY_OF"
+          "source": "hss:Shramana Singha Roy",
+          "target": "hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology",
+          "type": "STUDIES"
         }
       ],
-      "text": "Community 0 in IIT Jammu Humanities & Social Sciences Department:\n  Department: Department of Humanities and Social Sciences\n  Faculty: Malvika Sharma, Bijoy H Boruah\n  Lab: Language Experiential Lab\n  ResearchArea: Narrative, Religion and Materiality, Ethnicity Nation-states and Nationalism, Sounds and the Everyday, Phenomenological, Everyday Religion and Practice, and Metaphysical Exploration of Self and Subjectivity, Partition and Borderlands, Technoscience and Transhumanism\n  Relationships: RESEARCHES_IN: 9, MEMBER_OF: 2, FACILITY_OF: 1\n\nSummary: This group includes 2 faculty member(s): hss:Malvika Sharma, hss:Bijoy H Boruah. working in areas like hss:Narrative, hss:Religion and Materiality, hss:Ethnicity Nation-states and Nationalism.",
-      "summary": "This group includes 2 faculty member(s): hss:Malvika Sharma, hss:Bijoy H Boruah. working in areas like hss:Narrative, hss:Religion and Materiality, hss:Ethnicity Nation-states and Nationalism.",
-      "size": 13
+      "text": "Community 0 in IIT Jammu Humanities & Social Sciences Department:\n  ExternalPerson: Kishore Kumar Jagini\n  PhDStudent: Shramana Singha Roy\n  ResearchArea: Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: 1 PhD student(s). working in areas like hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology.",
+      "summary": "1 PhD student(s). working in areas like hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology.",
+      "size": 3
     },
     {
       "id": "community_1",
       "community_id": 1,
       "members": [
-        "hss:Digital Divide",
-        "hss:Ankita Yadav",
-        "hss:Critical Thinking and Interpretation",
-        "hss:AI and Data Protection",
-        "hss:Judgement and Decision Making"
+        "hss:Nudge Theory and its Ethical Analysis",
+        "hss:Epistemology",
+        "hss:Sumit Sikdar",
+        "hss:Areas of Research",
+        "hss:Ethics and Epistemology of nudging",
+        "hss:Ethics",
+        "hss:Philosophy of Science",
+        "hss:Values in Science and Technology",
+        "hss:Ritesh Bansal",
+        "hss:Joby Varghese",
+        "hss:Post-truth Politics and Democracy"
       ],
       "members_by_type": {
         "ResearchArea": [
-          "hss:Digital Divide",
-          "hss:Critical Thinking and Interpretation",
-          "hss:AI and Data Protection",
-          "hss:Judgement and Decision Making"
+          "hss:Nudge Theory and its Ethical Analysis",
+          "hss:Epistemology",
+          "hss:Areas of Research",
+          "hss:Ethics and Epistemology of nudging",
+          "hss:Ethics",
+          "hss:Philosophy of Science",
+          "hss:Values in Science and Technology",
+          "hss:Post-truth Politics and Democracy"
+        ],
+        "PhDStudent": [
+          "hss:Sumit Sikdar",
+          "hss:Ritesh Bansal"
         ],
         "Faculty": [
-          "hss:Ankita Yadav"
+          "hss:Joby Varghese"
         ]
       },
       "internal_edges": [
         {
-          "source": "hss:Ankita Yadav",
-          "target": "hss:Digital Divide",
+          "source": "hss:Joby Varghese",
+          "target": "hss:Areas of Research",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Ankita Yadav",
-          "target": "hss:AI and Data Protection",
+          "source": "hss:Joby Varghese",
+          "target": "hss:Philosophy of Science",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Ankita Yadav",
-          "target": "hss:Judgement and Decision Making",
+          "source": "hss:Joby Varghese",
+          "target": "hss:Values in Science and Technology",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Ankita Yadav",
-          "target": "hss:Critical Thinking and Interpretation",
+          "source": "hss:Joby Varghese",
+          "target": "hss:Ethics",
           "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Joby Varghese",
+          "target": "hss:Epistemology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Joby Varghese",
+          "target": "hss:Ethics and Epistemology of nudging",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Joby Varghese",
+          "target": "hss:Nudge Theory and its Ethical Analysis",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Joby Varghese",
+          "target": "hss:Post-truth Politics and Democracy",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Ritesh Bansal",
+          "target": "hss:Joby Varghese",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "hss:Ritesh Bansal",
+          "target": "hss:Nudge Theory and its Ethical Analysis",
+          "type": "STUDIES"
+        },
+        {
+          "source": "hss:Sumit Sikdar",
+          "target": "hss:Joby Varghese",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "hss:Sumit Sikdar",
+          "target": "hss:Post-truth Politics and Democracy",
+          "type": "STUDIES"
         }
       ],
-      "text": "Community 1 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Ankita Yadav\n  ResearchArea: Digital Divide, Critical Thinking and Interpretation, AI and Data Protection, Judgement and Decision Making\n  Relationships: RESEARCHES_IN: 4\n\nSummary: This group includes 1 faculty member(s): hss:Ankita Yadav. working in areas like hss:Digital Divide, hss:Critical Thinking and Interpretation, hss:AI and Data Protection.",
-      "summary": "This group includes 1 faculty member(s): hss:Ankita Yadav. working in areas like hss:Digital Divide, hss:Critical Thinking and Interpretation, hss:AI and Data Protection.",
-      "size": 5
+      "text": "Community 1 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Joby Varghese\n  PhDStudent: Sumit Sikdar, Ritesh Bansal\n  ResearchArea: Nudge Theory and its Ethical Analysis, Epistemology, Areas of Research, Ethics and Epistemology of nudging, Ethics, Philosophy of Science, Values in Science and Technology, Post-truth Politics and Democracy\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): hss:Joby Varghese. 2 PhD student(s). working in areas like hss:Nudge Theory and its Ethical Analysis, hss:Epistemology, hss:Areas of Research.",
+      "summary": "This group includes 1 faculty member(s): hss:Joby Varghese. 2 PhD student(s). working in areas like hss:Nudge Theory and its Ethical Analysis, hss:Epistemology, hss:Areas of Research.",
+      "size": 11
     },
     {
       "id": "community_2",
       "community_id": 2,
       "members": [
-        "hss:Financial Inclusion",
-        "hss:Shafkat Shafi Dar",
-        "hss:Essays on public finance",
-        "hss:Institutional Economics",
-        "hss:Gender and Economics",
-        "hss:Environmental Economics",
-        "hss:Manzoor Ahmad Lone",
-        "hss:Digital Financial Inclusion"
+        "hss:Climate Change and Environmental Marginalities",
+        "hss:Sociology of Education",
+        "hss:Social Stratification and Mobility",
+        "hss:Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology)",
+        "hss:Sociology of Sports",
+        "hss:Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries",
+        "hss:Subrat Kumar Maity",
+        "hss:Muhammed Haneefa A.P"
       ],
       "members_by_type": {
         "ResearchArea": [
-          "hss:Financial Inclusion",
-          "hss:Essays on public finance",
-          "hss:Institutional Economics",
-          "hss:Gender and Economics",
-          "hss:Environmental Economics",
-          "hss:Digital Financial Inclusion"
-        ],
-        "Faculty": [
-          "hss:Shafkat Shafi Dar"
+          "hss:Climate Change and Environmental Marginalities",
+          "hss:Sociology of Education",
+          "hss:Social Stratification and Mobility",
+          "hss:Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology)",
+          "hss:Sociology of Sports",
+          "hss:Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries"
         ],
         "PhDStudent": [
-          "hss:Manzoor Ahmad Lone"
+          "hss:Subrat Kumar Maity"
+        ],
+        "Faculty": [
+          "hss:Muhammed Haneefa A.P"
         ]
       },
       "internal_edges": [
         {
-          "source": "hss:Shafkat Shafi Dar",
-          "target": "hss:Financial Inclusion",
+          "source": "hss:Muhammed Haneefa A.P",
+          "target": "hss:Social Stratification and Mobility",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Shafkat Shafi Dar",
-          "target": "hss:Digital Financial Inclusion",
+          "source": "hss:Muhammed Haneefa A.P",
+          "target": "hss:Sociology of Education",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Shafkat Shafi Dar",
-          "target": "hss:Gender and Economics",
+          "source": "hss:Muhammed Haneefa A.P",
+          "target": "hss:Climate Change and Environmental Marginalities",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Shafkat Shafi Dar",
-          "target": "hss:Institutional Economics",
+          "source": "hss:Muhammed Haneefa A.P",
+          "target": "hss:Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology)",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Shafkat Shafi Dar",
-          "target": "hss:Environmental Economics",
+          "source": "hss:Muhammed Haneefa A.P",
+          "target": "hss:Sociology of Sports",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Shafkat Shafi Dar",
-          "target": "hss:Essays on public finance",
+          "source": "hss:Muhammed Haneefa A.P",
+          "target": "hss:Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Manzoor Ahmad Lone",
-          "target": "hss:Shafkat Shafi Dar",
+          "source": "hss:Subrat Kumar Maity",
+          "target": "hss:Muhammed Haneefa A.P",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "hss:Manzoor Ahmad Lone",
-          "target": "hss:Essays on public finance",
+          "source": "hss:Subrat Kumar Maity",
+          "target": "hss:Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 2 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Shafkat Shafi Dar\n  PhDStudent: Manzoor Ahmad Lone\n  ResearchArea: Financial Inclusion, Essays on public finance, Institutional Economics, Gender and Economics, Environmental Economics, Digital Financial Inclusion\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): hss:Shafkat Shafi Dar. 1 PhD student(s). working in areas like hss:Financial Inclusion, hss:Essays on public finance, hss:Institutional Economics.",
-      "summary": "This group includes 1 faculty member(s): hss:Shafkat Shafi Dar. 1 PhD student(s). working in areas like hss:Financial Inclusion, hss:Essays on public finance, hss:Institutional Economics.",
+      "text": "Community 2 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Muhammed Haneefa A.P\n  PhDStudent: Subrat Kumar Maity\n  ResearchArea: Climate Change and Environmental Marginalities, Sociology of Education, Social Stratification and Mobility, Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology), Sociology of Sports, Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): hss:Muhammed Haneefa A.P. 1 PhD student(s). working in areas like hss:Climate Change and Environmental Marginalities, hss:Sociology of Education, hss:Social Stratification and Mobility.",
+      "summary": "This group includes 1 faculty member(s): hss:Muhammed Haneefa A.P. 1 PhD student(s). working in areas like hss:Climate Change and Environmental Marginalities, hss:Sociology of Education, hss:Social Stratification and Mobility.",
       "size": 8
     },
     {
       "id": "community_3",
       "community_id": 3,
       "members": [
-        "hss:Tribal Education",
-        "hss:Sparklin Pradhan",
-        "hss:Sayantan Mandal",
-        "hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans",
-        "hss:Sayari Misra"
-      ],
-      "members_by_type": {
-        "ResearchArea": [
-          "hss:Tribal Education",
-          "hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans"
-        ],
-        "PhDStudent": [
-          "hss:Sparklin Pradhan",
-          "hss:Sayari Misra"
-        ],
-        "ExternalPerson": [
-          "hss:Sayantan Mandal"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "hss:Sayari Misra",
-          "target": "hss:Sayantan Mandal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Sayari Misra",
-          "target": "hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans",
-          "type": "STUDIES"
-        },
-        {
-          "source": "hss:Sparklin Pradhan",
-          "target": "hss:Sayantan Mandal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Sparklin Pradhan",
-          "target": "hss:Tribal Education",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 3 in IIT Jammu Humanities & Social Sciences Department:\n  ExternalPerson: Sayantan Mandal\n  PhDStudent: Sparklin Pradhan, Sayari Misra\n  ResearchArea: Tribal Education, Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans\n  Relationships: SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: 2 PhD student(s). working in areas like hss:Tribal Education, hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans.",
-      "summary": "2 PhD student(s). working in areas like hss:Tribal Education, hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans.",
-      "size": 5
-    },
-    {
-      "id": "community_4",
-      "community_id": 4,
-      "members": [
-        "hss:b)\u00a0Proactive approaches to road safety",
-        "hss:f) Exploring adoption intentions of e-shared mobility alternatives",
-        "hss:Secondary research interest",
         "hss:g) Traffic management using BT and Wifi sensors",
-        "hss:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions",
-        "hss:e) Public transportation system design\u00a0and planning with primary focus\u00a0on Bus Rapid Transit Systems",
         "hss:d) Simulation-based AV's\u00a0and human-driven vehicle interaction",
-        "hss:h) Utilization of surface-modified aggregates in asphalt mixes",
+        "hss:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions",
+        "hss:b)\u00a0Proactive approaches to road safety",
         "hss:Ankit Kathuria",
+        "hss:f) Exploring adoption intentions of e-shared mobility alternatives",
+        "hss:including the use of surrogate safety measures",
+        "hss:h) Utilization of surface-modified aggregates in asphalt mixes",
+        "hss:Secondary research interest",
         "hss:c) Planning and design of dedicated powered two-wheeler lanes for urban and non-urban highways",
-        "hss:including the use of surrogate safety measures"
+        "hss:e) Public transportation system design\u00a0and planning with primary focus\u00a0on Bus Rapid Transit Systems"
       ],
       "members_by_type": {
         "ResearchArea": [
+          "hss:g) Traffic management using BT and Wifi sensors",
+          "hss:d) Simulation-based AV's\u00a0and human-driven vehicle interaction",
+          "hss:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions",
           "hss:b)\u00a0Proactive approaches to road safety",
           "hss:f) Exploring adoption intentions of e-shared mobility alternatives",
-          "hss:Secondary research interest",
-          "hss:g) Traffic management using BT and Wifi sensors",
-          "hss:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions",
-          "hss:e) Public transportation system design\u00a0and planning with primary focus\u00a0on Bus Rapid Transit Systems",
-          "hss:d) Simulation-based AV's\u00a0and human-driven vehicle interaction",
+          "hss:including the use of surrogate safety measures",
           "hss:h) Utilization of surface-modified aggregates in asphalt mixes",
+          "hss:Secondary research interest",
           "hss:c) Planning and design of dedicated powered two-wheeler lanes for urban and non-urban highways",
-          "hss:including the use of surrogate safety measures"
+          "hss:e) Public transportation system design\u00a0and planning with primary focus\u00a0on Bus Rapid Transit Systems"
         ],
         "Faculty": [
           "hss:Ankit Kathuria"
@@ -494,231 +427,221 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 4 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Ankit Kathuria\n  ResearchArea: b)\u00a0Proactive approaches to road safety, f) Exploring adoption intentions of e-shared mobility alternatives, Secondary research interest, g) Traffic management using BT and Wifi sensors, a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions, e) Public transportation system design\u00a0and planning with primary focus\u00a0on Bus Rapid Transit Systems, d) Simulation-based AV's\u00a0and human-driven vehicle interaction, h) Utilization of surface-modified aggregates in asphalt mixes, c) Planning and design of dedicated powered two-wheeler lanes for urban and non-urban highways, including the use of surrogate safety measures\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): hss:Ankit Kathuria. working in areas like hss:b)\u00a0Proactive approaches to road safety, hss:f) Exploring adoption intentions of e-shared mobility alternatives, hss:Secondary research interest.",
-      "summary": "This group includes 1 faculty member(s): hss:Ankit Kathuria. working in areas like hss:b)\u00a0Proactive approaches to road safety, hss:f) Exploring adoption intentions of e-shared mobility alternatives, hss:Secondary research interest.",
+      "text": "Community 3 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Ankit Kathuria\n  ResearchArea: g) Traffic management using BT and Wifi sensors, d) Simulation-based AV's\u00a0and human-driven vehicle interaction, a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions, b)\u00a0Proactive approaches to road safety, f) Exploring adoption intentions of e-shared mobility alternatives, including the use of surrogate safety measures, h) Utilization of surface-modified aggregates in asphalt mixes, Secondary research interest, c) Planning and design of dedicated powered two-wheeler lanes for urban and non-urban highways, e) Public transportation system design\u00a0and planning with primary focus\u00a0on Bus Rapid Transit Systems\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): hss:Ankit Kathuria. working in areas like hss:g) Traffic management using BT and Wifi sensors, hss:d) Simulation-based AV's\u00a0and human-driven vehicle interaction, hss:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions.",
+      "summary": "This group includes 1 faculty member(s): hss:Ankit Kathuria. working in areas like hss:g) Traffic management using BT and Wifi sensors, hss:d) Simulation-based AV's\u00a0and human-driven vehicle interaction, hss:a) Behavioural and psychological aspects of drivers in heterogeneous disordered traffic conditions.",
+      "size": 11
+    },
+    {
+      "id": "community_4",
+      "community_id": 4,
+      "members": [
+        "hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)",
+        "hss:Mehreen Choudhary",
+        "hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia)",
+        "hss:Sukanya Mondal",
+        "hss:Parushi Ruhil",
+        "hss:Saloni Walia",
+        "hss:Tribal studies with special focus on Gujjars & Bakerwals",
+        "hss:Nadeem Ahmad Rather",
+        "hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129)",
+        "hss:Aditi Magotra",
+        "hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)"
+      ],
+      "members_by_type": {
+        "ResearchArea": [
+          "hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)",
+          "hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia)",
+          "hss:Tribal studies with special focus on Gujjars & Bakerwals",
+          "hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129)",
+          "hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)"
+        ],
+        "PhDStudent": [
+          "hss:Mehreen Choudhary",
+          "hss:Parushi Ruhil",
+          "hss:Saloni Walia",
+          "hss:Nadeem Ahmad Rather",
+          "hss:Aditi Magotra"
+        ],
+        "Faculty": [
+          "hss:Sukanya Mondal"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "hss:Sukanya Mondal",
+          "target": "hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Sukanya Mondal",
+          "target": "hss:Tribal studies with special focus on Gujjars & Bakerwals",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Sukanya Mondal",
+          "target": "hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Sukanya Mondal",
+          "target": "hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Sukanya Mondal",
+          "target": "hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia)",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Aditi Magotra",
+          "target": "hss:Sukanya Mondal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "hss:Aditi Magotra",
+          "target": "hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129)",
+          "type": "STUDIES"
+        },
+        {
+          "source": "hss:Mehreen Choudhary",
+          "target": "hss:Sukanya Mondal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "hss:Mehreen Choudhary",
+          "target": "hss:Tribal studies with special focus on Gujjars & Bakerwals",
+          "type": "STUDIES"
+        },
+        {
+          "source": "hss:Nadeem Ahmad Rather",
+          "target": "hss:Sukanya Mondal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "hss:Nadeem Ahmad Rather",
+          "target": "hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)",
+          "type": "STUDIES"
+        },
+        {
+          "source": "hss:Parushi Ruhil",
+          "target": "hss:Sukanya Mondal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "hss:Parushi Ruhil",
+          "target": "hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)",
+          "type": "STUDIES"
+        },
+        {
+          "source": "hss:Saloni Walia",
+          "target": "hss:Sukanya Mondal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "hss:Saloni Walia",
+          "target": "hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia)",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 4 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Sukanya Mondal\n  PhDStudent: Mehreen Choudhary, Parushi Ruhil, Saloni Walia, Nadeem Ahmad Rather, Aditi Magotra\n  ResearchArea: Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6), Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia), Tribal studies with special focus on Gujjars & Bakerwals, Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129), Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): hss:Sukanya Mondal. 5 PhD student(s). working in areas like hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6), hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia), hss:Tribal studies with special focus on Gujjars & Bakerwals.",
+      "summary": "This group includes 1 faculty member(s): hss:Sukanya Mondal. 5 PhD student(s). working in areas like hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6), hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia), hss:Tribal studies with special focus on Gujjars & Bakerwals.",
       "size": 11
     },
     {
       "id": "community_5",
       "community_id": 5,
       "members": [
-        "hss:Subaltern Studies and Historiography.\u00a0 Postcolonialism**",
-        "hss:Faisal Javid",
-        "hss:Quleen Kaur Bijral",
-        "hss:Tribal Studies with a focus on Pahari Literature",
-        "hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals",
-        "hss:Ilam E Nasser",
-        "hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives",
-        "hss:Ajaz Ahmed"
+        "hss:and memory dynamics",
+        "hss:Cognitive Science & Neuropsychology",
+        "hss:delay discounting",
+        "hss:Neural mechanisms of reward processing",
+        "hss:decision-making and aberrant behaviours in clinical versus healthy populations through neuroimaging methods",
+        "hss:Garima Singh",
+        "hss:Sonam Nehra",
+        "hss:metacognition"
       ],
       "members_by_type": {
         "ResearchArea": [
-          "hss:Subaltern Studies and Historiography.\u00a0 Postcolonialism**",
-          "hss:Tribal Studies with a focus on Pahari Literature",
-          "hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals",
-          "hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives"
-        ],
-        "PhDStudent": [
-          "hss:Faisal Javid",
-          "hss:Ilam E Nasser",
-          "hss:Ajaz Ahmed"
+          "hss:and memory dynamics",
+          "hss:Cognitive Science & Neuropsychology",
+          "hss:delay discounting",
+          "hss:Neural mechanisms of reward processing",
+          "hss:decision-making and aberrant behaviours in clinical versus healthy populations through neuroimaging methods",
+          "hss:metacognition"
         ],
         "Faculty": [
-          "hss:Quleen Kaur Bijral"
+          "hss:Garima Singh"
+        ],
+        "PhDStudent": [
+          "hss:Sonam Nehra"
         ]
       },
       "internal_edges": [
         {
-          "source": "hss:Quleen Kaur Bijral",
-          "target": "hss:Subaltern Studies and Historiography.\u00a0 Postcolonialism**",
+          "source": "hss:Garima Singh",
+          "target": "hss:Neural mechanisms of reward processing",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Quleen Kaur Bijral",
-          "target": "hss:Tribal Studies with a focus on Pahari Literature",
+          "source": "hss:Garima Singh",
+          "target": "hss:decision-making and aberrant behaviours in clinical versus healthy populations through neuroimaging methods",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Quleen Kaur Bijral",
-          "target": "hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals",
+          "source": "hss:Garima Singh",
+          "target": "hss:delay discounting",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Quleen Kaur Bijral",
-          "target": "hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives",
+          "source": "hss:Garima Singh",
+          "target": "hss:metacognition",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Ajaz Ahmed",
-          "target": "hss:Quleen Kaur Bijral",
+          "source": "hss:Garima Singh",
+          "target": "hss:and memory dynamics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Garima Singh",
+          "target": "hss:Cognitive Science & Neuropsychology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Sonam Nehra",
+          "target": "hss:Garima Singh",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "hss:Ajaz Ahmed",
-          "target": "hss:Tribal Studies with a focus on Pahari Literature",
-          "type": "STUDIES"
-        },
-        {
-          "source": "hss:Faisal Javid",
-          "target": "hss:Quleen Kaur Bijral",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Faisal Javid",
-          "target": "hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals",
-          "type": "STUDIES"
-        },
-        {
-          "source": "hss:Ilam E Nasser",
-          "target": "hss:Quleen Kaur Bijral",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Ilam E Nasser",
-          "target": "hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives",
+          "source": "hss:Sonam Nehra",
+          "target": "hss:Cognitive Science & Neuropsychology",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 5 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Quleen Kaur Bijral\n  PhDStudent: Faisal Javid, Ilam E Nasser, Ajaz Ahmed\n  ResearchArea: Subaltern Studies and Historiography.\u00a0 Postcolonialism**, Tribal Studies with a focus on Pahari Literature, Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals, Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): hss:Quleen Kaur Bijral. 3 PhD student(s). working in areas like hss:Subaltern Studies and Historiography.\u00a0 Postcolonialism**, hss:Tribal Studies with a focus on Pahari Literature, hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals.",
-      "summary": "This group includes 1 faculty member(s): hss:Quleen Kaur Bijral. 3 PhD student(s). working in areas like hss:Subaltern Studies and Historiography.\u00a0 Postcolonialism**, hss:Tribal Studies with a focus on Pahari Literature, hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals.",
+      "text": "Community 5 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Garima Singh\n  PhDStudent: Sonam Nehra\n  ResearchArea: and memory dynamics, Cognitive Science & Neuropsychology, delay discounting, Neural mechanisms of reward processing, decision-making and aberrant behaviours in clinical versus healthy populations through neuroimaging methods, metacognition\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): hss:Garima Singh. 1 PhD student(s). working in areas like hss:and memory dynamics, hss:Cognitive Science & Neuropsychology, hss:delay discounting.",
+      "summary": "This group includes 1 faculty member(s): hss:Garima Singh. 1 PhD student(s). working in areas like hss:and memory dynamics, hss:Cognitive Science & Neuropsychology, hss:delay discounting.",
       "size": 8
     },
     {
       "id": "community_6",
       "community_id": 6,
       "members": [
-        "hss:Nadeem Ahmad Rather",
-        "hss:Sukanya Mondal",
-        "hss:Parushi Ruhil",
-        "hss:Tribal studies with special focus on Gujjars & Bakerwals",
-        "hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129)",
-        "hss:Mehreen Choudhary",
-        "hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)",
-        "hss:Aditi Magotra",
-        "hss:Saloni Walia",
-        "hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia)",
-        "hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)"
-      ],
-      "members_by_type": {
-        "PhDStudent": [
-          "hss:Nadeem Ahmad Rather",
-          "hss:Parushi Ruhil",
-          "hss:Mehreen Choudhary",
-          "hss:Aditi Magotra",
-          "hss:Saloni Walia"
-        ],
-        "Faculty": [
-          "hss:Sukanya Mondal"
-        ],
-        "ResearchArea": [
-          "hss:Tribal studies with special focus on Gujjars & Bakerwals",
-          "hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129)",
-          "hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)",
-          "hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia)",
-          "hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "hss:Sukanya Mondal",
-          "target": "hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Sukanya Mondal",
-          "target": "hss:Tribal studies with special focus on Gujjars & Bakerwals",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Sukanya Mondal",
-          "target": "hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Sukanya Mondal",
-          "target": "hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Sukanya Mondal",
-          "target": "hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Aditi Magotra",
-          "target": "hss:Sukanya Mondal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Aditi Magotra",
-          "target": "hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129)",
-          "type": "STUDIES"
-        },
-        {
-          "source": "hss:Mehreen Choudhary",
-          "target": "hss:Sukanya Mondal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Mehreen Choudhary",
-          "target": "hss:Tribal studies with special focus on Gujjars & Bakerwals",
-          "type": "STUDIES"
-        },
-        {
-          "source": "hss:Nadeem Ahmad Rather",
-          "target": "hss:Sukanya Mondal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Nadeem Ahmad Rather",
-          "target": "hss:Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)",
-          "type": "STUDIES"
-        },
-        {
-          "source": "hss:Parushi Ruhil",
-          "target": "hss:Sukanya Mondal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Parushi Ruhil",
-          "target": "hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14)",
-          "type": "STUDIES"
-        },
-        {
-          "source": "hss:Saloni Walia",
-          "target": "hss:Sukanya Mondal",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Saloni Walia",
-          "target": "hss:Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia)",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 6 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Sukanya Mondal\n  PhDStudent: Nadeem Ahmad Rather, Parushi Ruhil, Mehreen Choudhary, Aditi Magotra, Saloni Walia\n  ResearchArea: Tribal studies with special focus on Gujjars & Bakerwals, Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129), Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14), Representation of Transgenders in Indian Narratives\n[LinkedIn Profile](https://www.linkedin.com/in/saloniwalia), Partition through Girl Child Narrators: A Study of Select Texts\n[LinkedIn Profile](https://www.linkedin.com/in/nadeem-ahmad-1428541a6)\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): hss:Sukanya Mondal. 5 PhD student(s). working in areas like hss:Tribal studies with special focus on Gujjars & Bakerwals, hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129), hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14).",
-      "summary": "This group includes 1 faculty member(s): hss:Sukanya Mondal. 5 PhD student(s). working in areas like hss:Tribal studies with special focus on Gujjars & Bakerwals, hss:Transmedia Storytelling in the Indian Narratives\n[LinkedIn Profile](http://www.linkedin.com/in/aditi-magotra-ab86b1129), hss:Postcolonial Ecocriticism, Biopolitics\n[LinkedIn Profile](https://www.notion.so/Parushi-Ruhil-76d9c5d7a48c4077a758e7dae1152b14).",
-      "size": 11
-    },
-    {
-      "id": "community_7",
-      "community_id": 7,
-      "members": [
-        "hss:Gender studies",
+        "hss:Applied Psychology",
         "hss:Social Norm",
+        "hss:Surabhi Das",
+        "hss:Gender studies",
+        "hss:Sanchita Srivastava",
         "hss:Social Stigma",
         "hss:Social Psychology",
-        "hss:Applied Psychology",
-        "hss:Surabhi Das",
-        "hss:Sanchita Srivastava",
         "hss:Gender and Media"
       ],
       "members_by_type": {
         "ResearchArea": [
-          "hss:Gender studies",
+          "hss:Applied Psychology",
           "hss:Social Norm",
+          "hss:Gender studies",
           "hss:Social Stigma",
           "hss:Social Psychology",
-          "hss:Applied Psychology",
           "hss:Gender and Media"
         ],
         "PhDStudent": [
@@ -770,242 +693,368 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 7 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Sanchita Srivastava\n  PhDStudent: Surabhi Das\n  ResearchArea: Gender studies, Social Norm, Social Stigma, Social Psychology, Applied Psychology, Gender and Media\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): hss:Sanchita Srivastava. 1 PhD student(s). working in areas like hss:Gender studies, hss:Social Norm, hss:Social Stigma.",
-      "summary": "This group includes 1 faculty member(s): hss:Sanchita Srivastava. 1 PhD student(s). working in areas like hss:Gender studies, hss:Social Norm, hss:Social Stigma.",
+      "text": "Community 6 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Sanchita Srivastava\n  PhDStudent: Surabhi Das\n  ResearchArea: Applied Psychology, Social Norm, Gender studies, Social Stigma, Social Psychology, Gender and Media\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): hss:Sanchita Srivastava. 1 PhD student(s). working in areas like hss:Applied Psychology, hss:Social Norm, hss:Gender studies.",
+      "summary": "This group includes 1 faculty member(s): hss:Sanchita Srivastava. 1 PhD student(s). working in areas like hss:Applied Psychology, hss:Social Norm, hss:Gender studies.",
       "size": 8
+    },
+    {
+      "id": "community_7",
+      "community_id": 7,
+      "members": [
+        "hss:Bijoy H Boruah",
+        "hss:and Metaphysical Exploration of Self and Subjectivity",
+        "hss:lab:Language Experiential Lab",
+        "hss:Phenomenological",
+        "hss:Judgement and Decision Making",
+        "hss:AI and Data Protection",
+        "hss:Digital Divide",
+        "hss:Narrative",
+        "hss:Technoscience and Transhumanism",
+        "hss:Critical Thinking and Interpretation",
+        "IIT Jammu HSS Department",
+        "hss:Ankita Yadav"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "hss:Bijoy H Boruah",
+          "hss:Ankita Yadav"
+        ],
+        "ResearchArea": [
+          "hss:and Metaphysical Exploration of Self and Subjectivity",
+          "hss:Phenomenological",
+          "hss:Judgement and Decision Making",
+          "hss:AI and Data Protection",
+          "hss:Digital Divide",
+          "hss:Narrative",
+          "hss:Technoscience and Transhumanism",
+          "hss:Critical Thinking and Interpretation"
+        ],
+        "Lab": [
+          "hss:lab:Language Experiential Lab"
+        ],
+        "Department": [
+          "IIT Jammu HSS Department"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "hss:Ankita Yadav",
+          "target": "hss:Digital Divide",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Ankita Yadav",
+          "target": "hss:AI and Data Protection",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Ankita Yadav",
+          "target": "hss:Judgement and Decision Making",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Ankita Yadav",
+          "target": "hss:Critical Thinking and Interpretation",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Ankita Yadav",
+          "target": "IIT Jammu HSS Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "hss:Bijoy H Boruah",
+          "target": "hss:Narrative",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Bijoy H Boruah",
+          "target": "hss:Phenomenological",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Bijoy H Boruah",
+          "target": "hss:and Metaphysical Exploration of Self and Subjectivity",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Bijoy H Boruah",
+          "target": "hss:Technoscience and Transhumanism",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Bijoy H Boruah",
+          "target": "IIT Jammu HSS Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "hss:lab:Language Experiential Lab",
+          "target": "IIT Jammu HSS Department",
+          "type": "FACILITY_OF"
+        }
+      ],
+      "text": "Community 7 in IIT Jammu Humanities & Social Sciences Department:\n  Department: Department of Humanities and Social Sciences\n  Faculty: Bijoy H Boruah, Ankita Yadav\n  Lab: Language Experiential Lab\n  ResearchArea: and Metaphysical Exploration of Self and Subjectivity, Phenomenological, Judgement and Decision Making, AI and Data Protection, Digital Divide, Narrative, Technoscience and Transhumanism, Critical Thinking and Interpretation\n  Relationships: RESEARCHES_IN: 8, MEMBER_OF: 2, FACILITY_OF: 1\n\nSummary: This group includes 2 faculty member(s): hss:Bijoy H Boruah, hss:Ankita Yadav. working in areas like hss:and Metaphysical Exploration of Self and Subjectivity, hss:Phenomenological, hss:Judgement and Decision Making.",
+      "summary": "This group includes 2 faculty member(s): hss:Bijoy H Boruah, hss:Ankita Yadav. working in areas like hss:and Metaphysical Exploration of Self and Subjectivity, hss:Phenomenological, hss:Judgement and Decision Making.",
+      "size": 12
     },
     {
       "id": "community_8",
       "community_id": 8,
       "members": [
-        "hss:Garima Singh",
-        "hss:delay discounting",
-        "hss:Sonam Nehra",
-        "hss:metacognition",
-        "hss:Neural mechanisms of reward processing",
-        "hss:decision-making and aberrant behaviours in clinical versus healthy populations through neuroimaging methods",
-        "hss:and memory dynamics",
-        "hss:Cognitive Science & Neuropsychology"
+        "hss:Sounds and the Everyday",
+        "hss:Partition and Borderlands",
+        "hss:Ethnicity Nation-states and Nationalism",
+        "hss:Malvika Sharma",
+        "hss:Religion and Materiality",
+        "hss:Everyday Religion and Practice"
       ],
       "members_by_type": {
-        "Faculty": [
-          "hss:Garima Singh"
-        ],
         "ResearchArea": [
-          "hss:delay discounting",
-          "hss:metacognition",
-          "hss:Neural mechanisms of reward processing",
-          "hss:decision-making and aberrant behaviours in clinical versus healthy populations through neuroimaging methods",
-          "hss:and memory dynamics",
-          "hss:Cognitive Science & Neuropsychology"
+          "hss:Sounds and the Everyday",
+          "hss:Partition and Borderlands",
+          "hss:Ethnicity Nation-states and Nationalism",
+          "hss:Religion and Materiality",
+          "hss:Everyday Religion and Practice"
         ],
-        "PhDStudent": [
-          "hss:Sonam Nehra"
+        "Faculty": [
+          "hss:Malvika Sharma"
         ]
       },
       "internal_edges": [
         {
-          "source": "hss:Garima Singh",
-          "target": "hss:Neural mechanisms of reward processing",
+          "source": "hss:Malvika Sharma",
+          "target": "hss:Partition and Borderlands",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Garima Singh",
-          "target": "hss:decision-making and aberrant behaviours in clinical versus healthy populations through neuroimaging methods",
+          "source": "hss:Malvika Sharma",
+          "target": "hss:Ethnicity Nation-states and Nationalism",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Garima Singh",
-          "target": "hss:delay discounting",
+          "source": "hss:Malvika Sharma",
+          "target": "hss:Everyday Religion and Practice",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Garima Singh",
-          "target": "hss:metacognition",
+          "source": "hss:Malvika Sharma",
+          "target": "hss:Religion and Materiality",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Garima Singh",
-          "target": "hss:and memory dynamics",
+          "source": "hss:Malvika Sharma",
+          "target": "hss:Sounds and the Everyday",
           "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Garima Singh",
-          "target": "hss:Cognitive Science & Neuropsychology",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Sonam Nehra",
-          "target": "hss:Garima Singh",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Sonam Nehra",
-          "target": "hss:Cognitive Science & Neuropsychology",
-          "type": "STUDIES"
         }
       ],
-      "text": "Community 8 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Garima Singh\n  PhDStudent: Sonam Nehra\n  ResearchArea: delay discounting, metacognition, Neural mechanisms of reward processing, decision-making and aberrant behaviours in clinical versus healthy populations through neuroimaging methods, and memory dynamics, Cognitive Science & Neuropsychology\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): hss:Garima Singh. 1 PhD student(s). working in areas like hss:delay discounting, hss:metacognition, hss:Neural mechanisms of reward processing.",
-      "summary": "This group includes 1 faculty member(s): hss:Garima Singh. 1 PhD student(s). working in areas like hss:delay discounting, hss:metacognition, hss:Neural mechanisms of reward processing.",
-      "size": 8
+      "text": "Community 8 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Malvika Sharma\n  ResearchArea: Sounds and the Everyday, Partition and Borderlands, Ethnicity Nation-states and Nationalism, Religion and Materiality, Everyday Religion and Practice\n  Relationships: RESEARCHES_IN: 5\n\nSummary: This group includes 1 faculty member(s): hss:Malvika Sharma. working in areas like hss:Sounds and the Everyday, hss:Partition and Borderlands, hss:Ethnicity Nation-states and Nationalism.",
+      "summary": "This group includes 1 faculty member(s): hss:Malvika Sharma. working in areas like hss:Sounds and the Everyday, hss:Partition and Borderlands, hss:Ethnicity Nation-states and Nationalism.",
+      "size": 6
     },
     {
       "id": "community_9",
       "community_id": 9,
       "members": [
-        "hss:Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology)",
-        "hss:Sociology of Education",
-        "hss:Subrat Kumar Maity",
-        "hss:Social Stratification and Mobility",
-        "hss:Sociology of Sports",
-        "hss:Climate Change and Environmental Marginalities",
-        "hss:Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries",
-        "hss:Muhammed Haneefa A.p"
+        "hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans",
+        "hss:Sparklin Pradhan",
+        "hss:Sayantan Mandal",
+        "hss:Sayari Misra",
+        "hss:Tribal Education"
       ],
       "members_by_type": {
         "ResearchArea": [
-          "hss:Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology)",
-          "hss:Sociology of Education",
-          "hss:Social Stratification and Mobility",
-          "hss:Sociology of Sports",
-          "hss:Climate Change and Environmental Marginalities",
-          "hss:Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries"
+          "hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans",
+          "hss:Tribal Education"
         ],
         "PhDStudent": [
-          "hss:Subrat Kumar Maity"
+          "hss:Sparklin Pradhan",
+          "hss:Sayari Misra"
         ],
-        "Faculty": [
-          "hss:Muhammed Haneefa A.p"
+        "ExternalPerson": [
+          "hss:Sayantan Mandal"
         ]
       },
       "internal_edges": [
         {
-          "source": "hss:Muhammed Haneefa A.p",
-          "target": "hss:Social Stratification and Mobility",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Muhammed Haneefa A.p",
-          "target": "hss:Sociology of Education",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Muhammed Haneefa A.p",
-          "target": "hss:Climate Change and Environmental Marginalities",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Muhammed Haneefa A.p",
-          "target": "hss:Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology)",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Muhammed Haneefa A.p",
-          "target": "hss:Sociology of Sports",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Muhammed Haneefa A.p",
-          "target": "hss:Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Subrat Kumar Maity",
-          "target": "hss:Muhammed Haneefa A.p",
+          "source": "hss:Sayari Misra",
+          "target": "hss:Sayantan Mandal",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "hss:Subrat Kumar Maity",
-          "target": "hss:Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries",
+          "source": "hss:Sayari Misra",
+          "target": "hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans",
+          "type": "STUDIES"
+        },
+        {
+          "source": "hss:Sparklin Pradhan",
+          "target": "hss:Sayantan Mandal",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "hss:Sparklin Pradhan",
+          "target": "hss:Tribal Education",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 9 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Muhammed Haneefa A.p\n  PhDStudent: Subrat Kumar Maity\n  ResearchArea: Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology), Sociology of Education, Social Stratification and Mobility, Sociology of Sports, Climate Change and Environmental Marginalities, Agricultural Economics, Livelihood Transitions, Climate Change and Fisheries\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): hss:Muhammed Haneefa A.p. 1 PhD student(s). working in areas like hss:Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology), hss:Sociology of Education, hss:Social Stratification and Mobility.",
-      "summary": "This group includes 1 faculty member(s): hss:Muhammed Haneefa A.p. 1 PhD student(s). working in areas like hss:Human-Wildlife Conflict and Multispecies Relations (with emerging work on Anthrotherology), hss:Sociology of Education, hss:Social Stratification and Mobility.",
-      "size": 8
+      "text": "Community 9 in IIT Jammu Humanities & Social Sciences Department:\n  ExternalPerson: Sayantan Mandal\n  PhDStudent: Sparklin Pradhan, Sayari Misra\n  ResearchArea: Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans, Tribal Education\n  Relationships: SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: 2 PhD student(s). working in areas like hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans, hss:Tribal Education.",
+      "summary": "2 PhD student(s). working in areas like hss:Understanding Social Relationships through Water Resource Stress: Perspectives from the Indian Sundarbans, hss:Tribal Education.",
+      "size": 5
     },
     {
       "id": "community_10",
       "community_id": 10,
       "members": [
-        "hss:Kishore Kumar Jagini",
-        "hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology",
-        "hss:Shramana Singha Roy"
+        "hss:Development Economics",
+        "hss:Kaushiky Hazra",
+        "hss:Meenakshi Rajeev",
+        "hss:Agricultural Economics",
+        "hss:Game Theory",
+        "hss:Hardeep Singh",
+        "hss:Applied Econometrics",
+        "hss:Financial Economics",
+        "hss:Priya",
+        "hss:Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity",
+        "hss:Agricultural economics",
+        "hss:Industrial Economics"
       ],
       "members_by_type": {
-        "ExternalPerson": [
-          "hss:Kishore Kumar Jagini"
-        ],
         "ResearchArea": [
-          "hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology"
+          "hss:Development Economics",
+          "hss:Agricultural Economics",
+          "hss:Game Theory",
+          "hss:Applied Econometrics",
+          "hss:Financial Economics",
+          "hss:Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity",
+          "hss:Agricultural economics",
+          "hss:Industrial Economics"
         ],
         "PhDStudent": [
-          "hss:Shramana Singha Roy"
+          "hss:Kaushiky Hazra",
+          "hss:Priya"
+        ],
+        "Faculty": [
+          "hss:Meenakshi Rajeev",
+          "hss:Hardeep Singh"
         ]
       },
       "internal_edges": [
         {
-          "source": "hss:Shramana Singha Roy",
-          "target": "hss:Kishore Kumar Jagini",
+          "source": "hss:Hardeep Singh",
+          "target": "hss:Agricultural Economics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Hardeep Singh",
+          "target": "hss:Applied Econometrics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Hardeep Singh",
+          "target": "hss:Development Economics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Hardeep Singh",
+          "target": "hss:Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Hardeep Singh",
+          "target": "hss:Agricultural economics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Meenakshi Rajeev",
+          "target": "hss:Financial Economics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Meenakshi Rajeev",
+          "target": "hss:Industrial Economics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Meenakshi Rajeev",
+          "target": "hss:Development Economics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Meenakshi Rajeev",
+          "target": "hss:Game Theory",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "hss:Kaushiky Hazra",
+          "target": "hss:Hardeep Singh",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "hss:Shramana Singha Roy",
-          "target": "hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology",
+          "source": "hss:Kaushiky Hazra",
+          "target": "hss:Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity",
+          "type": "STUDIES"
+        },
+        {
+          "source": "hss:Priya",
+          "target": "hss:Hardeep Singh",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "hss:Priya",
+          "target": "hss:Agricultural economics",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 10 in IIT Jammu Humanities & Social Sciences Department:\n  ExternalPerson: Kishore Kumar Jagini\n  PhDStudent: Shramana Singha Roy\n  ResearchArea: Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: 1 PhD student(s). working in areas like hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology.",
-      "summary": "1 PhD student(s). working in areas like hss:Human multisensory perception, with interests in how sensory integration intersects with morality, trauma, and evolutionary psychology.",
-      "size": 3
+      "text": "Community 10 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Meenakshi Rajeev, Hardeep Singh\n  PhDStudent: Kaushiky Hazra, Priya\n  ResearchArea: Development Economics, Agricultural Economics, Game Theory, Applied Econometrics, Financial Economics, Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity, Agricultural economics, Industrial Economics\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 2 faculty member(s): hss:Meenakshi Rajeev, hss:Hardeep Singh. 2 PhD student(s). working in areas like hss:Development Economics, hss:Agricultural Economics, hss:Game Theory.",
+      "summary": "This group includes 2 faculty member(s): hss:Meenakshi Rajeev, hss:Hardeep Singh. 2 PhD student(s). working in areas like hss:Development Economics, hss:Agricultural Economics, hss:Game Theory.",
+      "size": 12
     },
     {
       "id": "community_11",
       "community_id": 11,
       "members": [
-        "hss:Riya Jain",
-        "hss:Amitash Ojha",
-        "hss:Human-Agent Interaction",
-        "hss:Rajat Jain",
-        "hss:Cognitive Science",
-        "hss:Understanding Student Behaviour in Higher Education\n[LinkedIn Profile](https://www.linkedin.com/in/ridham-gupta-18904377)",
-        "hss:Cognitive-Behavioral Psychology",
-        "hss:Stigma, Structure and Struggle: An intersectional study of the higher educational experiences of Gujjar and Bakerwal women",
-        "hss:Sustainable Finance, Environmental, Social, and Governance (ESG)",
-        "hss:Human and Artificial Intelligence",
         "hss:Experimental Work on Non-Verbal Modalities, Gestures and Emotions, Emotional Behavioral Patterns, Creativity Using Eye-tracking, Physiological Measures and fNIRS.",
-        "hss:Marve Batool Sofi",
-        "hss:Visual Metaphors",
-        "hss:Creativity",
-        "hss:Ridham Gupta",
+        "hss:Urvashi",
+        "hss:Cognitive-Behavioral Psychology",
         "hss:Usability Engineering",
+        "hss:Cognitive Science",
+        "hss:Human-Agent Interaction",
+        "hss:Creativity",
+        "hss:Understanding Student Behaviour in Higher Education\n[LinkedIn Profile](https://www.linkedin.com/in/ridham-gupta-18904377)",
+        "hss:Visual Metaphors",
+        "hss:Marve Batool Sofi",
+        "hss:Sustainable Finance, Environmental, Social, and Governance (ESG)",
+        "hss:Riya Jain",
+        "hss:Human and Artificial Intelligence",
+        "hss:Ridham Gupta",
         "hss:Multi-modal Communication",
-        "hss:Urvashi"
+        "hss:Stigma, Structure and Struggle: An intersectional study of the higher educational experiences of Gujjar and Bakerwal women",
+        "hss:Rajat Jain",
+        "hss:Amitash Ojha"
       ],
       "members_by_type": {
+        "ResearchArea": [
+          "hss:Experimental Work on Non-Verbal Modalities, Gestures and Emotions, Emotional Behavioral Patterns, Creativity Using Eye-tracking, Physiological Measures and fNIRS.",
+          "hss:Cognitive-Behavioral Psychology",
+          "hss:Usability Engineering",
+          "hss:Cognitive Science",
+          "hss:Human-Agent Interaction",
+          "hss:Creativity",
+          "hss:Understanding Student Behaviour in Higher Education\n[LinkedIn Profile](https://www.linkedin.com/in/ridham-gupta-18904377)",
+          "hss:Visual Metaphors",
+          "hss:Sustainable Finance, Environmental, Social, and Governance (ESG)",
+          "hss:Human and Artificial Intelligence",
+          "hss:Multi-modal Communication",
+          "hss:Stigma, Structure and Struggle: An intersectional study of the higher educational experiences of Gujjar and Bakerwal women"
+        ],
         "PhDStudent": [
-          "hss:Riya Jain",
-          "hss:Rajat Jain",
+          "hss:Urvashi",
           "hss:Marve Batool Sofi",
+          "hss:Riya Jain",
           "hss:Ridham Gupta",
-          "hss:Urvashi"
+          "hss:Rajat Jain"
         ],
         "Faculty": [
           "hss:Amitash Ojha"
-        ],
-        "ResearchArea": [
-          "hss:Human-Agent Interaction",
-          "hss:Cognitive Science",
-          "hss:Understanding Student Behaviour in Higher Education\n[LinkedIn Profile](https://www.linkedin.com/in/ridham-gupta-18904377)",
-          "hss:Cognitive-Behavioral Psychology",
-          "hss:Stigma, Structure and Struggle: An intersectional study of the higher educational experiences of Gujjar and Bakerwal women",
-          "hss:Sustainable Finance, Environmental, Social, and Governance (ESG)",
-          "hss:Human and Artificial Intelligence",
-          "hss:Experimental Work on Non-Verbal Modalities, Gestures and Emotions, Emotional Behavioral Patterns, Creativity Using Eye-tracking, Physiological Measures and fNIRS.",
-          "hss:Visual Metaphors",
-          "hss:Creativity",
-          "hss:Usability Engineering",
-          "hss:Multi-modal Communication"
         ]
       },
       "internal_edges": [
@@ -1120,218 +1169,169 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 11 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Amitash Ojha\n  PhDStudent: Riya Jain, Rajat Jain, Marve Batool Sofi, Ridham Gupta, Urvashi\n  ResearchArea: Human-Agent Interaction, Cognitive Science, Understanding Student Behaviour in Higher Education\n[LinkedIn Profile](https://www.linkedin.com/in/ridham-gupta-18904377), Cognitive-Behavioral Psychology, Stigma, Structure and Struggle: An intersectional study of the higher educational experiences of Gujjar and Bakerwal women, Sustainable Finance, Environmental, Social, and Governance (ESG), Human and Artificial Intelligence, Experimental Work on Non-Verbal Modalities, Gestures and Emotions, Emotional Behavioral Patterns, Creativity Using Eye-tracking, Physiological Measures and fNIRS., Visual Metaphors, Creativity, Usability Engineering, Multi-modal Communication\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): hss:Amitash Ojha. 5 PhD student(s). working in areas like hss:Human-Agent Interaction, hss:Cognitive Science, hss:Understanding Student Behaviour in Higher Education\n[LinkedIn Profile](https://www.linkedin.com/in/ridham-gupta-18904377).",
-      "summary": "This group includes 1 faculty member(s): hss:Amitash Ojha. 5 PhD student(s). working in areas like hss:Human-Agent Interaction, hss:Cognitive Science, hss:Understanding Student Behaviour in Higher Education\n[LinkedIn Profile](https://www.linkedin.com/in/ridham-gupta-18904377).",
+      "text": "Community 11 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Amitash Ojha\n  PhDStudent: Urvashi, Marve Batool Sofi, Riya Jain, Ridham Gupta, Rajat Jain\n  ResearchArea: Experimental Work on Non-Verbal Modalities, Gestures and Emotions, Emotional Behavioral Patterns, Creativity Using Eye-tracking, Physiological Measures and fNIRS., Cognitive-Behavioral Psychology, Usability Engineering, Cognitive Science, Human-Agent Interaction, Creativity, Understanding Student Behaviour in Higher Education\n[LinkedIn Profile](https://www.linkedin.com/in/ridham-gupta-18904377), Visual Metaphors, Sustainable Finance, Environmental, Social, and Governance (ESG), Human and Artificial Intelligence, Multi-modal Communication, Stigma, Structure and Struggle: An intersectional study of the higher educational experiences of Gujjar and Bakerwal women\n  Relationships: RESEARCHES_IN: 12, SUPERVISED_BY: 5, STUDIES: 5\n\nSummary: This group includes 1 faculty member(s): hss:Amitash Ojha. 5 PhD student(s). working in areas like hss:Experimental Work on Non-Verbal Modalities, Gestures and Emotions, Emotional Behavioral Patterns, Creativity Using Eye-tracking, Physiological Measures and fNIRS., hss:Cognitive-Behavioral Psychology, hss:Usability Engineering.",
+      "summary": "This group includes 1 faculty member(s): hss:Amitash Ojha. 5 PhD student(s). working in areas like hss:Experimental Work on Non-Verbal Modalities, Gestures and Emotions, Emotional Behavioral Patterns, Creativity Using Eye-tracking, Physiological Measures and fNIRS., hss:Cognitive-Behavioral Psychology, hss:Usability Engineering.",
       "size": 18
     },
     {
       "id": "community_12",
       "community_id": 12,
       "members": [
-        "hss:Areas of Research",
-        "hss:Ethics",
-        "hss:Epistemology",
-        "hss:Ethics and Epistemology of nudging",
-        "hss:Nudge Theory and its Ethical Analysis",
-        "hss:Joby Varghese",
-        "hss:Philosophy of Science",
-        "hss:Ritesh Bansal",
-        "hss:Values in Science and Technology",
-        "hss:Sumit Sikdar",
-        "hss:Post-truth Politics and Democracy"
+        "hss:Gender and Economics",
+        "hss:Manzoor Ahmad Lone",
+        "hss:Institutional Economics",
+        "hss:Financial Inclusion",
+        "hss:Shafkat Shafi Dar",
+        "hss:Digital Financial Inclusion",
+        "hss:Essays on public finance",
+        "hss:Environmental Economics"
       ],
       "members_by_type": {
         "ResearchArea": [
-          "hss:Areas of Research",
-          "hss:Ethics",
-          "hss:Epistemology",
-          "hss:Ethics and Epistemology of nudging",
-          "hss:Nudge Theory and its Ethical Analysis",
-          "hss:Philosophy of Science",
-          "hss:Values in Science and Technology",
-          "hss:Post-truth Politics and Democracy"
-        ],
-        "Faculty": [
-          "hss:Joby Varghese"
+          "hss:Gender and Economics",
+          "hss:Institutional Economics",
+          "hss:Financial Inclusion",
+          "hss:Digital Financial Inclusion",
+          "hss:Essays on public finance",
+          "hss:Environmental Economics"
         ],
         "PhDStudent": [
-          "hss:Ritesh Bansal",
-          "hss:Sumit Sikdar"
+          "hss:Manzoor Ahmad Lone"
+        ],
+        "Faculty": [
+          "hss:Shafkat Shafi Dar"
         ]
       },
       "internal_edges": [
         {
-          "source": "hss:Joby Varghese",
-          "target": "hss:Areas of Research",
+          "source": "hss:Shafkat Shafi Dar",
+          "target": "hss:Financial Inclusion",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Joby Varghese",
-          "target": "hss:Philosophy of Science",
+          "source": "hss:Shafkat Shafi Dar",
+          "target": "hss:Digital Financial Inclusion",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Joby Varghese",
-          "target": "hss:Values in Science and Technology",
+          "source": "hss:Shafkat Shafi Dar",
+          "target": "hss:Gender and Economics",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Joby Varghese",
-          "target": "hss:Ethics",
+          "source": "hss:Shafkat Shafi Dar",
+          "target": "hss:Institutional Economics",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Joby Varghese",
-          "target": "hss:Epistemology",
+          "source": "hss:Shafkat Shafi Dar",
+          "target": "hss:Environmental Economics",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Joby Varghese",
-          "target": "hss:Ethics and Epistemology of nudging",
+          "source": "hss:Shafkat Shafi Dar",
+          "target": "hss:Essays on public finance",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Joby Varghese",
-          "target": "hss:Nudge Theory and its Ethical Analysis",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Joby Varghese",
-          "target": "hss:Post-truth Politics and Democracy",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Ritesh Bansal",
-          "target": "hss:Joby Varghese",
+          "source": "hss:Manzoor Ahmad Lone",
+          "target": "hss:Shafkat Shafi Dar",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "hss:Ritesh Bansal",
-          "target": "hss:Nudge Theory and its Ethical Analysis",
-          "type": "STUDIES"
-        },
-        {
-          "source": "hss:Sumit Sikdar",
-          "target": "hss:Joby Varghese",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "hss:Sumit Sikdar",
-          "target": "hss:Post-truth Politics and Democracy",
+          "source": "hss:Manzoor Ahmad Lone",
+          "target": "hss:Essays on public finance",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 12 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Joby Varghese\n  PhDStudent: Ritesh Bansal, Sumit Sikdar\n  ResearchArea: Areas of Research, Ethics, Epistemology, Ethics and Epistemology of nudging, Nudge Theory and its Ethical Analysis, Philosophy of Science, Values in Science and Technology, Post-truth Politics and Democracy\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): hss:Joby Varghese. 2 PhD student(s). working in areas like hss:Areas of Research, hss:Ethics, hss:Epistemology.",
-      "summary": "This group includes 1 faculty member(s): hss:Joby Varghese. 2 PhD student(s). working in areas like hss:Areas of Research, hss:Ethics, hss:Epistemology.",
-      "size": 11
+      "text": "Community 12 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Shafkat Shafi Dar\n  PhDStudent: Manzoor Ahmad Lone\n  ResearchArea: Gender and Economics, Institutional Economics, Financial Inclusion, Digital Financial Inclusion, Essays on public finance, Environmental Economics\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): hss:Shafkat Shafi Dar. 1 PhD student(s). working in areas like hss:Gender and Economics, hss:Institutional Economics, hss:Financial Inclusion.",
+      "summary": "This group includes 1 faculty member(s): hss:Shafkat Shafi Dar. 1 PhD student(s). working in areas like hss:Gender and Economics, hss:Institutional Economics, hss:Financial Inclusion.",
+      "size": 8
     },
     {
       "id": "community_13",
       "community_id": 13,
       "members": [
-        "hss:Industrial Economics",
-        "hss:Hardeep Singh",
-        "hss:Development Economics",
-        "hss:Agricultural economics",
-        "hss:Agricultural Economics",
-        "hss:Priya",
-        "hss:Meenakshi Rajeev",
-        "hss:Applied Econometrics",
-        "hss:Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity",
-        "hss:Kaushiky Hazra",
-        "hss:Game Theory",
-        "hss:Financial Economics"
+        "hss:Quleen Kaur Bijral",
+        "hss:Faisal Javid",
+        "hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals",
+        "hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives",
+        "hss:Ilam E Nasser",
+        "hss:Tribal Studies with a focus on Pahari Literature",
+        "hss:Subaltern Studies and Historiography.\u00a0 Postcolonialism**",
+        "hss:Ajaz Ahmed"
       ],
       "members_by_type": {
-        "ResearchArea": [
-          "hss:Industrial Economics",
-          "hss:Development Economics",
-          "hss:Agricultural economics",
-          "hss:Agricultural Economics",
-          "hss:Applied Econometrics",
-          "hss:Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity",
-          "hss:Game Theory",
-          "hss:Financial Economics"
-        ],
         "Faculty": [
-          "hss:Hardeep Singh",
-          "hss:Meenakshi Rajeev"
+          "hss:Quleen Kaur Bijral"
         ],
         "PhDStudent": [
-          "hss:Priya",
-          "hss:Kaushiky Hazra"
+          "hss:Faisal Javid",
+          "hss:Ilam E Nasser",
+          "hss:Ajaz Ahmed"
+        ],
+        "ResearchArea": [
+          "hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals",
+          "hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives",
+          "hss:Tribal Studies with a focus on Pahari Literature",
+          "hss:Subaltern Studies and Historiography.\u00a0 Postcolonialism**"
         ]
       },
       "internal_edges": [
         {
-          "source": "hss:Hardeep Singh",
-          "target": "hss:Agricultural Economics",
+          "source": "hss:Quleen Kaur Bijral",
+          "target": "hss:Subaltern Studies and Historiography.\u00a0 Postcolonialism**",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Hardeep Singh",
-          "target": "hss:Applied Econometrics",
+          "source": "hss:Quleen Kaur Bijral",
+          "target": "hss:Tribal Studies with a focus on Pahari Literature",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Hardeep Singh",
-          "target": "hss:Development Economics",
+          "source": "hss:Quleen Kaur Bijral",
+          "target": "hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Hardeep Singh",
-          "target": "hss:Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity",
+          "source": "hss:Quleen Kaur Bijral",
+          "target": "hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "hss:Hardeep Singh",
-          "target": "hss:Agricultural economics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Meenakshi Rajeev",
-          "target": "hss:Financial Economics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Meenakshi Rajeev",
-          "target": "hss:Industrial Economics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Meenakshi Rajeev",
-          "target": "hss:Development Economics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Meenakshi Rajeev",
-          "target": "hss:Game Theory",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "hss:Kaushiky Hazra",
-          "target": "hss:Hardeep Singh",
+          "source": "hss:Ajaz Ahmed",
+          "target": "hss:Quleen Kaur Bijral",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "hss:Kaushiky Hazra",
-          "target": "hss:Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity",
+          "source": "hss:Ajaz Ahmed",
+          "target": "hss:Tribal Studies with a focus on Pahari Literature",
           "type": "STUDIES"
         },
         {
-          "source": "hss:Priya",
-          "target": "hss:Hardeep Singh",
+          "source": "hss:Faisal Javid",
+          "target": "hss:Quleen Kaur Bijral",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "hss:Priya",
-          "target": "hss:Agricultural economics",
+          "source": "hss:Faisal Javid",
+          "target": "hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals",
+          "type": "STUDIES"
+        },
+        {
+          "source": "hss:Ilam E Nasser",
+          "target": "hss:Quleen Kaur Bijral",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "hss:Ilam E Nasser",
+          "target": "hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 13 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Hardeep Singh, Meenakshi Rajeev\n  PhDStudent: Priya, Kaushiky Hazra\n  ResearchArea: Industrial Economics, Development Economics, Agricultural economics, Agricultural Economics, Applied Econometrics, Women's Writing in Colonial and Post-Colonial Bengal, Colonial Modernity, Game Theory, Financial Economics\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 2 faculty member(s): hss:Hardeep Singh, hss:Meenakshi Rajeev. 2 PhD student(s). working in areas like hss:Industrial Economics, hss:Development Economics, hss:Agricultural economics.",
-      "summary": "This group includes 2 faculty member(s): hss:Hardeep Singh, hss:Meenakshi Rajeev. 2 PhD student(s). working in areas like hss:Industrial Economics, hss:Development Economics, hss:Agricultural economics.",
-      "size": 12
+      "text": "Community 13 in IIT Jammu Humanities & Social Sciences Department:\n  Faculty: Quleen Kaur Bijral\n  PhDStudent: Faisal Javid, Ilam E Nasser, Ajaz Ahmed\n  ResearchArea: Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals, Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives, Tribal Studies with a focus on Pahari Literature, Subaltern Studies and Historiography.\u00a0 Postcolonialism**\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 3, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): hss:Quleen Kaur Bijral. 3 PhD student(s). working in areas like hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals, hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives, hss:Tribal Studies with a focus on Pahari Literature.",
+      "summary": "This group includes 1 faculty member(s): hss:Quleen Kaur Bijral. 3 PhD student(s). working in areas like hss:Tribal Studies with special emphasis on the literature of Gujjar-Bakarwals, hss:Tribal Women\u2019s Identity and Cultural Expressions in the Pir Panjal Region: A Study through Gojri Narratives, hss:Tribal Studies with a focus on Pahari Literature.",
+      "size": 8
     }
   ]
 }

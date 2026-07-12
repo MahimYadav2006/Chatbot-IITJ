@@ -1,34 +1,34 @@
 {
   "partition": {
     "computer_science_engineering:Aroof Aimen": 0,
-    "computer_science_engineering:Gaurav Varshney": 6,
+    "computer_science_engineering:Gaurav Varshney": 1,
     "computer_science_engineering:Harkeerat Kaur": 2,
     "computer_science_engineering:Manoj Singh Gaur": 3,
-    "computer_science_engineering:Mrinmoy Bhattacharjee": 4,
-    "computer_science_engineering:Samaresh Bera": 5,
-    "computer_science_engineering:Sarada Prasad Gochhayat": 4,
-    "computer_science_engineering:Sayantan Mukherjee": 4,
+    "computer_science_engineering:Mrinmoy Bhattacharjee": 0,
+    "computer_science_engineering:Samaresh Bera": 4,
+    "computer_science_engineering:Sarada Prasad Gochhayat": 0,
+    "computer_science_engineering:Sayantan Mukherjee": 0,
     "computer_science_engineering:Shaifu Gupta": 3,
-    "computer_science_engineering:Sidharth Maheshwari": 7,
-    "computer_science_engineering:Subhasis Bhattacharjee": 8,
-    "computer_science_engineering:Suman Banerjee": 9,
-    "computer_science_engineering:Sumit Kumar Pandey": 4,
-    "computer_science_engineering:Vinit Jakhetiya": 10,
-    "computer_science_engineering:Yamuna Prasad": 1,
-    "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department": 4,
+    "computer_science_engineering:Sidharth Maheshwari": 6,
+    "computer_science_engineering:Subhasis Bhattacharjee": 7,
+    "computer_science_engineering:Suman Banerjee": 8,
+    "computer_science_engineering:Sumit Kumar Pandey": 0,
+    "computer_science_engineering:Vinit Jakhetiya": 9,
+    "computer_science_engineering:Yamuna Prasad": 5,
+    "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department": 0,
     "computer_science_engineering:Failure cases of Vision Language models": 0,
     "computer_science_engineering:Multi-task learning": 0,
     "computer_science_engineering:Few-shot learning": 0,
     "computer_science_engineering:Generative models": 0,
     "computer_science_engineering:and AI for healthcare": 0,
-    "computer_science_engineering:Anti-Phishing": 6,
-    "computer_science_engineering:Internet Security: Protocols and Policies": 6,
-    "computer_science_engineering:Email Security": 6,
-    "computer_science_engineering:Web Security": 6,
-    "computer_science_engineering:Vulnerability Assessment": 6,
-    "computer_science_engineering:Threat Modeling": 6,
-    "computer_science_engineering:Network Security": 6,
-    "computer_science_engineering:Cyber Frauds": 6,
+    "computer_science_engineering:Anti-Phishing": 1,
+    "computer_science_engineering:Internet Security: Protocols and Policies": 1,
+    "computer_science_engineering:Email Security": 1,
+    "computer_science_engineering:Web Security": 1,
+    "computer_science_engineering:Vulnerability Assessment": 1,
+    "computer_science_engineering:Threat Modeling": 1,
+    "computer_science_engineering:Network Security": 1,
+    "computer_science_engineering:Cyber Frauds": 1,
     "computer_science_engineering:Cyber Security": 3,
     "computer_science_engineering:Computer Vision": 2,
     "computer_science_engineering:Image Processing": 2,
@@ -45,109 +45,111 @@
     "computer_science_engineering:Computer Networks": 3,
     "computer_science_engineering:Operating Systems": 3,
     "computer_science_engineering:VLSI Design": 3,
-    "computer_science_engineering:Audio and Speech Processing": 4,
-    "computer_science_engineering:Machine/Deep Learning": 4,
-    "computer_science_engineering:Natural Language Processing": 4,
-    "computer_science_engineering:Resource allocation": 5,
-    "computer_science_engineering:5G/6G network slicing": 5,
-    "computer_science_engineering:Network security": 5,
-    "computer_science_engineering:Internet of Things and Industrial Internet of Things\u00a0in 5G/6G": 5,
-    "computer_science_engineering:Design security and privacy aware protocols for distributed networks and systems": 4,
-    "computer_science_engineering:such as cloud storage": 4,
-    "computer_science_engineering:Blockchain": 4,
-    "computer_science_engineering:5G and ToR": 4,
-    "computer_science_engineering:Functional Encryption": 4,
-    "computer_science_engineering:Structure-Preserving Signature": 4,
-    "computer_science_engineering:Post-Quantum Cryptography": 4,
+    "computer_science_engineering:Audio and Speech Processing": 0,
+    "computer_science_engineering:Machine/Deep Learning": 0,
+    "computer_science_engineering:Natural Language Processing": 0,
+    "computer_science_engineering:Resource allocation": 4,
+    "computer_science_engineering:5G/6G network slicing": 4,
+    "computer_science_engineering:Network security": 4,
+    "computer_science_engineering:Internet of Things and Industrial Internet of Things\u00a0in 5G/6G": 4,
+    "computer_science_engineering:Design security and privacy aware protocols for distributed networks and systems": 0,
+    "computer_science_engineering:such as cloud storage": 0,
+    "computer_science_engineering:Blockchain": 0,
+    "computer_science_engineering:5G and ToR": 0,
+    "computer_science_engineering:Functional Encryption": 0,
+    "computer_science_engineering:Structure-Preserving Signature": 0,
+    "computer_science_engineering:SNARK": 0,
+    "computer_science_engineering:Post-Quantum Cryptography": 0,
     "computer_science_engineering:Cloud computing": 3,
     "computer_science_engineering:Machine learning": 3,
-    "computer_science_engineering:Deep Learning": 1,
+    "computer_science_engineering:Deep Learning": 5,
     "computer_science_engineering:Federated learning": 3,
     "computer_science_engineering:User privacy": 3,
     "computer_science_engineering:Large Language Models": 3,
-    "computer_science_engineering:Genome Analysis": 7,
-    "computer_science_engineering:Hardware-Software Co-Design": 7,
-    "computer_science_engineering:Battery Management Systems": 7,
-    "computer_science_engineering:Machine Learning (Tsetlin Machines)": 7,
-    "computer_science_engineering:Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design": 7,
-    "computer_science_engineering:specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions": 7,
-    "computer_science_engineering:we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines": 7,
-    "computer_science_engineering:Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS": 7,
-    "computer_science_engineering:several key areas can be targeted to achieve longer battery life": 7,
-    "computer_science_engineering:efficient charge capacity utilization": 7,
-    "computer_science_engineering:Distributed Algorithms": 8,
-    "computer_science_engineering:Ad Hoc and Sensor Networks": 8,
-    "computer_science_engineering:VLSI Testing": 8,
-    "computer_science_engineering:VLSI CAD Graph Algorithms": 8,
-    "computer_science_engineering:Social an Information Network Analysis": 9,
-    "computer_science_engineering:Algorithmic Data Management": 9,
-    "computer_science_engineering:Time Varying Graph Analysis": 9,
-    "computer_science_engineering:Graph Theory and Parameterized Complexity": 9,
-    "computer_science_engineering:Visual Quality Assessment": 10,
-    "computer_science_engineering:Perceptual Signal Modeling": 10,
-    "computer_science_engineering:Visual Perception": 10,
-    "computer_science_engineering:Video and Medical Processing": 10,
-    "computer_science_engineering:Just Noticeable Difference": 10,
-    "computer_science_engineering:3D Reconstruction": 10,
-    "computer_science_engineering:Application of Machine/Deep Learning etc": 10,
-    "computer_science_engineering:Machine Learning": 1,
-    "computer_science_engineering:Big Data": 1,
-    "computer_science_engineering:Soft Computing": 1,
-    "computer_science_engineering:and\u00a0Cyber-Physical System Security": 1,
-    "computer_science_engineering:Application Domains: Natural Language Processing": 1,
-    "computer_science_engineering:Bioinformatics": 1,
-    "computer_science_engineering:Abhilash Kumar Das": 4,
-    "computer_science_engineering:Cryptology": 4,
-    "computer_science_engineering:Ajeet Kumar Verma": 10,
-    "computer_science_engineering:Image Processing, Computer Vision": 10,
-    "computer_science_engineering:Alex Joseph": 9,
-    "computer_science_engineering:Security (Sub modular function-Differential Privacy)": 9,
-    "computer_science_engineering:Ambreen Bashir": 10,
-    "computer_science_engineering:Badri N. Subudhi": 10,
-    "computer_science_engineering:Anuj": 1,
-    "computer_science_engineering:Virendra Singh": 1,
-    "computer_science_engineering:NeuroSymbolic AI and Deep Learning": 1,
-    "computer_science_engineering:Aqsa Sayeed": 5,
-    "computer_science_engineering:5G Communication & Network": 5,
-    "computer_science_engineering:Chandranshu Gupta": 6,
-    "computer_science_engineering:Deebha Mumtaz": 10,
-    "computer_science_engineering:Karan Nathwani": 10,
-    "computer_science_engineering:Dildar Ali": 9,
-    "computer_science_engineering:Submodular Functions, Algorithmic Optimization, Parameterized Complexity": 9,
-    "computer_science_engineering:Jaswinder Kour": 6,
-    "computer_science_engineering:Network and Cyber Security": 6,
-    "computer_science_engineering:Mahendra Kumar Gurve": 6,
-    "computer_science_engineering:Machine Leaning and Cyber Security": 6,
-    "computer_science_engineering:Malti Baghel": 8,
-    "computer_science_engineering:Parallel and Distributed Algorithms": 8,
+    "computer_science_engineering:Genome Analysis": 6,
+    "computer_science_engineering:Hardware-Software Co-Design": 6,
+    "computer_science_engineering:Battery Management Systems": 6,
+    "computer_science_engineering:Machine Learning (Tsetlin Machines)": 6,
+    "computer_science_engineering:Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design": 6,
+    "computer_science_engineering:specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions": 6,
+    "computer_science_engineering:we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines": 6,
+    "computer_science_engineering:Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS": 6,
+    "computer_science_engineering:several key areas can be targeted to achieve longer battery life": 6,
+    "computer_science_engineering:efficient charge capacity utilization": 6,
+    "computer_science_engineering:Distributed Algorithms": 7,
+    "computer_science_engineering:Ad Hoc and Sensor Networks": 7,
+    "computer_science_engineering:VLSI Testing": 7,
+    "computer_science_engineering:VLSI CAD Graph Algorithms": 7,
+    "computer_science_engineering:Social an Information Network Analysis": 8,
+    "computer_science_engineering:Algorithmic Data Management": 8,
+    "computer_science_engineering:Time Varying Graph Analysis": 8,
+    "computer_science_engineering:Graph Theory and Parameterized Complexity": 8,
+    "computer_science_engineering:Visual Quality Assessment": 9,
+    "computer_science_engineering:Perceptual Signal Modeling": 9,
+    "computer_science_engineering:Visual Perception": 9,
+    "computer_science_engineering:Image": 9,
+    "computer_science_engineering:Video and Medical Processing": 9,
+    "computer_science_engineering:Just Noticeable Difference": 9,
+    "computer_science_engineering:3D Reconstruction": 9,
+    "computer_science_engineering:Application of Machine/Deep Learning etc": 9,
+    "computer_science_engineering:Machine Learning": 5,
+    "computer_science_engineering:Big Data": 5,
+    "computer_science_engineering:Soft Computing": 5,
+    "computer_science_engineering:and\u00a0Cyber-Physical System Security": 5,
+    "computer_science_engineering:Application Domains: Natural Language Processing": 5,
+    "computer_science_engineering:Bioinformatics": 5,
+    "computer_science_engineering:Abhilash Kumar Das": 0,
+    "computer_science_engineering:Cryptology": 0,
+    "computer_science_engineering:Ajeet Kumar Verma": 9,
+    "computer_science_engineering:Image Processing, Computer Vision": 9,
+    "computer_science_engineering:Alex Joseph": 8,
+    "computer_science_engineering:Security (Sub modular function-Differential Privacy)": 8,
+    "computer_science_engineering:Ambreen Bashir": 9,
+    "computer_science_engineering:Badri N. Subudhi": 9,
+    "computer_science_engineering:Anuj": 5,
+    "computer_science_engineering:Virendra Singh": 5,
+    "computer_science_engineering:NeuroSymbolic AI and Deep Learning": 5,
+    "computer_science_engineering:Aqsa Sayeed": 4,
+    "computer_science_engineering:5G Communication & Network": 4,
+    "computer_science_engineering:Chandranshu Gupta": 1,
+    "computer_science_engineering:Deebha Mumtaz": 9,
+    "computer_science_engineering:Karan Nathwani": 9,
+    "computer_science_engineering:Dildar Ali": 8,
+    "computer_science_engineering:Submodular Functions, Algorithmic Optimization, Parameterized Complexity": 8,
+    "computer_science_engineering:Jaswinder Kour": 1,
+    "computer_science_engineering:Network and Cyber Security": 1,
+    "computer_science_engineering:Mahendra Kumar Gurve": 1,
+    "computer_science_engineering:Machine Leaning and Cyber Security": 1,
+    "computer_science_engineering:Malti Baghel": 7,
+    "computer_science_engineering:Parallel and Distributed Algorithms": 7,
     "computer_science_engineering:Palak Verma": 2,
     "computer_science_engineering:Biometrics and Computer Vision": 2,
-    "computer_science_engineering:Pardeep Kaur": 1,
-    "computer_science_engineering:Satyadev Ahlawat": 1,
-    "computer_science_engineering:Adversarial Machine Learning": 1,
-    "computer_science_engineering:Pintu Naik": 8,
-    "computer_science_engineering:Pooja": 9,
-    "computer_science_engineering:Database Indexing and Machine learning": 9,
-    "computer_science_engineering:Poonam Sharma": 9,
-    "computer_science_engineering:Social Networks Analysis": 9,
+    "computer_science_engineering:Pardeep Kaur": 5,
+    "computer_science_engineering:Satyadev Ahlawat": 5,
+    "computer_science_engineering:Adversarial Machine Learning": 5,
+    "computer_science_engineering:Pintu Naik": 7,
+    "computer_science_engineering:Pooja": 8,
+    "computer_science_engineering:Database Indexing and Machine learning": 8,
+    "computer_science_engineering:Poonam Sharma": 8,
+    "computer_science_engineering:Social Networks Analysis": 8,
     "computer_science_engineering:Pragti Jamwal": 3,
     "computer_science_engineering:Security issues in federated learning": 3,
-    "computer_science_engineering:Rina Mishra": 6,
-    "computer_science_engineering:Rishabh Shukla": 10,
+    "computer_science_engineering:Rina Mishra": 1,
+    "computer_science_engineering:Rishabh Shukla": 9,
     "computer_science_engineering:Rishika Kohli": 3,
     "computer_science_engineering:User Profiling": 3,
-    "computer_science_engineering:Sadbhawna": 10,
-    "computer_science_engineering:Sankar Behera": 1,
-    "computer_science_engineering:Secure Machine Learning": 1,
-    "computer_science_engineering:Surendra Tyagi": 8,
-    "computer_science_engineering:Devesh C. Jinwala": 8,
-    "computer_science_engineering:Security in Networks and IOT": 8,
+    "computer_science_engineering:Sadbhawna": 9,
+    "computer_science_engineering:Sankar Behera": 5,
+    "computer_science_engineering:Secure Machine Learning": 5,
+    "computer_science_engineering:Surendra Tyagi": 7,
+    "computer_science_engineering:Devesh C. Jinwala": 7,
+    "computer_science_engineering:Security in Networks and IOT": 7,
     "computer_science_engineering:Yogita Chhabra": 2,
     "computer_science_engineering:Artificial Intelligence & Computer Vision": 2,
-    "computer_science_engineering:Yukti Gupta": 1,
-    "computer_science_engineering:Uma Satya Ranjan": 1,
-    "computer_science_engineering:Zeenat Fatima": 10,
-    "computer_science_engineering:Image Processing & Deep Learning": 10
+    "computer_science_engineering:Yukti Gupta": 5,
+    "computer_science_engineering:Uma Satya Ranjan": 5,
+    "computer_science_engineering:Zeenat Fatima": 9,
+    "computer_science_engineering:Image Processing & Deep Learning": 9
   },
   "reports": [
     {
@@ -155,22 +157,62 @@
       "community_id": 0,
       "members": [
         "computer_science_engineering:Aroof Aimen",
+        "computer_science_engineering:Mrinmoy Bhattacharjee",
+        "computer_science_engineering:Sarada Prasad Gochhayat",
+        "computer_science_engineering:Sayantan Mukherjee",
+        "computer_science_engineering:Sumit Kumar Pandey",
+        "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
         "computer_science_engineering:Failure cases of Vision Language models",
         "computer_science_engineering:Multi-task learning",
         "computer_science_engineering:Few-shot learning",
         "computer_science_engineering:Generative models",
-        "computer_science_engineering:and AI for healthcare"
+        "computer_science_engineering:and AI for healthcare",
+        "computer_science_engineering:Audio and Speech Processing",
+        "computer_science_engineering:Machine/Deep Learning",
+        "computer_science_engineering:Natural Language Processing",
+        "computer_science_engineering:Design security and privacy aware protocols for distributed networks and systems",
+        "computer_science_engineering:such as cloud storage",
+        "computer_science_engineering:Blockchain",
+        "computer_science_engineering:5G and ToR",
+        "computer_science_engineering:Functional Encryption",
+        "computer_science_engineering:Structure-Preserving Signature",
+        "computer_science_engineering:SNARK",
+        "computer_science_engineering:Post-Quantum Cryptography",
+        "computer_science_engineering:Abhilash Kumar Das",
+        "computer_science_engineering:Cryptology"
       ],
       "members_by_type": {
         "Faculty": [
-          "computer_science_engineering:Aroof Aimen"
+          "computer_science_engineering:Aroof Aimen",
+          "computer_science_engineering:Mrinmoy Bhattacharjee",
+          "computer_science_engineering:Sarada Prasad Gochhayat",
+          "computer_science_engineering:Sayantan Mukherjee",
+          "computer_science_engineering:Sumit Kumar Pandey"
+        ],
+        "Department": [
+          "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department"
         ],
         "ResearchArea": [
           "computer_science_engineering:Failure cases of Vision Language models",
           "computer_science_engineering:Multi-task learning",
           "computer_science_engineering:Few-shot learning",
           "computer_science_engineering:Generative models",
-          "computer_science_engineering:and AI for healthcare"
+          "computer_science_engineering:and AI for healthcare",
+          "computer_science_engineering:Audio and Speech Processing",
+          "computer_science_engineering:Machine/Deep Learning",
+          "computer_science_engineering:Natural Language Processing",
+          "computer_science_engineering:Design security and privacy aware protocols for distributed networks and systems",
+          "computer_science_engineering:such as cloud storage",
+          "computer_science_engineering:Blockchain",
+          "computer_science_engineering:5G and ToR",
+          "computer_science_engineering:Functional Encryption",
+          "computer_science_engineering:Structure-Preserving Signature",
+          "computer_science_engineering:SNARK",
+          "computer_science_engineering:Post-Quantum Cryptography",
+          "computer_science_engineering:Cryptology"
+        ],
+        "PhDStudent": [
+          "computer_science_engineering:Abhilash Kumar Das"
         ]
       },
       "internal_edges": [
@@ -198,173 +240,245 @@
           "source": "computer_science_engineering:Aroof Aimen",
           "target": "computer_science_engineering:and AI for healthcare",
           "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Aroof Aimen",
+          "target": "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "computer_science_engineering:Mrinmoy Bhattacharjee",
+          "target": "computer_science_engineering:Audio and Speech Processing",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Mrinmoy Bhattacharjee",
+          "target": "computer_science_engineering:Machine/Deep Learning",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Mrinmoy Bhattacharjee",
+          "target": "computer_science_engineering:Natural Language Processing",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Mrinmoy Bhattacharjee",
+          "target": "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "computer_science_engineering:Sarada Prasad Gochhayat",
+          "target": "computer_science_engineering:Design security and privacy aware protocols for distributed networks and systems",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Sarada Prasad Gochhayat",
+          "target": "computer_science_engineering:such as cloud storage",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Sarada Prasad Gochhayat",
+          "target": "computer_science_engineering:Blockchain",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Sarada Prasad Gochhayat",
+          "target": "computer_science_engineering:5G and ToR",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Sarada Prasad Gochhayat",
+          "target": "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "computer_science_engineering:Sayantan Mukherjee",
+          "target": "computer_science_engineering:Functional Encryption",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Sayantan Mukherjee",
+          "target": "computer_science_engineering:Structure-Preserving Signature",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Sayantan Mukherjee",
+          "target": "computer_science_engineering:SNARK",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Sayantan Mukherjee",
+          "target": "computer_science_engineering:Post-Quantum Cryptography",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Sayantan Mukherjee",
+          "target": "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "computer_science_engineering:Sumit Kumar Pandey",
+          "target": "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
+        {
+          "source": "computer_science_engineering:Sumit Kumar Pandey",
+          "target": "computer_science_engineering:Cryptology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Abhilash Kumar Das",
+          "target": "computer_science_engineering:Sumit Kumar Pandey",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "computer_science_engineering:Abhilash Kumar Das",
+          "target": "computer_science_engineering:Cryptology",
+          "type": "STUDIES"
         }
       ],
-      "text": "Community 0 in IIT Jammu Computer Science & Engineering Department:\n  Faculty: Aroof Aimen\n  ResearchArea: Failure cases of Vision Language models, Multi-task learning, Few-shot learning, Generative models, and AI for healthcare\n  Relationships: RESEARCHES_IN: 5\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Aroof Aimen. working in areas like computer_science_engineering:Failure cases of Vision Language models, computer_science_engineering:Multi-task learning, computer_science_engineering:Few-shot learning.",
-      "summary": "This group includes 1 faculty member(s): computer_science_engineering:Aroof Aimen. working in areas like computer_science_engineering:Failure cases of Vision Language models, computer_science_engineering:Multi-task learning, computer_science_engineering:Few-shot learning.",
-      "size": 6
+      "text": "Community 0 in IIT Jammu Computer Science & Engineering Department:\n  Department: Department of Computer Science and Engineering\n  Faculty: Aroof Aimen, Mrinmoy Bhattacharjee, Sarada Prasad Gochhayat, Sayantan Mukherjee, Sumit Kumar Pandey\n  PhDStudent: Abhilash Kumar Das\n  ResearchArea: Failure cases of Vision Language models, Multi-task learning, Few-shot learning, Generative models, and AI for healthcare, Audio and Speech Processing, Machine/Deep Learning, Natural Language Processing, Design security and privacy aware protocols for distributed networks and systems, such as cloud storage, Blockchain, 5G and ToR, Functional Encryption, Structure-Preserving Signature, SNARK\n  Relationships: RESEARCHES_IN: 17, MEMBER_OF: 5, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 5 faculty member(s): computer_science_engineering:Aroof Aimen, computer_science_engineering:Mrinmoy Bhattacharjee, computer_science_engineering:Sarada Prasad Gochhayat, computer_science_engineering:Sayantan Mukherjee, computer_science_engineering:Sumit Kumar Pandey. 1 PhD student(s). working in areas like computer_science_engineering:Failure cases of Vision Language models, computer_science_engineering:Multi-task learning, computer_science_engineering:Few-shot learning.",
+      "summary": "This group includes 5 faculty member(s): computer_science_engineering:Aroof Aimen, computer_science_engineering:Mrinmoy Bhattacharjee, computer_science_engineering:Sarada Prasad Gochhayat, computer_science_engineering:Sayantan Mukherjee, computer_science_engineering:Sumit Kumar Pandey. 1 PhD student(s). working in areas like computer_science_engineering:Failure cases of Vision Language models, computer_science_engineering:Multi-task learning, computer_science_engineering:Few-shot learning.",
+      "size": 24
     },
     {
       "id": "community_1",
       "community_id": 1,
       "members": [
-        "computer_science_engineering:Yamuna Prasad",
-        "computer_science_engineering:Deep Learning",
-        "computer_science_engineering:Machine Learning",
-        "computer_science_engineering:Big Data",
-        "computer_science_engineering:Soft Computing",
-        "computer_science_engineering:and\u00a0Cyber-Physical System Security",
-        "computer_science_engineering:Application Domains: Natural Language Processing",
-        "computer_science_engineering:Bioinformatics",
-        "computer_science_engineering:Anuj",
-        "computer_science_engineering:Virendra Singh",
-        "computer_science_engineering:NeuroSymbolic AI and Deep Learning",
-        "computer_science_engineering:Pardeep Kaur",
-        "computer_science_engineering:Satyadev Ahlawat",
-        "computer_science_engineering:Adversarial Machine Learning",
-        "computer_science_engineering:Sankar Behera",
-        "computer_science_engineering:Secure Machine Learning",
-        "computer_science_engineering:Yukti Gupta",
-        "computer_science_engineering:Uma Satya Ranjan"
+        "computer_science_engineering:Gaurav Varshney",
+        "computer_science_engineering:Anti-Phishing",
+        "computer_science_engineering:Internet Security: Protocols and Policies",
+        "computer_science_engineering:Email Security",
+        "computer_science_engineering:Web Security",
+        "computer_science_engineering:Vulnerability Assessment",
+        "computer_science_engineering:Threat Modeling",
+        "computer_science_engineering:Network Security",
+        "computer_science_engineering:Cyber Frauds",
+        "computer_science_engineering:Chandranshu Gupta",
+        "computer_science_engineering:Jaswinder Kour",
+        "computer_science_engineering:Network and Cyber Security",
+        "computer_science_engineering:Mahendra Kumar Gurve",
+        "computer_science_engineering:Machine Leaning and Cyber Security",
+        "computer_science_engineering:Rina Mishra"
       ],
       "members_by_type": {
         "Faculty": [
-          "computer_science_engineering:Yamuna Prasad"
+          "computer_science_engineering:Gaurav Varshney"
         ],
         "ResearchArea": [
-          "computer_science_engineering:Deep Learning",
-          "computer_science_engineering:Machine Learning",
-          "computer_science_engineering:Big Data",
-          "computer_science_engineering:Soft Computing",
-          "computer_science_engineering:and\u00a0Cyber-Physical System Security",
-          "computer_science_engineering:Application Domains: Natural Language Processing",
-          "computer_science_engineering:Bioinformatics",
-          "computer_science_engineering:NeuroSymbolic AI and Deep Learning",
-          "computer_science_engineering:Adversarial Machine Learning",
-          "computer_science_engineering:Secure Machine Learning"
+          "computer_science_engineering:Anti-Phishing",
+          "computer_science_engineering:Internet Security: Protocols and Policies",
+          "computer_science_engineering:Email Security",
+          "computer_science_engineering:Web Security",
+          "computer_science_engineering:Vulnerability Assessment",
+          "computer_science_engineering:Threat Modeling",
+          "computer_science_engineering:Network Security",
+          "computer_science_engineering:Cyber Frauds",
+          "computer_science_engineering:Network and Cyber Security",
+          "computer_science_engineering:Machine Leaning and Cyber Security"
         ],
         "PhDStudent": [
-          "computer_science_engineering:Anuj",
-          "computer_science_engineering:Pardeep Kaur",
-          "computer_science_engineering:Sankar Behera",
-          "computer_science_engineering:Yukti Gupta"
-        ],
-        "ExternalPerson": [
-          "computer_science_engineering:Virendra Singh",
-          "computer_science_engineering:Satyadev Ahlawat",
-          "computer_science_engineering:Uma Satya Ranjan"
+          "computer_science_engineering:Chandranshu Gupta",
+          "computer_science_engineering:Jaswinder Kour",
+          "computer_science_engineering:Mahendra Kumar Gurve",
+          "computer_science_engineering:Rina Mishra"
         ]
       },
       "internal_edges": [
         {
-          "source": "computer_science_engineering:Yamuna Prasad",
-          "target": "computer_science_engineering:Machine Learning",
+          "source": "computer_science_engineering:Gaurav Varshney",
+          "target": "computer_science_engineering:Anti-Phishing",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Yamuna Prasad",
-          "target": "computer_science_engineering:Deep Learning",
+          "source": "computer_science_engineering:Gaurav Varshney",
+          "target": "computer_science_engineering:Internet Security: Protocols and Policies",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Yamuna Prasad",
-          "target": "computer_science_engineering:Big Data",
+          "source": "computer_science_engineering:Gaurav Varshney",
+          "target": "computer_science_engineering:Email Security",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Yamuna Prasad",
-          "target": "computer_science_engineering:Soft Computing",
+          "source": "computer_science_engineering:Gaurav Varshney",
+          "target": "computer_science_engineering:Web Security",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Yamuna Prasad",
-          "target": "computer_science_engineering:and\u00a0Cyber-Physical System Security",
+          "source": "computer_science_engineering:Gaurav Varshney",
+          "target": "computer_science_engineering:Vulnerability Assessment",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Yamuna Prasad",
-          "target": "computer_science_engineering:Application Domains: Natural Language Processing",
+          "source": "computer_science_engineering:Gaurav Varshney",
+          "target": "computer_science_engineering:Threat Modeling",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Yamuna Prasad",
-          "target": "computer_science_engineering:Bioinformatics",
+          "source": "computer_science_engineering:Gaurav Varshney",
+          "target": "computer_science_engineering:Network Security",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Yamuna Prasad",
-          "target": "computer_science_engineering:NeuroSymbolic AI and Deep Learning",
+          "source": "computer_science_engineering:Gaurav Varshney",
+          "target": "computer_science_engineering:Cyber Frauds",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Yamuna Prasad",
-          "target": "computer_science_engineering:Adversarial Machine Learning",
+          "source": "computer_science_engineering:Gaurav Varshney",
+          "target": "computer_science_engineering:Network and Cyber Security",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Yamuna Prasad",
-          "target": "computer_science_engineering:Secure Machine Learning",
+          "source": "computer_science_engineering:Gaurav Varshney",
+          "target": "computer_science_engineering:Machine Leaning and Cyber Security",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Anuj",
-          "target": "computer_science_engineering:Yamuna Prasad",
+          "source": "computer_science_engineering:Chandranshu Gupta",
+          "target": "computer_science_engineering:Gaurav Varshney",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "computer_science_engineering:Anuj",
-          "target": "computer_science_engineering:Virendra Singh",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "computer_science_engineering:Anuj",
-          "target": "computer_science_engineering:NeuroSymbolic AI and Deep Learning",
+          "source": "computer_science_engineering:Chandranshu Gupta",
+          "target": "computer_science_engineering:Network Security",
           "type": "STUDIES"
         },
         {
-          "source": "computer_science_engineering:Pardeep Kaur",
-          "target": "computer_science_engineering:Yamuna Prasad",
+          "source": "computer_science_engineering:Jaswinder Kour",
+          "target": "computer_science_engineering:Gaurav Varshney",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "computer_science_engineering:Pardeep Kaur",
-          "target": "computer_science_engineering:Satyadev Ahlawat",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "computer_science_engineering:Pardeep Kaur",
-          "target": "computer_science_engineering:Adversarial Machine Learning",
+          "source": "computer_science_engineering:Jaswinder Kour",
+          "target": "computer_science_engineering:Network and Cyber Security",
           "type": "STUDIES"
         },
         {
-          "source": "computer_science_engineering:Sankar Behera",
-          "target": "computer_science_engineering:Yamuna Prasad",
+          "source": "computer_science_engineering:Mahendra Kumar Gurve",
+          "target": "computer_science_engineering:Gaurav Varshney",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "computer_science_engineering:Sankar Behera",
-          "target": "computer_science_engineering:Secure Machine Learning",
+          "source": "computer_science_engineering:Mahendra Kumar Gurve",
+          "target": "computer_science_engineering:Machine Leaning and Cyber Security",
           "type": "STUDIES"
         },
         {
-          "source": "computer_science_engineering:Yukti Gupta",
-          "target": "computer_science_engineering:Uma Satya Ranjan",
+          "source": "computer_science_engineering:Rina Mishra",
+          "target": "computer_science_engineering:Gaurav Varshney",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "computer_science_engineering:Yukti Gupta",
-          "target": "computer_science_engineering:Yamuna Prasad",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "computer_science_engineering:Yukti Gupta",
-          "target": "computer_science_engineering:Deep Learning",
+          "source": "computer_science_engineering:Rina Mishra",
+          "target": "computer_science_engineering:Network and Cyber Security",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 1 in IIT Jammu Computer Science & Engineering Department:\n  ExternalPerson: Virendra Singh, Satyadev Ahlawat, Uma Satya Ranjan\n  Faculty: Yamuna Prasad\n  PhDStudent: Anuj, Pardeep Kaur, Sankar Behera, Yukti Gupta\n  ResearchArea: Deep Learning, Machine Learning, Big Data, Soft Computing, and\u00a0Cyber-Physical System Security, Application Domains: Natural Language Processing, Bioinformatics, NeuroSymbolic AI and Deep Learning, Adversarial Machine Learning, Secure Machine Learning\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 7, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Yamuna Prasad. 4 PhD student(s). working in areas like computer_science_engineering:Deep Learning, computer_science_engineering:Machine Learning, computer_science_engineering:Big Data.",
-      "summary": "This group includes 1 faculty member(s): computer_science_engineering:Yamuna Prasad. 4 PhD student(s). working in areas like computer_science_engineering:Deep Learning, computer_science_engineering:Machine Learning, computer_science_engineering:Big Data.",
-      "size": 18
+      "text": "Community 1 in IIT Jammu Computer Science & Engineering Department:\n  Faculty: Gaurav Varshney\n  PhDStudent: Chandranshu Gupta, Jaswinder Kour, Mahendra Kumar Gurve, Rina Mishra\n  ResearchArea: Anti-Phishing, Internet Security: Protocols and Policies, Email Security, Web Security, Vulnerability Assessment, Threat Modeling, Network Security, Cyber Frauds, Network and Cyber Security, Machine Leaning and Cyber Security\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Gaurav Varshney. 4 PhD student(s). working in areas like computer_science_engineering:Anti-Phishing, computer_science_engineering:Internet Security: Protocols and Policies, computer_science_engineering:Email Security.",
+      "summary": "This group includes 1 faculty member(s): computer_science_engineering:Gaurav Varshney. 4 PhD student(s). working in areas like computer_science_engineering:Anti-Phishing, computer_science_engineering:Internet Security: Protocols and Policies, computer_science_engineering:Email Security.",
+      "size": 15
     },
     {
       "id": "community_2",
@@ -647,146 +761,6 @@
       "id": "community_4",
       "community_id": 4,
       "members": [
-        "computer_science_engineering:Mrinmoy Bhattacharjee",
-        "computer_science_engineering:Sarada Prasad Gochhayat",
-        "computer_science_engineering:Sayantan Mukherjee",
-        "computer_science_engineering:Sumit Kumar Pandey",
-        "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
-        "computer_science_engineering:Audio and Speech Processing",
-        "computer_science_engineering:Machine/Deep Learning",
-        "computer_science_engineering:Natural Language Processing",
-        "computer_science_engineering:Design security and privacy aware protocols for distributed networks and systems",
-        "computer_science_engineering:such as cloud storage",
-        "computer_science_engineering:Blockchain",
-        "computer_science_engineering:5G and ToR",
-        "computer_science_engineering:Functional Encryption",
-        "computer_science_engineering:Structure-Preserving Signature",
-        "computer_science_engineering:Post-Quantum Cryptography",
-        "computer_science_engineering:Abhilash Kumar Das",
-        "computer_science_engineering:Cryptology"
-      ],
-      "members_by_type": {
-        "Faculty": [
-          "computer_science_engineering:Mrinmoy Bhattacharjee",
-          "computer_science_engineering:Sarada Prasad Gochhayat",
-          "computer_science_engineering:Sayantan Mukherjee",
-          "computer_science_engineering:Sumit Kumar Pandey"
-        ],
-        "Department": [
-          "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department"
-        ],
-        "ResearchArea": [
-          "computer_science_engineering:Audio and Speech Processing",
-          "computer_science_engineering:Machine/Deep Learning",
-          "computer_science_engineering:Natural Language Processing",
-          "computer_science_engineering:Design security and privacy aware protocols for distributed networks and systems",
-          "computer_science_engineering:such as cloud storage",
-          "computer_science_engineering:Blockchain",
-          "computer_science_engineering:5G and ToR",
-          "computer_science_engineering:Functional Encryption",
-          "computer_science_engineering:Structure-Preserving Signature",
-          "computer_science_engineering:Post-Quantum Cryptography",
-          "computer_science_engineering:Cryptology"
-        ],
-        "PhDStudent": [
-          "computer_science_engineering:Abhilash Kumar Das"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "computer_science_engineering:Mrinmoy Bhattacharjee",
-          "target": "computer_science_engineering:Audio and Speech Processing",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Mrinmoy Bhattacharjee",
-          "target": "computer_science_engineering:Machine/Deep Learning",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Mrinmoy Bhattacharjee",
-          "target": "computer_science_engineering:Natural Language Processing",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Mrinmoy Bhattacharjee",
-          "target": "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "computer_science_engineering:Sarada Prasad Gochhayat",
-          "target": "computer_science_engineering:Design security and privacy aware protocols for distributed networks and systems",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Sarada Prasad Gochhayat",
-          "target": "computer_science_engineering:such as cloud storage",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Sarada Prasad Gochhayat",
-          "target": "computer_science_engineering:Blockchain",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Sarada Prasad Gochhayat",
-          "target": "computer_science_engineering:5G and ToR",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Sarada Prasad Gochhayat",
-          "target": "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "computer_science_engineering:Sayantan Mukherjee",
-          "target": "computer_science_engineering:Functional Encryption",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Sayantan Mukherjee",
-          "target": "computer_science_engineering:Structure-Preserving Signature",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Sayantan Mukherjee",
-          "target": "computer_science_engineering:Post-Quantum Cryptography",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Sayantan Mukherjee",
-          "target": "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "computer_science_engineering:Sumit Kumar Pandey",
-          "target": "computer_science_engineering:Cryptology",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "computer_science_engineering:Sumit Kumar Pandey",
-          "target": "IIT Jammu COMPUTER_SCIENCE_ENGINEERING Department",
-          "type": "MEMBER_OF"
-        },
-        {
-          "source": "computer_science_engineering:Abhilash Kumar Das",
-          "target": "computer_science_engineering:Sumit Kumar Pandey",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "computer_science_engineering:Abhilash Kumar Das",
-          "target": "computer_science_engineering:Cryptology",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 4 in IIT Jammu Computer Science & Engineering Department:\n  Department: Department of Computer Science and Engineering\n  Faculty: Mrinmoy Bhattacharjee, Sarada Prasad Gochhayat, Sayantan Mukherjee, Sumit Kumar Pandey\n  PhDStudent: Abhilash Kumar Das\n  ResearchArea: Audio and Speech Processing, Machine/Deep Learning, Natural Language Processing, Design security and privacy aware protocols for distributed networks and systems, such as cloud storage, Blockchain, 5G and ToR, Functional Encryption, Structure-Preserving Signature, Post-Quantum Cryptography, Cryptology\n  Relationships: RESEARCHES_IN: 11, MEMBER_OF: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 4 faculty member(s): computer_science_engineering:Mrinmoy Bhattacharjee, computer_science_engineering:Sarada Prasad Gochhayat, computer_science_engineering:Sayantan Mukherjee, computer_science_engineering:Sumit Kumar Pandey. 1 PhD student(s). working in areas like computer_science_engineering:Audio and Speech Processing, computer_science_engineering:Machine/Deep Learning, computer_science_engineering:Natural Language Processing.",
-      "summary": "This group includes 4 faculty member(s): computer_science_engineering:Mrinmoy Bhattacharjee, computer_science_engineering:Sarada Prasad Gochhayat, computer_science_engineering:Sayantan Mukherjee, computer_science_engineering:Sumit Kumar Pandey. 1 PhD student(s). working in areas like computer_science_engineering:Audio and Speech Processing, computer_science_engineering:Machine/Deep Learning, computer_science_engineering:Natural Language Processing.",
-      "size": 17
-    },
-    {
-      "id": "community_5",
-      "community_id": 5,
-      "members": [
         "computer_science_engineering:Samaresh Bera",
         "computer_science_engineering:Resource allocation",
         "computer_science_engineering:5G/6G network slicing",
@@ -847,152 +821,175 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 5 in IIT Jammu Computer Science & Engineering Department:\n  Faculty: Samaresh Bera\n  PhDStudent: Aqsa Sayeed\n  ResearchArea: Resource allocation, 5G/6G network slicing, Network security, Internet of Things and Industrial Internet of Things\u00a0in 5G/6G, 5G Communication & Network\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Samaresh Bera. 1 PhD student(s). working in areas like computer_science_engineering:Resource allocation, computer_science_engineering:5G/6G network slicing, computer_science_engineering:Network security.",
+      "text": "Community 4 in IIT Jammu Computer Science & Engineering Department:\n  Faculty: Samaresh Bera\n  PhDStudent: Aqsa Sayeed\n  ResearchArea: Resource allocation, 5G/6G network slicing, Network security, Internet of Things and Industrial Internet of Things\u00a0in 5G/6G, 5G Communication & Network\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Samaresh Bera. 1 PhD student(s). working in areas like computer_science_engineering:Resource allocation, computer_science_engineering:5G/6G network slicing, computer_science_engineering:Network security.",
       "summary": "This group includes 1 faculty member(s): computer_science_engineering:Samaresh Bera. 1 PhD student(s). working in areas like computer_science_engineering:Resource allocation, computer_science_engineering:5G/6G network slicing, computer_science_engineering:Network security.",
       "size": 7
     },
     {
-      "id": "community_6",
-      "community_id": 6,
+      "id": "community_5",
+      "community_id": 5,
       "members": [
-        "computer_science_engineering:Gaurav Varshney",
-        "computer_science_engineering:Anti-Phishing",
-        "computer_science_engineering:Internet Security: Protocols and Policies",
-        "computer_science_engineering:Email Security",
-        "computer_science_engineering:Web Security",
-        "computer_science_engineering:Vulnerability Assessment",
-        "computer_science_engineering:Threat Modeling",
-        "computer_science_engineering:Network Security",
-        "computer_science_engineering:Cyber Frauds",
-        "computer_science_engineering:Chandranshu Gupta",
-        "computer_science_engineering:Jaswinder Kour",
-        "computer_science_engineering:Network and Cyber Security",
-        "computer_science_engineering:Mahendra Kumar Gurve",
-        "computer_science_engineering:Machine Leaning and Cyber Security",
-        "computer_science_engineering:Rina Mishra"
+        "computer_science_engineering:Yamuna Prasad",
+        "computer_science_engineering:Deep Learning",
+        "computer_science_engineering:Machine Learning",
+        "computer_science_engineering:Big Data",
+        "computer_science_engineering:Soft Computing",
+        "computer_science_engineering:and\u00a0Cyber-Physical System Security",
+        "computer_science_engineering:Application Domains: Natural Language Processing",
+        "computer_science_engineering:Bioinformatics",
+        "computer_science_engineering:Anuj",
+        "computer_science_engineering:Virendra Singh",
+        "computer_science_engineering:NeuroSymbolic AI and Deep Learning",
+        "computer_science_engineering:Pardeep Kaur",
+        "computer_science_engineering:Satyadev Ahlawat",
+        "computer_science_engineering:Adversarial Machine Learning",
+        "computer_science_engineering:Sankar Behera",
+        "computer_science_engineering:Secure Machine Learning",
+        "computer_science_engineering:Yukti Gupta",
+        "computer_science_engineering:Uma Satya Ranjan"
       ],
       "members_by_type": {
         "Faculty": [
-          "computer_science_engineering:Gaurav Varshney"
+          "computer_science_engineering:Yamuna Prasad"
         ],
         "ResearchArea": [
-          "computer_science_engineering:Anti-Phishing",
-          "computer_science_engineering:Internet Security: Protocols and Policies",
-          "computer_science_engineering:Email Security",
-          "computer_science_engineering:Web Security",
-          "computer_science_engineering:Vulnerability Assessment",
-          "computer_science_engineering:Threat Modeling",
-          "computer_science_engineering:Network Security",
-          "computer_science_engineering:Cyber Frauds",
-          "computer_science_engineering:Network and Cyber Security",
-          "computer_science_engineering:Machine Leaning and Cyber Security"
+          "computer_science_engineering:Deep Learning",
+          "computer_science_engineering:Machine Learning",
+          "computer_science_engineering:Big Data",
+          "computer_science_engineering:Soft Computing",
+          "computer_science_engineering:and\u00a0Cyber-Physical System Security",
+          "computer_science_engineering:Application Domains: Natural Language Processing",
+          "computer_science_engineering:Bioinformatics",
+          "computer_science_engineering:NeuroSymbolic AI and Deep Learning",
+          "computer_science_engineering:Adversarial Machine Learning",
+          "computer_science_engineering:Secure Machine Learning"
         ],
         "PhDStudent": [
-          "computer_science_engineering:Chandranshu Gupta",
-          "computer_science_engineering:Jaswinder Kour",
-          "computer_science_engineering:Mahendra Kumar Gurve",
-          "computer_science_engineering:Rina Mishra"
+          "computer_science_engineering:Anuj",
+          "computer_science_engineering:Pardeep Kaur",
+          "computer_science_engineering:Sankar Behera",
+          "computer_science_engineering:Yukti Gupta"
+        ],
+        "ExternalPerson": [
+          "computer_science_engineering:Virendra Singh",
+          "computer_science_engineering:Satyadev Ahlawat",
+          "computer_science_engineering:Uma Satya Ranjan"
         ]
       },
       "internal_edges": [
         {
-          "source": "computer_science_engineering:Gaurav Varshney",
-          "target": "computer_science_engineering:Anti-Phishing",
+          "source": "computer_science_engineering:Yamuna Prasad",
+          "target": "computer_science_engineering:Machine Learning",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Gaurav Varshney",
-          "target": "computer_science_engineering:Internet Security: Protocols and Policies",
+          "source": "computer_science_engineering:Yamuna Prasad",
+          "target": "computer_science_engineering:Deep Learning",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Gaurav Varshney",
-          "target": "computer_science_engineering:Email Security",
+          "source": "computer_science_engineering:Yamuna Prasad",
+          "target": "computer_science_engineering:Big Data",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Gaurav Varshney",
-          "target": "computer_science_engineering:Web Security",
+          "source": "computer_science_engineering:Yamuna Prasad",
+          "target": "computer_science_engineering:Soft Computing",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Gaurav Varshney",
-          "target": "computer_science_engineering:Vulnerability Assessment",
+          "source": "computer_science_engineering:Yamuna Prasad",
+          "target": "computer_science_engineering:and\u00a0Cyber-Physical System Security",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Gaurav Varshney",
-          "target": "computer_science_engineering:Threat Modeling",
+          "source": "computer_science_engineering:Yamuna Prasad",
+          "target": "computer_science_engineering:Application Domains: Natural Language Processing",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Gaurav Varshney",
-          "target": "computer_science_engineering:Network Security",
+          "source": "computer_science_engineering:Yamuna Prasad",
+          "target": "computer_science_engineering:Bioinformatics",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Gaurav Varshney",
-          "target": "computer_science_engineering:Cyber Frauds",
+          "source": "computer_science_engineering:Yamuna Prasad",
+          "target": "computer_science_engineering:NeuroSymbolic AI and Deep Learning",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Gaurav Varshney",
-          "target": "computer_science_engineering:Network and Cyber Security",
+          "source": "computer_science_engineering:Yamuna Prasad",
+          "target": "computer_science_engineering:Adversarial Machine Learning",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Gaurav Varshney",
-          "target": "computer_science_engineering:Machine Leaning and Cyber Security",
+          "source": "computer_science_engineering:Yamuna Prasad",
+          "target": "computer_science_engineering:Secure Machine Learning",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "computer_science_engineering:Chandranshu Gupta",
-          "target": "computer_science_engineering:Gaurav Varshney",
+          "source": "computer_science_engineering:Anuj",
+          "target": "computer_science_engineering:Yamuna Prasad",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "computer_science_engineering:Chandranshu Gupta",
-          "target": "computer_science_engineering:Network Security",
+          "source": "computer_science_engineering:Anuj",
+          "target": "computer_science_engineering:Virendra Singh",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "computer_science_engineering:Anuj",
+          "target": "computer_science_engineering:NeuroSymbolic AI and Deep Learning",
           "type": "STUDIES"
         },
         {
-          "source": "computer_science_engineering:Jaswinder Kour",
-          "target": "computer_science_engineering:Gaurav Varshney",
+          "source": "computer_science_engineering:Pardeep Kaur",
+          "target": "computer_science_engineering:Yamuna Prasad",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "computer_science_engineering:Jaswinder Kour",
-          "target": "computer_science_engineering:Network and Cyber Security",
+          "source": "computer_science_engineering:Pardeep Kaur",
+          "target": "computer_science_engineering:Satyadev Ahlawat",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "computer_science_engineering:Pardeep Kaur",
+          "target": "computer_science_engineering:Adversarial Machine Learning",
           "type": "STUDIES"
         },
         {
-          "source": "computer_science_engineering:Mahendra Kumar Gurve",
-          "target": "computer_science_engineering:Gaurav Varshney",
+          "source": "computer_science_engineering:Sankar Behera",
+          "target": "computer_science_engineering:Yamuna Prasad",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "computer_science_engineering:Mahendra Kumar Gurve",
-          "target": "computer_science_engineering:Machine Leaning and Cyber Security",
+          "source": "computer_science_engineering:Sankar Behera",
+          "target": "computer_science_engineering:Secure Machine Learning",
           "type": "STUDIES"
         },
         {
-          "source": "computer_science_engineering:Rina Mishra",
-          "target": "computer_science_engineering:Gaurav Varshney",
+          "source": "computer_science_engineering:Yukti Gupta",
+          "target": "computer_science_engineering:Uma Satya Ranjan",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "computer_science_engineering:Rina Mishra",
-          "target": "computer_science_engineering:Network and Cyber Security",
+          "source": "computer_science_engineering:Yukti Gupta",
+          "target": "computer_science_engineering:Yamuna Prasad",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "computer_science_engineering:Yukti Gupta",
+          "target": "computer_science_engineering:Deep Learning",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 6 in IIT Jammu Computer Science & Engineering Department:\n  Faculty: Gaurav Varshney\n  PhDStudent: Chandranshu Gupta, Jaswinder Kour, Mahendra Kumar Gurve, Rina Mishra\n  ResearchArea: Anti-Phishing, Internet Security: Protocols and Policies, Email Security, Web Security, Vulnerability Assessment, Threat Modeling, Network Security, Cyber Frauds, Network and Cyber Security, Machine Leaning and Cyber Security\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Gaurav Varshney. 4 PhD student(s). working in areas like computer_science_engineering:Anti-Phishing, computer_science_engineering:Internet Security: Protocols and Policies, computer_science_engineering:Email Security.",
-      "summary": "This group includes 1 faculty member(s): computer_science_engineering:Gaurav Varshney. 4 PhD student(s). working in areas like computer_science_engineering:Anti-Phishing, computer_science_engineering:Internet Security: Protocols and Policies, computer_science_engineering:Email Security.",
-      "size": 15
+      "text": "Community 5 in IIT Jammu Computer Science & Engineering Department:\n  ExternalPerson: Virendra Singh, Satyadev Ahlawat, Uma Satya Ranjan\n  Faculty: Yamuna Prasad\n  PhDStudent: Anuj, Pardeep Kaur, Sankar Behera, Yukti Gupta\n  ResearchArea: Deep Learning, Machine Learning, Big Data, Soft Computing, and\u00a0Cyber-Physical System Security, Application Domains: Natural Language Processing, Bioinformatics, NeuroSymbolic AI and Deep Learning, Adversarial Machine Learning, Secure Machine Learning\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 7, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Yamuna Prasad. 4 PhD student(s). working in areas like computer_science_engineering:Deep Learning, computer_science_engineering:Machine Learning, computer_science_engineering:Big Data.",
+      "summary": "This group includes 1 faculty member(s): computer_science_engineering:Yamuna Prasad. 4 PhD student(s). working in areas like computer_science_engineering:Deep Learning, computer_science_engineering:Machine Learning, computer_science_engineering:Big Data.",
+      "size": 18
     },
     {
-      "id": "community_7",
-      "community_id": 7,
+      "id": "community_6",
+      "community_id": 6,
       "members": [
         "computer_science_engineering:Sidharth Maheshwari",
         "computer_science_engineering:Genome Analysis",
@@ -1075,13 +1072,13 @@
           "type": "RESEARCHES_IN"
         }
       ],
-      "text": "Community 7 in IIT Jammu Computer Science & Engineering Department:\n  Faculty: Sidharth Maheshwari\n  ResearchArea: Genome Analysis, Hardware-Software Co-Design, Battery Management Systems, Machine Learning (Tsetlin Machines), Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design, specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions, we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines, Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS, several key areas can be targeted to achieve longer battery life, efficient charge capacity utilization\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Sidharth Maheshwari. working in areas like computer_science_engineering:Genome Analysis, computer_science_engineering:Hardware-Software Co-Design, computer_science_engineering:Battery Management Systems.",
+      "text": "Community 6 in IIT Jammu Computer Science & Engineering Department:\n  Faculty: Sidharth Maheshwari\n  ResearchArea: Genome Analysis, Hardware-Software Co-Design, Battery Management Systems, Machine Learning (Tsetlin Machines), Genome Analysis - We are embarking on an innovative venture to develop energy-efficient genome analysis solutions through hardware/software co-design, specifically targeting low-power and affordable platforms.\u00a0The focus is on genome assembly and downstream analysis\u00a0using data generated from 2nd\u00a0and 3rd\u00a0generation sequencing technology. In additions, we intent to develop affordable hardware-based metagenomic and anti-microbial resistance monitoring pipelines, Battery Management System - Improving the battery management system (BMS) in electric vehicles (EVs) through the integration of machine learning (ML) via hardware/software co-design at the edge holds great potential for enhancing the overall performance of EVs. By leveraging ML in the BMS, several key areas can be targeted to achieve longer battery life, efficient charge capacity utilization\n  Relationships: RESEARCHES_IN: 10\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Sidharth Maheshwari. working in areas like computer_science_engineering:Genome Analysis, computer_science_engineering:Hardware-Software Co-Design, computer_science_engineering:Battery Management Systems.",
       "summary": "This group includes 1 faculty member(s): computer_science_engineering:Sidharth Maheshwari. working in areas like computer_science_engineering:Genome Analysis, computer_science_engineering:Hardware-Software Co-Design, computer_science_engineering:Battery Management Systems.",
       "size": 11
     },
     {
-      "id": "community_8",
-      "community_id": 8,
+      "id": "community_7",
+      "community_id": 7,
       "members": [
         "computer_science_engineering:Subhasis Bhattacharjee",
         "computer_science_engineering:Distributed Algorithms",
@@ -1183,13 +1180,13 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 8 in IIT Jammu Computer Science & Engineering Department:\n  ExternalPerson: Devesh C. Jinwala\n  Faculty: Subhasis Bhattacharjee\n  PhDStudent: Malti Baghel, Pintu Naik, Surendra Tyagi\n  ResearchArea: Distributed Algorithms, Ad Hoc and Sensor Networks, VLSI Testing, VLSI CAD Graph Algorithms, Parallel and Distributed Algorithms, Security in Networks and IOT\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 4, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Subhasis Bhattacharjee. 3 PhD student(s). working in areas like computer_science_engineering:Distributed Algorithms, computer_science_engineering:Ad Hoc and Sensor Networks, computer_science_engineering:VLSI Testing.",
+      "text": "Community 7 in IIT Jammu Computer Science & Engineering Department:\n  ExternalPerson: Devesh C. Jinwala\n  Faculty: Subhasis Bhattacharjee\n  PhDStudent: Malti Baghel, Pintu Naik, Surendra Tyagi\n  ResearchArea: Distributed Algorithms, Ad Hoc and Sensor Networks, VLSI Testing, VLSI CAD Graph Algorithms, Parallel and Distributed Algorithms, Security in Networks and IOT\n  Relationships: RESEARCHES_IN: 6, SUPERVISED_BY: 4, STUDIES: 3\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Subhasis Bhattacharjee. 3 PhD student(s). working in areas like computer_science_engineering:Distributed Algorithms, computer_science_engineering:Ad Hoc and Sensor Networks, computer_science_engineering:VLSI Testing.",
       "summary": "This group includes 1 faculty member(s): computer_science_engineering:Subhasis Bhattacharjee. 3 PhD student(s). working in areas like computer_science_engineering:Distributed Algorithms, computer_science_engineering:Ad Hoc and Sensor Networks, computer_science_engineering:VLSI Testing.",
       "size": 11
     },
     {
-      "id": "community_9",
-      "community_id": 9,
+      "id": "community_8",
+      "community_id": 8,
       "members": [
         "computer_science_engineering:Suman Banerjee",
         "computer_science_engineering:Social an Information Network Analysis",
@@ -1308,18 +1305,19 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 9 in IIT Jammu Computer Science & Engineering Department:\n  Faculty: Suman Banerjee\n  PhDStudent: Alex Joseph, Dildar Ali, Pooja, Poonam Sharma\n  ResearchArea: Social an Information Network Analysis, Algorithmic Data Management, Time Varying Graph Analysis, Graph Theory and Parameterized Complexity, Security (Sub modular function-Differential Privacy), Submodular Functions, Algorithmic Optimization, Parameterized Complexity, Database Indexing and Machine learning, Social Networks Analysis\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Suman Banerjee. 4 PhD student(s). working in areas like computer_science_engineering:Social an Information Network Analysis, computer_science_engineering:Algorithmic Data Management, computer_science_engineering:Time Varying Graph Analysis.",
+      "text": "Community 8 in IIT Jammu Computer Science & Engineering Department:\n  Faculty: Suman Banerjee\n  PhDStudent: Alex Joseph, Dildar Ali, Pooja, Poonam Sharma\n  ResearchArea: Social an Information Network Analysis, Algorithmic Data Management, Time Varying Graph Analysis, Graph Theory and Parameterized Complexity, Security (Sub modular function-Differential Privacy), Submodular Functions, Algorithmic Optimization, Parameterized Complexity, Database Indexing and Machine learning, Social Networks Analysis\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 4, STUDIES: 4\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Suman Banerjee. 4 PhD student(s). working in areas like computer_science_engineering:Social an Information Network Analysis, computer_science_engineering:Algorithmic Data Management, computer_science_engineering:Time Varying Graph Analysis.",
       "summary": "This group includes 1 faculty member(s): computer_science_engineering:Suman Banerjee. 4 PhD student(s). working in areas like computer_science_engineering:Social an Information Network Analysis, computer_science_engineering:Algorithmic Data Management, computer_science_engineering:Time Varying Graph Analysis.",
       "size": 13
     },
     {
-      "id": "community_10",
-      "community_id": 10,
+      "id": "community_9",
+      "community_id": 9,
       "members": [
         "computer_science_engineering:Vinit Jakhetiya",
         "computer_science_engineering:Visual Quality Assessment",
         "computer_science_engineering:Perceptual Signal Modeling",
         "computer_science_engineering:Visual Perception",
+        "computer_science_engineering:Image",
         "computer_science_engineering:Video and Medical Processing",
         "computer_science_engineering:Just Noticeable Difference",
         "computer_science_engineering:3D Reconstruction",
@@ -1343,6 +1341,7 @@
           "computer_science_engineering:Visual Quality Assessment",
           "computer_science_engineering:Perceptual Signal Modeling",
           "computer_science_engineering:Visual Perception",
+          "computer_science_engineering:Image",
           "computer_science_engineering:Video and Medical Processing",
           "computer_science_engineering:Just Noticeable Difference",
           "computer_science_engineering:3D Reconstruction",
@@ -1377,6 +1376,11 @@
         {
           "source": "computer_science_engineering:Vinit Jakhetiya",
           "target": "computer_science_engineering:Visual Perception",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "computer_science_engineering:Vinit Jakhetiya",
+          "target": "computer_science_engineering:Image",
           "type": "RESEARCHES_IN"
         },
         {
@@ -1475,9 +1479,9 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 10 in IIT Jammu Computer Science & Engineering Department:\n  ExternalPerson: Badri N. Subudhi, Karan Nathwani\n  Faculty: Vinit Jakhetiya\n  PhDStudent: Ajeet Kumar Verma, Ambreen Bashir, Deebha Mumtaz, Rishabh Shukla, Sadbhawna, Zeenat Fatima\n  ResearchArea: Visual Quality Assessment, Perceptual Signal Modeling, Visual Perception, Video and Medical Processing, Just Noticeable Difference, 3D Reconstruction, Application of Machine/Deep Learning etc, Image Processing, Computer Vision, Image Processing & Deep Learning\n  Relationships: RESEARCHES_IN: 9, SUPERVISED_BY: 7, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Vinit Jakhetiya. 6 PhD student(s). working in areas like computer_science_engineering:Visual Quality Assessment, computer_science_engineering:Perceptual Signal Modeling, computer_science_engineering:Visual Perception.",
+      "text": "Community 9 in IIT Jammu Computer Science & Engineering Department:\n  ExternalPerson: Badri N. Subudhi, Karan Nathwani\n  Faculty: Vinit Jakhetiya\n  PhDStudent: Ajeet Kumar Verma, Ambreen Bashir, Deebha Mumtaz, Rishabh Shukla, Sadbhawna, Zeenat Fatima\n  ResearchArea: Visual Quality Assessment, Perceptual Signal Modeling, Visual Perception, Image, Video and Medical Processing, Just Noticeable Difference, 3D Reconstruction, Application of Machine/Deep Learning etc, Image Processing, Computer Vision, Image Processing & Deep Learning\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 7, STUDIES: 6\n\nSummary: This group includes 1 faculty member(s): computer_science_engineering:Vinit Jakhetiya. 6 PhD student(s). working in areas like computer_science_engineering:Visual Quality Assessment, computer_science_engineering:Perceptual Signal Modeling, computer_science_engineering:Visual Perception.",
       "summary": "This group includes 1 faculty member(s): computer_science_engineering:Vinit Jakhetiya. 6 PhD student(s). working in areas like computer_science_engineering:Visual Quality Assessment, computer_science_engineering:Perceptual Signal Modeling, computer_science_engineering:Visual Perception.",
-      "size": 18
+      "size": 19
     }
   ]
 }

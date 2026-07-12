@@ -2,19 +2,19 @@
   "partition": {
     "materials-engineering:Ajay Gautam": 0,
     "materials-engineering:Avinash Raulo": 1,
-    "materials-engineering:Devi Lal": 14,
+    "materials-engineering:Devi Lal": 2,
     "materials-engineering:Durai Prabhakaran R T": 3,
-    "materials-engineering:Kancharla Hari Krishna": 15,
+    "materials-engineering:Kancharla Hari Krishna": 4,
     "materials-engineering:Nitesh Kumar": 5,
     "materials-engineering:Rajkumar V": 6,
     "materials-engineering:Rani Rohini": 7,
     "materials-engineering:Sarita": 4,
-    "materials-engineering:Shantanu Vijay Madge": 8,
+    "materials-engineering:Shantanu Vijay Madge": 9,
     "materials-engineering:Sri Tapaswi Nori": 10,
     "materials-engineering:Srinivasan N": 11,
-    "materials-engineering:Srishilan C": 12,
+    "materials-engineering:Srishilan C": 8,
     "materials-engineering:Suman Sarkar": 13,
-    "materials-engineering:Sunil Kumar Kashyap": 2,
+    "materials-engineering:Sunil Kumar Kashyap": 14,
     "materials-engineering:Supriyo Chakraborty": 15,
     "materials-engineering:1. Development of solid electrolytes": 0,
     "materials-engineering:2. Solid-state batteries": 0,
@@ -32,12 +32,12 @@
     "materials-engineering:Inorganic and Carbon Materials": 1,
     "materials-engineering:Conductive Composites": 1,
     "materials-engineering:Biomass) for Energy Application": 1,
-    "materials-engineering:Structure Properties correlating's of structural materials and Coatings": 14,
-    "materials-engineering:Processing of materials using thermal and cold spray": 14,
-    "materials-engineering:Finite element analysis": 14,
-    "materials-engineering:Corrosion characteristics of engineering materials and coatings": 15,
-    "materials-engineering:Hot-dip galvanization": 15,
-    "materials-engineering:Electrodeposition of anticorrosion coatings": 15,
+    "materials-engineering:Structure Properties correlating's of structural materials and Coatings": 2,
+    "materials-engineering:Processing of materials using thermal and cold spray": 2,
+    "materials-engineering:Finite element analysis": 2,
+    "materials-engineering:Corrosion characteristics of engineering materials and coatings": 4,
+    "materials-engineering:Hot-dip galvanization": 4,
+    "materials-engineering:Electrodeposition of anticorrosion coatings": 4,
     "materials-engineering:Research Areas": 5,
     "materials-engineering:Biomaterials": 5,
     "materials-engineering:Energy Materials": 5,
@@ -63,19 +63,19 @@
     "materials-engineering:4. Rare-Earth-Free Magnetic Materials": 4,
     "materials-engineering:5. DFT": 4,
     "materials-engineering:APT and SANS-Based Materials Characterization": 4,
-    "materials-engineering:Mechanical Metallurgy": 8,
-    "materials-engineering:Materials Processing": 8,
-    "materials-engineering:Wear and Surface Engineering (Tribology)": 8,
-    "materials-engineering:Metal 3D Printing (Additive Manufacturing)": 8,
-    "materials-engineering:Cold Spray Deposition": 8,
-    "materials-engineering:Rapid Solidification": 8,
-    "materials-engineering:Amorphous Alloys": 8,
-    "materials-engineering:High Entropy Alloys": 8,
-    "materials-engineering:Electron Microscopy (SEM/EBSD/TEM) and X-ray DIffraction of Materials": 8,
+    "materials-engineering:Mechanical Metallurgy": 9,
+    "materials-engineering:Materials Processing": 9,
+    "materials-engineering:Wear and Surface Engineering (Tribology)": 9,
+    "materials-engineering:Metal 3D Printing (Additive Manufacturing)": 9,
+    "materials-engineering:Cold Spray Deposition": 9,
+    "materials-engineering:Rapid Solidification": 9,
+    "materials-engineering:Amorphous Alloys": 9,
+    "materials-engineering:High Entropy Alloys": 9,
+    "materials-engineering:Electron Microscopy (SEM/EBSD/TEM) and X-ray DIffraction of Materials": 9,
     "materials-engineering:Functional ceramics for energy applications": 11,
-    "materials-engineering:1. Computational modelling of Process Metallurgy": 12,
-    "materials-engineering:2. High temperature pyro-metallurgical processes": 12,
-    "materials-engineering:3. Metallurgical waste recycling": 12,
+    "materials-engineering:1. Computational modelling of Process Metallurgy": 8,
+    "materials-engineering:2. High temperature pyro-metallurgical processes": 8,
+    "materials-engineering:3. Metallurgical waste recycling": 8,
     "materials-engineering:1) Irradiation effects": 10,
     "materials-engineering:2) Metallic alloys such as the steels": 10,
     "materials-engineering:concentrated solid solution alloy": 10,
@@ -90,12 +90,14 @@
     "materials-engineering:High Heat Flux Alloys": 13,
     "materials-engineering:Transmission Electron Microscopy": 13,
     "materials-engineering:Phase Transformation and Thermodynamic Modeling": 13,
-    "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites": 2,
-    "materials-engineering:Sintering": 2,
-    "materials-engineering:Oxidation": 2,
-    "materials-engineering:Gel-Casting": 2,
-    "materials-engineering:Rheology": 2,
+    "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites": 14,
+    "materials-engineering:Sintering": 14,
+    "materials-engineering:Creep": 14,
+    "materials-engineering:Oxidation": 14,
+    "materials-engineering:Gel-Casting": 14,
+    "materials-engineering:Rheology": 14,
     "materials-engineering:AI/ML Application to Materials": 15,
+    "materials-engineering:ICME": 15,
     "materials-engineering:Light Metals and Alloys": 15,
     "materials-engineering:Materials for Extreme Environments": 15,
     "materials-engineering:Materials for Energy Applications": 15,
@@ -110,11 +112,11 @@
     "materials-engineering:2. Additive manufacturing of functionally graded structures": 6,
     "materials-engineering:3. Fabrication of multifunctional components using continuous carbon fibre 3D printing": 6,
     "materials-engineering:4. 3D bioprinting for biomedical and energy applications": 6,
-    "IIT Jammu MATERIALS-ENGINEERING Department": 15,
-    "materials-engineering:Abhishek Panwar": 2,
-    "materials-engineering:High Entropy Ceramics": 2,
-    "materials-engineering:Ambuj Pathak": 8,
-    "materials-engineering:Multi-Componenet Alloys (HEAs, BMGs and Bio-Materials)": 8,
+    "IIT Jammu MATERIALS-ENGINEERING Department": 4,
+    "materials-engineering:Abhishek Panwar": 14,
+    "materials-engineering:High Entropy Ceramics": 14,
+    "materials-engineering:Ambuj Pathak": 9,
+    "materials-engineering:Multi-Componenet Alloys (HEAs, BMGs and Bio-Materials)": 9,
     "materials-engineering:Anant Kumar Gupta": 11,
     "materials-engineering:High temperature thermal barrier coatings, Entropy Stabilized Oxides, New material development for TBC": 11,
     "materials-engineering:Bushra Munir": 13,
@@ -122,10 +124,10 @@
     "materials-engineering:Durgesh Kumar": 5,
     "materials-engineering:Gorbel B": 5,
     "materials-engineering:Hydrogen storage": 5,
-    "materials-engineering:J Akhil Teja": 14,
-    "materials-engineering:Thermal Barrier Coatings": 14,
-    "materials-engineering:Midhat Ahsan": 14,
-    "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics": 14,
+    "materials-engineering:J Akhil Teja": 2,
+    "materials-engineering:Thermal Barrier Coatings": 2,
+    "materials-engineering:Midhat Ahsan": 2,
+    "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics": 2,
     "materials-engineering:Nidhi Shukla": 13,
     "materials-engineering:Phase Change Alloys (Memory and Heat Storage)": 13,
     "materials-engineering:Nishant Chandel": 7,
@@ -136,15 +138,15 @@
     "materials-engineering:Functional ceramic": 11,
     "materials-engineering:Saurabh Kumar Jha": 7,
     "materials-engineering:Extreme Climate Polymers": 7,
-    "materials-engineering:Snigdha Priyadarshini": 12,
-    "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy": 12,
+    "materials-engineering:Snigdha Priyadarshini": 8,
+    "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy": 8,
     "materials-engineering:Subhajeet Sen": 11,
     "materials-engineering:Functional Ceramic Materials": 11,
-    "materials-engineering:Vidhyadhar Mishra": 2,
-    "materials-engineering:Dual-Phase High Entropy Ceramics": 2,
-    "materials-engineering:Vikas Kumar": 9,
-    "materials-engineering:Srinivasan Nedunchezhian": 9,
-    "materials-engineering:Composites Testing": 9,
+    "materials-engineering:Vidhyadhar Mishra": 14,
+    "materials-engineering:Dual-Phase High Entropy Ceramics": 14,
+    "materials-engineering:Vikas Kumar": 12,
+    "materials-engineering:Srinivasan Nedunchezhian": 12,
+    "materials-engineering:Composites Testing": 12,
     "materials-engineering:Vivekanand Jakhar": 13,
     "materials-engineering:Shape memory alloys": 13
   },
@@ -303,95 +305,81 @@
       "id": "community_2",
       "community_id": 2,
       "members": [
-        "materials-engineering:Sunil Kumar Kashyap",
-        "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
-        "materials-engineering:Sintering",
-        "materials-engineering:Oxidation",
-        "materials-engineering:Gel-Casting",
-        "materials-engineering:Rheology",
-        "materials-engineering:Abhishek Panwar",
-        "materials-engineering:High Entropy Ceramics",
-        "materials-engineering:Vidhyadhar Mishra",
-        "materials-engineering:Dual-Phase High Entropy Ceramics"
+        "materials-engineering:Devi Lal",
+        "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
+        "materials-engineering:Processing of materials using thermal and cold spray",
+        "materials-engineering:Finite element analysis",
+        "materials-engineering:J Akhil Teja",
+        "materials-engineering:Thermal Barrier Coatings",
+        "materials-engineering:Midhat Ahsan",
+        "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics"
       ],
       "members_by_type": {
         "Faculty": [
-          "materials-engineering:Sunil Kumar Kashyap"
+          "materials-engineering:Devi Lal"
         ],
         "ResearchArea": [
-          "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
-          "materials-engineering:Sintering",
-          "materials-engineering:Oxidation",
-          "materials-engineering:Gel-Casting",
-          "materials-engineering:Rheology",
-          "materials-engineering:High Entropy Ceramics",
-          "materials-engineering:Dual-Phase High Entropy Ceramics"
+          "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
+          "materials-engineering:Processing of materials using thermal and cold spray",
+          "materials-engineering:Finite element analysis",
+          "materials-engineering:Thermal Barrier Coatings",
+          "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics"
         ],
         "PhDStudent": [
-          "materials-engineering:Abhishek Panwar",
-          "materials-engineering:Vidhyadhar Mishra"
+          "materials-engineering:J Akhil Teja",
+          "materials-engineering:Midhat Ahsan"
         ]
       },
       "internal_edges": [
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
+          "source": "materials-engineering:Devi Lal",
+          "target": "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Sintering",
+          "source": "materials-engineering:Devi Lal",
+          "target": "materials-engineering:Processing of materials using thermal and cold spray",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Oxidation",
+          "source": "materials-engineering:Devi Lal",
+          "target": "materials-engineering:Finite element analysis",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Gel-Casting",
+          "source": "materials-engineering:Devi Lal",
+          "target": "materials-engineering:Thermal Barrier Coatings",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Rheology",
+          "source": "materials-engineering:Devi Lal",
+          "target": "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:High Entropy Ceramics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Sunil Kumar Kashyap",
-          "target": "materials-engineering:Dual-Phase High Entropy Ceramics",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Abhishek Panwar",
-          "target": "materials-engineering:Sunil Kumar Kashyap",
+          "source": "materials-engineering:J Akhil Teja",
+          "target": "materials-engineering:Devi Lal",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "materials-engineering:Abhishek Panwar",
-          "target": "materials-engineering:High Entropy Ceramics",
+          "source": "materials-engineering:J Akhil Teja",
+          "target": "materials-engineering:Thermal Barrier Coatings",
           "type": "STUDIES"
         },
         {
-          "source": "materials-engineering:Vidhyadhar Mishra",
-          "target": "materials-engineering:Sunil Kumar Kashyap",
+          "source": "materials-engineering:Midhat Ahsan",
+          "target": "materials-engineering:Devi Lal",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "materials-engineering:Vidhyadhar Mishra",
-          "target": "materials-engineering:Dual-Phase High Entropy Ceramics",
+          "source": "materials-engineering:Midhat Ahsan",
+          "target": "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 2 in IIT Jammu Materials Engineering Department:\n  Faculty: Sunil Kumar Kashyap\n  PhDStudent: Abhishek Panwar, Vidhyadhar Mishra\n  ResearchArea: Ultra-High Temperature Ceramic (UHTC) Composites, Sintering, Oxidation, Gel-Casting, Rheology, High Entropy Ceramics, Dual-Phase High Entropy Ceramics\n  Relationships: RESEARCHES_IN: 7, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Sunil Kumar Kashyap. 2 PhD student(s). working in areas like materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites, materials-engineering:Sintering, materials-engineering:Oxidation.",
-      "summary": "This group includes 1 faculty member(s): materials-engineering:Sunil Kumar Kashyap. 2 PhD student(s). working in areas like materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites, materials-engineering:Sintering, materials-engineering:Oxidation.",
-      "size": 10
+      "text": "Community 2 in IIT Jammu Materials Engineering Department:\n  Faculty: Devi Lal\n  PhDStudent: J Akhil Teja, Midhat Ahsan\n  ResearchArea: Structure Properties correlating's of structural materials and Coatings, Processing of materials using thermal and cold spray, Finite element analysis, Thermal Barrier Coatings, Mechanical and Tribological Behavior of  Advanced Ceramics\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Devi Lal. 2 PhD student(s). working in areas like materials-engineering:Structure Properties correlating's of structural materials and Coatings, materials-engineering:Processing of materials using thermal and cold spray, materials-engineering:Finite element analysis.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Devi Lal. 2 PhD student(s). working in areas like materials-engineering:Structure Properties correlating's of structural materials and Coatings, materials-engineering:Processing of materials using thermal and cold spray, materials-engineering:Finite element analysis.",
+      "size": 8
     },
     {
       "id": "community_3",
@@ -486,28 +474,60 @@
       "id": "community_4",
       "community_id": 4,
       "members": [
+        "materials-engineering:Kancharla Hari Krishna",
         "materials-engineering:Sarita",
+        "materials-engineering:Corrosion characteristics of engineering materials and coatings",
+        "materials-engineering:Hot-dip galvanization",
+        "materials-engineering:Electrodeposition of anticorrosion coatings",
         "materials-engineering:1. Microstructural Evolution under Extreme Conditions",
         "materials-engineering:2. Phase Transformations in Materials",
         "materials-engineering:3. Structure\u2013Property Correlation in Structural and Nuclear Materials",
         "materials-engineering:4. Rare-Earth-Free Magnetic Materials",
         "materials-engineering:5. DFT",
-        "materials-engineering:APT and SANS-Based Materials Characterization"
+        "materials-engineering:APT and SANS-Based Materials Characterization",
+        "IIT Jammu MATERIALS-ENGINEERING Department"
       ],
       "members_by_type": {
         "Faculty": [
+          "materials-engineering:Kancharla Hari Krishna",
           "materials-engineering:Sarita"
         ],
         "ResearchArea": [
+          "materials-engineering:Corrosion characteristics of engineering materials and coatings",
+          "materials-engineering:Hot-dip galvanization",
+          "materials-engineering:Electrodeposition of anticorrosion coatings",
           "materials-engineering:1. Microstructural Evolution under Extreme Conditions",
           "materials-engineering:2. Phase Transformations in Materials",
           "materials-engineering:3. Structure\u2013Property Correlation in Structural and Nuclear Materials",
           "materials-engineering:4. Rare-Earth-Free Magnetic Materials",
           "materials-engineering:5. DFT",
           "materials-engineering:APT and SANS-Based Materials Characterization"
+        ],
+        "Department": [
+          "IIT Jammu MATERIALS-ENGINEERING Department"
         ]
       },
       "internal_edges": [
+        {
+          "source": "materials-engineering:Kancharla Hari Krishna",
+          "target": "materials-engineering:Corrosion characteristics of engineering materials and coatings",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Kancharla Hari Krishna",
+          "target": "materials-engineering:Hot-dip galvanization",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Kancharla Hari Krishna",
+          "target": "materials-engineering:Electrodeposition of anticorrosion coatings",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Kancharla Hari Krishna",
+          "target": "IIT Jammu MATERIALS-ENGINEERING Department",
+          "type": "MEMBER_OF"
+        },
         {
           "source": "materials-engineering:Sarita",
           "target": "materials-engineering:1. Microstructural Evolution under Extreme Conditions",
@@ -537,11 +557,16 @@
           "source": "materials-engineering:Sarita",
           "target": "materials-engineering:APT and SANS-Based Materials Characterization",
           "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Sarita",
+          "target": "IIT Jammu MATERIALS-ENGINEERING Department",
+          "type": "MEMBER_OF"
         }
       ],
-      "text": "Community 4 in IIT Jammu Materials Engineering Department:\n  Faculty: Sarita\n  ResearchArea: 1. Microstructural Evolution under Extreme Conditions, 2. Phase Transformations in Materials, 3. Structure\u2013Property Correlation in Structural and Nuclear Materials, 4. Rare-Earth-Free Magnetic Materials, 5. DFT, APT and SANS-Based Materials Characterization\n  Relationships: RESEARCHES_IN: 6\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Sarita. working in areas like materials-engineering:1. Microstructural Evolution under Extreme Conditions, materials-engineering:2. Phase Transformations in Materials, materials-engineering:3. Structure\u2013Property Correlation in Structural and Nuclear Materials.",
-      "summary": "This group includes 1 faculty member(s): materials-engineering:Sarita. working in areas like materials-engineering:1. Microstructural Evolution under Extreme Conditions, materials-engineering:2. Phase Transformations in Materials, materials-engineering:3. Structure\u2013Property Correlation in Structural and Nuclear Materials.",
-      "size": 7
+      "text": "Community 4 in IIT Jammu Materials Engineering Department:\n  Department: Department of Materials Engineering\n  Faculty: Kancharla Hari Krishna, Sarita\n  ResearchArea: Corrosion characteristics of engineering materials and coatings, Hot-dip galvanization, Electrodeposition of anticorrosion coatings, 1. Microstructural Evolution under Extreme Conditions, 2. Phase Transformations in Materials, 3. Structure\u2013Property Correlation in Structural and Nuclear Materials, 4. Rare-Earth-Free Magnetic Materials, 5. DFT, APT and SANS-Based Materials Characterization\n  Relationships: RESEARCHES_IN: 9, MEMBER_OF: 2\n\nSummary: This group includes 2 faculty member(s): materials-engineering:Kancharla Hari Krishna, materials-engineering:Sarita. working in areas like materials-engineering:Corrosion characteristics of engineering materials and coatings, materials-engineering:Hot-dip galvanization, materials-engineering:Electrodeposition of anticorrosion coatings.",
+      "summary": "This group includes 2 faculty member(s): materials-engineering:Kancharla Hari Krishna, materials-engineering:Sarita. working in areas like materials-engineering:Corrosion characteristics of engineering materials and coatings, materials-engineering:Hot-dip galvanization, materials-engineering:Electrodeposition of anticorrosion coatings.",
+      "size": 12
     },
     {
       "id": "community_5",
@@ -829,6 +854,67 @@
       "id": "community_8",
       "community_id": 8,
       "members": [
+        "materials-engineering:Srishilan C",
+        "materials-engineering:1. Computational modelling of Process Metallurgy",
+        "materials-engineering:2. High temperature pyro-metallurgical processes",
+        "materials-engineering:3. Metallurgical waste recycling",
+        "materials-engineering:Snigdha Priyadarshini",
+        "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy"
+      ],
+      "members_by_type": {
+        "Faculty": [
+          "materials-engineering:Srishilan C"
+        ],
+        "ResearchArea": [
+          "materials-engineering:1. Computational modelling of Process Metallurgy",
+          "materials-engineering:2. High temperature pyro-metallurgical processes",
+          "materials-engineering:3. Metallurgical waste recycling",
+          "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy"
+        ],
+        "PhDStudent": [
+          "materials-engineering:Snigdha Priyadarshini"
+        ]
+      },
+      "internal_edges": [
+        {
+          "source": "materials-engineering:Srishilan C",
+          "target": "materials-engineering:1. Computational modelling of Process Metallurgy",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Srishilan C",
+          "target": "materials-engineering:2. High temperature pyro-metallurgical processes",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Srishilan C",
+          "target": "materials-engineering:3. Metallurgical waste recycling",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Srishilan C",
+          "target": "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Snigdha Priyadarshini",
+          "target": "materials-engineering:Srishilan C",
+          "type": "SUPERVISED_BY"
+        },
+        {
+          "source": "materials-engineering:Snigdha Priyadarshini",
+          "target": "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy",
+          "type": "STUDIES"
+        }
+      ],
+      "text": "Community 8 in IIT Jammu Materials Engineering Department:\n  Faculty: Srishilan C\n  PhDStudent: Snigdha Priyadarshini\n  ResearchArea: 1. Computational modelling of Process Metallurgy, 2. High temperature pyro-metallurgical processes, 3. Metallurgical waste recycling, Process Metallurgy, E-waste Recycle, Pyro Metallurgy\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Srishilan C. 1 PhD student(s). working in areas like materials-engineering:1. Computational modelling of Process Metallurgy, materials-engineering:2. High temperature pyro-metallurgical processes, materials-engineering:3. Metallurgical waste recycling.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Srishilan C. 1 PhD student(s). working in areas like materials-engineering:1. Computational modelling of Process Metallurgy, materials-engineering:2. High temperature pyro-metallurgical processes, materials-engineering:3. Metallurgical waste recycling.",
+      "size": 6
+    },
+    {
+      "id": "community_9",
+      "community_id": 9,
+      "members": [
         "materials-engineering:Shantanu Vijay Madge",
         "materials-engineering:Mechanical Metallurgy",
         "materials-engineering:Materials Processing",
@@ -924,44 +1010,9 @@
           "type": "STUDIES"
         }
       ],
-      "text": "Community 8 in IIT Jammu Materials Engineering Department:\n  Faculty: Shantanu Vijay Madge\n  PhDStudent: Ambuj Pathak\n  ResearchArea: Mechanical Metallurgy, Materials Processing, Wear and Surface Engineering (Tribology), Metal 3D Printing (Additive Manufacturing), Cold Spray Deposition, Rapid Solidification, Amorphous Alloys, High Entropy Alloys, Electron Microscopy (SEM/EBSD/TEM) and X-ray DIffraction of Materials, Multi-Componenet Alloys (HEAs, BMGs and Bio-Materials)\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Shantanu Vijay Madge. 1 PhD student(s). working in areas like materials-engineering:Mechanical Metallurgy, materials-engineering:Materials Processing, materials-engineering:Wear and Surface Engineering (Tribology).",
+      "text": "Community 9 in IIT Jammu Materials Engineering Department:\n  Faculty: Shantanu Vijay Madge\n  PhDStudent: Ambuj Pathak\n  ResearchArea: Mechanical Metallurgy, Materials Processing, Wear and Surface Engineering (Tribology), Metal 3D Printing (Additive Manufacturing), Cold Spray Deposition, Rapid Solidification, Amorphous Alloys, High Entropy Alloys, Electron Microscopy (SEM/EBSD/TEM) and X-ray DIffraction of Materials, Multi-Componenet Alloys (HEAs, BMGs and Bio-Materials)\n  Relationships: RESEARCHES_IN: 10, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Shantanu Vijay Madge. 1 PhD student(s). working in areas like materials-engineering:Mechanical Metallurgy, materials-engineering:Materials Processing, materials-engineering:Wear and Surface Engineering (Tribology).",
       "summary": "This group includes 1 faculty member(s): materials-engineering:Shantanu Vijay Madge. 1 PhD student(s). working in areas like materials-engineering:Mechanical Metallurgy, materials-engineering:Materials Processing, materials-engineering:Wear and Surface Engineering (Tribology).",
       "size": 12
-    },
-    {
-      "id": "community_9",
-      "community_id": 9,
-      "members": [
-        "materials-engineering:Vikas Kumar",
-        "materials-engineering:Srinivasan Nedunchezhian",
-        "materials-engineering:Composites Testing"
-      ],
-      "members_by_type": {
-        "PhDStudent": [
-          "materials-engineering:Vikas Kumar"
-        ],
-        "ExternalPerson": [
-          "materials-engineering:Srinivasan Nedunchezhian"
-        ],
-        "ResearchArea": [
-          "materials-engineering:Composites Testing"
-        ]
-      },
-      "internal_edges": [
-        {
-          "source": "materials-engineering:Vikas Kumar",
-          "target": "materials-engineering:Srinivasan Nedunchezhian",
-          "type": "SUPERVISED_BY"
-        },
-        {
-          "source": "materials-engineering:Vikas Kumar",
-          "target": "materials-engineering:Composites Testing",
-          "type": "STUDIES"
-        }
-      ],
-      "text": "Community 9 in IIT Jammu Materials Engineering Department:\n  ExternalPerson: Srinivasan Nedunchezhian\n  PhDStudent: Vikas Kumar\n  ResearchArea: Composites Testing\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: 1 PhD student(s). working in areas like materials-engineering:Composites Testing.",
-      "summary": "1 PhD student(s). working in areas like materials-engineering:Composites Testing.",
-      "size": 3
     },
     {
       "id": "community_10",
@@ -1120,62 +1171,36 @@
       "id": "community_12",
       "community_id": 12,
       "members": [
-        "materials-engineering:Srishilan C",
-        "materials-engineering:1. Computational modelling of Process Metallurgy",
-        "materials-engineering:2. High temperature pyro-metallurgical processes",
-        "materials-engineering:3. Metallurgical waste recycling",
-        "materials-engineering:Snigdha Priyadarshini",
-        "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy"
+        "materials-engineering:Vikas Kumar",
+        "materials-engineering:Srinivasan Nedunchezhian",
+        "materials-engineering:Composites Testing"
       ],
       "members_by_type": {
-        "Faculty": [
-          "materials-engineering:Srishilan C"
+        "PhDStudent": [
+          "materials-engineering:Vikas Kumar"
+        ],
+        "ExternalPerson": [
+          "materials-engineering:Srinivasan Nedunchezhian"
         ],
         "ResearchArea": [
-          "materials-engineering:1. Computational modelling of Process Metallurgy",
-          "materials-engineering:2. High temperature pyro-metallurgical processes",
-          "materials-engineering:3. Metallurgical waste recycling",
-          "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy"
-        ],
-        "PhDStudent": [
-          "materials-engineering:Snigdha Priyadarshini"
+          "materials-engineering:Composites Testing"
         ]
       },
       "internal_edges": [
         {
-          "source": "materials-engineering:Srishilan C",
-          "target": "materials-engineering:1. Computational modelling of Process Metallurgy",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Srishilan C",
-          "target": "materials-engineering:2. High temperature pyro-metallurgical processes",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Srishilan C",
-          "target": "materials-engineering:3. Metallurgical waste recycling",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Srishilan C",
-          "target": "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Snigdha Priyadarshini",
-          "target": "materials-engineering:Srishilan C",
+          "source": "materials-engineering:Vikas Kumar",
+          "target": "materials-engineering:Srinivasan Nedunchezhian",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "materials-engineering:Snigdha Priyadarshini",
-          "target": "materials-engineering:Process Metallurgy, E-waste Recycle, Pyro Metallurgy",
+          "source": "materials-engineering:Vikas Kumar",
+          "target": "materials-engineering:Composites Testing",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 12 in IIT Jammu Materials Engineering Department:\n  Faculty: Srishilan C\n  PhDStudent: Snigdha Priyadarshini\n  ResearchArea: 1. Computational modelling of Process Metallurgy, 2. High temperature pyro-metallurgical processes, 3. Metallurgical waste recycling, Process Metallurgy, E-waste Recycle, Pyro Metallurgy\n  Relationships: RESEARCHES_IN: 4, SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Srishilan C. 1 PhD student(s). working in areas like materials-engineering:1. Computational modelling of Process Metallurgy, materials-engineering:2. High temperature pyro-metallurgical processes, materials-engineering:3. Metallurgical waste recycling.",
-      "summary": "This group includes 1 faculty member(s): materials-engineering:Srishilan C. 1 PhD student(s). working in areas like materials-engineering:1. Computational modelling of Process Metallurgy, materials-engineering:2. High temperature pyro-metallurgical processes, materials-engineering:3. Metallurgical waste recycling.",
-      "size": 6
+      "text": "Community 12 in IIT Jammu Materials Engineering Department:\n  ExternalPerson: Srinivasan Nedunchezhian\n  PhDStudent: Vikas Kumar\n  ResearchArea: Composites Testing\n  Relationships: SUPERVISED_BY: 1, STUDIES: 1\n\nSummary: 1 PhD student(s). working in areas like materials-engineering:Composites Testing.",
+      "summary": "1 PhD student(s). working in areas like materials-engineering:Composites Testing.",
+      "size": 3
     },
     {
       "id": "community_13",
@@ -1308,141 +1333,137 @@
       "id": "community_14",
       "community_id": 14,
       "members": [
-        "materials-engineering:Devi Lal",
-        "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
-        "materials-engineering:Processing of materials using thermal and cold spray",
-        "materials-engineering:Finite element analysis",
-        "materials-engineering:J Akhil Teja",
-        "materials-engineering:Thermal Barrier Coatings",
-        "materials-engineering:Midhat Ahsan",
-        "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics"
+        "materials-engineering:Sunil Kumar Kashyap",
+        "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
+        "materials-engineering:Sintering",
+        "materials-engineering:Creep",
+        "materials-engineering:Oxidation",
+        "materials-engineering:Gel-Casting",
+        "materials-engineering:Rheology",
+        "materials-engineering:Abhishek Panwar",
+        "materials-engineering:High Entropy Ceramics",
+        "materials-engineering:Vidhyadhar Mishra",
+        "materials-engineering:Dual-Phase High Entropy Ceramics"
       ],
       "members_by_type": {
         "Faculty": [
-          "materials-engineering:Devi Lal"
+          "materials-engineering:Sunil Kumar Kashyap"
         ],
         "ResearchArea": [
-          "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
-          "materials-engineering:Processing of materials using thermal and cold spray",
-          "materials-engineering:Finite element analysis",
-          "materials-engineering:Thermal Barrier Coatings",
-          "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics"
+          "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
+          "materials-engineering:Sintering",
+          "materials-engineering:Creep",
+          "materials-engineering:Oxidation",
+          "materials-engineering:Gel-Casting",
+          "materials-engineering:Rheology",
+          "materials-engineering:High Entropy Ceramics",
+          "materials-engineering:Dual-Phase High Entropy Ceramics"
         ],
         "PhDStudent": [
-          "materials-engineering:J Akhil Teja",
-          "materials-engineering:Midhat Ahsan"
+          "materials-engineering:Abhishek Panwar",
+          "materials-engineering:Vidhyadhar Mishra"
         ]
       },
       "internal_edges": [
         {
-          "source": "materials-engineering:Devi Lal",
-          "target": "materials-engineering:Structure Properties correlating's of structural materials and Coatings",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Devi Lal",
-          "target": "materials-engineering:Processing of materials using thermal and cold spray",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Sintering",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Devi Lal",
-          "target": "materials-engineering:Finite element analysis",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Creep",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Devi Lal",
-          "target": "materials-engineering:Thermal Barrier Coatings",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Oxidation",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:Devi Lal",
-          "target": "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Gel-Casting",
           "type": "RESEARCHES_IN"
         },
         {
-          "source": "materials-engineering:J Akhil Teja",
-          "target": "materials-engineering:Devi Lal",
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Rheology",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:High Entropy Ceramics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Sunil Kumar Kashyap",
+          "target": "materials-engineering:Dual-Phase High Entropy Ceramics",
+          "type": "RESEARCHES_IN"
+        },
+        {
+          "source": "materials-engineering:Abhishek Panwar",
+          "target": "materials-engineering:Sunil Kumar Kashyap",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "materials-engineering:J Akhil Teja",
-          "target": "materials-engineering:Thermal Barrier Coatings",
+          "source": "materials-engineering:Abhishek Panwar",
+          "target": "materials-engineering:High Entropy Ceramics",
           "type": "STUDIES"
         },
         {
-          "source": "materials-engineering:Midhat Ahsan",
-          "target": "materials-engineering:Devi Lal",
+          "source": "materials-engineering:Vidhyadhar Mishra",
+          "target": "materials-engineering:Sunil Kumar Kashyap",
           "type": "SUPERVISED_BY"
         },
         {
-          "source": "materials-engineering:Midhat Ahsan",
-          "target": "materials-engineering:Mechanical and Tribological Behavior of  Advanced Ceramics",
+          "source": "materials-engineering:Vidhyadhar Mishra",
+          "target": "materials-engineering:Dual-Phase High Entropy Ceramics",
           "type": "STUDIES"
         }
       ],
-      "text": "Community 14 in IIT Jammu Materials Engineering Department:\n  Faculty: Devi Lal\n  PhDStudent: J Akhil Teja, Midhat Ahsan\n  ResearchArea: Structure Properties correlating's of structural materials and Coatings, Processing of materials using thermal and cold spray, Finite element analysis, Thermal Barrier Coatings, Mechanical and Tribological Behavior of  Advanced Ceramics\n  Relationships: RESEARCHES_IN: 5, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Devi Lal. 2 PhD student(s). working in areas like materials-engineering:Structure Properties correlating's of structural materials and Coatings, materials-engineering:Processing of materials using thermal and cold spray, materials-engineering:Finite element analysis.",
-      "summary": "This group includes 1 faculty member(s): materials-engineering:Devi Lal. 2 PhD student(s). working in areas like materials-engineering:Structure Properties correlating's of structural materials and Coatings, materials-engineering:Processing of materials using thermal and cold spray, materials-engineering:Finite element analysis.",
-      "size": 8
+      "text": "Community 14 in IIT Jammu Materials Engineering Department:\n  Faculty: Sunil Kumar Kashyap\n  PhDStudent: Abhishek Panwar, Vidhyadhar Mishra\n  ResearchArea: Ultra-High Temperature Ceramic (UHTC) Composites, Sintering, Creep, Oxidation, Gel-Casting, Rheology, High Entropy Ceramics, Dual-Phase High Entropy Ceramics\n  Relationships: RESEARCHES_IN: 8, SUPERVISED_BY: 2, STUDIES: 2\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Sunil Kumar Kashyap. 2 PhD student(s). working in areas like materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites, materials-engineering:Sintering, materials-engineering:Creep.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Sunil Kumar Kashyap. 2 PhD student(s). working in areas like materials-engineering:Ultra-High Temperature Ceramic (UHTC) Composites, materials-engineering:Sintering, materials-engineering:Creep.",
+      "size": 11
     },
     {
       "id": "community_15",
       "community_id": 15,
       "members": [
-        "materials-engineering:Kancharla Hari Krishna",
         "materials-engineering:Supriyo Chakraborty",
-        "materials-engineering:Corrosion characteristics of engineering materials and coatings",
-        "materials-engineering:Hot-dip galvanization",
-        "materials-engineering:Electrodeposition of anticorrosion coatings",
         "materials-engineering:AI/ML Application to Materials",
+        "materials-engineering:ICME",
         "materials-engineering:Light Metals and Alloys",
         "materials-engineering:Materials for Extreme Environments",
         "materials-engineering:Materials for Energy Applications",
-        "materials-engineering:Recycling",
-        "IIT Jammu MATERIALS-ENGINEERING Department"
+        "materials-engineering:Recycling"
       ],
       "members_by_type": {
         "Faculty": [
-          "materials-engineering:Kancharla Hari Krishna",
           "materials-engineering:Supriyo Chakraborty"
         ],
         "ResearchArea": [
-          "materials-engineering:Corrosion characteristics of engineering materials and coatings",
-          "materials-engineering:Hot-dip galvanization",
-          "materials-engineering:Electrodeposition of anticorrosion coatings",
           "materials-engineering:AI/ML Application to Materials",
+          "materials-engineering:ICME",
           "materials-engineering:Light Metals and Alloys",
           "materials-engineering:Materials for Extreme Environments",
           "materials-engineering:Materials for Energy Applications",
           "materials-engineering:Recycling"
-        ],
-        "Department": [
-          "IIT Jammu MATERIALS-ENGINEERING Department"
         ]
       },
       "internal_edges": [
         {
-          "source": "materials-engineering:Kancharla Hari Krishna",
-          "target": "materials-engineering:Corrosion characteristics of engineering materials and coatings",
+          "source": "materials-engineering:Supriyo Chakraborty",
+          "target": "materials-engineering:AI/ML Application to Materials",
           "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Kancharla Hari Krishna",
-          "target": "materials-engineering:Hot-dip galvanization",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Kancharla Hari Krishna",
-          "target": "materials-engineering:Electrodeposition of anticorrosion coatings",
-          "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Kancharla Hari Krishna",
-          "target": "IIT Jammu MATERIALS-ENGINEERING Department",
-          "type": "MEMBER_OF"
         },
         {
           "source": "materials-engineering:Supriyo Chakraborty",
-          "target": "materials-engineering:AI/ML Application to Materials",
+          "target": "materials-engineering:ICME",
           "type": "RESEARCHES_IN"
         },
         {
@@ -1464,16 +1485,11 @@
           "source": "materials-engineering:Supriyo Chakraborty",
           "target": "materials-engineering:Recycling",
           "type": "RESEARCHES_IN"
-        },
-        {
-          "source": "materials-engineering:Supriyo Chakraborty",
-          "target": "IIT Jammu MATERIALS-ENGINEERING Department",
-          "type": "MEMBER_OF"
         }
       ],
-      "text": "Community 15 in IIT Jammu Materials Engineering Department:\n  Department: Department of Materials Engineering\n  Faculty: Kancharla Hari Krishna, Supriyo Chakraborty\n  ResearchArea: Corrosion characteristics of engineering materials and coatings, Hot-dip galvanization, Electrodeposition of anticorrosion coatings, AI/ML Application to Materials, Light Metals and Alloys, Materials for Extreme Environments, Materials for Energy Applications, Recycling\n  Relationships: RESEARCHES_IN: 8, MEMBER_OF: 2\n\nSummary: This group includes 2 faculty member(s): materials-engineering:Kancharla Hari Krishna, materials-engineering:Supriyo Chakraborty. working in areas like materials-engineering:Corrosion characteristics of engineering materials and coatings, materials-engineering:Hot-dip galvanization, materials-engineering:Electrodeposition of anticorrosion coatings.",
-      "summary": "This group includes 2 faculty member(s): materials-engineering:Kancharla Hari Krishna, materials-engineering:Supriyo Chakraborty. working in areas like materials-engineering:Corrosion characteristics of engineering materials and coatings, materials-engineering:Hot-dip galvanization, materials-engineering:Electrodeposition of anticorrosion coatings.",
-      "size": 11
+      "text": "Community 15 in IIT Jammu Materials Engineering Department:\n  Faculty: Supriyo Chakraborty\n  ResearchArea: AI/ML Application to Materials, ICME, Light Metals and Alloys, Materials for Extreme Environments, Materials for Energy Applications, Recycling\n  Relationships: RESEARCHES_IN: 6\n\nSummary: This group includes 1 faculty member(s): materials-engineering:Supriyo Chakraborty. working in areas like materials-engineering:AI/ML Application to Materials, materials-engineering:ICME, materials-engineering:Light Metals and Alloys.",
+      "summary": "This group includes 1 faculty member(s): materials-engineering:Supriyo Chakraborty. working in areas like materials-engineering:AI/ML Application to Materials, materials-engineering:ICME, materials-engineering:Light Metals and Alloys.",
+      "size": 7
     }
   ]
 }

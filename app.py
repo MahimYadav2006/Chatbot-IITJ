@@ -670,7 +670,8 @@ def chat():
 
                 # Verify faithfulness
                 verification = verifier.verify(query, context, response)
-                if not verification.faithful:
+                faithfulness_ok = verification.faithful
+                if not faithfulness_ok:
                     logger.warning(f"Section response failed faithfulness check. {verification.reason}")
                     from departments import SECTIONS
                     sec_config = SECTIONS[sec_code]
@@ -690,7 +691,7 @@ def chat():
                     "routing_reason": route_result.reason,
                     "retrieval_time": round(retrieval_time, 2),
                     "total_time": round(total_time, 2),
-                    "information_available": True,
+                    "information_available": faithfulness_ok,
                 })
             else:
                 # Multi-section query
@@ -776,7 +777,8 @@ def chat():
 
             # Verify faithfulness
             verification = verifier.verify(query, context, response)
-            if not verification.faithful:
+            faithfulness_ok = verification.faithful
+            if not faithfulness_ok:
                 logger.warning(f"Response failed faithfulness check. {verification.reason}")
                 from departments import get_department
                 dept_config = get_department(dept_code)
@@ -796,7 +798,7 @@ def chat():
                 "routing_reason": route_result.reason,
                 "retrieval_time": round(retrieval_time, 2),
                 "total_time": round(total_time, 2),
-                "information_available": True,
+                "information_available": faithfulness_ok,
             })
 
         # Scenario C: Multi-system query (combination of departments and/or sections)
@@ -833,7 +835,8 @@ def chat():
 
             # Verify faithfulness
             verification = verifier.verify(query, context, response)
-            if not verification.faithful:
+            faithfulness_ok = verification.faithful
+            if not faithfulness_ok:
                 logger.warning(f"Cross-system response failed faithfulness check. {verification.reason}")
                 response = (
                     "I don't have verified information to answer that question accurately. "
@@ -850,7 +853,7 @@ def chat():
                 "routing_reason": route_result.reason,
                 "retrieval_time": round(retrieval_time, 2),
                 "total_time": round(total_time, 2),
-                "information_available": True,
+                "information_available": faithfulness_ok,
             })
 
         # Scenario D: Broadcast query (fallback)
@@ -908,7 +911,8 @@ def chat():
 
             # Verify faithfulness
             verification = verifier.verify(query, context, response)
-            if not verification.faithful:
+            faithfulness_ok = verification.faithful
+            if not faithfulness_ok:
                 logger.warning(f"Broadcast response failed faithfulness check. {verification.reason}")
                 response = (
                     "I don't have verified information to answer that question accurately. "
@@ -925,7 +929,7 @@ def chat():
                 "routing_reason": route_result.reason,
                 "retrieval_time": round(retrieval_time, 2),
                 "total_time": round(total_time, 2),
-                "information_available": True,
+                "information_available": faithfulness_ok,
             })
     except Exception as e:
         logger.error(f"Error processing query: {e}", exc_info=True)
