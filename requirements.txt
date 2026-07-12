@@ -3,23 +3,32 @@ networkx>=2.6
 numpy>=1.21
 scipy>=1.7
 
-# Embeddings
+# Embeddings & Vector Search
 sentence-transformers>=2.2.0
-
-# Vector search
 faiss-cpu>=1.7
+torch>=2.0.0
 
 # Community detection
 python-louvain>=0.16
 
-# LLM API
-requests>=2.25
-
-# Web UI
+# Web UI & API
 flask>=2.0
-
-# Existing dependencies
-beautifulsoup4
-Pillow
-playwright>=1.48.0
+requests>=2.25
 cachetools>=5.3
+
+# Scraping & Data Ingestion
+beautifulsoup4>=4.9.0
+playwright>=1.48.0
+gdown>=4.4.0
+
+# Document, PDF & Image Processing
+pdf2image>=1.17.0
+pdfminer.six>=20231228
+pdfplumber>=0.11.5
+pytesseract>=0.3.13
+python-docx>=1.1.2
+openpyxl>=3.1.5
+Pillow>=9.0.0
+
+# Testing
+pytest>=8.0.0

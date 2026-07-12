@@ -37,7 +37,11 @@ class EmbeddingEngine:
         
         logger.info(f"Using device '{device}' for SentenceTransformer")
         self.model = SentenceTransformer(self.model_name, device=device)
-        logger.info(f"Model loaded. Embedding dim: {self.model.get_sentence_embedding_dimension()}")
+        if hasattr(self.model, "get_embedding_dimension"):
+            dim = self.model.get_embedding_dimension()
+        else:
+            dim = self.model.get_sentence_embedding_dimension()
+        logger.info(f"Model loaded. Embedding dim: {dim}")
 
     def encode(self, texts: List[str], batch_size: int = 64, show_progress: bool = True) -> np.ndarray:
         self._load_model()
