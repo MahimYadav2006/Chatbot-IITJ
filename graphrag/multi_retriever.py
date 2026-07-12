@@ -15,6 +15,14 @@ from departments import DEPARTMENTS
 
 logger = logging.getLogger(__name__)
 
+# Hard token budget for the context portion of any prompt.
+# Math: 24,000 context + 600 system + 200 template + 1,800 reply ≈ 26,600,
+# safely under Qwen's 32,768-token hard limit.
+PROMPT_TOKEN_BUDGET = 24000
+
+# Fast word-to-token ratio (calibrated against Qwen2.5 tokenizer).
+_WORDS_TO_TOKENS = 1.4
+
 
 class MultiDepartmentRetriever:
     """Orchestrates retrieval across 1+ department-scoped HybridRetrievers and SectionRetrievers."""
@@ -363,14 +371,22 @@ class MultiDepartmentRetriever:
             bundle["sections"] = [code] if is_sec else []
             return bundle
 
-        # Merge top
+        # Merge top departments, enforcing the global token budget.
         merged_sections = []
         dept_contexts = {}
         any_answerable = False
+        cumulative_tokens = 0
         for code in top_depts:
             bundle = dept_bundles.get(code, {})
             ctx = bundle.get("context", "").strip()
             if ctx and ctx != "No relevant information found in the knowledge graph for this query.":
+                ctx_tokens = int(len(ctx.split()) * _WORDS_TO_TOKENS)
+                if cumulative_tokens + ctx_tokens > PROMPT_TOKEN_BUDGET:
+                    logger.info(
+                        f"Broadcast budget reached ({cumulative_tokens}/{PROMPT_TOKEN_BUDGET} tokens). "
+                        f"Dropping '{code}' ({ctx_tokens} tokens) and remaining sources."
+                    )
+                    break
                 is_sec = code in self.section_retrievers
                 if is_sec:
                     from departments import SECTIONS
@@ -379,8 +395,11 @@ class MultiDepartmentRetriever:
                     dept_name = DEPARTMENTS.get(code, {}).get("full_name", code)
                 merged_sections.append(f"## {dept_name}\n\n{ctx}")
                 dept_contexts[code] = {"name": dept_name, "context": ctx}
+                cumulative_tokens += ctx_tokens
                 if bundle.get("answerability", {}).get("answerable", False):
                     any_answerable = True
+        
+        logger.info(f"Broadcast merge: {len(merged_sections)} sources, ~{cumulative_tokens} estimated tokens")
 
         if not merged_sections:
             return {

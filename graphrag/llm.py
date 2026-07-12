@@ -23,6 +23,9 @@ DEFAULT_BEDROCK_REGION = "us-east-1"
 DEFAULT_BEDROCK_MODEL = "qwen.qwen3-32b-v1:0"
 DEFAULT_BEDROCK_FALLBACK_MODEL = "qwen.qwen3-32b-v1:0"
 BEDROCK_INFERENCE_PROFILE_PREFIXES = ("us.", "eu.", "au.", "jp.", "global.")
+DEFAULT_QWEN_API_BASE = "http://localhost:8000/v1"
+DEFAULT_QWEN_MODEL = "Qwen/Qwen2.5-14B-Instruct"
+
 
 
 def _build_bedrock_api_url(region: str, model: str) -> str:
@@ -574,6 +577,87 @@ class BedrockLLM:
         return self.generate(prompt, temperature=0.3, max_tokens=300)
 
 
+class QwenLLM:
+    """LLM provider for Qwen (or any OpenAI-compatible API)."""
+    def __init__(
+        self,
+        api_base: str = None,
+        model: str = None,
+        api_key: str = None,
+    ):
+        load_env_file()
+        self.provider = "qwen"
+        self.api_base = (api_base or os.environ.get("QWEN_API_BASE", DEFAULT_QWEN_API_BASE)).rstrip("/")
+        self.model = model or os.environ.get("QWEN_MODEL", DEFAULT_QWEN_MODEL).strip()
+        self.api_key = api_key or os.environ.get("QWEN_API_KEY", "").strip()
+
+    def generate(
+        self,
+        prompt: str,
+        system_prompt: str = None,
+        temperature: float = 0.3,
+        max_tokens: int = 1024,
+    ) -> str:
+        messages = []
+        if system_prompt:
+            messages.append({"role": "system", "content": system_prompt})
+        messages.append({"role": "user", "content": prompt})
+
+        payload = {
+            "model": self.model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+        }
+
+        headers = {"Content-Type": "application/json"}
+        if self.api_key:
+            headers["Authorization"] = f"Bearer {self.api_key}"
+
+        url = f"{self.api_base}/chat/completions"
+
+        for attempt in range(3):
+            try:
+                resp = requests.post(url, headers=headers, json=payload, timeout=60)
+                resp.raise_for_status()
+
+                data = resp.json()
+                raw_response = data["choices"][0]["message"]["content"]
+                if not raw_response:
+                    raise ValueError("Qwen returned an empty text response")
+
+                return sanitize_response(raw_response)
+            except requests.exceptions.Timeout:
+                if attempt < 2:
+                    time.sleep(2)
+                    continue
+                return "I'm sorry, the request timed out. Please try again."
+            except requests.exceptions.HTTPError as e:
+                error_body = ""
+                try:
+                    error_body = e.response.text[:500]
+                except Exception:
+                    pass
+                logger.error(
+                    f"Qwen LLM HTTP {e.response.status_code} (attempt {attempt + 1}): {error_body}"
+                )
+                if attempt < 2:
+                    time.sleep(2)
+                    continue
+                return "I encountered an error generating a response. Please try again."
+            except Exception as e:
+                logger.error(f"Qwen LLM error (attempt {attempt + 1}): {e}")
+                if attempt < 2:
+                    time.sleep(2)
+                    continue
+                return "I encountered an error generating a response. Please try again."
+
+        return "Unable to generate a response. Please try again."
+
+    def __call__(self, prompt: str) -> str:
+        return self.generate(prompt, temperature=0.3, max_tokens=300)
+
+
 def create_llm_from_env(provider: str = None, model: str = None):
     """Instantiate the configured LLM provider."""
     load_env_file()
@@ -590,6 +674,8 @@ def create_llm_from_env(provider: str = None, model: str = None):
         return BedrockLLM(model=model)
     if provider == "ollama":
         return OllamaLLM(model=model)
+    if provider in {"qwen", "openai"}:
+        return QwenLLM(model=model)
 
     raise ValueError(f"Unsupported LLM_PROVIDER: {provider}")
 

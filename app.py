@@ -855,7 +855,7 @@ def chat():
 
         # Scenario D: Broadcast query (fallback)
         else:
-            bundle = multi_retriever.retrieve_broadcast(query, top_n=len(retrievers) + len(section_retrievers))
+            bundle = multi_retriever.retrieve_broadcast(query, top_n=10)
             context = bundle["context"]
             # Prepend person context if available
             if person_context:
