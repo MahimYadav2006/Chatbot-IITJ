@@ -959,10 +959,17 @@ class HybridRetriever:
         }
 
     def _is_faculty_roster_query(self, query: str) -> bool:
-        """Detect department-level faculty count/list requests."""
+        """Detect department-level faculty count/list requests.
+
+        Handles common typos ("facultes"), natural phrasings ("name all the
+        faculties", "who are the faculty") and direct intent signals.
+        """
         q = re.sub(r"\s+", " ", query.lower()).strip()
-        has_faculty_term = any(term in q for term in (
-            "faculty", "faculties", "professor", "professors"
+
+        # Primary faculty term — regex handles typo "facultes" alongside
+        # the canonical forms "faculty", "faculties", "professor(s)".
+        has_faculty_term = bool(re.search(
+            r"\b(?:facult(?:y|ies|es)|professor(?:s)?)\b", q
         ))
         if not has_faculty_term:
             return False
@@ -970,7 +977,9 @@ class HybridRetriever:
         count_intent = any(term in q for term in (
             "how many", "count", "total", "number of", "strength"
         ))
+
         roster_intent = any(term in q for term in (
+            # canonical phrases
             "faculty list", "list of faculty", "list all faculty",
             "all faculty", "all faculties", "names of faculty",
             "list of faculties", "faculties list", "faculty names",
@@ -979,7 +988,16 @@ class HybridRetriever:
             "faculty in the department", "count and list",
             "professor list", "list of professors", "list all professors",
             "all professors", "names of professors", "professors list",
-            "professor names", "professors in the department", "professor in the department"
+            "professor names", "professors in the department", "professor in the department",
+            # natural phrasing variants
+            "name all", "tell me all", "give me all", "show all",
+            "who are the faculty", "who are the professors",
+            "all the faculty", "all the faculties", "all the professors",
+        )) or bool(re.search(
+            # typo-tolerant pattern: catches "list all facultes", "list of facultes",
+            # "name all facultes", "tell me all faculty", etc.
+            r"(?:list|show|give|name|tell)\s+(?:me\s+)?(?:all\s+)?(?:the\s+)?facult(?:y|ies|es)\b",
+            q
         ))
 
         if not (count_intent or roster_intent):
